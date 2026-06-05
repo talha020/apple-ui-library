@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / tooling
+.claude/
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Dependencies (if added later)
+node_modules/

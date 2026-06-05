@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Components 051-075 - Apple HIG Design</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text',sans-serif;background:#f5f5f7;padding:40px 20px;line-height:1.5}.container{max-width:1200px;margin:0 auto}.component{background:#fff;border-radius:18px;padding:40px;margin-bottom:30px;box-shadow:0 4px 16px rgba(0,0,0,.08)}h2{font-size:32px;font-weight:700;margin-bottom:30px;color:#1d1d1f}.grid{display:grid;gap:24px}.grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}.grid-4{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}.card{background:#f5f5f7;border-radius:12px;overflow:hidden;transition:transform .3s,box-shadow .3s}.card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.12)}.card-img{width:100%;height:200px;object-fit:cover;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)}.card-content{padding:20px}.card-title{font-size:20px;font-weight:600;margin-bottom:8px;color:#1d1d1f}.card-meta{display:flex;align-items:center;gap:12px;font-size:13px;color:#86868b;margin-bottom:12px}.card-text{font-size:15px;color:#515154;line-height:1.6;margin-bottom:16px}.tag{display:inline-block;padding:4px 12px;background:#e8e8ed;border-radius:12px;font-size:12px;color:#1d1d1f;margin-right:6px;margin-bottom:6px}.author{display:flex;align-items:center;gap:10px}.author-img{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)}.btn{display:inline-block;padding:10px 20px;background:#0071e3;color:#fff;border-radius:20px;text-decoration:none;font-weight:500;transition:background .3s}.btn:hover{background:#0077ed}.flex{display:flex;align-items:center;gap:16px}.hero-img{width:100%;height:400px;object-fit:cover;border-radius:12px;background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);margin-bottom:24px}.sidebar{background:#f5f5f7;padding:24px;border-radius:12px}.list-item{padding:16px 0;border-bottom:1px solid #e8e8ed}.list-item:last-child{border:0}.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}.feature-card{text-align:center;padding:24px;background:#fff;border-radius:12px;border:1px solid #e8e8ed}.icon{width:48px;height:48px;margin:0 auto 12px;border-radius:12px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)}.magazine{display:grid;grid-template-columns:2fr 1fr;gap:24px}.quote{font-size:24px;font-weight:600;font-style:italic;color:#1d1d1f;padding:32px;background:#f5f5f7;border-left:4px solid #0071e3;border-radius:12px;margin:24px 0}.timeline{position:relative;padding-left:40px}.timeline::before{content:'';position:absolute;left:12px;top:0;bottom:0;width:2px;background:#e8e8ed}.timeline-item{position:relative;margin-bottom:32px}.timeline-item::before{content:'';position:absolute;left:-34px;top:4px;width:12px;height:12px;border-radius:50%;background:#0071e3}.masonry{column-count:3;column-gap:24px}.masonry-item{break-inside:avoid;margin-bottom:24px}.overlay{position:relative}.overlay-content{position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);color:#fff;border-radius:0 0 12px 12px}.stats{display:flex;justify-content:space-around;padding:32px;background:#f5f5f7;border-radius:12px}.stat{text-align:center}.stat-num{font-size:36px;font-weight:700;color:#0071e3}.stat-label{font-size:13px;color:#86868b;margin-top:4px}@media(max-width:768px){.grid-2,.grid-3,.grid-4,.magazine{grid-template-columns:1fr}.masonry{column-count:1}.hero-img{height:250px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- 051: Hero Article with Large Image -->
+<div class="component">
+<h2>051: Hero Article Layout</h2>
+<div class="hero-img"></div>
+<div class="card-meta">
+<span>👤 Sarah Chen</span>
+<span>•</span>
+<span>📅 Feb 15, 2026</span>
+<span>•</span>
+<span>⏱ 8 min read</span>
+</div>
+<h3 style="font-size:28px;margin-bottom:16px;color:#1d1d1f">The Future of Sustainable Design in Technology</h3>
+<p class="card-text">Exploring how modern design principles are evolving to create more environmentally conscious digital products that balance aesthetics with responsibility.</p>
+<div style="margin-bottom:16px">
+<span class="tag">Design</span>
+<span class="tag">Sustainability</span>
+<span class="tag">Technology</span>
+</div>
+<a href="#" class="btn">Read Full Article</a>
+</div>
+
+<!-- 052: Two Column Grid -->
+<div class="component">
+<h2>052: Featured Stories Grid</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#a8edea 0%,#fed6e3 100%)"></div>
+<div class="card-content">
+<div class="card-meta">
+<span>Michael Park</span>
+<span>•</span>
+<span>5 min</span>
+</div>
+<h3 class="card-title">Building Better User Experiences</h3>
+<p class="card-text">Practical insights into creating interfaces that users love and remember.</p>
+<span class="tag">UX</span>
+<span class="tag">Design</span>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#ffecd2 0%,#fcb69f 100%)"></div>
+<div class="card-content">
+<div class="card-meta">
+<span>Emma Watson</span>
+<span>•</span>
+<span>7 min</span>
+</div>
+<h3 class="card-title">Mobile-First Development Strategies</h3>
+<p class="card-text">Why starting with mobile leads to better products across all platforms.</p>
+<span class="tag">Mobile</span>
+<span class="tag">Development</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 053: Three Column Grid -->
+<div class="component">
+<h2>053: Latest Articles</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#ff9a9e 0%,#fecfef 100%)"></div>
+<div class="card-content">
+<div class="card-meta"><span>James Liu</span><span>•</span><span>4 min</span></div>
+<h3 class="card-title">AI in Creative Workflows</h3>
+<p class="card-text">How artificial intelligence is reshaping creative processes.</p>
+<span class="tag">AI</span>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#a1c4fd 0%,#c2e9fb 100%)"></div>
+<div class="card-content">
+<div class="card-meta"><span>Lisa Kumar</span><span>•</span><span>6 min</span></div>
+<h3 class="card-title">Accessibility First Approach</h3>
+<p class="card-text">Creating inclusive experiences for all users from the start.</p>
+<span class="tag">Accessibility</span>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#fbc2eb 0%,#a6c1ee 100%)"></div>
+<div class="card-content">
+<div class="card-meta"><span>Tom Anderson</span><span>•</span><span>5 min</span></div>
+<h3 class="card-title">Performance Optimization</h3>
+<p class="card-text">Tips for making your applications lightning fast.</p>
+<span class="tag">Performance</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 054: Magazine Layout -->
+<div class="component">
+<h2>054: Magazine Style Layout</h2>
+<div class="magazine">
+<div>
+<div class="card-img" style="height:300px;background:linear-gradient(135deg,#fddb92 0%,#d1fdff 100%)"></div>
+<div style="padding-top:20px">
+<div class="card-meta"><span>Rachel Green</span><span>•</span><span>Mar 1, 2026</span><span>•</span><span>10 min</span></div>
+<h3 style="font-size:24px;margin-bottom:12px">Design Systems That Scale</h3>
+<p class="card-text">Building comprehensive design systems that grow with your organization while maintaining consistency.</p>
+<span class="tag">Design Systems</span>
+<span class="tag">Scalability</span>
+</div>
+</div>
+<div class="sidebar">
+<h4 style="margin-bottom:16px;color:#1d1d1f">Related Articles</h4>
+<div class="list-item">
+<div style="font-weight:500;margin-bottom:4px">Component Libraries</div>
+<div style="font-size:13px;color:#86868b">3 min read</div>
+</div>
+<div class="list-item">
+<div style="font-weight:500;margin-bottom:4px">Design Tokens</div>
+<div style="font-size:13px;color:#86868b">5 min read</div>
+</div>
+<div class="list-item">
+<div style="font-weight:500;margin-bottom:4px">Documentation Best Practices</div>
+<div style="font-size:13px;color:#86868b">4 min read</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 055: Author Focus -->
+<div class="component">
+<h2>055: Author Spotlight</h2>
+<div class="flex" style="margin-bottom:24px">
+<div class="author-img" style="width:80px;height:80px"></div>
+<div>
+<h3 style="font-size:22px;margin-bottom:4px">Dr. Alex Martinez</h3>
+<p style="color:#86868b;margin-bottom:8px">Senior Design Researcher</p>
+<p style="font-size:14px;color:#515154">Specializing in human-computer interaction and inclusive design methodologies.</p>
+</div>
+</div>
+<div class="grid grid-2">
+<div class="card">
+<div class="card-content">
+<div class="card-meta"><span>Feb 28, 2026</span><span>•</span><span>6 min</span></div>
+<h3 class="card-title">Research-Driven Design Decisions</h3>
+<p class="card-text">Using data and user research to inform better design choices.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<div class="card-meta"><span>Feb 20, 2026</span><span>•</span><span>8 min</span></div>
+<h3 class="card-title">The Psychology of Color</h3>
+<p class="card-text">How color choices impact user perception and behavior.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 056: Timeline Blog -->
+<div class="component">
+<h2>056: Timeline Format</h2>
+<div class="timeline">
+<div class="timeline-item">
+<div class="card-meta"><span>Week 1</span><span>•</span><span>David Kim</span></div>
+<h3 style="font-size:18px;margin-bottom:8px">Project Kickoff</h3>
+<p class="card-text">Initial planning and stakeholder alignment for the new product launch.</p>
+</div>
+<div class="timeline-item">
+<div class="card-meta"><span>Week 2</span><span>•</span><span>Maria Santos</span></div>
+<h3 style="font-size:18px;margin-bottom:8px">Research Phase</h3>
+<p class="card-text">Conducting user interviews and competitive analysis.</p>
+</div>
+<div class="timeline-item">
+<div class="card-meta"><span>Week 3</span><span>•</span><span>Chris Taylor</span></div>
+<h3 style="font-size:18px;margin-bottom:8px">Design Sprint</h3>
+<p class="card-text">Rapid prototyping and iterative design exploration.</p>
+</div>
+</div>
+</div>
+
+<!-- 057: Card Grid with Stats -->
+<div class="component">
+<h2>057: Articles with Engagement Stats</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="card-content">
+<h3 class="card-title">Cloud Architecture Patterns</h3>
+<div class="card-meta"><span>Sophie Miller</span><span>•</span><span>9 min</span></div>
+<p class="card-text">Modern approaches to building scalable cloud infrastructure.</p>
+<div class="stats" style="padding:16px;margin-top:12px">
+<div class="stat">
+<div class="stat-num" style="font-size:20px">2.3K</div>
+<div class="stat-label">Views</div>
+</div>
+<div class="stat">
+<div class="stat-num" style="font-size:20px">187</div>
+<div class="stat-label">Likes</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<h3 class="card-title">API Design Guidelines</h3>
+<div class="card-meta"><span>Ryan Chen</span><span>•</span><span>7 min</span></div>
+<p class="card-text">Best practices for creating developer-friendly APIs.</p>
+<div class="stats" style="padding:16px;margin-top:12px">
+<div class="stat">
+<div class="stat-num" style="font-size:20px">1.8K</div>
+<div class="stat-label">Views</div>
+</div>
+<div class="stat">
+<div class="stat-num" style="font-size:20px">142</div>
+<div class="stat-label">Likes</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<h3 class="card-title">Security Best Practices</h3>
+<div class="card-meta"><span>Nina Patel</span><span>•</span><span>11 min</span></div>
+<p class="card-text">Essential security measures for modern applications.</p>
+<div class="stats" style="padding:16px;margin-top:12px">
+<div class="stat">
+<div class="stat-num" style="font-size:20px">3.1K</div>
+<div class="stat-label">Views</div>
+</div>
+<div class="stat">
+<div class="stat-num" style="font-size:20px">256</div>
+<div class="stat-label">Likes</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 058: Featured with Quote -->
+<div class="component">
+<h2>058: Article with Pull Quote</h2>
+<div class="author" style="margin-bottom:20px">
+<div class="author-img"></div>
+<div>
+<div style="font-weight:500">Jordan Lee</div>
+<div style="font-size:13px;color:#86868b">Feb 14, 2026 • 12 min read</div>
+</div>
+</div>
+<h3 style="font-size:24px;margin-bottom:16px">The Art of Minimalist Design</h3>
+<p class="card-text">Understanding when less truly becomes more in digital design, and how to achieve elegance through simplicity.</p>
+<div class="quote">"Simplicity is not the absence of complexity, but the mastery of it."</div>
+<p class="card-text">This philosophy guides the best minimalist designs, where every element serves a purpose and nothing is superfluous.</p>
+<div style="margin-top:20px">
+<span class="tag">Minimalism</span>
+<span class="tag">Design Philosophy</span>
+<span class="tag">UI/UX</span>
+</div>
+</div>
+
+<!-- 059: Feature Grid -->
+<div class="component">
+<h2>059: Feature Highlights</h2>
+<div class="feature-grid">
+<div class="feature-card">
+<div class="icon"></div>
+<h4 style="margin-bottom:8px">Typography</h4>
+<p style="font-size:13px;color:#86868b">2 articles</p>
+</div>
+<div class="feature-card">
+<div class="icon" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)"></div>
+<h4 style="margin-bottom:8px">Color Theory</h4>
+<p style="font-size:13px;color:#86868b">5 articles</p>
+</div>
+<div class="feature-card">
+<div class="icon" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)"></div>
+<h4 style="margin-bottom:8px">Animation</h4>
+<p style="font-size:13px;color:#86868b">3 articles</p>
+</div>
+<div class="feature-card">
+<div class="icon" style="background:linear-gradient(135deg,#43e97b 0%,#38f9d7 100%)"></div>
+<h4 style="margin-bottom:8px">Interaction</h4>
+<p style="font-size:13px;color:#86868b">4 articles</p>
+</div>
+</div>
+</div>
+
+<!-- 060: Masonry Layout -->
+<div class="component">
+<h2>060: Masonry Blog Grid</h2>
+<div class="masonry">
+<div class="masonry-item">
+<div class="card">
+<div class="card-img" style="height:150px;background:linear-gradient(135deg,#fa709a 0%,#fee140 100%)"></div>
+<div class="card-content">
+<div class="card-meta"><span>Amy Wong</span><span>•</span><span>3 min</span></div>
+<h3 class="card-title">Quick Design Tips</h3>
+<p class="card-text">Small changes that make big impacts.</p>
+</div>
+</div>
+</div>
+<div class="masonry-item">
+<div class="card">
+<div class="card-img" style="height:220px;background:linear-gradient(135deg,#30cfd0 0%,#330867 100%)"></div>
+<div class="card-content">
+<div class="card-meta"><span>Ben Foster</span><span>•</span><span>8 min</span></div>
+<h3 class="card-title">Deep Dive: CSS Grid</h3>
+<p class="card-text">Mastering modern layout techniques with practical examples and use cases.</p>
+<span class="tag">CSS</span>
+</div>
+</div>
+</div>
+<div class="masonry-item">
+<div class="card">
+<div class="card-content">
+<div class="card-meta"><span>Carol Davis</span><span>•</span><span>5 min</span></div>
+<h3 class="card-title">Writing Better Code</h3>
+<p class="card-text">Clean code principles every developer should know.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 061: Overlay Cards -->
+<div class="component">
+<h2>061: Image Overlay Cards</h2>
+<div class="grid grid-2">
+<div class="card overlay">
+<div class="card-img" style="height:280px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)"></div>
+<div class="overlay-content">
+<div class="card-meta" style="color:rgba(255,255,255,0.8)"><span>Elena Rodriguez</span><span>•</span><span>6 min</span></div>
+<h3 style="font-size:20px;color:#fff;margin-bottom:8px">Night Photography Techniques</h3>
+<span class="tag" style="background:rgba(255,255,255,0.2);color:#fff">Photography</span>
+</div>
+</div>
+<div class="card overlay">
+<div class="card-img" style="height:280px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)"></div>
+<div class="overlay-content">
+<div class="card-meta" style="color:rgba(255,255,255,0.8)"><span>Marcus Johnson</span><span>•</span><span>9 min</span></div>
+<h3 style="font-size:20px;color:#fff;margin-bottom:8px">Urban Design Philosophy</h3>
+<span class="tag" style="background:rgba(255,255,255,0.2);color:#fff">Architecture</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 062: Compact List -->
+<div class="component">
+<h2>062: Compact Article List</h2>
+<div class="sidebar">
+<div class="list-item">
+<div class="flex" style="justify-content:space-between">
+<div>
+<h4 style="font-size:16px;margin-bottom:4px">Modern JavaScript Patterns</h4>
+<div class="card-meta"><span>Kevin Park</span><span>•</span><span>4 min</span></div>
+</div>
+<span class="tag">JavaScript</span>
+</div>
+</div>
+<div class="list-item">
+<div class="flex" style="justify-content:space-between">
+<div>
+<h4 style="font-size:16px;margin-bottom:4px">React Hooks Deep Dive</h4>
+<div class="card-meta"><span>Laura Smith</span><span>•</span><span>7 min</span></div>
+</div>
+<span class="tag">React</span>
+</div>
+</div>
+<div class="list-item">
+<div class="flex" style="justify-content:space-between">
+<div>
+<h4 style="font-size:16px;margin-bottom:4px">TypeScript Best Practices</h4>
+<div class="card-meta"><span>Miguel Torres</span><span>•</span><span>5 min</span></div>
+</div>
+<span class="tag">TypeScript</span>
+</div>
+</div>
+<div class="list-item">
+<div class="flex" style="justify-content:space-between">
+<div>
+<h4 style="font-size:16px;margin-bottom:4px">Testing Strategies</h4>
+<div class="card-meta"><span>Olivia Brown</span><span>•</span><span>6 min</span></div>
+</div>
+<span class="tag">Testing</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 063: Four Column Grid -->
+<div class="component">
+<h2>063: Quick Reads Grid</h2>
+<div class="grid grid-4">
+<div class="card">
+<div class="card-content">
+<span class="tag">Tip</span>
+<h3 class="card-title">CSS Variables</h3>
+<div class="card-meta"><span>2 min</span></div>
+<p class="card-text">Dynamic styling made easy.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<span class="tag">Guide</span>
+<h3 class="card-title">Git Workflows</h3>
+<div class="card-meta"><span>3 min</span></div>
+<p class="card-text">Streamline your version control.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<span class="tag">Tutorial</span>
+<h3 class="card-title">Flexbox Basics</h3>
+<div class="card-meta"><span>4 min</span></div>
+<p class="card-text">Master flexible layouts.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<span class="tag">News</span>
+<h3 class="card-title">Web Standards</h3>
+<div class="card-meta"><span>2 min</span></div>
+<p class="card-text">Latest updates and changes.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 064: Category Focus -->
+<div class="component">
+<h2>064: Category Showcase</h2>
+<div style="text-align:center;margin-bottom:32px">
+<div class="icon" style="width:64px;height:64px"></div>
+<h3 style="font-size:24px;margin:16px 0 8px">Mobile Development</h3>
+<p style="color:#86868b">12 articles exploring iOS and Android development</p>
+</div>
+<div class="grid grid-3">
+<div class="card">
+<div class="card-content">
+<div class="card-meta"><span>Paul Anderson</span><span>•</span><span>7 min</span></div>
+<h3 class="card-title">SwiftUI Fundamentals</h3>
+<p class="card-text">Building iOS apps with declarative syntax.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<div class="card-meta"><span>Quinn Harper</span><span>•</span><span>8 min</span></div>
+<h3 class="card-title">Jetpack Compose</h3>
+<p class="card-text">Modern Android UI development.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<div class="card-meta"><span>Rita Wilson</span><span>•</span><span>6 min</span></div>
+<h3 class="card-title">Cross-Platform Tools</h3>
+<p class="card-text">Comparing Flutter and React Native.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 065: Split Content -->
+<div class="component">
+<h2>065: Split Layout Article</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+<div>
+<div class="card-img" style="height:100%;min-height:300px;background:linear-gradient(135deg,#ffecd2 0%,#fcb69f 100%)"></div>
+</div>
+<div>
+<div class="author" style="margin-bottom:16px">
+<div class="author-img"></div>
+<div>
+<div style="font-weight:500">Steve Murphy</div>
+<div style="font-size:13px;color:#86868b">Product Designer</div>
+</div>
+</div>
+<h3 style="font-size:24px;margin-bottom:12px">Designing for Emotion</h3>
+<div class="card-meta"><span>Feb 12, 2026</span><span>•</span><span>10 min read</span></div>
+<p class="card-text">How to create digital experiences that resonate emotionally with users and build lasting connections.</p>
+<div style="margin:16px 0">
+<span class="tag">UX Design</span>
+<span class="tag">Psychology</span>
+</div>
+<a href="#" class="btn">Continue Reading</a>
+</div>
+</div>
+</div>
+
+<!-- 066: Horizontal Scroll -->
+<div class="component">
+<h2>066: Trending Articles</h2>
+<div style="overflow-x:auto;display:flex;gap:20px;padding-bottom:16px">
+<div class="card" style="min-width:300px">
+<div class="card-img" style="background:linear-gradient(135deg,#a8edea 0%,#fed6e3 100%)"></div>
+<div class="card-content">
+<span class="tag">🔥 Trending</span>
+<div class="card-meta"><span>Tina Lee</span><span>•</span><span>5 min</span></div>
+<h3 class="card-title">AI Writing Tools</h3>
+<p class="card-text">How AI is changing content creation.</p>
+</div>
+</div>
+<div class="card" style="min-width:300px">
+<div class="card-img" style="background:linear-gradient(135deg,#fbc2eb 0%,#a6c1ee 100%)"></div>
+<div class="card-content">
+<span class="tag">🔥 Trending</span>
+<div class="card-meta"><span>Uma Patel</span><span>•</span><span>6 min</span></div>
+<h3 class="card-title">Web3 Design</h3>
+<p class="card-text">Designing for decentralized apps.</p>
+</div>
+</div>
+<div class="card" style="min-width:300px">
+<div class="card-img" style="background:linear-gradient(135deg,#fddb92 0%,#d1fdff 100%)"></div>
+<div class="card-content">
+<span class="tag">🔥 Trending</span>
+<div class="card-meta"><span>Victor Garcia</span><span>•</span><span>7 min</span></div>
+<h3 class="card-title">Design Tokens</h3>
+<p class="card-text">Building scalable design systems.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 067: Newsletter Style -->
+<div class="component">
+<h2>067: Newsletter Format</h2>
+<div style="border:2px solid #0071e3;border-radius:12px;padding:32px;text-align:center;background:#f5f5f7">
+<h3 style="font-size:28px;margin-bottom:12px">Weekly Design Digest</h3>
+<p style="color:#515154;margin-bottom:24px">Get the latest articles delivered to your inbox every Monday</p>
+<div style="max-width:400px;margin:0 auto;display:flex;gap:12px">
+<input type="email" placeholder="Enter your email" style="flex:1;padding:12px 16px;border:1px solid #e8e8ed;border-radius:20px;font-size:15px">
+<button class="btn">Subscribe</button>
+</div>
+<div style="margin-top:16px;font-size:13px;color:#86868b">Join 12,500+ subscribers</div>
+</div>
+<div class="grid grid-2" style="margin-top:24px">
+<div class="card">
+<div class="card-content">
+<div class="card-meta"><span>This Week</span></div>
+<h3 class="card-title">Top 5 Design Articles</h3>
+<p class="card-text">Curated selection of must-read content from the past week.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<div class="card-meta"><span>Archive</span></div>
+<h3 class="card-title">Browse Past Issues</h3>
+<p class="card-text">Explore our complete newsletter archive from 2020 onwards.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 068: Reading Progress -->
+<div class="component">
+<h2>068: Article with Progress Indicator</h2>
+<div style="height:4px;background:#e8e8ed;border-radius:2px;margin-bottom:24px">
+<div style="height:100%;width:35%;background:#0071e3;border-radius:2px"></div>
+</div>
+<div class="author" style="margin-bottom:20px">
+<div class="author-img"></div>
+<div>
+<div style="font-weight:500">Wendy Chen</div>
+<div style="font-size:13px;color:#86868b">Feb 10, 2026 • 15 min read • 35% complete</div>
+</div>
+</div>
+<h3 style="font-size:26px;margin-bottom:16px">Complete Guide to Design Thinking</h3>
+<p class="card-text">An in-depth exploration of the design thinking methodology, from empathy mapping to prototyping and testing with real users.</p>
+<div style="margin:20px 0">
+<span class="tag">Design Thinking</span>
+<span class="tag">Methodology</span>
+<span class="tag">Innovation</span>
+</div>
+<div style="background:#f5f5f7;padding:20px;border-radius:12px">
+<h4 style="margin-bottom:12px">Table of Contents</h4>
+<div style="font-size:14px;color:#515154;line-height:2">
+<div>1. Introduction to Design Thinking</div>
+<div>2. Empathize Phase</div>
+<div>3. Define the Problem</div>
+<div style="font-weight:600;color:#0071e3">→ 4. Ideate Solutions (Current)</div>
+<div style="opacity:0.5">5. Prototype</div>
+<div style="opacity:0.5">6. Test and Iterate</div>
+</div>
+</div>
+</div>
+
+<!-- 069: Podcast Style -->
+<div class="component">
+<h2>069: Podcast Episode Format</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);position:relative;display:flex;align-items:center;justify-content:center">
+<div style="font-size:48px">🎙️</div>
+</div>
+<div class="card-content">
+<span class="tag">Episode 42</span>
+<h3 class="card-title">Design Leadership with Alex Kim</h3>
+<div class="card-meta"><span>Hosted by Xavier Jones</span><span>•</span><span>45 min</span></div>
+<p class="card-text">Discussing the challenges and rewards of leading design teams in fast-paced environments.</p>
+<a href="#" class="btn">Listen Now</a>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);position:relative;display:flex;align-items:center;justify-content:center">
+<div style="font-size:48px">🎙️</div>
+</div>
+<div class="card-content">
+<span class="tag">Episode 41</span>
+<h3 class="card-title">The Future of AR/VR</h3>
+<div class="card-meta"><span>Hosted by Yuki Tanaka</span><span>•</span><span>38 min</span></div>
+<p class="card-text">Exploring immersive experiences and spatial computing with industry experts.</p>
+<a href="#" class="btn">Listen Now</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 070: Video Content -->
+<div class="component">
+<h2>070: Video Article Format</h2>
+<div class="card">
+<div class="card-img" style="height:350px;background:linear-gradient(135deg,#30cfd0 0%,#330867 100%);position:relative;display:flex;align-items:center;justify-content:center">
+<div style="font-size:64px;opacity:0.9">▶️</div>
+<div style="position:absolute;bottom:16px;left:16px;background:rgba(0,0,0,0.6);color:#fff;padding:6px 12px;border-radius:8px;font-size:13px">12:34</div>
+</div>
+<div class="card-content">
+<div class="author" style="margin-bottom:16px">
+<div class="author-img"></div>
+<div>
+<div style="font-weight:500">Zara Williams</div>
+<div style="font-size:13px;color:#86868b">Feb 8, 2026</div>
+</div>
+</div>
+<h3 style="font-size:22px;margin-bottom:12px">Animation Principles for UI Designers</h3>
+<p class="card-text">A comprehensive video tutorial covering timing, easing, and choreography to create delightful user interface animations.</p>
+<div style="margin:16px 0">
+<span class="tag">Video</span>
+<span class="tag">Animation</span>
+<span class="tag">Tutorial</span>
+</div>
+<div class="stats">
+<div class="stat">
+<div class="stat-num">8.5K</div>
+<div class="stat-label">Views</div>
+</div>
+<div class="stat">
+<div class="stat-num">634</div>
+<div class="stat-label">Likes</div>
+</div>
+<div class="stat">
+<div class="stat-num">92</div>
+<div class="stat-label">Comments</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 071: Resource Hub -->
+<div class="component">
+<h2>071: Resource Collection</h2>
+<h3 style="font-size:22px;margin-bottom:20px">Design Resources & Tools</h3>
+<div class="grid grid-3">
+<div class="card">
+<div class="card-content">
+<div style="font-size:32px;margin-bottom:12px">📚</div>
+<h4 style="margin-bottom:8px">Ebooks</h4>
+<p style="font-size:14px;color:#515154;margin-bottom:12px">Comprehensive guides on design topics</p>
+<div style="font-size:13px;color:#0071e3;font-weight:500">12 resources →</div>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<div style="font-size:32px;margin-bottom:12px">🎨</div>
+<h4 style="margin-bottom:8px">Templates</h4>
+<p style="font-size:14px;color:#515154;margin-bottom:12px">Ready-to-use design files</p>
+<div style="font-size:13px;color:#0071e3;font-weight:500">28 resources →</div>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<div style="font-size:32px;margin-bottom:12px">🔧</div>
+<h4 style="margin-bottom:8px">Tools</h4>
+<p style="font-size:14px;color:#515154;margin-bottom:12px">Curated design software</p>
+<div style="font-size:13px;color:#0071e3;font-weight:500">45 resources →</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 072: Case Study -->
+<div class="component">
+<h2>072: Case Study Format</h2>
+<div style="text-align:center;margin-bottom:32px">
+<span class="tag">Case Study</span>
+<h3 style="font-size:28px;margin:16px 0">Redesigning the Checkout Experience</h3>
+<div class="card-meta" style="justify-content:center"><span>Adam Foster</span><span>•</span><span>Mar 2, 2026</span><span>•</span><span>18 min read</span></div>
+</div>
+<div class="hero-img" style="margin-bottom:32px"></div>
+<div class="grid grid-2">
+<div>
+<h4 style="margin-bottom:12px;color:#1d1d1f">Challenge</h4>
+<p class="card-text">Cart abandonment rate was 68%, significantly higher than industry average.</p>
+</div>
+<div>
+<h4 style="margin-bottom:12px;color:#1d1d1f">Solution</h4>
+<p class="card-text">Streamlined 5-step process to 2 steps with guest checkout option.</p>
+</div>
+</div>
+<div class="stats" style="margin-top:24px">
+<div class="stat">
+<div class="stat-num">42%</div>
+<div class="stat-label">Reduced Abandonment</div>
+</div>
+<div class="stat">
+<div class="stat-num">3.2x</div>
+<div class="stat-label">Conversion Increase</div>
+</div>
+<div class="stat">
+<div class="stat-num">$2.1M</div>
+<div class="stat-label">Annual Revenue Impact</div>
+</div>
+</div>
+</div>
+
+<!-- 073: Comparison Article -->
+<div class="component">
+<h2>073: Comparison Format</h2>
+<h3 style="font-size:24px;margin-bottom:20px;text-align:center">React vs Vue: A Developer's Perspective</h3>
+<div class="author" style="justify-content:center;margin-bottom:24px">
+<div class="author-img"></div>
+<div>
+<div style="font-weight:500">Brandon Lee</div>
+<div style="font-size:13px;color:#86868b">Senior Frontend Developer • Feb 5, 2026</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="background:#f5f5f7;padding:24px;border-radius:12px">
+<h4 style="font-size:20px;margin-bottom:16px;color:#0071e3">React</h4>
+<div style="margin-bottom:12px">
+<div style="font-weight:500;margin-bottom:4px">Pros</div>
+<ul style="margin-left:20px;color:#515154;font-size:14px;line-height:1.8">
+<li>Large ecosystem</li>
+<li>Strong community</li>
+<li>Flexible architecture</li>
+</ul>
+</div>
+<div>
+<div style="font-weight:500;margin-bottom:4px">Cons</div>
+<ul style="margin-left:20px;color:#515154;font-size:14px;line-height:1.8">
+<li>Steeper learning curve</li>
+<li>More boilerplate</li>
+</ul>
+</div>
+</div>
+<div style="background:#f5f5f7;padding:24px;border-radius:12px">
+<h4 style="font-size:20px;margin-bottom:16px;color:#0071e3">Vue</h4>
+<div style="margin-bottom:12px">
+<div style="font-weight:500;margin-bottom:4px">Pros</div>
+<ul style="margin-left:20px;color:#515154;font-size:14px;line-height:1.8">
+<li>Gentle learning curve</li>
+<li>Clean syntax</li>
+<li>Great documentation</li>
+</ul>
+</div>
+<div>
+<div style="font-weight:500;margin-bottom:4px">Cons</div>
+<ul style="margin-left:20px;color:#515154;font-size:14px;line-height:1.8">
+<li>Smaller ecosystem</li>
+<li>Fewer job opportunities</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="margin-top:20px">
+<span class="tag">React</span>
+<span class="tag">Vue</span>
+<span class="tag">Comparison</span>
+<span class="tag">Frontend</span>
+</div>
+</div>
+
+<!-- 074: Series Format -->
+<div class="component">
+<h2>074: Article Series</h2>
+<div style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);padding:32px;border-radius:12px;color:#fff;margin-bottom:24px">
+<div style="font-size:14px;opacity:0.9;margin-bottom:8px">5-Part Series</div>
+<h3 style="font-size:28px;margin-bottom:12px">Mastering Design Systems</h3>
+<p style="opacity:0.95">A comprehensive journey from foundations to advanced implementation strategies.</p>
+</div>
+<div class="grid grid-2">
+<div class="card">
+<div class="card-content">
+<span class="tag">Part 1</span>
+<h3 class="card-title">Foundations & Principles</h3>
+<div class="card-meta"><span>Chloe Martin</span><span>•</span><span>12 min</span></div>
+<p class="card-text">Understanding the core concepts behind design systems.</p>
+<div style="margin-top:12px;color:#0071e3;font-weight:500">✓ Completed</div>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<span class="tag">Part 2</span>
+<h3 class="card-title">Building Your First Component</h3>
+<div class="card-meta"><span>Daniel Cooper</span><span>•</span><span>15 min</span></div>
+<p class="card-text">Creating reusable, accessible UI components.</p>
+<div style="margin-top:12px;color:#0071e3;font-weight:500">→ Continue Reading</div>
+</div>
+</div>
+<div class="card" style="opacity:0.6">
+<div class="card-content">
+<span class="tag">Part 3</span>
+<h3 class="card-title">Scaling Your System</h3>
+<div class="card-meta"><span>Emily Zhang</span><span>•</span><span>14 min</span></div>
+<p class="card-text">Growth strategies for design systems.</p>
+<div style="margin-top:12px;color:#86868b">Coming Soon</div>
+</div>
+</div>
+<div class="card" style="opacity:0.6">
+<div class="card-content">
+<span class="tag">Part 4</span>
+<h3 class="card-title">Documentation Best Practices</h3>
+<div class="card-meta"><span>Frank Wilson</span><span>•</span><span>10 min</span></div>
+<p class="card-text">Making your system easy to adopt.</p>
+<div style="margin-top:12px;color:#86868b">Coming Soon</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 075: Interactive Tags -->
+<div class="component">
+<h2>075: Tag-Based Discovery</h2>
+<div style="margin-bottom:24px">
+<h4 style="margin-bottom:16px;color:#515154">Popular Topics</h4>
+<div>
+<span class="tag" style="padding:8px 16px;font-size:14px;cursor:pointer">Design Systems (24)</span>
+<span class="tag" style="padding:8px 16px;font-size:14px;cursor:pointer">JavaScript (31)</span>
+<span class="tag" style="padding:8px 16px;font-size:14px;cursor:pointer">UX Research (18)</span>
+<span class="tag" style="padding:8px 16px;font-size:14px;cursor:pointer">CSS (27)</span>
+<span class="tag" style="padding:8px 16px;font-size:14px;cursor:pointer">Accessibility (15)</span>
+<span class="tag" style="padding:8px 16px;font-size:14px;cursor:pointer">Performance (12)</span>
+<span class="tag" style="padding:8px 16px;font-size:14px;cursor:pointer">React (29)</span>
+<span class="tag" style="padding:8px 16px;font-size:14px;cursor:pointer">TypeScript (16)</span>
+</div>
+</div>
+<div style="background:#f5f5f7;padding:24px;border-radius:12px">
+<div style="margin-bottom:16px;color:#515154">Showing articles tagged with: <strong>Design Systems</strong></div>
+<div class="list-item">
+<h4 style="font-size:16px;margin-bottom:4px">Creating Consistent UI Patterns</h4>
+<div class="card-meta"><span>Grace Lee</span><span>•</span><span>8 min read</span><span>•</span><span>Feb 1, 2026</span></div>
+</div>
+<div class="list-item">
+<h4 style="font-size:16px;margin-bottom:4px">Design Token Management</h4>
+<div class="card-meta"><span>Henry Kim</span><span>•</span><span>6 min read</span><span>•</span><span>Jan 28, 2026</span></div>
+</div>
+<div class="list-item">
+<h4 style="font-size:16px;margin-bottom:4px">Component API Design</h4>
+<div class="card-meta"><span>Iris Chen</span><span>•</span><span>10 min read</span><span>•</span><span>Jan 25, 2026</span></div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

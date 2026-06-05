@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pricing Components 126-150</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Satoshi',-apple-system,BlinkMacSystemFont,sans-serif;background:#F6F6F7;padding:40px 20px;-webkit-font-smoothing:antialiased}
+.container{max-width:1200px;margin:0 auto}
+.component{background:#fff;border:1px solid #E3E3E8;border-radius:12px;padding:48px;margin-bottom:24px;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+h2{font-size:13px;color:#6D6D72;text-transform:uppercase;letter-spacing:1px;margin-bottom:32px;font-weight:600}
+.grid{display:grid;gap:24px}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#F6F6F7;border:1px solid #E3E3E8;border-radius:10px;padding:32px;transition:all .2s ease}
+.card:hover{border-color:#2C6ECB}
+.price{font-size:48px;font-weight:700;color:#1D1D1F;line-height:1}
+.currency{font-size:28px}
+.period{font-size:16px;color:#6D6D72;font-weight:400}
+.title{font-size:21px;font-weight:600;color:#1D1D1F;margin-bottom:8px}
+.subtitle{font-size:14px;color:#6D6D72;margin-bottom:20px}
+.feature{font-size:14px;color:#1D1D1F;padding:10px 0;border-bottom:1px solid #E3E3E8;display:flex;align-items:center}
+.feature:last-child{border:none}
+.check{color:#1A8245;font-weight:700;margin-right:10px}
+.btn{display:inline-block;background:#1A1A1A;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;transition:all .2s ease;border:none;cursor:pointer;width:100%;text-align:center}
+.btn:hover{opacity:.9}
+.btn-outline{background:transparent;color:#1D1D1F;border:1px solid #E3E3E8}
+.btn-outline:hover{border-color:#1D1D1F}
+.popular{border:2px solid #2C6ECB;position:relative}
+.badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#2C6ECB;color:#fff;padding:4px 12px;border-radius:9999px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:16px;text-align:left;border-bottom:1px solid #E3E3E8}
+.table th{font-size:13px;color:#6D6D72;font-weight:600}
+.table td{font-size:14px;color:#1D1D1F}
+.savings{color:#1A8245;font-weight:600}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- 126: Startup Discount -->
+<div class="component">
+<h2>126 — Startup Program</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Regular Plan</div>
+<div class="price"><span class="currency">$</span>99<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Get Started</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Startup Discount</span>
+<div class="title">Startup Program</div>
+<div class="subtitle">For early-stage companies</div>
+<div class="price"><span class="currency">$</span>29<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#1A8245;margin-top:8px">70% off for 12 months</div>
+<div style="margin-top:24px"><a href="#" class="btn">Apply Now</a></div>
+<div style="margin-top:16px;font-size:12px;color:#AEAEB2;text-align:center">Must be pre-Series A</div>
+</div>
+</div>
+</div>
+
+<!-- 127: Regional Pricing -->
+<div class="component">
+<h2>127 — Geographic Pricing</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Americas</div>
+<div class="price"><span class="currency">$</span>49<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">USD pricing</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+<div class="card">
+<div class="title">Europe</div>
+<div class="price"><span class="currency">€</span>45<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">EUR pricing</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+<div class="card">
+<div class="title">Asia Pacific</div>
+<div class="price"><span class="currency">$</span>42<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#1A8245;margin-top:8px">Regional discount applied</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+</div>
+</div>
+
+<!-- 128: Referral Discount -->
+<div class="component">
+<h2>128 — Referral Rewards</h2>
+<div class="card">
+<div style="text-align:center">
+<div class="title">Refer & Save</div>
+<div class="subtitle">Give $20, Get $20</div>
+<div style="margin:32px 0;padding:32px 0;border-top:1px solid #E3E3E8;border-bottom:1px solid #E3E3E8">
+<div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap">
+<div><div style="font-size:34px;font-weight:700;color:#2C6ECB;margin-bottom:8px">$20</div><div style="font-size:14px;color:#6D6D72">Your friend gets</div></div>
+<div><div style="font-size:34px;font-weight:700;color:#1A8245;margin-bottom:8px">$20</div><div style="font-size:14px;color:#6D6D72">You receive</div></div>
+</div>
+</div>
+<div style="max-width:300px;margin:0 auto"><a href="#" class="btn">Get Referral Link</a></div>
+</div>
+</div>
+</div>
+
+<!-- 129: Limited Time Offer -->
+<div class="component">
+<h2>129 — Flash Sale Pricing</h2>
+<div class="card popular">
+<span class="badge">Limited Time</span>
+<div style="text-align:center">
+<div style="font-size:13px;color:#D72C0D;font-weight:600;margin-bottom:12px">OFFER ENDS IN 48 HOURS</div>
+<div class="title">Professional Plan</div>
+<div style="display:flex;align-items:baseline;justify-content:center;gap:12px;margin:16px 0">
+<span style="font-size:21px;color:#AEAEB2;text-decoration:line-through">$99/mo</span>
+<div class="price"><span class="currency">$</span>49<span class="period">/mo</span></div>
+</div>
+<div style="font-size:14px;color:#1A8245;margin-bottom:24px">Save 50% for first 3 months</div>
+<div style="max-width:300px;margin:0 auto"><a href="#" class="btn">Claim Offer</a></div>
+</div>
+</div>
+</div>
+
+<!-- 130: Family Plan -->
+<div class="component">
+<h2>130 — Family Subscription</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Individual</div>
+<div class="price"><span class="currency">$</span>9<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>1 account</div>
+<div class="feature"><span class="check">✓</span>All features</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Subscribe</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Best for Families</span>
+<div class="title">Family Plan</div>
+<div class="price"><span class="currency">$</span>19<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#1A8245;margin-top:8px">Just $3.80 per person</div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>Up to 5 accounts</div>
+<div class="feature"><span class="check">✓</span>All features</div>
+<div class="feature"><span class="check">✓</span>Shared storage</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Subscribe</a></div>
+</div>
+</div>
+</div>
+
+<!-- 131: Commitment Tiers -->
+<div class="component">
+<h2>131 — Contract Length Pricing</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Month-to-Month</div>
+<div class="subtitle">No commitment</div>
+<div class="price"><span class="currency">$</span>59<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">Cancel anytime</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Start</a></div>
+</div>
+<div class="card">
+<div class="title">6 Month Contract</div>
+<div class="subtitle">Save 15%</div>
+<div class="price"><span class="currency">$</span>50<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#1A8245;margin-top:8px">Billed every 6 months</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Start</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Best Value</span>
+<div class="title">12 Month Contract</div>
+<div class="subtitle">Save 25%</div>
+<div class="price"><span class="currency">$</span>44<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#1A8245;margin-top:8px">Billed annually</div>
+<div style="margin-top:24px"><a href="#" class="btn">Start</a></div>
+</div>
+</div>
+</div>
+
+<!-- 132: Storage Tiers -->
+<div class="component">
+<h2>132 — Storage-Based Pricing</h2>
+<div class="grid grid-4">
+<div class="card">
+<div class="title">Basic</div>
+<div class="price"><span class="currency">$</span>5<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">10GB storage</div>
+<div style="margin-top:16px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+<div class="card">
+<div class="title">Plus</div>
+<div class="price"><span class="currency">$</span>10<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">50GB storage</div>
+<div style="margin-top:16px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Popular</span>
+<div class="title">Pro</div>
+<div class="price"><span class="currency">$</span>20<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">200GB storage</div>
+<div style="margin-top:16px"><a href="#" class="btn">Select</a></div>
+</div>
+<div class="card">
+<div class="title">Max</div>
+<div class="price"><span class="currency">$</span>40<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">1TB storage</div>
+<div style="margin-top:16px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+</div>
+</div>
+
+<!-- 133: API Rate Limits -->
+<div class="component">
+<h2>133 — API Tier Pricing</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Developer</div>
+<div class="price"><span class="currency">$</span>19<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>10,000 requests/month</div>
+<div class="feature"><span class="check">✓</span>100 req/min rate limit</div>
+<div class="feature"><span class="check">✓</span>Email support</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Start</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Most Popular</span>
+<div class="title">Growth</div>
+<div class="price"><span class="currency">$</span>99<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>100,000 requests/month</div>
+<div class="feature"><span class="check">✓</span>1,000 req/min rate limit</div>
+<div class="feature"><span class="check">✓</span>Priority support</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Start</a></div>
+</div>
+<div class="card">
+<div class="title">Enterprise</div>
+<div class="price">Custom</div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>Unlimited requests</div>
+<div class="feature"><span class="check">✓</span>Custom rate limits</div>
+<div class="feature"><span class="check">✓</span>Dedicated support</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Contact</a></div>
+</div>
+</div>
+</div>
+
+<!-- 134: Loyalty Discount -->
+<div class="component">
+<h2>134 — Long-Term Customer Discount</h2>
+<div class="card">
+<div class="title">Loyalty Rewards</div>
+<div class="subtitle">Save more the longer you stay</div>
+<table class="table" style="margin-top:24px">
+<thead><tr><th>Subscription Duration</th><th>Monthly Price</th><th>Discount</th></tr></thead>
+<tbody>
+<tr><td>First 6 months</td><td>$49/mo</td><td>—</td></tr>
+<tr><td>6-12 months</td><td>$46/mo</td><td class="savings">Save 6%</td></tr>
+<tr><td>12-24 months</td><td>$44/mo</td><td class="savings">Save 10%</td></tr>
+<tr><td>24+ months</td><td>$39/mo</td><td class="savings">Save 20%</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- 135: Project-Based -->
+<div class="component">
+<h2>135 — Project Limit Tiers</h2>
+<div class="grid grid-4">
+<div class="card">
+<div class="title">Starter</div>
+<div class="price"><span class="currency">$</span>12<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">5 projects</div>
+<div style="margin-top:16px"><a href="#" class="btn-outline btn">Start</a></div>
+</div>
+<div class="card">
+<div class="title">Basic</div>
+<div class="price"><span class="currency">$</span>29<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">25 projects</div>
+<div style="margin-top:16px"><a href="#" class="btn-outline btn">Start</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Best Value</span>
+<div class="title">Pro</div>
+<div class="price"><span class="currency">$</span>59<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">100 projects</div>
+<div style="margin-top:16px"><a href="#" class="btn">Start</a></div>
+</div>
+<div class="card">
+<div class="title">Unlimited</div>
+<div class="price"><span class="currency">$</span>99<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">Unlimited</div>
+<div style="margin-top:16px"><a href="#" class="btn-outline btn">Start</a></div>
+</div>
+</div>
+</div>
+
+<!-- 136: Support Level Pricing -->
+<div class="component">
+<h2>136 — Support-Based Tiers</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Self-Service</div>
+<div class="price"><span class="currency">$</span>29<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>Documentation access</div>
+<div class="feature"><span class="check">✓</span>Community forum</div>
+<div class="feature"><span class="check">✓</span>Email support (48h)</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Choose</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Recommended</span>
+<div class="title">Priority Support</div>
+<div class="price"><span class="currency">$</span>79<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>Everything in Self-Service</div>
+<div class="feature"><span class="check">✓</span>Email support (12h)</div>
+<div class="feature"><span class="check">✓</span>Chat support</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Choose</a></div>
+</div>
+<div class="card">
+<div class="title">Premium Support</div>
+<div class="price"><span class="currency">$</span>199<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>Everything in Priority</div>
+<div class="feature"><span class="check">✓</span>24/7 phone support</div>
+<div class="feature"><span class="check">✓</span>Dedicated account manager</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Choose</a></div>
+</div>
+</div>
+</div>
+
+<!-- 137: Transaction Fee Model -->
+<div class="component">
+<h2>137 — Transaction-Based Revenue Share</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Standard</div>
+<div class="price">2.9<span style="font-size:28px">%</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">+ $0.30 per transaction</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Get Started</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Volume Discount</span>
+<div class="title">High Volume</div>
+<div class="price">2.4<span style="font-size:28px">%</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">+ $0.25 per transaction</div>
+<div style="font-size:13px;color:#AEAEB2;margin-top:4px">$50k+/month volume</div>
+<div style="margin-top:24px"><a href="#" class="btn">Get Started</a></div>
+</div>
+<div class="card">
+<div class="title">Enterprise</div>
+<div class="price">Custom</div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">Negotiated rates</div>
+<div style="font-size:13px;color:#AEAEB2;margin-top:4px">$500k+/month volume</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Contact Sales</a></div>
+</div>
+</div>
+</div>
+
+<!-- 138: Concurrent Users -->
+<div class="component">
+<h2>138 — Concurrent User Pricing</h2>
+<div class="grid grid-4">
+<div class="card">
+<div class="title">Micro</div>
+<div class="price"><span class="currency">$</span>39<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">Up to 10 concurrent users</div>
+<div style="margin-top:16px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+<div class="card">
+<div class="title">Small</div>
+<div class="price"><span class="currency">$</span>99<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">Up to 50 concurrent users</div>
+<div style="margin-top:16px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Popular</span>
+<div class="title">Medium</div>
+<div class="price"><span class="currency">$</span>249<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">Up to 200 concurrent users</div>
+<div style="margin-top:16px"><a href="#" class="btn">Select</a></div>
+</div>
+<div class="card">
+<div class="title">Large</div>
+<div class="price"><span class="currency">$</span>599<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">Up to 1000 concurrent users</div>
+<div style="margin-top:16px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+</div>
+</div>
+
+<!-- 139: White Label Pricing -->
+<div class="component">
+<h2>139 — White Label Add-On</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Standard</div>
+<div class="subtitle">With branding</div>
+<div class="price"><span class="currency">$</span>49<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>All core features</div>
+<div class="feature"><span style="color:#AEAEB2;margin-right:10px">○</span>Custom branding</div>
+<div class="feature"><span style="color:#AEAEB2;margin-right:10px">○</span>Custom domain</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Choose</a></div>
+</div>
+<div class="card popular">
+<span class="badge">White Label</span>
+<div class="title">Premium</div>
+<div class="subtitle">Fully customizable</div>
+<div class="price"><span class="currency">$</span>149<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>All core features</div>
+<div class="feature"><span class="check">✓</span>Custom branding</div>
+<div class="feature"><span class="check">✓</span>Custom domain</div>
+<div class="feature"><span class="check">✓</span>Remove our branding</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Choose</a></div>
+</div>
+</div>
+</div>
+
+<!-- 140: SLA Tiers -->
+<div class="component">
+<h2>140 — SLA-Based Pricing</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Standard</div>
+<div class="subtitle">99% uptime</div>
+<div class="price"><span class="currency">$</span>99<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>Community support</div>
+<div class="feature"><span class="check">✓</span>Best effort response</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Business</span>
+<div class="title">Enhanced</div>
+<div class="subtitle">99.9% uptime</div>
+<div class="price"><span class="currency">$</span>299<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>4-hour response time</div>
+<div class="feature"><span class="check">✓</span>SLA credits</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Select</a></div>
+</div>
+<div class="card">
+<div class="title">Mission Critical</div>
+<div class="subtitle">99.99% uptime</div>
+<div class="price"><span class="currency">$</span>999<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>1-hour response time</div>
+<div class="feature"><span class="check">✓</span>Premium SLA credits</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+</div>
+</div>
+
+<!-- 141: Beta Pricing -->
+<div class="component">
+<h2>141 — Early Adopter Discount</h2>
+<div class="card popular">
+<span class="badge">Beta Access</span>
+<div style="text-align:center">
+<div class="title">Early Adopter Special</div>
+<div class="subtitle">Lock in beta pricing forever</div>
+<div style="display:flex;align-items:baseline;justify-content:center;gap:12px;margin:20px 0">
+<span style="font-size:21px;color:#AEAEB2;text-decoration:line-through">$79/mo</span>
+<div class="price"><span class="currency">$</span>39<span class="period">/mo</span></div>
+</div>
+<div style="font-size:14px;color:#1A8245;margin-bottom:24px">50% off forever • Price locked</div>
+<div style="max-width:300px;margin:0 auto"><a href="#" class="btn">Join Beta</a></div>
+<div style="margin-top:24px;padding-top:24px;border-top:1px solid #E3E3E8;text-align:left">
+<div class="feature"><span class="check">✓</span>Full product access</div>
+<div class="feature"><span class="check">✓</span>Early feature previews</div>
+<div class="feature"><span class="check">✓</span>Priority feedback channel</div>
+<div class="feature"><span class="check">✓</span>Lifetime discount guarantee</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 142: Overage Charges -->
+<div class="component">
+<h2>142 — Base + Overage Model</h2>
+<div class="card">
+<div class="title">Flexible Usage Plan</div>
+<div class="subtitle">Base plan with pay-per-use overages</div>
+<div style="margin:24px 0">
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:24px;margin-bottom:16px">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+<div><div style="font-size:16px;font-weight:600;color:#1D1D1F">Base Plan</div><div style="font-size:13px;color:#6D6D72;margin-top:4px">Includes 10,000 requests</div></div>
+<div class="price" style="font-size:34px"><span class="currency">$</span>49<span class="period">/mo</span></div>
+</div>
+<div style="border-top:1px solid #E3E3E8;padding-top:16px">
+<div style="display:flex;justify-content:space-between;margin-bottom:8px">
+<span style="font-size:14px;color:#6D6D72">Additional requests</span>
+<span style="font-size:14px;font-weight:600;color:#1D1D1F">$5 per 1,000</span>
+</div>
+<div style="display:flex;justify-content:space-between">
+<span style="font-size:14px;color:#6D6D72">Extra storage</span>
+<span style="font-size:14px;font-weight:600;color:#1D1D1F">$2 per 10GB</span>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Get Started</a></div>
+</div>
+</div>
+
+<!-- 143: Consultation Packages -->
+<div class="component">
+<h2>143 — Service Hour Bundles</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Starter Pack</div>
+<div class="price"><span class="currency">$</span>499</div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">5 consultation hours</div>
+<div style="font-size:13px;color:#AEAEB2;margin-top:4px">$100/hour</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Purchase</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Save $100</span>
+<div class="title">Growth Pack</div>
+<div class="price"><span class="currency">$</span>900</div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">10 consultation hours</div>
+<div style="font-size:13px;color:#1A8245;margin-top:4px">$90/hour • Save 10%</div>
+<div style="margin-top:24px"><a href="#" class="btn">Purchase</a></div>
+</div>
+<div class="card">
+<div class="title">Premium Pack</div>
+<div class="price"><span class="currency">$</span>1,600</div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">20 consultation hours</div>
+<div style="font-size:13px;color:#1A8245;margin-top:4px">$80/hour • Save 20%</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Purchase</a></div>
+</div>
+</div>
+</div>
+
+<!-- 144: Freemium Limits -->
+<div class="component">
+<h2>144 — Free Tier Comparison</h2>
+<table class="table">
+<thead><tr><th>Feature</th><th>Free Forever</th><th>Premium ($19/mo)</th></tr></thead>
+<tbody>
+<tr><td>Users</td><td>1</td><td>Unlimited</td></tr>
+<tr><td>Projects</td><td>3</td><td>Unlimited</td></tr>
+<tr><td>Storage</td><td>500MB</td><td>100GB</td></tr>
+<tr><td>Exports</td><td>10/month</td><td>Unlimited</td></tr>
+<tr><td>Collaboration</td><td>—</td><td><span class="check">✓</span></td></tr>
+<tr><td>Priority Support</td><td>—</td><td><span class="check">✓</span></td></tr>
+<tr><td>Custom Branding</td><td>—</td><td><span class="check">✓</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- 145: Seasonal Pricing -->
+<div class="component">
+<h2>145 — Holiday Special</h2>
+<div class="card popular">
+<span class="badge">Holiday Sale</span>
+<div style="text-align:center">
+<div style="font-size:13px;color:#2C6ECB;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">Black Friday Special</div>
+<div class="title">Annual Professional</div>
+<div style="display:flex;align-items:baseline;justify-content:center;gap:12px;margin:16px 0">
+<span style="font-size:21px;color:#AEAEB2;text-decoration:line-through">$588/year</span>
+<div class="price"><span class="currency">$</span>294<span class="period">/year</span></div>
+</div>
+<div style="font-size:14px;color:#1A8245;margin-bottom:8px">Save 50% • Just $24.50/month</div>
+<div style="font-size:13px;color:#D72C0D;margin-bottom:24px">Offer expires Dec 1st</div>
+<div style="max-width:300px;margin:0 auto"><a href="#" class="btn">Claim Deal</a></div>
+</div>
+</div>
+</div>
+
+<!-- 146: Multi-Product Bundle -->
+<div class="component">
+<h2>146 — Suite Pricing</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Individual Products</div>
+<div style="margin:20px 0;padding:20px 0;border-top:1px solid #E3E3E8;border-bottom:1px solid #E3E3E8">
+<div style="display:flex;justify-content:space-between;margin-bottom:12px"><span style="font-size:14px;color:#1D1D1F">Analytics Pro</span><span style="font-size:14px;color:#1D1D1F">$29/mo</span></div>
+<div style="display:flex;justify-content:space-between;margin-bottom:12px"><span style="font-size:14px;color:#1D1D1F">Marketing Suite</span><span style="font-size:14px;color:#1D1D1F">$39/mo</span></div>
+<div style="display:flex;justify-content:space-between;margin-bottom:12px"><span style="font-size:14px;color:#1D1D1F">CRM Platform</span><span style="font-size:14px;color:#1D1D1F">$49/mo</span></div>
+<div style="border-top:1px solid #E3E3E8;margin-top:12px;padding-top:12px;display:flex;justify-content:space-between">
+<span style="font-size:16px;font-weight:600;color:#1D1D1F">Total</span>
+<span style="font-size:16px;font-weight:600;color:#1D1D1F">$117/mo</span>
+</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Buy Separately</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Save $38/mo</span>
+<div class="title">Complete Suite</div>
+<div style="margin:20px 0;padding:20px 0;border-top:1px solid #E3E3E8;border-bottom:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>Analytics Pro</div>
+<div class="feature"><span class="check">✓</span>Marketing Suite</div>
+<div class="feature"><span class="check">✓</span>CRM Platform</div>
+<div class="feature"><span class="check">✓</span>Priority support</div>
+<div style="border-top:1px solid #E3E3E8;margin-top:16px;padding-top:16px;display:flex;justify-content:space-between">
+<span style="font-size:16px;font-weight:600;color:#1D1D1F">Bundle Price</span>
+<span style="font-size:16px;font-weight:600;color:#1A8245">$79/mo</span>
+</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Get Suite</a></div>
+</div>
+</div>
+</div>
+
+<!-- 147: Managed Service -->
+<div class="component">
+<h2>147 — Managed vs Self-Service</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Self-Service</div>
+<div class="subtitle">Manage everything yourself</div>
+<div class="price"><span class="currency">$</span>49<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>Full platform access</div>
+<div class="feature"><span class="check">✓</span>Documentation</div>
+<div class="feature"><span class="check">✓</span>Email support</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Start</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Managed</span>
+<div class="title">Fully Managed</div>
+<div class="subtitle">We handle everything</div>
+<div class="price"><span class="currency">$</span>299<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>Everything in Self-Service</div>
+<div class="feature"><span class="check">✓</span>Dedicated manager</div>
+<div class="feature"><span class="check">✓</span>Setup & configuration</div>
+<div class="feature"><span class="check">✓</span>Ongoing optimization</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Start</a></div>
+</div>
+</div>
+</div>
+
+<!-- 148: Data Retention -->
+<div class="component">
+<h2>148 — Data Retention Tiers</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Basic</div>
+<div class="price"><span class="currency">$</span>29<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>30-day data retention</div>
+<div class="feature"><span class="check">✓</span>Standard backups</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Recommended</span>
+<div class="title">Professional</div>
+<div class="price"><span class="currency">$</span>79<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>1-year data retention</div>
+<div class="feature"><span class="check">✓</span>Daily backups</div>
+<div class="feature"><span class="check">✓</span>Point-in-time recovery</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Select</a></div>
+</div>
+<div class="card">
+<div class="title">Enterprise</div>
+<div class="price"><span class="currency">$</span>199<span class="period">/mo</span></div>
+<div style="margin-top:20px;padding-top:20px;border-top:1px solid #E3E3E8">
+<div class="feature"><span class="check">✓</span>Unlimited data retention</div>
+<div class="feature"><span class="check">✓</span>Continuous backups</div>
+<div class="feature"><span class="check">✓</span>Advanced recovery</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">Select</a></div>
+</div>
+</div>
+</div>
+
+<!-- 149: Plugin Marketplace -->
+<div class="component">
+<h2>149 — Core + Premium Plugins</h2>
+<div class="card">
+<div class="title">Platform Pricing</div>
+<div style="margin:24px 0">
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:24px;margin-bottom:16px">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div><div style="font-size:16px;font-weight:600;color:#1D1D1F">Core Platform</div><div style="font-size:13px;color:#6D6D72;margin-top:4px">Includes basic features</div></div>
+<div class="price" style="font-size:34px"><span class="currency">$</span>39<span class="period">/mo</span></div>
+</div>
+</div>
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px">Premium Plugins (Optional)</div>
+<div style="display:grid;gap:12px">
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:16px;display:flex;justify-content:space-between;align-items:center">
+<span style="font-size:14px;color:#1D1D1F">Advanced Analytics</span>
+<span style="font-size:14px;font-weight:600;color:#1D1D1F">+$15/mo</span>
+</div>
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:16px;display:flex;justify-content:space-between;align-items:center">
+<span style="font-size:14px;color:#1D1D1F">Automation Tools</span>
+<span style="font-size:14px;font-weight:600;color:#1D1D1F">+$20/mo</span>
+</div>
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:16px;display:flex;justify-content:space-between;align-items:center">
+<span style="font-size:14px;color:#1D1D1F">Custom Reports</span>
+<span style="font-size:14px;font-weight:600;color:#1D1D1F">+$10/mo</span>
+</div>
+</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Get Started</a></div>
+</div>
+</div>
+
+<!-- 150: Grandfathered Pricing -->
+<div class="component">
+<h2>150 — Legacy Plan Protection</h2>
+<div class="grid grid-2">
+<div class="card">
+<div style="display:inline-block;background:#1A8245;color:#fff;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;margin-bottom:12px">LEGACY PLAN</div>
+<div class="title">Your Current Plan</div>
+<div class="subtitle">Grandfathered pricing</div>
+<div class="price"><span class="currency">$</span>29<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#1A8245;margin-top:8px">Original pricing locked in</div>
+<div style="margin-top:24px"><a href="#" class="btn">Keep Plan</a></div>
+</div>
+<div class="card">
+<div style="display:inline-block;background:#F6F6F7;border:1px solid #E3E3E8;color:#1D1D1F;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;margin-bottom:12px">NEW PRICING</div>
+<div class="title">Current Plan</div>
+<div class="subtitle">New customer pricing</div>
+<div class="price"><span class="currency">$</span>49<span class="period">/mo</span></div>
+<div style="font-size:13px;color:#6D6D72;margin-top:8px">Standard pricing</div>
+<div style="margin-top:24px"><a href="#" class="btn-outline btn">View Details</a></div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

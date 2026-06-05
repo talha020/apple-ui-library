@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Sections 001-025 - Apple HIG Design</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;background:#fff;color:#1d1d1f;line-height:1.5}
+.container{max-width:1200px;margin:0 auto;padding:60px 20px}
+.section{margin-bottom:100px}
+h1{font-size:48px;font-weight:700;margin-bottom:12px;letter-spacing:-.02em}
+h2{font-size:40px;font-weight:700;margin-bottom:16px;letter-spacing:-.01em}
+h3{font-size:28px;font-weight:600;margin-bottom:12px}
+h4{font-size:21px;font-weight:600;margin-bottom:8px}
+p{font-size:17px;color:#6e6e73;line-height:1.6}
+.grid{display:grid;gap:24px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:#f5f5f7;border-radius:18px;overflow:hidden;transition:transform .3s ease}
+.card:hover{transform:translateY(-4px)}
+.card-img{width:100%;height:240px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);position:relative}
+.card-content{padding:24px}
+.tag{display:inline-block;background:#0071e3;color:#fff;padding:4px 12px;border-radius:12px;font-size:13px;font-weight:500;margin-bottom:12px}
+.meta{font-size:14px;color:#86868b;margin-top:12px}
+.btn{display:inline-block;background:#0071e3;color:#fff;padding:12px 24px;border-radius:980px;text-decoration:none;font-weight:500;transition:background .3s}
+.btn:hover{background:#0077ed}
+.hero-card{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:60px;border-radius:24px}
+.hero-card h2{color:#fff}
+.hero-card p{color:rgba(255,255,255,.9)}
+.masonry{column-count:3;column-gap:24px}
+.masonry-item{break-inside:avoid;margin-bottom:24px}
+.list-item{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid #d2d2d7}
+.list-img{width:140px;height:100px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);border-radius:12px;flex-shrink:0}
+.featured{position:relative;overflow:hidden;border-radius:24px;height:480px}
+.featured-bg{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);z-index:1}
+.featured-content{position:relative;z-index:2;padding:60px;color:#fff;height:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.sidebar{display:grid;grid-template-columns:2fr 1fr;gap:40px}
+.compact-card{display:flex;gap:16px;margin-bottom:16px}
+.compact-img{width:80px;height:80px;background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);border-radius:12px;flex-shrink:0}
+.timeline{position:relative;padding-left:40px}
+.timeline-item{position:relative;padding-bottom:40px}
+.timeline-item::before{content:'';position:absolute;left:-34px;top:6px;width:12px;height:12px;background:#0071e3;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px #0071e3}
+.timeline-item::after{content:'';position:absolute;left:-29px;top:18px;width:2px;height:calc(100% - 18px);background:#d2d2d7}
+.timeline-item:last-child::after{display:none}
+.overlay-card{position:relative;border-radius:18px;overflow:hidden;height:360px}
+.overlay-bg{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#a8edea 0%,#fed6e3 100%);z-index:1}
+.overlay-content{position:relative;z-index:2;padding:32px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(to top,rgba(0,0,0,.6),transparent)}
+.overlay-content h3,.overlay-content p{color:#fff}
+.minimal-list{list-style:none}
+.minimal-list li{padding:20px 0;border-bottom:1px solid #d2d2d7;display:flex;justify-content:space-between;align-items:center}
+.badge{background:#ff3b30;color:#fff;padding:2px 8px;border-radius:8px;font-size:12px;font-weight:600}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:hidden;border-radius:24px}
+.split-left{background:linear-gradient(135deg,#ffecd2 0%,#fcb69f 100%);padding:60px}
+.split-right{background:#1d1d1f;padding:60px;color:#f5f5f7}
+.stats{text-align:center;padding:40px 0}
+.stat-number{font-size:56px;font-weight:700;color:#0071e3}
+.stat-label{font-size:17px;color:#6e6e73;margin-top:8px}
+.carousel{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:20px}
+.carousel::-webkit-scrollbar{height:8px}
+.carousel::-webkit-scrollbar-track{background:#f5f5f7;border-radius:4px}
+.carousel::-webkit-scrollbar-thumb{background:#d2d2d7;border-radius:4px}
+.carousel-item{min-width:320px;scroll-snap-align:start}
+@media(max-width:768px){
+.grid-2,.grid-3,.grid-4,.sidebar,.split{grid-template-columns:1fr}
+.masonry{column-count:1}
+h1{font-size:32px}
+h2{font-size:28px}
+.carousel-item{min-width:280px}
+}
+</style>
+</head>
+<body>
+
+<!-- Section 1: Hero Featured Post -->
+<section class="container section">
+<div class="featured">
+<div class="featured-bg"></div>
+<div class="featured-content">
+<span class="tag">Featured</span>
+<h2>The Future of Design Systems</h2>
+<p>Exploring how modern design systems are shaping the digital landscape.</p>
+<div class="meta">March 15, 2024 · 8 min read</div>
+</div>
+</div>
+</section>
+
+<!-- Section 2: Classic 3-Column Grid -->
+<section class="container section">
+<h2>Latest Articles</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)"></div>
+<div class="card-content">
+<span class="tag">Technology</span>
+<h4>Building Scalable Design Systems</h4>
+<p>A comprehensive guide to creating maintainable design systems.</p>
+<div class="meta">5 min read</div>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)"></div>
+<div class="card-content">
+<span class="tag">Design</span>
+<h4>Typography in Modern Interfaces</h4>
+<p>Understanding the principles of effective typography.</p>
+<div class="meta">7 min read</div>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)"></div>
+<div class="card-content">
+<span class="tag">Development</span>
+<h4>CSS Grid Mastery</h4>
+<p>Advanced techniques for responsive layouts.</p>
+<div class="meta">6 min read</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 3: Masonry Layout -->
+<section class="container section">
+<h2>Trending Topics</h2>
+<div class="masonry">
+<div class="masonry-item">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);height:180px"></div>
+<div class="card-content">
+<span class="tag">UX</span>
+<h4>User Research Methods</h4>
+<p>Effective strategies for understanding your users.</p>
+</div>
+</div>
+</div>
+<div class="masonry-item">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#30cfd0 0%,#330867 100%);height:280px"></div>
+<div class="card-content">
+<span class="tag">Innovation</span>
+<h4>AI in Design</h4>
+<p>How artificial intelligence is transforming creative workflows.</p>
+</div>
+</div>
+</div>
+<div class="masonry-item">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#a8edea 0%,#fed6e3 100%);height:200px"></div>
+<div class="card-content">
+<span class="tag">Accessibility</span>
+<h4>Inclusive Design Practices</h4>
+<p>Creating experiences for everyone.</p>
+</div>
+</div>
+</div>
+<div class="masonry-item">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#ffecd2 0%,#fcb69f 100%);height:240px"></div>
+<div class="card-content">
+<span class="tag">Mobile</span>
+<h4>iOS Design Guidelines</h4>
+<p>Best practices for Apple platforms.</p>
+</div>
+</div>
+</div>
+<div class="masonry-item">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#ff9a9e 0%,#fecfef 100%);height:220px"></div>
+<div class="card-content">
+<span class="tag">Strategy</span>
+<h4>Product Roadmaps</h4>
+<p>Planning for success.</p>
+</div>
+</div>
+</div>
+<div class="masonry-item">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#fbc2eb 0%,#a6c1ee 100%);height:260px"></div>
+<div class="card-content">
+<span class="tag">Tools</span>
+<h4>Design Tool Ecosystem</h4>
+<p>Choosing the right tools for your workflow.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 4: List View with Thumbnails -->
+<section class="container section">
+<h2>Recent Posts</h2>
+<div>
+<div class="list-item">
+<div class="list-img" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)"></div>
+<div style="flex:1">
+<span class="tag">Tutorial</span>
+<h4>Advanced Animation Techniques</h4>
+<p>Learn how to create smooth, performant animations.</p>
+<div class="meta">March 14, 2024 · 10 min read</div>
+</div>
+</div>
+<div class="list-item">
+<div class="list-img" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)"></div>
+<div style="flex:1">
+<span class="tag">Case Study</span>
+<h4>Redesigning the Payment Flow</h4>
+<p>A deep dive into improving conversion rates.</p>
+<div class="meta">March 13, 2024 · 12 min read</div>
+</div>
+</div>
+<div class="list-item">
+<div class="list-img" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)"></div>
+<div style="flex:1">
+<span class="tag">Opinion</span>
+<h4>The State of Web Design in 2024</h4>
+<p>Trends and predictions for the year ahead.</p>
+<div class="meta">March 12, 2024 · 8 min read</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 5: Hero with Gradient Background -->
+<section class="container section">
+<div class="hero-card">
+<span class="tag" style="background:rgba(255,255,255,.3)">Newsletter</span>
+<h2>Stay Updated</h2>
+<p>Get the latest articles and insights delivered to your inbox weekly.</p>
+<a href="#" class="btn" style="background:#fff;color:#0071e3;margin-top:20px">Subscribe Now</a>
+</div>
+</section>
+
+<!-- Section 6: 4-Column Grid -->
+<section class="container section">
+<h2>Quick Reads</h2>
+<div class="grid grid-4">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);height:160px"></div>
+<div class="card-content">
+<h4>Color Theory Basics</h4>
+<p>Understanding color in design.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#30cfd0 0%,#330867 100%);height:160px"></div>
+<div class="card-content">
+<h4>Layout Fundamentals</h4>
+<p>Grid systems explained.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#a8edea 0%,#fed6e3 100%);height:160px"></div>
+<div class="card-content">
+<h4>Icon Design Tips</h4>
+<p>Creating clear icons.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#ffecd2 0%,#fcb69f 100%);height:160px"></div>
+<div class="card-content">
+<h4>Wireframing Guide</h4>
+<p>Start with structure.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 7: Sidebar Layout -->
+<section class="container section">
+<div class="sidebar">
+<div>
+<h2>Editor's Picks</h2>
+<div class="grid" style="gap:20px">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)"></div>
+<div class="card-content">
+<span class="tag">Featured</span>
+<h4>Designing for Accessibility</h4>
+<p>Creating inclusive digital experiences for all users.</p>
+<div class="meta">9 min read</div>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)"></div>
+<div class="card-content">
+<span class="tag">Featured</span>
+<h4>Mobile-First Approach</h4>
+<p>Why starting with mobile makes better products.</p>
+<div class="meta">7 min read</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3>Popular Posts</h3>
+<div class="compact-card">
+<div class="compact-img" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)"></div>
+<div>
+<h4 style="font-size:16px">Dark Mode Design</h4>
+<div class="meta">4 min read</div>
+</div>
+</div>
+<div class="compact-card">
+<div class="compact-img" style="background:linear-gradient(135deg,#fa709a 0%,#fee140 100%)"></div>
+<div>
+<h4 style="font-size:16px">Micro-interactions</h4>
+<div class="meta">5 min read</div>
+</div>
+</div>
+<div class="compact-card">
+<div class="compact-img" style="background:linear-gradient(135deg,#30cfd0 0%,#330867 100%)"></div>
+<div>
+<h4 style="font-size:16px">Design Tokens</h4>
+<div class="meta">6 min read</div>
+</div>
+</div>
+<div class="compact-card">
+<div class="compact-img" style="background:linear-gradient(135deg,#a8edea 0%,#fed6e3 100%)"></div>
+<div>
+<h4 style="font-size:16px">Component Libraries</h4>
+<div class="meta">8 min read</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 8: Timeline View -->
+<section class="container section">
+<h2>Latest Updates</h2>
+<div class="timeline">
+<div class="timeline-item">
+<span class="tag">Today</span>
+<h4>New Feature Launch</h4>
+<p>We've released a new suite of design tools to help streamline your workflow.</p>
+<div class="meta">2 hours ago</div>
+</div>
+<div class="timeline-item">
+<span class="tag">Yesterday</span>
+<h4>Community Spotlight</h4>
+<p>Featuring amazing work from our community members this week.</p>
+<div class="meta">1 day ago</div>
+</div>
+<div class="timeline-item">
+<span class="tag">This Week</span>
+<h4>Design System Update</h4>
+<p>Major updates to our component library with improved accessibility.</p>
+<div class="meta">3 days ago</div>
+</div>
+<div class="timeline-item">
+<span class="tag">Last Week</span>
+<h4>Tutorial Series</h4>
+<p>New video series on advanced prototyping techniques now available.</p>
+<div class="meta">7 days ago</div>
+</div>
+</div>
+</section>
+
+<!-- Section 9: Overlay Cards -->
+<section class="container section">
+<h2>Featured Stories</h2>
+<div class="grid grid-2">
+<div class="overlay-card">
+<div class="overlay-bg" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)"></div>
+<div class="overlay-content">
+<span class="tag" style="background:rgba(255,255,255,.3)">Design</span>
+<h3>The Art of Minimalism</h3>
+<p>Less is more in modern interface design.</p>
+</div>
+</div>
+<div class="overlay-card">
+<div class="overlay-bg" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)"></div>
+<div class="overlay-content">
+<span class="tag" style="background:rgba(255,255,255,.3)">Development</span>
+<h3>Performance Optimization</h3>
+<p>Making your websites blazingly fast.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 10: Minimal List -->
+<section class="container section">
+<h2>Reading List</h2>
+<ul class="minimal-list">
+<li>
+<div>
+<h4>Understanding User Behavior</h4>
+<p>Insights from 10,000+ user sessions</p>
+</div>
+<span class="badge">New</span>
+</li>
+<li>
+<div>
+<h4>Design System Documentation</h4>
+<p>Best practices for writing docs</p>
+</div>
+<div class="meta">12 min</div>
+</li>
+<li>
+<div>
+<h4>Component Architecture</h4>
+<p>Building reusable UI components</p>
+</div>
+<div class="meta">15 min</div>
+</li>
+<li>
+<div>
+<h4>Responsive Typography</h4>
+<p>Fluid type scales that work everywhere</p>
+</div>
+<div class="meta">8 min</div>
+</li>
+</ul>
+</section>
+
+<!-- Section 11: Split Layout -->
+<section class="container section">
+<div class="split">
+<div class="split-left">
+<h2 style="color:#1d1d1f">Design Resources</h2>
+<p style="color:#1d1d1f">Free templates, components, and design assets for your next project.</p>
+<a href="#" class="btn" style="margin-top:20px">Browse Resources</a>
+</div>
+<div class="split-right">
+<h2>Developer Tools</h2>
+<p style="color:#f5f5f7">Code snippets, libraries, and frameworks to accelerate development.</p>
+<a href="#" class="btn" style="margin-top:20px;background:#0071e3">Explore Tools</a>
+</div>
+</div>
+</section>
+
+<!-- Section 12: Stats Grid -->
+<section class="container section">
+<h2 style="text-align:center;margin-bottom:60px">By The Numbers</h2>
+<div class="grid grid-4">
+<div class="stats">
+<div class="stat-number">500+</div>
+<div class="stat-label">Articles Published</div>
+</div>
+<div class="stats">
+<div class="stat-number">50K+</div>
+<div class="stat-label">Monthly Readers</div>
+</div>
+<div class="stats">
+<div class="stat-number">1M+</div>
+<div class="stat-label">Page Views</div>
+</div>
+<div class="stats">
+<div class="stat-number">100+</div>
+<div class="stat-label">Contributors</div>
+</div>
+</div>
+</section>
+
+<!-- Section 13: Horizontal Carousel -->
+<section class="container section">
+<h2>Trending Now</h2>
+<div class="carousel">
+<div class="carousel-item">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)"></div>
+<div class="card-content">
+<span class="tag">Trending</span>
+<h4>Voice Interface Design</h4>
+<p>Designing for the next generation of interactions.</p>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)"></div>
+<div class="card-content">
+<span class="tag">Trending</span>
+<h4>AR/VR Experiences</h4>
+<p>Creating immersive digital worlds.</p>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)"></div>
+<div class="card-content">
+<span class="tag">Trending</span>
+<h4>Motion Design</h4>
+<p>Bringing interfaces to life.</p>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#fa709a 0%,#fee140 100%)"></div>
+<div class="card-content">
+<span class="tag">Trending</span>
+<h4>3D in Web Design</h4>
+<p>Adding depth to digital experiences.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 14: Large Featured with Gradient -->
+<section class="container section">
+<div class="featured" style="background:linear-gradient(135deg,#30cfd0 0%,#330867 100%)">
+<div class="featured-content">
+<span class="tag" style="background:rgba(255,255,255,.3)">Deep Dive</span>
+<h1 style="color:#fff">The Complete Guide to Design Systems</h1>
+<p style="color:#fff;font-size:21px">Everything you need to know about creating and maintaining design systems at scale.</p>
+<div style="margin-top:30px">
+<a href="#" class="btn" style="background:#fff;color:#0071e3">Read Article</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 15: 2-Column Article Cards -->
+<section class="container section">
+<h2>Latest Insights</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#a8edea 0%,#fed6e3 100%);height:280px"></div>
+<div class="card-content">
+<span class="tag">Research</span>
+<h3>User Testing Best Practices</h3>
+<p>Learn how to conduct effective user testing sessions that provide actionable insights for your product development process.</p>
+<div class="meta">March 10, 2024 · 14 min read · 2.5K views</div>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#ffecd2 0%,#fcb69f 100%);height:280px"></div>
+<div class="card-content">
+<span class="tag">Strategy</span>
+<h3>Building Design Teams</h3>
+<p>Strategies for hiring, managing, and growing high-performing design teams in fast-paced environments.</p>
+<div class="meta">March 9, 2024 · 11 min read · 3.1K views</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 16: Compact 3-Column -->
+<section class="container section">
+<h2>Quick Tips</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="card-content">
+<span class="tag">Tip #1</span>
+<h4>Use Consistent Spacing</h4>
+<p>Maintain a spacing scale throughout your design for visual harmony.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<span class="tag">Tip #2</span>
+<h4>Limit Font Families</h4>
+<p>Stick to 2-3 typefaces maximum for a cohesive look.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<span class="tag">Tip #3</span>
+<h4>Embrace White Space</h4>
+<p>Give your content room to breathe for better readability.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<span class="tag">Tip #4</span>
+<h4>Test on Real Devices</h4>
+<p>Always verify your designs on actual hardware.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<span class="tag">Tip #5</span>
+<h4>Prioritize Performance</h4>
+<p>Fast loading times improve user experience significantly.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<span class="tag">Tip #6</span>
+<h4>Document Decisions</h4>
+<p>Keep track of design rationale for future reference.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 17: Category Grid -->
+<section class="container section">
+<h2>Browse by Category</h2>
+<div class="grid grid-4">
+<div class="overlay-card" style="height:240px">
+<div class="overlay-bg" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)"></div>
+<div class="overlay-content">
+<h3>Design</h3>
+<p>125 articles</p>
+</div>
+</div>
+<div class="overlay-card" style="height:240px">
+<div class="overlay-bg" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)"></div>
+<div class="overlay-content">
+<h3>Development</h3>
+<p>98 articles</p>
+</div>
+</div>
+<div class="overlay-card" style="height:240px">
+<div class="overlay-bg" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)"></div>
+<div class="overlay-content">
+<h3>UX Research</h3>
+<p>67 articles</p>
+</div>
+</div>
+<div class="overlay-card" style="height:240px">
+<div class="overlay-bg" style="background:linear-gradient(135deg,#fa709a 0%,#fee140 100%)"></div>
+<div class="overlay-content">
+<h3>Business</h3>
+<p>54 articles</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 18: Author Highlights -->
+<section class="container section">
+<h2>Featured Authors</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="card-content" style="text-align:center">
+<div style="width:80px;height:80px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:50%;margin:0 auto 16px"></div>
+<h4>Sarah Johnson</h4>
+<p>Senior Product Designer</p>
+<div class="meta">32 articles published</div>
+</div>
+</div>
+<div class="card">
+<div class="card-content" style="text-align:center">
+<div style="width:80px;height:80px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);border-radius:50%;margin:0 auto 16px"></div>
+<h4>Michael Chen</h4>
+<p>Lead Developer</p>
+<div class="meta">28 articles published</div>
+</div>
+</div>
+<div class="card">
+<div class="card-content" style="text-align:center">
+<div style="width:80px;height:80px;background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);border-radius:50%;margin:0 auto 16px"></div>
+<h4>Emily Rodriguez</h4>
+<p>UX Researcher</p>
+<div class="meta">24 articles published</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 19: Tag Cloud Style -->
+<section class="container section">
+<h2>Popular Topics</h2>
+<div style="background:#f5f5f7;padding:40px;border-radius:18px">
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">Design Systems</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">CSS</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">JavaScript</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">React</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">UI/UX</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">Accessibility</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">Typography</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">Color Theory</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">Animation</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">Prototyping</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">Wireframing</a>
+<a href="#" class="tag" style="text-decoration:none;font-size:15px">User Testing</a>
+</div>
+</div>
+</section>
+
+<!-- Section 20: Newsletter CTA -->
+<section class="container section">
+<div style="background:linear-gradient(135deg,#ff9a9e 0%,#fecfef 100%);padding:60px;border-radius:24px;text-align:center">
+<h2 style="color:#1d1d1f">Join Our Newsletter</h2>
+<p style="color:#1d1d1f;max-width:600px;margin:0 auto 30px">Get weekly updates on design trends, development tips, and industry insights delivered straight to your inbox.</p>
+<div style="display:flex;gap:12px;max-width:500px;margin:0 auto">
+<input type="email" placeholder="Enter your email" style="flex:1;padding:14px 20px;border:none;border-radius:980px;font-size:16px">
+<button class="btn">Subscribe</button>
+</div>
+</div>
+</section>
+
+<!-- Section 21: Archive Grid -->
+<section class="container section">
+<h2>From the Archives</h2>
+<div class="grid grid-2">
+<div class="list-item" style="border:none;padding:0">
+<div class="list-img" style="width:200px;height:140px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)"></div>
+<div style="flex:1">
+<span class="tag">Classic</span>
+<h4>Design Principles That Stand the Test of Time</h4>
+<p>Timeless wisdom for creating effective interfaces.</p>
+<div class="meta">January 15, 2023 · 15 min read</div>
+</div>
+</div>
+<div class="list-item" style="border:none;padding:0;margin-top:24px">
+<div class="list-img" style="width:200px;height:140px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%)"></div>
+<div style="flex:1">
+<span class="tag">Popular</span>
+<h4>The Evolution of Web Design</h4>
+<p>A journey through the history of digital design.</p>
+<div class="meta">March 20, 2023 · 18 min read</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 22: Video Posts -->
+<section class="container section">
+<h2>Video Tutorials</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#30cfd0 0%,#330867 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px">▶</div>
+<div class="card-content">
+<span class="tag">Video</span>
+<h4>Figma Advanced Techniques</h4>
+<p>Master advanced features in 30 minutes.</p>
+<div class="meta">30:42 duration</div>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#a8edea 0%,#fed6e3 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px">▶</div>
+<div class="card-content">
+<span class="tag">Video</span>
+<h4>CSS Grid From Scratch</h4>
+<p>Complete guide to modern layouts.</p>
+<div class="meta">45:18 duration</div>
+</div>
+</div>
+<div class="card">
+<div class="card-img" style="background:linear-gradient(135deg,#ffecd2 0%,#fcb69f 100%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:48px">▶</div>
+<div class="card-content">
+<span class="tag">Video</span>
+<h4>Design System Setup</h4>
+<p>Build your first design system.</p>
+<div class="meta">52:30 duration</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 23: Podcast Episodes -->
+<section class="container section">
+<h2>Latest Podcast Episodes</h2>
+<div class="grid grid-2">
+<div class="card">
+<div style="display:flex;gap:20px;padding:24px">
+<div style="width:120px;height:120px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:36px">🎙</div>
+<div>
+<span class="tag">Podcast</span>
+<h4>The Future of Design with Jane Doe</h4>
+<p>Discussing AI, automation, and the designer's role.</p>
+<div class="meta">Episode 42 · 58 min</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div style="display:flex;gap:20px;padding:24px">
+<div style="width:120px;height:120px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:36px">🎙</div>
+<div>
+<span class="tag">Podcast</span>
+<h4>Building Better Products</h4>
+<p>Product strategy insights from industry leaders.</p>
+<div class="meta">Episode 41 · 62 min</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 24: Case Studies -->
+<section class="container section">
+<h2>Case Studies</h2>
+<div class="grid">
+<div class="overlay-card" style="height:400px">
+<div class="overlay-bg" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%)"></div>
+<div class="overlay-content">
+<span class="tag" style="background:rgba(255,255,255,.3)">Case Study</span>
+<h3>E-commerce Redesign: 300% Conversion Increase</h3>
+<p>How we transformed a struggling online store into a revenue-generating machine through strategic UX improvements.</p>
+<a href="#" class="btn" style="background:#fff;color:#0071e3;margin-top:20px">Read Case Study</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Section 25: Footer CTA -->
+<section class="container section">
+<div style="background:#1d1d1f;padding:80px 60px;border-radius:24px;text-align:center;color:#f5f5f7">
+<h2 style="color:#f5f5f7;margin-bottom:20px">Start Your Design Journey</h2>
+<p style="color:#f5f5f7;max-width:700px;margin:0 auto 40px;font-size:19px">Join thousands of designers and developers learning new skills and staying ahead of the curve.</p>
+<div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+<a href="#" class="btn">Browse Articles</a>
+<a href="#" class="btn" style="background:transparent;border:2px solid #fff">View Tutorials</a>
+</div>
+<div class="meta" style="margin-top:40px;color:#86868b">Over 50,000 readers worldwide</div>
+</div>
+</section>
+
+</body>
+</html>

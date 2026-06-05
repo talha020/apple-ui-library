@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTA 151-175 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<!-- CTA 151: Centered with Two Lines -->
+<div class="section-label">151 — Centered with Two Lines</div>
+<div class="section-container">
+  <div style="padding: 100px 40px; text-align: center;">
+    <h2 style="font-size: 42px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; letter-spacing: -0.5px;">Less complexity.</h2>
+    <h2 style="font-size: 42px; font-weight: 700; color: #6D6D72; margin-bottom: 32px; letter-spacing: -0.5px;">More results.</h2>
+    <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">See How</a>
+  </div>
+</div>
+
+<!-- CTA 152: Compact Email CTA with Icon -->
+<div class="section-label">152 — Compact Email CTA with Icon</div>
+<div class="section-container">
+  <div style="padding: 48px 40px; display: flex; align-items: center; justify-content: center; gap: 24px;">
+    <div style="width: 48px; height: 48px; border-radius: 12px; background: #2C6ECB; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><span style="color: #FFFFFF; font-size: 20px;">&#x2709;</span></div>
+    <div><p style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Get weekly insights delivered to your inbox</p></div>
+    <div style="display: flex; gap: 8px;">
+      <input type="email" placeholder="Email" style="padding: 10px 14px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; width: 200px;">
+      <button style="background: #1A1A1A; color: #FFFFFF; padding: 10px 18px; border-radius: 8px; border: none; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: 0.2s ease;">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 153: Split Asymmetric CTA -->
+<div class="section-label">153 — Split Asymmetric CTA</div>
+<div class="section-container">
+  <div style="display: flex; min-height: 360px;">
+    <div style="flex: 2; padding: 60px 48px; display: flex; flex-direction: column; justify-content: center;">
+      <span style="display: inline-block; background: #1A8245; color: #FFFFFF; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; width: fit-content; margin-bottom: 16px;">NOW AVAILABLE</span>
+      <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">AI-powered code review</h2>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.5; margin-bottom: 24px;">Catch bugs, improve code quality, and ship with confidence. Our AI reviews every pull request automatically.</p>
+      <div style="display: flex; gap: 12px;">
+        <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Enable AI Review</a>
+        <a href="#" style="display: inline-block; color: #2C6ECB; padding: 14px 0; font-size: 15px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Learn more &rarr;</a>
+      </div>
+    </div>
+    <div style="flex: 1; background: #1A1A1A; display: flex; align-items: center; justify-content: center; padding: 32px;">
+      <div style="width: 100%; max-width: 240px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 16px; font-family: monospace; font-size: 12px; color: #AEAEB2; line-height: 1.8;">
+        <span style="color: #1A8245;">+ Fixed:</span> null check<br>
+        <span style="color: #D72C0D;">- Removed:</span> unused var<br>
+        <span style="color: #2C6ECB;">~ Suggest:</span> async/await
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 154: Dark with Dotted Border -->
+<div class="section-label">154 — Dark with Dotted Border</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; text-align: center; background: #1A1A1A;">
+    <div style="max-width: 560px; margin: 0 auto; border: 2px dashed rgba(255,255,255,0.2); border-radius: 16px; padding: 48px 32px;">
+      <h2 style="font-size: 28px; font-weight: 700; color: #FFFFFF; margin-bottom: 12px;">Ready for the next step?</h2>
+      <p style="font-size: 16px; color: #AEAEB2; margin-bottom: 28px;">Take your project from prototype to production.</p>
+      <a href="#" style="display: inline-block; background: #FFFFFF; color: #1A1A1A; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Launch Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 155: Diagonal Gradient CTA -->
+<div class="section-label">155 — Diagonal Gradient CTA</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; text-align: center; background: linear-gradient(45deg, #1A1A1A 0%, #7C3AED 50%, #2C6ECB 100%);">
+    <h2 style="font-size: 34px; font-weight: 700; color: #FFFFFF; margin-bottom: 12px;">Innovation at your fingertips</h2>
+    <p style="font-size: 17px; color: rgba(255,255,255,0.75); margin-bottom: 32px;">Build the future with cutting-edge tools.</p>
+    <a href="#" style="display: inline-block; background: #FFFFFF; color: #1A1A1A; padding: 14px 32px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Explore Tools</a>
+  </div>
+</div>
+
+<!-- CTA 156: Promo Code Banner -->
+<div class="section-label">156 — Promo Code Banner</div>
+<div class="section-container">
+  <div style="padding: 16px 40px; display: flex; align-items: center; justify-content: center; gap: 16px; background: #7C3AED;">
+    <p style="font-size: 14px; font-weight: 500; color: #FFFFFF;">Use code</p>
+    <span style="background: rgba(255,255,255,0.2); color: #FFFFFF; font-size: 14px; font-weight: 700; padding: 4px 12px; border-radius: 6px; font-family: monospace; letter-spacing: 1px;">LAUNCH30</span>
+    <p style="font-size: 14px; font-weight: 500; color: #FFFFFF;">for 30% off your first 3 months</p>
+    <a href="#" style="background: #FFFFFF; color: #7C3AED; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Redeem Now</a>
+  </div>
+</div>
+
+<!-- CTA 157: Countdown Circular CTA -->
+<div class="section-label">157 — Countdown Circular Dark CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px; text-align: center; background: #1A1A1A;">
+    <p style="font-size: 13px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Beta access closes in</p>
+    <div style="display: flex; gap: 16px; justify-content: center; margin-bottom: 28px;">
+      <div style="width: 72px; height: 72px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <span style="font-size: 20px; font-weight: 700; color: #FFFFFF; line-height: 1;">03</span>
+        <span style="font-size: 9px; color: #AEAEB2;">DAYS</span>
+      </div>
+      <div style="width: 72px; height: 72px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <span style="font-size: 20px; font-weight: 700; color: #FFFFFF; line-height: 1;">11</span>
+        <span style="font-size: 9px; color: #AEAEB2;">HRS</span>
+      </div>
+      <div style="width: 72px; height: 72px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <span style="font-size: 20px; font-weight: 700; color: #FFFFFF; line-height: 1;">46</span>
+        <span style="font-size: 9px; color: #AEAEB2;">MIN</span>
+      </div>
+    </div>
+    <a href="#" style="display: inline-block; background: #7C3AED; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Request Beta Access</a>
+  </div>
+</div>
+
+<!-- CTA 158: Trust + Counter CTA -->
+<div class="section-label">158 — Trust + Counter CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px; text-align: center;">
+    <div style="display: inline-flex; align-items: center; gap: 6px; margin-bottom: 16px;">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: #1A8245;"></span>
+      <span style="font-size: 13px; color: #1A8245; font-weight: 500;">2,847 users online right now</span>
+    </div>
+    <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; display: block; margin-bottom: 12px;">Built by developers, for developers</h2>
+    <p style="font-size: 16px; color: #6D6D72; margin-bottom: 20px;">Open source. Community driven. Enterprise ready.</p>
+    <div style="display: flex; justify-content: center; gap: 28px; margin-bottom: 28px;">
+      <span style="font-size: 13px; color: #AEAEB2;">&#x2714; MIT License</span>
+      <span style="font-size: 13px; color: #AEAEB2;">&#x2714; 15K+ GitHub Stars</span>
+      <span style="font-size: 13px; color: #AEAEB2;">&#x2714; 500+ Contributors</span>
+    </div>
+    <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Star on GitHub</a>
+  </div>
+</div>
+
+<!-- CTA 159: Testimonial Card + CTA -->
+<div class="section-label">159 — Testimonial Card Centered CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px; text-align: center; background: #F6F6F7;">
+    <div style="max-width: 500px; margin: 0 auto 28px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 16px; padding: 28px;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <div style="width: 44px; height: 44px; border-radius: 50%; background: #E3E3E8;"></div>
+        <div style="text-align: left;">
+          <p style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Rachel Kim</p>
+          <p style="font-size: 12px; color: #6D6D72;">Head of Engineering, Volta</p>
+        </div>
+        <span style="margin-left: auto; font-size: 14px; color: #B98900;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <p style="font-size: 15px; color: #1D1D1F; line-height: 1.5; text-align: left;">"Migrated our entire infrastructure in one weekend. The developer experience is unmatched. Would recommend to any engineering team."</p>
+    </div>
+    <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Start Your Migration</a>
+  </div>
+</div>
+
+<!-- CTA 160: Feature Matrix CTA -->
+<div class="section-label">160 — Feature Matrix Mini CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 28px;">Packed with features</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; max-width: 800px; margin: 0 auto 28px; background: #E3E3E8; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+      <div style="background: #FFFFFF; padding: 20px; text-align: center;"><span style="display: block; font-size: 20px; margin-bottom: 6px;">&#x26A1;</span><span style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Fast builds</span></div>
+      <div style="background: #FFFFFF; padding: 20px; text-align: center;"><span style="display: block; font-size: 20px; margin-bottom: 6px;">&#x1F50C;</span><span style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Webhooks</span></div>
+      <div style="background: #FFFFFF; padding: 20px; text-align: center;"><span style="display: block; font-size: 20px; margin-bottom: 6px;">&#x1F4CA;</span><span style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Analytics</span></div>
+      <div style="background: #FFFFFF; padding: 20px; text-align: center;"><span style="display: block; font-size: 20px; margin-bottom: 6px;">&#x1F465;</span><span style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Team roles</span></div>
+      <div style="background: #FFFFFF; padding: 20px; text-align: center;"><span style="display: block; font-size: 20px; margin-bottom: 6px;">&#x1F512;</span><span style="font-size: 13px; font-weight: 600; color: #1D1D1F;">SSO</span></div>
+      <div style="background: #FFFFFF; padding: 20px; text-align: center;"><span style="display: block; font-size: 20px; margin-bottom: 6px;">&#x1F310;</span><span style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Custom domains</span></div>
+      <div style="background: #FFFFFF; padding: 20px; text-align: center;"><span style="display: block; font-size: 20px; margin-bottom: 6px;">&#x1F504;</span><span style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Auto-scaling</span></div>
+      <div style="background: #FFFFFF; padding: 20px; text-align: center;"><span style="display: block; font-size: 20px; margin-bottom: 6px;">&#x1F4DD;</span><span style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Audit logs</span></div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">See All Features</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 161: Migration CTA -->
+<div class="section-label">161 — Migration Comparison CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px; text-align: center;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px;">Switching is easy</h2>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 28px;">
+      <div style="width: 80px; height: 80px; border: 1px solid #E3E3E8; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #AEAEB2; background: #F6F6F7;">Old Tool</div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+        <span style="font-size: 24px; color: #1A8245;">&rarr;</span>
+        <span style="font-size: 11px; color: #1A8245; font-weight: 600;">1-click</span>
+      </div>
+      <div style="width: 80px; height: 80px; border: 2px solid #1A1A1A; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #1D1D1F; font-weight: 600;">Us</div>
+    </div>
+    <p style="font-size: 15px; color: #6D6D72; margin-bottom: 24px;">Import your data from any platform in under 5 minutes.</p>
+    <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Start Migrating</a>
+  </div>
+</div>
+
+<!-- CTA 162: Toast-Style CTA -->
+<div class="section-label">162 — Toast-Style Floating CTA</div>
+<div class="section-container">
+  <div style="padding: 200px 40px 100px; background: #F6F6F7; position: relative;">
+    <p style="text-align: center; color: #AEAEB2; font-size: 14px;">Page content</p>
+    <div style="position: absolute; top: 20px; right: 20px; background: #1A1A1A; border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; max-width: 320px;">
+      <div style="width: 32px; height: 32px; border-radius: 8px; background: #2C6ECB; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><span style="color: #FFFFFF; font-size: 14px;">&#x2714;</span></div>
+      <p style="font-size: 13px; color: #FFFFFF; flex: 1;">New: Dark mode is here!</p>
+      <a href="#" style="font-size: 13px; font-weight: 600; color: #2C6ECB; text-decoration: none; white-space: nowrap;">Try it</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 163: Dashboard Preview CTA -->
+<div class="section-label">163 — Dashboard Preview CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px; text-align: center;">
+    <h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Your command center</h2>
+    <p style="font-size: 15px; color: #6D6D72; margin-bottom: 28px;">Everything you need in one elegant dashboard.</p>
+    <div style="max-width: 720px; margin: 0 auto 28px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+      <div style="padding: 8px 16px; background: #F6F6F7; border-bottom: 1px solid #E3E3E8; display: flex; gap: 6px;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #E3E3E8;"></div>
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #E3E3E8;"></div>
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #E3E3E8;"></div>
+      </div>
+      <div style="display: flex; height: 240px;">
+        <div style="width: 180px; background: #FAFAFA; border-right: 1px solid #E3E3E8; padding: 16px;">
+          <div style="height: 8px; width: 60%; background: #E3E3E8; border-radius: 4px; margin-bottom: 12px;"></div>
+          <div style="height: 8px; width: 80%; background: #E3E3E8; border-radius: 4px; margin-bottom: 12px;"></div>
+          <div style="height: 8px; width: 50%; background: #1A1A1A; border-radius: 4px; margin-bottom: 12px;"></div>
+          <div style="height: 8px; width: 70%; background: #E3E3E8; border-radius: 4px;"></div>
+        </div>
+        <div style="flex: 1; padding: 20px; display: flex; align-items: center; justify-content: center; color: #AEAEB2; font-size: 14px;">Dashboard Content</div>
+      </div>
+    </div>
+    <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Try the Dashboard</a>
+  </div>
+</div>
+
+<!-- CTA 164: Video Testimonial CTA -->
+<div class="section-label">164 — Video Testimonial CTA</div>
+<div class="section-container">
+  <div style="display: flex; min-height: 320px;">
+    <div style="flex: 1; background: #1A1A1A; display: flex; align-items: center; justify-content: center; position: relative;">
+      <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+        <div style="width: 0; height: 0; border-left: 16px solid #FFFFFF; border-top: 9px solid transparent; border-bottom: 9px solid transparent; margin-left: 3px;"></div>
+      </div>
+      <span style="position: absolute; bottom: 16px; left: 16px; font-size: 12px; color: #AEAEB2;">Customer Story: 2:34</span>
+    </div>
+    <div style="flex: 1; padding: 48px; display: flex; flex-direction: column; justify-content: center; border-left: 1px solid #E3E3E8;">
+      <p style="font-size: 14px; color: #B98900; margin-bottom: 12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+      <p style="font-size: 18px; color: #1D1D1F; line-height: 1.5; font-style: italic; margin-bottom: 20px;">"We scaled from 10 to 10,000 users without changing a single line of infrastructure code."</p>
+      <p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Tom Anderson</p>
+      <p style="font-size: 13px; color: #6D6D72; margin-bottom: 24px;">CTO, RapidScale</p>
+      <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 12px 24px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; transition: 0.2s ease; width: fit-content;">Scale Your App</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 165: Feature List CTA -->
+<div class="section-label">165 — Feature List Compact CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px; display: flex; gap: 48px; max-width: 860px; margin: 0 auto;">
+    <div style="flex: 1;">
+      <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 20px;">All-in-one platform</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #1A8245;">&#x2713;</span><span style="font-size: 14px; color: #1D1D1F;">Hosting</span></div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #1A8245;">&#x2713;</span><span style="font-size: 14px; color: #1D1D1F;">Database</span></div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #1A8245;">&#x2713;</span><span style="font-size: 14px; color: #1D1D1F;">Auth</span></div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #1A8245;">&#x2713;</span><span style="font-size: 14px; color: #1D1D1F;">Storage</span></div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #1A8245;">&#x2713;</span><span style="font-size: 14px; color: #1D1D1F;">Functions</span></div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #1A8245;">&#x2713;</span><span style="font-size: 14px; color: #1D1D1F;">CDN</span></div>
+      </div>
+    </div>
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-left: 1px solid #E3E3E8; padding-left: 48px;">
+      <p style="font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$0</p>
+      <p style="font-size: 14px; color: #6D6D72; margin-bottom: 20px;">to start. Pay as you grow.</p>
+      <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Deploy Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 166: Side-by-Side Plans -->
+<div class="section-label">166 — Side-by-Side Plans CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 28px;">Find your perfect plan</h2>
+    <div style="display: flex; gap: 1px; max-width: 700px; margin: 0 auto; background: #E3E3E8; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+      <div style="flex: 1; background: #FFFFFF; padding: 32px 24px; text-align: center;">
+        <p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Hobby</p>
+        <p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">Free</p>
+        <p style="font-size: 12px; color: #AEAEB2; margin-bottom: 16px;">For personal projects</p>
+        <a href="#" style="display: block; padding: 10px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 14px; font-weight: 600; color: #1D1D1F; text-decoration: none;">Get Started</a>
+      </div>
+      <div style="flex: 1; background: #FFFFFF; padding: 32px 24px; text-align: center;">
+        <p style="font-size: 14px; font-weight: 600; color: #2C6ECB; margin-bottom: 8px;">Pro</p>
+        <p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$20/mo</p>
+        <p style="font-size: 12px; color: #AEAEB2; margin-bottom: 16px;">For growing teams</p>
+        <a href="#" style="display: block; padding: 10px; background: #1A1A1A; border-radius: 8px; font-size: 14px; font-weight: 600; color: #FFFFFF; text-decoration: none;">Upgrade</a>
+      </div>
+      <div style="flex: 1; background: #FFFFFF; padding: 32px 24px; text-align: center;">
+        <p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Enterprise</p>
+        <p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">Custom</p>
+        <p style="font-size: 12px; color: #AEAEB2; margin-bottom: 16px;">For large orgs</p>
+        <a href="#" style="display: block; padding: 10px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 14px; font-weight: 600; color: #1D1D1F; text-decoration: none;">Contact</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 167: Bottom Sticky Bar -->
+<div class="section-label">167 — Bottom Sticky Bar with Timer</div>
+<div class="section-container">
+  <div style="padding: 200px 40px 80px; background: #F6F6F7; position: relative;">
+    <p style="text-align: center; color: #AEAEB2; font-size: 14px;">Page content</p>
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: #1A1A1A; padding: 14px 40px; display: flex; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="font-size: 14px; color: #AEAEB2;">Offer ends in:</span>
+        <span style="font-size: 14px; font-weight: 700; color: #FFFFFF; font-family: monospace;">04:23:17</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 14px; color: #FFFFFF;">50% off annual plans</span>
+        <a href="#" style="background: #FFFFFF; color: #1A1A1A; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Get Offer</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 168: Illustration + Form CTA -->
+<div class="section-label">168 — Illustration + Form CTA</div>
+<div class="section-container">
+  <div style="display: flex; min-height: 360px;">
+    <div style="flex: 1; background: linear-gradient(135deg, #F6F6F7, #E3E3E8); display: flex; align-items: center; justify-content: center; border-right: 1px solid #E3E3E8;">
+      <div style="width: 200px; height: 200px; border: 1px solid #E3E3E8; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #AEAEB2; font-size: 14px;">Illustration</div>
+    </div>
+    <div style="flex: 1; padding: 48px; display: flex; flex-direction: column; justify-content: center;">
+      <h2 style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Book your free demo</h2>
+      <p style="font-size: 14px; color: #6D6D72; margin-bottom: 20px;">See the platform in action with a personalized walkthrough.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <input type="text" placeholder="Your name" style="padding: 12px 14px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 14px; font-family: inherit; outline: none;">
+        <input type="email" placeholder="Work email" style="padding: 12px 14px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 14px; font-family: inherit; outline: none;">
+        <button style="background: #1A1A1A; color: #FFFFFF; padding: 12px; border-radius: 8px; border: none; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: 0.2s ease;">Book Demo</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 169: Centered Play CTA -->
+<div class="section-label">169 — Centered Play CTA</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; text-align: center;">
+    <div style="width: 80px; height: 80px; border-radius: 50%; border: 2px solid #E3E3E8; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s ease;">
+      <div style="width: 0; height: 0; border-left: 22px solid #1A1A1A; border-top: 13px solid transparent; border-bottom: 13px solid transparent; margin-left: 4px;"></div>
+    </div>
+    <h2 style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">Watch the 60-second overview</h2>
+    <p style="font-size: 14px; color: #6D6D72;">No signup. No commitment. Just press play.</p>
+  </div>
+</div>
+
+<!-- CTA 170: Security Shield CTA -->
+<div class="section-label">170 — Security Shield CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px; display: flex; align-items: center; gap: 48px; max-width: 800px; margin: 0 auto;">
+    <div style="flex-shrink: 0;">
+      <div style="width: 80px; height: 96px; position: relative;">
+        <div style="width: 80px; height: 80px; border: 3px solid #1A8245; border-radius: 0 0 40px 40px; border-top: 3px solid #1A8245; display: flex; align-items: center; justify-content: center;"><span style="font-size: 28px; color: #1A8245;">&#x2713;</span></div>
+      </div>
+    </div>
+    <div style="flex: 1;">
+      <h3 style="font-size: 22px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Enterprise-grade protection</h3>
+      <p style="font-size: 15px; color: #6D6D72; line-height: 1.5; margin-bottom: 20px;">Your data is protected with AES-256 encryption, multi-factor authentication, and continuous security monitoring.</p>
+      <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 12px 24px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">View Security Page</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 171: Refund Guarantee Dark -->
+<div class="section-label">171 — Refund Guarantee Dark CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px; text-align: center; background: #1A1A1A;">
+    <div style="width: 64px; height: 64px; border-radius: 50%; border: 2px solid #B98900; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;">
+      <span style="font-size: 24px; color: #B98900;">&#x1F6E1;</span>
+    </div>
+    <h2 style="font-size: 26px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">100% money-back guarantee</h2>
+    <p style="font-size: 15px; color: #AEAEB2; margin-bottom: 24px;">Not happy? Full refund within 30 days. Zero hassle.</p>
+    <a href="#" style="display: inline-block; background: #B98900; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Buy with Confidence</a>
+  </div>
+</div>
+
+<!-- CTA 172: Growth Stats CTA -->
+<div class="section-label">172 — Growth Stats CTA</div>
+<div class="section-container">
+  <div style="padding: 48px 60px; display: flex; align-items: center; justify-content: space-between;">
+    <div style="display: flex; gap: 40px;">
+      <div><p style="font-size: 28px; font-weight: 700; color: #1D1D1F;">500K+</p><p style="font-size: 12px; color: #6D6D72;">API calls/day</p></div>
+      <div><p style="font-size: 28px; font-weight: 700; color: #1D1D1F;">99.99%</p><p style="font-size: 12px; color: #6D6D72;">Uptime SLA</p></div>
+      <div><p style="font-size: 28px; font-weight: 700; color: #1D1D1F;">&lt;50ms</p><p style="font-size: 12px; color: #6D6D72;">Avg response</p></div>
+    </div>
+    <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">View Status Page</a>
+  </div>
+</div>
+
+<!-- CTA 173: FAQ Minimal + CTA -->
+<div class="section-label">173 — FAQ Minimal + CTA</div>
+<div class="section-container">
+  <div style="padding: 48px 40px; max-width: 600px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #E3E3E8;"><span style="font-size: 14px; color: #1D1D1F;">Is there a free trial?</span><span style="font-size: 14px; font-weight: 600; color: #1A8245;">Yes, 14 days</span></div>
+    <div style="display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #E3E3E8;"><span style="font-size: 14px; color: #1D1D1F;">Credit card required?</span><span style="font-size: 14px; font-weight: 600; color: #1A8245;">No</span></div>
+    <div style="display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #E3E3E8;"><span style="font-size: 14px; color: #1D1D1F;">Cancel anytime?</span><span style="font-size: 14px; font-weight: 600; color: #1A8245;">Yes</span></div>
+    <div style="text-align: center; margin-top: 24px;">
+      <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Start Free Trial</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA 174: Price Stack CTA -->
+<div class="section-label">174 — Price Stack CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px; text-align: center;">
+    <p style="font-size: 13px; font-weight: 600; color: #2C6ECB; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Launching Special</p>
+    <p style="font-size: 16px; color: #AEAEB2; text-decoration: line-through; margin-bottom: 4px;">Usually $99/month</p>
+    <p style="font-size: 52px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$39<span style="font-size: 18px; font-weight: 400; color: #6D6D72;">/mo</span></p>
+    <p style="font-size: 14px; color: #1A8245; font-weight: 600; margin-bottom: 24px;">Save $720 per year</p>
+    <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 32px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Get Launch Pricing</a>
+    <p style="font-size: 12px; color: #AEAEB2; margin-top: 8px;">Price locked for life</p>
+  </div>
+</div>
+
+<!-- CTA 175: Masonry Card Stack -->
+<div class="section-label">175 — Masonry Card Stack CTA</div>
+<div class="section-container">
+  <div style="padding: 60px 40px;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 28px;">Explore our solutions</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 800px; margin: 0 auto 28px;">
+      <a href="#" style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; text-decoration: none; transition: 0.2s ease; grid-row: span 2;">
+        <span style="font-size: 28px; display: block; margin-bottom: 12px;">&#x1F680;</span>
+        <p style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Deploy</p>
+        <p style="font-size: 13px; color: #6D6D72; line-height: 1.4;">Push to production in seconds with zero-config deployments.</p>
+      </a>
+      <a href="#" style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; text-decoration: none; transition: 0.2s ease;">
+        <span style="font-size: 20px; display: block; margin-bottom: 8px;">&#x1F4CA;</span>
+        <p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Analytics</p>
+      </a>
+      <a href="#" style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; text-decoration: none; transition: 0.2s ease;">
+        <span style="font-size: 20px; display: block; margin-bottom: 8px;">&#x1F512;</span>
+        <p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Security</p>
+      </a>
+      <a href="#" style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; text-decoration: none; transition: 0.2s ease;">
+        <span style="font-size: 20px; display: block; margin-bottom: 8px;">&#x1F465;</span>
+        <p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Teams</p>
+      </a>
+      <a href="#" style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; text-decoration: none; transition: 0.2s ease;">
+        <span style="font-size: 20px; display: block; margin-bottom: 8px;">&#x1F50C;</span>
+        <p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Integrations</p>
+      </a>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" style="display: inline-block; background: #1A1A1A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600; text-decoration: none; transition: 0.2s ease;">Explore All Solutions</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

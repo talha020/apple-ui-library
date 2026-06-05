@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Components 026-050 - Apple HIG</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text',sans-serif;background:#f5f5f7;padding:40px 20px;line-height:1.47059}
+.component{background:#fff;border-radius:18px;padding:48px;margin-bottom:24px;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+h2{font-size:14px;color:#86868b;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:32px;font-weight:600}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.price-card{background:#f5f5f7;border-radius:12px;padding:32px;text-align:center;transition:all 0.3s}
+.price-card.featured{background:linear-gradient(135deg,#0071e3 0%,#005bb5 100%);color:#fff}
+.price-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,0.12)}
+.plan-name{font-size:24px;font-weight:600;margin-bottom:8px}
+.plan-desc{font-size:14px;color:#86868b;margin-bottom:24px}
+.price-card.featured .plan-desc{color:rgba(255,255,255,0.8)}
+.price{font-size:48px;font-weight:700;margin-bottom:4px}
+.price-small{font-size:32px}
+.period{font-size:17px;color:#86868b;margin-bottom:24px}
+.price-card.featured .period{color:rgba(255,255,255,0.8)}
+.btn{display:inline-block;background:#0071e3;color:#fff;padding:12px 24px;border-radius:980px;text-decoration:none;font-size:15px;font-weight:500;transition:all 0.3s;border:none;cursor:pointer}
+.btn:hover{background:#0077ed}
+.btn-secondary{background:#f5f5f7;color:#1d1d1f}
+.btn-secondary:hover{background:#e8e8ed}
+.price-card.featured .btn{background:#fff;color:#0071e3}
+.price-card.featured .btn:hover{background:#f5f5f7}
+.features{list-style:none;margin:24px 0;text-align:left}
+.features li{padding:12px 0;border-bottom:1px solid rgba(0,0,0,0.08);font-size:15px;display:flex;align-items:center}
+.features li:last-child{border:0}
+.features li:before{content:'✓';color:#0071e3;font-weight:700;margin-right:12px;font-size:18px}
+.price-card.featured .features li{border-color:rgba(255,255,255,0.2)}
+.price-card.featured .features li:before{color:#fff}
+.comparison-table{width:100%;border-collapse:collapse;margin-top:24px}
+.comparison-table th,.comparison-table td{padding:16px;text-align:left;border-bottom:1px solid #d2d2d7}
+.comparison-table th{font-weight:600;background:#f5f5f7;font-size:15px}
+.comparison-table td{font-size:14px}
+.comparison-table .check{color:#0071e3;font-size:20px;font-weight:700}
+.comparison-table .cross{color:#86868b;font-size:20px}
+.tier-wrapper{display:flex;gap:2px;background:#e8e8ed;border-radius:12px;padding:2px;margin-bottom:32px}
+.tier-option{flex:1;padding:12px;background:transparent;border:none;border-radius:10px;font-size:15px;font-weight:500;cursor:pointer;transition:all 0.3s;color:#1d1d1f}
+.tier-option.active{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.price-toggle{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:32px}
+.toggle-label{font-size:17px;font-weight:500}
+.toggle-switch{position:relative;width:51px;height:31px;background:#e8e8ed;border-radius:16px;cursor:pointer;transition:0.3s}
+.toggle-switch.active{background:#0071e3}
+.toggle-switch:before{content:'';position:absolute;width:27px;height:27px;border-radius:50%;background:#fff;top:2px;left:2px;transition:0.3s;box-shadow:0 2px 4px rgba(0,0,0,0.2)}
+.toggle-switch.active:before{left:22px}
+.badge{display:inline-block;background:#0071e3;color:#fff;padding:4px 12px;border-radius:12px;font-size:12px;font-weight:600;margin-bottom:12px}
+.savings{background:#34c759;color:#fff;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;display:inline-block;margin-top:8px}
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0;text-align:left}
+.feature-item{padding:12px;background:rgba(0,0,0,0.03);border-radius:8px;font-size:14px}
+.price-card.featured .feature-item{background:rgba(255,255,255,0.15)}
+.enterprise{background:linear-gradient(135deg,#1d1d1f 0%,#424245 100%);color:#fff}
+.enterprise .btn{background:#fff;color:#1d1d1f}
+.slider-wrapper{overflow:hidden;position:relative}
+.price-slider{display:flex;gap:24px;transition:transform 0.3s}
+.slide-card{min-width:300px;background:#f5f5f7;border-radius:12px;padding:24px}
+.popular{position:relative;overflow:hidden}
+.popular:before{content:'POPULAR';position:absolute;top:16px;right:-32px;background:#ff9500;color:#fff;padding:4px 40px;transform:rotate(45deg);font-size:11px;font-weight:700;letter-spacing:1px}
+.addon-list{display:grid;gap:16px}
+.addon{display:flex;justify-content:space-between;align-items:center;padding:16px;background:#f5f5f7;border-radius:8px}
+.addon-name{font-weight:600;font-size:15px}
+.addon-price{color:#0071e3;font-weight:600;font-size:17px}
+.limit-card{background:#f5f5f7;border-radius:8px;padding:16px;margin:8px 0}
+.limit-title{font-weight:600;margin-bottom:8px;font-size:15px}
+.limit-value{color:#0071e3;font-size:24px;font-weight:700}
+.calc-section{background:#f5f5f7;border-radius:12px;padding:24px;margin-top:24px}
+.calc-row{display:flex;justify-content:space-between;align-items:center;margin:16px 0;padding:12px 0;border-bottom:1px solid #d2d2d7}
+.calc-row:last-child{border:0;font-weight:700;font-size:19px}
+.input-group{display:flex;align-items:center;gap:12px}
+.input-group input{width:80px;padding:8px;border:1px solid #d2d2d7;border-radius:8px;font-size:15px;text-align:center}
+.quota-bar{height:8px;background:#e8e8ed;border-radius:4px;margin:12px 0;overflow:hidden}
+.quota-fill{height:100%;background:linear-gradient(90deg,#0071e3,#005bb5);border-radius:4px;transition:width 0.3s}
+.metric{text-align:center;padding:16px}
+.metric-value{font-size:36px;font-weight:700;color:#0071e3;display:block}
+.metric-label{font-size:13px;color:#86868b;margin-top:4px}
+</style>
+</head>
+<body>
+
+<div class="component">
+<h2>Component 026: Three-Tier Classic</h2>
+<div class="price-grid">
+<div class="price-card">
+<div class="plan-name">Basic</div>
+<div class="plan-desc">Essential features to get started</div>
+<div class="price">$9</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Get Started</a>
+<ul class="features">
+<li>Up to 5 users</li>
+<li>10 GB storage</li>
+<li>Email support</li>
+<li>Basic analytics</li>
+</ul>
+</div>
+<div class="price-card featured">
+<span class="badge">MOST POPULAR</span>
+<div class="plan-name">Pro</div>
+<div class="plan-desc">Advanced features for growing teams</div>
+<div class="price">$29</div>
+<div class="period">per month</div>
+<a href="#" class="btn">Get Started</a>
+<ul class="features">
+<li>Up to 25 users</li>
+<li>100 GB storage</li>
+<li>Priority support</li>
+<li>Advanced analytics</li>
+<li>Custom integrations</li>
+</ul>
+</div>
+<div class="price-card">
+<div class="plan-name">Enterprise</div>
+<div class="plan-desc">Unlimited power for large organizations</div>
+<div class="price">$99</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Contact Sales</a>
+<ul class="features">
+<li>Unlimited users</li>
+<li>Unlimited storage</li>
+<li>24/7 phone support</li>
+<li>Custom analytics</li>
+<li>API access</li>
+<li>Dedicated account manager</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 027: Annual/Monthly Toggle</h2>
+<div class="price-toggle">
+<span class="toggle-label">Monthly</span>
+<div class="toggle-switch active"></div>
+<span class="toggle-label">Annual <span style="color:#0071e3">(Save 20%)</span></span>
+</div>
+<div class="price-grid">
+<div class="price-card">
+<div class="plan-name">Starter</div>
+<div class="price price-small">$96</div>
+<div class="period">per year</div>
+<div class="savings">Save $24/year</div>
+<a href="#" class="btn">Choose Plan</a>
+</div>
+<div class="price-card featured">
+<div class="plan-name">Professional</div>
+<div class="price price-small">$276</div>
+<div class="period">per year</div>
+<div class="savings">Save $72/year</div>
+<a href="#" class="btn">Choose Plan</a>
+</div>
+<div class="price-card">
+<div class="plan-name">Business</div>
+<div class="price price-small">$948</div>
+<div class="period">per year</div>
+<div class="savings">Save $240/year</div>
+<a href="#" class="btn">Choose Plan</a>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 028: Feature Comparison Table</h2>
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Features</th>
+<th>Basic</th>
+<th>Pro</th>
+<th>Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Users</td>
+<td>5</td>
+<td>25</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>10 GB</td>
+<td>100 GB</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Advanced Analytics</td>
+<td><span class="cross">✕</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="check">✓</span></td>
+</tr>
+<tr>
+<td>API Access</td>
+<td><span class="cross">✕</span></td>
+<td><span class="cross">✕</span></td>
+<td><span class="check">✓</span></td>
+</tr>
+<tr>
+<td>24/7 Support</td>
+<td><span class="cross">✕</span></td>
+<td><span class="cross">✕</span></td>
+<td><span class="check">✓</span></td>
+</tr>
+<tr>
+<td>Custom Branding</td>
+<td><span class="cross">✕</span></td>
+<td><span class="check">✓</span></td>
+<td><span class="check">✓</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="component">
+<h2>Component 029: Tier Selector</h2>
+<div class="tier-wrapper">
+<button class="tier-option active">Individual</button>
+<button class="tier-option">Team</button>
+<button class="tier-option">Organization</button>
+</div>
+<div class="price-grid">
+<div class="price-card featured">
+<div class="plan-name">Individual Pro</div>
+<div class="price">$19</div>
+<div class="period">per month</div>
+<a href="#" class="btn">Subscribe</a>
+<div class="feature-grid">
+<div class="feature-item">1 user</div>
+<div class="feature-item">50 GB storage</div>
+<div class="feature-item">Email support</div>
+<div class="feature-item">All features</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 030: Enterprise Custom</h2>
+<div class="price-grid">
+<div class="price-card enterprise">
+<div class="plan-name">Enterprise</div>
+<div class="plan-desc">Custom solutions for your organization</div>
+<div class="price" style="font-size:32px">Custom</div>
+<div class="period">Contact us for pricing</div>
+<a href="#" class="btn">Contact Sales</a>
+<ul class="features">
+<li>Unlimited everything</li>
+<li>Custom integrations</li>
+<li>Dedicated infrastructure</li>
+<li>SLA guarantees</li>
+<li>Training & onboarding</li>
+<li>Strategic consulting</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 031: Feature Grid Layout</h2>
+<div class="price-grid">
+<div class="price-card">
+<div class="plan-name">Standard</div>
+<div class="price">$39</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Start Trial</a>
+<div class="feature-grid">
+<div class="feature-item">10 projects</div>
+<div class="feature-item">5 GB storage</div>
+<div class="feature-item">Email support</div>
+<div class="feature-item">iOS & Android</div>
+<div class="feature-item">Basic reports</div>
+<div class="feature-item">2FA security</div>
+</div>
+</div>
+<div class="price-card featured">
+<div class="plan-name">Premium</div>
+<div class="price">$79</div>
+<div class="period">per month</div>
+<a href="#" class="btn">Start Trial</a>
+<div class="feature-grid">
+<div class="feature-item">Unlimited projects</div>
+<div class="feature-item">50 GB storage</div>
+<div class="feature-item">Priority support</div>
+<div class="feature-item">All platforms</div>
+<div class="feature-item">Advanced reports</div>
+<div class="feature-item">SSO security</div>
+<div class="feature-item">API access</div>
+<div class="feature-item">Custom fields</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 032: Popular Badge Highlight</h2>
+<div class="price-grid">
+<div class="price-card">
+<div class="plan-name">Lite</div>
+<div class="price">$0</div>
+<div class="period">forever free</div>
+<a href="#" class="btn btn-secondary">Get Started</a>
+<ul class="features">
+<li>1 user</li>
+<li>3 projects</li>
+<li>Community support</li>
+</ul>
+</div>
+<div class="price-card featured popular">
+<div class="plan-name">Growth</div>
+<div class="price">$49</div>
+<div class="period">per month</div>
+<a href="#" class="btn">Get Started</a>
+<ul class="features">
+<li>10 users</li>
+<li>Unlimited projects</li>
+<li>Priority support</li>
+<li>Advanced features</li>
+</ul>
+</div>
+<div class="price-card">
+<div class="plan-name">Scale</div>
+<div class="price">$149</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Get Started</a>
+<ul class="features">
+<li>50 users</li>
+<li>Unlimited projects</li>
+<li>24/7 support</li>
+<li>All features</li>
+<li>Custom SLA</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 033: Add-ons Pricing</h2>
+<div class="price-card">
+<div class="plan-name">Base Plan</div>
+<div class="price">$29</div>
+<div class="period">per month</div>
+<a href="#" class="btn">Choose Plan</a>
+</div>
+<div style="margin-top:32px;font-size:21px;font-weight:600;margin-bottom:16px">Optional Add-ons</div>
+<div class="addon-list">
+<div class="addon">
+<div>
+<div class="addon-name">Extra Storage (100 GB)</div>
+<div style="font-size:13px;color:#86868b">Expand your storage capacity</div>
+</div>
+<div class="addon-price">+$10/mo</div>
+</div>
+<div class="addon">
+<div>
+<div class="addon-name">Premium Support</div>
+<div style="font-size:13px;color:#86868b">24/7 phone & chat support</div>
+</div>
+<div class="addon-price">+$20/mo</div>
+</div>
+<div class="addon">
+<div>
+<div class="addon-name">Advanced Analytics</div>
+<div style="font-size:13px;color:#86868b">Deep insights & reporting</div>
+</div>
+<div class="addon-price">+$15/mo</div>
+</div>
+<div class="addon">
+<div>
+<div class="addon-name">API Access</div>
+<div style="font-size:13px;color:#86868b">Integrate with your tools</div>
+</div>
+<div class="addon-price">+$25/mo</div>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 034: Usage-based Limits</h2>
+<div class="price-grid">
+<div class="price-card">
+<div class="plan-name">Developer</div>
+<div class="price">$15</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Start Now</a>
+<div class="limit-card">
+<div class="limit-title">API Calls</div>
+<div class="limit-value">10,000</div>
+<div style="font-size:13px;color:#86868b;margin-top:4px">per month</div>
+</div>
+<div class="limit-card">
+<div class="limit-title">Bandwidth</div>
+<div class="limit-value">10 GB</div>
+<div style="font-size:13px;color:#86868b;margin-top:4px">per month</div>
+</div>
+</div>
+<div class="price-card featured">
+<div class="plan-name">Business</div>
+<div class="price">$59</div>
+<div class="period">per month</div>
+<a href="#" class="btn">Start Now</a>
+<div class="limit-card">
+<div class="limit-title">API Calls</div>
+<div class="limit-value">100,000</div>
+<div style="font-size:13px;color:rgba(255,255,255,0.8);margin-top:4px">per month</div>
+</div>
+<div class="limit-card">
+<div class="limit-title">Bandwidth</div>
+<div class="limit-value">100 GB</div>
+<div style="font-size:13px;color:rgba(255,255,255,0.8);margin-top:4px">per month</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 035: Pricing Calculator</h2>
+<div class="calc-section">
+<div class="calc-row">
+<div>Number of Users</div>
+<div class="input-group">
+<input type="number" value="10" min="1">
+<span>× $5</span>
+</div>
+</div>
+<div class="calc-row">
+<div>Storage (GB)</div>
+<div class="input-group">
+<input type="number" value="100" min="10" step="10">
+<span>× $0.10</span>
+</div>
+</div>
+<div class="calc-row">
+<div>Priority Support</div>
+<div class="input-group">
+<label><input type="checkbox"> $20</label>
+</div>
+</div>
+<div class="calc-row">
+<div>Total per month</div>
+<div style="color:#0071e3">$80</div>
+</div>
+</div>
+<a href="#" class="btn" style="margin-top:24px;width:100%;text-align:center;display:block">Continue with this plan</a>
+</div>
+
+<div class="component">
+<h2>Component 036: Quota Visualization</h2>
+<div class="price-card">
+<div class="plan-name">Current Plan: Pro</div>
+<div class="price">$49</div>
+<div class="period">per month</div>
+<div style="margin-top:24px">
+<div style="display:flex;justify-content:space-between;margin-bottom:8px">
+<span style="font-size:14px;font-weight:600">Storage Used</span>
+<span style="font-size:14px;color:#86868b">45 GB / 100 GB</span>
+</div>
+<div class="quota-bar">
+<div class="quota-fill" style="width:45%"></div>
+</div>
+</div>
+<div style="margin-top:24px">
+<div style="display:flex;justify-content:space-between;margin-bottom:8px">
+<span style="font-size:14px;font-weight:600">Users</span>
+<span style="font-size:14px;color:#86868b">8 / 25</span>
+</div>
+<div class="quota-bar">
+<div class="quota-fill" style="width:32%"></div>
+</div>
+</div>
+<div style="margin-top:24px">
+<div style="display:flex;justify-content:space-between;margin-bottom:8px">
+<span style="font-size:14px;font-weight:600">API Calls (this month)</span>
+<span style="font-size:14px;color:#86868b">24,500 / 50,000</span>
+</div>
+<div class="quota-bar">
+<div class="quota-fill" style="width:49%"></div>
+</div>
+</div>
+<a href="#" class="btn" style="margin-top:24px;width:100%;text-align:center;display:block">Upgrade Plan</a>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 037: Two-Column Simple</h2>
+<div class="price-grid" style="grid-template-columns:repeat(2,1fr)">
+<div class="price-card">
+<div class="plan-name">Personal</div>
+<div class="price">$12</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Choose Plan</a>
+<ul class="features">
+<li>5 GB storage</li>
+<li>Email support</li>
+<li>Mobile apps</li>
+<li>Basic features</li>
+</ul>
+</div>
+<div class="price-card featured">
+<div class="plan-name">Team</div>
+<div class="price">$39</div>
+<div class="period">per user/month</div>
+<a href="#" class="btn">Choose Plan</a>
+<ul class="features">
+<li>50 GB storage</li>
+<li>Priority support</li>
+<li>All platforms</li>
+<li>Advanced features</li>
+<li>Team collaboration</li>
+<li>Admin controls</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 038: Metrics-Focused</h2>
+<div class="price-card featured">
+<div class="plan-name">Professional</div>
+<div class="price">$69</div>
+<div class="period">per month</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0">
+<div class="metric">
+<span class="metric-value">50</span>
+<span class="metric-label">Projects</span>
+</div>
+<div class="metric">
+<span class="metric-value">25</span>
+<span class="metric-label">Team Members</span>
+</div>
+<div class="metric">
+<span class="metric-value">100GB</span>
+<span class="metric-label">Storage</span>
+</div>
+<div class="metric">
+<span class="metric-value">∞</span>
+<span class="metric-label">Integrations</span>
+</div>
+<div class="metric">
+<span class="metric-value">24/7</span>
+<span class="metric-label">Support</span>
+</div>
+<div class="metric">
+<span class="metric-value">99.9%</span>
+<span class="metric-label">Uptime SLA</span>
+</div>
+</div>
+<a href="#" class="btn">Get Started</a>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 039: Free Trial Emphasis</h2>
+<div class="price-grid">
+<div class="price-card featured">
+<span class="badge">14-DAY FREE TRIAL</span>
+<div class="plan-name">Premium</div>
+<div class="plan-desc">No credit card required</div>
+<div class="price">$0</div>
+<div class="period">for 14 days, then $29/mo</div>
+<a href="#" class="btn">Start Free Trial</a>
+<ul class="features">
+<li>Full access to all features</li>
+<li>Cancel anytime</li>
+<li>No setup fees</li>
+<li>Email support included</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 040: Per-Seat Pricing</h2>
+<div class="price-card">
+<div class="plan-name">Team Plan</div>
+<div class="plan-desc">Flexible per-user pricing</div>
+<div class="price">$15</div>
+<div class="period">per user/month</div>
+<div class="calc-section" style="margin-top:24px">
+<div class="calc-row">
+<div>Number of seats</div>
+<div class="input-group">
+<button style="width:32px;height:32px;border:1px solid #d2d2d7;background:#fff;border-radius:6px;cursor:pointer">-</button>
+<input type="number" value="5" min="1" style="width:60px">
+<button style="width:32px;height:32px;border:1px solid #d2d2d7;background:#fff;border-radius:6px;cursor:pointer">+</button>
+</div>
+</div>
+<div class="calc-row">
+<div>Monthly total</div>
+<div style="color:#0071e3;font-size:28px">$75</div>
+</div>
+</div>
+<a href="#" class="btn" style="margin-top:24px;width:100%;text-align:center;display:block">Subscribe</a>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 041: Tiered Storage Pricing</h2>
+<div class="price-grid">
+<div class="price-card">
+<div class="plan-name">Basic</div>
+<div class="limit-value" style="margin-bottom:8px">10 GB</div>
+<div class="price">$5</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Select</a>
+</div>
+<div class="price-card">
+<div class="plan-name">Standard</div>
+<div class="limit-value" style="margin-bottom:8px">100 GB</div>
+<div class="price">$15</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Select</a>
+</div>
+<div class="price-card featured">
+<div class="plan-name">Premium</div>
+<div class="limit-value" style="margin-bottom:8px">1 TB</div>
+<div class="price">$49</div>
+<div class="period">per month</div>
+<a href="#" class="btn">Select</a>
+</div>
+<div class="price-card">
+<div class="plan-name">Ultimate</div>
+<div class="limit-value" style="margin-bottom:8px">10 TB</div>
+<div class="price">$199</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Select</a>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 042: Compact Comparison</h2>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#d2d2d7;border-radius:12px;overflow:hidden">
+<div style="background:#fff;padding:24px;text-align:center">
+<div style="font-weight:600;margin-bottom:16px">Starter</div>
+<div class="price price-small">$9</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary" style="margin-top:16px;font-size:13px;padding:8px 16px">Select</a>
+</div>
+<div style="background:#0071e3;padding:24px;text-align:center;color:#fff">
+<div style="font-weight:600;margin-bottom:16px">Pro</div>
+<div class="price price-small">$29</div>
+<div class="period" style="color:rgba(255,255,255,0.8)">per month</div>
+<a href="#" class="btn" style="margin-top:16px;font-size:13px;padding:8px 16px;background:#fff;color:#0071e3">Select</a>
+</div>
+<div style="background:#fff;padding:24px;text-align:center">
+<div style="font-weight:600;margin-bottom:16px">Enterprise</div>
+<div class="price price-small">$99</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary" style="margin-top:16px;font-size:13px;padding:8px 16px">Select</a>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 043: Feature Categories</h2>
+<div class="price-card">
+<div class="plan-name">Complete Package</div>
+<div class="price">$79</div>
+<div class="period">per month</div>
+<a href="#" class="btn">Get Started</a>
+<div style="margin-top:32px">
+<div style="font-weight:600;margin-bottom:16px;font-size:15px">Core Features</div>
+<ul class="features">
+<li>Unlimited projects</li>
+<li>50 GB storage</li>
+<li>All integrations</li>
+</ul>
+<div style="font-weight:600;margin:24px 0 16px;font-size:15px">Collaboration</div>
+<ul class="features">
+<li>Team workspace</li>
+<li>Real-time sync</li>
+<li>Comments & mentions</li>
+</ul>
+<div style="font-weight:600;margin:24px 0 16px;font-size:15px">Support</div>
+<ul class="features">
+<li>Priority email</li>
+<li>Live chat</li>
+<li>Phone support</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 044: Simple One-Price</h2>
+<div style="max-width:400px;margin:0 auto">
+<div class="price-card featured" style="text-align:center">
+<div class="plan-name" style="font-size:32px">One Simple Price</div>
+<div class="plan-desc">Everything included. No hidden fees.</div>
+<div class="price" style="font-size:64px;margin:32px 0 8px">$49</div>
+<div class="period" style="font-size:19px">per month, per team</div>
+<a href="#" class="btn" style="margin:32px 0;padding:16px 48px;font-size:17px">Start Now</a>
+<div style="text-align:left">
+<ul class="features">
+<li>Unlimited users</li>
+<li>Unlimited projects</li>
+<li>Unlimited storage</li>
+<li>All features included</li>
+<li>24/7 support</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 045: Student Discount</h2>
+<div class="price-grid">
+<div class="price-card">
+<div class="plan-name">Standard</div>
+<div class="price">$29</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Choose Plan</a>
+</div>
+<div class="price-card featured">
+<span class="badge">EDUCATION</span>
+<div class="plan-name">Student</div>
+<div class="plan-desc">Same features, special pricing</div>
+<div style="text-decoration:line-through;color:#86868b;font-size:24px">$29</div>
+<div class="price">$15</div>
+<div class="period">per month with valid student ID</div>
+<div class="savings">50% OFF</div>
+<a href="#" class="btn">Verify Student Status</a>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 046: Pay-As-You-Go</h2>
+<div class="price-card">
+<div class="plan-name">Pay As You Go</div>
+<div class="plan-desc">Only pay for what you use</div>
+<div class="price price-small">$0.05</div>
+<div class="period">per API call</div>
+<div style="margin:32px 0">
+<div class="addon-list">
+<div class="addon">
+<div class="addon-name">No monthly commitment</div>
+<div class="check" style="color:#34c759">✓</div>
+</div>
+<div class="addon">
+<div class="addon-name">Automatic scaling</div>
+<div class="check" style="color:#34c759">✓</div>
+</div>
+<div class="addon">
+<div class="addon-name">Volume discounts</div>
+<div class="check" style="color:#34c759">✓</div>
+</div>
+</div>
+</div>
+<a href="#" class="btn">Get Started</a>
+<div style="margin-top:24px;padding:16px;background:#f5f5f7;border-radius:8px;font-size:13px;color:#86868b">
+Estimated cost for 10,000 calls/month: <strong style="color:#0071e3">$500</strong>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 047: Nonprofit Pricing</h2>
+<div class="price-grid">
+<div class="price-card">
+<div class="plan-name">Standard</div>
+<div class="price">$99</div>
+<div class="period">per month</div>
+<a href="#" class="btn btn-secondary">Choose Plan</a>
+</div>
+<div class="price-card featured">
+<span class="badge">NONPROFIT</span>
+<div class="plan-name">Nonprofit Plan</div>
+<div class="plan-desc">Special pricing for registered nonprofits</div>
+<div style="text-decoration:line-through;color:rgba(255,255,255,0.6);font-size:24px">$99</div>
+<div class="price">$29</div>
+<div class="period">per month</div>
+<div class="savings">70% OFF</div>
+<a href="#" class="btn">Apply for Nonprofit</a>
+<ul class="features">
+<li>All Pro features</li>
+<li>501(c)(3) verification required</li>
+<li>Annual commitment</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 048: Lifetime Deal</h2>
+<div class="price-grid">
+<div class="price-card">
+<div class="plan-name">Monthly</div>
+<div class="price">$29</div>
+<div class="period">per month</div>
+<div style="margin:16px 0;font-size:13px;color:#86868b">Total over 5 years: $1,740</div>
+<a href="#" class="btn btn-secondary">Subscribe Monthly</a>
+</div>
+<div class="price-card featured">
+<span class="badge">LIMITED OFFER</span>
+<div class="plan-name">Lifetime Access</div>
+<div class="plan-desc">Pay once, use forever</div>
+<div class="price price-small">$499</div>
+<div class="period">one-time payment</div>
+<div class="savings">Save $1,241</div>
+<a href="#" class="btn">Get Lifetime Deal</a>
+<ul class="features">
+<li>All features forever</li>
+<li>Free updates</li>
+<li>No recurring fees</li>
+<li>Priority support</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 049: Multi-Product Bundle</h2>
+<div class="price-card">
+<div class="plan-name">Complete Suite</div>
+<div class="plan-desc">Save when you bundle all products</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0">
+<div style="text-align:center;padding:16px;background:#f5f5f7;border-radius:8px">
+<div style="font-size:13px;color:#86868b">Product A</div>
+<div style="font-size:21px;font-weight:600;margin-top:4px">$29</div>
+</div>
+<div style="text-align:center;padding:16px;background:#f5f5f7;border-radius:8px">
+<div style="font-size:13px;color:#86868b">Product B</div>
+<div style="font-size:21px;font-weight:600;margin-top:4px">$39</div>
+</div>
+<div style="text-align:center;padding:16px;background:#f5f5f7;border-radius:8px">
+<div style="font-size:13px;color:#86868b">Product C</div>
+<div style="font-size:21px;font-weight:600;margin-top:4px">$49</div>
+</div>
+</div>
+<div style="text-align:center;padding:24px;background:linear-gradient(135deg,#0071e3,#005bb5);border-radius:12px;color:#fff">
+<div style="text-decoration:line-through;opacity:0.7;font-size:19px">$117/month</div>
+<div class="price" style="color:#fff;margin:8px 0">$89</div>
+<div class="period" style="color:rgba(255,255,255,0.8)">per month (bundle price)</div>
+<div class="savings">Save $28/month</div>
+</div>
+<a href="#" class="btn" style="margin-top:24px;width:100%;text-align:center;display:block">Get Bundle</a>
+</div>
+</div>
+
+<div class="component">
+<h2>Component 050: FAQ Pricing</h2>
+<div class="price-card featured">
+<div class="plan-name">Professional</div>
+<div class="price">$59</div>
+<div class="period">per month</div>
+<a href="#" class="btn">Get Started</a>
+<ul class="features">
+<li>Unlimited users</li>
+<li>200 GB storage</li>
+<li>Priority support</li>
+<li>Advanced analytics</li>
+</ul>
+<div style="margin-top:32px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.2)">
+<div style="font-weight:600;margin-bottom:16px;font-size:17px">Common Questions</div>
+<div style="margin-bottom:16px">
+<div style="font-weight:600;font-size:14px;margin-bottom:4px">Can I change plans later?</div>
+<div style="font-size:13px;opacity:0.8">Yes, upgrade or downgrade anytime.</div>
+</div>
+<div style="margin-bottom:16px">
+<div style="font-weight:600;font-size:14px;margin-bottom:4px">What payment methods?</div>
+<div style="font-size:13px;opacity:0.8">Credit card, PayPal, wire transfer.</div>
+</div>
+<div>
+<div style="font-weight:600;font-size:14px;margin-bottom:4px">Is there a setup fee?</div>
+<div style="font-size:13px;opacity:0.8">No setup fees or hidden charges.</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.toggle-switch').forEach(toggle=>{
+toggle.addEventListener('click',function(){
+this.classList.toggle('active');
+});
+});
+
+document.querySelectorAll('.tier-option').forEach(option=>{
+option.addEventListener('click',function(){
+this.parentElement.querySelectorAll('.tier-option').forEach(opt=>opt.classList.remove('active'));
+this.classList.add('active');
+});
+});
+</script>
+
+</body>
+</html>

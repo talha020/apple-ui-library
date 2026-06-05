@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Components 001-025</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Satoshi',system-ui,-apple-system,sans-serif;background:#f5f5f7;padding:40px 20px}section{background:#fff;border-radius:12px;padding:80px 20px;margin-bottom:20px;max-width:1200px;margin-left:auto;margin-right:auto}h3{font-size:14px;color:#86868b;margin-bottom:60px;text-align:center;font-weight:500}
+</style>
+</head>
+<body>
+
+<section style="text-align:center">
+<h3>001 — Simple 6 Column Logo Grid</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:40px;max-width:1000px;margin:0 auto">
+<div style="padding:30px;border:1px solid #e5e5e7;border-radius:12px;display:flex;align-items:center;justify-content:center"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo1" alt="Logo" style="max-width:100%;height:auto;opacity:0.8"></div>
+<div style="padding:30px;border:1px solid #e5e5e7;border-radius:12px;display:flex;align-items:center;justify-content:center"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo2" alt="Logo" style="max-width:100%;height:auto;opacity:0.8"></div>
+<div style="padding:30px;border:1px solid #e5e5e7;border-radius:12px;display:flex;align-items:center;justify-content:center"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo3" alt="Logo" style="max-width:100%;height:auto;opacity:0.8"></div>
+<div style="padding:30px;border:1px solid #e5e5e7;border-radius:12px;display:flex;align-items:center;justify-content:center"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo4" alt="Logo" style="max-width:100%;height:auto;opacity:0.8"></div>
+<div style="padding:30px;border:1px solid #e5e5e7;border-radius:12px;display:flex;align-items:center;justify-content:center"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo5" alt="Logo" style="max-width:100%;height:auto;opacity:0.8"></div>
+<div style="padding:30px;border:1px solid #e5e5e7;border-radius:12px;display:flex;align-items:center;justify-content:center"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo6" alt="Logo" style="max-width:100%;height:auto;opacity:0.8"></div>
+</div>
+</section>
+
+<section style="text-align:center;overflow:hidden">
+<h3>002 — Infinite Logo Scroll Marquee</h3>
+<style>@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
+<div style="display:flex;gap:60px;animation:scroll 30s linear infinite">
+<img src="https://via.placeholder.com/140x50/1d1d1f/fff?text=Brand1" alt="Logo" style="height:50px;opacity:0.7">
+<img src="https://via.placeholder.com/140x50/1d1d1f/fff?text=Brand2" alt="Logo" style="height:50px;opacity:0.7">
+<img src="https://via.placeholder.com/140x50/1d1d1f/fff?text=Brand3" alt="Logo" style="height:50px;opacity:0.7">
+<img src="https://via.placeholder.com/140x50/1d1d1f/fff?text=Brand4" alt="Logo" style="height:50px;opacity:0.7">
+<img src="https://via.placeholder.com/140x50/1d1d1f/fff?text=Brand5" alt="Logo" style="height:50px;opacity:0.7">
+<img src="https://via.placeholder.com/140x50/1d1d1f/fff?text=Brand1" alt="Logo" style="height:50px;opacity:0.7">
+<img src="https://via.placeholder.com/140x50/1d1d1f/fff?text=Brand2" alt="Logo" style="height:50px;opacity:0.7">
+<img src="https://via.placeholder.com/140x50/1d1d1f/fff?text=Brand3" alt="Logo" style="height:50px;opacity:0.7">
+<img src="https://via.placeholder.com/140x50/1d1d1f/fff?text=Brand4" alt="Logo" style="height:50px;opacity:0.7">
+<img src="https://via.placeholder.com/140x50/1d1d1f/fff?text=Brand5" alt="Logo" style="height:50px;opacity:0.7">
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>003 — Grayscale Logo Grid with Hover</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;max-width:900px;margin:0 auto">
+<div style="padding:40px;background:#fafafa;border-radius:12px;transition:all 0.3s" onmouseover="this.style.background='#fff';this.querySelector('img').style.filter='grayscale(0)'" onmouseout="this.style.background='#fafafa';this.querySelector('img').style.filter='grayscale(1)'"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Client" alt="Logo" style="max-width:100%;filter:grayscale(1);transition:filter 0.3s"></div>
+<div style="padding:40px;background:#fafafa;border-radius:12px;transition:all 0.3s" onmouseover="this.style.background='#fff';this.querySelector('img').style.filter='grayscale(0)'" onmouseout="this.style.background='#fafafa';this.querySelector('img').style.filter='grayscale(1)'"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Client" alt="Logo" style="max-width:100%;filter:grayscale(1);transition:filter 0.3s"></div>
+<div style="padding:40px;background:#fafafa;border-radius:12px;transition:all 0.3s" onmouseover="this.style.background='#fff';this.querySelector('img').style.filter='grayscale(0)'" onmouseout="this.style.background='#fafafa';this.querySelector('img').style.filter='grayscale(1)'"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Client" alt="Logo" style="max-width:100%;filter:grayscale(1);transition:filter 0.3s"></div>
+<div style="padding:40px;background:#fafafa;border-radius:12px;transition:all 0.3s" onmouseover="this.style.background='#fff';this.querySelector('img').style.filter='grayscale(0)'" onmouseout="this.style.background='#fafafa';this.querySelector('img').style.filter='grayscale(1)'"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Client" alt="Logo" style="max-width:100%;filter:grayscale(1);transition:filter 0.3s"></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>004 — Trust Badge Grid</h3>
+<div style="display:flex;justify-content:center;gap:50px;flex-wrap:wrap">
+<div style="text-align:center"><img src="https://via.placeholder.com/80x80/0071e3/fff?text=★" alt="Badge" style="width:80px;height:80px;border-radius:50%;margin-bottom:12px"><div style="font-size:15px;color:#1d1d1f;font-weight:500">Certified</div></div>
+<div style="text-align:center"><img src="https://via.placeholder.com/80x80/0071e3/fff?text=✓" alt="Badge" style="width:80px;height:80px;border-radius:50%;margin-bottom:12px"><div style="font-size:15px;color:#1d1d1f;font-weight:500">Verified</div></div>
+<div style="text-align:center"><img src="https://via.placeholder.com/80x80/0071e3/fff?text=A+" alt="Badge" style="width:80px;height:80px;border-radius:50%;margin-bottom:12px"><div style="font-size:15px;color:#1d1d1f;font-weight:500">Rated A+</div></div>
+<div style="text-align:center"><img src="https://via.placeholder.com/80x80/0071e3/fff?text=🏆" alt="Badge" style="width:80px;height:80px;border-radius:50%;margin-bottom:12px"><div style="font-size:15px;color:#1d1d1f;font-weight:500">Award Winner</div></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>005 — As Featured In Section</h3>
+<p style="font-size:13px;color:#86868b;text-transform:uppercase;letter-spacing:1px;margin-bottom:40px">As Featured In</p>
+<div style="display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap">
+<img src="https://via.placeholder.com/140x30/1d1d1f/fff?text=Forbes" alt="Forbes" style="height:30px;opacity:0.6">
+<img src="https://via.placeholder.com/140x30/1d1d1f/fff?text=TechCrunch" alt="TechCrunch" style="height:30px;opacity:0.6">
+<img src="https://via.placeholder.com/140x30/1d1d1f/fff?text=Wired" alt="Wired" style="height:30px;opacity:0.6">
+<img src="https://via.placeholder.com/140x30/1d1d1f/fff?text=NYTimes" alt="NYTimes" style="height:30px;opacity:0.6">
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>006 — Partner Logo Display</h3>
+<h2 style="font-size:40px;font-weight:700;color:#1d1d1f;margin-bottom:50px">Trusted by Industry Leaders</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1000px;margin:0 auto">
+<div style="padding:50px;border:1px solid #e5e5e7;border-radius:10px;background:#fafafa"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Partner1" alt="Partner" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:50px;border:1px solid #e5e5e7;border-radius:10px;background:#fafafa"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Partner2" alt="Partner" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:50px;border:1px solid #e5e5e7;border-radius:10px;background:#fafafa"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Partner3" alt="Partner" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:50px;border:1px solid #e5e5e7;border-radius:10px;background:#fafafa"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Partner4" alt="Partner" style="max-width:100%;opacity:0.7"></div>
+</div>
+</section>
+
+<section style="text-align:center;background:#f5f5f7">
+<h3>007 — Logo Wall with Border</h3>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);max-width:800px;margin:0 auto;border:1px solid #d2d2d7;border-radius:12px;overflow:hidden">
+<div style="padding:50px;border-right:1px solid #d2d2d7;border-bottom:1px solid #d2d2d7;background:#fff"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:50px;border-right:1px solid #d2d2d7;border-bottom:1px solid #d2d2d7;background:#fff"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:50px;border-bottom:1px solid #d2d2d7;background:#fff"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:50px;border-right:1px solid #d2d2d7;background:#fff"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:50px;border-right:1px solid #d2d2d7;background:#fff"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:50px;background:#fff"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>008 — Technology Stack Display</h3>
+<p style="font-size:17px;color:#1d1d1f;margin-bottom:50px;font-weight:500">Built with industry-leading technology</p>
+<div style="display:flex;justify-content:center;gap:30px;flex-wrap:wrap">
+<div style="padding:25px 40px;background:#fafafa;border-radius:12px;font-size:15px;color:#1d1d1f;font-weight:500;display:flex;align-items:center;gap:12px"><img src="https://via.placeholder.com/30x30/0071e3/fff?text=R" alt="" style="width:30px;height:30px;border-radius:6px">React</div>
+<div style="padding:25px 40px;background:#fafafa;border-radius:12px;font-size:15px;color:#1d1d1f;font-weight:500;display:flex;align-items:center;gap:12px"><img src="https://via.placeholder.com/30x30/0071e3/fff?text=N" alt="" style="width:30px;height:30px;border-radius:6px">Node.js</div>
+<div style="padding:25px 40px;background:#fafafa;border-radius:12px;font-size:15px;color:#1d1d1f;font-weight:500;display:flex;align-items:center;gap:12px"><img src="https://via.placeholder.com/30x30/0071e3/fff?text=A" alt="" style="width:30px;height:30px;border-radius:6px">AWS</div>
+<div style="padding:25px 40px;background:#fafafa;border-radius:12px;font-size:15px;color:#1d1d1f;font-weight:500;display:flex;align-items:center;gap:12px"><img src="https://via.placeholder.com/30x30/0071e3/fff?text=M" alt="" style="width:30px;height:30px;border-radius:6px">MongoDB</div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>009 — Integration Logos Grid</h3>
+<h2 style="font-size:32px;font-weight:700;color:#1d1d1f;margin-bottom:15px">Seamless Integrations</h2>
+<p style="font-size:17px;color:#86868b;margin-bottom:50px">Connect with the tools you already use</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:25px;max-width:900px;margin:0 auto">
+<div style="padding:35px;background:#fff;border:1px solid #e5e5e7;border-radius:12px;transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"><img src="https://via.placeholder.com/60x60/0071e3/fff?text=S" alt="Logo" style="width:60px;height:60px;border-radius:10px"></div>
+<div style="padding:35px;background:#fff;border:1px solid #e5e5e7;border-radius:12px;transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"><img src="https://via.placeholder.com/60x60/0071e3/fff?text=Z" alt="Logo" style="width:60px;height:60px;border-radius:10px"></div>
+<div style="padding:35px;background:#fff;border:1px solid #e5e5e7;border-radius:12px;transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"><img src="https://via.placeholder.com/60x60/0071e3/fff?text=G" alt="Logo" style="width:60px;height:60px;border-radius:10px"></div>
+<div style="padding:35px;background:#fff;border:1px solid #e5e5e7;border-radius:12px;transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"><img src="https://via.placeholder.com/60x60/0071e3/fff?text=H" alt="Logo" style="width:60px;height:60px;border-radius:10px"></div>
+<div style="padding:35px;background:#fff;border:1px solid #e5e5e7;border-radius:12px;transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"><img src="https://via.placeholder.com/60x60/0071e3/fff?text=M" alt="Logo" style="width:60px;height:60px;border-radius:10px"></div>
+<div style="padding:35px;background:#fff;border:1px solid #e5e5e7;border-radius:12px;transition:transform 0.2s,box-shadow 0.2s" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"><img src="https://via.placeholder.com/60x60/0071e3/fff?text=A" alt="Logo" style="width:60px;height:60px;border-radius:10px"></div>
+</div>
+</section>
+
+<section style="text-align:center;background:#1d1d1f;color:#fff">
+<h3 style="color:#86868b">010 — Dark Mode Logo Showcase</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:35px;max-width:900px;margin:0 auto">
+<div style="padding:40px;background:rgba(255,255,255,0.05);border-radius:12px;border:1px solid rgba(255,255,255,0.1)"><img src="https://via.placeholder.com/120x40/fff/1d1d1f?text=Brand" alt="Logo" style="max-width:100%;opacity:0.9"></div>
+<div style="padding:40px;background:rgba(255,255,255,0.05);border-radius:12px;border:1px solid rgba(255,255,255,0.1)"><img src="https://via.placeholder.com/120x40/fff/1d1d1f?text=Brand" alt="Logo" style="max-width:100%;opacity:0.9"></div>
+<div style="padding:40px;background:rgba(255,255,255,0.05);border-radius:12px;border:1px solid rgba(255,255,255,0.1)"><img src="https://via.placeholder.com/120x40/fff/1d1d1f?text=Brand" alt="Logo" style="max-width:100%;opacity:0.9"></div>
+<div style="padding:40px;background:rgba(255,255,255,0.05);border-radius:12px;border:1px solid rgba(255,255,255,0.1)"><img src="https://via.placeholder.com/120x40/fff/1d1d1f?text=Brand" alt="Logo" style="max-width:100%;opacity:0.9"></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>011 — Award Showcase Grid</h3>
+<div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;max-width:1000px;margin:0 auto">
+<div style="text-align:center;padding:30px;background:#fafafa;border-radius:12px;min-width:180px"><img src="https://via.placeholder.com/100x100/0071e3/fff?text=2024" alt="Award" style="width:100px;height:100px;margin-bottom:15px"><div style="font-size:15px;color:#1d1d1f;font-weight:600;margin-bottom:5px">Best Design</div><div style="font-size:13px;color:#86868b">Awwwards 2024</div></div>
+<div style="text-align:center;padding:30px;background:#fafafa;border-radius:12px;min-width:180px"><img src="https://via.placeholder.com/100x100/0071e3/fff?text=★★★" alt="Award" style="width:100px;height:100px;margin-bottom:15px"><div style="font-size:15px;color:#1d1d1f;font-weight:600;margin-bottom:5px">Editor's Choice</div><div style="font-size:13px;color:#86868b">Product Hunt</div></div>
+<div style="text-align:center;padding:30px;background:#fafafa;border-radius:12px;min-width:180px"><img src="https://via.placeholder.com/100x100/0071e3/fff?text=#1" alt="Award" style="width:100px;height:100px;margin-bottom:15px"><div style="font-size:15px;color:#1d1d1f;font-weight:600;margin-bottom:5px">Top Rated</div><div style="font-size:13px;color:#86868b">G2 Crowd</div></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>012 — Client Logo Carousel</h3>
+<p style="font-size:19px;color:#1d1d1f;margin-bottom:50px;font-weight:500">Join 500+ companies already growing</p>
+<div style="display:flex;gap:50px;overflow-x:auto;padding:20px 0;scrollbar-width:none" onwheel="this.scrollLeft+=event.deltaY">
+<div style="min-width:200px;padding:40px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/160x50/1d1d1f/fff?text=Company" alt="Logo" style="width:160px;opacity:0.7"></div>
+<div style="min-width:200px;padding:40px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/160x50/1d1d1f/fff?text=Company" alt="Logo" style="width:160px;opacity:0.7"></div>
+<div style="min-width:200px;padding:40px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/160x50/1d1d1f/fff?text=Company" alt="Logo" style="width:160px;opacity:0.7"></div>
+<div style="min-width:200px;padding:40px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/160x50/1d1d1f/fff?text=Company" alt="Logo" style="width:160px;opacity:0.7"></div>
+<div style="min-width:200px;padding:40px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/160x50/1d1d1f/fff?text=Company" alt="Logo" style="width:160px;opacity:0.7"></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>013 — Compact Logo Strip</h3>
+<div style="display:flex;justify-content:space-between;align-items:center;max-width:1000px;margin:0 auto;padding:30px;background:#fafafa;border-radius:12px">
+<img src="https://via.placeholder.com/100x30/1d1d1f/fff?text=Logo1" alt="Logo" style="height:30px;opacity:0.6">
+<img src="https://via.placeholder.com/100x30/1d1d1f/fff?text=Logo2" alt="Logo" style="height:30px;opacity:0.6">
+<img src="https://via.placeholder.com/100x30/1d1d1f/fff?text=Logo3" alt="Logo" style="height:30px;opacity:0.6">
+<img src="https://via.placeholder.com/100x30/1d1d1f/fff?text=Logo4" alt="Logo" style="height:30px;opacity:0.6">
+<img src="https://via.placeholder.com/100x30/1d1d1f/fff?text=Logo5" alt="Logo" style="height:30px;opacity:0.6">
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>014 — Sponsor Logo Section</h3>
+<h2 style="font-size:28px;font-weight:700;color:#1d1d1f;margin-bottom:10px">Event Sponsors</h2>
+<p style="font-size:15px;color:#86868b;margin-bottom:50px">Proudly supported by</p>
+<div style="max-width:900px;margin:0 auto">
+<div style="margin-bottom:50px"><p style="font-size:13px;color:#86868b;margin-bottom:20px;text-transform:uppercase;letter-spacing:1px">Platinum Sponsor</p><img src="https://via.placeholder.com/200x60/1d1d1f/fff?text=Platinum" alt="Sponsor" style="height:60px;opacity:0.8"></div>
+<div style="margin-bottom:50px"><p style="font-size:13px;color:#86868b;margin-bottom:20px;text-transform:uppercase;letter-spacing:1px">Gold Sponsors</p><div style="display:flex;justify-content:center;gap:50px;flex-wrap:wrap"><img src="https://via.placeholder.com/150x45/1d1d1f/fff?text=Gold1" alt="Sponsor" style="height:45px;opacity:0.7"><img src="https://via.placeholder.com/150x45/1d1d1f/fff?text=Gold2" alt="Sponsor" style="height:45px;opacity:0.7"></div></div>
+<div><p style="font-size:13px;color:#86868b;margin-bottom:20px;text-transform:uppercase;letter-spacing:1px">Silver Sponsors</p><div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap"><img src="https://via.placeholder.com/120x35/1d1d1f/fff?text=Silver1" alt="Sponsor" style="height:35px;opacity:0.6"><img src="https://via.placeholder.com/120x35/1d1d1f/fff?text=Silver2" alt="Sponsor" style="height:35px;opacity:0.6"><img src="https://via.placeholder.com/120x35/1d1d1f/fff?text=Silver3" alt="Sponsor" style="height:35px;opacity:0.6"></div></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>015 — Logo Grid with Categories</h3>
+<div style="max-width:1000px;margin:0 auto">
+<div style="margin-bottom:60px"><h4 style="font-size:17px;color:#1d1d1f;font-weight:600;margin-bottom:30px">Enterprise</h4><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:30px"><div style="padding:35px;border:1px solid #e5e5e7;border-radius:12px"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Corp1" alt="Logo" style="max-width:100%;opacity:0.7"></div><div style="padding:35px;border:1px solid #e5e5e7;border-radius:12px"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Corp2" alt="Logo" style="max-width:100%;opacity:0.7"></div><div style="padding:35px;border:1px solid #e5e5e7;border-radius:12px"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Corp3" alt="Logo" style="max-width:100%;opacity:0.7"></div></div></div>
+<div><h4 style="font-size:17px;color:#1d1d1f;font-weight:600;margin-bottom:30px">Startups</h4><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:30px"><div style="padding:35px;border:1px solid #e5e5e7;border-radius:12px"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Start1" alt="Logo" style="max-width:100%;opacity:0.7"></div><div style="padding:35px;border:1px solid #e5e5e7;border-radius:12px"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Start2" alt="Logo" style="max-width:100%;opacity:0.7"></div><div style="padding:35px;border:1px solid #e5e5e7;border-radius:12px"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Start3" alt="Logo" style="max-width:100%;opacity:0.7"></div></div></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>016 — Minimal Logo List</h3>
+<div style="max-width:600px;margin:0 auto">
+<div style="display:flex;align-items:center;padding:30px;border-bottom:1px solid #e5e5e7"><img src="https://via.placeholder.com/140x40/1d1d1f/fff?text=Brand" alt="Logo" style="height:40px;opacity:0.7"></div>
+<div style="display:flex;align-items:center;padding:30px;border-bottom:1px solid #e5e5e7"><img src="https://via.placeholder.com/140x40/1d1d1f/fff?text=Brand" alt="Logo" style="height:40px;opacity:0.7"></div>
+<div style="display:flex;align-items:center;padding:30px;border-bottom:1px solid #e5e5e7"><img src="https://via.placeholder.com/140x40/1d1d1f/fff?text=Brand" alt="Logo" style="height:40px;opacity:0.7"></div>
+<div style="display:flex;align-items:center;padding:30px;border-bottom:1px solid #e5e5e7"><img src="https://via.placeholder.com/140x40/1d1d1f/fff?text=Brand" alt="Logo" style="height:40px;opacity:0.7"></div>
+<div style="display:flex;align-items:center;padding:30px"><img src="https://via.placeholder.com/140x40/1d1d1f/fff?text=Brand" alt="Logo" style="height:40px;opacity:0.7"></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>017 — Logo Timeline</h3>
+<div style="max-width:900px;margin:0 auto">
+<div style="display:flex;align-items:center;gap:40px;margin-bottom:50px">
+<div style="min-width:100px;text-align:right"><div style="font-size:24px;font-weight:700;color:#0071e3">2020</div></div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:30px">
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/100x35/1d1d1f/fff?text=Partner" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/100x35/1d1d1f/fff?text=Partner" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/100x35/1d1d1f/fff?text=Partner" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:40px">
+<div style="min-width:100px;text-align:right"><div style="font-size:24px;font-weight:700;color:#0071e3">2024</div></div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:30px">
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/100x35/1d1d1f/fff?text=Partner" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/100x35/1d1d1f/fff?text=Partner" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/100x35/1d1d1f/fff?text=Partner" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="text-align:center;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff">
+<h3 style="color:rgba(255,255,255,0.8)">018 — Gradient Background Logos</h3>
+<h2 style="font-size:36px;font-weight:700;margin-bottom:50px">Our Partners</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;max-width:900px;margin:0 auto">
+<div style="padding:40px;background:rgba(255,255,255,0.15);border-radius:12px;backdrop-filter:blur(10px)"><img src="https://via.placeholder.com/120x40/fff/1d1d1f?text=Partner" alt="Logo" style="max-width:100%"></div>
+<div style="padding:40px;background:rgba(255,255,255,0.15);border-radius:12px;backdrop-filter:blur(10px)"><img src="https://via.placeholder.com/120x40/fff/1d1d1f?text=Partner" alt="Logo" style="max-width:100%"></div>
+<div style="padding:40px;background:rgba(255,255,255,0.15);border-radius:12px;backdrop-filter:blur(10px)"><img src="https://via.placeholder.com/120x40/fff/1d1d1f?text=Partner" alt="Logo" style="max-width:100%"></div>
+<div style="padding:40px;background:rgba(255,255,255,0.15);border-radius:12px;backdrop-filter:blur(10px)"><img src="https://via.placeholder.com/120x40/fff/1d1d1f?text=Partner" alt="Logo" style="max-width:100%"></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>019 — Logo Grid with Stat</h3>
+<div style="max-width:900px;margin:0 auto">
+<div style="margin-bottom:50px"><div style="font-size:56px;font-weight:700;color:#0071e3;margin-bottom:10px">10,000+</div><p style="font-size:19px;color:#86868b">Companies trust our platform</p></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:35px">
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/110x35/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.6"></div>
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/110x35/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.6"></div>
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/110x35/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.6"></div>
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/110x35/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.6"></div>
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/110x35/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.6"></div>
+<div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/110x35/1d1d1f/fff?text=Logo" alt="Logo" style="max-width:100%;opacity:0.6"></div>
+</div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>020 — Stacked Logo Cards</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;max-width:1000px;margin:0 auto">
+<div style="padding:40px;background:#fff;border:1px solid #e5e5e7;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.05)"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Company" alt="Logo" style="max-width:100%;margin-bottom:20px;opacity:0.7"><p style="font-size:14px;color:#86868b;line-height:1.6">Industry-leading solutions for enterprise teams</p></div>
+<div style="padding:40px;background:#fff;border:1px solid #e5e5e7;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.05)"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Company" alt="Logo" style="max-width:100%;margin-bottom:20px;opacity:0.7"><p style="font-size:14px;color:#86868b;line-height:1.6">Trusted by millions of users worldwide</p></div>
+<div style="padding:40px;background:#fff;border:1px solid #e5e5e7;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.05)"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Company" alt="Logo" style="max-width:100%;margin-bottom:20px;opacity:0.7"><p style="font-size:14px;color:#86868b;line-height:1.6">Award-winning platform and support</p></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>021 — Circle Logo Grid</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:40px;max-width:800px;margin:0 auto">
+<div style="width:140px;height:140px;border-radius:50%;background:#fafafa;display:flex;align-items:center;justify-content:center;margin:0 auto;border:1px solid #e5e5e7"><img src="https://via.placeholder.com/80x80/1d1d1f/fff?text=L" alt="Logo" style="width:80px;height:80px;border-radius:50%"></div>
+<div style="width:140px;height:140px;border-radius:50%;background:#fafafa;display:flex;align-items:center;justify-content:center;margin:0 auto;border:1px solid #e5e5e7"><img src="https://via.placeholder.com/80x80/1d1d1f/fff?text=L" alt="Logo" style="width:80px;height:80px;border-radius:50%"></div>
+<div style="width:140px;height:140px;border-radius:50%;background:#fafafa;display:flex;align-items:center;justify-content:center;margin:0 auto;border:1px solid #e5e5e7"><img src="https://via.placeholder.com/80x80/1d1d1f/fff?text=L" alt="Logo" style="width:80px;height:80px;border-radius:50%"></div>
+<div style="width:140px;height:140px;border-radius:50%;background:#fafafa;display:flex;align-items:center;justify-content:center;margin:0 auto;border:1px solid #e5e5e7"><img src="https://via.placeholder.com/80x80/1d1d1f/fff?text=L" alt="Logo" style="width:80px;height:80px;border-radius:50%"></div>
+<div style="width:140px;height:140px;border-radius:50%;background:#fafafa;display:flex;align-items:center;justify-content:center;margin:0 auto;border:1px solid #e5e5e7"><img src="https://via.placeholder.com/80x80/1d1d1f/fff?text=L" alt="Logo" style="width:80px;height:80px;border-radius:50%"></div>
+<div style="width:140px;height:140px;border-radius:50%;background:#fafafa;display:flex;align-items:center;justify-content:center;margin:0 auto;border:1px solid #e5e5e7"><img src="https://via.placeholder.com/80x80/1d1d1f/fff?text=L" alt="Logo" style="width:80px;height:80px;border-radius:50%"></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>022 — Two Column Logo Layout</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:900px;margin:0 auto">
+<div><h4 style="font-size:19px;font-weight:600;color:#1d1d1f;margin-bottom:30px">Enterprise Clients</h4><div style="display:flex;flex-direction:column;gap:25px"><div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/150x40/1d1d1f/fff?text=Enterprise" alt="Logo" style="max-width:100%;opacity:0.7"></div><div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/150x40/1d1d1f/fff?text=Enterprise" alt="Logo" style="max-width:100%;opacity:0.7"></div><div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/150x40/1d1d1f/fff?text=Enterprise" alt="Logo" style="max-width:100%;opacity:0.7"></div></div></div>
+<div><h4 style="font-size:19px;font-weight:600;color:#1d1d1f;margin-bottom:30px">Growing Teams</h4><div style="display:flex;flex-direction:column;gap:25px"><div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/150x40/1d1d1f/fff?text=Team" alt="Logo" style="max-width:100%;opacity:0.7"></div><div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/150x40/1d1d1f/fff?text=Team" alt="Logo" style="max-width:100%;opacity:0.7"></div><div style="padding:30px;background:#fafafa;border-radius:12px"><img src="https://via.placeholder.com/150x40/1d1d1f/fff?text=Team" alt="Logo" style="max-width:100%;opacity:0.7"></div></div></div>
+</div>
+</section>
+
+<section style="text-align:center">
+<h3>023 — Logo Showcase with CTA</h3>
+<h2 style="font-size:40px;font-weight:700;color:#1d1d1f;margin-bottom:20px">Join the Best</h2>
+<p style="font-size:17px;color:#86868b;margin-bottom:50px">Trusted by leading companies worldwide</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:30px;max-width:900px;margin:0 auto 50px">
+<div style="padding:35px;border:1px solid #e5e5e7;border-radius:12px;background:#fafafa"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Brand" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:35px;border:1px solid #e5e5e7;border-radius:12px;background:#fafafa"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Brand" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:35px;border:1px solid #e5e5e7;border-radius:12px;background:#fafafa"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Brand" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:35px;border:1px solid #e5e5e7;border-radius:12px;background:#fafafa"><img src="https://via.placeholder.com/120x40/1d1d1f/fff?text=Brand" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+</div>
+<a href="#" style="display:inline-block;padding:14px 32px;background:#0071e3;color:#fff;text-decoration:none;border-radius:10px;font-size:15px;font-weight:500;transition:background 0.2s" onmouseover="this.style.background='#0077ed'" onmouseout="this.style.background='#0071e3'">Get Started Today</a>
+</section>
+
+<section style="text-align:center">
+<h3>024 — Bordered Logo Sections</h3>
+<div style="max-width:1000px;margin:0 auto;border:2px solid #e5e5e7;border-radius:12px;padding:50px">
+<div style="margin-bottom:50px;padding-bottom:50px;border-bottom:1px solid #e5e5e7"><p style="font-size:13px;color:#86868b;text-transform:uppercase;letter-spacing:1px;margin-bottom:30px">Premium Partners</p><div style="display:flex;justify-content:center;gap:50px;flex-wrap:wrap"><img src="https://via.placeholder.com/140x45/1d1d1f/fff?text=Premium" alt="Logo" style="height:45px;opacity:0.8"><img src="https://via.placeholder.com/140x45/1d1d1f/fff?text=Premium" alt="Logo" style="height:45px;opacity:0.8"></div></div>
+<div><p style="font-size:13px;color:#86868b;text-transform:uppercase;letter-spacing:1px;margin-bottom:30px">Standard Partners</p><div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap"><img src="https://via.placeholder.com/120x35/1d1d1f/fff?text=Standard" alt="Logo" style="height:35px;opacity:0.7"><img src="https://via.placeholder.com/120x35/1d1d1f/fff?text=Standard" alt="Logo" style="height:35px;opacity:0.7"><img src="https://via.placeholder.com/120x35/1d1d1f/fff?text=Standard" alt="Logo" style="height:35px;opacity:0.7"></div></div>
+</div>
+</section>
+
+<section style="text-align:center;background:#fafafa">
+<h3>025 — Large Logo Feature Grid</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;max-width:1000px;margin:0 auto;background:#e5e5e7;border-radius:12px;overflow:hidden">
+<div style="padding:60px;background:#fff;display:flex;align-items:center;justify-content:center"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Featured" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:60px;background:#fff;display:flex;align-items:center;justify-content:center"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Featured" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:60px;background:#fff;display:flex;align-items:center;justify-content:center"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Featured" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+<div style="padding:60px;background:#fff;display:flex;align-items:center;justify-content:center"><img src="https://via.placeholder.com/150x50/1d1d1f/fff?text=Featured" alt="Logo" style="max-width:100%;opacity:0.7"></div>
+</div>
+</section>
+
+</body>
+</html>

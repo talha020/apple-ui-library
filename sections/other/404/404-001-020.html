@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 Sections 001-020 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+@keyframes drift { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 25% { transform: translate(10px, -10px) rotate(5deg); } 50% { transform: translate(-5px, -20px) rotate(-3deg); } 75% { transform: translate(-10px, -5px) rotate(2deg); } }
+@keyframes countdown { from { width: 100%; } to { width: 0%; } }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes wave { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(20deg); } 75% { transform: rotate(-15deg); } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<!-- Section 001: Minimal Centered 404 -->
+<div class="section-label">404-001 / Minimal Centered 404</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px;">
+    <div style="text-align: center; max-width: 480px;">
+      <div style="font-size: 120px; font-weight: 700; color: #1D1D1F; line-height: 1; letter-spacing: -4px; margin-bottom: 16px;">404</div>
+      <div style="width: 48px; height: 2px; background: #E3E3E8; margin: 0 auto 24px;"></div>
+      <h1 style="font-size: 24px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">Page not found</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">The page you're looking for doesn't exist or has been moved. Check the URL and try again.</p>
+      <a href="#" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #1A1A1A; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M3 8l4-4M3 8l4 4"/></svg>
+        Go back home
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Section 002: 404 with Search Bar -->
+<div class="section-label">404-002 / 404 with Search Bar</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px;">
+    <div style="text-align: center; max-width: 560px; width: 100%;">
+      <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 16px; margin-bottom: 24px;">
+        <svg width="28" height="28" fill="none" stroke="#6D6D72" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </div>
+      <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">We couldn't find that page</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">Try searching for what you need or browse our most popular pages below.</p>
+      <div style="position: relative; max-width: 440px; margin: 0 auto 24px;">
+        <div style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%);">
+          <svg width="18" height="18" fill="none" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="6.5"/><path d="M13 13l3.5 3.5"/></svg>
+        </div>
+        <input type="text" placeholder="Search for pages, articles, products..." style="width: 100%; padding: 14px 16px 14px 44px; font-size: 15px; font-family: inherit; border: 1px solid #E3E3E8; border-radius: 10px; outline: none; background: #F6F6F7; color: #1D1D1F; transition: all 0.2s ease;">
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+        <span style="font-size: 13px; color: #6D6D72; padding: 6px 0;">Popular:</span>
+        <a href="#" style="font-size: 13px; color: #2C6ECB; text-decoration: none; padding: 6px 12px; background: #E9F0FE; border-radius: 6px; transition: all 0.2s ease;">Pricing</a>
+        <a href="#" style="font-size: 13px; color: #2C6ECB; text-decoration: none; padding: 6px 12px; background: #E9F0FE; border-radius: 6px; transition: all 0.2s ease;">Documentation</a>
+        <a href="#" style="font-size: 13px; color: #2C6ECB; text-decoration: none; padding: 6px 12px; background: #E9F0FE; border-radius: 6px; transition: all 0.2s ease;">Blog</a>
+        <a href="#" style="font-size: 13px; color: #2C6ECB; text-decoration: none; padding: 6px 12px; background: #E9F0FE; border-radius: 6px; transition: all 0.2s ease;">Support</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 003: 404 with Popular Links -->
+<div class="section-label">404-003 / 404 with Popular Links</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px;">
+    <div style="max-width: 640px; width: 100%;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <p style="font-size: 14px; font-weight: 600; color: #2C6ECB; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Error 404</p>
+        <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">This page is missing</h1>
+        <p style="font-size: 16px; color: #6D6D72; line-height: 1.6;">Don't worry, here are some helpful links instead.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+        <a href="#" style="display: flex; align-items: center; gap: 14px; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+          <div style="width: 40px; height: 40px; background: #E9F0FE; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="18" height="18" fill="none" stroke="#2C6ECB" stroke-width="2" stroke-linecap="round"><path d="M3 9l6-6 6 6"/><path d="M9 3v14"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Homepage</div>
+            <div style="font-size: 13px; color: #6D6D72;">Start from the beginning</div>
+          </div>
+        </a>
+        <a href="#" style="display: flex; align-items: center; gap: 14px; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+          <div style="width: 40px; height: 40px; background: #F0FDF4; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="18" height="18" fill="none" stroke="#1A8245" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="14" height="12" rx="2"/><path d="M2 7h14"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Products</div>
+            <div style="font-size: 13px; color: #6D6D72;">Browse our offerings</div>
+          </div>
+        </a>
+        <a href="#" style="display: flex; align-items: center; gap: 14px; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+          <div style="width: 40px; height: 40px; background: #F5F3FF; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="18" height="18" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M4 4h10v10H4z"/><path d="M4 8h10M8 4v10"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Documentation</div>
+            <div style="font-size: 13px; color: #6D6D72;">Read our guides</div>
+          </div>
+        </a>
+        <a href="#" style="display: flex; align-items: center; gap: 14px; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+          <div style="width: 40px; height: 40px; background: #FEF3F2; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="18" height="18" fill="none" stroke="#D72C0D" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="7"/><path d="M9 6v4M9 13h.01"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Support</div>
+            <div style="font-size: 13px; color: #6D6D72;">Get help from our team</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 004: 404 with CSS Illustration (Geometric Shapes) -->
+<div class="section-label">404-004 / 404 with CSS Illustration</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px; position: relative; overflow: hidden;">
+    <!-- CSS Art Background -->
+    <div style="position: absolute; inset: 0; pointer-events: none;">
+      <div style="position: absolute; top: 10%; left: 8%; width: 80px; height: 80px; border: 2px solid #E9F0FE; border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+      <div style="position: absolute; top: 20%; right: 12%; width: 60px; height: 60px; background: #F5F3FF; border-radius: 12px; transform: rotate(45deg); animation: float 5s ease-in-out infinite 1s;"></div>
+      <div style="position: absolute; bottom: 15%; left: 15%; width: 40px; height: 40px; background: #E9F0FE; border-radius: 8px; animation: float 7s ease-in-out infinite 0.5s;"></div>
+      <div style="position: absolute; bottom: 25%; right: 20%; width: 100px; height: 100px; border: 2px solid #F5F3FF; border-radius: 50%; animation: float 8s ease-in-out infinite 2s;"></div>
+      <div style="position: absolute; top: 40%; left: 5%; width: 20px; height: 20px; background: #FEF3F2; border-radius: 50%; animation: float 4s ease-in-out infinite 1.5s;"></div>
+      <div style="position: absolute; top: 60%; right: 8%; width: 30px; height: 30px; border: 2px solid #E9F0FE; border-radius: 6px; transform: rotate(30deg); animation: float 5.5s ease-in-out infinite 0.8s;"></div>
+    </div>
+    <div style="text-align: center; max-width: 480px; position: relative; z-index: 1;">
+      <!-- CSS Art: Broken Document -->
+      <div style="position: relative; width: 120px; height: 140px; margin: 0 auto 32px;">
+        <div style="position: absolute; top: 0; left: 10px; width: 80px; height: 100px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; transform: rotate(-6deg);"></div>
+        <div style="position: absolute; top: 8px; left: 30px; width: 80px; height: 100px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; transform: rotate(3deg);">
+          <div style="margin: 20px 12px 0; height: 6px; background: #E3E3E8; border-radius: 3px; width: 60%;"></div>
+          <div style="margin: 8px 12px 0; height: 6px; background: #E3E3E8; border-radius: 3px; width: 80%;"></div>
+          <div style="margin: 8px 12px 0; height: 6px; background: #E3E3E8; border-radius: 3px; width: 40%;"></div>
+          <div style="margin: 16px auto 0; width: 28px; height: 28px; border: 2px solid #D72C0D; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 14px; height: 2px; background: #D72C0D; border-radius: 1px; transform: rotate(45deg); position: relative;">
+              <div style="position: absolute; width: 14px; height: 2px; background: #D72C0D; border-radius: 1px; transform: rotate(90deg);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Oops! Page not found</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 28px;">It looks like this page got lost among the shapes. Let's get you back on track.</p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <a href="#" style="padding: 12px 24px; background: #1A1A1A; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">Back to home</a>
+        <a href="#" style="padding: 12px 24px; background: #F6F6F7; color: #1D1D1F; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; border: 1px solid #E3E3E8; transition: all 0.2s ease;">Report issue</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 005: 404 with Countdown Redirect -->
+<div class="section-label">404-005 / 404 with Countdown Redirect</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px;">
+    <div style="text-align: center; max-width: 480px;">
+      <div style="display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: #E9F0FE; border-radius: 50%; margin-bottom: 24px;">
+        <svg width="32" height="32" fill="none" stroke="#2C6ECB" stroke-width="2" stroke-linecap="round"><circle cx="16" cy="16" r="12"/><path d="M16 10v6l4 2"/></svg>
+      </div>
+      <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Page not found</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 24px;">This page doesn't exist. You'll be redirected to the homepage shortly.</p>
+      <div style="max-width: 320px; margin: 0 auto 16px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+          <span style="font-size: 13px; font-weight: 500; color: #6D6D72;">Redirecting in <span style="color: #2C6ECB; font-weight: 600;">10s</span></span>
+          <span style="font-size: 13px; color: #AEAEB2;">100%</span>
+        </div>
+        <div style="width: 100%; height: 6px; background: #F6F6F7; border-radius: 3px; overflow: hidden;">
+          <div style="height: 100%; background: linear-gradient(90deg, #2C6ECB, #7C3AED); border-radius: 3px; animation: countdown 10s linear forwards;"></div>
+        </div>
+      </div>
+      <p style="font-size: 14px; color: #AEAEB2; margin-bottom: 24px;">Or click below to go now</p>
+      <a href="#" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #2C6ECB; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+        Go to homepage now
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Section 006: 404 with Breadcrumb -->
+<div class="section-label">404-006 / 404 with Breadcrumb</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; flex-direction: column; background: #FFFFFF; padding: 0;">
+    <div style="padding: 16px 32px; border-bottom: 1px solid #E3E3E8; background: #F6F6F7;">
+      <nav style="display: flex; align-items: center; gap: 8px; font-size: 13px;">
+        <a href="#" style="color: #2C6ECB; text-decoration: none;">Home</a>
+        <svg width="12" height="12" fill="none" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"><path d="M4 2l4 4-4 4"/></svg>
+        <a href="#" style="color: #2C6ECB; text-decoration: none;">Products</a>
+        <svg width="12" height="12" fill="none" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"><path d="M4 2l4 4-4 4"/></svg>
+        <span style="color: #D72C0D; font-weight: 500;">Page not found</span>
+      </nav>
+    </div>
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+      <div style="text-align: center; max-width: 520px;">
+        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: #FEF3F2; border-radius: 8px; margin-bottom: 20px;">
+          <div style="width: 6px; height: 6px; background: #D72C0D; border-radius: 50%;"></div>
+          <span style="font-size: 13px; font-weight: 600; color: #D72C0D;">Error 404</span>
+        </div>
+        <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Looks like you took a wrong turn</h1>
+        <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 8px;">The page at this URL was not found. It may have been moved or deleted.</p>
+        <p style="font-size: 14px; color: #AEAEB2; margin-bottom: 28px; font-family: monospace; background: #F6F6F7; display: inline-block; padding: 6px 12px; border-radius: 6px;">/products/unknown-page</p>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+          <a href="#" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #1A1A1A; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M3 8l4-4M3 8l4 4"/></svg>
+            Go back
+          </a>
+          <a href="#" style="padding: 12px 24px; background: #FFFFFF; color: #1D1D1F; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; border: 1px solid #E3E3E8; transition: all 0.2s ease;">Visit homepage</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 007: 404 with Sitemap Links -->
+<div class="section-label">404-007 / 404 with Sitemap Links</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 60px 20px;">
+    <div style="max-width: 800px; width: 100%;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <div style="font-size: 64px; font-weight: 700; color: #E3E3E8; line-height: 1; margin-bottom: 12px;">404</div>
+        <h1 style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Page not found</h1>
+        <p style="font-size: 15px; color: #6D6D72;">Here's a map of our site to help you find your way.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+        <div>
+          <h3 style="font-size: 13px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #E3E3E8;">Company</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">About Us</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Careers</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Press</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Blog</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size: 13px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #E3E3E8;">Products</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Features</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Pricing</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Integrations</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">API</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Changelog</a>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size: 13px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #E3E3E8;">Resources</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Documentation</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Help Center</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Community</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Tutorials</a>
+            <a href="#" style="font-size: 15px; color: #1D1D1F; text-decoration: none; transition: color 0.2s ease;">Status</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 008: 404 with Contact Support CTA -->
+<div class="section-label">404-008 / 404 with Contact Support CTA</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px;">
+    <div style="max-width: 560px; width: 100%; text-align: center;">
+      <div style="width: 80px; height: 80px; margin: 0 auto 28px; position: relative;">
+        <div style="width: 80px; height: 80px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <svg width="36" height="36" fill="none" stroke="#6D6D72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 18c0-6.627 5.373-6 12-6s12-.627 12 6"/>
+            <circle cx="18" cy="18" r="14"/>
+            <path d="M18 22v1"/>
+          </svg>
+        </div>
+      </div>
+      <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Something's not right</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">We can't find the page you're looking for. If you think this is a mistake, our support team is here to help.</p>
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 400px; margin: 0 auto;">
+        <a href="#" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 24px; background: #2C6ECB; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h10c1.1 0 2 .9 2 2v7c0 1.1-.9 2-2 2H6l-4 3V6c0-1.1.9-2 2-2z"/></svg>
+          Contact Support
+        </a>
+        <a href="#" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 24px; background: #F6F6F7; color: #1D1D1F; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; border: 1px solid #E3E3E8; transition: all 0.2s ease;">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12l2-2m0 0l7-7 4 4-7 7m-4 0H3v-2z"/></svg>
+          Send us an email
+        </a>
+      </div>
+      <p style="font-size: 13px; color: #AEAEB2; margin-top: 24px;">Average response time: under 2 hours</p>
+    </div>
+  </div>
+</div>
+
+<!-- Section 009: Dark Theme 404 -->
+<div class="section-label">404-009 / Dark Theme 404</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #1A1A1A; padding: 40px 20px; position: relative; overflow: hidden;">
+    <!-- Subtle grid pattern -->
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0); background-size: 32px 32px;"></div>
+    <!-- Glow effect -->
+    <div style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(44,110,203,0.12) 0%, transparent 70%); pointer-events: none;"></div>
+    <div style="text-align: center; max-width: 480px; position: relative; z-index: 1;">
+      <div style="font-size: 140px; font-weight: 700; line-height: 1; letter-spacing: -6px; margin-bottom: 16px; background: linear-gradient(135deg, #FFFFFF 0%, #6D6D72 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">404</div>
+      <h1 style="font-size: 24px; font-weight: 600; color: #FFFFFF; margin-bottom: 12px;">Into the void</h1>
+      <p style="font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 32px;">This page has disappeared into the digital ether. Let's bring you back to reality.</p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <a href="#" style="padding: 12px 24px; background: #FFFFFF; color: #1A1A1A; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">Take me home</a>
+        <a href="#" style="padding: 12px 24px; background: rgba(255,255,255,0.08); color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; border: 1px solid rgba(255,255,255,0.12); transition: all 0.2s ease;">Go back</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 010: 404 with Fun Message/Humor -->
+<div class="section-label">404-010 / 404 with Fun Message/Humor</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px;">
+    <div style="text-align: center; max-width: 500px;">
+      <!-- CSS Art: Lost Astronaut -->
+      <div style="position: relative; width: 160px; height: 160px; margin: 0 auto 32px;">
+        <!-- Planet -->
+        <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 60px; background: linear-gradient(135deg, #E9F0FE, #F5F3FF); border-radius: 50%; border: 1px solid #E3E3E8;"></div>
+        <!-- Astronaut body -->
+        <div style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); animation: float 4s ease-in-out infinite;">
+          <!-- Helmet -->
+          <div style="width: 40px; height: 40px; background: #FFFFFF; border: 2px solid #E3E3E8; border-radius: 50%; margin: 0 auto; position: relative;">
+            <div style="width: 24px; height: 16px; background: #2C6ECB; border-radius: 8px; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); opacity: 0.3;"></div>
+          </div>
+          <!-- Body -->
+          <div style="width: 32px; height: 36px; background: #F6F6F7; border: 2px solid #E3E3E8; border-radius: 8px; margin: -2px auto 0; position: relative;">
+            <div style="width: 8px; height: 8px; background: #2C6ECB; border-radius: 50%; position: absolute; top: 8px; left: 50%; transform: translateX(-50%);"></div>
+          </div>
+          <!-- Arms -->
+          <div style="position: absolute; top: 44px; left: -14px; width: 16px; height: 6px; background: #F6F6F7; border: 1.5px solid #E3E3E8; border-radius: 3px; transform: rotate(-30deg);"></div>
+          <div style="position: absolute; top: 44px; right: -14px; width: 16px; height: 6px; background: #F6F6F7; border: 1.5px solid #E3E3E8; border-radius: 3px; transform: rotate(30deg);"></div>
+        </div>
+        <!-- Stars -->
+        <div style="position: absolute; top: 5px; left: 10px; width: 4px; height: 4px; background: #AEAEB2; border-radius: 50%; animation: pulse 2s ease-in-out infinite;"></div>
+        <div style="position: absolute; top: 15px; right: 15px; width: 3px; height: 3px; background: #AEAEB2; border-radius: 50%; animation: pulse 2s ease-in-out infinite 0.7s;"></div>
+        <div style="position: absolute; top: 40px; left: 5px; width: 2px; height: 2px; background: #AEAEB2; border-radius: 50%; animation: pulse 2s ease-in-out infinite 1.4s;"></div>
+      </div>
+      <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Houston, we have a problem</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 8px;">This page has drifted off into deep space. Our astronaut is searching, but no luck so far.</p>
+      <p style="font-size: 14px; color: #AEAEB2; margin-bottom: 28px;">Error code: 404 | Mission: Page Recovery | Status: Lost in space</p>
+      <a href="#" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #1A1A1A; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+        Return to Earth
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Section 011: 404 with Recent Pages -->
+<div class="section-label">404-011 / 404 with Recent Pages</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px;">
+    <div style="max-width: 600px; width: 100%;">
+      <div style="text-align: center; margin-bottom: 36px;">
+        <div style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: #FEF3F2; border-radius: 14px; margin-bottom: 20px;">
+          <svg width="24" height="24" fill="none" stroke="#D72C0D" stroke-width="2" stroke-linecap="round"><path d="M10 2h4M12 14V8M20.24 12a8.5 8.5 0 1 1-3.74-6.5"/></svg>
+        </div>
+        <h1 style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Page not found</h1>
+        <p style="font-size: 15px; color: #6D6D72;">Perhaps you were looking for one of these recent pages?</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px; background: #F6F6F7; border-radius: 12px; overflow: hidden; border: 1px solid #E3E3E8;">
+        <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: #FFFFFF; text-decoration: none; transition: all 0.2s ease;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 36px; height: 36px; background: #E9F0FE; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <svg width="16" height="16" fill="none" stroke="#2C6ECB" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v12l4-3 4 3V4a2 2 0 0 0-2-2z"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Getting Started Guide</div>
+              <div style="font-size: 13px; color: #AEAEB2;">Visited 2 hours ago</div>
+            </div>
+          </div>
+          <svg width="16" height="16" fill="none" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>
+        </a>
+        <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: #FFFFFF; text-decoration: none; transition: all 0.2s ease;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 36px; height: 36px; background: #F0FDF4; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <svg width="16" height="16" fill="none" stroke="#1A8245" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M6 8l2 2 4-4"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Dashboard Overview</div>
+              <div style="font-size: 13px; color: #AEAEB2;">Visited yesterday</div>
+            </div>
+          </div>
+          <svg width="16" height="16" fill="none" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>
+        </a>
+        <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: #FFFFFF; text-decoration: none; transition: all 0.2s ease;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 36px; height: 36px; background: #F5F3FF; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <svg width="16" height="16" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M6 6h4M6 10h2"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 15px; font-weight: 600; color: #1D1D1F;">API Reference</div>
+              <div style="font-size: 13px; color: #AEAEB2;">Visited 3 days ago</div>
+            </div>
+          </div>
+          <svg width="16" height="16" fill="none" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>
+        </a>
+        <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: #FFFFFF; text-decoration: none; transition: all 0.2s ease;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 36px; height: 36px; background: #FEF9E7; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <svg width="16" height="16" fill="none" stroke="#B98900" stroke-width="2" stroke-linecap="round"><path d="M2 14h12M4 10l4-6 4 6"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Account Settings</div>
+              <div style="font-size: 13px; color: #AEAEB2;">Visited last week</div>
+            </div>
+          </div>
+          <svg width="16" height="16" fill="none" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 012: 404 with Navigation Links -->
+<div class="section-label">404-012 / 404 with Navigation Links</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; flex-direction: column; background: #FFFFFF;">
+    <!-- Mini nav bar -->
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 32px; height: 56px; border-bottom: 1px solid #E3E3E8;">
+      <div style="font-size: 17px; font-weight: 700; color: #1D1D1F;">Acme</div>
+      <div style="display: flex; gap: 24px;">
+        <a href="#" style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none;">Products</a>
+        <a href="#" style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none;">Solutions</a>
+        <a href="#" style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none;">Pricing</a>
+        <a href="#" style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none;">Docs</a>
+      </div>
+      <a href="#" style="padding: 8px 16px; background: #1A1A1A; color: #FFFFFF; font-size: 13px; font-weight: 600; border-radius: 8px; text-decoration: none;">Sign in</a>
+    </div>
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+      <div style="text-align: center; max-width: 440px;">
+        <div style="font-size: 80px; font-weight: 700; color: #F6F6F7; line-height: 1; margin-bottom: 8px; letter-spacing: -3px; -webkit-text-stroke: 1px #E3E3E8;">404</div>
+        <h1 style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Page not found</h1>
+        <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">Sorry, we couldn't find the page you're looking for. Try navigating from our main menu above.</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="#" style="display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 500; color: #2C6ECB; text-decoration: none; transition: all 0.2s ease;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l6-6 6 6M5 7v7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V7"/></svg>
+            Home
+          </a>
+          <span style="color: #E3E3E8;">|</span>
+          <a href="#" style="display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 500; color: #2C6ECB; text-decoration: none; transition: all 0.2s ease;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="12" height="10" rx="2"/><path d="M2 7h12"/></svg>
+            Products
+          </a>
+          <span style="color: #E3E3E8;">|</span>
+          <a href="#" style="display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 500; color: #2C6ECB; text-decoration: none; transition: all 0.2s ease;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h8v8H4zM4 8h8M8 4v8"/></svg>
+            Docs
+          </a>
+          <span style="color: #E3E3E8;">|</span>
+          <a href="#" style="display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 500; color: #2C6ECB; text-decoration: none; transition: all 0.2s ease;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M8 6v4M8 12h.01"/></svg>
+            Help
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 013: 404 with Home Button -->
+<div class="section-label">404-013 / 404 with Home Button</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #F6F6F7 0%, #FFFFFF 100%); padding: 40px 20px;">
+    <div style="text-align: center; max-width: 400px;">
+      <!-- Large outlined 404 -->
+      <div style="position: relative; margin-bottom: 24px;">
+        <div style="font-size: 160px; font-weight: 700; line-height: 1; letter-spacing: -8px; color: transparent; -webkit-text-stroke: 2px #E3E3E8;">404</div>
+        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+          <div style="width: 56px; height: 56px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" fill="none" stroke="#6D6D72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M3.27 20h17.46a1 1 0 0 0 .86-1.5L12.87 3.5a1 1 0 0 0-1.74 0L2.41 18.5a1 1 0 0 0 .86 1.5z"/></svg>
+          </div>
+        </div>
+      </div>
+      <h1 style="font-size: 22px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Nothing here</h1>
+      <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">This page doesn't exist anymore. Head back to the homepage to find what you need.</p>
+      <a href="#" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; background: #1A1A1A; color: #FFFFFF; font-size: 16px; font-weight: 600; border-radius: 12px; text-decoration: none; transition: all 0.2s ease;">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l7-7 7 7"/><path d="M6 8v8a1 1 0 0 0 1 1h3v-5h2v5h3a1 1 0 0 0 1-1V8"/></svg>
+        Back to Homepage
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Section 014: 404 with Broken Link Report Form -->
+<div class="section-label">404-014 / 404 with Broken Link Report Form</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px;">
+    <div style="max-width: 520px; width: 100%;">
+      <div style="text-align: center; margin-bottom: 32px;">
+        <div style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #FEF3F2; border: 1px solid #FECACA; border-radius: 8px; margin-bottom: 16px;">
+          <svg width="14" height="14" fill="none" stroke="#D72C0D" stroke-width="2" stroke-linecap="round"><path d="M10 4L4 10M15 1l-6 6M9 1h6v6"/></svg>
+          <span style="font-size: 13px; font-weight: 600; color: #D72C0D;">Broken Link Detected</span>
+        </div>
+        <h1 style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">This link appears to be broken</h1>
+        <p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Help us fix this by reporting the broken link below.</p>
+      </div>
+      <div style="background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Broken URL</label>
+          <input type="text" value="/products/discontinued-item" readonly style="width: 100%; padding: 10px 14px; font-size: 14px; font-family: monospace; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; color: #6D6D72;">
+        </div>
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Where did you find this link?</label>
+          <input type="text" placeholder="e.g., Homepage, Blog post, External site..." style="width: 100%; padding: 10px 14px; font-size: 14px; font-family: inherit; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; color: #1D1D1F; outline: none;">
+        </div>
+        <div style="margin-bottom: 20px;">
+          <label style="display: block; font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Additional details (optional)</label>
+          <textarea rows="3" placeholder="Any other information that might help us..." style="width: 100%; padding: 10px 14px; font-size: 14px; font-family: inherit; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; color: #1D1D1F; outline: none; resize: vertical;"></textarea>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <button style="flex: 1; padding: 12px; background: #D72C0D; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; border: none; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Report Broken Link</button>
+          <a href="#" style="display: flex; align-items: center; justify-content: center; padding: 12px 20px; background: #FFFFFF; color: #1D1D1F; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; border: 1px solid #E3E3E8; transition: all 0.2s ease;">Go Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 015: 404 with Animated Shapes -->
+<div class="section-label">404-015 / 404 with Animated Shapes</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px; position: relative; overflow: hidden;">
+    <!-- Animated shapes -->
+    <div style="position: absolute; top: 15%; left: 10%; width: 50px; height: 50px; background: #E9F0FE; border-radius: 12px; animation: drift 8s ease-in-out infinite;"></div>
+    <div style="position: absolute; top: 25%; right: 15%; width: 70px; height: 70px; border: 2px solid #F5F3FF; border-radius: 50%; animation: drift 10s ease-in-out infinite 1s;"></div>
+    <div style="position: absolute; bottom: 20%; left: 20%; width: 35px; height: 35px; background: #F0FDF4; border-radius: 50%; animation: drift 7s ease-in-out infinite 2s;"></div>
+    <div style="position: absolute; bottom: 30%; right: 10%; width: 60px; height: 60px; border: 2px solid #FEF3F2; border-radius: 10px; transform: rotate(45deg); animation: drift 9s ease-in-out infinite 0.5s;"></div>
+    <div style="position: absolute; top: 50%; left: 5%; width: 25px; height: 25px; background: #FEF9E7; border-radius: 6px; animation: drift 6s ease-in-out infinite 3s;"></div>
+    <div style="position: absolute; top: 10%; left: 50%; width: 40px; height: 40px; border: 2px solid #E9F0FE; border-radius: 8px; animation: drift 11s ease-in-out infinite 1.5s;"></div>
+    <div style="position: absolute; bottom: 10%; left: 50%; width: 30px; height: 30px; background: #F5F3FF; border-radius: 50%; animation: drift 7.5s ease-in-out infinite 2.5s;"></div>
+    <div style="text-align: center; max-width: 460px; position: relative; z-index: 1;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 24px;">
+        <div style="width: 48px; height: 48px; background: #E9F0FE; border-radius: 12px; animation: float 3s ease-in-out infinite;"></div>
+        <div style="font-size: 64px; font-weight: 700; color: #1D1D1F; line-height: 1;">404</div>
+        <div style="width: 48px; height: 48px; border: 2px solid #F5F3FF; border-radius: 50%; animation: float 3s ease-in-out infinite 1.5s;"></div>
+      </div>
+      <h1 style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">This page got away from us</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 28px;">Like these shapes, the page you're looking for is floating somewhere else. Let us help you find it.</p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <a href="#" style="padding: 12px 24px; background: #1A1A1A; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">Go home</a>
+        <a href="#" style="padding: 12px 24px; background: #FFFFFF; color: #2C6ECB; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; border: 1px solid #E3E3E8; transition: all 0.2s ease;">Search</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 016: 404 Split Layout -->
+<div class="section-label">404-016 / 404 Split Layout</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: grid; grid-template-columns: 1fr 1fr; background: #FFFFFF;">
+    <!-- Left: Visual -->
+    <div style="display: flex; align-items: center; justify-content: center; background: #1A1A1A; padding: 40px; position: relative; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.04) 1px, transparent 0); background-size: 40px 40px;"></div>
+      <div style="position: relative; text-align: center;">
+        <div style="font-size: 180px; font-weight: 700; line-height: 1; letter-spacing: -8px; background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">404</div>
+        <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
+          <div style="width: 8px; height: 8px; background: #2C6ECB; border-radius: 50%; animation: pulse 2s ease-in-out infinite;"></div>
+          <div style="width: 8px; height: 8px; background: #7C3AED; border-radius: 50%; animation: pulse 2s ease-in-out infinite 0.3s;"></div>
+          <div style="width: 8px; height: 8px; background: #D72C0D; border-radius: 50%; animation: pulse 2s ease-in-out infinite 0.6s;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Content -->
+    <div style="display: flex; align-items: center; justify-content: center; padding: 40px;">
+      <div style="max-width: 380px;">
+        <div style="width: 40px; height: 4px; background: #2C6ECB; border-radius: 2px; margin-bottom: 24px;"></div>
+        <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px; line-height: 1.2;">We looked everywhere for this page.</h1>
+        <p style="font-size: 16px; color: #6D6D72; line-height: 1.7; margin-bottom: 12px;">It seems like the page you were looking for has been removed, renamed, or never existed.</p>
+        <p style="font-size: 14px; color: #AEAEB2; margin-bottom: 32px;">If you think this is a mistake, please let us know.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="#" style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 24px; background: #1A1A1A; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+            Go to homepage
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="#" style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 24px; background: #FFFFFF; color: #1D1D1F; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; border: 1px solid #E3E3E8; transition: all 0.2s ease;">Contact support</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 017: 404 with Category Links -->
+<div class="section-label">404-017 / 404 with Category Links</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 60px 20px;">
+    <div style="max-width: 720px; width: 100%;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Page not found</h1>
+        <p style="font-size: 16px; color: #6D6D72; line-height: 1.6;">Browse by category to find what you're looking for.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+        <a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px 20px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 12px; text-decoration: none; transition: all 0.2s ease; text-align: center;">
+          <div style="width: 48px; height: 48px; background: #E9F0FE; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" fill="none" stroke="#2C6ECB" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="12" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="12" width="7" height="7" rx="1.5"/><rect x="12" y="12" width="7" height="7" rx="1.5"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 2px;">Products</div>
+            <div style="font-size: 13px; color: #6D6D72;">42 items</div>
+          </div>
+        </a>
+        <a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px 20px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 12px; text-decoration: none; transition: all 0.2s ease; text-align: center;">
+          <div style="width: 48px; height: 48px; background: #F0FDF4; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" fill="none" stroke="#1A8245" stroke-width="2" stroke-linecap="round"><path d="M4 19V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14"/><path d="M4 19h12M8 7h4M8 11h4M8 15h2"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 2px;">Blog</div>
+            <div style="font-size: 13px; color: #6D6D72;">128 articles</div>
+          </div>
+        </a>
+        <a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px 20px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 12px; text-decoration: none; transition: all 0.2s ease; text-align: center;">
+          <div style="width: 48px; height: 48px; background: #F5F3FF; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 2px;">Resources</div>
+            <div style="font-size: 13px; color: #6D6D72;">56 guides</div>
+          </div>
+        </a>
+        <a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px 20px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 12px; text-decoration: none; transition: all 0.2s ease; text-align: center;">
+          <div style="width: 48px; height: 48px; background: #FEF9E7; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" fill="none" stroke="#B98900" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M11 7v4l3 2"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 2px;">Updates</div>
+            <div style="font-size: 13px; color: #6D6D72;">Latest news</div>
+          </div>
+        </a>
+        <a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px 20px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 12px; text-decoration: none; transition: all 0.2s ease; text-align: center;">
+          <div style="width: 48px; height: 48px; background: #FEF3F2; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" fill="none" stroke="#D72C0D" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M11 8v3M11 14h.01"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 2px;">Support</div>
+            <div style="font-size: 13px; color: #6D6D72;">Help center</div>
+          </div>
+        </a>
+        <a href="#" style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px 20px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 12px; text-decoration: none; transition: all 0.2s ease; text-align: center;">
+          <div style="width: 48px; height: 48px; background: #E9F0FE; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" fill="none" stroke="#2C6ECB" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 0 1-12 0 6 6 0 0 1 12 0z"/><path d="M10 2v3M2 10h3M18 10h-3M4.93 4.93l2.12 2.12M15.07 4.93l-2.12 2.12"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 2px;">Community</div>
+            <div style="font-size: 13px; color: #6D6D72;">Join us</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 018: 500 Server Error Page -->
+<div class="section-label">404-018 / 500 Server Error Page</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #FFFFFF; padding: 40px 20px;">
+    <div style="text-align: center; max-width: 500px;">
+      <!-- CSS Art: Broken Server -->
+      <div style="position: relative; width: 100px; height: 120px; margin: 0 auto 28px;">
+        <!-- Server box -->
+        <div style="width: 80px; height: 96px; background: #F6F6F7; border: 2px solid #E3E3E8; border-radius: 10px; margin: 0 auto; position: relative;">
+          <div style="display: flex; gap: 6px; padding: 16px 12px;">
+            <div style="width: 8px; height: 8px; background: #D72C0D; border-radius: 50%; animation: pulse 1.5s ease-in-out infinite;"></div>
+            <div style="width: 8px; height: 8px; background: #D72C0D; border-radius: 50%; animation: pulse 1.5s ease-in-out infinite 0.3s;"></div>
+            <div style="width: 8px; height: 8px; background: #AEAEB2; border-radius: 50%;"></div>
+          </div>
+          <div style="margin: 0 12px; height: 2px; background: #E3E3E8; border-radius: 1px;"></div>
+          <div style="display: flex; gap: 6px; padding: 12px 12px;">
+            <div style="flex: 1; height: 6px; background: #E3E3E8; border-radius: 3px;"></div>
+          </div>
+          <div style="margin: 0 12px; height: 2px; background: #E3E3E8; border-radius: 1px;"></div>
+          <div style="display: flex; gap: 6px; padding: 12px 12px;">
+            <div style="width: 8px; height: 8px; background: #AEAEB2; border-radius: 50%;"></div>
+            <div style="flex: 1; height: 6px; background: #E3E3E8; border-radius: 3px; margin-top: 1px;"></div>
+          </div>
+        </div>
+        <!-- Lightning bolt -->
+        <div style="position: absolute; top: -8px; right: 2px; font-size: 24px; animation: pulse 1s ease-in-out infinite;">
+          <svg width="20" height="24" fill="#B98900" stroke="#B98900" stroke-width="1"><polygon points="13 1 5 14 11 14 9 23 17 10 11 10 13 1"/></svg>
+        </div>
+      </div>
+      <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: #FEF3F2; border-radius: 6px; margin-bottom: 16px;">
+        <div style="width: 6px; height: 6px; background: #D72C0D; border-radius: 50; animation: pulse 1s ease-in-out infinite;"></div>
+        <span style="font-size: 13px; font-weight: 600; color: #D72C0D;">Error 500</span>
+      </div>
+      <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Internal Server Error</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 12px;">Something went wrong on our end. Our team has been notified and is working on a fix.</p>
+      <p style="font-size: 14px; color: #AEAEB2; margin-bottom: 28px;">Reference ID: <span style="font-family: monospace; background: #F6F6F7; padding: 2px 8px; border-radius: 4px;">ERR-2026-0213-X7K9</span></p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <a href="#" style="padding: 12px 24px; background: #1A1A1A; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">Try again</a>
+        <a href="#" style="padding: 12px 24px; background: #FFFFFF; color: #1D1D1F; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; border: 1px solid #E3E3E8; transition: all 0.2s ease;">Check status</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 019: 503 Maintenance Page -->
+<div class="section-label">404-019 / 503 Maintenance Page</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #F6F6F7 0%, #FFFFFF 50%, #F6F6F7 100%); padding: 40px 20px;">
+    <div style="text-align: center; max-width: 520px;">
+      <!-- CSS Art: Wrench/Gear -->
+      <div style="position: relative; width: 100px; height: 100px; margin: 0 auto 28px;">
+        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+          <div style="width: 60px; height: 60px; border: 3px solid #E3E3E8; border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: spin 8s linear infinite;">
+            <div style="width: 20px; height: 20px; background: #E3E3E8; border-radius: 50%;"></div>
+            <!-- Gear teeth -->
+            <div style="position: absolute; top: -4px; left: 50%; transform: translateX(-50%); width: 12px; height: 8px; background: #E3E3E8; border-radius: 2px;"></div>
+            <div style="position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 12px; height: 8px; background: #E3E3E8; border-radius: 2px;"></div>
+            <div style="position: absolute; left: -4px; top: 50%; transform: translateY(-50%); width: 8px; height: 12px; background: #E3E3E8; border-radius: 2px;"></div>
+            <div style="position: absolute; right: -4px; top: 50%; transform: translateY(-50%); width: 8px; height: 12px; background: #E3E3E8; border-radius: 2px;"></div>
+          </div>
+        </div>
+        <div style="position: absolute; bottom: 5px; right: 5px;">
+          <svg width="28" height="28" fill="none" stroke="#2C6ECB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94L6.73 20.2a2.13 2.13 0 0 1-3-3l6.73-6.73a6 6 0 0 1 7.94-7.94L14.7 6.3z"/></svg>
+        </div>
+      </div>
+      <div style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #FEF9E7; border: 1px solid #F5E6B0; border-radius: 8px; margin-bottom: 16px;">
+        <svg width="14" height="14" fill="none" stroke="#B98900" stroke-width="2" stroke-linecap="round"><path d="M7 1v6M7 11h.01"/></svg>
+        <span style="font-size: 13px; font-weight: 600; color: #B98900;">Scheduled Maintenance</span>
+      </div>
+      <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">We'll be right back</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 28px;">We're performing scheduled maintenance to improve your experience. This should only take a few minutes.</p>
+      <!-- Status Timeline -->
+      <div style="max-width: 360px; margin: 0 auto 28px; text-align: left;">
+        <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 20px; height: 20px; background: #1A8245; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <svg width="10" height="10" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"><path d="M2 5l2.5 2.5L8 3"/></svg>
+            </div>
+            <div style="width: 2px; flex: 1; background: #1A8245; margin: 4px 0;"></div>
+          </div>
+          <div style="padding-bottom: 16px;">
+            <div style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Database migration</div>
+            <div style="font-size: 13px; color: #1A8245;">Completed</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; margin-bottom: 16px;">
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 20px; height: 20px; background: #2C6ECB; border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: pulse 1.5s ease-in-out infinite;">
+              <div style="width: 6px; height: 6px; background: #FFFFFF; border-radius: 50%;"></div>
+            </div>
+            <div style="width: 2px; flex: 1; background: #E3E3E8; margin: 4px 0;"></div>
+          </div>
+          <div style="padding-bottom: 16px;">
+            <div style="font-size: 14px; font-weight: 600; color: #1D1D1F;">System update</div>
+            <div style="font-size: 13px; color: #2C6ECB;">In progress...</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 20px; height: 20px; background: #F6F6F7; border: 2px solid #E3E3E8; border-radius: 50%;"></div>
+          </div>
+          <div>
+            <div style="font-size: 14px; font-weight: 600; color: #AEAEB2;">Service restart</div>
+            <div style="font-size: 13px; color: #AEAEB2;">Pending</div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <a href="#" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #2C6ECB; color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 8a7 7 0 0 1 13.2-3.2M15 8A7 7 0 0 1 1.8 11.2"/><path d="M14 1v4h-4M2 15v-4h4"/></svg>
+          Refresh page
+        </a>
+        <a href="#" style="padding: 12px 24px; background: #FFFFFF; color: #1D1D1F; font-size: 15px; font-weight: 600; border-radius: 10px; text-decoration: none; border: 1px solid #E3E3E8; transition: all 0.2s ease;">Status page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section 020: Coming Soon / Under Construction Page -->
+<div class="section-label">404-020 / Coming Soon / Under Construction</div>
+<div class="section-container">
+  <div style="min-height: 60vh; display: flex; align-items: center; justify-content: center; background: #1A1A1A; padding: 40px 20px; position: relative; overflow: hidden;">
+    <!-- Background grid -->
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 60px 60px;"></div>
+    <!-- Accent glow -->
+    <div style="position: absolute; top: 0; left: 30%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%); pointer-events: none;"></div>
+    <div style="position: absolute; bottom: 0; right: 20%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(44,110,203,0.1) 0%, transparent 70%); pointer-events: none;"></div>
+    <div style="text-align: center; max-width: 560px; position: relative; z-index: 1;">
+      <!-- Logo placeholder -->
+      <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 32px;">
+        <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #2C6ECB, #7C3AED); border-radius: 10px;"></div>
+        <span style="font-size: 20px; font-weight: 700; color: #FFFFFF;">Acme</span>
+      </div>
+      <div style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3); border-radius: 8px; margin-bottom: 20px;">
+        <div style="width: 6px; height: 6px; background: #7C3AED; border-radius: 50%; animation: pulse 2s ease-in-out infinite;"></div>
+        <span style="font-size: 13px; font-weight: 600; color: #A78BFA;">Coming Soon</span>
+      </div>
+      <h1 style="font-size: 40px; font-weight: 700; color: #FFFFFF; margin-bottom: 16px; line-height: 1.2;">Something amazing is on the way</h1>
+      <p style="font-size: 17px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 36px;">We're putting the finishing touches on something special. Be the first to know when we launch.</p>
+      <!-- Email signup -->
+      <div style="display: flex; gap: 10px; max-width: 420px; margin: 0 auto 32px;">
+        <input type="email" placeholder="Enter your email" style="flex: 1; padding: 14px 16px; font-size: 15px; font-family: inherit; border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; background: rgba(255,255,255,0.06); color: #FFFFFF; outline: none;">
+        <button style="padding: 14px 24px; background: linear-gradient(135deg, #2C6ECB, #7C3AED); color: #FFFFFF; font-size: 15px; font-weight: 600; border-radius: 10px; border: none; cursor: pointer; font-family: inherit; transition: all 0.2s ease; white-space: nowrap;">Notify me</button>
+      </div>
+      <!-- Countdown blocks -->
+      <div style="display: flex; gap: 16px; justify-content: center; margin-bottom: 36px;">
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 6px;">
+            <span style="font-size: 28px; font-weight: 700; color: #FFFFFF;">14</span>
+          </div>
+          <span style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px;">Days</span>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 6px;">
+            <span style="font-size: 28px; font-weight: 700; color: #FFFFFF;">08</span>
+          </div>
+          <span style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px;">Hours</span>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 6px;">
+            <span style="font-size: 28px; font-weight: 700; color: #FFFFFF;">42</span>
+          </div>
+          <span style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px;">Minutes</span>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 6px;">
+            <span style="font-size: 28px; font-weight: 700; color: #FFFFFF; animation: blink 1s step-end infinite;">17</span>
+          </div>
+          <span style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px;">Seconds</span>
+        </div>
+      </div>
+      <!-- Social links -->
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.2s ease;">
+          <svg width="18" height="18" fill="rgba(255,255,255,0.5)"><path d="M18 2.014a7.4 7.4 0 0 1-2.12.58A3.7 3.7 0 0 0 17.5.314a7.4 7.4 0 0 1-2.35.9A3.68 3.68 0 0 0 9.34 5.76 10.44 10.44 0 0 1 1.25.89a3.68 3.68 0 0 0 1.14 4.92A3.66 3.66 0 0 1 .72 5.3v.05a3.68 3.68 0 0 0 2.95 3.6 3.69 3.69 0 0 1-1.66.06 3.68 3.68 0 0 0 3.44 2.56A7.38 7.38 0 0 1 0 13.14a10.41 10.41 0 0 0 5.64 1.65c6.76 0 10.46-5.6 10.46-10.46l-.01-.48A7.47 7.47 0 0 0 18 2.014z"/></svg>
+        </a>
+        <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.2s ease;">
+          <svg width="18" height="18" fill="rgba(255,255,255,0.5)"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5zM7.13 13.5H5.06V7.31h2.07v6.19zm-1.04-7.03c-.66 0-1.09-.47-1.09-1.06 0-.6.44-1.06 1.12-1.06.67 0 1.08.46 1.09 1.06 0 .59-.42 1.06-1.12 1.06zM14 13.5h-2.07V10.1c0-.85-.3-1.43-1.06-1.43-.58 0-.93.39-1.08.77-.06.13-.07.32-.07.51v3.55H7.65V7.31h2.07v.88c.28-.42.77-1.03 1.86-1.03 1.36 0 2.38.89 2.38 2.8v3.54z"/></svg>
+        </a>
+        <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.2s ease;">
+          <svg width="18" height="18" fill="rgba(255,255,255,0.5)"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9c0 3.31 2.15 6.12 5.13 7.12.37.07.51-.16.51-.36v-1.26c-2.09.45-2.53-1.01-2.53-1.01-.34-.87-.83-1.1-.83-1.1-.68-.46.05-.45.05-.45.75.05 1.15.77 1.15.77.67 1.14 1.75.81 2.18.62.07-.48.26-.81.47-.99-1.67-.19-3.42-.83-3.42-3.71 0-.82.29-1.49.77-2.01-.08-.19-.33-.95.07-1.99 0 0 .63-.2 2.06.77a7.18 7.18 0 0 1 3.75 0c1.43-.97 2.06-.77 2.06-.77.41 1.04.15 1.8.07 1.99.48.52.77 1.19.77 2.01 0 2.89-1.76 3.52-3.43 3.71.27.23.51.69.51 1.4v2.07c0 .2.14.43.52.36A7.51 7.51 0 0 0 16.5 9c0-4.14-3.36-7.5-7.5-7.5z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Sections 001-025 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  .section-label { text-align: center; padding: 20px; font-size: 11px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; background: #E8E8ED; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- NAV-001: Simple Centered — Logo left, links center, CTA right -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-001: Simple Centered</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">S</div>
+    <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">StoreName</span>
+  </div>
+  <div style="display: flex; gap: 32px;">
+    <a style="font-size: 14px; font-weight: 500; color: #1D1D1F; text-decoration: none; cursor: pointer;">Products</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Features</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Pricing</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">About</a>
+  </div>
+  <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFF; background: #1A1A1A; border: 1px solid #1A1A1A; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Get Started</button>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-002: Minimal — Logo left, single CTA right -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-002: Minimal</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #2C6ECB; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">A</div>
+    <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Acme</span>
+  </div>
+  <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFF; background: #1A1A1A; border: 1px solid #1A1A1A; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Sign In</button>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-003: With Search Bar — Logo, search center, avatar right -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-003: With Search Bar</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; gap: 16px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">D</div>
+    <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Dashboard</span>
+  </div>
+  <div style="flex: 1; max-width: 480px; margin: 0 auto;">
+    <div style="display: flex; align-items: center; border: 1px solid #E3E3E8; border-radius: 8px; background: #F5F5F7; height: 36px; padding: 0 12px; gap: 8px;">
+      <span style="color: #AEAEB2; font-size: 14px;">⌕</span>
+      <span style="color: #AEAEB2; font-size: 14px;">Search anything...</span>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
+    <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: #6D6D72; font-size: 16px; cursor: pointer;">🔔</div>
+    <div style="width: 32px; height: 32px; border-radius: 50%; background: #E8E8ED; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #1D1D1F; cursor: pointer;">T</div>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-004: Split Navigation — Logo left, links center-left, actions right -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-004: Split Navigation</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 32px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A8245; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">E</div>
+      <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Evergreen</span>
+    </div>
+    <div style="display: flex; gap: 24px;">
+      <a style="font-size: 14px; font-weight: 500; color: #1D1D1F; text-decoration: none; cursor: pointer;">Home</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Solutions</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Resources</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Docs</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #1D1D1F; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Log In</button>
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFF; background: #1A1A1A; border: 1px solid #1A1A1A; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Sign Up Free</button>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-005: With Announcement Bar — Banner on top + standard nav -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-005: With Announcement Bar</div>
+<div style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="background: #1A1A1A; color: #FFFFFF; text-align: center; padding: 8px 24px; font-size: 13px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px;">
+    <span>🎉 New: Version 2.0 is here with 50+ features.</span>
+    <a style="color: #FFFFFF; text-decoration: underline; font-weight: 600; cursor: pointer;">Learn more →</a>
+  </div>
+  <nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: #7C3AED; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">P</div>
+      <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Prism</span>
+    </div>
+    <div style="display: flex; gap: 32px;">
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Product</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Pricing</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Blog</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Support</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #1D1D1F; background: transparent; border: 1px solid transparent; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Sign In</button>
+      <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFF; background: #7C3AED; border: 1px solid #7C3AED; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Try Free</button>
+    </div>
+  </nav>
+</div>
+
+<!-- ============================================================ -->
+<!-- NAV-006: Dark Navigation — Dark bg, light text -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-006: Dark Navigation</div>
+<nav style="height: 56px; background: #1A1A1A; border-bottom: 1px solid #2C2C2E; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #1A1A1A; font-size: 13px; font-weight: 700;">N</div>
+    <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">NightOwl</span>
+  </div>
+  <div style="display: flex; gap: 32px;">
+    <a style="font-size: 14px; font-weight: 500; color: #FFFFFF; text-decoration: none; cursor: pointer;">Features</a>
+    <a style="font-size: 14px; font-weight: 400; color: #AEAEB2; text-decoration: none; cursor: pointer;">Pricing</a>
+    <a style="font-size: 14px; font-weight: 400; color: #AEAEB2; text-decoration: none; cursor: pointer;">Docs</a>
+    <a style="font-size: 14px; font-weight: 400; color: #AEAEB2; text-decoration: none; cursor: pointer;">Blog</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFFFFF; background: transparent; border: 1px solid #48484A; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Log In</button>
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #1A1A1A; background: #FFFFFF; border: 1px solid #FFFFFF; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Get Started</button>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-007: With Badge/Status — Nav item with notification dot -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-007: With Badge/Status</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #D72C0D; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">F</div>
+    <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Firebolt</span>
+  </div>
+  <div style="display: flex; gap: 32px; align-items: center;">
+    <a style="font-size: 14px; font-weight: 500; color: #1D1D1F; text-decoration: none; cursor: pointer;">Dashboard</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; display: flex; align-items: center; gap: 6px;">Orders <span style="display: inline-flex; align-items: center; padding: 1px 7px; font-size: 11px; font-weight: 500; background: #D72C0D; color: #FFF; border-radius: 9999px;">3</span></a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Products</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Analytics</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="position: relative; cursor: pointer;">
+      <span style="font-size: 18px; color: #6D6D72;">🔔</span>
+      <span style="position: absolute; top: -2px; right: -2px; width: 8px; height: 8px; background: #D72C0D; border-radius: 50%; border: 2px solid #FFFFFF;"></span>
+    </div>
+    <div style="width: 32px; height: 32px; border-radius: 50%; background: #E8E8ED; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #1D1D1F; cursor: pointer;">JD</div>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-008: E-Commerce — Logo, categories, search, cart -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-008: E-Commerce</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 32px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F; letter-spacing: -0.3px;">MODERN</span>
+    <div style="display: flex; gap: 24px;">
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Women</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Men</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Accessories</a>
+      <a style="font-size: 14px; font-weight: 500; color: #D72C0D; text-decoration: none; cursor: pointer;">Sale</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <span style="font-size: 16px; color: #6D6D72; cursor: pointer;">⌕</span>
+    <span style="font-size: 16px; color: #6D6D72; cursor: pointer;">♡</span>
+    <div style="display: flex; align-items: center; gap: 4px; cursor: pointer;">
+      <span style="font-size: 16px; color: #6D6D72;">🛒</span>
+      <span style="display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; font-size: 11px; font-weight: 600; background: #1A1A1A; color: #FFF; border-radius: 50%;">2</span>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-009: Two-Row Navigation — Top utility bar + main nav -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-009: Two-Row Navigation</div>
+<div style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="background: #F5F5F7; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 4px 24px; height: 32px;">
+    <div style="display: flex; gap: 16px;">
+      <a style="font-size: 11px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Help</a>
+      <a style="font-size: 11px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Contact</a>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a style="font-size: 11px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">🌐 EN</a>
+      <a style="font-size: 11px; font-weight: 500; color: #2C6ECB; text-decoration: none; cursor: pointer;">My Account</a>
+    </div>
+  </div>
+  <nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: #2C6ECB; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">G</div>
+      <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">GlobalTech</span>
+    </div>
+    <div style="display: flex; gap: 32px;">
+      <a style="font-size: 14px; font-weight: 500; color: #1D1D1F; text-decoration: none; cursor: pointer;">Solutions</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Industries</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Partners</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Resources</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">About</a>
+    </div>
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFF; background: #2C6ECB; border: 1px solid #2C6ECB; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Request Demo</button>
+  </nav>
+</div>
+
+<!-- ============================================================ -->
+<!-- NAV-010: Tab-Style Navigation — Underline active tab style -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-010: Tab-Style Navigation</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; gap: 32px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 10px; margin-right: 16px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #E07800; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">T</div>
+    <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">TabFlow</span>
+  </div>
+  <a style="font-size: 14px; font-weight: 600; color: #1D1D1F; text-decoration: none; cursor: pointer; height: 56px; display: flex; align-items: center; border-bottom: 2px solid #1A1A1A; margin-bottom: -1px;">Overview</a>
+  <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; height: 56px; display: flex; align-items: center; border-bottom: 2px solid transparent;">Analytics</a>
+  <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; height: 56px; display: flex; align-items: center; border-bottom: 2px solid transparent;">Reports</a>
+  <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; height: 56px; display: flex; align-items: center; border-bottom: 2px solid transparent;">Settings</a>
+  <div style="flex: 1;"></div>
+  <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFF; background: #1A1A1A; border: 1px solid #1A1A1A; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Export</button>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-011: With Breadcrumb Integrated — Breadcrumb below main nav -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-011: With Breadcrumb Integrated</div>
+<div style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">C</div>
+      <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Commerce</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #1D1D1F; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Settings</button>
+      <div style="width: 32px; height: 32px; border-radius: 50%; background: #E8E8ED; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #1D1D1F; cursor: pointer;">A</div>
+    </div>
+  </nav>
+  <div style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8; padding: 8px 24px; display: flex; align-items: center; gap: 6px;">
+    <a style="font-size: 13px; color: #2C6ECB; text-decoration: none; cursor: pointer;">Home</a>
+    <span style="font-size: 13px; color: #AEAEB2;">/</span>
+    <a style="font-size: 13px; color: #2C6ECB; text-decoration: none; cursor: pointer;">Products</a>
+    <span style="font-size: 13px; color: #AEAEB2;">/</span>
+    <span style="font-size: 13px; color: #1D1D1F; font-weight: 500;">Short Sleeve T-Shirt</span>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- NAV-012: SaaS Dashboard — Icon nav items + user menu -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-012: SaaS Dashboard</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 24px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">M</div>
+      <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Metric</span>
+    </div>
+    <div style="width: 1px; height: 24px; background: #E3E3E8;"></div>
+    <div style="display: flex; gap: 4px;">
+      <a style="font-size: 13px; font-weight: 500; color: #1D1D1F; text-decoration: none; cursor: pointer; padding: 6px 12px; background: #F5F5F7; border-radius: 6px; border: 1px solid #E3E3E8;">📊 Analytics</a>
+      <a style="font-size: 13px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; padding: 6px 12px; border-radius: 6px; border: 1px solid transparent;">👥 Contacts</a>
+      <a style="font-size: 13px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; padding: 6px 12px; border-radius: 6px; border: 1px solid transparent;">💬 Messages</a>
+      <a style="font-size: 13px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; padding: 6px 12px; border-radius: 6px; border: 1px solid transparent;">⚙️ Settings</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <span style="font-size: 13px; font-weight: 500; color: #1D1D1F;">Jane Doe</span>
+    <div style="width: 32px; height: 32px; border-radius: 50%; background: #2C6ECB; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #FFF; cursor: pointer;">JD</div>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-013: Pill-Style Links — Rounded pill active state -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-013: Pill-Style Links</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <span style="font-size: 16px; font-weight: 700; color: #1D1D1F; letter-spacing: -0.5px;">flux.</span>
+  <div style="display: flex; gap: 4px; background: #F5F5F7; padding: 3px; border-radius: 9999px; border: 1px solid #E3E3E8;">
+    <a style="font-size: 13px; font-weight: 500; color: #1D1D1F; text-decoration: none; cursor: pointer; padding: 5px 16px; background: #FFFFFF; border-radius: 9999px; border: 1px solid #E3E3E8; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">Home</a>
+    <a style="font-size: 13px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; padding: 5px 16px; border-radius: 9999px; border: 1px solid transparent;">About</a>
+    <a style="font-size: 13px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; padding: 5px 16px; border-radius: 9999px; border: 1px solid transparent;">Work</a>
+    <a style="font-size: 13px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; padding: 5px 16px; border-radius: 9999px; border: 1px solid transparent;">Contact</a>
+  </div>
+  <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFF; background: #1A1A1A; border: 1px solid #1A1A1A; border-radius: 9999px; height: 36px; cursor: pointer; font-family: inherit;">Hire Me</button>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-014: Transparent/Overlay — For use on hero images -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-014: Transparent / Overlay</div>
+<div style="background: linear-gradient(135deg, #1A1A1A 0%, #48484A 100%); padding-bottom: 40px;">
+  <nav style="height: 56px; background: transparent; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700; backdrop-filter: blur(8px);">O</div>
+      <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">Overlay</span>
+    </div>
+    <div style="display: flex; gap: 32px;">
+      <a style="font-size: 14px; font-weight: 500; color: #FFFFFF; text-decoration: none; cursor: pointer;">Home</a>
+      <a style="font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.7); text-decoration: none; cursor: pointer;">About</a>
+      <a style="font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.7); text-decoration: none; cursor: pointer;">Services</a>
+      <a style="font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.7); text-decoration: none; cursor: pointer;">Contact</a>
+    </div>
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #1A1A1A; background: #FFFFFF; border: 1px solid #FFFFFF; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Get Started</button>
+  </nav>
+</div>
+
+<!-- ============================================================ -->
+<!-- NAV-015: With Segmented Control — Toggle view in nav -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-015: With Segmented Control</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">V</div>
+    <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">ViewPort</span>
+  </div>
+  <div style="display: inline-flex; background: #F5F5F7; border-radius: 8px; padding: 2px; border: 1px solid #E3E3E8;">
+    <button style="padding: 5px 16px; font-size: 13px; font-weight: 500; color: #1D1D1F; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 6px; cursor: pointer; font-family: inherit; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">Grid</button>
+    <button style="padding: 5px 16px; font-size: 13px; font-weight: 400; color: #6D6D72; background: transparent; border: 1px solid transparent; border-radius: 6px; cursor: pointer; font-family: inherit;">List</button>
+    <button style="padding: 5px 16px; font-size: 13px; font-weight: 400; color: #6D6D72; background: transparent; border: 1px solid transparent; border-radius: 6px; cursor: pointer; font-family: inherit;">Board</button>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #1D1D1F; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Filter</button>
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFF; background: #1A1A1A; border: 1px solid #1A1A1A; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">+ New</button>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-016: With Dropdown Indicator — Chevron on nav items -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-016: With Dropdown Indicators</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A8245; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">W</div>
+    <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Willow</span>
+  </div>
+  <div style="display: flex; gap: 28px; align-items: center;">
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; display: flex; align-items: center; gap: 4px;">Products <span style="font-size: 10px; color: #AEAEB2;">▼</span></a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; display: flex; align-items: center; gap: 4px;">Solutions <span style="font-size: 10px; color: #AEAEB2;">▼</span></a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Pricing</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; display: flex; align-items: center; gap: 4px;">Resources <span style="font-size: 10px; color: #AEAEB2;">▼</span></a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #1D1D1F; background: transparent; border: 1px solid transparent; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Contact Sales</button>
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFF; background: #1A8245; border: 1px solid #1A8245; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Start Free Trial</button>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-017: Documentation Style — With version selector -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-017: Documentation Style</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">D</div>
+      <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Docs</span>
+    </div>
+    <span style="display: inline-flex; align-items: center; padding: 2px 10px; font-size: 11px; font-weight: 500; background: #E9F0FE; color: #2C6ECB; border-radius: 9999px;">v3.2</span>
+    <div style="width: 1px; height: 24px; background: #E3E3E8;"></div>
+    <div style="display: flex; gap: 20px;">
+      <a style="font-size: 14px; font-weight: 500; color: #1D1D1F; text-decoration: none; cursor: pointer;">Guides</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">API Reference</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Changelog</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Examples</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; border: 1px solid #E3E3E8; border-radius: 8px; background: #F5F5F7; height: 32px; padding: 0 10px; gap: 6px; width: 200px;">
+      <span style="color: #AEAEB2; font-size: 13px;">⌕</span>
+      <span style="color: #AEAEB2; font-size: 13px;">Search docs...</span>
+      <span style="margin-left: auto; font-size: 11px; color: #AEAEB2; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 4px; padding: 1px 5px;">⌘K</span>
+    </div>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none; cursor: pointer;">GitHub</a>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-018: With User Dropdown — Avatar + name + chevron -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-018: With User Dropdown</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #B98900; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">H</div>
+    <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Hive</span>
+  </div>
+  <div style="display: flex; gap: 32px;">
+    <a style="font-size: 14px; font-weight: 500; color: #1D1D1F; text-decoration: none; cursor: pointer;">Projects</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Tasks</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Calendar</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Reports</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 4px 8px; border-radius: 8px; border: 1px solid #E3E3E8;">
+    <div style="width: 28px; height: 28px; border-radius: 50%; background: #B98900; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #FFF;">SM</div>
+    <div>
+      <div style="font-size: 13px; font-weight: 500; color: #1D1D1F; line-height: 1.2;">Sarah Miller</div>
+      <div style="font-size: 11px; color: #6D6D72; line-height: 1.2;">Admin</div>
+    </div>
+    <span style="font-size: 10px; color: #AEAEB2; margin-left: 4px;">▼</span>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-019: Workspace Switcher — Team/workspace dropdown on left -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-019: Workspace Switcher</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <div style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 4px 10px; border-radius: 8px; border: 1px solid #E3E3E8; background: #F5F5F7;">
+      <div style="width: 22px; height: 22px; border-radius: 6px; background: #7C3AED; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #FFF;">AC</div>
+      <span style="font-size: 13px; font-weight: 500; color: #1D1D1F;">Acme Corp</span>
+      <span style="font-size: 10px; color: #AEAEB2;">▼</span>
+    </div>
+    <div style="width: 1px; height: 24px; background: #E3E3E8;"></div>
+    <div style="display: flex; gap: 20px;">
+      <a style="font-size: 14px; font-weight: 500; color: #1D1D1F; text-decoration: none; cursor: pointer;">Dashboard</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Projects</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Team</a>
+      <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Billing</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <button style="padding: 4px 12px; font-size: 13px; font-weight: 500; color: #FFF; background: #1A1A1A; border: 1px solid #1A1A1A; border-radius: 8px; height: 30px; cursor: pointer; font-family: inherit;">+ Invite</button>
+    <div style="width: 32px; height: 32px; border-radius: 50%; background: #E8E8ED; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #1D1D1F; cursor: pointer;">T</div>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-020: Mobile Hamburger Style — Logo left, hamburger right -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-020: Mobile Hamburger Style (375px preview)</div>
+<div style="max-width: 375px; margin: 0 auto; border: 1px solid #E3E3E8;">
+  <nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">M</div>
+      <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Mobile</span>
+    </div>
+    <button style="width: 36px; height: 36px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; background: transparent; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer;">
+      <span style="display: block; width: 18px; height: 2px; background: #1D1D1F; border-radius: 1px;"></span>
+      <span style="display: block; width: 18px; height: 2px; background: #1D1D1F; border-radius: 1px;"></span>
+      <span style="display: block; width: 18px; height: 2px; background: #1D1D1F; border-radius: 1px;"></span>
+    </button>
+  </nav>
+</div>
+
+<!-- ============================================================ -->
+<!-- NAV-021: Bottom Tab Bar — Mobile bottom navigation -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-021: Bottom Tab Bar (375px preview)</div>
+<div style="max-width: 375px; margin: 0 auto; border: 1px solid #E3E3E8; position: relative; height: 80px;">
+  <nav style="position: absolute; bottom: 0; left: 0; right: 0; height: 64px; background: #FFFFFF; border-top: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-around; padding: 0 8px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <a style="display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; cursor: pointer; padding: 4px 12px;">
+      <span style="font-size: 20px;">🏠</span>
+      <span style="font-size: 10px; font-weight: 500; color: #1D1D1F;">Home</span>
+    </a>
+    <a style="display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; cursor: pointer; padding: 4px 12px;">
+      <span style="font-size: 20px;">🔍</span>
+      <span style="font-size: 10px; font-weight: 400; color: #AEAEB2;">Search</span>
+    </a>
+    <a style="display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; cursor: pointer; padding: 4px 12px;">
+      <span style="font-size: 20px;">➕</span>
+      <span style="font-size: 10px; font-weight: 400; color: #AEAEB2;">Create</span>
+    </a>
+    <a style="display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; cursor: pointer; padding: 4px 12px; position: relative;">
+      <span style="font-size: 20px;">💬</span>
+      <span style="font-size: 10px; font-weight: 400; color: #AEAEB2;">Chat</span>
+      <span style="position: absolute; top: 2px; right: 8px; width: 8px; height: 8px; background: #D72C0D; border-radius: 50%; border: 2px solid #FFFFFF;"></span>
+    </a>
+    <a style="display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; cursor: pointer; padding: 4px 12px;">
+      <span style="font-size: 20px;">👤</span>
+      <span style="font-size: 10px; font-weight: 400; color: #AEAEB2;">Profile</span>
+    </a>
+  </nav>
+</div>
+
+<!-- ============================================================ -->
+<!-- NAV-022: With Progress/Step Indicator — Onboarding/checkout flow -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-022: With Step Indicator</div>
+<div style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">S</div>
+      <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Setup</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <div style="width: 24px; height: 24px; border-radius: 50%; background: #1A8245; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #FFF;">✓</div>
+        <span style="font-size: 13px; font-weight: 500; color: #1A8245;">Account</span>
+      </div>
+      <div style="width: 32px; height: 2px; background: #1A8245; border-radius: 1px;"></div>
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <div style="width: 24px; height: 24px; border-radius: 50%; background: #2C6ECB; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #FFF;">2</div>
+        <span style="font-size: 13px; font-weight: 500; color: #2C6ECB;">Profile</span>
+      </div>
+      <div style="width: 32px; height: 2px; background: #E3E3E8; border-radius: 1px;"></div>
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <div style="width: 24px; height: 24px; border-radius: 50%; background: #E8E8ED; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #6D6D72;">3</div>
+        <span style="font-size: 13px; font-weight: 400; color: #6D6D72;">Preferences</span>
+      </div>
+      <div style="width: 32px; height: 2px; background: #E3E3E8; border-radius: 1px;"></div>
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <div style="width: 24px; height: 24px; border-radius: 50%; background: #E8E8ED; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #6D6D72;">4</div>
+        <span style="font-size: 13px; font-weight: 400; color: #6D6D72;">Complete</span>
+      </div>
+    </div>
+    <button style="padding: 6px 16px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: 1px solid transparent; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Save & Exit</button>
+  </nav>
+</div>
+
+<!-- ============================================================ -->
+<!-- NAV-023: With Language Selector — International site nav -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-023: With Language Selector</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #2C6ECB; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 13px; font-weight: 700;">I</div>
+    <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Intl</span>
+  </div>
+  <div style="display: flex; gap: 32px;">
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Products</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Solutions</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Enterprise</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Support</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 4px; cursor: pointer; padding: 4px 10px; border-radius: 6px; border: 1px solid #E3E3E8; font-size: 13px; color: #6D6D72;">
+      <span>🌐</span>
+      <span>EN</span>
+      <span style="font-size: 10px; color: #AEAEB2;">▼</span>
+    </div>
+    <button style="padding: 6px 16px; font-size: 14px; font-weight: 500; color: #FFF; background: #2C6ECB; border: 1px solid #2C6ECB; border-radius: 8px; height: 36px; cursor: pointer; font-family: inherit;">Contact Us</button>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-024: Centered Logo — Links on both sides of centered logo -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-024: Centered Logo</div>
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; padding: 0 24px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif; position: relative;">
+  <div style="display: flex; gap: 32px; align-items: center;">
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Shop</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Collections</a>
+    <div style="display: flex; align-items: center; gap: 8px; margin: 0 24px;">
+      <span style="font-size: 20px; font-weight: 700; color: #1D1D1F; letter-spacing: -0.5px;">LUXE</span>
+    </div>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">Journal</a>
+    <a style="font-size: 14px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer;">About</a>
+  </div>
+  <div style="position: absolute; right: 24px; display: flex; align-items: center; gap: 16px;">
+    <span style="font-size: 16px; color: #6D6D72; cursor: pointer;">⌕</span>
+    <span style="font-size: 16px; color: #6D6D72; cursor: pointer;">♡</span>
+    <span style="font-size: 16px; color: #6D6D72; cursor: pointer;">🛒</span>
+  </div>
+</nav>
+
+<!-- ============================================================ -->
+<!-- NAV-025: Compact Admin — Dense layout with icon buttons -->
+<!-- ============================================================ -->
+<div class="section-label">NAV-025: Compact Admin</div>
+<nav style="height: 48px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 6px;">
+      <div style="width: 22px; height: 22px; border-radius: 6px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 10px; font-weight: 700;">A</div>
+      <span style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Admin</span>
+    </div>
+    <div style="width: 1px; height: 20px; background: #E3E3E8;"></div>
+    <div style="display: flex; gap: 2px;">
+      <a style="font-size: 12px; font-weight: 500; color: #1D1D1F; text-decoration: none; cursor: pointer; padding: 4px 10px; background: #F5F5F7; border-radius: 6px; border: 1px solid #E3E3E8;">Home</a>
+      <a style="font-size: 12px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; padding: 4px 10px; border-radius: 6px;">Users</a>
+      <a style="font-size: 12px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; padding: 4px 10px; border-radius: 6px;">Content</a>
+      <a style="font-size: 12px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; padding: 4px 10px; border-radius: 6px;">Media</a>
+      <a style="font-size: 12px; font-weight: 400; color: #6D6D72; text-decoration: none; cursor: pointer; padding: 4px 10px; border-radius: 6px;">Settings</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <button style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; cursor: pointer; font-size: 14px; color: #6D6D72;">⌕</button>
+    <button style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; cursor: pointer; font-size: 14px; color: #6D6D72;">🔔</button>
+    <button style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; cursor: pointer; font-size: 14px; color: #6D6D72;">⚙</button>
+    <div style="width: 26px; height: 26px; border-radius: 50%; background: #E8E8ED; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: #1D1D1F; cursor: pointer; margin-left: 4px;">T</div>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,1794 @@
+import React, { useState, useEffect, useRef } from 'react';
+
+// ============================================================
+// DESIGN TOKENS — Shopify-admin aesthetic, Apple HIG structure
+// ============================================================
+const tokens = {
+  color: {
+    black: '#1A1A1A',
+    text: '#1D1D1F',
+    textSecondary: '#6D6D72',
+    textTertiary: '#AEAEB2',
+    bg: '#F6F6F7',
+    surface: '#FFFFFF',
+    border: '#E3E3E8',
+    borderHover: '#D1D1D6',
+    gray100: '#F5F5F7',
+    gray200: '#E8E8ED',
+    gray300: '#D1D1D6',
+    gray400: '#AEAEB2',
+    gray500: '#8E8E93',
+    gray600: '#6D6D72',
+    gray700: '#48484A',
+    gray800: '#2C2C2E',
+    gray900: '#1A1A1A',
+    blue: '#2C6ECB',
+    blueLight: '#E9F0FE',
+    green: '#1A8245',
+    greenLight: '#E3F5E1',
+    greenSurface: '#E3F5E1',
+    red: '#D72C0D',
+    redLight: '#FFF4F4',
+    redSurface: '#FFF4F4',
+    yellow: '#B98900',
+    yellowLight: '#FFFBE6',
+    yellowSurface: '#FFFBE6',
+    orange: '#E07800',
+    orangeLight: '#FFF5E8',
+    purple: '#7C3AED',
+    purpleLight: '#F3EEFF',
+  },
+  radius: {
+    sm: '6px',
+    md: '8px',
+    lg: '10px',
+    xl: '12px',
+    full: '9999px',
+  },
+  font: {
+    family: "'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    mono: "'SF Mono', 'Menlo', 'Consolas', monospace",
+    size: {
+      xs: '11px',
+      sm: '13px',
+      base: '14px',
+      md: '16px',
+      lg: '20px',
+      xl: '24px',
+      xxl: '34px',
+    },
+    weight: {
+      regular: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+    },
+  },
+  spacing: {
+    xs: '4px',
+    sm: '8px',
+    md: '12px',
+    lg: '16px',
+    xl: '20px',
+    xxl: '24px',
+    xxxl: '32px',
+  },
+  shadow: {
+    card: '0 1px 0 rgba(0,0,0,0.04)',
+    dropdown: '0 4px 12px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04)',
+    modal: '0 16px 48px rgba(0,0,0,0.16)',
+  },
+  transition: '0.2s ease',
+  nav: { height: '56px', sidebarWidth: '240px' },
+};
+
+// ============================================================
+// COMPONENTS
+// ============================================================
+
+// --- Button ---
+function Button({ children, variant = 'primary', size = 'md', disabled = false, fullWidth = false, icon, onClick, style: customStyle }) {
+  const [pressed, setPressed] = useState(false);
+  const [hovered, setHovered] = useState(false);
+
+  const variants = {
+    primary: {
+      bg: tokens.color.gray900,
+      bgHover: tokens.color.gray800,
+      color: '#FFFFFF',
+      border: `1px solid ${tokens.color.gray900}`,
+    },
+    secondary: {
+      bg: tokens.color.surface,
+      bgHover: tokens.color.gray100,
+      color: tokens.color.text,
+      border: `1px solid ${tokens.color.border}`,
+    },
+    danger: {
+      bg: tokens.color.red,
+      bgHover: '#C4260A',
+      color: '#FFFFFF',
+      border: `1px solid ${tokens.color.red}`,
+    },
+    ghost: {
+      bg: 'transparent',
+      bgHover: tokens.color.gray100,
+      color: tokens.color.text,
+      border: '1px solid transparent',
+    },
+    plain: {
+      bg: 'transparent',
+      bgHover: 'transparent',
+      color: tokens.color.blue,
+      border: '1px solid transparent',
+    },
+  };
+
+  const sizes = {
+    sm: { padding: '4px 12px', fontSize: tokens.font.size.sm, height: '30px' },
+    md: { padding: '6px 16px', fontSize: tokens.font.size.base, height: '36px' },
+    lg: { padding: '8px 24px', fontSize: tokens.font.size.md, height: '44px' },
+  };
+
+  const v = variants[variant] || variants.primary;
+  const s = sizes[size] || sizes.md;
+
+  const style = {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '6px',
+    padding: s.padding,
+    fontSize: s.fontSize,
+    fontWeight: tokens.font.weight.medium,
+    fontFamily: tokens.font.family,
+    height: s.height,
+    lineHeight: '1',
+    color: disabled ? tokens.color.textTertiary : v.color,
+    backgroundColor: disabled ? tokens.color.gray100 : (hovered ? v.bgHover : v.bg),
+    border: disabled ? `1px solid ${tokens.color.border}` : v.border,
+    borderRadius: tokens.radius.md,
+    cursor: disabled ? 'not-allowed' : 'pointer',
+    transition: `all ${tokens.transition}`,
+    transform: pressed && !disabled ? 'scale(0.98)' : 'scale(1)',
+    width: fullWidth ? '100%' : 'auto',
+    outline: 'none',
+    textDecoration: 'none',
+    whiteSpace: 'nowrap',
+    ...customStyle,
+  };
+
+  return (
+    <button
+      style={style}
+      disabled={disabled}
+      onClick={onClick}
+      onMouseDown={() => setPressed(true)}
+      onMouseUp={() => setPressed(false)}
+      onMouseLeave={() => { setPressed(false); setHovered(false); }}
+      onMouseEnter={() => setHovered(true)}
+    >
+      {icon && <span style={{ display: 'flex', alignItems: 'center' }}>{icon}</span>}
+      {children}
+    </button>
+  );
+}
+
+// --- Input ---
+function Input({ label, placeholder, value, onChange, type = 'text', helpText, error, disabled = false, prefix, suffix, style: customStyle }) {
+  const [focused, setFocused] = useState(false);
+
+  const wrapperStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '4px',
+    ...customStyle,
+  };
+
+  const labelStyle = {
+    fontSize: tokens.font.size.sm,
+    fontWeight: tokens.font.weight.medium,
+    color: tokens.color.text,
+    fontFamily: tokens.font.family,
+  };
+
+  const inputWrapperStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    border: `1px solid ${error ? tokens.color.red : (focused ? tokens.color.blue : tokens.color.border)}`,
+    borderRadius: tokens.radius.md,
+    backgroundColor: disabled ? tokens.color.gray100 : tokens.color.surface,
+    transition: `border-color ${tokens.transition}`,
+    overflow: 'hidden',
+    boxShadow: focused ? `0 0 0 2px ${error ? 'rgba(215,44,13,0.2)' : 'rgba(44,110,203,0.2)'}` : 'none',
+  };
+
+  const inputStyle = {
+    flex: 1,
+    padding: '8px 12px',
+    fontSize: tokens.font.size.base,
+    fontFamily: tokens.font.family,
+    color: tokens.color.text,
+    backgroundColor: 'transparent',
+    border: 'none',
+    outline: 'none',
+    height: '36px',
+    boxSizing: 'border-box',
+  };
+
+  const affixStyle = {
+    padding: '0 10px',
+    fontSize: tokens.font.size.sm,
+    color: tokens.color.textSecondary,
+    backgroundColor: tokens.color.gray100,
+    borderRight: prefix ? `1px solid ${tokens.color.border}` : 'none',
+    borderLeft: suffix ? `1px solid ${tokens.color.border}` : 'none',
+    display: 'flex',
+    alignItems: 'center',
+    height: '36px',
+    fontFamily: tokens.font.family,
+  };
+
+  const helpStyle = {
+    fontSize: tokens.font.size.xs,
+    color: error ? tokens.color.red : tokens.color.textSecondary,
+    fontFamily: tokens.font.family,
+  };
+
+  return (
+    <div style={wrapperStyle}>
+      {label && <label style={labelStyle}>{label}</label>}
+      <div style={inputWrapperStyle}>
+        {prefix && <span style={affixStyle}>{prefix}</span>}
+        <input
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          disabled={disabled}
+          style={inputStyle}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+        />
+        {suffix && <span style={{ ...affixStyle, borderRight: 'none', borderLeft: `1px solid ${tokens.color.border}` }}>{suffix}</span>}
+      </div>
+      {(helpText || error) && <span style={helpStyle}>{error || helpText}</span>}
+    </div>
+  );
+}
+
+// --- Textarea ---
+function Textarea({ label, placeholder, value, onChange, rows = 3, helpText, error, disabled = false }) {
+  const [focused, setFocused] = useState(false);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+      {label && <label style={{ fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.medium, color: tokens.color.text, fontFamily: tokens.font.family }}>{label}</label>}
+      <textarea
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        rows={rows}
+        disabled={disabled}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        style={{
+          padding: '8px 12px',
+          fontSize: tokens.font.size.base,
+          fontFamily: tokens.font.family,
+          color: tokens.color.text,
+          backgroundColor: disabled ? tokens.color.gray100 : tokens.color.surface,
+          border: `1px solid ${error ? tokens.color.red : (focused ? tokens.color.blue : tokens.color.border)}`,
+          borderRadius: tokens.radius.md,
+          outline: 'none',
+          resize: 'vertical',
+          transition: `border-color ${tokens.transition}`,
+          boxShadow: focused ? `0 0 0 2px ${error ? 'rgba(215,44,13,0.2)' : 'rgba(44,110,203,0.2)'}` : 'none',
+          lineHeight: '1.5',
+        }}
+      />
+      {(helpText || error) && <span style={{ fontSize: tokens.font.size.xs, color: error ? tokens.color.red : tokens.color.textSecondary, fontFamily: tokens.font.family }}>{error || helpText}</span>}
+    </div>
+  );
+}
+
+// --- Toggle ---
+function Toggle({ checked, onChange, label, disabled = false }) {
+  const [hovered, setHovered] = useState(false);
+
+  const trackStyle = {
+    width: '44px',
+    height: '24px',
+    borderRadius: tokens.radius.full,
+    backgroundColor: checked ? tokens.color.green : tokens.color.gray300,
+    position: 'relative',
+    cursor: disabled ? 'not-allowed' : 'pointer',
+    transition: `background-color ${tokens.transition}`,
+    opacity: disabled ? 0.5 : 1,
+    flexShrink: 0,
+  };
+
+  const thumbStyle = {
+    width: '20px',
+    height: '20px',
+    borderRadius: '50%',
+    backgroundColor: '#FFFFFF',
+    position: 'absolute',
+    top: '2px',
+    left: checked ? '22px' : '2px',
+    transition: `left ${tokens.transition}`,
+    boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
+  };
+
+  return (
+    <div
+      style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: disabled ? 'not-allowed' : 'pointer' }}
+      onClick={() => !disabled && onChange && onChange(!checked)}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div style={trackStyle}>
+        <div style={thumbStyle} />
+      </div>
+      {label && <span style={{ fontSize: tokens.font.size.base, color: disabled ? tokens.color.textTertiary : tokens.color.text, fontFamily: tokens.font.family }}>{label}</span>}
+    </div>
+  );
+}
+
+// --- Checkbox ---
+function Checkbox({ checked, onChange, label, disabled = false, indeterminate = false }) {
+  const boxStyle = {
+    width: '18px',
+    height: '18px',
+    borderRadius: '4px',
+    border: `1.5px solid ${checked || indeterminate ? tokens.color.blue : tokens.color.gray400}`,
+    backgroundColor: checked || indeterminate ? tokens.color.blue : tokens.color.surface,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: disabled ? 'not-allowed' : 'pointer',
+    transition: `all ${tokens.transition}`,
+    opacity: disabled ? 0.5 : 1,
+    flexShrink: 0,
+  };
+
+  return (
+    <div
+      style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: disabled ? 'not-allowed' : 'pointer' }}
+      onClick={() => !disabled && onChange && onChange(!checked)}
+    >
+      <div style={boxStyle}>
+        {checked && (
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2.5 6L5 8.5L9.5 3.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        )}
+        {indeterminate && !checked && (
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M3 6H9" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+        )}
+      </div>
+      {label && <span style={{ fontSize: tokens.font.size.base, color: disabled ? tokens.color.textTertiary : tokens.color.text, fontFamily: tokens.font.family }}>{label}</span>}
+    </div>
+  );
+}
+
+// --- Radio ---
+function Radio({ checked, onChange, label, disabled = false }) {
+  return (
+    <div
+      style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: disabled ? 'not-allowed' : 'pointer' }}
+      onClick={() => !disabled && onChange && onChange()}
+    >
+      <div style={{
+        width: '18px', height: '18px', borderRadius: '50%',
+        border: `1.5px solid ${checked ? tokens.color.blue : tokens.color.gray400}`,
+        backgroundColor: tokens.color.surface,
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        transition: `all ${tokens.transition}`, opacity: disabled ? 0.5 : 1, flexShrink: 0,
+      }}>
+        {checked && <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: tokens.color.blue }} />}
+      </div>
+      {label && <span style={{ fontSize: tokens.font.size.base, color: disabled ? tokens.color.textTertiary : tokens.color.text, fontFamily: tokens.font.family }}>{label}</span>}
+    </div>
+  );
+}
+
+// --- SegmentedControl ---
+function SegmentedControl({ options, value, onChange }) {
+  return (
+    <div style={{
+      display: 'inline-flex', backgroundColor: tokens.color.gray100,
+      borderRadius: tokens.radius.md, padding: '2px', border: `1px solid ${tokens.color.border}`,
+    }}>
+      {options.map(opt => {
+        const active = opt.value === value;
+        return (
+          <button
+            key={opt.value}
+            onClick={() => onChange(opt.value)}
+            style={{
+              padding: '6px 16px', fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.medium,
+              fontFamily: tokens.font.family, color: active ? tokens.color.text : tokens.color.textSecondary,
+              backgroundColor: active ? tokens.color.surface : 'transparent',
+              border: active ? `1px solid ${tokens.color.border}` : '1px solid transparent',
+              borderRadius: '6px', cursor: 'pointer',
+              transition: `all ${tokens.transition}`, outline: 'none',
+              boxShadow: active ? tokens.shadow.card : 'none',
+            }}
+          >
+            {opt.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Badge ---
+function Badge({ children, variant = 'default', dot = false }) {
+  const variants = {
+    default: { bg: tokens.color.gray100, color: tokens.color.text, border: tokens.color.border },
+    success: { bg: tokens.color.greenLight, color: tokens.color.green, border: 'transparent' },
+    warning: { bg: tokens.color.yellowLight, color: tokens.color.yellow, border: 'transparent' },
+    error: { bg: tokens.color.redLight, color: tokens.color.red, border: 'transparent' },
+    info: { bg: tokens.color.blueLight, color: tokens.color.blue, border: 'transparent' },
+    purple: { bg: tokens.color.purpleLight, color: tokens.color.purple, border: 'transparent' },
+  };
+  const v = variants[variant] || variants.default;
+
+  return (
+    <span style={{
+      display: 'inline-flex', alignItems: 'center', gap: '5px',
+      padding: '2px 10px', fontSize: tokens.font.size.xs, fontWeight: tokens.font.weight.medium,
+      fontFamily: tokens.font.family, color: v.color, backgroundColor: v.bg,
+      borderRadius: tokens.radius.full, border: `1px solid ${v.border}`,
+      lineHeight: '18px', whiteSpace: 'nowrap',
+    }}>
+      {dot && <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: v.color }} />}
+      {children}
+    </span>
+  );
+}
+
+// --- Alert ---
+function Alert({ children, variant = 'info', title, onDismiss }) {
+  const variants = {
+    info: { bg: tokens.color.blueLight, border: tokens.color.blue, color: tokens.color.blue, icon: 'ℹ' },
+    success: { bg: tokens.color.greenLight, border: tokens.color.green, color: tokens.color.green, icon: '✓' },
+    warning: { bg: tokens.color.yellowLight, border: tokens.color.yellow, color: '#8A6D00', icon: '⚠' },
+    error: { bg: tokens.color.redLight, border: tokens.color.red, color: tokens.color.red, icon: '✕' },
+  };
+  const v = variants[variant] || variants.info;
+
+  return (
+    <div style={{
+      display: 'flex', gap: '12px', padding: '14px 16px',
+      backgroundColor: v.bg, border: `1px solid ${v.border}20`,
+      borderRadius: tokens.radius.lg, borderLeft: `3px solid ${v.border}`,
+      fontFamily: tokens.font.family,
+    }}>
+      <span style={{ fontSize: '16px', color: v.color, flexShrink: 0, marginTop: '1px' }}>{v.icon}</span>
+      <div style={{ flex: 1 }}>
+        {title && <div style={{ fontWeight: tokens.font.weight.semibold, fontSize: tokens.font.size.base, color: v.color, marginBottom: '2px' }}>{title}</div>}
+        <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.text, lineHeight: '1.5' }}>{children}</div>
+      </div>
+      {onDismiss && (
+        <button onClick={onDismiss} style={{
+          background: 'none', border: 'none', cursor: 'pointer', color: tokens.color.textSecondary,
+          fontSize: '16px', padding: '0', lineHeight: '1', flexShrink: 0,
+        }}>×</button>
+      )}
+    </div>
+  );
+}
+
+// --- Toast ---
+function Toast({ message, variant = 'info', visible, onClose, duration = 4000 }) {
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    if (visible && duration > 0) {
+      if (timerRef.current) clearTimeout(timerRef.current);
+      timerRef.current = setTimeout(() => {
+        onClose && onClose();
+      }, duration);
+    }
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, [visible, duration, onClose]);
+
+  if (!visible) return null;
+
+  const variants = {
+    info: { bg: tokens.color.gray900, color: '#FFFFFF' },
+    success: { bg: tokens.color.green, color: '#FFFFFF' },
+    error: { bg: tokens.color.red, color: '#FFFFFF' },
+    warning: { bg: tokens.color.yellow, color: '#FFFFFF' },
+  };
+  const v = variants[variant] || variants.info;
+
+  return (
+    <div style={{
+      position: 'fixed', bottom: '24px', left: '50%', transform: 'translateX(-50%)',
+      padding: '10px 20px', backgroundColor: v.bg, color: v.color,
+      borderRadius: tokens.radius.lg, fontSize: tokens.font.size.sm,
+      fontWeight: tokens.font.weight.medium, fontFamily: tokens.font.family,
+      boxShadow: tokens.shadow.dropdown, zIndex: 9999,
+      display: 'flex', alignItems: 'center', gap: '12px',
+      animation: 'slideUp 0.3s ease',
+    }}>
+      <span>{message}</span>
+      <button onClick={onClose} style={{
+        background: 'none', border: 'none', color: v.color, cursor: 'pointer',
+        fontSize: '16px', padding: '0', opacity: 0.8,
+      }}>×</button>
+    </div>
+  );
+}
+
+// --- ProgressBar ---
+function ProgressBar({ value = 0, max = 100, variant = 'default', showLabel = false, size = 'md' }) {
+  const pct = Math.min(100, Math.max(0, (value / max) * 100));
+  const colors = {
+    default: tokens.color.blue,
+    success: tokens.color.green,
+    warning: tokens.color.yellow,
+    error: tokens.color.red,
+  };
+  const heights = { sm: '4px', md: '8px', lg: '12px' };
+
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', width: '100%' }}>
+      <div style={{
+        flex: 1, height: heights[size], backgroundColor: tokens.color.gray200,
+        borderRadius: tokens.radius.full, overflow: 'hidden',
+      }}>
+        <div style={{
+          width: `${pct}%`, height: '100%',
+          backgroundColor: colors[variant] || colors.default,
+          borderRadius: tokens.radius.full,
+          transition: `width 0.4s ease`,
+        }} />
+      </div>
+      {showLabel && <span style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family, minWidth: '36px', textAlign: 'right' }}>{Math.round(pct)}%</span>}
+    </div>
+  );
+}
+
+// --- CircularProgress ---
+function CircularProgress({ value = 0, size = 60, strokeWidth = 4, color }) {
+  const radius = (size - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const pct = Math.min(100, Math.max(0, value));
+  const offset = circumference - (pct / 100) * circumference;
+  const fillColor = color || tokens.color.blue;
+
+  return (
+    <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+      <svg width={size} height={size} style={{ transform: 'rotate(-90deg)' }}>
+        <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke={tokens.color.gray200} strokeWidth={strokeWidth} />
+        <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke={fillColor} strokeWidth={strokeWidth}
+          strokeDasharray={circumference} strokeDashoffset={offset}
+          strokeLinecap="round" style={{ transition: 'stroke-dashoffset 0.4s ease' }} />
+      </svg>
+      <span style={{
+        position: 'absolute', fontSize: size > 50 ? tokens.font.size.sm : tokens.font.size.xs,
+        fontWeight: tokens.font.weight.semibold, color: tokens.color.text, fontFamily: tokens.font.family,
+      }}>{Math.round(pct)}%</span>
+    </div>
+  );
+}
+
+// --- Tabs ---
+function Tabs({ tabs, activeTab, onChange }) {
+  return (
+    <div style={{ display: 'flex', borderBottom: `1px solid ${tokens.color.border}`, gap: '0' }}>
+      {tabs.map(tab => {
+        const active = tab.value === activeTab;
+        return (
+          <button
+            key={tab.value}
+            onClick={() => onChange(tab.value)}
+            style={{
+              padding: '10px 16px', fontSize: tokens.font.size.sm,
+              fontWeight: active ? tokens.font.weight.semibold : tokens.font.weight.medium,
+              fontFamily: tokens.font.family,
+              color: active ? tokens.color.text : tokens.color.textSecondary,
+              backgroundColor: 'transparent', border: 'none',
+              borderBottom: active ? `2px solid ${tokens.color.gray900}` : '2px solid transparent',
+              cursor: 'pointer', transition: `all ${tokens.transition}`,
+              marginBottom: '-1px', outline: 'none',
+            }}
+          >
+            {tab.label}
+            {tab.count !== undefined && (
+              <span style={{
+                marginLeft: '6px', padding: '1px 7px', fontSize: tokens.font.size.xs,
+                backgroundColor: active ? tokens.color.gray900 : tokens.color.gray200,
+                color: active ? '#FFFFFF' : tokens.color.textSecondary,
+                borderRadius: tokens.radius.full,
+              }}>{tab.count}</span>
+            )}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+// --- Breadcrumbs ---
+function Breadcrumbs({ items }) {
+  return (
+    <nav style={{ display: 'flex', alignItems: 'center', gap: '6px', fontFamily: tokens.font.family }}>
+      {items.map((item, i) => (
+        <React.Fragment key={i}>
+          {i > 0 && <span style={{ color: tokens.color.textTertiary, fontSize: tokens.font.size.sm }}>/</span>}
+          <span
+            style={{
+              fontSize: tokens.font.size.sm, color: i === items.length - 1 ? tokens.color.text : tokens.color.blue,
+              fontWeight: i === items.length - 1 ? tokens.font.weight.medium : tokens.font.weight.regular,
+              cursor: i === items.length - 1 ? 'default' : 'pointer',
+              textDecoration: 'none',
+            }}
+            onClick={item.onClick}
+          >
+            {item.label}
+          </span>
+        </React.Fragment>
+      ))}
+    </nav>
+  );
+}
+
+// --- Modal ---
+function Modal({ open, onClose, title, children, footer, size = 'md' }) {
+  if (!open) return null;
+  const sizes = { sm: '400px', md: '540px', lg: '720px' };
+
+  return (
+    <div style={{
+      position: 'fixed', inset: 0, zIndex: 10000,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      backgroundColor: 'rgba(0,0,0,0.4)',
+    }} onClick={onClose}>
+      <div
+        style={{
+          width: sizes[size] || sizes.md, maxHeight: '80vh',
+          backgroundColor: tokens.color.surface, borderRadius: tokens.radius.xl,
+          boxShadow: tokens.shadow.modal, display: 'flex', flexDirection: 'column',
+          overflow: 'hidden', animation: 'fadeScale 0.2s ease',
+        }}
+        onClick={e => e.stopPropagation()}
+      >
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          padding: '16px 20px', borderBottom: `1px solid ${tokens.color.border}`,
+        }}>
+          <h3 style={{ margin: 0, fontSize: tokens.font.size.md, fontWeight: tokens.font.weight.semibold, fontFamily: tokens.font.family, color: tokens.color.text }}>{title}</h3>
+          <button onClick={onClose} style={{
+            background: 'none', border: 'none', cursor: 'pointer', color: tokens.color.textSecondary,
+            fontSize: '20px', padding: '0', lineHeight: '1',
+          }}>×</button>
+        </div>
+        <div style={{ padding: '20px', flex: 1, overflowY: 'auto', fontFamily: tokens.font.family, fontSize: tokens.font.size.base, color: tokens.color.text, lineHeight: '1.6' }}>
+          {children}
+        </div>
+        {footer && (
+          <div style={{
+            display: 'flex', justifyContent: 'flex-end', gap: '8px',
+            padding: '16px 20px', borderTop: `1px solid ${tokens.color.border}`,
+          }}>{footer}</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// --- Sheet ---
+function Sheet({ open, onClose, title, children, side = 'right', width = '400px' }) {
+  if (!open) return null;
+  const isRight = side === 'right';
+
+  return (
+    <div style={{
+      position: 'fixed', inset: 0, zIndex: 10000,
+      display: 'flex', justifyContent: isRight ? 'flex-end' : 'flex-start',
+      backgroundColor: 'rgba(0,0,0,0.4)',
+    }} onClick={onClose}>
+      <div
+        style={{
+          width, height: '100%', backgroundColor: tokens.color.surface,
+          boxShadow: tokens.shadow.modal, display: 'flex', flexDirection: 'column',
+          animation: `slideIn${isRight ? 'Right' : 'Left'} 0.3s ease`,
+        }}
+        onClick={e => e.stopPropagation()}
+      >
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          padding: '16px 20px', borderBottom: `1px solid ${tokens.color.border}`,
+        }}>
+          <h3 style={{ margin: 0, fontSize: tokens.font.size.md, fontWeight: tokens.font.weight.semibold, fontFamily: tokens.font.family, color: tokens.color.text }}>{title}</h3>
+          <button onClick={onClose} style={{
+            background: 'none', border: 'none', cursor: 'pointer', color: tokens.color.textSecondary,
+            fontSize: '20px', padding: '0', lineHeight: '1',
+          }}>×</button>
+        </div>
+        <div style={{ padding: '20px', flex: 1, overflowY: 'auto', fontFamily: tokens.font.family, fontSize: tokens.font.size.base, color: tokens.color.text }}>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// --- ListItem ---
+function ListItem({ title, description, trailing, onClick, bordered = true, hoverable = true }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: '12px 16px', backgroundColor: hovered && hoverable ? tokens.color.gray100 : 'transparent',
+        borderBottom: bordered ? `1px solid ${tokens.color.border}` : 'none',
+        cursor: hoverable ? 'pointer' : 'default',
+        transition: `background-color ${tokens.transition}`,
+      }}
+      onClick={onClick}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div>
+        <div style={{ fontSize: tokens.font.size.base, fontWeight: tokens.font.weight.medium, color: tokens.color.text, fontFamily: tokens.font.family }}>{title}</div>
+        {description && <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, marginTop: '2px', fontFamily: tokens.font.family }}>{description}</div>}
+      </div>
+      {trailing && <div style={{ flexShrink: 0, marginLeft: '12px' }}>{trailing}</div>}
+    </div>
+  );
+}
+
+// --- Card ---
+function Card({ children, title, subtitle, headerAction, padding = '20px', style: customStyle }) {
+  return (
+    <div style={{
+      backgroundColor: tokens.color.surface,
+      border: `1px solid ${tokens.color.border}`,
+      borderRadius: tokens.radius.xl,
+      boxShadow: tokens.shadow.card,
+      overflow: 'hidden',
+      ...customStyle,
+    }}>
+      {(title || headerAction) && (
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          padding: '16px 20px',
+          borderBottom: `1px solid ${tokens.color.border}`,
+        }}>
+          <div>
+            <h3 style={{ margin: 0, fontSize: tokens.font.size.md, fontWeight: tokens.font.weight.semibold, color: tokens.color.text, fontFamily: tokens.font.family }}>{title}</h3>
+            {subtitle && <p style={{ margin: '2px 0 0', fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>{subtitle}</p>}
+          </div>
+          {headerAction}
+        </div>
+      )}
+      <div style={{ padding }}>{children}</div>
+    </div>
+  );
+}
+
+// --- Select (Dropdown) ---
+function Select({ label, options, value, onChange, placeholder = 'Select...', disabled = false }) {
+  const [focused, setFocused] = useState(false);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+      {label && <label style={{ fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.medium, color: tokens.color.text, fontFamily: tokens.font.family }}>{label}</label>}
+      <div style={{ position: 'relative' }}>
+        <select
+          value={value}
+          onChange={onChange}
+          disabled={disabled}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          style={{
+            width: '100%', padding: '8px 32px 8px 12px', fontSize: tokens.font.size.base,
+            fontFamily: tokens.font.family, color: value ? tokens.color.text : tokens.color.textTertiary,
+            backgroundColor: disabled ? tokens.color.gray100 : tokens.color.surface,
+            border: `1px solid ${focused ? tokens.color.blue : tokens.color.border}`,
+            borderRadius: tokens.radius.md, outline: 'none', cursor: disabled ? 'not-allowed' : 'pointer',
+            appearance: 'none', height: '36px',
+            transition: `border-color ${tokens.transition}`,
+            boxShadow: focused ? '0 0 0 2px rgba(44,110,203,0.2)' : 'none',
+          }}
+        >
+          <option value="" disabled>{placeholder}</option>
+          {options.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+        </select>
+        <span style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: tokens.color.textSecondary, fontSize: '12px' }}>▼</span>
+      </div>
+    </div>
+  );
+}
+
+
+// ============================================================
+// PAGES
+// ============================================================
+
+// --- OverviewPage ---
+function OverviewPage() {
+  const stats = [
+    { label: 'Components', value: '26+', change: '+4 this sprint' },
+    { label: 'Showcase Pages', value: '18', change: 'All interactive' },
+    { label: 'Design Tokens', value: '48', change: 'Colors, spacing, type' },
+    { label: 'Test Coverage', value: '94%', change: '+2% from last week' },
+  ];
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xxl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Component Library</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.md, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Apple HIG components with Shopify admin aesthetics</p>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+        {stats.map(s => (
+          <Card key={s.label} padding="16px">
+            <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family, marginBottom: '4px' }}>{s.label}</div>
+            <div style={{ fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>{s.value}</div>
+            <div style={{ fontSize: tokens.font.size.xs, color: tokens.color.green, fontFamily: tokens.font.family, marginTop: '4px' }}>{s.change}</div>
+          </Card>
+        ))}
+      </div>
+
+      <Card title="Quick Start" subtitle="Get up and running with the component library">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontFamily: tokens.font.family }}>
+          <p style={{ margin: 0, fontSize: tokens.font.size.base, color: tokens.color.text, lineHeight: '1.6' }}>
+            This dashboard showcases every component in the system. Use the sidebar to navigate between component pages.
+            Each page includes interactive examples you can try.
+          </p>
+          <div style={{ padding: '14px 16px', backgroundColor: tokens.color.yellowSurface, borderRadius: tokens.radius.lg, border: `1px solid ${tokens.color.yellow}20` }}>
+            <div style={{ fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.semibold, color: '#8A6D00', marginBottom: '4px' }}>Design Philosophy</div>
+            <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.text, lineHeight: '1.5' }}>
+              Borders create depth, not shadows. Dark primary buttons, green success states, and warm grays for surfaces.
+            </div>
+          </div>
+        </div>
+      </Card>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+        <Card title="Recent Updates">
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <ListItem title="Added Select component" description="Dropdown with focus ring support" />
+            <ListItem title="Fixed Toast timer leak" description="useRef cleanup on unmount" />
+            <ListItem title="Fixed duplicate fontFamily" description="Monospace was overriding Satoshi" bordered={false} />
+          </div>
+        </Card>
+        <Card title="Component Status">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {[
+              { name: 'Core Controls', pct: 100 },
+              { name: 'Forms & Inputs', pct: 90 },
+              { name: 'Feedback & Overlays', pct: 85 },
+              { name: 'Navigation', pct: 80 },
+            ].map(item => (
+              <div key={item.name}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
+                  <span style={{ fontSize: tokens.font.size.sm, color: tokens.color.text, fontFamily: tokens.font.family }}>{item.name}</span>
+                  <span style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>{item.pct}%</span>
+                </div>
+                <ProgressBar value={item.pct} variant={item.pct === 100 ? 'success' : 'default'} size="sm" />
+              </div>
+            ))}
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+// --- ColorsPage ---
+function ColorsPage() {
+  const colorGroups = [
+    { title: 'Neutrals', colors: [
+      { name: 'Black', value: tokens.color.black, token: 'color.black' },
+      { name: 'Text', value: tokens.color.text, token: 'color.text' },
+      { name: 'Text Secondary', value: tokens.color.textSecondary, token: 'color.textSecondary' },
+      { name: 'Text Tertiary', value: tokens.color.textTertiary, token: 'color.textTertiary' },
+      { name: 'Gray 100', value: tokens.color.gray100, token: 'color.gray100' },
+      { name: 'Gray 200', value: tokens.color.gray200, token: 'color.gray200' },
+      { name: 'Gray 300', value: tokens.color.gray300, token: 'color.gray300' },
+      { name: 'Border', value: tokens.color.border, token: 'color.border' },
+      { name: 'Surface', value: tokens.color.surface, token: 'color.surface' },
+      { name: 'Background', value: tokens.color.bg, token: 'color.bg' },
+    ]},
+    { title: 'Semantic', colors: [
+      { name: 'Blue', value: tokens.color.blue, token: 'color.blue' },
+      { name: 'Blue Light', value: tokens.color.blueLight, token: 'color.blueLight' },
+      { name: 'Green', value: tokens.color.green, token: 'color.green' },
+      { name: 'Green Light', value: tokens.color.greenLight, token: 'color.greenLight' },
+      { name: 'Red', value: tokens.color.red, token: 'color.red' },
+      { name: 'Red Light', value: tokens.color.redLight, token: 'color.redLight' },
+      { name: 'Yellow', value: tokens.color.yellow, token: 'color.yellow' },
+      { name: 'Yellow Light', value: tokens.color.yellowLight, token: 'color.yellowLight' },
+      { name: 'Orange', value: tokens.color.orange, token: 'color.orange' },
+      { name: 'Purple', value: tokens.color.purple, token: 'color.purple' },
+    ]},
+  ];
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Colors</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Shopify-admin palette — warm neutrals with semantic accents</p>
+      </div>
+      {colorGroups.map(group => (
+        <Card key={group.title} title={group.title}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px' }}>
+            {group.colors.map(c => (
+              <div key={c.name} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <div style={{
+                  width: '100%', height: '56px', borderRadius: tokens.radius.md,
+                  backgroundColor: c.value, border: `1px solid ${tokens.color.border}`,
+                }} />
+                <div style={{ fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.medium, color: tokens.color.text, fontFamily: tokens.font.family }}>{c.name}</div>
+                <div style={{ fontSize: tokens.font.size.xs, color: tokens.color.textSecondary, fontFamily: tokens.font.mono }}>{c.value}</div>
+              </div>
+            ))}
+          </div>
+        </Card>
+      ))}
+    </div>
+  );
+}
+
+// --- TypographyPage ---
+function TypographyPage() {
+  const scale = [
+    { name: 'XXL / Hero', size: tokens.font.size.xxl, weight: tokens.font.weight.bold },
+    { name: 'XL / Page Title', size: tokens.font.size.xl, weight: tokens.font.weight.bold },
+    { name: 'LG / Section', size: tokens.font.size.lg, weight: tokens.font.weight.semibold },
+    { name: 'MD / Subtitle', size: tokens.font.size.md, weight: tokens.font.weight.semibold },
+    { name: 'Base / Body', size: tokens.font.size.base, weight: tokens.font.weight.regular },
+    { name: 'SM / Caption', size: tokens.font.size.sm, weight: tokens.font.weight.regular },
+    { name: 'XS / Overline', size: tokens.font.size.xs, weight: tokens.font.weight.medium },
+  ];
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Typography</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Satoshi font family — 400 to 700 weight range</p>
+      </div>
+      <Card title="Type Scale">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          {scale.map(s => (
+            <div key={s.name} style={{ display: 'flex', alignItems: 'baseline', gap: '20px', borderBottom: `1px solid ${tokens.color.border}`, paddingBottom: '16px' }}>
+              <span style={{ width: '140px', flexShrink: 0, fontSize: tokens.font.size.xs, color: tokens.color.textSecondary, fontFamily: tokens.font.mono }}>{s.size} / {s.weight}</span>
+              <span style={{ fontSize: s.size, fontWeight: s.weight, color: tokens.color.text, fontFamily: tokens.font.family }}>{s.name}</span>
+            </div>
+          ))}
+        </div>
+      </Card>
+      <Card title="Font Weights">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+          {[
+            { name: 'Regular', weight: 400 },
+            { name: 'Medium', weight: 500 },
+            { name: 'Semibold', weight: 600 },
+            { name: 'Bold', weight: 700 },
+          ].map(w => (
+            <div key={w.name} style={{ padding: '16px', border: `1px solid ${tokens.color.border}`, borderRadius: tokens.radius.md }}>
+              <div style={{ fontSize: tokens.font.size.lg, fontWeight: w.weight, color: tokens.color.text, fontFamily: tokens.font.family, marginBottom: '4px' }}>{w.name}</div>
+              <div style={{ fontSize: tokens.font.size.xs, color: tokens.color.textSecondary, fontFamily: tokens.font.mono }}>{w.weight}</div>
+            </div>
+          ))}
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// --- ButtonsPage ---
+function ButtonsPage() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Buttons</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Primary actions are dark, Shopify-style</p>
+      </div>
+      <Card title="Variants">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
+          <Button variant="primary">Primary</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="danger">Danger</Button>
+          <Button variant="ghost">Ghost</Button>
+          <Button variant="plain">Plain Link</Button>
+        </div>
+      </Card>
+      <Card title="Sizes">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
+          <Button size="sm">Small</Button>
+          <Button size="md">Medium</Button>
+          <Button size="lg">Large</Button>
+        </div>
+      </Card>
+      <Card title="States">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
+          <Button disabled>Disabled Primary</Button>
+          <Button variant="secondary" disabled>Disabled Secondary</Button>
+          <Button fullWidth>Full Width Button</Button>
+        </div>
+      </Card>
+      <Card title="With Icons">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
+          <Button icon={<span>+</span>}>Add Product</Button>
+          <Button variant="secondary" icon={<span>↓</span>}>Export</Button>
+          <Button variant="danger" icon={<span>🗑</span>}>Delete</Button>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// --- InputsPage ---
+function InputsPage() {
+  const [text, setText] = useState('');
+  const [email, setEmail] = useState('');
+  const [note, setNote] = useState('');
+  const [sel, setSel] = useState('');
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Inputs & Forms</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Text inputs, textareas, selects, and form layouts</p>
+      </div>
+      <Card title="Text Inputs">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '400px' }}>
+          <Input label="Product title" placeholder="Short sleeve t-shirt" value={text} onChange={e => setText(e.target.value)} />
+          <Input label="Email" placeholder="you@example.com" type="email" value={email} onChange={e => setEmail(e.target.value)} helpText="We'll never share your email." />
+          <Input label="Price" placeholder="0.00" prefix="$" suffix="USD" />
+          <Input label="Website" error="Please enter a valid URL" value="not-a-url" />
+          <Input label="Disabled" placeholder="Cannot edit" disabled />
+        </div>
+      </Card>
+      <Card title="Textarea">
+        <div style={{ maxWidth: '400px' }}>
+          <Textarea label="Description" placeholder="Add a description..." value={note} onChange={e => setNote(e.target.value)} helpText="Max 500 characters" rows={4} />
+        </div>
+      </Card>
+      <Card title="Select">
+        <div style={{ maxWidth: '400px' }}>
+          <Select
+            label="Category"
+            options={[
+              { value: 'clothing', label: 'Clothing' },
+              { value: 'electronics', label: 'Electronics' },
+              { value: 'home', label: 'Home & Garden' },
+            ]}
+            value={sel}
+            onChange={e => setSel(e.target.value)}
+          />
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// --- TogglesPage ---
+function TogglesPage() {
+  const [t1, setT1] = useState(true);
+  const [t2, setT2] = useState(false);
+  const [c1, setC1] = useState(true);
+  const [c2, setC2] = useState(false);
+  const [r, setR] = useState('option1');
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Toggles & Checks</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Switches, checkboxes, and radio buttons</p>
+      </div>
+      <Card title="Toggle Switches">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <Toggle checked={t1} onChange={setT1} label="Notifications enabled" />
+          <Toggle checked={t2} onChange={setT2} label="Dark mode" />
+          <Toggle checked={false} disabled label="Disabled toggle" />
+        </div>
+      </Card>
+      <Card title="Checkboxes">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <Checkbox checked={c1} onChange={setC1} label="Accept terms and conditions" />
+          <Checkbox checked={c2} onChange={setC2} label="Subscribe to newsletter" />
+          <Checkbox indeterminate label="Select all (indeterminate)" />
+          <Checkbox disabled label="Disabled checkbox" />
+        </div>
+      </Card>
+      <Card title="Radio Buttons">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <Radio checked={r === 'option1'} onChange={() => setR('option1')} label="Standard shipping (5-7 days)" />
+          <Radio checked={r === 'option2'} onChange={() => setR('option2')} label="Express shipping (2-3 days)" />
+          <Radio checked={r === 'option3'} onChange={() => setR('option3')} label="Overnight shipping (1 day)" />
+          <Radio disabled label="Disabled option" />
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// --- SegmentedControlPage ---
+function SegmentedControlPage() {
+  const [view, setView] = useState('all');
+  const [period, setPeriod] = useState('month');
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Segmented Control</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Toggle between related views</p>
+      </div>
+      <Card title="Basic">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <SegmentedControl
+            options={[{ value: 'all', label: 'All' }, { value: 'active', label: 'Active' }, { value: 'draft', label: 'Draft' }, { value: 'archived', label: 'Archived' }]}
+            value={view}
+            onChange={setView}
+          />
+          <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Selected: {view}</div>
+        </div>
+      </Card>
+      <Card title="Time Period Selector">
+        <SegmentedControl
+          options={[{ value: 'day', label: 'Day' }, { value: 'week', label: 'Week' }, { value: 'month', label: 'Month' }, { value: 'year', label: 'Year' }]}
+          value={period}
+          onChange={setPeriod}
+        />
+      </Card>
+    </div>
+  );
+}
+
+// --- CardsPage ---
+function CardsPage() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Cards</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Bordered containers for grouped content</p>
+      </div>
+      <Card title="Basic Card" subtitle="With a subtitle and header action" headerAction={<Button variant="plain" size="sm">Edit</Button>}>
+        <p style={{ margin: 0, fontSize: tokens.font.size.base, color: tokens.color.text, fontFamily: tokens.font.family, lineHeight: '1.6' }}>
+          Cards use borders as the primary depth mechanism with a very subtle box-shadow. This matches the Shopify admin aesthetic.
+        </p>
+      </Card>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+        <Card title="Orders" padding="16px">
+          <div style={{ fontSize: tokens.font.size.xxl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>1,248</div>
+          <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.green, fontFamily: tokens.font.family, marginTop: '4px' }}>+12.5% from last month</div>
+        </Card>
+        <Card title="Revenue" padding="16px">
+          <div style={{ fontSize: tokens.font.size.xxl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>$48.2K</div>
+          <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.green, fontFamily: tokens.font.family, marginTop: '4px' }}>+8.1% from last month</div>
+        </Card>
+        <Card title="Customers" padding="16px">
+          <div style={{ fontSize: tokens.font.size.xxl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>3,891</div>
+          <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.red, fontFamily: tokens.font.family, marginTop: '4px' }}>-2.3% from last month</div>
+        </Card>
+      </div>
+      <Card title="Note Highlight" padding="0">
+        <div style={{ padding: '16px 20px', backgroundColor: tokens.color.yellowSurface, borderBottom: `1px solid ${tokens.color.yellow}30` }}>
+          <div style={{ fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.semibold, color: '#8A6D00', fontFamily: tokens.font.family }}>Note</div>
+          <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.text, fontFamily: tokens.font.family, marginTop: '2px' }}>Yellow highlight sections are used for notes and callouts, matching the Shopify admin pattern.</div>
+        </div>
+        <div style={{ padding: '16px 20px' }}>
+          <p style={{ margin: 0, fontSize: tokens.font.size.base, color: tokens.color.text, fontFamily: tokens.font.family }}>Regular card content below the note.</p>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// --- TablesPage ---
+function TablesPage() {
+  const [search, setSearch] = useState('');
+  const [selected, setSelected] = useState([]);
+  const orders = [
+    { id: '#1001', customer: 'Alice Johnson', status: 'Paid', total: '$124.00', date: 'Jan 5, 2025' },
+    { id: '#1002', customer: 'Bob Smith', status: 'Pending', total: '$89.50', date: 'Jan 5, 2025' },
+    { id: '#1003', customer: 'Carol Williams', status: 'Paid', total: '$256.00', date: 'Jan 4, 2025' },
+    { id: '#1004', customer: 'David Brown', status: 'Refunded', total: '$45.00', date: 'Jan 4, 2025' },
+    { id: '#1005', customer: 'Eve Davis', status: 'Paid', total: '$312.75', date: 'Jan 3, 2025' },
+    { id: '#1006', customer: 'Frank Miller', status: 'Pending', total: '$67.20', date: 'Jan 3, 2025' },
+  ];
+
+  const filtered = orders.filter(o =>
+    o.customer.toLowerCase().includes(search.toLowerCase()) ||
+    o.id.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const allSelected = filtered.length > 0 && selected.length === filtered.length;
+  const someSelected = selected.length > 0 && selected.length < filtered.length;
+
+  const statusBadge = (status) => {
+    const map = { Paid: 'success', Pending: 'warning', Refunded: 'error' };
+    return <Badge variant={map[status] || 'default'} dot>{status}</Badge>;
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Tables</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Data tables with selection, search, and status badges</p>
+      </div>
+      <Card title="Orders" headerAction={<Button variant="primary" size="sm" icon={<span>+</span>}>Create order</Button>} padding="0">
+        <div style={{ padding: '12px 16px', borderBottom: `1px solid ${tokens.color.border}`, display: 'flex', gap: '8px' }}>
+          <Input placeholder="Search orders..." value={search} onChange={e => setSearch(e.target.value)} style={{ flex: 1 }} />
+          <Button variant="secondary" size="md">Filter</Button>
+        </div>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: tokens.font.family }}>
+          <thead>
+            <tr style={{ backgroundColor: tokens.color.gray100 }}>
+              <th style={{ padding: '10px 16px', textAlign: 'left', width: '40px' }}>
+                <Checkbox checked={allSelected} indeterminate={someSelected} onChange={() => {
+                  if (allSelected) setSelected([]);
+                  else setSelected(filtered.map(o => o.id));
+                }} />
+              </th>
+              {['Order', 'Customer', 'Status', 'Total', 'Date'].map(h => (
+                <th key={h} style={{ padding: '10px 16px', textAlign: 'left', fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.medium, color: tokens.color.textSecondary, borderBottom: `1px solid ${tokens.color.border}` }}>{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.map(order => (
+              <tr key={order.id} style={{ borderBottom: `1px solid ${tokens.color.border}` }}>
+                <td style={{ padding: '10px 16px' }}>
+                  <Checkbox
+                    checked={selected.includes(order.id)}
+                    onChange={() => setSelected(prev =>
+                      prev.includes(order.id) ? prev.filter(id => id !== order.id) : [...prev, order.id]
+                    )}
+                  />
+                </td>
+                <td style={{ padding: '10px 16px', fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.medium, color: tokens.color.blue }}>{order.id}</td>
+                <td style={{ padding: '10px 16px', fontSize: tokens.font.size.sm, color: tokens.color.text }}>{order.customer}</td>
+                <td style={{ padding: '10px 16px' }}>{statusBadge(order.status)}</td>
+                <td style={{ padding: '10px 16px', fontSize: tokens.font.size.sm, color: tokens.color.text }}>{order.total}</td>
+                <td style={{ padding: '10px 16px', fontSize: tokens.font.size.sm, color: tokens.color.textSecondary }}>{order.date}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {selected.length > 0 && (
+          <div style={{ padding: '10px 16px', backgroundColor: tokens.color.blueLight, borderTop: `1px solid ${tokens.color.border}`, display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <span style={{ fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.medium, color: tokens.color.blue, fontFamily: tokens.font.family }}>{selected.length} selected</span>
+            <Button variant="plain" size="sm">Mark as fulfilled</Button>
+          </div>
+        )}
+      </Card>
+    </div>
+  );
+}
+
+// --- ListsPage ---
+function ListsPage() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Lists</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Structured list items with actions</p>
+      </div>
+      <Card title="Product List" padding="0">
+        <ListItem title="Short Sleeve T-Shirt" description="SKU: SSTEE-001 · $29.00" trailing={<Badge variant="success">Active</Badge>} />
+        <ListItem title="Denim Jacket" description="SKU: DNJKT-002 · $89.00" trailing={<Badge variant="success">Active</Badge>} />
+        <ListItem title="Canvas Sneakers" description="SKU: CSNK-003 · $65.00" trailing={<Badge variant="warning">Low stock</Badge>} />
+        <ListItem title="Wool Beanie" description="SKU: WLBN-004 · $24.00" trailing={<Badge>Draft</Badge>} />
+        <ListItem title="Leather Belt" description="SKU: LTBLT-005 · $42.00" trailing={<Badge variant="error">Archived</Badge>} bordered={false} />
+      </Card>
+      <Card title="Settings List" padding="0">
+        <ListItem title="Email notifications" description="Get notified about new orders" trailing={<Toggle checked={true} onChange={() => {}} />} hoverable={false} />
+        <ListItem title="SMS alerts" description="Receive text messages for urgent updates" trailing={<Toggle checked={false} onChange={() => {}} />} hoverable={false} />
+        <ListItem title="Weekly report" description="Automatic sales summary every Monday" trailing={<Toggle checked={true} onChange={() => {}} />} hoverable={false} bordered={false} />
+      </Card>
+    </div>
+  );
+}
+
+// --- BadgesPage ---
+function BadgesPage() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Badges & Tags</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Status indicators and categorization labels</p>
+      </div>
+      <Card title="Status Badges">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+          <Badge variant="default">Default</Badge>
+          <Badge variant="success">Paid</Badge>
+          <Badge variant="warning">Pending</Badge>
+          <Badge variant="error">Refunded</Badge>
+          <Badge variant="info">Info</Badge>
+          <Badge variant="purple">New</Badge>
+        </div>
+      </Card>
+      <Card title="With Dot Indicator">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+          <Badge variant="success" dot>Active</Badge>
+          <Badge variant="warning" dot>Processing</Badge>
+          <Badge variant="error" dot>Failed</Badge>
+          <Badge variant="info" dot>Syncing</Badge>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// --- AlertsPage ---
+function AlertsPage() {
+  const [showDismissible, setShowDismissible] = useState(true);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Alerts</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Contextual feedback messages for user actions</p>
+      </div>
+      <Card title="Alert Variants">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <Alert variant="info" title="Update available">A new version of the dashboard is ready. Refresh to update.</Alert>
+          <Alert variant="success" title="Order confirmed">Order #1001 has been successfully placed.</Alert>
+          <Alert variant="warning" title="Low inventory">3 products have fewer than 10 units in stock.</Alert>
+          <Alert variant="error" title="Payment failed">The payment for order #1004 could not be processed.</Alert>
+        </div>
+      </Card>
+      <Card title="Dismissible Alert">
+        {showDismissible ? (
+          <Alert variant="info" title="Tip" onDismiss={() => setShowDismissible(false)}>
+            Click the X button to dismiss this alert. Click the button below to bring it back.
+          </Alert>
+        ) : (
+          <Button variant="secondary" size="sm" onClick={() => setShowDismissible(true)}>Show alert again</Button>
+        )}
+      </Card>
+    </div>
+  );
+}
+
+// --- ToastsPage ---
+function ToastsPage() {
+  const [toast, setToast] = useState({ visible: false, message: '', variant: 'info' });
+
+  const showToast = (message, variant) => {
+    setToast({ visible: true, message, variant });
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Toasts</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Brief notification messages</p>
+      </div>
+      <Card title="Trigger Toasts">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+          <Button variant="secondary" onClick={() => showToast('Changes saved successfully', 'success')}>Success Toast</Button>
+          <Button variant="secondary" onClick={() => showToast('Something went wrong', 'error')}>Error Toast</Button>
+          <Button variant="secondary" onClick={() => showToast('Check your internet connection', 'warning')}>Warning Toast</Button>
+          <Button variant="secondary" onClick={() => showToast('Syncing your data...', 'info')}>Info Toast</Button>
+        </div>
+      </Card>
+      <Toast
+        visible={toast.visible}
+        message={toast.message}
+        variant={toast.variant}
+        onClose={() => setToast(prev => ({ ...prev, visible: false }))}
+      />
+    </div>
+  );
+}
+
+// --- ProgressPage ---
+function ProgressPage() {
+  const [progress, setProgress] = useState(65);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Progress</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Linear and circular progress indicators</p>
+      </div>
+      <Card title="Progress Bars">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div>
+            <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family, marginBottom: '6px' }}>Default</div>
+            <ProgressBar value={progress} showLabel />
+          </div>
+          <div>
+            <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family, marginBottom: '6px' }}>Success</div>
+            <ProgressBar value={100} variant="success" showLabel />
+          </div>
+          <div>
+            <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family, marginBottom: '6px' }}>Warning</div>
+            <ProgressBar value={45} variant="warning" showLabel />
+          </div>
+          <div>
+            <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family, marginBottom: '6px' }}>Error</div>
+            <ProgressBar value={15} variant="error" showLabel />
+          </div>
+        </div>
+      </Card>
+      <Card title="Sizes">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div><span style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Small</span><ProgressBar value={70} size="sm" /></div>
+          <div><span style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Medium</span><ProgressBar value={70} size="md" /></div>
+          <div><span style={{ fontSize: tokens.font.size.sm, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Large</span><ProgressBar value={70} size="lg" /></div>
+        </div>
+      </Card>
+      <Card title="Circular Progress">
+        <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
+          <CircularProgress value={progress} />
+          <CircularProgress value={85} color={tokens.color.green} />
+          <CircularProgress value={35} size={48} strokeWidth={3} color={tokens.color.red} />
+          <CircularProgress value={100} color={tokens.color.green} />
+        </div>
+      </Card>
+      <Card title="Interactive">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <Button variant="secondary" size="sm" onClick={() => setProgress(p => Math.max(0, p - 10))}>-10</Button>
+          <div style={{ flex: 1 }}><ProgressBar value={progress} showLabel /></div>
+          <Button variant="secondary" size="sm" onClick={() => setProgress(p => Math.min(100, p + 10))}>+10</Button>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// --- TabsPage ---
+function TabsPage() {
+  const [tab, setTab] = useState('all');
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Tabs</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Organize content into selectable sections</p>
+      </div>
+      <Card title="Basic Tabs" padding="0">
+        <div style={{ padding: '0 16px' }}>
+          <Tabs
+            tabs={[
+              { value: 'all', label: 'All', count: 42 },
+              { value: 'active', label: 'Active', count: 28 },
+              { value: 'draft', label: 'Draft', count: 9 },
+              { value: 'archived', label: 'Archived', count: 5 },
+            ]}
+            activeTab={tab}
+            onChange={setTab}
+          />
+        </div>
+        <div style={{ padding: '20px' }}>
+          <div style={{ fontSize: tokens.font.size.base, color: tokens.color.text, fontFamily: tokens.font.family }}>
+            Showing content for: <strong>{tab}</strong>
+          </div>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// --- BreadcrumbsPage ---
+function BreadcrumbsPage() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Breadcrumbs</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Navigation path indicators</p>
+      </div>
+      <Card title="Examples">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <Breadcrumbs items={[{ label: 'Home' }, { label: 'Products' }, { label: 'T-Shirts' }]} />
+          <Breadcrumbs items={[{ label: 'Dashboard' }, { label: 'Settings' }, { label: 'Notifications' }, { label: 'Email' }]} />
+          <Breadcrumbs items={[{ label: 'Orders' }, { label: '#1001' }]} />
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+// --- ModalsPage ---
+function ModalsPage() {
+  const [basic, setBasic] = useState(false);
+  const [confirm, setConfirm] = useState(false);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Modals</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Dialog overlays for focused interactions</p>
+      </div>
+      <Card title="Open Modals">
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <Button variant="secondary" onClick={() => setBasic(true)}>Basic Modal</Button>
+          <Button variant="danger" onClick={() => setConfirm(true)}>Confirmation Modal</Button>
+        </div>
+      </Card>
+      <Modal open={basic} onClose={() => setBasic(false)} title="Edit Product"
+        footer={<><Button variant="secondary" onClick={() => setBasic(false)}>Cancel</Button><Button onClick={() => setBasic(false)}>Save</Button></>}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <Input label="Product name" placeholder="Enter product name" />
+          <Textarea label="Description" placeholder="Enter description" rows={3} />
+        </div>
+      </Modal>
+      <Modal open={confirm} onClose={() => setConfirm(false)} title="Delete Product" size="sm"
+        footer={<><Button variant="secondary" onClick={() => setConfirm(false)}>Cancel</Button><Button variant="danger" onClick={() => setConfirm(false)}>Delete</Button></>}>
+        <p style={{ margin: 0 }}>Are you sure you want to delete this product? This action cannot be undone.</p>
+      </Modal>
+    </div>
+  );
+}
+
+// --- SheetsPage ---
+function SheetsPage() {
+  const [rightSheet, setRightSheet] = useState(false);
+  const [leftSheet, setLeftSheet] = useState(false);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      <div>
+        <h1 style={{ margin: 0, fontSize: tokens.font.size.xl, fontWeight: tokens.font.weight.bold, color: tokens.color.text, fontFamily: tokens.font.family }}>Sheets</h1>
+        <p style={{ margin: '4px 0 0', fontSize: tokens.font.size.base, color: tokens.color.textSecondary, fontFamily: tokens.font.family }}>Slide-out panels for detail views and forms</p>
+      </div>
+      <Card title="Open Sheets">
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <Button variant="secondary" onClick={() => setRightSheet(true)}>Right Sheet</Button>
+          <Button variant="secondary" onClick={() => setLeftSheet(true)}>Left Sheet</Button>
+        </div>
+      </Card>
+      <Sheet open={rightSheet} onClose={() => setRightSheet(false)} title="Order Details" side="right">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ padding: '12px 16px', backgroundColor: tokens.color.yellowSurface, borderRadius: tokens.radius.md }}>
+            <div style={{ fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.semibold, color: '#8A6D00', fontFamily: tokens.font.family }}>Note</div>
+            <div style={{ fontSize: tokens.font.size.sm, color: tokens.color.text, fontFamily: tokens.font.family, marginTop: '2px' }}>Customer requested gift wrapping.</div>
+          </div>
+          <ListItem title="Short Sleeve T-Shirt" description="Size: M · Qty: 2 · $58.00" bordered />
+          <ListItem title="Canvas Sneakers" description="Size: 10 · Qty: 1 · $65.00" bordered={false} />
+          <div style={{ borderTop: `1px solid ${tokens.color.border}`, paddingTop: '12px', display: 'flex', justifyContent: 'space-between' }}>
+            <span style={{ fontWeight: tokens.font.weight.semibold, fontFamily: tokens.font.family }}>Total</span>
+            <span style={{ fontWeight: tokens.font.weight.bold, fontFamily: tokens.font.family }}>$123.00</span>
+          </div>
+          <Button fullWidth>Mark as fulfilled</Button>
+        </div>
+      </Sheet>
+      <Sheet open={leftSheet} onClose={() => setLeftSheet(false)} title="Filters" side="left" width="320px">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <Select label="Status" options={[{ value: 'paid', label: 'Paid' }, { value: 'pending', label: 'Pending' }, { value: 'refunded', label: 'Refunded' }]} value="" onChange={() => {}} />
+          <Input label="Customer" placeholder="Search customer..." />
+          <div style={{ display: 'flex', gap: '8px', marginTop: '8px' }}>
+            <Button variant="secondary" fullWidth onClick={() => setLeftSheet(false)}>Clear</Button>
+            <Button fullWidth onClick={() => setLeftSheet(false)}>Apply</Button>
+          </div>
+        </div>
+      </Sheet>
+    </div>
+  );
+}
+
+
+// ============================================================
+// NAVIGATION & LAYOUT
+// ============================================================
+const navSections = [
+  {
+    title: 'Foundation',
+    items: [
+      { id: 'overview', label: 'Overview', icon: '◎' },
+      { id: 'colors', label: 'Colors', icon: '◐' },
+      { id: 'typography', label: 'Typography', icon: 'Aa' },
+    ],
+  },
+  {
+    title: 'Controls',
+    items: [
+      { id: 'buttons', label: 'Buttons', icon: '▢' },
+      { id: 'inputs', label: 'Inputs & Forms', icon: '▤' },
+      { id: 'toggles', label: 'Toggles', icon: '◑' },
+      { id: 'segmented', label: 'Segmented Control', icon: '▥' },
+    ],
+  },
+  {
+    title: 'Data Display',
+    items: [
+      { id: 'cards', label: 'Cards', icon: '☐' },
+      { id: 'tables', label: 'Tables', icon: '▦' },
+      { id: 'lists', label: 'Lists', icon: '☰' },
+      { id: 'badges', label: 'Badges & Tags', icon: '●' },
+    ],
+  },
+  {
+    title: 'Feedback',
+    items: [
+      { id: 'alerts', label: 'Alerts', icon: '△' },
+      { id: 'toasts', label: 'Toasts', icon: '▣' },
+      { id: 'progress', label: 'Progress', icon: '◔' },
+    ],
+  },
+  {
+    title: 'Navigation',
+    items: [
+      { id: 'tabs', label: 'Tabs', icon: '⊟' },
+      { id: 'breadcrumbs', label: 'Breadcrumbs', icon: '→' },
+    ],
+  },
+  {
+    title: 'Overlays',
+    items: [
+      { id: 'modals', label: 'Modals', icon: '⊡' },
+      { id: 'sheets', label: 'Sheets', icon: '⊞' },
+    ],
+  },
+];
+
+const pages = {
+  overview: OverviewPage,
+  colors: ColorsPage,
+  typography: TypographyPage,
+  buttons: ButtonsPage,
+  inputs: InputsPage,
+  toggles: TogglesPage,
+  segmented: SegmentedControlPage,
+  cards: CardsPage,
+  tables: TablesPage,
+  lists: ListsPage,
+  badges: BadgesPage,
+  alerts: AlertsPage,
+  toasts: ToastsPage,
+  progress: ProgressPage,
+  tabs: TabsPage,
+  breadcrumbs: BreadcrumbsPage,
+  modals: ModalsPage,
+  sheets: SheetsPage,
+};
+
+
+// ============================================================
+// MAIN DASHBOARD
+// ============================================================
+export default function AppleHIGDashboard() {
+  const [activePage, setActivePage] = useState('overview');
+  const [collapsedSections, setCollapsedSections] = useState({});
+
+  const toggleSection = (title) => {
+    setCollapsedSections(prev => ({ ...prev, [title]: !prev[title] }));
+  };
+
+  const PageComponent = pages[activePage] || OverviewPage;
+
+  return (
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', fontFamily: tokens.font.family, backgroundColor: tokens.color.bg }}>
+      {/* Font */}
+      <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet" />
+
+      {/* Animations */}
+      <style>{`
+        @keyframes slideUp { from { opacity: 0; transform: translateX(-50%) translateY(10px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        @keyframes fadeScale { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+        @keyframes slideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+        @keyframes slideInLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+        * { box-sizing: border-box; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: ${tokens.color.gray300}; border-radius: 3px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+      `}</style>
+
+      {/* Top Nav */}
+      <header style={{
+        height: tokens.nav.height,
+        backgroundColor: tokens.color.surface,
+        borderBottom: `1px solid ${tokens.color.border}`,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '0 20px',
+        flexShrink: 0,
+        zIndex: 100,
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{
+            width: '28px', height: '28px', borderRadius: tokens.radius.md,
+            backgroundColor: tokens.color.gray900, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            color: '#FFF', fontSize: '14px', fontWeight: tokens.font.weight.bold,
+          }}>UI</div>
+          <span style={{ fontSize: tokens.font.size.md, fontWeight: tokens.font.weight.semibold, color: tokens.color.text }}>Component Library</span>
+          <Badge variant="info">v1.0</Badge>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <Input placeholder="Search components..." style={{ width: '240px' }} />
+          <div style={{
+            width: '32px', height: '32px', borderRadius: '50%',
+            backgroundColor: tokens.color.gray200, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontSize: tokens.font.size.sm, fontWeight: tokens.font.weight.semibold, color: tokens.color.text,
+            cursor: 'pointer',
+          }}>T</div>
+        </div>
+      </header>
+
+      <div style={{ flex: 1, display: 'flex', overflow: 'hidden' }}>
+        {/* Sidebar */}
+        <nav style={{
+          width: tokens.nav.sidebarWidth,
+          backgroundColor: tokens.color.gray100,
+          borderRight: `1px solid ${tokens.color.border}`,
+          overflowY: 'auto',
+          padding: '12px 0',
+          flexShrink: 0,
+        }}>
+          {navSections.map(section => {
+            const collapsed = collapsedSections[section.title];
+            return (
+              <div key={section.title} style={{ marginBottom: '4px' }}>
+                <button
+                  onClick={() => toggleSection(section.title)}
+                  style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                    width: '100%', padding: '6px 16px',
+                    fontSize: tokens.font.size.xs, fontWeight: tokens.font.weight.semibold,
+                    color: tokens.color.textSecondary, textTransform: 'uppercase', letterSpacing: '0.5px',
+                    backgroundColor: 'transparent', border: 'none', cursor: 'pointer',
+                    fontFamily: tokens.font.family,
+                  }}
+                >
+                  {section.title}
+                  <span style={{ fontSize: '10px', transform: collapsed ? 'rotate(-90deg)' : 'rotate(0deg)', transition: `transform ${tokens.transition}` }}>▼</span>
+                </button>
+                {!collapsed && section.items.map(item => {
+                  const active = item.id === activePage;
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => setActivePage(item.id)}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: '10px',
+                        width: '100%', padding: '7px 16px 7px 20px',
+                        fontSize: tokens.font.size.sm,
+                        fontWeight: active ? tokens.font.weight.medium : tokens.font.weight.regular,
+                        color: active ? tokens.color.text : tokens.color.textSecondary,
+                        backgroundColor: active ? tokens.color.surface : 'transparent',
+                        border: active ? `1px solid ${tokens.color.border}` : '1px solid transparent',
+                        borderRadius: '6px',
+                        margin: '1px 8px',
+                        cursor: 'pointer',
+                        fontFamily: tokens.font.family,
+                        textAlign: 'left',
+                        transition: `all ${tokens.transition}`,
+                        boxShadow: active ? tokens.shadow.card : 'none',
+                      }}
+                    >
+                      <span style={{ width: '20px', textAlign: 'center', fontSize: '13px', opacity: active ? 1 : 0.6 }}>{item.icon}</span>
+                      {item.label}
+                    </button>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </nav>
+
+        {/* Main Content */}
+        <main style={{
+          flex: 1,
+          overflowY: 'auto',
+          padding: '24px',
+          scrollBehavior: 'smooth',
+        }}>
+          <div style={{ maxWidth: '960px' }}>
+            <PageComponent />
+          </div>
+        </main>
+      </div>
+    </div>
+  );
+}

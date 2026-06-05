@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Components 776-800 - Apple HIG Style</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Satoshi',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F6F6F7;color:#1D1D1F;-webkit-font-smoothing:antialiased;padding:20px;}
+.component{background:#FFF;border:1px solid #E3E3E8;border-radius:12px;padding:32px;margin-bottom:24px;box-shadow:0 1px 0 rgba(0,0,0,0.04);}
+.label{font-size:13px;color:#6D6D72;margin-bottom:20px;font-weight:500;}
+nav{display:flex;align-items:center;gap:12px;}
+a{text-decoration:none;color:#1D1D1F;transition:0.2s ease;}
+button{border:none;background:none;cursor:pointer;font-family:inherit;transition:0.2s ease;}
+</style>
+</head>
+<body>
+
+<div class="component">
+<div class="label">776 — Workspace Switcher Menu</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px;width:280px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<div style="padding:12px;border-bottom:1px solid #E3E3E8;margin-bottom:12px;">
+<div style="display:flex;align-items:center;gap:12px;">
+<div style="width:36px;height:36px;background:#2C6ECB;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#FFF;font-weight:600;">A</div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;">Acme Corp</div>
+<div style="font-size:12px;color:#6D6D72;">Free Plan</div>
+</div>
+</div>
+</div>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<div style="width:32px;height:32px;background:#1A8245;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#FFF;font-weight:600;font-size:14px;">S</div>
+<div style="font-size:14px;color:#1D1D1F;">Startup Inc</div>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;margin-bottom:12px;">
+<div style="width:32px;height:32px;background:#B98900;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#FFF;font-weight:600;font-size:14px;">P</div>
+<div style="font-size:14px;color:#1D1D1F;">Personal</div>
+</a>
+<button style="width:100%;padding:10px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;font-weight:500;color:#2C6ECB;text-align:left;">+ Create Workspace</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">777 — Command Palette Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px;width:560px;box-shadow:0 8px 24px rgba(0,0,0,0.12);">
+<div style="padding:12px;border-bottom:1px solid #E3E3E8;margin-bottom:12px;">
+<input type="text" placeholder="Type a command or search..." style="width:100%;border:none;outline:none;font-size:16px;font-family:inherit;color:#1D1D1F;">
+</div>
+<div style="font-size:11px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;padding:0 12px;margin-bottom:8px;">Quick Actions</div>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;background:#F6F6F7;margin-bottom:6px;">
+<span style="font-size:16px;">📄</span>
+<span style="flex:1;font-size:14px;color:#1D1D1F;">Create new document</span>
+<span style="font-size:12px;color:#AEAEB2;">⌘N</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<span style="font-size:16px;">👥</span>
+<span style="flex:1;font-size:14px;color:#1D1D1F;">Invite team member</span>
+<span style="font-size:12px;color:#AEAEB2;">⌘I</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;">
+<span style="font-size:16px;">⚙️</span>
+<span style="flex:1;font-size:14px;color:#1D1D1F;">Open settings</span>
+<span style="font-size:12px;color:#AEAEB2;">⌘,</span>
+</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">778 — Activity Feed Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:360px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;">Activity</div>
+<select style="padding:6px 10px;border:1px solid #E3E3E8;border-radius:6px;font-size:12px;font-family:inherit;background:#FFF;">
+<option>All Activity</option>
+<option>My Activity</option>
+<option>Team Activity</option>
+</select>
+</div>
+<a href="#" style="display:flex;gap:12px;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div style="width:32px;height:32px;background:#2C6ECB;border-radius:50%;flex-shrink:0;"></div>
+<div style="flex:1;">
+<div style="font-size:13px;color:#1D1D1F;margin-bottom:4px;"><strong>Sarah</strong> commented on your task</div>
+<div style="font-size:12px;color:#6D6D72;">5 minutes ago</div>
+</div>
+</a>
+<a href="#" style="display:flex;gap:12px;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div style="width:32px;height:32px;background:#1A8245;border-radius:50%;flex-shrink:0;"></div>
+<div style="flex:1;">
+<div style="font-size:13px;color:#1D1D1F;margin-bottom:4px;"><strong>John</strong> updated project status</div>
+<div style="font-size:12px;color:#6D6D72;">1 hour ago</div>
+</div>
+</a>
+<a href="#" style="display:flex;gap:12px;padding:12px;border-radius:8px;">
+<div style="width:32px;height:32px;background:#B98900;border-radius:50%;flex-shrink:0;"></div>
+<div style="flex:1;">
+<div style="font-size:13px;color:#6D6D72;margin-bottom:4px;"><strong>Emma</strong> created new milestone</div>
+<div style="font-size:12px;color:#AEAEB2;">3 hours ago</div>
+</div>
+</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">779 — Minimal Top Bar Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;max-width:1200px;">
+<div style="display:flex;align-items:center;gap:32px;">
+<div style="font-size:18px;font-weight:700;color:#1D1D1F;">Brand</div>
+<div style="display:flex;gap:24px;">
+<a href="#" style="font-size:14px;color:#1D1D1F;">Product</a>
+<a href="#" style="font-size:14px;color:#6D6D72;">Features</a>
+<a href="#" style="font-size:14px;color:#6D6D72;">Pricing</a>
+</div>
+</div>
+<div style="display:flex;gap:12px;">
+<button style="padding:8px 16px;font-size:14px;color:#1D1D1F;">Sign In</button>
+<button style="padding:8px 20px;background:#1A1A1A;color:#FFF;border-radius:8px;font-size:14px;font-weight:500;">Get Started</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">780 — Kanban Board Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;max-width:900px;">
+<div style="display:flex;gap:8px;">
+<button style="padding:8px 16px;background:#F6F6F7;border-radius:8px;font-size:13px;font-weight:500;color:#1D1D1F;border:1px solid #E3E3E8;">Board View</button>
+<button style="padding:8px 16px;border-radius:8px;font-size:13px;color:#6D6D72;">List View</button>
+<button style="padding:8px 16px;border-radius:8px;font-size:13px;color:#6D6D72;">Calendar</button>
+</div>
+<div style="display:flex;gap:8px;align-items:center;">
+<button style="padding:8px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;color:#6D6D72;">Filter</button>
+<button style="padding:8px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;color:#6D6D72;">Sort</button>
+<button style="padding:8px 16px;background:#2C6ECB;color:#FFF;border-radius:8px;font-size:13px;font-weight:500;">+ Add Task</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">781 — Calendar View Switcher</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;max-width:700px;">
+<div style="display:flex;gap:4px;padding:4px;background:#F6F6F7;border-radius:8px;">
+<button style="padding:8px 16px;background:#FFFFFF;border-radius:6px;font-size:13px;font-weight:500;color:#1D1D1F;box-shadow:0 1px 2px rgba(0,0,0,0.06);">Day</button>
+<button style="padding:8px 16px;border-radius:6px;font-size:13px;color:#6D6D72;">Week</button>
+<button style="padding:8px 16px;border-radius:6px;font-size:13px;color:#6D6D72;">Month</button>
+<button style="padding:8px 16px;border-radius:6px;font-size:13px;color:#6D6D72;">Year</button>
+</div>
+<div style="display:flex;gap:8px;">
+<button style="width:32px;height:32px;border:1px solid #E3E3E8;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#6D6D72;">←</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;font-weight:500;color:#1D1D1F;">Today</button>
+<button style="width:32px;height:32px;border:1px solid #E3E3E8;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#6D6D72;">→</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">782 — Inbox Navigation Panel</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:240px;">
+<a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;background:#F6F6F7;margin-bottom:6px;">
+<div style="display:flex;align-items:center;gap:10px;">
+<span style="font-size:16px;">📥</span>
+<span style="font-size:14px;font-weight:500;color:#1D1D1F;">Inbox</span>
+</div>
+<span style="padding:2px 8px;background:#2C6ECB;color:#FFF;border-radius:10px;font-size:11px;font-weight:600;">12</span>
+</a>
+<a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<div style="display:flex;align-items:center;gap:10px;">
+<span style="font-size:16px;">⭐</span>
+<span style="font-size:14px;color:#6D6D72;">Starred</span>
+</div>
+<span style="font-size:12px;color:#AEAEB2;">3</span>
+</a>
+<a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<div style="display:flex;align-items:center;gap:10px;">
+<span style="font-size:16px;">📤</span>
+<span style="font-size:14px;color:#6D6D72;">Sent</span>
+</div>
+</a>
+<a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;margin-bottom:12px;">
+<div style="display:flex;align-items:center;gap:10px;">
+<span style="font-size:16px;">📝</span>
+<span style="font-size:14px;color:#6D6D72;">Drafts</span>
+</div>
+<span style="font-size:12px;color:#AEAEB2;">2</span>
+</a>
+<div style="border-top:1px solid #E3E3E8;padding-top:12px;">
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;">
+<span style="font-size:16px;">🗑️</span>
+<span style="font-size:14px;color:#6D6D72;">Trash</span>
+</a>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">783 — Split View Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;display:grid;grid-template-columns:200px 1fr;max-width:800px;">
+<div style="padding:20px;border-right:1px solid #E3E3E8;">
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;background:#F6F6F7;font-size:14px;font-weight:500;color:#1D1D1F;margin-bottom:6px;">Overview</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;margin-bottom:6px;">Analytics</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;margin-bottom:6px;">Reports</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;">Settings</a>
+</div>
+<div style="padding:20px;">
+<div style="font-size:20px;font-weight:600;color:#1D1D1F;margin-bottom:8px;">Overview</div>
+<div style="font-size:14px;color:#6D6D72;">View your dashboard metrics and recent activity</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">784 — Segmented Control Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:500px;">
+<div style="display:flex;padding:4px;background:#F6F6F7;border-radius:10px;">
+<button style="flex:1;padding:10px;background:#FFFFFF;border-radius:8px;font-size:14px;font-weight:500;color:#1D1D1F;box-shadow:0 1px 2px rgba(0,0,0,0.06);">Personal</button>
+<button style="flex:1;padding:10px;border-radius:8px;font-size:14px;color:#6D6D72;">Business</button>
+<button style="flex:1;padding:10px;border-radius:8px;font-size:14px;color:#6D6D72;">Enterprise</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">785 — Floating Action Navigation</div>
+<nav style="position:relative;background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:40px;max-width:600px;min-height:200px;">
+<div style="position:absolute;bottom:24px;right:24px;display:flex;flex-direction:column;gap:12px;align-items:flex-end;">
+<button style="width:48px;height:48px;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;">📝</button>
+<button style="width:48px;height:48px;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;">📷</button>
+<button style="width:56px;height:56px;background:#2C6ECB;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#FFF;box-shadow:0 4px 12px rgba(44,110,203,0.3);">+</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">786 — Step Progress Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:32px;max-width:800px;">
+<div style="display:flex;align-items:center;justify-content:space-between;">
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;">
+<div style="width:40px;height:40px;background:#1A8245;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FFF;font-weight:600;">✓</div>
+<div style="font-size:13px;font-weight:500;color:#1D1D1F;">Account</div>
+</div>
+<div style="height:2px;background:#1A8245;flex:1;"></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;">
+<div style="width:40px;height:40px;background:#2C6ECB;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FFF;font-weight:600;">2</div>
+<div style="font-size:13px;font-weight:500;color:#1D1D1F;">Profile</div>
+</div>
+<div style="height:2px;background:#E3E3E8;flex:1;"></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;">
+<div style="width:40px;height:40px;background:#F6F6F7;border:2px solid #E3E3E8;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#AEAEB2;font-weight:600;">3</div>
+<div style="font-size:13px;color:#6D6D72;">Preferences</div>
+</div>
+<div style="height:2px;background:#E3E3E8;flex:1;"></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;">
+<div style="width:40px;height:40px;background:#F6F6F7;border:2px solid #E3E3E8;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#AEAEB2;font-weight:600;">4</div>
+<div style="font-size:13px;color:#6D6D72;">Complete</div>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">787 — Context Menu Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:12px;width:220px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;font-size:13px;color:#1D1D1F;margin-bottom:4px;">
+<span>✏️</span><span>Edit</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;font-size:13px;color:#1D1D1F;margin-bottom:4px;">
+<span>📋</span><span>Duplicate</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;font-size:13px;color:#1D1D1F;margin-bottom:8px;">
+<span>📤</span><span>Share</span>
+</a>
+<div style="border-top:1px solid #E3E3E8;padding-top:8px;">
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;font-size:13px;color:#D72C0D;">
+<span>🗑️</span><span>Delete</span>
+</a>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">788 — Team Switcher Compact</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:12px;width:200px;">
+<button style="width:100%;display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;background:#F6F6F7;margin-bottom:8px;">
+<div style="width:24px;height:24px;background:#2C6ECB;border-radius:6px;"></div>
+<span style="flex:1;font-size:14px;font-weight:500;color:#1D1D1F;text-align:left;">Design Team</span>
+<span style="font-size:12px;color:#AEAEB2;">▼</span>
+</button>
+<a href="#" style="display:block;padding:8px 10px;border-radius:6px;font-size:13px;color:#6D6D72;margin-bottom:4px;">Team Settings</a>
+<a href="#" style="display:block;padding:8px 10px;border-radius:6px;font-size:13px;color:#6D6D72;margin-bottom:4px;">Members</a>
+<a href="#" style="display:block;padding:8px 10px;border-radius:6px;font-size:13px;color:#6D6D72;">Invite People</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">789 — Pin/Favorite Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:260px;">
+<div style="font-size:11px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;">Pinned Items</div>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<span style="font-size:16px;">📌</span>
+<span style="flex:1;font-size:14px;color:#1D1D1F;">Q4 Planning</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<span style="font-size:16px;">📌</span>
+<span style="flex:1;font-size:14px;color:#1D1D1F;">Brand Assets</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:12px;">
+<span style="font-size:16px;">📌</span>
+<span style="flex:1;font-size:14px;color:#1D1D1F;">Design System</span>
+</a>
+<div style="border-top:1px solid #E3E3E8;padding-top:12px;">
+<div style="font-size:11px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;">Recent</div>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;">
+<span style="flex:1;font-size:14px;color:#6D6D72;">Landing Page</span>
+</a>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">790 — Toolbar Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:4px;max-width:700px;">
+<div style="display:flex;gap:4px;padding-right:12px;border-right:1px solid #E3E3E8;">
+<button style="width:36px;height:36px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">B</button>
+<button style="width:36px;height:36px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;font-style:italic;font-size:14px;">I</button>
+<button style="width:36px;height:36px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;text-decoration:underline;font-size:14px;">U</button>
+</div>
+<div style="display:flex;gap:4px;padding-right:12px;border-right:1px solid #E3E3E8;">
+<button style="width:36px;height:36px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;font-size:16px;">≡</button>
+<button style="width:36px;height:36px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;font-size:16px;">☰</button>
+<button style="width:36px;height:36px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;font-size:16px;">≣</button>
+</div>
+<div style="display:flex;gap:4px;">
+<button style="width:36px;height:36px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;font-size:14px;">🔗</button>
+<button style="width:36px;height:36px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;font-size:14px;">📷</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">791 — Language Selector Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px;width:200px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size:12px;font-weight:600;color:#6D6D72;margin-bottom:12px;">Select Language</div>
+<a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;background:#F6F6F7;margin-bottom:6px;">
+<span style="font-size:14px;color:#1D1D1F;">English</span>
+<span style="color:#2C6ECB;">✓</span>
+</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;margin-bottom:6px;">Español</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;margin-bottom:6px;">Français</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;margin-bottom:6px;">Deutsch</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;">日本語</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">792 — Priority Navigation Overflow</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;max-width:700px;">
+<div style="display:flex;gap:16px;align-items:center;">
+<a href="#" style="font-size:14px;font-weight:500;color:#1D1D1F;">Home</a>
+<a href="#" style="font-size:14px;color:#6D6D72;">Products</a>
+<a href="#" style="font-size:14px;color:#6D6D72;">Services</a>
+<a href="#" style="font-size:14px;color:#6D6D72;">About</a>
+</div>
+<button style="padding:8px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:14px;color:#6D6D72;">More ···</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">793 — Version Control Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:280px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;">Version History</div>
+<button style="font-size:12px;color:#2C6ECB;font-weight:500;">Restore</button>
+</div>
+<a href="#" style="display:block;padding:12px;border:1px solid #E3E3E8;border-radius:8px;margin-bottom:8px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+<span style="font-size:13px;font-weight:500;color:#1D1D1F;">v2.4.1</span>
+<span style="padding:3px 8px;background:#1A8245;color:#FFF;border-radius:6px;font-size:10px;font-weight:600;">CURRENT</span>
+</div>
+<div style="font-size:12px;color:#6D6D72;">Updated 2 hours ago</div>
+</a>
+<a href="#" style="display:block;padding:12px;border-radius:8px;margin-bottom:8px;">
+<div style="font-size:13px;font-weight:500;color:#6D6D72;margin-bottom:4px;">v2.4.0</div>
+<div style="font-size:12px;color:#AEAEB2;">Updated yesterday</div>
+</a>
+<a href="#" style="display:block;padding:12px;border-radius:8px;">
+<div style="font-size:13px;font-weight:500;color:#6D6D72;margin-bottom:4px;">v2.3.9</div>
+<div style="font-size:12px;color:#AEAEB2;">Updated 3 days ago</div>
+</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">794 — Library Navigation Drawer</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:24px;width:280px;">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Library</div>
+<div style="margin-bottom:20px;">
+<div style="font-size:11px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Collections</div>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;background:#F6F6F7;font-size:14px;color:#1D1D1F;margin-bottom:6px;">All Items</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;margin-bottom:6px;">Photos</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;">Videos</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;">Documents</a>
+</div>
+<div>
+<div style="font-size:11px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Playlists</div>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;margin-bottom:6px;">Favorites</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;">Recent</a>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">795 — Help & Support Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:260px;">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Need Help?</div>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #E3E3E8;border-radius:10px;margin-bottom:8px;">
+<div style="width:36px;height:36px;background:#2C6ECB;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">📚</div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Documentation</div>
+<div style="font-size:12px;color:#6D6D72;">Browse guides</div>
+</div>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #E3E3E8;border-radius:10px;margin-bottom:8px;">
+<div style="width:36px;height:36px;background:#1A8245;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">💬</div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Contact Support</div>
+<div style="font-size:12px;color:#6D6D72;">Get assistance</div>
+</div>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #E3E3E8;border-radius:10px;">
+<div style="width:36px;height:36px;background:#B98900;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">🎓</div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Tutorials</div>
+<div style="font-size:12px;color:#6D6D72;">Watch videos</div>
+</div>
+</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">796 — Playlist Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:300px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;">Now Playing</div>
+<button style="font-size:12px;color:#2C6ECB;font-weight:500;">Clear</button>
+</div>
+<div style="display:flex;gap:12px;margin-bottom:16px;">
+<div style="width:80px;height:80px;background:#2C6ECB;border-radius:10px;"></div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:4px;">Summer Vibes</div>
+<div style="font-size:13px;color:#6D6D72;margin-bottom:8px;">24 tracks</div>
+<div style="display:flex;gap:8px;">
+<button style="padding:6px 12px;background:#1A1A1A;color:#FFF;border-radius:6px;font-size:12px;font-weight:500;">Play</button>
+<button style="padding:6px 12px;border:1px solid #E3E3E8;border-radius:6px;font-size:12px;color:#6D6D72;">Shuffle</button>
+</div>
+</div>
+</div>
+<div style="border-top:1px solid #E3E3E8;padding-top:12px;">
+<a href="#" style="display:block;padding:8px;border-radius:6px;font-size:13px;color:#6D6D72;margin-bottom:4px;">Up Next: Track Title</a>
+<a href="#" style="display:block;padding:8px;border-radius:6px;font-size:13px;color:#6D6D72;">Track Title 2</a>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">797 — Form Section Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:24px;width:240px;">
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;background:#F6F6F7;margin-bottom:8px;">
+<div style="width:24px;height:24px;background:#1A8245;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FFF;font-size:12px;font-weight:600;">✓</div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Basic Info</div>
+</div>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;border:2px solid #2C6ECB;margin-bottom:8px;">
+<div style="width:24px;height:24px;background:#2C6ECB;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FFF;font-size:12px;font-weight:600;">2</div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Contact Details</div>
+</div>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;">
+<div style="width:24px;height:24px;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#AEAEB2;font-size:12px;font-weight:600;">3</div>
+<div style="flex:1;">
+<div style="font-size:14px;color:#6D6D72;">Preferences</div>
+</div>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;">
+<div style="width:24px;height:24px;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#AEAEB2;font-size:12px;font-weight:600;">4</div>
+<div style="flex:1;">
+<div style="font-size:14px;color:#6D6D72;">Review</div>
+</div>
+</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">798 — Media Player Controls Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;display:flex;align-items:center;gap:16px;max-width:600px;">
+<div style="display:flex;gap:8px;">
+<button style="width:40px;height:40px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;font-size:16px;">⏮️</button>
+<button style="width:48px;height:48px;border-radius:10px;background:#2C6ECB;color:#FFF;display:flex;align-items:center;justify-content:center;font-size:20px;">▶️</button>
+<button style="width:40px;height:40px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;font-size:16px;">⏭️</button>
+</div>
+<div style="flex:1;height:4px;background:#E3E3E8;border-radius:2px;position:relative;">
+<div style="position:absolute;left:0;top:0;width:40%;height:100%;background:#2C6ECB;border-radius:2px;"></div>
+</div>
+<div style="font-size:13px;color:#6D6D72;">2:34 / 5:12</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">799 — Permission Settings Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:320px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Access Permissions</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Can View</div>
+<div style="font-size:12px;color:#6D6D72;">Read-only access</div>
+</div>
+<input type="radio" name="permission" style="width:18px;height:18px;">
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Can Edit</div>
+<div style="font-size:12px;color:#6D6D72;">Make changes</div>
+</div>
+<input type="radio" name="permission" checked style="width:18px;height:18px;">
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Admin</div>
+<div style="font-size:12px;color:#6D6D72;">Full control</div>
+</div>
+<input type="radio" name="permission" style="width:18px;height:18px;">
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">800 — Comparison Table Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:800px;">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+<div style="text-align:center;padding:16px;border-radius:10px;border:1px solid #E3E3E8;">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;margin-bottom:8px;">Free</div>
+<div style="font-size:24px;font-weight:700;color:#1D1D1F;margin-bottom:4px;">$0</div>
+<div style="font-size:13px;color:#6D6D72;margin-bottom:16px;">per month</div>
+<button style="width:100%;padding:10px;border:1px solid #E3E3E8;border-radius:8px;font-size:14px;font-weight:500;color:#1D1D1F;">Current Plan</button>
+</div>
+<div style="text-align:center;padding:16px;border-radius:10px;border:2px solid #2C6ECB;">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;margin-bottom:8px;">Pro</div>
+<div style="font-size:24px;font-weight:700;color:#1D1D1F;margin-bottom:4px;">$29</div>
+<div style="font-size:13px;color:#6D6D72;margin-bottom:16px;">per month</div>
+<button style="width:100%;padding:10px;background:#2C6ECB;color:#FFF;border-radius:8px;font-size:14px;font-weight:500;">Upgrade</button>
+</div>
+<div style="text-align:center;padding:16px;border-radius:10px;border:1px solid #E3E3E8;">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;margin-bottom:8px;">Enterprise</div>
+<div style="font-size:24px;font-weight:700;color:#1D1D1F;margin-bottom:4px;">Custom</div>
+<div style="font-size:13px;color:#6D6D72;margin-bottom:16px;">contact us</div>
+<button style="width:100%;padding:10px;border:1px solid #E3E3E8;border-radius:8px;font-size:14px;font-weight:500;color:#1D1D1F;">Contact Sales</button>
+</div>
+</div>
+</nav>
+</div>
+
+</body>
+</html>

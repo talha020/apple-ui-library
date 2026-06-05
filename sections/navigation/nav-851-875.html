@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Components 851-875 - Apple HIG Style</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Satoshi',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F6F6F7;color:#1D1D1F;-webkit-font-smoothing:antialiased;padding:20px;}
+.component{background:#FFF;border:1px solid #E3E3E8;border-radius:12px;padding:32px;margin-bottom:24px;box-shadow:0 1px 0 rgba(0,0,0,0.04);}
+.label{font-size:13px;color:#6D6D72;margin-bottom:20px;font-weight:500;}
+nav{display:flex;align-items:center;gap:12px;}
+a{text-decoration:none;color:#1D1D1F;transition:0.2s ease;}
+button{border:none;background:none;cursor:pointer;font-family:inherit;transition:0.2s ease;}
+</style>
+</head>
+<body>
+
+<div class="component">
+<div class="label">851 — Pricing Tier Toggle Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:500px;">
+<div style="display:flex;align-items:center;justify-content:center;gap:12px;">
+<span style="font-size:14px;color:#6D6D72;">Monthly</span>
+<div style="position:relative;width:56px;height:32px;background:#E3E3E8;border-radius:16px;cursor:pointer;">
+<div style="position:absolute;left:4px;top:4px;width:24px;height:24px;background:#FFF;border-radius:50%;box-shadow:0 2px 4px rgba(0,0,0,0.1);transition:0.2s ease;"></div>
+</div>
+<span style="font-size:14px;font-weight:600;color:#1D1D1F;">Yearly</span>
+<span style="padding:4px 8px;background:#1A8245;color:#FFF;border-radius:6px;font-size:11px;font-weight:600;">Save 20%</span>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">852 — API Endpoint Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:280px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">API Endpoints</div>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;background:#F6F6F7;margin-bottom:6px;">
+<span style="padding:3px 8px;background:#1A8245;color:#FFF;border-radius:6px;font-size:10px;font-weight:700;">GET</span>
+<span style="flex:1;font-size:13px;color:#1D1D1F;font-family:monospace;">/users</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<span style="padding:3px 8px;background:#2C6ECB;color:#FFF;border-radius:6px;font-size:10px;font-weight:700;">POST</span>
+<span style="flex:1;font-size:13px;color:#6D6D72;font-family:monospace;">/users</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<span style="padding:3px 8px;background:#B98900;color:#FFF;border-radius:6px;font-size:10px;font-weight:700;">PUT</span>
+<span style="flex:1;font-size:13px;color:#6D6D72;font-family:monospace;">/users/:id</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;">
+<span style="padding:3px 8px;background:#D72C0D;color:#FFF;border-radius:6px;font-size:10px;font-weight:700;">DEL</span>
+<span style="flex:1;font-size:13px;color:#6D6D72;font-family:monospace;">/users/:id</span>
+</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">853 — Tag Management Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:700px;">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+<span style="font-size:13px;font-weight:500;color:#6D6D72;">Tags:</span>
+<span style="padding:6px 12px;background:#2C6ECB;color:#FFF;border-radius:10px;font-size:12px;font-weight:500;display:flex;align-items:center;gap:6px;">
+React
+<button style="color:#FFF;font-size:14px;">×</button>
+</span>
+<span style="padding:6px 12px;background:#1A8245;color:#FFF;border-radius:10px;font-size:12px;font-weight:500;display:flex;align-items:center;gap:6px;">
+TypeScript
+<button style="color:#FFF;font-size:14px;">×</button>
+</span>
+<span style="padding:6px 12px;background:#B98900;color:#FFF;border-radius:10px;font-size:12px;font-weight:500;display:flex;align-items:center;gap:6px;">
+Design
+<button style="color:#FFF;font-size:14px;">×</button>
+</span>
+<button style="padding:6px 12px;border:1px dashed #E3E3E8;border-radius:10px;font-size:12px;color:#2C6ECB;font-weight:500;">+ Add Tag</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">854 — Code Branch Selector</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px;width:280px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<div style="padding:12px;border-bottom:1px solid #E3E3E8;margin-bottom:12px;">
+<div style="display:flex;align-items:center;gap:10px;">
+<span style="font-size:16px;">🌿</span>
+<div style="flex:1;">
+<div style="font-size:13px;font-weight:600;color:#1D1D1F;">main</div>
+<div style="font-size:11px;color:#6D6D72;">Default branch</div>
+</div>
+<span style="font-size:12px;color:#AEAEB2;">▼</span>
+</div>
+</div>
+<div style="font-size:11px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;padding:0 12px;margin-bottom:8px;">Recent Branches</div>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:13px;color:#6D6D72;margin-bottom:4px;">feature/new-dashboard</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:13px;color:#6D6D72;margin-bottom:4px;">bugfix/login-error</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:13px;color:#6D6D72;">develop</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">855 — Deployment Environment Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px 20px;display:flex;gap:8px;max-width:600px;">
+<button style="padding:10px 20px;background:#1A8245;color:#FFF;border-radius:10px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px;">
+<span style="width:8px;height:8px;background:#FFF;border-radius:50%;"></span>
+<span>Production</span>
+</button>
+<button style="padding:10px 20px;border:1px solid #E3E3E8;border-radius:10px;font-size:13px;color:#6D6D72;font-weight:500;display:flex;align-items:center;gap:6px;">
+<span style="width:8px;height:8px;background:#B98900;border-radius:50%;"></span>
+<span>Staging</span>
+</button>
+<button style="padding:10px 20px;border:1px solid #E3E3E8;border-radius:10px;font-size:13px;color:#6D6D72;font-weight:500;display:flex;align-items:center;gap:6px;">
+<span style="width:8px;height:8px;background:#2C6ECB;border-radius:50%;"></span>
+<span>Development</span>
+</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">856 — Server Status Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:320px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Server Status</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div style="display:flex;align-items:center;gap:10px;">
+<span style="width:10px;height:10px;background:#1A8245;border-radius:50%;"></span>
+<span style="font-size:14px;color:#1D1D1F;">Web Server</span>
+</div>
+<span style="font-size:12px;color:#1A8245;font-weight:600;">Online</span>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div style="display:flex;align-items:center;gap:10px;">
+<span style="width:10px;height:10px;background:#1A8245;border-radius:50%;"></span>
+<span style="font-size:14px;color:#1D1D1F;">Database</span>
+</div>
+<span style="font-size:12px;color:#1A8245;font-weight:600;">Online</span>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;">
+<div style="display:flex;align-items:center;gap:10px;">
+<span style="width:10px;height:10px;background:#B98900;border-radius:50%;"></span>
+<span style="font-size:14px;color:#1D1D1F;">Cache Server</span>
+</div>
+<span style="font-size:12px;color:#B98900;font-weight:600;">Warning</span>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">857 — Backup Schedule Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:340px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Backup Schedule</div>
+<div style="margin-bottom:12px;padding:16px;background:#F6F6F7;border-radius:10px;border-left:4px solid #1A8245;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+<span style="font-size:13px;font-weight:600;color:#1D1D1F;">Daily Backup</span>
+<span style="padding:3px 8px;background:#1A8245;color:#FFF;border-radius:6px;font-size:10px;font-weight:600;">ACTIVE</span>
+</div>
+<div style="font-size:12px;color:#6D6D72;">Every day at 2:00 AM</div>
+</div>
+<div style="margin-bottom:12px;padding:16px;border-radius:10px;border:1px solid #E3E3E8;">
+<div style="font-size:13px;font-weight:600;color:#6D6D72;margin-bottom:8px;">Weekly Backup</div>
+<div style="font-size:12px;color:#AEAEB2;">Every Sunday at 3:00 AM</div>
+</div>
+<button style="width:100%;padding:10px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;font-weight:500;color:#2C6ECB;">Create New Schedule</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">858 — Database Connection Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:360px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Database Connections</div>
+<a href="#" style="display:block;padding:16px;border:2px solid #2C6ECB;background:#F6F6F7;border-radius:10px;margin-bottom:8px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+<span style="font-size:14px;font-weight:600;color:#1D1D1F;">PostgreSQL - Main</span>
+<span style="width:8px;height:8px;background:#1A8245;border-radius:50%;"></span>
+</div>
+<div style="font-size:12px;color:#6D6D72;">db-prod-01.example.com</div>
+</a>
+<a href="#" style="display:block;padding:16px;border:1px solid #E3E3E8;border-radius:10px;margin-bottom:8px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+<span style="font-size:14px;font-weight:500;color:#6D6D72;">Redis - Cache</span>
+<span style="width:8px;height:8px;background:#1A8245;border-radius:50%;"></span>
+</div>
+<div style="font-size:12px;color:#AEAEB2;">cache-01.example.com</div>
+</a>
+<button style="width:100%;padding:10px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;font-weight:500;color:#2C6ECB;">+ Add Connection</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">859 — Log Level Filter Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px 20px;display:flex;gap:8px;max-width:700px;">
+<button style="padding:8px 16px;background:#1A1A1A;color:#FFF;border-radius:8px;font-size:13px;font-weight:500;">All</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;color:#6D6D72;font-weight:500;display:flex;align-items:center;gap:6px;">
+<span style="width:6px;height:6px;background:#D72C0D;border-radius:50%;"></span>
+Error
+</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;color:#6D6D72;font-weight:500;display:flex;align-items:center;gap:6px;">
+<span style="width:6px;height:6px;background:#B98900;border-radius:50%;"></span>
+Warning
+</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;color:#6D6D72;font-weight:500;display:flex;align-items:center;gap:6px;">
+<span style="width:6px;height:6px;background:#2C6ECB;border-radius:50%;"></span>
+Info
+</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;color:#6D6D72;font-weight:500;display:flex;align-items:center;gap:6px;">
+<span style="width:6px;height:6px;background:#AEAEB2;border-radius:50%;"></span>
+Debug
+</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">860 — Feature Flag Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:360px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Feature Flags</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">New Dashboard</div>
+<div style="font-size:12px;color:#6D6D72;">Rollout: 100%</div>
+</div>
+<div style="position:relative;width:44px;height:24px;background:#1A8245;border-radius:12px;">
+<div style="position:absolute;right:2px;top:2px;width:20px;height:20px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Beta Features</div>
+<div style="font-size:12px;color:#6D6D72;">Rollout: 25%</div>
+</div>
+<div style="position:relative;width:44px;height:24px;background:#1A8245;border-radius:12px;">
+<div style="position:absolute;right:2px;top:2px;width:20px;height:20px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;">
+<div>
+<div style="font-size:14px;color:#6D6D72;">Dark Mode</div>
+<div style="font-size:12px;color:#AEAEB2;">Disabled</div>
+</div>
+<div style="position:relative;width:44px;height:24px;background:#E3E3E8;border-radius:12px;">
+<div style="position:absolute;left:2px;top:2px;width:20px;height:20px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">861 — Metric Dashboard Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:800px;">
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+<a href="#" style="padding:16px;border:1px solid #E3E3E8;border-radius:10px;background:#F6F6F7;">
+<div style="font-size:11px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Total Users</div>
+<div style="font-size:24px;font-weight:700;color:#1D1D1F;margin-bottom:4px;">12,458</div>
+<div style="font-size:12px;color:#1A8245;font-weight:500;">↑ 12.5%</div>
+</a>
+<a href="#" style="padding:16px;border:1px solid #E3E3E8;border-radius:10px;">
+<div style="font-size:11px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Revenue</div>
+<div style="font-size:24px;font-weight:700;color:#1D1D1F;margin-bottom:4px;">$48.2K</div>
+<div style="font-size:12px;color:#1A8245;font-weight:500;">↑ 8.3%</div>
+</a>
+<a href="#" style="padding:16px;border:1px solid #E3E3E8;border-radius:10px;">
+<div style="font-size:11px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Conversion</div>
+<div style="font-size:24px;font-weight:700;color:#1D1D1F;margin-bottom:4px;">3.8%</div>
+<div style="font-size:12px;color:#D72C0D;font-weight:500;">↓ 2.1%</div>
+</a>
+<a href="#" style="padding:16px;border:1px solid #E3E3E8;border-radius:10px;">
+<div style="font-size:11px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Active Now</div>
+<div style="font-size:24px;font-weight:700;color:#1D1D1F;margin-bottom:4px;">342</div>
+<div style="font-size:12px;color:#6D6D72;font-weight:500;">→ 0.0%</div>
+</a>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">862 — Widget Library Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:300px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;">Widgets</div>
+<button style="font-size:13px;color:#2C6ECB;font-weight:500;">+ Add</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;">
+<button style="padding:16px;border:1px solid #E3E3E8;border-radius:10px;text-align:center;">
+<div style="font-size:24px;margin-bottom:6px;">📊</div>
+<div style="font-size:12px;font-weight:500;color:#1D1D1F;">Charts</div>
+</button>
+<button style="padding:16px;border:1px solid #E3E3E8;border-radius:10px;text-align:center;">
+<div style="font-size:24px;margin-bottom:6px;">📋</div>
+<div style="font-size:12px;font-weight:500;color:#1D1D1F;">Tables</div>
+</button>
+<button style="padding:16px;border:1px solid #E3E3E8;border-radius:10px;text-align:center;">
+<div style="font-size:24px;margin-bottom:6px;">📈</div>
+<div style="font-size:12px;font-weight:500;color:#1D1D1F;">Metrics</div>
+</button>
+<button style="padding:16px;border:1px solid #E3E3E8;border-radius:10px;text-align:center;">
+<div style="font-size:24px;margin-bottom:6px;">🗺️</div>
+<div style="font-size:12px;font-weight:500;color:#1D1D1F;">Maps</div>
+</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">863 — Theme Customizer Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:280px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Appearance</div>
+<div style="margin-bottom:16px;">
+<div style="font-size:12px;font-weight:500;color:#6D6D72;margin-bottom:8px;">Theme Mode</div>
+<div style="display:flex;gap:8px;">
+<button style="flex:1;padding:12px;border:2px solid #2C6ECB;background:#F6F6F7;border-radius:8px;font-size:13px;font-weight:500;color:#1D1D1F;">☀️ Light</button>
+<button style="flex:1;padding:12px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;color:#6D6D72;">🌙 Dark</button>
+</div>
+</div>
+<div style="margin-bottom:16px;">
+<div style="font-size:12px;font-weight:500;color:#6D6D72;margin-bottom:8px;">Accent Color</div>
+<div style="display:flex;gap:8px;">
+<button style="width:36px;height:36px;background:#2C6ECB;border:2px solid #1D1D1F;border-radius:8px;"></button>
+<button style="width:36px;height:36px;background:#1A8245;border:1px solid #E3E3E8;border-radius:8px;"></button>
+<button style="width:36px;height:36px;background:#D72C0D;border:1px solid #E3E3E8;border-radius:8px;"></button>
+<button style="width:36px;height:36px;background:#B98900;border:1px solid #E3E3E8;border-radius:8px;"></button>
+</div>
+</div>
+<button style="width:100%;padding:10px;background:#2C6ECB;color:#FFF;border-radius:8px;font-size:13px;font-weight:500;">Apply Changes</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">864 — Integration Hub Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:340px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Integrations</div>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #E3E3E8;border-radius:10px;margin-bottom:8px;">
+<div style="width:40px;height:40px;background:#6D6D72;border-radius:8px;"></div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Slack</div>
+<div style="font-size:12px;color:#1A8245;">Connected</div>
+</div>
+<button style="padding:6px 12px;border:1px solid #E3E3E8;border-radius:6px;font-size:12px;color:#6D6D72;">Settings</button>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #E3E3E8;border-radius:10px;margin-bottom:8px;">
+<div style="width:40px;height:40px;background:#6D6D72;border-radius:8px;"></div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">GitHub</div>
+<div style="font-size:12px;color:#6D6D72;">Not connected</div>
+</div>
+<button style="padding:6px 12px;background:#2C6ECB;color:#FFF;border-radius:6px;font-size:12px;font-weight:500;">Connect</button>
+</a>
+<button style="width:100%;padding:10px;border:1px dashed #E3E3E8;border-radius:8px;font-size:13px;color:#2C6ECB;font-weight:500;">Browse Integrations</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">865 — Workflow Automation Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:340px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;">Workflows</div>
+<button style="padding:6px 12px;background:#2C6ECB;color:#FFF;border-radius:8px;font-size:12px;font-weight:500;">Create</button>
+</div>
+<div style="padding:12px;border:1px solid #E3E3E8;border-radius:10px;margin-bottom:8px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Welcome Email</div>
+<div style="position:relative;width:36px;height:20px;background:#1A8245;border-radius:10px;">
+<div style="position:absolute;right:2px;top:2px;width:16px;height:16px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+<div style="font-size:12px;color:#6D6D72;">Trigger: New user signup</div>
+</div>
+<div style="padding:12px;border:1px solid #E3E3E8;border-radius:10px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+<div style="font-size:14px;font-weight:500;color:#6D6D72;">Weekly Report</div>
+<div style="position:relative;width:36px;height:20px;background:#E3E3E8;border-radius:10px;">
+<div style="position:absolute;left:2px;top:2px;width:16px;height:16px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+<div style="font-size:12px;color:#AEAEB2;">Trigger: Every Monday</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">866 — Custom Field Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:320px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;">Custom Fields</div>
+<button style="font-size:20px;color:#2C6ECB;">+</button>
+</div>
+<div style="margin-bottom:12px;padding:12px;background:#F6F6F7;border-radius:8px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+<span style="font-size:13px;font-weight:500;color:#1D1D1F;">Company Name</span>
+<button style="font-size:16px;color:#6D6D72;">⋮</button>
+</div>
+<div style="font-size:11px;color:#6D6D72;">Text field • Required</div>
+</div>
+<div style="margin-bottom:12px;padding:12px;border-radius:8px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+<span style="font-size:13px;font-weight:500;color:#6D6D72;">Department</span>
+<button style="font-size:16px;color:#6D6D72;">⋮</button>
+</div>
+<div style="font-size:11px;color:#AEAEB2;">Dropdown • Optional</div>
+</div>
+<div style="padding:12px;border-radius:8px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+<span style="font-size:13px;font-weight:500;color:#6D6D72;">Budget</span>
+<button style="font-size:16px;color:#6D6D72;">⋮</button>
+</div>
+<div style="font-size:11px;color:#AEAEB2;">Number • Optional</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">867 — Saved View Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px;width:240px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size:12px;font-weight:600;color:#6D6D72;margin-bottom:12px;">Saved Views</div>
+<a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;background:#F6F6F7;margin-bottom:6px;">
+<span style="font-size:14px;font-weight:500;color:#1D1D1F;">My Tasks</span>
+<span style="font-size:12px;color:#2C6ECB;">✓</span>
+</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;margin-bottom:6px;">High Priority</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;margin-bottom:6px;">Due This Week</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#6D6D72;margin-bottom:12px;">Completed</a>
+<button style="width:100%;padding:8px;border:1px dashed #E3E3E8;border-radius:6px;font-size:12px;color:#2C6ECB;font-weight:500;">+ Save Current View</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">868 — Report Builder Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:300px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Report Builder</div>
+<div style="margin-bottom:12px;">
+<div style="font-size:12px;font-weight:500;color:#6D6D72;margin-bottom:8px;">Data Source</div>
+<select style="width:100%;padding:10px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;font-family:inherit;background:#FFF;">
+<option>Sales Data</option>
+<option>User Analytics</option>
+<option>Traffic Report</option>
+</select>
+</div>
+<div style="margin-bottom:12px;">
+<div style="font-size:12px;font-weight:500;color:#6D6D72;margin-bottom:8px;">Time Range</div>
+<select style="width:100%;padding:10px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;font-family:inherit;background:#FFF;">
+<option>Last 7 Days</option>
+<option>Last 30 Days</option>
+<option>Last Quarter</option>
+</select>
+</div>
+<div style="margin-bottom:16px;">
+<div style="font-size:12px;font-weight:500;color:#6D6D72;margin-bottom:8px;">Chart Type</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;">
+<button style="padding:10px;border:2px solid #2C6ECB;background:#F6F6F7;border-radius:6px;font-size:18px;">📊</button>
+<button style="padding:10px;border:1px solid #E3E3E8;border-radius:6px;font-size:18px;">📈</button>
+<button style="padding:10px;border:1px solid #E3E3E8;border-radius:6px;font-size:18px;">🥧</button>
+</div>
+</div>
+<button style="width:100%;padding:10px;background:#2C6ECB;color:#FFF;border-radius:8px;font-size:13px;font-weight:500;">Generate Report</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">869 — Notification Preferences Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:360px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Notification Settings</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid #E3E3E8;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Email Notifications</div>
+<div style="font-size:12px;color:#6D6D72;">Receive updates via email</div>
+</div>
+<div style="position:relative;width:44px;height:24px;background:#1A8245;border-radius:12px;">
+<div style="position:absolute;right:2px;top:2px;width:20px;height:20px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid #E3E3E8;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Push Notifications</div>
+<div style="font-size:12px;color:#6D6D72;">Browser notifications</div>
+</div>
+<div style="position:relative;width:44px;height:24px;background:#E3E3E8;border-radius:12px;">
+<div style="position:absolute;left:2px;top:2px;width:20px;height:20px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">SMS Alerts</div>
+<div style="font-size:12px;color:#6D6D72;">Critical updates only</div>
+</div>
+<div style="position:relative;width:44px;height:24px;background:#1A8245;border-radius:12px;">
+<div style="position:absolute;right:2px;top:2px;width:20px;height:20px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">870 — Advanced Filter Panel</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:340px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;">Advanced Filters</div>
+<button style="font-size:12px;color:#D72C0D;font-weight:500;">Clear All</button>
+</div>
+<div style="margin-bottom:12px;padding:12px;background:#F6F6F7;border-radius:8px;display:flex;align-items:center;justify-content:space-between;">
+<span style="font-size:13px;color:#1D1D1F;"><strong>Status:</strong> Active</span>
+<button style="font-size:16px;color:#6D6D72;">×</button>
+</div>
+<div style="margin-bottom:12px;padding:12px;background:#F6F6F7;border-radius:8px;display:flex;align-items:center;justify-content:space-between;">
+<span style="font-size:13px;color:#1D1D1F;"><strong>Date:</strong> Last 30 days</span>
+<button style="font-size:16px;color:#6D6D72;">×</button>
+</div>
+<button style="width:100%;padding:10px;border:1px dashed #E3E3E8;border-radius:8px;font-size:13px;color:#2C6ECB;font-weight:500;">+ Add Filter</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">871 — Bulk Actions Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;max-width:800px;">
+<div style="display:flex;align-items:center;gap:12px;">
+<input type="checkbox" checked style="width:18px;height:18px;">
+<span style="font-size:14px;font-weight:500;color:#1D1D1F;">24 items selected</span>
+</div>
+<div style="display:flex;gap:8px;">
+<button style="padding:8px 16px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;color:#6D6D72;font-weight:500;">Edit</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;color:#6D6D72;font-weight:500;">Export</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;color:#D72C0D;font-weight:500;">Delete</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">872 — Import/Export Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:24px;width:360px;">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;margin-bottom:20px;">Data Management</div>
+<div style="margin-bottom:16px;padding:20px;border:2px dashed #E3E3E8;border-radius:10px;text-align:center;">
+<div style="font-size:32px;margin-bottom:8px;">📤</div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;margin-bottom:4px;">Import Data</div>
+<div style="font-size:12px;color:#6D6D72;margin-bottom:12px;">Upload CSV or JSON file</div>
+<button style="padding:8px 16px;background:#2C6ECB;color:#FFF;border-radius:8px;font-size:13px;font-weight:500;">Choose File</button>
+</div>
+<div style="padding:20px;border:1px solid #E3E3E8;border-radius:10px;text-align:center;">
+<div style="font-size:32px;margin-bottom:8px;">📥</div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;margin-bottom:4px;">Export Data</div>
+<div style="font-size:12px;color:#6D6D72;margin-bottom:12px;">Download all records</div>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;font-weight:500;color:#1D1D1F;">Export CSV</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">873 — Version Comparison Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:700px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Compare Versions</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+<div>
+<div style="font-size:12px;font-weight:500;color:#6D6D72;margin-bottom:8px;">Version A</div>
+<select style="width:100%;padding:10px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;font-family:inherit;background:#FFF;">
+<option>v2.4.1 (Current)</option>
+<option>v2.4.0</option>
+<option>v2.3.9</option>
+</select>
+</div>
+<div>
+<div style="font-size:12px;font-weight:500;color:#6D6D72;margin-bottom:8px;">Version B</div>
+<select style="width:100%;padding:10px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;font-family:inherit;background:#FFF;">
+<option>v2.4.0</option>
+<option>v2.3.9</option>
+<option>v2.3.8</option>
+</select>
+</div>
+</div>
+<button style="width:100%;padding:10px;background:#2C6ECB;color:#FFF;border-radius:8px;font-size:13px;font-weight:500;margin-top:12px;">Compare Versions</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">874 — Role Permission Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:360px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Manage Roles</div>
+<div style="padding:16px;border:2px solid #2C6ECB;background:#F6F6F7;border-radius:10px;margin-bottom:8px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;">Admin</div>
+<button style="font-size:12px;color:#2C6ECB;font-weight:500;">Edit</button>
+</div>
+<div style="font-size:12px;color:#6D6D72;margin-bottom:8px;">Full system access</div>
+<div style="font-size:11px;color:#AEAEB2;">3 users</div>
+</div>
+<div style="padding:16px;border:1px solid #E3E3E8;border-radius:10px;margin-bottom:8px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Editor</div>
+<button style="font-size:12px;color:#2C6ECB;font-weight:500;">Edit</button>
+</div>
+<div style="font-size:12px;color:#6D6D72;margin-bottom:8px;">Can edit content</div>
+<div style="font-size:11px;color:#AEAEB2;">8 users</div>
+</div>
+<div style="padding:16px;border:1px solid #E3E3E8;border-radius:10px;margin-bottom:12px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+<div style="font-size:14px;font-weight:500;color:#6D6D72;">Viewer</div>
+<button style="font-size:12px;color:#2C6ECB;font-weight:500;">Edit</button>
+</div>
+<div style="font-size:12px;color:#AEAEB2;margin-bottom:8px;">Read-only access</div>
+<div style="font-size:11px;color:#AEAEB2;">24 users</div>
+</div>
+<button style="width:100%;padding:10px;border:1px dashed #E3E3E8;border-radius:8px;font-size:13px;color:#2C6ECB;font-weight:500;">+ Create Role</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">875 — Quick Settings Panel</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:300px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Quick Settings</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid #E3E3E8;">
+<span style="font-size:14px;color:#1D1D1F;">Auto-save</span>
+<div style="position:relative;width:44px;height:24px;background:#1A8245;border-radius:12px;">
+<div style="position:absolute;right:2px;top:2px;width:20px;height:20px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid #E3E3E8;">
+<span style="font-size:14px;color:#1D1D1F;">Compact view</span>
+<div style="position:relative;width:44px;height:24px;background:#E3E3E8;border-radius:12px;">
+<div style="position:absolute;left:2px;top:2px;width:20px;height:20px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid #E3E3E8;">
+<span style="font-size:14px;color:#1D1D1F;">Show grid</span>
+<div style="position:relative;width:44px;height:24px;background:#1A8245;border-radius:12px;">
+<div style="position:absolute;right:2px;top:2px;width:20px;height:20px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+<span style="font-size:14px;color:#1D1D1F;">Snap to grid</span>
+<div style="position:relative;width:44px;height:24px;background:#E3E3E8;border-radius:12px;">
+<div style="position:absolute;left:2px;top:2px;width:20px;height:20px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+</nav>
+</div>
+
+</body>
+</html>

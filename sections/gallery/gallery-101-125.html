@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery Sections 101-125 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<div class="section-label">101 — Offset Grid Gallery</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div style="aspect-ratio: 1/1; background: #E9F0FE; border-radius: 12px; margin-top: 0;"></div>
+      <div style="aspect-ratio: 1/1; background: #F3EEFF; border-radius: 12px; margin-top: 60px;"></div>
+      <div style="aspect-ratio: 1/1; background: #E3F5E1; border-radius: 12px; margin-top: 0;"></div>
+      <div style="aspect-ratio: 1/1; background: #FFFBE6; border-radius: 12px; margin-top: 60px;"></div>
+      <div style="aspect-ratio: 1/1; background: #FFE5E5; border-radius: 12px; margin-top: 0;"></div>
+      <div style="aspect-ratio: 1/1; background: #E3F5F5; border-radius: 12px; margin-top: 60px;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">102 — Panoramic Slider Gallery</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <div style="display: flex; gap: 20px; min-width: max-content; padding-bottom: 16px;">
+        <div style="width: 560px; aspect-ratio: 21/9; background: linear-gradient(135deg, #E9F0FE 0%, #D4E6FF 100%); border-radius: 12px; flex-shrink: 0;"></div>
+        <div style="width: 560px; aspect-ratio: 21/9; background: linear-gradient(135deg, #F3EEFF 0%, #E8D4FF 100%); border-radius: 12px; flex-shrink: 0;"></div>
+        <div style="width: 560px; aspect-ratio: 21/9; background: linear-gradient(135deg, #E3F5E1 0%, #C7ECC3 100%); border-radius: 12px; flex-shrink: 0;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">103 — Gallery With Brand Colors</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, #2C6ECB 0%, #4A90E2 100%); border-radius: 12px; position: relative;">
+        <div style="position: absolute; bottom: 20px; left: 20px; color: #FFFFFF;">
+          <h3 style="font-size: 20px; font-weight: 600;">Blue Collection</h3>
+        </div>
+      </div>
+      <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, #1A8245 0%, #28A15E 100%); border-radius: 12px; position: relative;">
+        <div style="position: absolute; bottom: 20px; left: 20px; color: #FFFFFF;">
+          <h3 style="font-size: 20px; font-weight: 600;">Green Collection</h3>
+        </div>
+      </div>
+      <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, #D72C0D 0%, #E74C3C 100%); border-radius: 12px; position: relative;">
+        <div style="position: absolute; bottom: 20px; left: 20px; color: #FFFFFF;">
+          <h3 style="font-size: 20px; font-weight: 600;">Red Collection</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">104 — Asymmetric Masonry Gallery</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; gap: 16px;">
+      <div style="grid-column: span 2; grid-row: span 2; background: #E9F0FE; border-radius: 12px;"></div>
+      <div style="background: #F3EEFF; border-radius: 12px;"></div>
+      <div style="background: #E3F5E1; border-radius: 12px;"></div>
+      <div style="background: #FFFBE6; border-radius: 12px;"></div>
+      <div style="background: #FFE5E5; border-radius: 12px;"></div>
+      <div style="grid-column: span 2; background: #E3F5F5; border-radius: 12px;"></div>
+      <div style="grid-row: span 2; background: #E9F0FE; border-radius: 12px;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">105 — Gallery With Hover Scale</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <div style="aspect-ratio: 4/3; background: #E9F0FE; border-radius: 12px; transition: transform 0.3s; cursor: pointer;"></div>
+      <div style="aspect-ratio: 4/3; background: #F3EEFF; border-radius: 12px; transition: transform 0.3s; cursor: pointer;"></div>
+      <div style="aspect-ratio: 4/3; background: #E3F5E1; border-radius: 12px; transition: transform 0.3s; cursor: pointer;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">106 — Carousel With Thumbnails</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE 0%, #D4E6FF 100%); border-radius: 12px; margin-bottom: 20px;"></div>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <div style="width: 100px; aspect-ratio: 16/9; background: #E9F0FE; border-radius: 8px; border: 2px solid #2C6ECB; cursor: pointer;"></div>
+        <div style="width: 100px; aspect-ratio: 16/9; background: #F3EEFF; border-radius: 8px; border: 2px solid transparent; cursor: pointer; opacity: 0.6;"></div>
+        <div style="width: 100px; aspect-ratio: 16/9; background: #E3F5E1; border-radius: 8px; border: 2px solid transparent; cursor: pointer; opacity: 0.6;"></div>
+        <div style="width: 100px; aspect-ratio: 16/9; background: #FFFBE6; border-radius: 8px; border: 2px solid transparent; cursor: pointer; opacity: 0.6;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">107 — Split View Gallery</div>
+<div class="section-container">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 600px;">
+    <div style="padding: 60px; background: #FFFFFF; display: flex; flex-direction: column; justify-content: center;">
+      <h2 style="font-size: 40px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">Featured Project</h2>
+      <p style="font-size: 17px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">A comprehensive showcase of our latest design work and creative solutions.</p>
+      <div style="display: flex; gap: 12px;">
+        <button style="padding: 12px 28px; border-radius: 10px; background: #2C6ECB; border: none; font-size: 15px; font-weight: 600; color: #FFFFFF; cursor: pointer; font-family: 'Satoshi', sans-serif;">View Project</button>
+        <button style="padding: 12px 28px; border-radius: 10px; background: #F5F5F7; border: 1px solid #E3E3E8; font-size: 15px; font-weight: 600; color: #1D1D1F; cursor: pointer; font-family: 'Satoshi', sans-serif;">Learn More</button>
+      </div>
+    </div>
+    <div style="background: linear-gradient(135deg, #E9F0FE 0%, #D4E6FF 100%);"></div>
+  </div>
+</div>
+
+<div class="section-label">108 — Portfolio With Tags</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+      <div style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid #E3E3E8;">
+        <div style="aspect-ratio: 16/9; background: #E9F0FE;"></div>
+        <div style="padding: 24px;">
+          <div style="display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;">
+            <span style="padding: 6px 12px; background: #E9F0FE; border-radius: 6px; font-size: 12px; font-weight: 600; color: #2C6ECB;">Design</span>
+            <span style="padding: 6px 12px; background: #E3F5E1; border-radius: 6px; font-size: 12px; font-weight: 600; color: #1A8245;">Web</span>
+          </div>
+          <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F;">Modern Dashboard Design</h3>
+        </div>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid #E3E3E8;">
+        <div style="aspect-ratio: 16/9; background: #F3EEFF;"></div>
+        <div style="padding: 24px;">
+          <div style="display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;">
+            <span style="padding: 6px 12px; background: #F3EEFF; border-radius: 6px; font-size: 12px; font-weight: 600; color: #7C3AED;">Branding</span>
+            <span style="padding: 6px 12px; background: #FFE5E5; border-radius: 6px; font-size: 12px; font-weight: 600; color: #D72C0D;">Mobile</span>
+          </div>
+          <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F;">Brand Identity System</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">109 — Full Bleed Image Gallery</div>
+<div class="section-container">
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
+    <div style="aspect-ratio: 1/1; background: linear-gradient(135deg, #E9F0FE 0%, #D4E6FF 100%);"></div>
+    <div style="aspect-ratio: 1/1; background: linear-gradient(135deg, #F3EEFF 0%, #E8D4FF 100%);"></div>
+    <div style="aspect-ratio: 1/1; background: linear-gradient(135deg, #E3F5E1 0%, #C7ECC3 100%);"></div>
+    <div style="aspect-ratio: 1/1; background: linear-gradient(135deg, #FFFBE6 0%, #FFF7CC 100%);"></div>
+  </div>
+</div>
+
+<div class="section-label">110 — Gallery With Image Count</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+      <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F;">Recent Work</h2>
+      <span style="padding: 8px 16px; background: #F5F5F7; border-radius: 8px; font-size: 14px; font-weight: 600; color: #6D6D72;">24 Images</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+      <div style="aspect-ratio: 1/1; background: #E9F0FE; border-radius: 10px;"></div>
+      <div style="aspect-ratio: 1/1; background: #F3EEFF; border-radius: 10px;"></div>
+      <div style="aspect-ratio: 1/1; background: #E3F5E1; border-radius: 10px;"></div>
+      <div style="aspect-ratio: 1/1; background: #FFFBE6; border-radius: 10px;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">111 — Vertical Scroll Gallery</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="display: flex; gap: 24px;">
+      <div style="flex: 1;">
+        <div style="aspect-ratio: 3/4; background: #E9F0FE; border-radius: 12px; margin-bottom: 24px;"></div>
+        <div style="aspect-ratio: 3/4; background: #F3EEFF; border-radius: 12px; margin-bottom: 24px;"></div>
+        <div style="aspect-ratio: 3/4; background: #E3F5E1; border-radius: 12px;"></div>
+      </div>
+      <div style="flex: 1; padding-top: 60px;">
+        <div style="aspect-ratio: 3/4; background: #FFFBE6; border-radius: 12px; margin-bottom: 24px;"></div>
+        <div style="aspect-ratio: 3/4; background: #FFE5E5; border-radius: 12px; margin-bottom: 24px;"></div>
+        <div style="aspect-ratio: 3/4; background: #E3F5F5; border-radius: 12px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">112 — Product Showcase Grid</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <div style="text-align: center;">
+        <div style="aspect-ratio: 1/1; background: #F5F5F7; border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; border: 1px solid #E3E3E8;">
+          <div style="width: 64px; height: 64px; background: #E9F0FE; border-radius: 50%;"></div>
+        </div>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Product One</h3>
+        <p style="font-size: 14px; color: #6D6D72;">Premium Quality</p>
+      </div>
+      <div style="text-align: center;">
+        <div style="aspect-ratio: 1/1; background: #F5F5F7; border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; border: 1px solid #E3E3E8;">
+          <div style="width: 64px; height: 64px; background: #F3EEFF; border-radius: 50%;"></div>
+        </div>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Product Two</h3>
+        <p style="font-size: 14px; color: #6D6D72;">Professional Grade</p>
+      </div>
+      <div style="text-align: center;">
+        <div style="aspect-ratio: 1/1; background: #F5F5F7; border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; border: 1px solid #E3E3E8;">
+          <div style="width: 64px; height: 64px; background: #E3F5E1; border-radius: 50%;"></div>
+        </div>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Product Three</h3>
+        <p style="font-size: 14px; color: #6D6D72;">Enterprise Solution</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">113 — Gallery With Info Cards</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+      <div>
+        <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, #E9F0FE 0%, #D4E6FF 100%); border-radius: 12px; margin-bottom: 20px;"></div>
+        <div style="background: #FFFFFF; border-radius: 10px; padding: 20px; border: 1px solid #E3E3E8;">
+          <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">Creative Direction</h3>
+          <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Strategic design approach for modern brands</p>
+          <div style="display: flex; gap: 16px; padding-top: 16px; border-top: 1px solid #E3E3E8;">
+            <div><p style="font-size: 11px; font-weight: 600; color: #6D6D72; text-transform: uppercase; margin-bottom: 4px;">Client</p><p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">TechCorp</p></div>
+            <div><p style="font-size: 11px; font-weight: 600; color: #6D6D72; text-transform: uppercase; margin-bottom: 4px;">Year</p><p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">2024</p></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, #F3EEFF 0%, #E8D4FF 100%); border-radius: 12px; margin-bottom: 20px;"></div>
+        <div style="background: #FFFFFF; border-radius: 10px; padding: 20px; border: 1px solid #E3E3E8;">
+          <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">Brand Evolution</h3>
+          <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Complete brand identity transformation</p>
+          <div style="display: flex; gap: 16px; padding-top: 16px; border-top: 1px solid #E3E3E8;">
+            <div><p style="font-size: 11px; font-weight: 600; color: #6D6D72; text-transform: uppercase; margin-bottom: 4px;">Client</p><p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">StartupX</p></div>
+            <div><p style="font-size: 11px; font-weight: 600; color: #6D6D72; text-transform: uppercase; margin-bottom: 4px;">Year</p><p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">2024</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">114 — Triple Column Masonry</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="column-count: 3; column-gap: 24px;">
+      <div style="break-inside: avoid; margin-bottom: 24px;"><div style="aspect-ratio: 3/4; background: #E9F0FE; border-radius: 12px;"></div></div>
+      <div style="break-inside: avoid; margin-bottom: 24px;"><div style="aspect-ratio: 1/1; background: #F3EEFF; border-radius: 12px;"></div></div>
+      <div style="break-inside: avoid; margin-bottom: 24px;"><div style="aspect-ratio: 4/3; background: #E3F5E1; border-radius: 12px;"></div></div>
+      <div style="break-inside: avoid; margin-bottom: 24px;"><div style="aspect-ratio: 2/3; background: #FFFBE6; border-radius: 12px;"></div></div>
+      <div style="break-inside: avoid; margin-bottom: 24px;"><div style="aspect-ratio: 1/1; background: #FFE5E5; border-radius: 12px;"></div></div>
+      <div style="break-inside: avoid; margin-bottom: 24px;"><div style="aspect-ratio: 4/5; background: #E3F5F5; border-radius: 12px;"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">115 — Gallery With Quick Actions</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div style="aspect-ratio: 4/3; background: #E9F0FE; border-radius: 12px; position: relative; cursor: pointer;">
+        <div style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px;">
+          <button style="width: 36px; height: 36px; background: rgba(255,255,255,0.95); border-radius: 8px; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="#1D1D1F" stroke-width="2"/></svg>
+          </button>
+          <button style="width: 36px; height: 36px; background: rgba(255,255,255,0.95); border-radius: 8px; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div style="aspect-ratio: 4/3; background: #F3EEFF; border-radius: 12px; position: relative; cursor: pointer;">
+        <div style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px;">
+          <button style="width: 36px; height: 36px; background: rgba(255,255,255,0.95); border-radius: 8px; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="#1D1D1F" stroke-width="2"/></svg>
+          </button>
+          <button style="width: 36px; height: 36px; background: rgba(255,255,255,0.95); border-radius: 8px; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div style="aspect-ratio: 4/3; background: #E3F5E1; border-radius: 12px; position: relative; cursor: pointer;">
+        <div style="position: absolute; top: 12px; right: 12px; display: flex; gap: 8px;">
+          <button style="width: 36px; height: 36px; background: rgba(255,255,255,0.95); border-radius: 8px; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="#1D1D1F" stroke-width="2"/></svg>
+          </button>
+          <button style="width: 36px; height: 36px; background: rgba(255,255,255,0.95); border-radius: 8px; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">116 — Circular Grid Gallery</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;">
+      <div style="aspect-ratio: 1/1; background: #E9F0FE; border-radius: 50%; border: 4px solid #FFFFFF; box-shadow: 0 4px 12px rgba(0,0,0,0.08);"></div>
+      <div style="aspect-ratio: 1/1; background: #F3EEFF; border-radius: 50%; border: 4px solid #FFFFFF; box-shadow: 0 4px 12px rgba(0,0,0,0.08);"></div>
+      <div style="aspect-ratio: 1/1; background: #E3F5E1; border-radius: 50%; border: 4px solid #FFFFFF; box-shadow: 0 4px 12px rgba(0,0,0,0.08);"></div>
+      <div style="aspect-ratio: 1/1; background: #FFFBE6; border-radius: 50%; border: 4px solid #FFFFFF; box-shadow: 0 4px 12px rgba(0,0,0,0.08);"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">117 — Gallery With Loading States</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+      <div style="aspect-ratio: 1/1; background: #E9F0FE; border-radius: 10px;"></div>
+      <div style="aspect-ratio: 1/1; background: #F3EEFF; border-radius: 10px;"></div>
+      <div style="aspect-ratio: 1/1; background: linear-gradient(90deg, #F5F5F7 0%, #E3E3E8 50%, #F5F5F7 100%); background-size: 200% 100%; border-radius: 10px; animation: shimmer 1.5s infinite;"></div>
+      <div style="aspect-ratio: 1/1; background: linear-gradient(90deg, #F5F5F7 0%, #E3E3E8 50%, #F5F5F7 100%); background-size: 200% 100%; border-radius: 10px; animation: shimmer 1.5s infinite;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">118 — Bordered Grid Gallery</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div style="aspect-ratio: 4/3; background: #E9F0FE; border-radius: 12px; border: 3px solid #E3E3E8;"></div>
+      <div style="aspect-ratio: 4/3; background: #F3EEFF; border-radius: 12px; border: 3px solid #E3E3E8;"></div>
+      <div style="aspect-ratio: 4/3; background: #E3F5E1; border-radius: 12px; border: 3px solid #E3E3E8;"></div>
+      <div style="aspect-ratio: 4/3; background: #FFFBE6; border-radius: 12px; border: 3px solid #E3E3E8;"></div>
+      <div style="aspect-ratio: 4/3; background: #FFE5E5; border-radius: 12px; border: 3px solid #E3E3E8;"></div>
+      <div style="aspect-ratio: 4/3; background: #E3F5F5; border-radius: 12px; border: 3px solid #E3E3E8;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">119 — Gallery With Gradient Overlays</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+      <div style="aspect-ratio: 4/3; background: url('data:image/svg+xml,'), linear-gradient(135deg, #E9F0FE 0%, #D4E6FF 100%); border-radius: 12px; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);"></div>
+        <div style="position: absolute; bottom: 24px; left: 24px; color: #FFFFFF;">
+          <h3 style="font-size: 24px; font-weight: 700;">Beautiful Scene</h3>
+        </div>
+      </div>
+      <div style="aspect-ratio: 4/3; background: url('data:image/svg+xml,'), linear-gradient(135deg, #F3EEFF 0%, #E8D4FF 100%); border-radius: 12px; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);"></div>
+        <div style="position: absolute; bottom: 24px; left: 24px; color: #FFFFFF;">
+          <h3 style="font-size: 24px; font-weight: 700;">Creative Work</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">120 — Instagram Feed Style</div>
+<div class="section-container">
+  <div style="padding: 40px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px;">
+      <div style="aspect-ratio: 1/1; background: #E9F0FE;"></div>
+      <div style="aspect-ratio: 1/1; background: #F3EEFF;"></div>
+      <div style="aspect-ratio: 1/1; background: #E3F5E1;"></div>
+      <div style="aspect-ratio: 1/1; background: #FFFBE6;"></div>
+      <div style="aspect-ratio: 1/1; background: #FFE5E5;"></div>
+      <div style="aspect-ratio: 1/1; background: #E3F5F5;"></div>
+      <div style="aspect-ratio: 1/1; background: #E9F0FE;"></div>
+      <div style="aspect-ratio: 1/1; background: #F3EEFF;"></div>
+      <div style="aspect-ratio: 1/1; background: #E3F5E1;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">121 — Gallery With Pagination</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
+      <div style="aspect-ratio: 4/3; background: #E9F0FE; border-radius: 12px;"></div>
+      <div style="aspect-ratio: 4/3; background: #F3EEFF; border-radius: 12px;"></div>
+      <div style="aspect-ratio: 4/3; background: #E3F5E1; border-radius: 12px;"></div>
+    </div>
+    <div style="display: flex; gap: 8px; justify-content: center; align-items: center;">
+      <button style="width: 40px; height: 40px; border-radius: 8px; background: #FFFFFF; border: 1px solid #E3E3E8; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button style="width: 40px; height: 40px; border-radius: 8px; background: #2C6ECB; border: none; cursor: pointer; font-size: 14px; font-weight: 600; color: #FFFFFF; font-family: 'Satoshi', sans-serif;">1</button>
+      <button style="width: 40px; height: 40px; border-radius: 8px; background: #FFFFFF; border: 1px solid #E3E3E8; cursor: pointer; font-size: 14px; font-weight: 600; color: #1D1D1F; font-family: 'Satoshi', sans-serif;">2</button>
+      <button style="width: 40px; height: 40px; border-radius: 8px; background: #FFFFFF; border: 1px solid #E3E3E8; cursor: pointer; font-size: 14px; font-weight: 600; color: #1D1D1F; font-family: 'Satoshi', sans-serif;">3</button>
+      <button style="width: 40px; height: 40px; border-radius: 8px; background: #FFFFFF; border: 1px solid #E3E3E8; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">122 — Card Stack Gallery</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+      <div style="position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; right: -12px; bottom: -12px; background: #F5F5F7; border-radius: 12px; z-index: 0;"></div>
+        <div style="position: absolute; top: 6px; left: 6px; right: -6px; bottom: -6px; background: #E3E3E8; border-radius: 12px; z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; aspect-ratio: 3/4; background: linear-gradient(135deg, #E9F0FE 0%, #D4E6FF 100%); border-radius: 12px;"></div>
+      </div>
+      <div style="position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; right: -12px; bottom: -12px; background: #F5F5F7; border-radius: 12px; z-index: 0;"></div>
+        <div style="position: absolute; top: 6px; left: 6px; right: -6px; bottom: -6px; background: #E3E3E8; border-radius: 12px; z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; aspect-ratio: 3/4; background: linear-gradient(135deg, #F3EEFF 0%, #E8D4FF 100%); border-radius: 12px;"></div>
+      </div>
+      <div style="position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; right: -12px; bottom: -12px; background: #F5F5F7; border-radius: 12px; z-index: 0;"></div>
+        <div style="position: absolute; top: 6px; left: 6px; right: -6px; bottom: -6px; background: #E3E3E8; border-radius: 12px; z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; aspect-ratio: 3/4; background: linear-gradient(135deg, #E3F5E1 0%, #C7ECC3 100%); border-radius: 12px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">123 — Fullscreen Slideshow Preview</div>
+<div class="section-container">
+  <div style="min-height: 640px; background: #1D1D1F; position: relative; display: flex; align-items: center; justify-content: center;">
+    <div style="max-width: 1000px; width: 100%; padding: 60px;">
+      <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE 0%, #D4E6FF 100%); border-radius: 12px; margin-bottom: 40px;"></div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h2 style="font-size: 32px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">Presentation Title</h2>
+          <p style="font-size: 17px; color: #AEAEB2;">Slide 1 of 12</p>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <button style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">124 — Gallery With View Modes</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #F5F5F7;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+      <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F;">Gallery</h2>
+      <div style="display: flex; gap: 8px; background: #FFFFFF; padding: 4px; border-radius: 10px; border: 1px solid #E3E3E8;">
+        <button style="padding: 8px 16px; border-radius: 8px; background: #2C6ECB; border: none; font-size: 13px; font-weight: 600; color: #FFFFFF; cursor: pointer; font-family: 'Satoshi', sans-serif;">Grid</button>
+        <button style="padding: 8px 16px; border-radius: 8px; background: transparent; border: none; font-size: 13px; font-weight: 600; color: #6D6D72; cursor: pointer; font-family: 'Satoshi', sans-serif;">List</button>
+        <button style="padding: 8px 16px; border-radius: 8px; background: transparent; border: none; font-size: 13px; font-weight: 600; color: #6D6D72; cursor: pointer; font-family: 'Satoshi', sans-serif;">Masonry</button>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+      <div style="aspect-ratio: 1/1; background: #E9F0FE; border-radius: 10px;"></div>
+      <div style="aspect-ratio: 1/1; background: #F3EEFF; border-radius: 10px;"></div>
+      <div style="aspect-ratio: 1/1; background: #E3F5E1; border-radius: 10px;"></div>
+      <div style="aspect-ratio: 1/1; background: #FFFBE6; border-radius: 10px;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">125 — Dual Aspect Ratio Grid</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div style="aspect-ratio: 3/4; background: #E9F0FE; border-radius: 12px;"></div>
+      <div style="aspect-ratio: 1/1; background: #F3EEFF; border-radius: 12px;"></div>
+      <div style="aspect-ratio: 3/4; background: #E3F5E1; border-radius: 12px;"></div>
+      <div style="aspect-ratio: 1/1; background: #FFFBE6; border-radius: 12px;"></div>
+      <div style="aspect-ratio: 3/4; background: #FFE5E5; border-radius: 12px;"></div>
+      <div style="aspect-ratio: 1/1; background: #E3F5F5; border-radius: 12px;"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

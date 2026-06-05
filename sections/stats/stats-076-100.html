@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stats Sections 076-100 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+@keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+</style>
+</head>
+<body>
+
+<div class="section-label">076 — Stats With Icon Badges</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <div style="text-align: center; padding: 36px; background: #F5F5F7; border-radius: 12px;">
+        <div style="width: 56px; height: 56px; margin: 0 auto 20px; background: #2C6ECB; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">99.8%</div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Success Rate</div>
+        <div style="font-size: 13px; color: #6D6D72;">All transactions</div>
+      </div>
+      <div style="text-align: center; padding: 36px; background: #F5F5F7; border-radius: 12px;">
+        <div style="width: 56px; height: 56px; margin: 0 auto 20px; background: #1A8245; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#FFFFFF"/></svg>
+        </div>
+        <div style="font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">< 1s</div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Load Speed</div>
+        <div style="font-size: 13px; color: #6D6D72;">Average page load</div>
+      </div>
+      <div style="text-align: center; padding: 36px; background: #F5F5F7; border-radius: 12px;">
+        <div style="width: 56px; height: 56px; margin: 0 auto 20px; background: #7C3AED; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#FFFFFF"/></svg>
+        </div>
+        <div style="font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">100%</div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Encrypted</div>
+        <div style="font-size: 13px; color: #6D6D72;">End-to-end security</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">077 — Revenue Growth Chart</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: center;">
+      <div>
+        <div style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 12px;">TOTAL REVENUE</div>
+        <div style="font-size: 64px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">$25M</div>
+        <div style="font-size: 18px; font-weight: 600; color: #1A8245; margin-bottom: 12px;">↑ 142% Growth</div>
+        <div style="font-size: 15px; color: #6D6D72; line-height: 1.5;">Year over year increase in annual recurring revenue</div>
+      </div>
+      <div>
+        <div style="display: flex; align-items: end; gap: 8px; height: 200px; padding: 24px; background: #F5F5F7; border-radius: 12px;">
+          <div style="flex: 1; background: #E3E3E8; border-radius: 6px; height: 30%;"></div>
+          <div style="flex: 1; background: #E3E3E8; border-radius: 6px; height: 38%;"></div>
+          <div style="flex: 1; background: #E3E3E8; border-radius: 6px; height: 42%;"></div>
+          <div style="flex: 1; background: #E3E3E8; border-radius: 6px; height: 50%;"></div>
+          <div style="flex: 1; background: #2C6ECB; border-radius: 6px; height: 62%;"></div>
+          <div style="flex: 1; background: #2C6ECB; border-radius: 6px; height: 75%;"></div>
+          <div style="flex: 1; background: #1A8245; border-radius: 6px; height: 88%;"></div>
+          <div style="flex: 1; background: #1A8245; border-radius: 6px; height: 100%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">078 — Stats With Colored Dots</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;">
+      <div style="text-align: center;">
+        <div style="width: 12px; height: 12px; background: #2C6ECB; border-radius: 50%; margin: 0 auto 16px;"></div>
+        <div style="font-size: 44px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">2.5M</div>
+        <div style="font-size: 14px; color: #6D6D72;">Active Users</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 12px; height: 12px; background: #1A8245; border-radius: 50%; margin: 0 auto 16px;"></div>
+        <div style="font-size: 44px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">$15M</div>
+        <div style="font-size: 14px; color: #6D6D72;">Revenue</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 12px; height: 12px; background: #7C3AED; border-radius: 50%; margin: 0 auto 16px;"></div>
+        <div style="font-size: 44px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">99.9%</div>
+        <div style="font-size: 14px; color: #6D6D72;">Uptime</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 12px; height: 12px; background: #ED3F00; border-radius: 50%; margin: 0 auto 16px;"></div>
+        <div style="font-size: 44px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">4.9★</div>
+        <div style="font-size: 14px; color: #6D6D72;">Rating</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">079 — Metric Comparison Table</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: #E3E3E8; border-radius: 12px; overflow: hidden;">
+        <div style="padding: 24px; background: #F5F5F7; text-align: center; font-size: 14px; font-weight: 600; color: #6D6D72;">METRIC</div>
+        <div style="padding: 24px; background: #F5F5F7; text-align: center; font-size: 14px; font-weight: 600; color: #6D6D72;">CURRENT</div>
+        <div style="padding: 24px; background: #F5F5F7; text-align: center; font-size: 14px; font-weight: 600; color: #6D6D72;">TARGET</div>
+        <div style="padding: 24px; background: #FFFFFF; font-size: 15px; color: #1D1D1F;">Users</div>
+        <div style="padding: 24px; background: #FFFFFF; text-align: center; font-size: 20px; font-weight: 700; color: #2C6ECB;">2.5M</div>
+        <div style="padding: 24px; background: #FFFFFF; text-align: center; font-size: 20px; font-weight: 700; color: #6D6D72;">5M</div>
+        <div style="padding: 24px; background: #FFFFFF; font-size: 15px; color: #1D1D1F;">Revenue</div>
+        <div style="padding: 24px; background: #FFFFFF; text-align: center; font-size: 20px; font-weight: 700; color: #1A8245;">$15M</div>
+        <div style="padding: 24px; background: #FFFFFF; text-align: center; font-size: 20px; font-weight: 700; color: #6D6D72;">$25M</div>
+        <div style="padding: 24px; background: #FFFFFF; font-size: 15px; color: #1D1D1F;">Uptime</div>
+        <div style="padding: 24px; background: #FFFFFF; text-align: center; font-size: 20px; font-weight: 700; color: #7C3AED;">99.9%</div>
+        <div style="padding: 24px; background: #FFFFFF; text-align: center; font-size: 20px; font-weight: 700; color: #6D6D72;">99.99%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">080 — Radial Stats</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: linear-gradient(135deg, #F5F5F7 0%, #FFFFFF 100%);">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+      <div style="text-align: center;">
+        <div style="position: relative; width: 160px; height: 160px; margin: 0 auto 24px;">
+          <svg width="160" height="160" style="transform: rotate(-90deg);">
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#E3E3E8" stroke-width="14"/>
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#2C6ECB" stroke-width="14" stroke-dasharray="440" stroke-dashoffset="44" stroke-linecap="round"/>
+          </svg>
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div style="font-size: 36px; font-weight: 700; color: #1D1D1F;">90%</div>
+            <div style="font-size: 13px; color: #6D6D72;">Complete</div>
+          </div>
+        </div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Goal Progress</div>
+        <div style="font-size: 14px; color: #6D6D72;">Q1 2024 targets</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="position: relative; width: 160px; height: 160px; margin: 0 auto 24px;">
+          <svg width="160" height="160" style="transform: rotate(-90deg);">
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#E3E3E8" stroke-width="14"/>
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#1A8245" stroke-width="14" stroke-dasharray="440" stroke-dashoffset="88" stroke-linecap="round"/>
+          </svg>
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div style="font-size: 36px; font-weight: 700; color: #1D1D1F;">80%</div>
+            <div style="font-size: 13px; color: #6D6D72;">Complete</div>
+          </div>
+        </div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Revenue Target</div>
+        <div style="font-size: 14px; color: #6D6D72;">Annual goal reached</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="position: relative; width: 160px; height: 160px; margin: 0 auto 24px;">
+          <svg width="160" height="160" style="transform: rotate(-90deg);">
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#E3E3E8" stroke-width="14"/>
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#7C3AED" stroke-width="14" stroke-dasharray="440" stroke-dashoffset="110" stroke-linecap="round"/>
+          </svg>
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div style="font-size: 36px; font-weight: 700; color: #1D1D1F;">75%</div>
+            <div style="font-size: 13px; color: #6D6D72;">Complete</div>
+          </div>
+        </div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">User Growth</div>
+        <div style="font-size: 14px; color: #6D6D72;">Quarterly milestone</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">081 — Stats With Top Border</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <div style="padding: 36px; background: #F5F5F7; border-top: 4px solid #2C6ECB; border-radius: 12px;">
+        <div style="font-size: 52px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">$8.5M</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Annual Revenue</div>
+        <div style="font-size: 14px; color: #6D6D72;">Recurring subscription</div>
+      </div>
+      <div style="padding: 36px; background: #F5F5F7; border-top: 4px solid #1A8245; border-radius: 12px;">
+        <div style="font-size: 52px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">125K</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Active Customers</div>
+        <div style="font-size: 14px; color: #6D6D72;">Paying subscribers</div>
+      </div>
+      <div style="padding: 36px; background: #F5F5F7; border-top: 4px solid #7C3AED; border-radius: 12px;">
+        <div style="font-size: 52px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">98%</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Retention Rate</div>
+        <div style="font-size: 14px; color: #6D6D72;">Customer loyalty</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">082 — Animated Stat Counters</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;">
+      <div style="text-align: center; animation: slideIn 0.6s ease-out;">
+        <div style="font-size: 52px; font-weight: 700; background: linear-gradient(135deg, #2C6ECB 0%, #5B8EEC 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px;">2.5M</div>
+        <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Total Users</div>
+        <div style="font-size: 13px; color: #1A8245;">↑ 24% growth</div>
+      </div>
+      <div style="text-align: center; animation: slideIn 0.6s ease-out 0.1s backwards;">
+        <div style="font-size: 52px; font-weight: 700; background: linear-gradient(135deg, #1A8245 0%, #0EA663 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px;">$15M</div>
+        <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Revenue</div>
+        <div style="font-size: 13px; color: #1A8245;">↑ 42% growth</div>
+      </div>
+      <div style="text-align: center; animation: slideIn 0.6s ease-out 0.2s backwards;">
+        <div style="font-size: 52px; font-weight: 700; background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px;">99.9%</div>
+        <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Uptime</div>
+        <div style="font-size: 13px; color: #1A8245;">↑ 0.2% better</div>
+      </div>
+      <div style="text-align: center; animation: slideIn 0.6s ease-out 0.3s backwards;">
+        <div style="font-size: 52px; font-weight: 700; background: linear-gradient(135deg, #ED3F00 0%, #FF6B00 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px;">4.9★</div>
+        <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Rating</div>
+        <div style="font-size: 13px; color: #1A8245;">↑ 0.3 higher</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">083 — Stats With Horizontal Bars</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="margin-bottom: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <div>
+            <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Customer Acquisition</span>
+          </div>
+          <div>
+            <span style="font-size: 28px; font-weight: 700; color: #2C6ECB;">125K</span>
+          </div>
+        </div>
+        <div style="height: 10px; background: #E3E3E8; border-radius: 10px; overflow: hidden;">
+          <div style="width: 85%; height: 100%; background: linear-gradient(90deg, #2C6ECB 0%, #5B8EEC 100%);"></div>
+        </div>
+        <div style="font-size: 13px; color: #6D6D72; margin-top: 8px;">Target: 150K (85% complete)</div>
+      </div>
+      <div style="margin-bottom: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <div>
+            <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Revenue Goal</span>
+          </div>
+          <div>
+            <span style="font-size: 28px; font-weight: 700; color: #1A8245;">$15M</span>
+          </div>
+        </div>
+        <div style="height: 10px; background: #E3E3E8; border-radius: 10px; overflow: hidden;">
+          <div style="width: 92%; height: 100%; background: linear-gradient(90deg, #1A8245 0%, #0EA663 100%);"></div>
+        </div>
+        <div style="font-size: 13px; color: #6D6D72; margin-top: 8px;">Target: $16.5M (92% complete)</div>
+      </div>
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <div>
+            <span style="font-size: 16px; font-weight: 600; color: #1D1D1F;">User Engagement</span>
+          </div>
+          <div>
+            <span style="font-size: 28px; font-weight: 700; color: #7C3AED;">8.5h</span>
+          </div>
+        </div>
+        <div style="height: 10px; background: #E3E3E8; border-radius: 10px; overflow: hidden;">
+          <div style="width: 78%; height: 100%; background: linear-gradient(90deg, #7C3AED 0%, #A78BFA 100%);"></div>
+        </div>
+        <div style="font-size: 13px; color: #6D6D72; margin-top: 8px;">Target: 11h (78% complete)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">084 — Split Color Stats</div>
+<div class="section-container">
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
+    <div style="padding: 80px 60px; background: linear-gradient(135deg, #2C6ECB 0%, #5B8EEC 100%); text-align: center;">
+      <div style="font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 20px;">TOTAL CUSTOMERS</div>
+      <div style="font-size: 80px; font-weight: 700; color: #FFFFFF; margin-bottom: 16px;">250K</div>
+      <div style="font-size: 18px; color: rgba(255,255,255,0.95);">Growing every day</div>
+    </div>
+    <div style="padding: 80px 60px; background: linear-gradient(135deg, #1A8245 0%, #0EA663 100%); text-align: center;">
+      <div style="font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 20px;">MONTHLY REVENUE</div>
+      <div style="font-size: 80px; font-weight: 700; color: #FFFFFF; margin-bottom: 16px;">$2.8M</div>
+      <div style="font-size: 18px; color: rgba(255,255,255,0.95);">Recurring income</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">085 — Centered Stats With Icons</div>
+<div class="section-container">
+  <div style="padding: 100px 80px; background: #FFFFFF; text-align: center;">
+    <h2 style="font-size: 40px; font-weight: 700; color: #1D1D1F; margin-bottom: 60px;">Platform at a glance</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px; max-width: 1000px; margin: 0 auto;">
+      <div>
+        <div style="width: 72px; height: 72px; margin: 0 auto 24px; background: linear-gradient(135deg, #E9F0FE 0%, #E3F5E1 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#2C6ECB" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="#2C6ECB" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#2C6ECB" stroke-width="2"/></svg>
+        </div>
+        <div style="font-size: 56px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">5M+</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Active Users</div>
+        <div style="font-size: 14px; color: #6D6D72;">Worldwide community</div>
+      </div>
+      <div>
+        <div style="width: 72px; height: 72px; margin: 0 auto 24px; background: linear-gradient(135deg, #E3F5E1 0%, #FFFBE6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#1A8245" stroke-width="2"/></svg>
+        </div>
+        <div style="font-size: 56px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">$50M</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Total Savings</div>
+        <div style="font-size: 14px; color: #6D6D72;">Customer benefits</div>
+      </div>
+      <div>
+        <div style="width: 72px; height: 72px; margin: 0 auto 24px; background: linear-gradient(135deg, #F3EEFF 0%, #FFE5E5 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#7C3AED"/></svg>
+        </div>
+        <div style="font-size: 56px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">4.9★</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Customer Rating</div>
+        <div style="font-size: 14px; color: #6D6D72;">Based on 50K reviews</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">086 — Stats With Underlines</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;">
+      <div style="text-align: center;">
+        <div style="font-size: 56px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px; padding-bottom: 16px; border-bottom: 3px solid #2C6ECB;">2.5M</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-top: 16px; margin-bottom: 6px;">Total Users</div>
+        <div style="font-size: 14px; color: #6D6D72;">Platform-wide reach</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 56px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px; padding-bottom: 16px; border-bottom: 3px solid #1A8245;">$15M</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-top: 16px; margin-bottom: 6px;">Annual Revenue</div>
+        <div style="font-size: 14px; color: #6D6D72;">Year-end projection</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 56px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px; padding-bottom: 16px; border-bottom: 3px solid #7C3AED;">99.9%</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-top: 16px; margin-bottom: 6px;">Uptime SLA</div>
+        <div style="font-size: 14px; color: #6D6D72;">Guaranteed availability</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">087 — Boxed Stats Layout</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #F5F5F7;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+      <div style="padding: 36px 24px; background: #FFFFFF; border: 2px solid #E3E3E8; border-radius: 10px; text-align: center;">
+        <div style="font-size: 40px; font-weight: 700; color: #2C6ECB; margin-bottom: 8px;">10M+</div>
+        <div style="font-size: 14px; color: #6D6D72;">Users</div>
+      </div>
+      <div style="padding: 36px 24px; background: #FFFFFF; border: 2px solid #E3E3E8; border-radius: 10px; text-align: center;">
+        <div style="font-size: 40px; font-weight: 700; color: #1A8245; margin-bottom: 8px;">$25M</div>
+        <div style="font-size: 14px; color: #6D6D72;">Revenue</div>
+      </div>
+      <div style="padding: 36px 24px; background: #FFFFFF; border: 2px solid #E3E3E8; border-radius: 10px; text-align: center;">
+        <div style="font-size: 40px; font-weight: 700; color: #7C3AED; margin-bottom: 8px;">99%</div>
+        <div style="font-size: 14px; color: #6D6D72;">Uptime</div>
+      </div>
+      <div style="padding: 36px 24px; background: #FFFFFF; border: 2px solid #E3E3E8; border-radius: 10px; text-align: center;">
+        <div style="font-size: 40px; font-weight: 700; color: #ED3F00; margin-bottom: 8px;">4.9★</div>
+        <div style="font-size: 14px; color: #6D6D72;">Rating</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">088 — Stats With Graph Backgrounds</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <div style="position: relative; padding: 40px; background: linear-gradient(180deg, #E9F0FE 0%, #FFFFFF 100%); border-radius: 12px; overflow: hidden;">
+        <div style="position: relative; z-index: 1;">
+          <div style="font-size: 52px; font-weight: 700; color: #2C6ECB; margin-bottom: 12px;">$8.5M</div>
+          <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Revenue</div>
+          <div style="font-size: 14px; color: #6D6D72;">Annual recurring</div>
+        </div>
+      </div>
+      <div style="position: relative; padding: 40px; background: linear-gradient(180deg, #E3F5E1 0%, #FFFFFF 100%); border-radius: 12px; overflow: hidden;">
+        <div style="position: relative; z-index: 1;">
+          <div style="font-size: 52px; font-weight: 700; color: #1A8245; margin-bottom: 12px;">125K</div>
+          <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Customers</div>
+          <div style="font-size: 14px; color: #6D6D72;">Active accounts</div>
+        </div>
+      </div>
+      <div style="position: relative; padding: 40px; background: linear-gradient(180deg, #F3EEFF 0%, #FFFFFF 100%); border-radius: 12px; overflow: hidden;">
+        <div style="position: relative; z-index: 1;">
+          <div style="font-size: 52px; font-weight: 700; color: #7C3AED; margin-bottom: 12px;">98%</div>
+          <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Retention</div>
+          <div style="font-size: 14px; color: #6D6D72;">Customer loyalty</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">089 — Minimal Stat Indicators</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 32px; text-align: center;">
+      <div>
+        <div style="font-size: 44px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">2.5M</div>
+        <div style="font-size: 13px; color: #6D6D72;">Users</div>
+      </div>
+      <div>
+        <div style="font-size: 44px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">$15M</div>
+        <div style="font-size: 13px; color: #6D6D72;">Revenue</div>
+      </div>
+      <div>
+        <div style="font-size: 44px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">99.9%</div>
+        <div style="font-size: 13px; color: #6D6D72;">Uptime</div>
+      </div>
+      <div>
+        <div style="font-size: 44px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">180+</div>
+        <div style="font-size: 13px; color: #6D6D72;">Countries</div>
+      </div>
+      <div>
+        <div style="font-size: 44px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">4.9★</div>
+        <div style="font-size: 13px; color: #6D6D72;">Rating</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">090 — Full Width Stat Banner</div>
+<div class="section-container">
+  <div style="padding: 60px 80px; background: linear-gradient(135deg, #1D1D1F 0%, #2D2D2F 100%);">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="flex: 1; text-align: center; padding: 24px; border-right: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-size: 52px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">10M+</div>
+        <div style="font-size: 15px; color: rgba(255,255,255,0.7);">Active Users</div>
+      </div>
+      <div style="flex: 1; text-align: center; padding: 24px; border-right: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-size: 52px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">$50M</div>
+        <div style="font-size: 15px; color: rgba(255,255,255,0.7);">Total Savings</div>
+      </div>
+      <div style="flex: 1; text-align: center; padding: 24px; border-right: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-size: 52px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">99.9%</div>
+        <div style="font-size: 15px; color: rgba(255,255,255,0.7);">Uptime SLA</div>
+      </div>
+      <div style="flex: 1; text-align: center; padding: 24px; border-right: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-size: 52px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">180+</div>
+        <div style="font-size: 15px; color: rgba(255,255,255,0.7);">Countries</div>
+      </div>
+      <div style="flex: 1; text-align: center; padding: 24px;">
+        <div style="font-size: 52px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">24/7</div>
+        <div style="font-size: 15px; color: rgba(255,255,255,0.7);">Support</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">091 — Stats With Accent Circles</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background: #2C6ECB; border-radius: 50%; margin: 0 auto 24px;"></div>
+        <div style="font-size: 52px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">$8.5M</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Annual Revenue</div>
+        <div style="font-size: 14px; color: #6D6D72;">Recurring income stream</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background: #1A8245; border-radius: 50%; margin: 0 auto 24px;"></div>
+        <div style="font-size: 52px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">125K</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Active Customers</div>
+        <div style="font-size: 14px; color: #6D6D72;">Paying subscribers</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background: #7C3AED; border-radius: 50%; margin: 0 auto 24px;"></div>
+        <div style="font-size: 52px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">98%</div>
+        <div style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Retention Rate</div>
+        <div style="font-size: 14px; color: #6D6D72;">Customer satisfaction</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">092 — Oversized Number Stats</div>
+<div class="section-container">
+  <div style="padding: 100px 80px; background: linear-gradient(135deg, #F5F5F7 0%, #FFFFFF 100%); text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="margin-bottom: 64px;">
+        <div style="font-size: 120px; font-weight: 700; color: #1D1D1F; margin-bottom: 20px; line-height: 1; letter-spacing: -0.02em;">99.99%</div>
+        <div style="font-size: 24px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">Platform Uptime</div>
+        <div style="font-size: 17px; color: #6D6D72;">Enterprise-grade reliability you can count on</div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; padding-top: 48px; border-top: 1px solid #E3E3E8;">
+        <div>
+          <div style="font-size: 44px; font-weight: 700; color: #2C6ECB; margin-bottom: 8px;">< 50ms</div>
+          <div style="font-size: 14px; color: #6D6D72;">Response Time</div>
+        </div>
+        <div>
+          <div style="font-size: 44px; font-weight: 700; color: #1A8245; margin-bottom: 8px;">10M+</div>
+          <div style="font-size: 14px; color: #6D6D72;">Requests Daily</div>
+        </div>
+        <div>
+          <div style="font-size: 44px; font-weight: 700; color: #7C3AED; margin-bottom: 8px;">180+</div>
+          <div style="font-size: 14px; color: #6D6D72;">Global Regions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">093 — Stats With Corner Accents</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <div style="position: relative; padding: 40px; border: 1px solid #E3E3E8; border-radius: 12px;">
+        <div style="position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-top: 3px solid #2C6ECB; border-left: 3px solid #2C6ECB; border-top-left-radius: 12px;"></div>
+        <div style="font-size: 52px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">$8.5M</div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Revenue</div>
+        <div style="font-size: 14px; color: #6D6D72;">Annual total</div>
+      </div>
+      <div style="position: relative; padding: 40px; border: 1px solid #E3E3E8; border-radius: 12px;">
+        <div style="position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-top: 3px solid #1A8245; border-left: 3px solid #1A8245; border-top-left-radius: 12px;"></div>
+        <div style="font-size: 52px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">125K</div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Customers</div>
+        <div style="font-size: 14px; color: #6D6D72;">Active users</div>
+      </div>
+      <div style="position: relative; padding: 40px; border: 1px solid #E3E3E8; border-radius: 12px;">
+        <div style="position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-top: 3px solid #7C3AED; border-left: 3px solid #7C3AED; border-top-left-radius: 12px;"></div>
+        <div style="font-size: 52px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">99%</div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Retention</div>
+        <div style="font-size: 14px; color: #6D6D72;">Customer rate</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">094 — Stacked Stat Sections</div>
+<div class="section-container">
+  <div style="background: #FFFFFF;">
+    <div style="padding: 60px; border-bottom: 1px solid #E3E3E8; text-align: center;">
+      <div style="font-size: 64px; font-weight: 700; color: #2C6ECB; margin-bottom: 16px;">2.5 Million</div>
+      <div style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Active Users Worldwide</div>
+      <div style="font-size: 16px; color: #6D6D72;">Growing 24% month over month</div>
+    </div>
+    <div style="padding: 60px; border-bottom: 1px solid #E3E3E8; text-align: center;">
+      <div style="font-size: 64px; font-weight: 700; color: #1A8245; margin-bottom: 16px;">$15 Million</div>
+      <div style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Annual Recurring Revenue</div>
+      <div style="font-size: 16px; color: #6D6D72;">42% year over year growth</div>
+    </div>
+    <div style="padding: 60px; text-align: center;">
+      <div style="font-size: 64px; font-weight: 700; color: #7C3AED; margin-bottom: 16px;">99.9% Uptime</div>
+      <div style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Enterprise SLA Guarantee</div>
+      <div style="font-size: 16px; color: #6D6D72;">Industry-leading reliability</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">095 — Stats With Percentage Tags</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <div style="padding: 40px; background: #F5F5F7; border-radius: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 24px;">
+          <div style="font-size: 52px; font-weight: 700; color: #1D1D1F;">$8.5M</div>
+          <div style="padding: 6px 14px; background: #E3F5E1; border-radius: 20px; font-size: 14px; font-weight: 600; color: #1A8245;">+42%</div>
+        </div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Annual Revenue</div>
+        <div style="font-size: 14px; color: #6D6D72;">vs last year</div>
+      </div>
+      <div style="padding: 40px; background: #F5F5F7; border-radius: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 24px;">
+          <div style="font-size: 52px; font-weight: 700; color: #1D1D1F;">125K</div>
+          <div style="padding: 6px 14px; background: #E3F5E1; border-radius: 20px; font-size: 14px; font-weight: 600; color: #1A8245;">+28%</div>
+        </div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Active Customers</div>
+        <div style="font-size: 14px; color: #6D6D72;">vs last quarter</div>
+      </div>
+      <div style="padding: 40px; background: #F5F5F7; border-radius: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 24px;">
+          <div style="font-size: 52px; font-weight: 700; color: #1D1D1F;">8.5h</div>
+          <div style="padding: 6px 14px; background: #E3F5E1; border-radius: 20px; font-size: 14px; font-weight: 600; color: #1A8245;">+15%</div>
+        </div>
+        <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Engagement</div>
+        <div style="font-size: 14px; color: #6D6D72;">vs last month</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">096 — Vertical Stat Cards</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+      <div style="padding: 48px 32px; background: linear-gradient(180deg, #E9F0FE 0%, #FFFFFF 100%); border-radius: 12px; text-align: center;">
+        <div style="font-size: 56px; font-weight: 700; color: #2C6ECB; margin-bottom: 16px;">10M</div>
+        <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Downloads</div>
+        <div style="font-size: 13px; color: #6D6D72;">All platforms</div>
+      </div>
+      <div style="padding: 48px 32px; background: linear-gradient(180deg, #E3F5E1 0%, #FFFFFF 100%); border-radius: 12px; text-align: center;">
+        <div style="font-size: 56px; font-weight: 700; color: #1A8245; margin-bottom: 16px;">4.9★</div>
+        <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">App Rating</div>
+        <div style="font-size: 13px; color: #6D6D72;">User reviews</div>
+      </div>
+      <div style="padding: 48px 32px; background: linear-gradient(180deg, #F3EEFF 0%, #FFFFFF 100%); border-radius: 12px; text-align: center;">
+        <div style="font-size: 56px; font-weight: 700; color: #7C3AED; margin-bottom: 16px;">180+</div>
+        <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Countries</div>
+        <div style="font-size: 13px; color: #6D6D72;">Global reach</div>
+      </div>
+      <div style="padding: 48px 32px; background: linear-gradient(180deg, #FFE5E5 0%, #FFFFFF 100%); border-radius: 12px; text-align: center;">
+        <div style="font-size: 56px; font-weight: 700; color: #ED3F00; margin-bottom: 16px;">24/7</div>
+        <div style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Support</div>
+        <div style="font-size: 13px; color: #6D6D72;">Always available</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">097 — Stats With Side Bars</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="display: flex; flex-direction: column; gap: 32px; max-width: 900px; margin: 0 auto;">
+      <div style="display: flex; gap: 24px; align-items: center;">
+        <div style="width: 6px; height: 80px; background: #2C6ECB; border-radius: 10px;"></div>
+        <div style="flex: 1;">
+          <div style="font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">$8.5 Million</div>
+          <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Annual Recurring Revenue</div>
+          <div style="font-size: 14px; color: #6D6D72;">Growing 42% year over year</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 24px; align-items: center;">
+        <div style="width: 6px; height: 80px; background: #1A8245; border-radius: 10px;"></div>
+        <div style="flex: 1;">
+          <div style="font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">125,000</div>
+          <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Active Customers</div>
+          <div style="font-size: 14px; color: #6D6D72;">Across all subscription tiers</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 24px; align-items: center;">
+        <div style="width: 6px; height: 80px; background: #7C3AED; border-radius: 10px;"></div>
+        <div style="flex: 1;">
+          <div style="font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">98%</div>
+          <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Customer Retention Rate</div>
+          <div style="font-size: 14px; color: #6D6D72;">Industry-leading satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">098 — Minimalist Stats Row</div>
+<div class="section-container">
+  <div style="padding: 60px 80px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 40px; text-align: center;">
+      <div>
+        <div style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">2.5M</div>
+        <div style="font-size: 12px; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px;">Users</div>
+      </div>
+      <div>
+        <div style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">$15M</div>
+        <div style="font-size: 12px; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px;">Revenue</div>
+      </div>
+      <div>
+        <div style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">99%</div>
+        <div style="font-size: 12px; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px;">Uptime</div>
+      </div>
+      <div>
+        <div style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">180+</div>
+        <div style="font-size: 12px; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px;">Countries</div>
+      </div>
+      <div>
+        <div style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">4.9★</div>
+        <div style="font-size: 12px; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px;">Rating</div>
+      </div>
+      <div>
+        <div style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">24/7</div>
+        <div style="font-size: 12px; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px;">Support</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">099 — Premium Stats Showcase</div>
+<div class="section-container">
+  <div style="padding: 100px 80px; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 0; right: 0; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);"></div>
+    <div style="position: absolute; bottom: 0; left: 0; width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);"></div>
+    <div style="position: relative; z-index: 1; text-align: center;">
+      <div style="font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 32px;">Platform Excellence</div>
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 56px;">
+          <div>
+            <div style="font-size: 64px; font-weight: 700; color: #FFFFFF; margin-bottom: 12px;">10M+</div>
+            <div style="font-size: 17px; font-weight: 600; color: rgba(255,255,255,0.95); margin-bottom: 6px;">Active Users</div>
+            <div style="font-size: 14px; color: rgba(255,255,255,0.7);">Worldwide reach</div>
+          </div>
+          <div>
+            <div style="font-size: 64px; font-weight: 700; color: #FFFFFF; margin-bottom: 12px;">$50M</div>
+            <div style="font-size: 17px; font-weight: 600; color: rgba(255,255,255,0.95); margin-bottom: 6px;">Total Savings</div>
+            <div style="font-size: 14px; color: rgba(255,255,255,0.7);">Customer value</div>
+          </div>
+          <div>
+            <div style="font-size: 64px; font-weight: 700; color: #FFFFFF; margin-bottom: 12px;">99.9%</div>
+            <div style="font-size: 17px; font-weight: 600; color: rgba(255,255,255,0.95); margin-bottom: 6px;">Uptime SLA</div>
+            <div style="font-size: 14px; color: rgba(255,255,255,0.7);">Guaranteed</div>
+          </div>
+          <div>
+            <div style="font-size: 64px; font-weight: 700; color: #FFFFFF; margin-bottom: 12px;">4.9★</div>
+            <div style="font-size: 17px; font-weight: 600; color: rgba(255,255,255,0.95); margin-bottom: 6px;">User Rating</div>
+            <div style="font-size: 14px; color: rgba(255,255,255,0.7);">50K+ reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">100 — Ultimate Stats Dashboard</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 style="font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">Platform Performance</h2>
+      <p style="font-size: 18px; color: #6D6D72;">Real-time metrics that matter</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+      <div style="grid-row: span 2; padding: 48px; background: linear-gradient(135deg, #2C6ECB 0%, #5B8EEC 100%); border-radius: 12px;">
+        <div style="font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 20px;">TOTAL REVENUE</div>
+        <div style="font-size: 72px; font-weight: 700; color: #FFFFFF; margin-bottom: 16px;">$25M</div>
+        <div style="font-size: 18px; color: rgba(255,255,255,0.95); margin-bottom: 32px;">Annual recurring revenue</div>
+        <div style="display: flex; gap: 32px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2);">
+          <div>
+            <div style="font-size: 28px; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">+42%</div>
+            <div style="font-size: 14px; color: rgba(255,255,255,0.8);">YoY Growth</div>
+          </div>
+          <div>
+            <div style="font-size: 28px; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">$2.1M</div>
+            <div style="font-size: 14px; color: rgba(255,255,255,0.8);">MRR</div>
+          </div>
+        </div>
+      </div>
+      <div style="padding: 36px; background: #F5F5F7; border-radius: 12px;">
+        <div style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 12px;">CUSTOMERS</div>
+        <div style="font-size: 40px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">125K</div>
+        <div style="font-size: 13px; color: #1A8245;">↑ 28%</div>
+      </div>
+      <div style="padding: 36px; background: #F5F5F7; border-radius: 12px;">
+        <div style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 12px;">RETENTION</div>
+        <div style="font-size: 40px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">98%</div>
+        <div style="font-size: 13px; color: #1A8245;">↑ 5%</div>
+      </div>
+      <div style="padding: 36px; background: #F5F5F7; border-radius: 12px;">
+        <div style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 12px;">UPTIME</div>
+        <div style="font-size: 40px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">99.9%</div>
+        <div style="font-size: 13px; color: #1A8245;">↑ 0.1%</div>
+      </div>
+      <div style="padding: 36px; background: #F5F5F7; border-radius: 12px;">
+        <div style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 12px;">NPS SCORE</div>
+        <div style="font-size: 40px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">72</div>
+        <div style="font-size: 13px; color: #1A8245;">↑ 8</div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+      <div style="padding: 28px; background: #F5F5F7; border-radius: 12px; text-align: center;">
+        <div style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">180+</div>
+        <div style="font-size: 13px; color: #6D6D72;">Countries</div>
+      </div>
+      <div style="padding: 28px; background: #F5F5F7; border-radius: 12px; text-align: center;">
+        <div style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">4.9★</div>
+        <div style="font-size: 13px; color: #6D6D72;">Rating</div>
+      </div>
+      <div style="padding: 28px; background: #F5F5F7; border-radius: 12px; text-align: center;">
+        <div style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">< 50ms</div>
+        <div style="font-size: 13px; color: #6D6D72;">Latency</div>
+      </div>
+      <div style="padding: 28px; background: #F5F5F7; border-radius: 12px; text-align: center;">
+        <div style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">24/7</div>
+        <div style="font-size: 13px; color: #6D6D72;">Support</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

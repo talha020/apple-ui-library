@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Features 451-475 - Apple HIG</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;background:#000;color:#f5f5f7;line-height:1.4}
+.feature{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 20px;position:relative;overflow:hidden}
+.container{max-width:980px;width:100%;margin:0 auto}
+h2{font-size:clamp(40px,6vw,80px);font-weight:700;letter-spacing:-.015em;margin-bottom:20px;line-height:.95}
+.subtitle{font-size:clamp(24px,3vw,48px);font-weight:600;margin-bottom:30px;opacity:.9}
+p{font-size:21px;line-height:1.5;opacity:.8;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px}
+.card{background:rgba(255,255,255,.05);border-radius:20px;padding:30px;backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1)}
+.card h3{font-size:28px;font-weight:600;margin-bottom:12px}
+.card p{font-size:17px;opacity:.7}
+.icon{width:60px;height:60px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:32px;margin-bottom:20px}
+.stat{font-size:64px;font-weight:700;margin-bottom:10px;background:linear-gradient(90deg,#06f,#0af);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.badge{display:inline-block;background:#06f;color:#fff;padding:6px 16px;border-radius:20px;font-size:15px;font-weight:600;margin-bottom:20px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.feature-list{list-style:none;margin-top:30px}
+.feature-list li{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:19px}
+.feature-list li:last-child{border-bottom:none}
+.tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:40px}
+.tech-item{background:rgba(255,255,255,.03);border-radius:12px;padding:20px;text-align:center;border:1px solid rgba(255,255,255,.08)}
+.tech-item h4{font-size:17px;font-weight:600}
+@media(max-width:768px){.split{grid-template-columns:1fr}.tech-grid{grid-template-columns:repeat(2,1fr)}}
+.bg-blue{background:linear-gradient(135deg,#001a33,#003d66)}
+.bg-purple{background:linear-gradient(135deg,#1a0033,#3d0066)}
+.bg-green{background:linear-gradient(135deg,#001a0d,#003d1a)}
+.bg-red{background:linear-gradient(135deg,#330000,#660000)}
+.bg-orange{background:linear-gradient(135deg,#331a00,#663d00)}
+.bg-teal{background:linear-gradient(135deg,#001a1a,#003d3d)}
+.bg-pink{background:linear-gradient(135deg,#33001a,#66003d)}
+.bg-gray{background:linear-gradient(135deg,#0d0d0d,#1a1a1a)}
+</style>
+</head>
+<body>
+
+<section class="feature bg-blue">
+<div class="container">
+<div class="badge">Feature 451</div>
+<h2>Neural Processing Excellence</h2>
+<p class="subtitle">Advanced AI computations at lightning speed</p>
+<div class="grid">
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#06f,#0af)">⚡</div>
+<h3>Real-Time Analysis</h3>
+<p>Process complex neural networks with zero latency</p>
+</div>
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#06f,#0af)">🧠</div>
+<h3>Smart Learning</h3>
+<p>Adaptive algorithms that improve over time</p>
+</div>
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#06f,#0af)">🎯</div>
+<h3>Precision Targeting</h3>
+<p>Accurate predictions with 99.9% confidence</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-purple">
+<div class="container">
+<div class="badge">Feature 452</div>
+<h2>Quantum Security</h2>
+<p class="subtitle">Future-proof encryption technology</p>
+<div class="split">
+<div>
+<p>Our quantum-resistant encryption ensures your data remains secure against both current and future threats. Built on lattice-based cryptography.</p>
+<ul class="feature-list">
+<li>256-bit quantum encryption</li>
+<li>Zero-knowledge architecture</li>
+<li>Multi-layer authentication</li>
+<li>Biometric validation</li>
+</ul>
+</div>
+<div>
+<div class="stat">100%</div>
+<p style="font-size:24px;font-weight:600">Quantum Resistant</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-green">
+<div class="container">
+<div class="badge">Feature 453</div>
+<h2>Carbon Neutral Computing</h2>
+<p class="subtitle">Sustainable performance without compromise</p>
+<div class="grid">
+<div class="card">
+<div class="stat" style="font-size:48px">0g</div>
+<p>Carbon emissions per computation</p>
+</div>
+<div class="card">
+<div class="stat" style="font-size:48px">100%</div>
+<p>Renewable energy powered</p>
+</div>
+<div class="card">
+<div class="stat" style="font-size:48px">75%</div>
+<p>Energy efficiency gain</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-red">
+<div class="container">
+<div class="badge">Feature 454</div>
+<h2>Immersive Audio Engine</h2>
+<p class="subtitle">Three-dimensional sound that surrounds you</p>
+<p>Experience spatial audio with dynamic head tracking and adaptive EQ that creates a personal concert hall anywhere you go.</p>
+<div class="tech-grid">
+<div class="tech-item">
+<h4>Dolby Atmos</h4>
+</div>
+<div class="tech-item">
+<h4>Spatial Audio</h4>
+</div>
+<div class="tech-item">
+<h4>Adaptive EQ</h4>
+</div>
+<div class="tech-item">
+<h4>Head Tracking</h4>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-orange">
+<div class="container">
+<div class="badge">Feature 455</div>
+<h2>ProMotion Display</h2>
+<p class="subtitle">Adaptive refresh up to 240Hz</p>
+<div class="split">
+<div>
+<p>Dynamically adjusts from 1Hz to 240Hz based on content. Save battery while reading, enjoy buttery smooth scrolling and gaming.</p>
+</div>
+<div>
+<div class="grid" style="grid-template-columns:1fr 1fr">
+<div>
+<div class="stat" style="font-size:52px">240Hz</div>
+<p>Peak refresh rate</p>
+</div>
+<div>
+<div class="stat" style="font-size:52px">1Hz</div>
+<p>Battery saving mode</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-teal">
+<div class="container">
+<div class="badge">Feature 456</div>
+<h2>Unified Memory Architecture</h2>
+<p class="subtitle">Shared memory for CPU, GPU, and Neural Engine</p>
+<div class="grid">
+<div class="card">
+<h3>Zero Copy Overhead</h3>
+<p>All processors access the same memory pool instantly</p>
+</div>
+<div class="card">
+<h3>800GB/s Bandwidth</h3>
+<p>Lightning-fast data transfer between components</p>
+</div>
+<div class="card">
+<h3>Intelligent Allocation</h3>
+<p>Automatic memory management for optimal performance</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-pink">
+<div class="container">
+<div class="badge">Feature 457</div>
+<h2>Precision Finding</h2>
+<p class="subtitle">Ultra-wideband technology guides you</p>
+<p>Locate your devices with centimeter-level accuracy. Visual, haptic, and audio cues direct you straight to your lost items.</p>
+<ul class="feature-list">
+<li>U2 ultra-wideband chip</li>
+<li>Augmented reality guidance</li>
+<li>Directional haptics</li>
+<li>Distance and direction display</li>
+</ul>
+</div>
+</section>
+
+<section class="feature bg-gray">
+<div class="container">
+<div class="badge">Feature 458</div>
+<h2>Ceramic Shield Protection</h2>
+<p class="subtitle">Tougher than any smartphone glass</p>
+<div class="split">
+<div>
+<div class="stat">4x</div>
+<p style="font-size:24px;font-weight:600;margin-bottom:20px">Better drop performance</p>
+<p>Nano-ceramic crystals infused into glass create an ultra-hard surface that resists scratches and shattering.</p>
+</div>
+<div>
+<ul class="feature-list">
+<li>Dual-ion exchange process</li>
+<li>Nano-ceramic crystals</li>
+<li>Scratch resistant coating</li>
+<li>Impact dispersing structure</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-blue">
+<div class="container">
+<div class="badge">Feature 459</div>
+<h2>Macro Photography Mode</h2>
+<p class="subtitle">Discover incredible detail up close</p>
+<p>Capture stunning close-up shots with automatic switching to the Ultra Wide camera for macro shots as close as 2cm.</p>
+<div class="tech-grid">
+<div class="tech-item">
+<h4>2cm Focus</h4>
+</div>
+<div class="tech-item">
+<h4>Macro Video</h4>
+</div>
+<div class="tech-item">
+<h4>Auto Switch</h4>
+</div>
+<div class="tech-item">
+<h4>Slo-Mo Macro</h4>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-purple">
+<div class="container">
+<div class="badge">Feature 460</div>
+<h2>Photonic Engine</h2>
+<p class="subtitle">Computational photography reimagined</p>
+<div class="grid">
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#a855f7,#ec4899)">📸</div>
+<h3>Deep Fusion Earlier</h3>
+<p>Applied to uncompressed images for maximum detail</p>
+</div>
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#a855f7,#ec4899)">🌙</div>
+<h3>Low Light Mastery</h3>
+<p>2x improvement in low-light photography</p>
+</div>
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#a855f7,#ec4899)">✨</div>
+<h3>Texture Precision</h3>
+<p>Incredible detail in every shot</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-green">
+<div class="container">
+<div class="badge">Feature 461</div>
+<h2>Always-On Display</h2>
+<p class="subtitle">Essential information at a glance</p>
+<div class="split">
+<div>
+<p>Your lock screen stays visible with intelligent dimming. See time, widgets, and notifications without raising your device.</p>
+<ul class="feature-list">
+<li>1Hz refresh for battery efficiency</li>
+<li>Automatic brightness adjustment</li>
+<li>Live Activities support</li>
+<li>Smart photo dimming</li>
+</ul>
+</div>
+<div>
+<div class="stat" style="font-size:52px">24/7</div>
+<p style="font-size:24px;font-weight:600">Glanceable Information</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-red">
+<div class="container">
+<div class="badge">Feature 462</div>
+<h2>Dynamic Island</h2>
+<p class="subtitle">A new way to interact with your device</p>
+<p>The pill-shaped cutout morphs and expands to show alerts, notifications, and ongoing activities. It's hardware and software in perfect harmony.</p>
+<div class="grid">
+<div class="card">
+<h3>Live Activities</h3>
+<p>Track real-time information at a glance</p>
+</div>
+<div class="card">
+<h3>Adaptive Interface</h3>
+<p>Expands to show relevant controls</p>
+</div>
+<div class="card">
+<h3>Multitasking Hub</h3>
+<p>Manage multiple activities simultaneously</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-orange">
+<div class="container">
+<div class="badge">Feature 463</div>
+<h2>Emergency SOS via Satellite</h2>
+<p class="subtitle">Get help off the grid</p>
+<div class="split">
+<div>
+<p>Connect to emergency services even without cellular or Wi-Fi coverage. Custom antennas and software connect you to satellites overhead.</p>
+</div>
+<div>
+<ul class="feature-list">
+<li>Connect to emergency services</li>
+<li>Share Find My location</li>
+<li>Guided alignment interface</li>
+<li>Works in remote areas</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-teal">
+<div class="container">
+<div class="badge">Feature 464</div>
+<h2>Action Button</h2>
+<p class="subtitle">Your shortcut to what matters most</p>
+<p>Customize this programmable button to instantly activate your most-used features. From camera to voice memos to shortcuts.</p>
+<div class="tech-grid">
+<div class="tech-item">
+<h4>Silent Mode</h4>
+</div>
+<div class="tech-item">
+<h4>Camera</h4>
+</div>
+<div class="tech-item">
+<h4>Flashlight</h4>
+</div>
+<div class="tech-item">
+<h4>Voice Memo</h4>
+</div>
+<div class="tech-item">
+<h4>Translate</h4>
+</div>
+<div class="tech-item">
+<h4>Magnifier</h4>
+</div>
+<div class="tech-item">
+<h4>Shortcuts</h4>
+</div>
+<div class="tech-item">
+<h4>Accessibility</h4>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-pink">
+<div class="container">
+<div class="badge">Feature 465</div>
+<h2>Crash Detection</h2>
+<p class="subtitle">Advanced sensors that can save lives</p>
+<div class="grid">
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">🚗</div>
+<h3>Multi-Sensor Fusion</h3>
+<p>Accelerometer, gyroscope, GPS, and microphone work together</p>
+</div>
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">📞</div>
+<h3>Auto Emergency Call</h3>
+<p>Contacts emergency services automatically</p>
+</div>
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">📍</div>
+<h3>Location Sharing</h3>
+<p>Sends your location to emergency contacts</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-gray">
+<div class="container">
+<div class="badge">Feature 466</div>
+<h2>ProRAW Photography</h2>
+<p class="subtitle">Professional control meets computational power</p>
+<div class="split">
+<div>
+<p>Capture images in Apple ProRAW format combining RAW flexibility with computational photography benefits.</p>
+<ul class="feature-list">
+<li>48MP uncompressed RAW</li>
+<li>Deep Fusion integration</li>
+<li>Smart HDR data retention</li>
+<li>Professional editing latitude</li>
+</ul>
+</div>
+<div>
+<div class="stat" style="font-size:52px">48MP</div>
+<p style="font-size:24px;font-weight:600">Maximum Detail</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-blue">
+<div class="container">
+<div class="badge">Feature 467</div>
+<h2>Cinematic Mode Video</h2>
+<p class="subtitle">Hollywood-style focus transitions</p>
+<p>Automatically shifts focus between subjects with beautiful depth-of-field effects. Edit focus points even after recording.</p>
+<div class="grid">
+<div class="card">
+<h3>Smart Focus Tracking</h3>
+<p>AI predicts when subjects will enter frame</p>
+</div>
+<div class="card">
+<h3>4K HDR Support</h3>
+<p>Cinematic mode at full resolution</p>
+</div>
+<div class="card">
+<h3>Post-Capture Editing</h3>
+<p>Adjust focus and blur after shooting</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-purple">
+<div class="container">
+<div class="badge">Feature 468</div>
+<h2>MagSafe Ecosystem</h2>
+<p class="subtitle">Perfectly aligned wireless charging</p>
+<div class="split">
+<div>
+<p>Magnetically aligned charging delivers up to 25W of power. Attach wallets, battery packs, and mounts with precision.</p>
+</div>
+<div>
+<div class="grid" style="grid-template-columns:1fr 1fr">
+<div>
+<div class="stat" style="font-size:52px">25W</div>
+<p>Fast wireless charging</p>
+</div>
+<div>
+<div class="stat" style="font-size:52px">100%</div>
+<p>Alignment accuracy</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-green">
+<div class="container">
+<div class="badge">Feature 469</div>
+<h2>ProRes Video Recording</h2>
+<p class="subtitle">Professional codecs in your pocket</p>
+<p>Record directly in Apple ProRes for maximum quality and editing flexibility. Up to 4K60 ProRes on external storage.</p>
+<div class="tech-grid">
+<div class="tech-item">
+<h4>ProRes 422</h4>
+</div>
+<div class="tech-item">
+<h4>ProRes 422 HQ</h4>
+</div>
+<div class="tech-item">
+<h4>4K 60fps</h4>
+</div>
+<div class="tech-item">
+<h4>Log Encoding</h4>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-red">
+<div class="container">
+<div class="badge">Feature 470</div>
+<h2>LiDAR Scanner</h2>
+<p class="subtitle">Measure the world in 3D</p>
+<div class="grid">
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#dc2626,#f97316)">📏</div>
+<h3>Instant AR</h3>
+<p>Place objects in augmented reality instantly</p>
+</div>
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#dc2626,#f97316)">🌙</div>
+<h3>Night Mode Portraits</h3>
+<p>Beautiful bokeh even in darkness</p>
+</div>
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#dc2626,#f97316)">🏗️</div>
+<h3>3D Scanning</h3>
+<p>Create detailed 3D models of spaces</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-orange">
+<div class="container">
+<div class="badge">Feature 471</div>
+<h2>Focus Modes</h2>
+<p class="subtitle">Intelligent notification filtering</p>
+<div class="split">
+<div>
+<p>Create custom Focus modes that filter notifications, apps, and people based on what you're doing. Automatically sync across all devices.</p>
+<ul class="feature-list">
+<li>Smart activation suggestions</li>
+<li>Per-app notification control</li>
+<li>Home screen customization</li>
+<li>Cross-device sync</li>
+</ul>
+</div>
+<div>
+<div class="stat" style="font-size:52px">100%</div>
+<p style="font-size:24px;font-weight:600">Focused Productivity</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-teal">
+<div class="container">
+<div class="badge">Feature 472</div>
+<h2>Live Text Intelligence</h2>
+<p class="subtitle">Text recognition anywhere you see it</p>
+<p>Select, copy, translate, and interact with text in photos, videos, and the real world through your camera.</p>
+<div class="grid">
+<div class="card">
+<h3>Camera Integration</h3>
+<p>Recognize text in real-time viewfinder</p>
+</div>
+<div class="card">
+<h3>Video Text Capture</h3>
+<p>Pause video and copy visible text</p>
+</div>
+<div class="card">
+<h3>Quick Actions</h3>
+<p>Call numbers, translate, convert units instantly</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-pink">
+<div class="container">
+<div class="badge">Feature 473</div>
+<h2>Visual Look Up</h2>
+<p class="subtitle">Identify objects, plants, and landmarks</h2>
+<div class="split">
+<div>
+<p>Tap and hold on subjects in photos to learn more. Identify plants, pets, landmarks, art, and products with detailed information.</p>
+</div>
+<div>
+<ul class="feature-list">
+<li>Plant and flower identification</li>
+<li>Breed recognition for pets</li>
+<li>Landmark information</li>
+<li>Art and sculpture details</li>
+<li>Product search integration</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-gray">
+<div class="container">
+<div class="badge">Feature 474</div>
+<h2>SharePlay Experience</h2>
+<p class="subtitle">Share content in perfect sync</h2>
+<p>Watch movies, listen to music, and share your screen together on FaceTime. Everyone controls playback with synchronized audio.</p>
+<div class="tech-grid">
+<div class="tech-item">
+<h4>Music Sync</h4>
+</div>
+<div class="tech-item">
+<h4>Video Watch</h4>
+</div>
+<div class="tech-item">
+<h4>Screen Share</h4>
+</div>
+<div class="tech-item">
+<h4>Fitness+</h4>
+</div>
+</div>
+</div>
+</section>
+
+<section class="feature bg-blue">
+<div class="container">
+<div class="badge">Feature 475</div>
+<h2>Continuity Camera</h2>
+<p class="subtitle">Your iPhone as a Mac webcam</h2>
+<div class="grid">
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#06f,#0af)">📹</div>
+<h3>Wireless Connection</h3>
+<p>Automatically connects when near your Mac</p>
+</div>
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#06f,#0af)">👤</div>
+<h3>Center Stage</h3>
+<p>Automatically keeps you in frame</p>
+</div>
+<div class="card">
+<div class="icon" style="background:linear-gradient(135deg,#06f,#0af)">📊</div>
+<h3>Desk View</h3>
+<p>Show your workspace from above simultaneously</p>
+</div>
+</div>
+</div>
+</section>
+
+</body>
+</html>

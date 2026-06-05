@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing 101-125 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<!-- Pricing 101: Segmented Control Pricing -->
+<div class="section-label">Pricing 101 / Segmented Control Pricing</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Choose your plan</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 32px;">Simple, transparent pricing that grows with you</p>
+<div style="display: inline-flex; background: #F6F6F7; border-radius: 10px; padding: 4px; margin-bottom: 48px; border: 1px solid #E3E3E8;">
+<button style="padding: 10px 24px; border-radius: 8px; border: none; font-family: inherit; font-size: 14px; font-weight: 600; background: #1A1A1A; color: #FFFFFF; cursor: pointer;">Monthly</button>
+<button style="padding: 10px 24px; border-radius: 8px; border: none; font-family: inherit; font-size: 14px; font-weight: 500; background: transparent; color: #6D6D72; cursor: pointer;">Quarterly</button>
+<button style="padding: 10px 24px; border-radius: 8px; border: none; font-family: inherit; font-size: 14px; font-weight: 500; background: transparent; color: #6D6D72; cursor: pointer;">Annual</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto;">
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 32px; text-align: left;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Starter</p>
+<p style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$12<span style="font-size: 16px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<p style="font-size: 13px; color: #AEAEB2; margin-bottom: 24px;">For individuals</p>
+<button style="width: 100%; padding: 12px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Get started</button>
+</div>
+<div style="border: 2px solid #2C6ECB; border-radius: 12px; padding: 32px; text-align: left; position: relative;">
+<span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #2C6ECB; color: #FFFFFF; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 6px;">Popular</span>
+<p style="font-size: 14px; font-weight: 600; color: #2C6ECB; margin-bottom: 8px;">Professional</p>
+<p style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$29<span style="font-size: 16px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<p style="font-size: 13px; color: #AEAEB2; margin-bottom: 24px;">For growing teams</p>
+<button style="width: 100%; padding: 12px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Get started</button>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 32px; text-align: left;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Enterprise</p>
+<p style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$79<span style="font-size: 16px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<p style="font-size: 13px; color: #AEAEB2; margin-bottom: 24px;">For large organizations</p>
+<button style="width: 100%; padding: 12px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Contact sales</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 102: Bandwidth/Transfer Pricing -->
+<div class="section-label">Pricing 102 / Bandwidth &amp; Transfer Pricing</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Bandwidth pricing</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 48px;">Pay only for what you transfer</p>
+<div style="max-width: 800px; margin: 0 auto;">
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+<div style="padding: 16px; background: #F6F6F7; font-size: 13px; font-weight: 600; color: #6D6D72; border-bottom: 1px solid #E3E3E8;">Tier</div>
+<div style="padding: 16px; background: #F6F6F7; font-size: 13px; font-weight: 600; color: #6D6D72; border-bottom: 1px solid #E3E3E8;">Range</div>
+<div style="padding: 16px; background: #F6F6F7; font-size: 13px; font-weight: 600; color: #6D6D72; border-bottom: 1px solid #E3E3E8;">Price/GB</div>
+<div style="padding: 16px; background: #F6F6F7; font-size: 13px; font-weight: 600; color: #6D6D72; border-bottom: 1px solid #E3E3E8;">Savings</div>
+<div style="padding: 16px; font-size: 14px; font-weight: 600; color: #1D1D1F; border-bottom: 1px solid #E3E3E8;">Tier 1</div>
+<div style="padding: 16px; font-size: 14px; color: #6D6D72; border-bottom: 1px solid #E3E3E8;">0 - 10 TB</div>
+<div style="padding: 16px; font-size: 14px; font-weight: 600; color: #1D1D1F; border-bottom: 1px solid #E3E3E8;">$0.085</div>
+<div style="padding: 16px; font-size: 14px; color: #AEAEB2; border-bottom: 1px solid #E3E3E8;">--</div>
+<div style="padding: 16px; font-size: 14px; font-weight: 600; color: #1D1D1F; border-bottom: 1px solid #E3E3E8;">Tier 2</div>
+<div style="padding: 16px; font-size: 14px; color: #6D6D72; border-bottom: 1px solid #E3E3E8;">10 - 50 TB</div>
+<div style="padding: 16px; font-size: 14px; font-weight: 600; color: #1D1D1F; border-bottom: 1px solid #E3E3E8;">$0.065</div>
+<div style="padding: 16px; font-size: 14px; color: #1A8245; border-bottom: 1px solid #E3E3E8;">24% off</div>
+<div style="padding: 16px; font-size: 14px; font-weight: 600; color: #1D1D1F;">Tier 3</div>
+<div style="padding: 16px; font-size: 14px; color: #6D6D72;">50 - 150 TB</div>
+<div style="padding: 16px; font-size: 14px; font-weight: 600; color: #1D1D1F;">$0.040</div>
+<div style="padding: 16px; font-size: 14px; color: #1A8245;">53% off</div>
+</div>
+<p style="font-size: 13px; color: #AEAEB2; margin-top: 16px;">First 1 GB/month free. Over 150 TB? <a href="#" style="color: #2C6ECB; text-decoration: none;">Contact us</a></p>
+</div>
+</div>
+</div>
+
+<!-- Pricing 103: Checkout-Style Single Plan -->
+<div class="section-label">Pricing 103 / Checkout-Style Single Plan</div>
+<div class="section-container">
+<div style="padding: 80px 40px; display: flex; justify-content: center;">
+<div style="max-width: 480px; width: 100%; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+<div style="padding: 32px; border-bottom: 1px solid #E3E3E8;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Pro Plan</p>
+<div style="display: flex; align-items: baseline; gap: 4px; margin-bottom: 16px;">
+<span style="font-size: 48px; font-weight: 700; color: #1D1D1F;">$49</span>
+<span style="font-size: 16px; color: #6D6D72;">/month</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<div style="display: flex; justify-content: space-between; font-size: 14px;"><span style="color: #6D6D72;">Base plan</span><span style="color: #1D1D1F; font-weight: 500;">$49.00</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 14px;"><span style="color: #6D6D72;">5 team members</span><span style="color: #1D1D1F; font-weight: 500;">Included</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 14px;"><span style="color: #6D6D72;">50 GB storage</span><span style="color: #1D1D1F; font-weight: 500;">Included</span></div>
+</div>
+</div>
+<div style="padding: 24px 32px; background: #F6F6F7;">
+<div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 600; margin-bottom: 20px;"><span style="color: #1D1D1F;">Total</span><span style="color: #1D1D1F;">$49.00/mo</span></div>
+<button style="width: 100%; padding: 14px; background: #1A1A1A; color: #FFFFFF; border: none; border-radius: 10px; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Subscribe now</button>
+<p style="font-size: 12px; color: #AEAEB2; text-align: center; margin-top: 12px;">Cancel anytime. No hidden fees.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 104: Usage Buckets with Overage -->
+<div class="section-label">Pricing 104 / Usage Buckets with Overage</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Pick your bucket</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 48px;">Overages billed at a reduced rate</p>
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 960px; margin: 0 auto;">
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px 20px; text-align: center;">
+<div style="width: 48px; height: 48px; background: #F0F4FF; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 20px;">S</div>
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 4px;">Small</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$19</p>
+<p style="font-size: 13px; color: #AEAEB2; margin-bottom: 16px;">10K requests/mo</p>
+<p style="font-size: 12px; color: #6D6D72;">Overage: $0.002/req</p>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px 20px; text-align: center;">
+<div style="width: 48px; height: 48px; background: #E8F5E9; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 20px;">M</div>
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 4px;">Medium</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$49</p>
+<p style="font-size: 13px; color: #AEAEB2; margin-bottom: 16px;">50K requests/mo</p>
+<p style="font-size: 12px; color: #6D6D72;">Overage: $0.001/req</p>
+</div>
+<div style="border: 2px solid #1A8245; border-radius: 12px; padding: 28px 20px; text-align: center;">
+<div style="width: 48px; height: 48px; background: #E8F5E9; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 20px;">L</div>
+<p style="font-size: 13px; font-weight: 600; color: #1A8245; margin-bottom: 4px;">Large</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$99</p>
+<p style="font-size: 13px; color: #AEAEB2; margin-bottom: 16px;">200K requests/mo</p>
+<p style="font-size: 12px; color: #6D6D72;">Overage: $0.0005/req</p>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px 20px; text-align: center;">
+<div style="width: 48px; height: 48px; background: #FFF3E0; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 20px;">XL</div>
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 4px;">X-Large</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$199</p>
+<p style="font-size: 13px; color: #AEAEB2; margin-bottom: 16px;">1M requests/mo</p>
+<p style="font-size: 12px; color: #6D6D72;">Overage: $0.0002/req</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 105: Role-Based Pricing -->
+<div class="section-label">Pricing 105 / Role-Based Pricing</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Pay per role</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 48px;">Different prices for different access levels</p>
+<div style="max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border: 1px solid #E3E3E8; border-radius: 10px;">
+<div style="display: flex; align-items: center; gap: 16px;">
+<div style="width: 40px; height: 40px; background: #F6F6F7; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">V</div>
+<div style="text-align: left;"><p style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Viewer</p><p style="font-size: 13px; color: #6D6D72;">Read-only access</p></div>
+</div>
+<div style="text-align: right;"><p style="font-size: 20px; font-weight: 700; color: #1D1D1F;">Free</p><p style="font-size: 12px; color: #AEAEB2;">Unlimited viewers</p></div>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border: 1px solid #E3E3E8; border-radius: 10px;">
+<div style="display: flex; align-items: center; gap: 16px;">
+<div style="width: 40px; height: 40px; background: #F0F4FF; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">E</div>
+<div style="text-align: left;"><p style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Editor</p><p style="font-size: 13px; color: #6D6D72;">Create and edit content</p></div>
+</div>
+<div style="text-align: right;"><p style="font-size: 20px; font-weight: 700; color: #1D1D1F;">$8<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/user/mo</span></p></div>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border: 2px solid #2C6ECB; border-radius: 10px;">
+<div style="display: flex; align-items: center; gap: 16px;">
+<div style="width: 40px; height: 40px; background: #F0F4FF; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">A</div>
+<div style="text-align: left;"><p style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Admin</p><p style="font-size: 13px; color: #6D6D72;">Full access + settings</p></div>
+</div>
+<div style="text-align: right;"><p style="font-size: 20px; font-weight: 700; color: #1D1D1F;">$15<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/user/mo</span></p></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 106: Feature Matrix Table -->
+<div class="section-label">Pricing 106 / Feature Matrix Table</div>
+<div class="section-container">
+<div style="padding: 80px 40px;">
+<div style="text-align: center; margin-bottom: 48px;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Compare features</h2>
+<p style="font-size: 17px; color: #6D6D72;">Find the right plan for your needs</p>
+</div>
+<div style="max-width: 900px; margin: 0 auto; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; background: #F6F6F7;">
+<div style="padding: 16px 24px; font-size: 13px; font-weight: 600; color: #6D6D72;">Feature</div>
+<div style="padding: 16px; text-align: center; font-size: 13px; font-weight: 600; color: #6D6D72;">Free</div>
+<div style="padding: 16px; text-align: center; font-size: 13px; font-weight: 600; color: #2C6ECB;">Pro</div>
+<div style="padding: 16px; text-align: center; font-size: 13px; font-weight: 600; color: #6D6D72;">Enterprise</div>
+</div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; border-top: 1px solid #E3E3E8;">
+<div style="padding: 14px 24px; font-size: 14px; color: #1D1D1F; border-bottom: 1px solid #E3E3E8;">Projects</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #6D6D72; border-bottom: 1px solid #E3E3E8;">3</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #1D1D1F; font-weight: 500; border-bottom: 1px solid #E3E3E8;">Unlimited</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #1D1D1F; font-weight: 500; border-bottom: 1px solid #E3E3E8;">Unlimited</div>
+</div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;">
+<div style="padding: 14px 24px; font-size: 14px; color: #1D1D1F; border-bottom: 1px solid #E3E3E8;">Team members</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #6D6D72; border-bottom: 1px solid #E3E3E8;">1</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #1D1D1F; font-weight: 500; border-bottom: 1px solid #E3E3E8;">10</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #1D1D1F; font-weight: 500; border-bottom: 1px solid #E3E3E8;">Unlimited</div>
+</div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;">
+<div style="padding: 14px 24px; font-size: 14px; color: #1D1D1F; border-bottom: 1px solid #E3E3E8;">Storage</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #6D6D72; border-bottom: 1px solid #E3E3E8;">1 GB</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #1D1D1F; font-weight: 500; border-bottom: 1px solid #E3E3E8;">100 GB</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #1D1D1F; font-weight: 500; border-bottom: 1px solid #E3E3E8;">Unlimited</div>
+</div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;">
+<div style="padding: 14px 24px; font-size: 14px; color: #1D1D1F; border-bottom: 1px solid #E3E3E8;">API access</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #AEAEB2; border-bottom: 1px solid #E3E3E8;">--</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #1A8245; font-weight: 600; border-bottom: 1px solid #E3E3E8;">Yes</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #1A8245; font-weight: 600; border-bottom: 1px solid #E3E3E8;">Yes</div>
+</div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;">
+<div style="padding: 14px 24px; font-size: 14px; color: #1D1D1F;">SSO &amp; SAML</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #AEAEB2;">--</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #AEAEB2;">--</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #1A8245; font-weight: 600;">Yes</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 107: Plan Upgrade Path -->
+<div class="section-label">Pricing 107 / Plan Upgrade Path</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 48px;">Grow at your own pace</h2>
+<div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 0;">
+<div style="flex: 1; padding: 24px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center;">
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 4px;">Hobby</p>
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F;">Free</p>
+</div>
+<div style="width: 40px; height: 2px; background: #E3E3E8; flex-shrink: 0;"></div>
+<div style="flex: 1; padding: 24px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center;">
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 4px;">Starter</p>
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F;">$19</p>
+</div>
+<div style="width: 40px; height: 2px; background: #E3E3E8; flex-shrink: 0;"></div>
+<div style="flex: 1; padding: 24px; border: 2px solid #2C6ECB; border-radius: 12px; text-align: center; position: relative;">
+<span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #2C6ECB; color: #FFF; font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 6px;">Current</span>
+<p style="font-size: 13px; font-weight: 600; color: #2C6ECB; margin-bottom: 4px;">Pro</p>
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F;">$49</p>
+</div>
+<div style="width: 40px; height: 2px; background: #E3E3E8; flex-shrink: 0;"></div>
+<div style="flex: 1; padding: 24px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center; background: #F6F6F7;">
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 4px;">Scale</p>
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F;">$99</p>
+</div>
+<div style="width: 40px; height: 2px; background: #E3E3E8; flex-shrink: 0;"></div>
+<div style="flex: 1; padding: 24px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center; background: #F6F6F7;">
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 4px;">Enterprise</p>
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F;">Custom</p>
+</div>
+</div>
+<button style="margin-top: 32px; padding: 14px 28px; background: #1A1A1A; color: #FFFFFF; border: none; border-radius: 10px; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Upgrade to Scale</button>
+</div>
+</div>
+
+<!-- Pricing 108: White-Label / Reseller Tiers -->
+<div class="section-label">Pricing 108 / White-Label Reseller Tiers</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">White-label pricing</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 48px;">Resell under your own brand</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto;">
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 32px; text-align: left;">
+<div style="display: inline-block; padding: 4px 10px; background: #F6F6F7; border-radius: 6px; font-size: 12px; font-weight: 600; color: #6D6D72; margin-bottom: 16px;">Bronze Partner</div>
+<p style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$199<span style="font-size: 14px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<p style="font-size: 14px; color: #6D6D72; margin-bottom: 20px;">Up to 10 client accounts</p>
+<div style="font-size: 13px; color: #6D6D72; line-height: 2;">Custom domain<br>Basic branding<br>Email support</div>
+</div>
+<div style="border: 2px solid #B98900; border-radius: 12px; padding: 32px; text-align: left;">
+<div style="display: inline-block; padding: 4px 10px; background: #FFF8E1; border-radius: 6px; font-size: 12px; font-weight: 600; color: #B98900; margin-bottom: 16px;">Gold Partner</div>
+<p style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$499<span style="font-size: 14px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<p style="font-size: 14px; color: #6D6D72; margin-bottom: 20px;">Up to 50 client accounts</p>
+<div style="font-size: 13px; color: #6D6D72; line-height: 2;">Custom domain<br>Full branding<br>Priority support<br>API access</div>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 32px; text-align: left; background: #1A1A1A;">
+<div style="display: inline-block; padding: 4px 10px; background: rgba(255,255,255,0.1); border-radius: 6px; font-size: 12px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">Platinum Partner</div>
+<p style="font-size: 32px; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Custom</p>
+<p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 20px;">Unlimited client accounts</p>
+<div style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 2;">Full white-label<br>Dedicated support<br>Custom integrations<br>SLA guarantee</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 109: Minimalist Two-Tone -->
+<div class="section-label">Pricing 109 / Minimalist Two-Tone</div>
+<div class="section-container">
+<div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 480px;">
+<div style="padding: 64px 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid #E3E3E8;">
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">For individuals</p>
+<p style="font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">$0</p>
+<p style="font-size: 15px; color: #6D6D72; margin-bottom: 24px; line-height: 1.6;">Free forever. Perfect for personal projects and getting started.</p>
+<button style="align-self: flex-start; padding: 12px 24px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Start free</button>
+</div>
+<div style="padding: 64px 48px; display: flex; flex-direction: column; justify-content: center; background: #1A1A1A;">
+<p style="font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">For teams</p>
+<p style="font-size: 48px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">$12<span style="font-size: 18px; color: rgba(255,255,255,0.5); font-weight: 400;">/user/mo</span></p>
+<p style="font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 24px; line-height: 1.6;">Everything you need to collaborate with your team at scale.</p>
+<button style="align-self: flex-start; padding: 12px 24px; background: #FFFFFF; color: #1A1A1A; border: none; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Start trial</button>
+</div>
+</div>
+</div>
+
+<!-- Pricing 110: SLA Tier Comparison -->
+<div class="section-label">Pricing 110 / SLA Tier Comparison</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Service level agreements</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 48px;">Choose the reliability guarantee you need</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto;">
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 32px; text-align: center;">
+<div style="font-size: 40px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">99.5%</div>
+<p style="font-size: 13px; color: #6D6D72; margin-bottom: 16px;">Uptime guarantee</p>
+<div style="width: 100%; height: 4px; background: #E3E3E8; border-radius: 2px; margin-bottom: 20px;"><div style="width: 70%; height: 100%; background: #AEAEB2; border-radius: 2px;"></div></div>
+<p style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Standard</p>
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F;">$49<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+</div>
+<div style="border: 2px solid #2C6ECB; border-radius: 12px; padding: 32px; text-align: center;">
+<div style="font-size: 40px; font-weight: 700; color: #2C6ECB; margin-bottom: 4px;">99.9%</div>
+<p style="font-size: 13px; color: #6D6D72; margin-bottom: 16px;">Uptime guarantee</p>
+<div style="width: 100%; height: 4px; background: #E3E3E8; border-radius: 2px; margin-bottom: 20px;"><div style="width: 85%; height: 100%; background: #2C6ECB; border-radius: 2px;"></div></div>
+<p style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Business</p>
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F;">$149<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 32px; text-align: center; background: #1A1A1A;">
+<div style="font-size: 40px; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">99.99%</div>
+<p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 16px;">Uptime guarantee</p>
+<div style="width: 100%; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin-bottom: 20px;"><div style="width: 95%; height: 100%; background: #1A8245; border-radius: 2px;"></div></div>
+<p style="font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 4px;">Enterprise</p>
+<p style="font-size: 24px; font-weight: 700; color: #FFFFFF;">Custom</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 111: All-Inclusive Single Price -->
+<div class="section-label">Pricing 111 / All-Inclusive Single Price</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<div style="max-width: 600px; margin: 0 auto;">
+<div style="display: inline-block; padding: 4px 12px; background: #E8F5E9; border-radius: 6px; font-size: 12px; font-weight: 600; color: #1A8245; margin-bottom: 16px;">All features included</div>
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">One plan. One price.</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 32px;">No tiers, no hidden fees. Everything you need.</p>
+<p style="font-size: 64px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$29<span style="font-size: 20px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<p style="font-size: 14px; color: #AEAEB2; margin-bottom: 32px;">Billed annually ($348/year) or $39 monthly</p>
+<div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 32px; flex-wrap: wrap;">
+<span style="font-size: 14px; color: #6D6D72;">Unlimited users</span>
+<span style="font-size: 14px; color: #E3E3E8;">|</span>
+<span style="font-size: 14px; color: #6D6D72;">100 GB storage</span>
+<span style="font-size: 14px; color: #E3E3E8;">|</span>
+<span style="font-size: 14px; color: #6D6D72;">API access</span>
+<span style="font-size: 14px; color: #E3E3E8;">|</span>
+<span style="font-size: 14px; color: #6D6D72;">Priority support</span>
+</div>
+<button style="padding: 14px 48px; background: #1A1A1A; color: #FFFFFF; border: none; border-radius: 10px; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Get started</button>
+</div>
+</div>
+</div>
+
+<!-- Pricing 112: Billing Cycle Tabs -->
+<div class="section-label">Pricing 112 / Billing Cycle Tabs</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 32px;">Pricing</h2>
+<div style="display: flex; justify-content: center; gap: 0; margin-bottom: 48px; border-bottom: 1px solid #E3E3E8; max-width: 400px; margin-left: auto; margin-right: auto;">
+<button style="flex: 1; padding: 12px 24px; border: none; background: none; font-family: inherit; font-size: 14px; font-weight: 600; color: #2C6ECB; border-bottom: 2px solid #2C6ECB; cursor: pointer;">Monthly</button>
+<button style="flex: 1; padding: 12px 24px; border: none; background: none; font-family: inherit; font-size: 14px; font-weight: 500; color: #6D6D72; cursor: pointer;">Annual <span style="color: #1A8245; font-size: 12px;">Save 20%</span></button>
+<button style="flex: 1; padding: 12px 24px; border: none; background: none; font-family: inherit; font-size: 14px; font-weight: 500; color: #6D6D72; cursor: pointer;">Biennial <span style="color: #1A8245; font-size: 12px;">Save 35%</span></button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto;">
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 32px;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Basic</p>
+<p style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 20px;">$9<span style="font-size: 14px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<button style="width: 100%; padding: 12px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;">Select</button>
+</div>
+<div style="border: 2px solid #2C6ECB; border-radius: 12px; padding: 32px;">
+<p style="font-size: 14px; font-weight: 600; color: #2C6ECB; margin-bottom: 8px;">Pro</p>
+<p style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 20px;">$29<span style="font-size: 14px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<button style="width: 100%; padding: 12px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;">Select</button>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 32px;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Team</p>
+<p style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 20px;">$59<span style="font-size: 14px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<button style="width: 100%; padding: 12px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;">Select</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 113: Vertical Accordion Plans -->
+<div class="section-label">Pricing 113 / Vertical Accordion Plans</div>
+<div class="section-container">
+<div style="padding: 80px 40px;">
+<div style="max-width: 640px; margin: 0 auto;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Plans &amp; pricing</h2>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+<div style="padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E3E3E8; cursor: pointer;">
+<div><p style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Free</p><p style="font-size: 13px; color: #6D6D72;">For personal use</p></div>
+<span style="font-size: 20px; font-weight: 700; color: #1D1D1F;">$0</span>
+</div>
+<div style="padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E3E3E8; background: #F0F4FF; cursor: pointer;">
+<div><p style="font-size: 15px; font-weight: 600; color: #2C6ECB;">Pro</p><p style="font-size: 13px; color: #6D6D72;">For professionals</p></div>
+<span style="font-size: 20px; font-weight: 700; color: #1D1D1F;">$19/mo</span>
+</div>
+<div style="padding: 16px 24px; background: #F0F4FF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 13px; color: #6D6D72;">
+<span>Unlimited projects</span><span>Priority support</span><span>Custom domains</span><span>Team collaboration</span>
+</div>
+<button style="margin-top: 16px; padding: 10px 20px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Choose Pro</button>
+</div>
+<div style="padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E3E3E8; cursor: pointer;">
+<div><p style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Business</p><p style="font-size: 13px; color: #6D6D72;">For organizations</p></div>
+<span style="font-size: 20px; font-weight: 700; color: #1D1D1F;">$49/mo</span>
+</div>
+<div style="padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+<div><p style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Enterprise</p><p style="font-size: 13px; color: #6D6D72;">Custom solutions</p></div>
+<span style="font-size: 20px; font-weight: 700; color: #1D1D1F;">Custom</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 114: Freemium with Usage Limits -->
+<div class="section-label">Pricing 114 / Freemium with Usage Limits</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Start free, scale as you grow</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 48px;">Generous free tier with simple upgrade paths</p>
+<div style="max-width: 800px; margin: 0 auto; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: #F6F6F7; border-bottom: 1px solid #E3E3E8;">
+<div style="padding: 14px 20px; font-size: 13px; font-weight: 600; color: #6D6D72;">Resource</div>
+<div style="padding: 14px 20px; text-align: center; font-size: 13px; font-weight: 600; color: #6D6D72;">Free</div>
+<div style="padding: 14px 20px; text-align: center; font-size: 13px; font-weight: 600; color: #2C6ECB;">Pro - $29/mo</div>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid #E3E3E8;">
+<div style="padding: 14px 20px; font-size: 14px; color: #1D1D1F;">API calls</div>
+<div style="padding: 14px 20px; text-align: center; font-size: 14px; color: #6D6D72;">1,000/mo</div>
+<div style="padding: 14px 20px; text-align: center; font-size: 14px; font-weight: 600; color: #1D1D1F;">100,000/mo</div>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid #E3E3E8;">
+<div style="padding: 14px 20px; font-size: 14px; color: #1D1D1F;">Storage</div>
+<div style="padding: 14px 20px; text-align: center; font-size: 14px; color: #6D6D72;">500 MB</div>
+<div style="padding: 14px 20px; text-align: center; font-size: 14px; font-weight: 600; color: #1D1D1F;">50 GB</div>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid #E3E3E8;">
+<div style="padding: 14px 20px; font-size: 14px; color: #1D1D1F;">Bandwidth</div>
+<div style="padding: 14px 20px; text-align: center; font-size: 14px; color: #6D6D72;">1 GB/mo</div>
+<div style="padding: 14px 20px; text-align: center; font-size: 14px; font-weight: 600; color: #1D1D1F;">Unlimited</div>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+<div style="padding: 14px 20px; font-size: 14px; color: #1D1D1F;">Support</div>
+<div style="padding: 14px 20px; text-align: center; font-size: 14px; color: #6D6D72;">Community</div>
+<div style="padding: 14px 20px; text-align: center; font-size: 14px; font-weight: 600; color: #1D1D1F;">Priority</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 115: Invoice Summary Card -->
+<div class="section-label">Pricing 115 / Invoice Summary Card</div>
+<div class="section-container">
+<div style="padding: 80px 40px; display: flex; justify-content: center;">
+<div style="max-width: 440px; width: 100%; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+<div style="padding: 24px; border-bottom: 1px solid #E3E3E8;">
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Estimated monthly bill</p>
+<p style="font-size: 40px; font-weight: 700; color: #1D1D1F;">$127.50</p>
+</div>
+<div style="padding: 20px 24px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; justify-content: space-between; font-size: 14px;"><span style="color: #6D6D72;">Pro plan (3 seats)</span><span style="color: #1D1D1F; font-weight: 500;">$87.00</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 14px;"><span style="color: #6D6D72;">Extra storage (25 GB)</span><span style="color: #1D1D1F; font-weight: 500;">$12.50</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 14px;"><span style="color: #6D6D72;">API overages (8K calls)</span><span style="color: #1D1D1F; font-weight: 500;">$16.00</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 14px;"><span style="color: #6D6D72;">Priority support add-on</span><span style="color: #1D1D1F; font-weight: 500;">$12.00</span></div>
+</div>
+<div style="padding: 20px 24px; display: flex; justify-content: space-between; align-items: center;">
+<div><p style="font-size: 13px; color: #AEAEB2;">Next billing date</p><p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">March 1, 2025</p></div>
+<button style="padding: 10px 20px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Manage plan</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 116: Horizontal Scrolling Cards -->
+<div class="section-label">Pricing 116 / Horizontal Scrolling Cards</div>
+<div class="section-container">
+<div style="padding: 60px 0;">
+<div style="text-align: center; padding: 0 40px; margin-bottom: 40px;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Explore our plans</h2>
+<p style="font-size: 17px; color: #6D6D72;">Scroll to see all options</p>
+</div>
+<div style="display: flex; gap: 20px; overflow-x: auto; padding: 0 40px 20px; scroll-snap-type: x mandatory;">
+<div style="min-width: 260px; flex-shrink: 0; border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px; scroll-snap-align: start;">
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Hobby</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">Free</p>
+<p style="font-size: 13px; color: #6D6D72; line-height: 1.8; margin-bottom: 20px;">1 project<br>100 MB storage<br>Community support</p>
+<button style="width: 100%; padding: 10px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Start free</button>
+</div>
+<div style="min-width: 260px; flex-shrink: 0; border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px; scroll-snap-align: start;">
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Starter</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">$9<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<p style="font-size: 13px; color: #6D6D72; line-height: 1.8; margin-bottom: 20px;">5 projects<br>5 GB storage<br>Email support</p>
+<button style="width: 100%; padding: 10px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Get started</button>
+</div>
+<div style="min-width: 260px; flex-shrink: 0; border: 2px solid #2C6ECB; border-radius: 12px; padding: 28px; scroll-snap-align: start;">
+<p style="font-size: 13px; font-weight: 600; color: #2C6ECB; margin-bottom: 8px;">Pro</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">$29<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<p style="font-size: 13px; color: #6D6D72; line-height: 1.8; margin-bottom: 20px;">Unlimited projects<br>50 GB storage<br>Priority support</p>
+<button style="width: 100%; padding: 10px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Get started</button>
+</div>
+<div style="min-width: 260px; flex-shrink: 0; border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px; scroll-snap-align: start;">
+<p style="font-size: 13px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Team</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">$49<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<p style="font-size: 13px; color: #6D6D72; line-height: 1.8; margin-bottom: 20px;">Unlimited everything<br>200 GB storage<br>Dedicated support</p>
+<button style="width: 100%; padding: 10px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Get started</button>
+</div>
+<div style="min-width: 260px; flex-shrink: 0; border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px; scroll-snap-align: start; background: #1A1A1A;">
+<p style="font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 8px;">Enterprise</p>
+<p style="font-size: 28px; font-weight: 700; color: #FFFFFF; margin-bottom: 16px;">Custom</p>
+<p style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 20px;">Custom limits<br>Unlimited storage<br>24/7 phone support</p>
+<button style="width: 100%; padding: 10px; background: #FFFFFF; color: #1A1A1A; border: none; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Contact sales</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 117: Platform Fee Breakdown -->
+<div class="section-label">Pricing 117 / Platform Fee Breakdown</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Transparent fee structure</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 48px;">Know exactly what you pay</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto;">
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px; text-align: left;">
+<p style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 20px;">Platform fee</p>
+<p style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">2.9%</p>
+<p style="font-size: 13px; color: #6D6D72; margin-bottom: 16px;">+ $0.30 per transaction</p>
+<div style="padding-top: 16px; border-top: 1px solid #E3E3E8; font-size: 13px; color: #6D6D72; line-height: 2;">No monthly fee<br>No setup cost<br>Pay as you go</div>
+</div>
+<div style="border: 2px solid #2C6ECB; border-radius: 12px; padding: 28px; text-align: left;">
+<p style="font-size: 14px; font-weight: 600; color: #2C6ECB; margin-bottom: 20px;">Growth plan</p>
+<p style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">1.9%</p>
+<p style="font-size: 13px; color: #6D6D72; margin-bottom: 16px;">+ $0.25 per transaction</p>
+<div style="padding-top: 16px; border-top: 1px solid #E3E3E8; font-size: 13px; color: #6D6D72; line-height: 2;">$49/mo platform fee<br>Lower rates<br>Advanced analytics</div>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px; text-align: left;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 20px;">Enterprise</p>
+<p style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">Custom</p>
+<p style="font-size: 13px; color: #6D6D72; margin-bottom: 16px;">Volume-based pricing</p>
+<div style="padding-top: 16px; border-top: 1px solid #E3E3E8; font-size: 13px; color: #6D6D72; line-height: 2;">Negotiated rates<br>Dedicated support<br>Custom integrations</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 118: Seasonal Promo Banner -->
+<div class="section-label">Pricing 118 / Seasonal Promo Banner</div>
+<div class="section-container">
+<div style="padding: 0;">
+<div style="background: linear-gradient(135deg, #1A1A1A 0%, #2C2C2E 100%); padding: 32px 40px; display: flex; align-items: center; justify-content: space-between;">
+<div>
+<p style="font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Limited time offer</p>
+<p style="font-size: 24px; font-weight: 700; color: #FFFFFF;">50% off your first 3 months</p>
+<p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 4px;">Use code SPRING50 at checkout</p>
+</div>
+<button style="padding: 12px 28px; background: #FFFFFF; color: #1A1A1A; border: none; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; flex-shrink: 0;">Claim offer</button>
+</div>
+<div style="padding: 60px 40px; text-align: center;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto;">
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Starter</p>
+<p style="font-size: 14px; color: #AEAEB2; text-decoration: line-through; margin-bottom: 4px;">$19/mo</p>
+<p style="font-size: 28px; font-weight: 700; color: #D72C0D; margin-bottom: 16px;">$9.50<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<button style="width: 100%; padding: 10px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Choose plan</button>
+</div>
+<div style="border: 2px solid #D72C0D; border-radius: 12px; padding: 28px; position: relative;">
+<span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #D72C0D; color: #FFF; font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 6px;">Best deal</span>
+<p style="font-size: 14px; font-weight: 600; color: #D72C0D; margin-bottom: 8px;">Pro</p>
+<p style="font-size: 14px; color: #AEAEB2; text-decoration: line-through; margin-bottom: 4px;">$49/mo</p>
+<p style="font-size: 28px; font-weight: 700; color: #D72C0D; margin-bottom: 16px;">$24.50<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<button style="width: 100%; padding: 10px; background: #D72C0D; color: #FFFFFF; border: none; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Choose plan</button>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Business</p>
+<p style="font-size: 14px; color: #AEAEB2; text-decoration: line-through; margin-bottom: 4px;">$99/mo</p>
+<p style="font-size: 28px; font-weight: 700; color: #D72C0D; margin-bottom: 16px;">$49.50<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<button style="width: 100%; padding: 10px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Choose plan</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 119: Multi-Product Tabs -->
+<div class="section-label">Pricing 119 / Multi-Product Tabs</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 32px;">Choose your product</h2>
+<div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 48px;">
+<button style="padding: 10px 20px; background: #1A1A1A; color: #FFFFFF; border: none; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;">Analytics</button>
+<button style="padding: 10px 20px; background: #F6F6F7; color: #6D6D72; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer;">Email</button>
+<button style="padding: 10px 20px; background: #F6F6F7; color: #6D6D72; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer;">CRM</button>
+<button style="padding: 10px 20px; background: #F6F6F7; color: #6D6D72; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer;">Support</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto;">
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px; text-align: left;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Analytics Free</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$0</p>
+<p style="font-size: 13px; color: #AEAEB2; margin-bottom: 20px;">10K pageviews/mo</p>
+<button style="width: 100%; padding: 10px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Get started</button>
+</div>
+<div style="border: 2px solid #2C6ECB; border-radius: 12px; padding: 28px; text-align: left;">
+<p style="font-size: 14px; font-weight: 600; color: #2C6ECB; margin-bottom: 8px;">Analytics Pro</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$39<span style="font-size: 13px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<p style="font-size: 13px; color: #AEAEB2; margin-bottom: 20px;">1M pageviews/mo</p>
+<button style="width: 100%; padding: 10px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Start trial</button>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px; text-align: left;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Analytics Enterprise</p>
+<p style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">Custom</p>
+<p style="font-size: 13px; color: #AEAEB2; margin-bottom: 20px;">Unlimited pageviews</p>
+<button style="width: 100%; padding: 10px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Contact sales</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 120: Comparison vs Competitor -->
+<div class="section-label">Pricing 120 / Comparison vs Competitor</div>
+<div class="section-container">
+<div style="padding: 80px 40px;">
+<div style="text-align: center; margin-bottom: 48px;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Why switch to us?</h2>
+<p style="font-size: 17px; color: #6D6D72;">Save up to 60% compared to alternatives</p>
+</div>
+<div style="max-width: 700px; margin: 0 auto; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; background: #F6F6F7; border-bottom: 1px solid #E3E3E8;">
+<div style="padding: 14px 24px; font-size: 13px; font-weight: 600; color: #6D6D72;">Feature</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 13px; font-weight: 600; color: #2C6ECB;">Us</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 13px; font-weight: 600; color: #AEAEB2;">Competitor</div>
+</div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; border-bottom: 1px solid #E3E3E8;">
+<div style="padding: 14px 24px; font-size: 14px; color: #1D1D1F;">Starting price</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; font-weight: 600; color: #1A8245;">$29/mo</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #D72C0D;">$79/mo</div>
+</div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; border-bottom: 1px solid #E3E3E8;">
+<div style="padding: 14px 24px; font-size: 14px; color: #1D1D1F;">Team members</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; font-weight: 600; color: #1A8245;">Unlimited</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #D72C0D;">5 max</div>
+</div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr; border-bottom: 1px solid #E3E3E8;">
+<div style="padding: 14px 24px; font-size: 14px; color: #1D1D1F;">Storage</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; font-weight: 600; color: #1A8245;">100 GB</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #D72C0D;">25 GB</div>
+</div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr;">
+<div style="padding: 14px 24px; font-size: 14px; color: #1D1D1F;">API access</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; font-weight: 600; color: #1A8245;">Included</div>
+<div style="padding: 14px 16px; text-align: center; font-size: 14px; color: #D72C0D;">$20/mo extra</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 121: Credits Pack Purchase -->
+<div class="section-label">Pricing 121 / Credits Pack Purchase</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Buy credits</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 48px;">Credits never expire. Use them anytime.</p>
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 800px; margin: 0 auto;">
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; cursor: pointer; transition: all 0.2s ease;">
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">100</p>
+<p style="font-size: 12px; color: #6D6D72; margin-bottom: 12px;">credits</p>
+<p style="font-size: 18px; font-weight: 600; color: #1D1D1F;">$10</p>
+<p style="font-size: 12px; color: #AEAEB2;">$0.10/credit</p>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; cursor: pointer; transition: all 0.2s ease;">
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">500</p>
+<p style="font-size: 12px; color: #6D6D72; margin-bottom: 12px;">credits</p>
+<p style="font-size: 18px; font-weight: 600; color: #1D1D1F;">$40</p>
+<p style="font-size: 12px; color: #1A8245;">$0.08/credit</p>
+</div>
+<div style="border: 2px solid #2C6ECB; border-radius: 12px; padding: 24px; cursor: pointer; position: relative; transition: all 0.2s ease;">
+<span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #2C6ECB; color: #FFF; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 4px;">Best value</span>
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">1,000</p>
+<p style="font-size: 12px; color: #6D6D72; margin-bottom: 12px;">credits</p>
+<p style="font-size: 18px; font-weight: 600; color: #1D1D1F;">$60</p>
+<p style="font-size: 12px; color: #1A8245;">$0.06/credit</p>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; cursor: pointer; transition: all 0.2s ease;">
+<p style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">5,000</p>
+<p style="font-size: 12px; color: #6D6D72; margin-bottom: 12px;">credits</p>
+<p style="font-size: 18px; font-weight: 600; color: #1D1D1F;">$200</p>
+<p style="font-size: 12px; color: #1A8245;">$0.04/credit</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 122: Pricing with Social Proof Stats -->
+<div class="section-label">Pricing 122 / Social Proof Stats Pricing</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<div style="display: flex; justify-content: center; gap: 48px; margin-bottom: 48px;">
+<div><p style="font-size: 28px; font-weight: 700; color: #1D1D1F;">50K+</p><p style="font-size: 13px; color: #6D6D72;">Active users</p></div>
+<div style="width: 1px; background: #E3E3E8;"></div>
+<div><p style="font-size: 28px; font-weight: 700; color: #1D1D1F;">4.9</p><p style="font-size: 13px; color: #6D6D72;">User rating</p></div>
+<div style="width: 1px; background: #E3E3E8;"></div>
+<div><p style="font-size: 28px; font-weight: 700; color: #1D1D1F;">99.9%</p><p style="font-size: 13px; color: #6D6D72;">Uptime</p></div>
+</div>
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Join thousands of happy customers</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 48px;">Start your 14-day free trial today</p>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 640px; margin: 0 auto;">
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 32px;">
+<p style="font-size: 14px; font-weight: 600; color: #6D6D72; margin-bottom: 8px;">Monthly</p>
+<p style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 20px;">$19<span style="font-size: 14px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<button style="width: 100%; padding: 12px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;">Start trial</button>
+</div>
+<div style="border: 2px solid #1A8245; border-radius: 12px; padding: 32px; position: relative;">
+<span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #1A8245; color: #FFF; font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 6px;">Save $60/yr</span>
+<p style="font-size: 14px; font-weight: 600; color: #1A8245; margin-bottom: 8px;">Annual</p>
+<p style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 20px;">$14<span style="font-size: 14px; color: #6D6D72; font-weight: 400;">/mo</span></p>
+<button style="width: 100%; padding: 12px; background: #1A8245; color: #FFFFFF; border: none; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;">Start trial</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 123: Webhook / Event-Based Pricing -->
+<div class="section-label">Pricing 123 / Event-Based Pricing</div>
+<div class="section-container">
+<div style="padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Event-based pricing</h2>
+<p style="font-size: 17px; color: #6D6D72; margin-bottom: 48px;">Pay per event processed</p>
+<div style="max-width: 640px; margin: 0 auto;">
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border: 1px solid #E3E3E8; border-radius: 10px;">
+<div style="text-align: left;"><p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">0 - 10K events</p></div>
+<p style="font-size: 14px; color: #1A8245; font-weight: 600;">Free</p>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border: 1px solid #E3E3E8; border-radius: 10px;">
+<div style="text-align: left;"><p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">10K - 100K events</p></div>
+<p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">$0.001/event</p>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border: 1px solid #E3E3E8; border-radius: 10px;">
+<div style="text-align: left;"><p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">100K - 1M events</p></div>
+<p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">$0.0005/event</p>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border: 1px solid #E3E3E8; border-radius: 10px;">
+<div style="text-align: left;"><p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">1M+ events</p></div>
+<p style="font-size: 14px; font-weight: 600; color: #2C6ECB;">Contact us</p>
+</div>
+</div>
+<div style="margin-top: 32px; padding: 20px; background: #F6F6F7; border-radius: 10px; display: flex; align-items: center; justify-content: space-between;">
+<div style="text-align: left;"><p style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Estimate your cost</p><p style="font-size: 13px; color: #6D6D72;">50,000 events/mo = ~$40/mo</p></div>
+<button style="padding: 10px 20px; background: #1A1A1A; color: #FFFFFF; border: none; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;">Calculate</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 124: Dark Mode Pricing -->
+<div class="section-label">Pricing 124 / Dark Mode Pricing</div>
+<div class="section-container">
+<div style="background: #1A1A1A; padding: 80px 40px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #FFFFFF; margin-bottom: 12px;">Simple, fair pricing</h2>
+<p style="font-size: 17px; color: rgba(255,255,255,0.5); margin-bottom: 48px;">No surprises. No hidden fees.</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto;">
+<div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 32px; text-align: left;">
+<p style="font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 8px;">Starter</p>
+<p style="font-size: 36px; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">$15<span style="font-size: 14px; color: rgba(255,255,255,0.4); font-weight: 400;">/mo</span></p>
+<p style="font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 24px;">For individuals</p>
+<div style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 2; margin-bottom: 24px;">5 projects<br>10 GB storage<br>Email support</div>
+<button style="width: 100%; padding: 12px; background: rgba(255,255,255,0.1); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Get started</button>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 32px; text-align: left; background: rgba(255,255,255,0.05);">
+<p style="font-size: 14px; font-weight: 600; color: #2C6ECB; margin-bottom: 8px;">Professional</p>
+<p style="font-size: 36px; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">$39<span style="font-size: 14px; color: rgba(255,255,255,0.4); font-weight: 400;">/mo</span></p>
+<p style="font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 24px;">For growing teams</p>
+<div style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 2; margin-bottom: 24px;">Unlimited projects<br>100 GB storage<br>Priority support</div>
+<button style="width: 100%; padding: 12px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Get started</button>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 32px; text-align: left;">
+<p style="font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 8px;">Enterprise</p>
+<p style="font-size: 36px; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Custom</p>
+<p style="font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 24px;">For large orgs</p>
+<div style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 2; margin-bottom: 24px;">Custom limits<br>Unlimited storage<br>Dedicated support</div>
+<button style="width: 100%; padding: 12px; background: rgba(255,255,255,0.1); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Contact sales</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing 125: FAQ Below Pricing -->
+<div class="section-label">Pricing 125 / FAQ Below Pricing</div>
+<div class="section-container">
+<div style="padding: 80px 40px;">
+<div style="text-align: center; margin-bottom: 48px;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Pricing</h2>
+<p style="font-size: 48px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">$29<span style="font-size: 18px; color: #6D6D72; font-weight: 400;">/month per user</span></p>
+<p style="font-size: 15px; color: #6D6D72; margin-bottom: 24px;">Everything included. No per-feature charges.</p>
+<button style="padding: 14px 28px; background: #1A1A1A; color: #FFFFFF; border: none; border-radius: 10px; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Start free trial</button>
+</div>
+<div style="max-width: 640px; margin: 48px auto 0; border-top: 1px solid #E3E3E8; padding-top: 48px;">
+<h3 style="font-size: 20px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px;">Frequently asked questions</h3>
+<div style="border-bottom: 1px solid #E3E3E8; padding: 16px 0;">
+<p style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Can I try it for free?</p>
+<p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Yes! We offer a 14-day free trial with full access to all features. No credit card required.</p>
+</div>
+<div style="border-bottom: 1px solid #E3E3E8; padding: 16px 0;">
+<p style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">What happens when I cancel?</p>
+<p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Your data is preserved for 30 days after cancellation. You can export everything anytime.</p>
+</div>
+<div style="border-bottom: 1px solid #E3E3E8; padding: 16px 0;">
+<p style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Do you offer discounts for nonprofits?</p>
+<p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Yes, we offer 50% off for registered nonprofits and educational institutions.</p>
+</div>
+<div style="padding: 16px 0;">
+<p style="font-size: 15px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Is there an annual plan?</p>
+<p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Yes, pay annually and save 20%. That's $23/month billed as $276/year.</p>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

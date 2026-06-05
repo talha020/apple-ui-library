@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Components 026-050 - Apple HIG</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif; line-height: 1.6; color: #1d1d1f; background: #f5f5f7; }
+        .component { margin: 40px auto; max-width: 1200px; padding: 0 20px; }
+        .label { font-size: 12px; color: #86868b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+
+        /* 026: Timeline Blog */
+        .timeline { position: relative; padding-left: 40px; }
+        .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #d2d2d7; }
+        .timeline-item { position: relative; margin-bottom: 60px; }
+        .timeline-item::before { content: ''; position: absolute; left: -47px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: #0071e3; border: 3px solid #fff; box-shadow: 0 0 0 2px #0071e3; }
+        .timeline-date { font-size: 13px; color: #86868b; margin-bottom: 8px; }
+        .timeline-content h3 { font-size: 24px; font-weight: 600; margin-bottom: 12px; }
+        .timeline-content p { color: #6e6e73; font-size: 17px; line-height: 1.5; }
+
+        /* 027: Magazine Grid */
+        .magazine-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .mag-featured { grid-column: 1 / 3; grid-row: 1 / 3; }
+        .mag-card { background: #fff; border-radius: 18px; overflow: hidden; transition: transform 0.3s; }
+        .mag-card:hover { transform: translateY(-4px); }
+        .mag-img { width: 100%; height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .mag-featured .mag-img { height: 100%; min-height: 400px; }
+        .mag-text { padding: 24px; }
+        .mag-category { display: inline-block; padding: 4px 12px; background: #f5f5f7; border-radius: 12px; font-size: 12px; color: #0071e3; margin-bottom: 12px; }
+        .mag-text h3 { font-size: 21px; font-weight: 600; margin-bottom: 8px; }
+        .mag-text p { color: #6e6e73; font-size: 15px; }
+
+        /* 028: Sidebar Layout */
+        .sidebar-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+        .main-content .post { background: #fff; border-radius: 18px; padding: 32px; margin-bottom: 24px; }
+        .post h2 { font-size: 28px; font-weight: 600; margin-bottom: 16px; }
+        .post-meta { display: flex; gap: 20px; font-size: 14px; color: #86868b; margin-bottom: 16px; }
+        .sidebar { position: sticky; top: 20px; height: fit-content; }
+        .widget { background: #fff; border-radius: 18px; padding: 24px; margin-bottom: 20px; }
+        .widget h4 { font-size: 17px; font-weight: 600; margin-bottom: 16px; }
+        .widget-link { display: block; padding: 12px 0; color: #1d1d1f; text-decoration: none; border-bottom: 1px solid #f5f5f7; font-size: 15px; }
+        .widget-link:last-child { border-bottom: none; }
+        .widget-link:hover { color: #0071e3; }
+
+        /* 029: Category Filter */
+        .filter-nav { display: flex; gap: 12px; margin-bottom: 32px; overflow-x: auto; padding-bottom: 8px; }
+        .filter-btn { padding: 10px 20px; border: none; background: #fff; border-radius: 20px; font-size: 15px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: all 0.3s; }
+        .filter-btn.active { background: #0071e3; color: #fff; }
+        .filter-btn:hover { background: #e8e8ed; }
+        .filter-btn.active:hover { background: #0077ed; }
+        .filter-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+
+        /* 030: Card Masonry */
+        .masonry { column-count: 3; column-gap: 24px; }
+        .masonry-item { break-inside: avoid; margin-bottom: 24px; background: #fff; border-radius: 18px; overflow: hidden; }
+        .masonry-img { width: 100%; height: auto; display: block; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); min-height: 150px; }
+        .masonry-content { padding: 20px; }
+        .masonry-content h4 { font-size: 19px; font-weight: 600; margin-bottom: 8px; }
+        .masonry-content p { font-size: 15px; color: #6e6e73; }
+
+        /* 031: Featured Hero */
+        .hero-blog { background: linear-gradient(135deg, #1d1d1f 0%, #3d3d3f 100%); color: #f5f5f7; border-radius: 24px; padding: 80px 60px; text-align: center; }
+        .hero-blog h1 { font-size: 56px; font-weight: 700; margin-bottom: 20px; line-height: 1.1; }
+        .hero-blog .subtitle { font-size: 24px; color: #a1a1a6; margin-bottom: 32px; }
+        .hero-cta { display: inline-block; padding: 14px 32px; background: #0071e3; color: #fff; text-decoration: none; border-radius: 20px; font-weight: 500; }
+
+        /* 032: List View */
+        .list-view .list-item { display: flex; gap: 24px; background: #fff; border-radius: 18px; padding: 24px; margin-bottom: 16px; align-items: center; }
+        .list-thumb { width: 120px; height: 120px; border-radius: 12px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); flex-shrink: 0; }
+        .list-info { flex: 1; }
+        .list-info h3 { font-size: 21px; font-weight: 600; margin-bottom: 8px; }
+        .list-info p { color: #6e6e73; font-size: 15px; margin-bottom: 12px; }
+        .read-time { font-size: 13px; color: #86868b; }
+
+        /* 033: Horizontal Scroll */
+        .h-scroll-container { overflow-x: auto; overflow-y: hidden; white-space: nowrap; padding-bottom: 16px; }
+        .h-scroll { display: inline-flex; gap: 20px; }
+        .h-card { display: inline-block; width: 320px; background: #fff; border-radius: 18px; overflow: hidden; white-space: normal; }
+        .h-card-img { width: 100%; height: 180px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .h-card-content { padding: 20px; }
+        .h-card-content h4 { font-size: 19px; font-weight: 600; margin-bottom: 8px; }
+
+        /* 034: Compact List */
+        .compact-list { background: #fff; border-radius: 18px; padding: 8px; }
+        .compact-item { display: flex; justify-content: space-between; align-items: center; padding: 16px; border-bottom: 1px solid #f5f5f7; }
+        .compact-item:last-child { border-bottom: none; }
+        .compact-title { font-size: 17px; font-weight: 500; }
+        .compact-date { font-size: 14px; color: #86868b; }
+
+        /* 035: Grid with Tags */
+        .tag-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+        .tag-card { background: #fff; border-radius: 18px; padding: 24px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .tag { font-size: 12px; padding: 6px 12px; background: #f5f5f7; border-radius: 12px; color: #6e6e73; }
+        .tag-card h3 { font-size: 21px; font-weight: 600; margin-bottom: 12px; }
+
+        /* 036: Search Header */
+        .search-header { background: #fff; border-radius: 24px; padding: 40px; margin-bottom: 32px; text-align: center; }
+        .search-box { max-width: 600px; margin: 0 auto; position: relative; }
+        .search-input { width: 100%; padding: 16px 48px 16px 20px; border: 2px solid #e8e8ed; border-radius: 20px; font-size: 17px; }
+        .search-input:focus { outline: none; border-color: #0071e3; }
+        .search-icon { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: #86868b; }
+
+        /* 037: Author Card */
+        .author-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; }
+        .author-card { background: #fff; border-radius: 18px; padding: 32px; text-align: center; }
+        .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0 auto 16px; }
+        .author-name { font-size: 19px; font-weight: 600; margin-bottom: 8px; }
+        .author-bio { font-size: 14px; color: #6e6e73; margin-bottom: 16px; }
+        .author-stats { display: flex; justify-content: center; gap: 24px; font-size: 13px; color: #86868b; }
+
+        /* 038: Newsletter Card */
+        .newsletter { background: linear-gradient(135deg, #0071e3 0%, #005bb5 100%); color: #fff; border-radius: 24px; padding: 48px; text-align: center; }
+        .newsletter h3 { font-size: 32px; font-weight: 700; margin-bottom: 16px; }
+        .newsletter p { font-size: 17px; opacity: 0.9; margin-bottom: 32px; }
+        .newsletter-form { display: flex; gap: 12px; max-width: 500px; margin: 0 auto; }
+        .newsletter-input { flex: 1; padding: 14px 20px; border: none; border-radius: 20px; font-size: 15px; }
+        .newsletter-btn { padding: 14px 32px; background: #1d1d1f; color: #fff; border: none; border-radius: 20px; font-weight: 500; cursor: pointer; }
+
+        /* 039: Stats Banner */
+        .stats-banner { background: #fff; border-radius: 24px; padding: 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+        .stat-item h4 { font-size: 48px; font-weight: 700; color: #0071e3; margin-bottom: 8px; }
+        .stat-item p { font-size: 15px; color: #6e6e73; }
+
+        /* 040: Featured Categories */
+        .cat-feature { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .cat-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 48px 32px; color: #fff; text-align: center; cursor: pointer; transition: transform 0.3s; }
+        .cat-box:nth-child(2) { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .cat-box:nth-child(3) { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .cat-box:hover { transform: scale(1.05); }
+        .cat-box h3 { font-size: 28px; font-weight: 600; margin-bottom: 12px; }
+        .cat-count { font-size: 15px; opacity: 0.9; }
+
+        /* 041: Related Posts */
+        .related { background: #fff; border-radius: 24px; padding: 40px; }
+        .related h3 { font-size: 28px; font-weight: 600; margin-bottom: 32px; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .related-card { border-radius: 12px; overflow: hidden; }
+        .related-img { width: 100%; height: 160px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .related-content { padding: 20px 0; }
+        .related-content h4 { font-size: 17px; font-weight: 600; }
+
+        /* 042: Minimal List */
+        .minimal-list { max-width: 800px; margin: 0 auto; }
+        .minimal-item { padding: 32px 0; border-bottom: 1px solid #e8e8ed; }
+        .minimal-item:last-child { border-bottom: none; }
+        .minimal-item h2 { font-size: 32px; font-weight: 600; margin-bottom: 12px; }
+        .minimal-meta { font-size: 15px; color: #86868b; margin-bottom: 16px; }
+        .minimal-excerpt { font-size: 17px; color: #6e6e73; line-height: 1.5; }
+
+        /* 043: Card Carousel */
+        .carousel { position: relative; }
+        .carousel-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 16px; }
+        .carousel-card { min-width: 350px; scroll-snap-align: start; background: #fff; border-radius: 18px; overflow: hidden; }
+        .carousel-img { width: 100%; height: 200px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .carousel-text { padding: 24px; }
+
+        /* 044: Highlighted Quote */
+        .quote-section { background: #f5f5f7; border-radius: 24px; padding: 60px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .quote-mark { font-size: 64px; color: #0071e3; line-height: 1; margin-bottom: 20px; }
+        .quote-text { font-size: 28px; font-weight: 500; line-height: 1.4; margin-bottom: 24px; }
+        .quote-author { font-size: 17px; color: #86868b; }
+
+        /* 045: Archive Timeline */
+        .archive { max-width: 800px; margin: 0 auto; }
+        .archive-year { margin-bottom: 48px; }
+        .archive-year h3 { font-size: 36px; font-weight: 700; margin-bottom: 24px; color: #0071e3; }
+        .archive-month { margin-bottom: 32px; }
+        .archive-month h4 { font-size: 19px; font-weight: 600; margin-bottom: 16px; }
+        .archive-link { display: block; padding: 12px 0; color: #1d1d1f; text-decoration: none; font-size: 17px; border-bottom: 1px solid #f5f5f7; }
+        .archive-link:hover { color: #0071e3; }
+
+        /* 046: Featured Duo */
+        .duo-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .duo-card { background: #fff; border-radius: 24px; overflow: hidden; }
+        .duo-img { width: 100%; height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .duo-content { padding: 32px; }
+        .duo-content h2 { font-size: 32px; font-weight: 600; margin-bottom: 16px; }
+        .duo-content p { font-size: 17px; color: #6e6e73; line-height: 1.5; }
+
+        /* 047: Tag Cloud */
+        .tag-cloud { background: #fff; border-radius: 24px; padding: 48px; text-align: center; }
+        .tag-cloud h3 { font-size: 28px; font-weight: 600; margin-bottom: 32px; }
+        .cloud-tags { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .cloud-tag { padding: 12px 24px; background: #f5f5f7; border-radius: 20px; font-size: 15px; cursor: pointer; transition: all 0.3s; }
+        .cloud-tag:hover { background: #0071e3; color: #fff; }
+        .cloud-tag.large { font-size: 21px; padding: 16px 32px; }
+        .cloud-tag.small { font-size: 13px; padding: 8px 16px; }
+
+        /* 048: Simple Grid */
+        .simple-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px; }
+        .simple-card { background: #fff; border-radius: 20px; padding: 32px; border: 2px solid transparent; transition: all 0.3s; }
+        .simple-card:hover { border-color: #0071e3; }
+        .simple-card h3 { font-size: 24px; font-weight: 600; margin-bottom: 12px; }
+        .simple-card p { color: #6e6e73; font-size: 15px; margin-bottom: 20px; }
+        .simple-link { color: #0071e3; text-decoration: none; font-weight: 500; }
+
+        /* 049: Split Featured */
+        .split-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #fff; border-radius: 24px; overflow: hidden; }
+        .split-img { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 400px; }
+        .split-content { padding: 60px; display: flex; flex-direction: column; justify-content: center; }
+        .split-content h2 { font-size: 40px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; }
+        .split-content p { font-size: 19px; color: #6e6e73; line-height: 1.6; margin-bottom: 32px; }
+        .split-btn { display: inline-block; padding: 14px 32px; background: #0071e3; color: #fff; text-decoration: none; border-radius: 20px; font-weight: 500; width: fit-content; }
+
+        /* 050: Podcast Style */
+        .podcast-list { max-width: 900px; margin: 0 auto; }
+        .podcast-item { display: flex; gap: 24px; background: #fff; border-radius: 20px; padding: 24px; margin-bottom: 20px; align-items: center; }
+        .podcast-cover { width: 100px; height: 100px; border-radius: 12px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); flex-shrink: 0; }
+        .podcast-info { flex: 1; }
+        .podcast-number { font-size: 13px; color: #86868b; margin-bottom: 4px; }
+        .podcast-info h3 { font-size: 21px; font-weight: 600; margin-bottom: 8px; }
+        .podcast-desc { font-size: 15px; color: #6e6e73; margin-bottom: 12px; }
+        .podcast-meta { display: flex; gap: 16px; font-size: 14px; color: #86868b; }
+        .play-btn { width: 48px; height: 48px; border-radius: 50%; background: #0071e3; color: #fff; border: none; cursor: pointer; font-size: 20px; }
+
+        @media (max-width: 768px) {
+            .magazine-grid, .sidebar-layout, .masonry, .duo-layout, .split-feature { grid-template-columns: 1fr; }
+            .mag-featured { grid-column: 1; grid-row: auto; }
+            .stats-banner { grid-template-columns: repeat(2, 1fr); }
+            .cat-feature, .related-grid { grid-template-columns: 1fr; }
+            .hero-blog { padding: 40px 24px; }
+            .hero-blog h1 { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 026: Timeline Blog -->
+    <div class="component">
+        <div class="label">Component 026: Timeline Blog</div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">December 15, 2024</div>
+                <div class="timeline-content">
+                    <h3>Introducing Our New Design System</h3>
+                    <p>We've rebuilt our entire design framework from the ground up, focusing on accessibility, performance, and developer experience.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">November 22, 2024</div>
+                <div class="timeline-content">
+                    <h3>Product Updates: Fall 2024</h3>
+                    <p>This quarter brought significant improvements to our platform, including new collaboration features and enhanced security.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">October 8, 2024</div>
+                <div class="timeline-content">
+                    <h3>Behind the Scenes: Our Development Process</h3>
+                    <p>Learn how our team approaches product development with a focus on user feedback and iterative design.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 027: Magazine Grid -->
+    <div class="component">
+        <div class="label">Component 027: Magazine Grid</div>
+        <div class="magazine-grid">
+            <div class="mag-card mag-featured">
+                <div class="mag-img"></div>
+                <div class="mag-text">
+                    <span class="mag-category">Featured</span>
+                    <h3>The Future of Digital Design</h3>
+                    <p>Exploring how emerging technologies are reshaping the way we create and interact with digital products.</p>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img"></div>
+                <div class="mag-text">
+                    <span class="mag-category">Technology</span>
+                    <h3>AI in Creative Work</h3>
+                    <p>How artificial intelligence is augmenting creative processes.</p>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img"></div>
+                <div class="mag-text">
+                    <span class="mag-category">Design</span>
+                    <h3>Minimalism Trends</h3>
+                    <p>The return to simplicity in modern interface design.</p>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img"></div>
+                <div class="mag-text">
+                    <span class="mag-category">Business</span>
+                    <h3>Remote Team Culture</h3>
+                    <p>Building strong connections in distributed organizations.</p>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img"></div>
+                <div class="mag-text">
+                    <span class="mag-category">Development</span>
+                    <h3>Modern Web Stack</h3>
+                    <p>Essential tools for contemporary web development.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 028: Sidebar Layout -->
+    <div class="component">
+        <div class="label">Component 028: Sidebar Layout</div>
+        <div class="sidebar-layout">
+            <div class="main-content">
+                <article class="post">
+                    <h2>Understanding User Experience Design</h2>
+                    <div class="post-meta">
+                        <span>By Sarah Chen</span>
+                        <span>5 min read</span>
+                        <span>Dec 15, 2024</span>
+                    </div>
+                    <p>User experience design goes beyond creating beautiful interfaces. It's about understanding human behavior, solving real problems, and creating delightful interactions that feel natural and intuitive.</p>
+                </article>
+                <article class="post">
+                    <h2>Building Scalable Design Systems</h2>
+                    <div class="post-meta">
+                        <span>By Marcus Liu</span>
+                        <span>8 min read</span>
+                        <span>Dec 12, 2024</span>
+                    </div>
+                    <p>A well-structured design system is the foundation of consistent product development. Learn how to create systems that scale with your organization.</p>
+                </article>
+            </div>
+            <aside class="sidebar">
+                <div class="widget">
+                    <h4>Popular Posts</h4>
+                    <a href="#" class="widget-link">Getting Started with Design</a>
+                    <a href="#" class="widget-link">Mobile-First Approach</a>
+                    <a href="#" class="widget-link">Color Theory Basics</a>
+                    <a href="#" class="widget-link">Typography Guidelines</a>
+                </div>
+                <div class="widget">
+                    <h4>Categories</h4>
+                    <a href="#" class="widget-link">Design (24)</a>
+                    <a href="#" class="widget-link">Development (18)</a>
+                    <a href="#" class="widget-link">Business (12)</a>
+                    <a href="#" class="widget-link">Technology (31)</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- 029: Category Filter -->
+    <div class="component">
+        <div class="label">Component 029: Category Filter</div>
+        <div class="filter-nav">
+            <button class="filter-btn active">All Posts</button>
+            <button class="filter-btn">Design</button>
+            <button class="filter-btn">Technology</button>
+            <button class="filter-btn">Business</button>
+            <button class="filter-btn">Development</button>
+            <button class="filter-btn">Marketing</button>
+            <button class="filter-btn">Product</button>
+        </div>
+        <div class="filter-grid">
+            <div class="mag-card">
+                <div class="mag-img"></div>
+                <div class="mag-text">
+                    <span class="mag-category">Design</span>
+                    <h3>Design System Best Practices</h3>
+                    <p>Creating consistent and scalable design foundations.</p>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img"></div>
+                <div class="mag-text">
+                    <span class="mag-category">Technology</span>
+                    <h3>Next-Gen Web Technologies</h3>
+                    <p>Exploring the latest in web development tools.</p>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img"></div>
+                <div class="mag-text">
+                    <span class="mag-category">Business</span>
+                    <h3>Growth Strategies for Startups</h3>
+                    <p>Proven methods for scaling your business.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 030: Card Masonry -->
+    <div class="component">
+        <div class="label">Component 030: Card Masonry</div>
+        <div class="masonry">
+            <div class="masonry-item">
+                <div class="masonry-img" style="min-height: 200px;"></div>
+                <div class="masonry-content">
+                    <h4>Creative Process Insights</h4>
+                    <p>How top designers approach problem-solving and ideation in their daily work.</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="masonry-img" style="min-height: 150px;"></div>
+                <div class="masonry-content">
+                    <h4>Quick Design Tips</h4>
+                    <p>Improve your workflow with these essential shortcuts.</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="masonry-img" style="min-height: 250px;"></div>
+                <div class="masonry-content">
+                    <h4>User Research Methods</h4>
+                    <p>Comprehensive guide to understanding your users through various research techniques.</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="masonry-img" style="min-height: 180px;"></div>
+                <div class="masonry-content">
+                    <h4>Accessibility First</h4>
+                    <p>Building inclusive products that work for everyone.</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="masonry-img" style="min-height: 220px;"></div>
+                <div class="masonry-content">
+                    <h4>Mobile Design Patterns</h4>
+                    <p>Essential patterns for creating intuitive mobile experiences.</p>
+                </div>
+            </div>
+            <div class="masonry-item">
+                <div class="masonry-img" style="min-height: 160px;"></div>
+                <div class="masonry-content">
+                    <h4>Color Psychology</h4>
+                    <p>Understanding how colors influence user behavior.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 031: Featured Hero -->
+    <div class="component">
+        <div class="label">Component 031: Featured Hero</div>
+        <div class="hero-blog">
+            <h1>Ideas Worth Sharing</h1>
+            <p class="subtitle">Insights on design, technology, and innovation</p>
+            <a href="#" class="hero-cta">Explore Articles</a>
+        </div>
+    </div>
+
+    <!-- 032: List View -->
+    <div class="component">
+        <div class="label">Component 032: List View</div>
+        <div class="list-view">
+            <div class="list-item">
+                <div class="list-thumb"></div>
+                <div class="list-info">
+                    <h3>Modern CSS Techniques You Should Know</h3>
+                    <p>Discover the latest CSS features that will transform your development workflow and create stunning interfaces.</p>
+                    <span class="read-time">7 min read • Design</span>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="list-thumb"></div>
+                <div class="list-info">
+                    <h3>Building a Strong Design Portfolio</h3>
+                    <p>Essential tips for showcasing your work and landing your dream design role.</p>
+                    <span class="read-time">5 min read • Career</span>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="list-thumb"></div>
+                <div class="list-info">
+                    <h3>The Art of Meaningful Animations</h3>
+                    <p>Learn how to use motion design to enhance user experience and guide attention.</p>
+                    <span class="read-time">6 min read • Animation</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 033: Horizontal Scroll -->
+    <div class="component">
+        <div class="label">Component 033: Horizontal Scroll</div>
+        <div class="h-scroll-container">
+            <div class="h-scroll">
+                <div class="h-card">
+                    <div class="h-card-img"></div>
+                    <div class="h-card-content">
+                        <h4>Design Inspiration Sources</h4>
+                        <p>Where to find creative inspiration for your next project.</p>
+                    </div>
+                </div>
+                <div class="h-card">
+                    <div class="h-card-img"></div>
+                    <div class="h-card-content">
+                        <h4>Productivity Tools Review</h4>
+                        <p>The best apps and services for creative professionals.</p>
+                    </div>
+                </div>
+                <div class="h-card">
+                    <div class="h-card-img"></div>
+                    <div class="h-card-content">
+                        <h4>Typography Trends 2024</h4>
+                        <p>Emerging font styles and typographic approaches.</p>
+                    </div>
+                </div>
+                <div class="h-card">
+                    <div class="h-card-img"></div>
+                    <div class="h-card-content">
+                        <h4>Brand Identity Essentials</h4>
+                        <p>Creating memorable and cohesive brand experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 034: Compact List -->
+    <div class="component">
+        <div class="label">Component 034: Compact List</div>
+        <div class="compact-list">
+            <div class="compact-item">
+                <span class="compact-title">Advanced Prototyping Techniques</span>
+                <span class="compact-date">Dec 15</span>
+            </div>
+            <div class="compact-item">
+                <span class="compact-title">Understanding Design Tokens</span>
+                <span class="compact-date">Dec 14</span>
+            </div>
+            <div class="compact-item">
+                <span class="compact-title">Component Architecture Patterns</span>
+                <span class="compact-date">Dec 13</span>
+            </div>
+            <div class="compact-item">
+                <span class="compact-title">Accessibility Testing Guide</span>
+                <span class="compact-date">Dec 12</span>
+            </div>
+            <div class="compact-item">
+                <span class="compact-title">Dark Mode Implementation</span>
+                <span class="compact-date">Dec 11</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 035: Grid with Tags -->
+    <div class="component">
+        <div class="label">Component 035: Grid with Tags</div>
+        <div class="tag-grid">
+            <div class="tag-card">
+                <div class="tags">
+                    <span class="tag">Design</span>
+                    <span class="tag">UX</span>
+                    <span class="tag">Research</span>
+                </div>
+                <h3>User Testing Best Practices</h3>
+                <p>Comprehensive guide to conducting effective user research and gathering actionable insights.</p>
+            </div>
+            <div class="tag-card">
+                <div class="tags">
+                    <span class="tag">Development</span>
+                    <span class="tag">React</span>
+                </div>
+                <h3>Building Reusable Components</h3>
+                <p>Creating a component library that scales with your application needs.</p>
+            </div>
+            <div class="tag-card">
+                <div class="tags">
+                    <span class="tag">Business</span>
+                    <span class="tag">Strategy</span>
+                    <span class="tag">Growth</span>
+                </div>
+                <h3>Product Market Fit</h3>
+                <p>How to validate your product idea and find your target audience.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 036: Search Header -->
+    <div class="component">
+        <div class="label">Component 036: Search Header</div>
+        <div class="search-header">
+            <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 24px;">Discover Articles</h2>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search for topics, authors, or keywords...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 037: Author Card -->
+    <div class="component">
+        <div class="label">Component 037: Author Card</div>
+        <div class="author-grid">
+            <div class="author-card">
+                <div class="author-avatar"></div>
+                <div class="author-name">Sarah Chen</div>
+                <div class="author-bio">Product Designer & UX Researcher</div>
+                <div class="author-stats">
+                    <span>24 Articles</span>
+                    <span>12K Readers</span>
+                </div>
+            </div>
+            <div class="author-card">
+                <div class="author-avatar"></div>
+                <div class="author-name">Marcus Liu</div>
+                <div class="author-bio">Frontend Developer</div>
+                <div class="author-stats">
+                    <span>18 Articles</span>
+                    <span>8K Readers</span>
+                </div>
+            </div>
+            <div class="author-card">
+                <div class="author-avatar"></div>
+                <div class="author-name">Emma Johnson</div>
+                <div class="author-bio">Content Strategist</div>
+                <div class="author-stats">
+                    <span>31 Articles</span>
+                    <span>15K Readers</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 038: Newsletter Card -->
+    <div class="component">
+        <div class="label">Component 038: Newsletter Card</div>
+        <div class="newsletter">
+            <h3>Stay Updated</h3>
+            <p>Get the latest articles and insights delivered to your inbox every week.</p>
+            <div class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 039: Stats Banner -->
+    <div class="component">
+        <div class="label">Component 039: Stats Banner</div>
+        <div class="stats-banner">
+            <div class="stat-item">
+                <h4>250+</h4>
+                <p>Articles Published</p>
+            </div>
+            <div class="stat-item">
+                <h4>50K</h4>
+                <p>Monthly Readers</p>
+            </div>
+            <div class="stat-item">
+                <h4>15</h4>
+                <p>Expert Authors</p>
+            </div>
+            <div class="stat-item">
+                <h4>12</h4>
+                <p>Categories</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 040: Featured Categories -->
+    <div class="component">
+        <div class="label">Component 040: Featured Categories</div>
+        <div class="cat-feature">
+            <div class="cat-box">
+                <h3>Design</h3>
+                <p class="cat-count">48 Articles</p>
+            </div>
+            <div class="cat-box">
+                <h3>Development</h3>
+                <p class="cat-count">62 Articles</p>
+            </div>
+            <div class="cat-box">
+                <h3>Business</h3>
+                <p class="cat-count">35 Articles</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 041: Related Posts -->
+    <div class="component">
+        <div class="label">Component 041: Related Posts</div>
+        <div class="related">
+            <h3>You Might Also Like</h3>
+            <div class="related-grid">
+                <div class="related-card">
+                    <div class="related-img"></div>
+                    <div class="related-content">
+                        <h4>Design System Fundamentals</h4>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-img"></div>
+                    <div class="related-content">
+                        <h4>Mobile-First CSS Strategies</h4>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-img"></div>
+                    <div class="related-content">
+                        <h4>Effective Team Collaboration</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 042: Minimal List -->
+    <div class="component">
+        <div class="label">Component 042: Minimal List</div>
+        <div class="minimal-list">
+            <article class="minimal-item">
+                <h2>The Power of Simplicity</h2>
+                <div class="minimal-meta">By Sarah Chen • December 15, 2024 • 6 min read</div>
+                <p class="minimal-excerpt">In a world of increasing complexity, simplicity has become a competitive advantage. Learn how to embrace minimalism in your design work.</p>
+            </article>
+            <article class="minimal-item">
+                <h2>Building for the Future</h2>
+                <div class="minimal-meta">By Marcus Liu • December 14, 2024 • 8 min read</div>
+                <p class="minimal-excerpt">Future-proof your projects with scalable architecture patterns and forward-thinking development practices.</p>
+            </article>
+        </div>
+    </div>
+
+    <!-- 043: Card Carousel -->
+    <div class="component">
+        <div class="label">Component 043: Card Carousel</div>
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-card">
+                    <div class="carousel-img"></div>
+                    <div class="carousel-text">
+                        <h4>Advanced Animation Techniques</h4>
+                        <p>Creating smooth, performant animations that delight users.</p>
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-img"></div>
+                    <div class="carousel-text">
+                        <h4>Content Strategy Essentials</h4>
+                        <p>Building a content plan that resonates with your audience.</p>
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-img"></div>
+                    <div class="carousel-text">
+                        <h4>Performance Optimization</h4>
+                        <p>Speed up your website with proven optimization techniques.</p>
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-img"></div>
+                    <div class="carousel-text">
+                        <h4>SEO Best Practices</h4>
+                        <p>Improve your search rankings with modern SEO strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 044: Highlighted Quote -->
+    <div class="component">
+        <div class="label">Component 044: Highlighted Quote</div>
+        <div class="quote-section">
+            <div class="quote-mark">"</div>
+            <p class="quote-text">Good design is as little design as possible. Less, but better because it concentrates on the essential aspects.</p>
+            <p class="quote-author">Dieter Rams, Industrial Designer</p>
+        </div>
+    </div>
+
+    <!-- 045: Archive Timeline -->
+    <div class="component">
+        <div class="label">Component 045: Archive Timeline</div>
+        <div class="archive">
+            <div class="archive-year">
+                <h3>2024</h3>
+                <div class="archive-month">
+                    <h4>December</h4>
+                    <a href="#" class="archive-link">Introducing Our New Design System</a>
+                    <a href="#" class="archive-link">The Future of Digital Design</a>
+                    <a href="#" class="archive-link">Understanding User Experience Design</a>
+                </div>
+                <div class="archive-month">
+                    <h4>November</h4>
+                    <a href="#" class="archive-link">Product Updates: Fall 2024</a>
+                    <a href="#" class="archive-link">Building Scalable Design Systems</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 046: Featured Duo -->
+    <div class="component">
+        <div class="label">Component 046: Featured Duo</div>
+        <div class="duo-layout">
+            <div class="duo-card">
+                <div class="duo-img"></div>
+                <div class="duo-content">
+                    <h2>Design Thinking Workshop</h2>
+                    <p>Join our intensive workshop to learn how to apply design thinking methodologies to solve complex problems.</p>
+                </div>
+            </div>
+            <div class="duo-card">
+                <div class="duo-img"></div>
+                <div class="duo-content">
+                    <h2>Product Strategy Guide</h2>
+                    <p>A comprehensive guide to building products that users love and businesses need.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 047: Tag Cloud -->
+    <div class="component">
+        <div class="label">Component 047: Tag Cloud</div>
+        <div class="tag-cloud">
+            <h3>Explore Topics</h3>
+            <div class="cloud-tags">
+                <span class="cloud-tag large">Design</span>
+                <span class="cloud-tag">UX Research</span>
+                <span class="cloud-tag">Development</span>
+                <span class="cloud-tag large">Innovation</span>
+                <span class="cloud-tag small">Marketing</span>
+                <span class="cloud-tag">Product</span>
+                <span class="cloud-tag">Strategy</span>
+                <span class="cloud-tag small">Analytics</span>
+                <span class="cloud-tag large">Technology</span>
+                <span class="cloud-tag">UI Design</span>
+                <span class="cloud-tag small">Branding</span>
+                <span class="cloud-tag">Web Dev</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 048: Simple Grid -->
+    <div class="component">
+        <div class="label">Component 048: Simple Grid</div>
+        <div class="simple-grid">
+            <div class="simple-card">
+                <h3>Getting Started</h3>
+                <p>Essential resources and guides for beginners looking to learn design and development.</p>
+                <a href="#" class="simple-link">Read More →</a>
+            </div>
+            <div class="simple-card">
+                <h3>Advanced Techniques</h3>
+                <p>Deep dives into complex topics for experienced professionals.</p>
+                <a href="#" class="simple-link">Read More →</a>
+            </div>
+            <div class="simple-card">
+                <h3>Case Studies</h3>
+                <p>Real-world examples of successful projects and their implementation.</p>
+                <a href="#" class="simple-link">Read More →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 049: Split Featured -->
+    <div class="component">
+        <div class="label">Component 049: Split Featured</div>
+        <div class="split-feature">
+            <div class="split-img"></div>
+            <div class="split-content">
+                <h2>Transform Your Creative Process</h2>
+                <p>Discover proven techniques and workflows that will elevate your design work and help you create more meaningful user experiences.</p>
+                <a href="#" class="split-btn">Start Learning</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 050: Podcast Style -->
+    <div class="component">
+        <div class="label">Component 050: Podcast Style</div>
+        <div class="podcast-list">
+            <div class="podcast-item">
+                <div class="podcast-cover"></div>
+                <div class="podcast-info">
+                    <div class="podcast-number">Episode 24</div>
+                    <h3>The Future of Design Education</h3>
+                    <p class="podcast-desc">We discuss how design education is evolving and what skills designers need for the future.</p>
+                    <div class="podcast-meta">
+                        <span>42 min</span>
+                        <span>Dec 15, 2024</span>
+                    </div>
+                </div>
+                <button class="play-btn">▶</button>
+            </div>
+            <div class="podcast-item">
+                <div class="podcast-cover"></div>
+                <div class="podcast-info">
+                    <div class="podcast-number">Episode 23</div>
+                    <h3>Building Design Systems at Scale</h3>
+                    <p class="podcast-desc">Industry experts share their experience creating and maintaining large-scale design systems.</p>
+                    <div class="podcast-meta">
+                        <span>38 min</span>
+                        <span>Dec 8, 2024</span>
+                    </div>
+                </div>
+                <button class="play-btn">▶</button>
+            </div>
+            <div class="podcast-item">
+                <div class="podcast-cover"></div>
+                <div class="podcast-info">
+                    <div class="podcast-number">Episode 22</div>
+                    <h3>Accessibility in Modern Web Design</h3>
+                    <p class="podcast-desc">Learn how to build inclusive digital experiences that work for everyone.</p>
+                    <div class="podcast-meta">
+                        <span>45 min</span>
+                        <span>Dec 1, 2024</span>
+                    </div>
+                </div>
+                <button class="play-btn">▶</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

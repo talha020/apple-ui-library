@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTA Components 026-050 - Apple HIG Design</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;background:#f5f5f7;padding:40px 20px;line-height:1.5}
+.container{max-width:1200px;margin:0 auto}
+.cta{background:#fff;border-radius:18px;padding:40px;margin-bottom:20px;box-shadow:0 4px 6px rgba(0,0,0,.07)}
+h2{font-size:14px;color:#86868b;text-transform:uppercase;letter-spacing:1px;margin-bottom:30px}
+h3{font-size:32px;font-weight:600;margin-bottom:16px;color:#1d1d1f}
+p{color:#6e6e73;font-size:17px;line-height:1.6;margin-bottom:24px}
+.btn{display:inline-block;padding:12px 24px;border-radius:980px;font-size:17px;font-weight:500;text-decoration:none;transition:all .3s;border:none;cursor:pointer}
+.btn-primary{background:#0071e3;color:#fff}
+.btn-primary:hover{background:#0077ed}
+.btn-secondary{background:#1d1d1f;color:#fff}
+.btn-secondary:hover{background:#333}
+.btn-outline{background:transparent;color:#0071e3;border:2px solid #0071e3}
+.btn-outline:hover{background:#0071e3;color:#fff}
+input[type="email"],input[type="text"]{width:100%;padding:14px 16px;border:1px solid #d2d2d7;border-radius:12px;font-size:17px;margin-bottom:16px;transition:border .3s}
+input:focus{outline:none;border-color:#0071e3}
+.flex{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.badge{background:#0071e3;color:#fff;padding:4px 12px;border-radius:12px;font-size:14px;font-weight:500}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.4);backdrop-filter:blur(20px);z-index:1000;align-items:center;justify-content:center}
+.modal.active{display:flex}
+.modal-content{background:#fff;border-radius:18px;padding:40px;max-width:500px;width:90%;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.close{position:absolute;top:20px;right:20px;font-size:24px;cursor:pointer;color:#86868b}
+.notification{position:fixed;top:20px;right:20px;background:#fff;border-radius:12px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.2);display:none;z-index:999;max-width:300px}
+.notification.show{display:block;animation:slideIn .3s}
+@keyframes slideIn{from{transform:translateX(400px);opacity:0}to{transform:translateX(0);opacity:1}}
+.banner{background:linear-gradient(135deg,#0071e3,#00a4e4);color:#fff;padding:30px;border-radius:18px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:#f5f5f7;border-radius:12px;padding:24px;text-align:center}
+.icon{width:48px;height:48px;background:#0071e3;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:#fff;font-size:24px}
+.progress{height:4px;background:#d2d2d7;border-radius:4px;overflow:hidden;margin:20px 0}
+.progress-bar{height:100%;background:#0071e3;width:0;transition:width .5s}
+.chip{display:inline-block;background:#f5f5f7;padding:8px 16px;border-radius:20px;margin:4px;font-size:15px;color:#1d1d1f}
+.divider{height:1px;background:#d2d2d7;margin:24px 0}
+.label{font-size:13px;color:#86868b;margin-bottom:8px;display:block}
+select{width:100%;padding:14px 16px;border:1px solid #d2d2d7;border-radius:12px;font-size:17px;margin-bottom:16px;background:#fff}
+textarea{width:100%;padding:14px 16px;border:1px solid #d2d2d7;border-radius:12px;font-size:17px;min-height:100px;font-family:inherit}
+.inline-form{display:flex;gap:8px;align-items:stretch}
+.inline-form input{margin:0;flex:1}
+.social-btn{width:48px;height:48px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;border:1px solid #d2d2d7;margin:0 6px;cursor:pointer;transition:all .3s}
+.social-btn:hover{background:#f5f5f7}
+.countdown{display:flex;gap:16px;justify-content:center;margin:20px 0}
+.countdown-item{text-align:center}
+.countdown-value{font-size:36px;font-weight:600;color:#0071e3}
+.countdown-label{font-size:12px;color:#86868b;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- CTA 026: Simple Email Signup -->
+<div class="cta">
+<h2>CTA 026</h2>
+<h3>Stay in the loop</h3>
+<p>Get the latest updates delivered to your inbox.</p>
+<input type="email" placeholder="Enter your email">
+<button class="btn btn-primary">Subscribe</button>
+</div>
+
+<!-- CTA 027: Inline Email Signup -->
+<div class="cta">
+<h2>CTA 027</h2>
+<h3>Join our community</h3>
+<div class="inline-form">
+<input type="email" placeholder="name@email.com">
+<button class="btn btn-primary">Sign up</button>
+</div>
+</div>
+
+<!-- CTA 028: Feature Banner -->
+<div class="cta banner">
+<h2 style="color:rgba(255,255,255,.8)">CTA 028</h2>
+<h3 style="color:#fff;font-size:40px">New features available now</h3>
+<p style="color:rgba(255,255,255,.9);font-size:19px">Experience the next generation of our platform</p>
+<button class="btn btn-secondary" style="background:#fff;color:#0071e3">Explore now</button>
+</div>
+
+<!-- CTA 029: Two-Column CTA -->
+<div class="cta">
+<h2>CTA 029</h2>
+<div class="grid">
+<div>
+<h3 style="font-size:24px">For individuals</h3>
+<p>Perfect for personal projects and small teams.</p>
+<button class="btn btn-outline">Start free</button>
+</div>
+<div>
+<h3 style="font-size:24px">For teams</h3>
+<p>Advanced collaboration tools for growing businesses.</p>
+<button class="btn btn-primary">Get started</button>
+</div>
+</div>
+</div>
+
+<!-- CTA 030: Modal Trigger -->
+<div class="cta">
+<h2>CTA 030</h2>
+<h3>Ready to get started?</h3>
+<p>Join thousands of users already using our platform.</p>
+<button class="btn btn-primary" onclick="document.getElementById('modal1').classList.add('active')">Open signup</button>
+</div>
+
+<div class="modal" id="modal1">
+<div class="modal-content">
+<span class="close" onclick="document.getElementById('modal1').classList.remove('active')">&times;</span>
+<h3>Create your account</h3>
+<p>Start your journey today.</p>
+<input type="text" placeholder="Full name">
+<input type="email" placeholder="Email address">
+<button class="btn btn-primary" style="width:100%">Continue</button>
+</div>
+</div>
+
+<!-- CTA 031: Notification Banner -->
+<div class="cta" style="background:#f5f5f7;border:2px solid #0071e3">
+<h2>CTA 031</h2>
+<div class="flex" style="justify-content:space-between">
+<div style="flex:1">
+<h3 style="font-size:21px">Limited time offer</h3>
+<p style="margin:0">Save 30% on annual plans this week only.</p>
+</div>
+<button class="btn btn-primary">Claim offer</button>
+</div>
+</div>
+
+<!-- CTA 032: Icon Grid CTA -->
+<div class="cta">
+<h2>CTA 032</h2>
+<h3>Choose your path</h3>
+<div class="grid">
+<div class="card">
+<div class="icon">1</div>
+<h3 style="font-size:19px">Starter</h3>
+<p style="font-size:15px">For beginners</p>
+<button class="btn btn-outline">Start</button>
+</div>
+<div class="card">
+<div class="icon">2</div>
+<h3 style="font-size:19px">Pro</h3>
+<p style="font-size:15px">For experts</p>
+<button class="btn btn-primary">Upgrade</button>
+</div>
+<div class="card">
+<div class="icon">3</div>
+<h3 style="font-size:19px">Enterprise</h3>
+<p style="font-size:15px">For teams</p>
+<button class="btn btn-secondary">Contact</button>
+</div>
+</div>
+</div>
+
+<!-- CTA 033: Progress-based CTA -->
+<div class="cta">
+<h2>CTA 033</h2>
+<h3>Complete your profile</h3>
+<p>You're 60% done. Finish to unlock all features.</p>
+<div class="progress">
+<div class="progress-bar" style="width:60%"></div>
+</div>
+<button class="btn btn-primary">Continue setup</button>
+</div>
+
+<!-- CTA 034: Badge CTA -->
+<div class="cta">
+<h2>CTA 034</h2>
+<span class="badge">New</span>
+<h3 style="display:inline-block;margin-left:12px">Premium features launched</h3>
+<p>Unlock advanced analytics and priority support.</p>
+<div class="flex">
+<button class="btn btn-primary">Upgrade now</button>
+<button class="btn btn-outline">Learn more</button>
+</div>
+</div>
+
+<!-- CTA 035: Chip Selection CTA -->
+<div class="cta">
+<h2>CTA 035</h2>
+<h3>What interests you?</h3>
+<p>Select topics to personalize your experience.</p>
+<div>
+<span class="chip">Design</span>
+<span class="chip">Technology</span>
+<span class="chip">Business</span>
+<span class="chip">Marketing</span>
+<span class="chip">Development</span>
+</div>
+<div class="divider"></div>
+<button class="btn btn-primary">Save preferences</button>
+</div>
+
+<!-- CTA 036: Social Proof CTA -->
+<div class="cta">
+<h2>CTA 036</h2>
+<h3>Join 50,000+ subscribers</h3>
+<p>Get weekly insights delivered to your inbox.</p>
+<div class="inline-form">
+<input type="email" placeholder="Your email address">
+<button class="btn btn-primary">Join now</button>
+</div>
+<p style="font-size:13px;color:#86868b;margin-top:12px">Join industry leaders from Apple, Google, and Microsoft</p>
+</div>
+
+<!-- CTA 037: Countdown CTA -->
+<div class="cta">
+<h2>CTA 037</h2>
+<h3>Sale ends soon</h3>
+<div class="countdown">
+<div class="countdown-item">
+<div class="countdown-value">12</div>
+<div class="countdown-label">Hours</div>
+</div>
+<div class="countdown-item">
+<div class="countdown-value">34</div>
+<div class="countdown-label">Minutes</div>
+</div>
+<div class="countdown-item">
+<div class="countdown-value">56</div>
+<div class="countdown-label">Seconds</div>
+</div>
+</div>
+<button class="btn btn-primary" style="width:100%">Shop now</button>
+</div>
+
+<!-- CTA 038: Form CTA with Dropdown -->
+<div class="cta">
+<h2>CTA 038</h2>
+<h3>Request a demo</h3>
+<label class="label">Full name</label>
+<input type="text" placeholder="John Appleseed">
+<label class="label">Company email</label>
+<input type="email" placeholder="john@company.com">
+<label class="label">Company size</label>
+<select>
+<option>1-10 employees</option>
+<option>11-50 employees</option>
+<option>51-200 employees</option>
+<option>200+ employees</option>
+</select>
+<button class="btn btn-primary" style="width:100%">Schedule demo</button>
+</div>
+
+<!-- CTA 039: Split Background CTA -->
+<div class="cta" style="background:linear-gradient(to right,#1d1d1f 50%,#fff 50%);padding:0;overflow:hidden">
+<h2 style="padding:40px 40px 0">CTA 039</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr">
+<div style="padding:40px;color:#fff">
+<h3 style="color:#fff">Premium access</h3>
+<p style="color:rgba(255,255,255,.8)">Exclusive features for professionals.</p>
+<button class="btn btn-primary">Upgrade</button>
+</div>
+<div style="padding:40px">
+<h3>Free plan</h3>
+<p>Perfect to get started.</p>
+<button class="btn btn-outline">Continue free</button>
+</div>
+</div>
+</div>
+
+<!-- CTA 040: Notification Toast Trigger -->
+<div class="cta">
+<h2>CTA 040</h2>
+<h3>Get instant notifications</h3>
+<p>Enable push notifications to stay updated.</p>
+<button class="btn btn-primary" onclick="showNotification()">Enable notifications</button>
+</div>
+
+<div class="notification" id="notification">
+<h3 style="font-size:17px;margin-bottom:8px">Notifications enabled</h3>
+<p style="font-size:15px;margin:0">You'll receive updates in real-time.</p>
+</div>
+
+<!-- CTA 041: Video CTA -->
+<div class="cta" style="background:#000;color:#fff">
+<h2 style="color:#86868b">CTA 041</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+<div>
+<h3 style="color:#fff">See it in action</h3>
+<p style="color:#a1a1a6">Watch how teams are using our platform.</p>
+<div class="flex">
+<button class="btn btn-primary">Watch video</button>
+<button class="btn btn-outline" style="color:#fff;border-color:#fff">Get started</button>
+</div>
+</div>
+<div style="background:#1d1d1f;border-radius:12px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:48px">▶</div>
+</div>
+</div>
+
+<!-- CTA 042: Minimalist CTA -->
+<div class="cta" style="text-align:center;padding:60px 40px">
+<h2>CTA 042</h2>
+<h3 style="font-size:48px">Simple. Powerful.</h3>
+<p style="font-size:21px;max-width:600px;margin:16px auto 32px">Everything you need, nothing you don't.</p>
+<button class="btn btn-primary">Try it free</button>
+</div>
+
+<!-- CTA 043: Multi-step Form -->
+<div class="cta">
+<h2>CTA 043</h2>
+<h3>Get personalized recommendations</h3>
+<div class="progress">
+<div class="progress-bar" style="width:33%"></div>
+</div>
+<p style="font-size:15px;color:#86868b">Step 1 of 3</p>
+<label class="label">What's your role?</label>
+<select>
+<option>Designer</option>
+<option>Developer</option>
+<option>Manager</option>
+<option>Other</option>
+</select>
+<button class="btn btn-primary">Next step</button>
+</div>
+
+<!-- CTA 044: Comparison CTA -->
+<div class="cta">
+<h2>CTA 044</h2>
+<h3>Choose the right plan</h3>
+<div class="grid">
+<div style="border:1px solid #d2d2d7;border-radius:12px;padding:24px">
+<h3 style="font-size:21px">Basic</h3>
+<p style="font-size:36px;font-weight:600;color:#0071e3;margin:16px 0">$9<span style="font-size:17px;color:#86868b">/mo</span></p>
+<ul style="list-style:none;margin-bottom:20px;color:#6e6e73;font-size:15px">
+<li style="margin:8px 0">✓ Core features</li>
+<li style="margin:8px 0">✓ 5 GB storage</li>
+<li style="margin:8px 0">✓ Email support</li>
+</ul>
+<button class="btn btn-outline" style="width:100%">Select</button>
+</div>
+<div style="border:2px solid #0071e3;border-radius:12px;padding:24px;position:relative">
+<span class="badge" style="position:absolute;top:-12px;left:50%;transform:translateX(-50%)">Popular</span>
+<h3 style="font-size:21px">Pro</h3>
+<p style="font-size:36px;font-weight:600;color:#0071e3;margin:16px 0">$29<span style="font-size:17px;color:#86868b">/mo</span></p>
+<ul style="list-style:none;margin-bottom:20px;color:#6e6e73;font-size:15px">
+<li style="margin:8px 0">✓ All Basic features</li>
+<li style="margin:8px 0">✓ 100 GB storage</li>
+<li style="margin:8px 0">✓ Priority support</li>
+</ul>
+<button class="btn btn-primary" style="width:100%">Select</button>
+</div>
+</div>
+</div>
+
+<!-- CTA 045: Social Share CTA -->
+<div class="cta">
+<h2>CTA 045</h2>
+<h3>Share with your network</h3>
+<p>Help others discover this amazing tool.</p>
+<div style="text-align:center;margin:20px 0">
+<span class="social-btn">f</span>
+<span class="social-btn">t</span>
+<span class="social-btn">in</span>
+<span class="social-btn">@</span>
+</div>
+<button class="btn btn-outline" style="width:100%">Copy link</button>
+</div>
+
+<!-- CTA 046: Feedback CTA -->
+<div class="cta">
+<h2>CTA 046</h2>
+<h3>We value your feedback</h3>
+<p>Help us improve your experience.</p>
+<textarea placeholder="Tell us what you think..."></textarea>
+<div class="flex" style="justify-content:space-between;margin-top:16px">
+<button class="btn btn-outline">Maybe later</button>
+<button class="btn btn-primary">Send feedback</button>
+</div>
+</div>
+
+<!-- CTA 047: App Download CTA -->
+<div class="cta" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff">
+<h2 style="color:rgba(255,255,255,.7)">CTA 047</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+<div>
+<h3 style="color:#fff;font-size:40px">Get the app</h3>
+<p style="color:rgba(255,255,255,.9);font-size:19px">Available on iOS and Android.</p>
+<div class="flex">
+<button class="btn btn-secondary" style="background:#fff;color:#667eea">App Store</button>
+<button class="btn btn-secondary" style="background:rgba(255,255,255,.2);color:#fff">Google Play</button>
+</div>
+</div>
+<div style="font-size:120px;text-align:center">📱</div>
+</div>
+</div>
+
+<!-- CTA 048: Referral CTA -->
+<div class="cta">
+<h2>CTA 048</h2>
+<h3>Refer a friend, get $20</h3>
+<p>Share your referral code and earn rewards when friends sign up.</p>
+<div style="background:#f5f5f7;padding:20px;border-radius:12px;margin:20px 0;text-align:center">
+<p style="font-size:13px;color:#86868b;margin-bottom:8px">Your referral code</p>
+<p style="font-size:24px;font-weight:600;color:#0071e3;letter-spacing:2px">FRIEND20</p>
+</div>
+<button class="btn btn-primary" style="width:100%">Share code</button>
+</div>
+
+<!-- CTA 049: Exit Intent CTA -->
+<div class="cta" style="border:2px dashed #d2d2d7">
+<h2>CTA 049</h2>
+<h3>Wait! Don't miss out</h3>
+<p>Get 15% off your first order. Subscribe to our newsletter.</p>
+<div class="inline-form">
+<input type="email" placeholder="Enter your email">
+<button class="btn btn-primary">Get discount</button>
+</div>
+</div>
+
+<!-- CTA 050: Simple Text CTA -->
+<div class="cta" style="text-align:center;background:#f5f5f7">
+<h2>CTA 050</h2>
+<h3>Ready to transform your workflow?</h3>
+<p>Join thousands of teams already using our platform.</p>
+<div class="flex" style="justify-content:center">
+<button class="btn btn-primary">Start free trial</button>
+<button class="btn btn-secondary">Contact sales</button>
+</div>
+<p style="font-size:13px;color:#86868b;margin-top:16px">No credit card required • 14-day free trial</p>
+</div>
+
+</div>
+
+<script>
+function showNotification(){
+const n=document.getElementById('notification');
+n.classList.add('show');
+setTimeout(()=>n.classList.remove('show'),3000);
+}
+</script>
+</body>
+</html>

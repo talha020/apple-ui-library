@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog 151-175 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<!-- 151: Blog with Pill Categories -->
+<div class="section-label">151 — Pill Categories Blog</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap;">
+      <span style="padding: 8px 18px; background: #2C6ECB; color: #FFFFFF; border-radius: 9999px; font-size: 13px; font-weight: 600;">All</span>
+      <span style="padding: 8px 18px; border: 1px solid #E3E3E8; border-radius: 9999px; font-size: 13px; color: #6D6D72; cursor: pointer;">Architecture</span>
+      <span style="padding: 8px 18px; border: 1px solid #E3E3E8; border-radius: 9999px; font-size: 13px; color: #6D6D72; cursor: pointer;">Performance</span>
+      <span style="padding: 8px 18px; border: 1px solid #E3E3E8; border-radius: 9999px; font-size: 13px; color: #6D6D72; cursor: pointer;">Security</span>
+      <span style="padding: 8px 18px; border: 1px solid #E3E3E8; border-radius: 9999px; font-size: 13px; color: #6D6D72; cursor: pointer;">Tooling</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE, #D4E4FE);"></div>
+        <div style="padding: 20px;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Modular monolith architecture</h3><span style="font-size: 13px; color: #AEAEB2;">9 min</span></div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #F3EEFF, #E5D4FF);"></div>
+        <div style="padding: 20px;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Web vitals monitoring setup</h3><span style="font-size: 13px; color: #AEAEB2;">6 min</span></div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E3F5E1, #C8EDCA);"></div>
+        <div style="padding: 20px;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">OAuth 2.1 migration guide</h3><span style="font-size: 13px; color: #AEAEB2;">12 min</span></div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 152: Blog with Timeline Sidebar -->
+<div class="section-label">152 — Timeline Sidebar Blog</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: 180px 1fr; gap: 40px;">
+      <nav style="border-right: 1px solid #E3E3E8; padding-right: 24px;">
+        <span style="font-size: 14px; font-weight: 700; color: #1D1D1F; display: block; margin-bottom: 4px;">2024</span>
+        <a href="#" style="font-size: 13px; color: #2C6ECB; font-weight: 600; text-decoration: none; display: block; padding: 4px 0;">January</a>
+        <span style="font-size: 14px; font-weight: 700; color: #1D1D1F; display: block; margin-top: 16px; margin-bottom: 4px;">2023</span>
+        <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none; display: block; padding: 4px 0;">December</a>
+        <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none; display: block; padding: 4px 0;">November</a>
+        <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none; display: block; padding: 4px 0;">October</a>
+      </nav>
+      <div>
+        <article style="padding: 16px 0; border-bottom: 1px solid #E3E3E8;">
+          <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Parallel data fetching patterns</h3>
+          <p style="font-size: 14px; color: #6D6D72;">Avoid request waterfalls with parallel loading.</p>
+        </article>
+        <article style="padding: 16px 0; border-bottom: 1px solid #E3E3E8;">
+          <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Type narrowing techniques in TS</h3>
+          <p style="font-size: 14px; color: #6D6D72;">Master discriminated unions and type guards.</p>
+        </article>
+        <article style="padding: 16px 0;">
+          <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">React compiler: what it means for you</h3>
+          <p style="font-size: 14px; color: #6D6D72;">Automatic memoization and beyond.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 153: Blog with Horizontal Rule Cards -->
+<div class="section-label">153 — Horizontal Rule Cards</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <article style="display: flex; gap: 24px; padding: 24px 0; border-bottom: 1px solid #E3E3E8;">
+      <div style="min-width: 140px; aspect-ratio: 4/3; background: linear-gradient(135deg, #E9F0FE, #F3EEFF); border-radius: 10px;"></div>
+      <div>
+        <span style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase;">React</span>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">Server components in production</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Real-world patterns and gotchas.</p>
+        <span style="font-size: 13px; color: #AEAEB2; display: block; margin-top: 8px;">8 min &middot; Jan 22</span>
+      </div>
+    </article>
+    <article style="display: flex; gap: 24px; padding: 24px 0; border-bottom: 1px solid #E3E3E8;">
+      <div style="min-width: 140px; aspect-ratio: 4/3; background: linear-gradient(135deg, #E3F5E1, #C8EDCA); border-radius: 10px;"></div>
+      <div>
+        <span style="font-size: 12px; font-weight: 600; color: #1A8245; text-transform: uppercase;">Node.js</span>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">Building resilient microservices</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Circuit breakers and retries.</p>
+        <span style="font-size: 13px; color: #AEAEB2; display: block; margin-top: 8px;">11 min &middot; Jan 18</span>
+      </div>
+    </article>
+    <article style="display: flex; gap: 24px; padding: 24px 0;">
+      <div style="min-width: 140px; aspect-ratio: 4/3; background: linear-gradient(135deg, #FFFBE6, #FFE5CC); border-radius: 10px;"></div>
+      <div>
+        <span style="font-size: 12px; font-weight: 600; color: #B98900; text-transform: uppercase;">Database</span>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">Postgres full-text search guide</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Skip Elasticsearch for simple use cases.</p>
+        <span style="font-size: 13px; color: #AEAEB2; display: block; margin-top: 8px;">7 min &middot; Jan 14</span>
+      </div>
+    </article>
+  </div>
+</div>
+
+<!-- 154: Blog with Gradient Background -->
+<div class="section-label">154 — Gradient Background Blog</div>
+<div class="section-container">
+  <div style="background: linear-gradient(180deg, #F6F6F7 0%, #FFFFFF 100%); padding: 64px 48px;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 32px;">Featured Stories</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <article style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">
+        <span style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase;">Cloud</span>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin: 8px 0; line-height: 1.3;">Multi-region deployment patterns</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Serving users globally with low latency.</p>
+      </article>
+      <article style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">
+        <span style="font-size: 12px; font-weight: 600; color: #7C3AED; text-transform: uppercase;">AI</span>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin: 8px 0; line-height: 1.3;">Integrating LLMs into your product</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Practical patterns for AI-powered features.</p>
+      </article>
+      <article style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">
+        <span style="font-size: 12px; font-weight: 600; color: #1A8245; text-transform: uppercase;">Mobile</span>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin: 8px 0; line-height: 1.3;">React Native vs Flutter in 2024</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">An honest comparison for cross-platform.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 155: Blog with Reading Progress Dots -->
+<div class="section-label">155 — Reading Progress Dots</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 32px;">
+      <div style="width: 8px; height: 8px; background: #2C6ECB; border-radius: 50%;"></div>
+      <div style="width: 8px; height: 8px; background: #2C6ECB; border-radius: 50%;"></div>
+      <div style="width: 8px; height: 8px; background: #2C6ECB; border-radius: 50%;"></div>
+      <div style="width: 8px; height: 8px; background: #E3E3E8; border-radius: 50%;"></div>
+      <div style="width: 8px; height: 8px; background: #E3E3E8; border-radius: 50%;"></div>
+    </div>
+    <span style="font-size: 12px; font-weight: 600; color: #7C3AED; text-transform: uppercase; letter-spacing: 0.5px;">Chapter 3 of 5</span>
+    <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin: 10px 0 16px; line-height: 1.2;">Routing and navigation</h2>
+    <p style="font-size: 16px; color: #6D6D72; line-height: 1.7;">In this chapter we explore client-side routing, nested layouts, and parallel routes for complex application structures.</p>
+  </div>
+</div>
+
+<!-- 156: Blog Checklist Post -->
+<div class="section-label">156 — Checklist Blog Post</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Production readiness checklist</h2>
+    <p style="font-size: 15px; color: #6D6D72; margin-bottom: 28px;">Before you ship, make sure you have covered these essentials.</p>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; gap: 12px; align-items: center; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 8px;">
+        <div style="width: 20px; height: 20px; border: 2px solid #1A8245; border-radius: 4px; background: #1A8245; display: flex; align-items: center; justify-content: center;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span style="font-size: 14px; color: #AEAEB2; text-decoration: line-through;">Error monitoring configured</span>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: center; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 8px;">
+        <div style="width: 20px; height: 20px; border: 2px solid #1A8245; border-radius: 4px; background: #1A8245; display: flex; align-items: center; justify-content: center;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span style="font-size: 14px; color: #AEAEB2; text-decoration: line-through;">Performance budget set</span>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: center; padding: 14px 16px; border: 1px solid #2C6ECB; border-radius: 8px; background: #FAFBFF;">
+        <div style="width: 20px; height: 20px; border: 2px solid #2C6ECB; border-radius: 4px;"></div>
+        <span style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Security audit completed</span>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: center; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 8px;">
+        <div style="width: 20px; height: 20px; border: 2px solid #E3E3E8; border-radius: 4px;"></div>
+        <span style="font-size: 14px; color: #1D1D1F;">Load testing passed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 157: Blog with Sidebar Authors List -->
+<div class="section-label">157 — Sidebar Authors List</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: 1fr 260px; gap: 40px;">
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+        <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+          <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE, #D4E4FE);"></div>
+          <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">URL pattern API guide</h3></div>
+        </article>
+        <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+          <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #F3EEFF, #E5D4FF);"></div>
+          <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Navigation API explained</h3></div>
+        </article>
+        <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+          <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E3F5E1, #FFFBE6);"></div>
+          <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Decorators in TypeScript 5</h3></div>
+        </article>
+        <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+          <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #FFFBE6, #FFE5CC);"></div>
+          <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Temporal API preview</h3></div>
+        </article>
+      </div>
+      <aside>
+        <h4 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Top Authors</h4>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #2C6ECB, #7C3AED); border-radius: 50%;"></div>
+            <div><span style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Sarah Chen</span><span style="font-size: 12px; color: #AEAEB2; display: block;">28 posts</span></div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #1A8245, #2C6ECB); border-radius: 50%;"></div>
+            <div><span style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Marcus Liu</span><span style="font-size: 12px; color: #AEAEB2; display: block;">22 posts</span></div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #B98900, #D72C0D); border-radius: 50%;"></div>
+            <div><span style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Priya Sharma</span><span style="font-size: 12px; color: #AEAEB2; display: block;">19 posts</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- 158: Blog with CTA Banner -->
+<div class="section-label">158 — Blog CTA Banner</div>
+<div class="section-container">
+  <div style="padding: 48px; background: linear-gradient(135deg, #E9F0FE, #F3EEFF); display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <h3 style="font-size: 22px; font-weight: 700; color: #1D1D1F;">Start building with our component library</h3>
+      <p style="font-size: 15px; color: #6D6D72; margin-top: 4px;">Free, open-source, and production-ready.</p>
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <button style="padding: 12px 24px; background: #1D1D1F; color: #FFFFFF; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Get Started</button>
+      <button style="padding: 12px 24px; background: #FFFFFF; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">View Docs</button>
+    </div>
+  </div>
+</div>
+
+<!-- 159: Blog with Inline Image -->
+<div class="section-label">159 — Blog Inline Image</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">Designing responsive tables</h2>
+    <p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-bottom: 24px;">Tables on mobile have always been tricky. Here are patterns that actually work across all screen sizes.</p>
+    <figure style="margin-bottom: 24px;">
+      <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE, #F3EEFF); border-radius: 10px; border: 1px solid #E3E3E8;"></div>
+      <figcaption style="font-size: 13px; color: #AEAEB2; text-align: center; margin-top: 10px;">Fig 1: Comparison of responsive table approaches</figcaption>
+    </figure>
+    <p style="font-size: 15px; color: #6D6D72; line-height: 1.7;">The scroll approach works best for data-dense tables while card layouts suit simpler structures.</p>
+  </div>
+</div>
+
+<!-- 160: Blog Compact Two-Column -->
+<div class="section-label">160 — Compact Two-Column</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+      <article style="display: flex; gap: 16px; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px; align-items: center;">
+        <div style="min-width: 60px; height: 60px; background: linear-gradient(135deg, #E9F0FE, #D4E4FE); border-radius: 8px;"></div>
+        <div><h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Zod schema validation</h3><span style="font-size: 12px; color: #AEAEB2;">4 min</span></div>
+      </article>
+      <article style="display: flex; gap: 16px; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px; align-items: center;">
+        <div style="min-width: 60px; height: 60px; background: linear-gradient(135deg, #F3EEFF, #E5D4FF); border-radius: 8px;"></div>
+        <div><h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Framer Motion recipes</h3><span style="font-size: 12px; color: #AEAEB2;">6 min</span></div>
+      </article>
+      <article style="display: flex; gap: 16px; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px; align-items: center;">
+        <div style="min-width: 60px; height: 60px; background: linear-gradient(135deg, #E3F5E1, #C8EDCA); border-radius: 8px;"></div>
+        <div><h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Prisma best practices</h3><span style="font-size: 12px; color: #AEAEB2;">8 min</span></div>
+      </article>
+      <article style="display: flex; gap: 16px; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px; align-items: center;">
+        <div style="min-width: 60px; height: 60px; background: linear-gradient(135deg, #FFFBE6, #FFE5CC); border-radius: 8px;"></div>
+        <div><h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Tanstack Query patterns</h3><span style="font-size: 12px; color: #AEAEB2;">5 min</span></div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 161: Blog with Section Divider -->
+<div class="section-label">161 — Section Divider Blog</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 800px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <span style="font-size: 32px; color: #E3E3E8;">&#10038;</span>
+      <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-top: 16px;">Engineering Excellence</h2>
+      <p style="font-size: 15px; color: #6D6D72; margin-top: 8px;">Thoughts on building better software, one article at a time.</p>
+    </div>
+    <article style="padding: 20px 0; border-top: 1px solid #E3E3E8;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Idempotency in distributed systems</h3>
+      <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Why every API endpoint should be idempotent and how to implement it.</p>
+    </article>
+    <article style="padding: 20px 0; border-top: 1px solid #E3E3E8;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Saga pattern for distributed transactions</h3>
+      <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Managing complex business processes across microservices.</p>
+    </article>
+  </div>
+</div>
+
+<!-- 162: Blog with Highlight Box -->
+<div class="section-label">162 — Blog with Highlight Box</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">Understanding race conditions in React</h2>
+    <p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-bottom: 24px;">Race conditions in data fetching can lead to stale data showing on screen. Here is how to prevent them.</p>
+    <div style="border: 1px solid #2C6ECB; background: #FAFBFF; border-radius: 10px; padding: 20px; margin-bottom: 24px;">
+      <h4 style="font-size: 14px; font-weight: 600; color: #2C6ECB; margin-bottom: 8px;">Key Takeaway</h4>
+      <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Always use cleanup functions in useEffect or AbortController to cancel stale requests when component state changes.</p>
+    </div>
+    <p style="font-size: 15px; color: #6D6D72; line-height: 1.7;">Let us look at three common patterns for handling this.</p>
+  </div>
+</div>
+
+<!-- 163: Blog with Icon Labels -->
+<div class="section-label">163 — Blog with Icon Labels</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2C6ECB" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase;">Frontend</span>
+        </div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Islands architecture in Astro</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Ship zero JavaScript by default.</p>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <span style="font-size: 12px; font-weight: 600; color: #7C3AED; text-transform: uppercase;">Backend</span>
+        </div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">gRPC for internal services</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">High performance inter-service communication.</p>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A8245" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          <span style="font-size: 12px; font-weight: 600; color: #1A8245; text-transform: uppercase;">Launch</span>
+        </div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Feature flag rollout strategy</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Gradual releases with confidence.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 164: Blog with Date Badge -->
+<div class="section-label">164 — Blog with Date Badge</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <article style="display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid #E3E3E8;">
+      <div style="min-width: 56px; text-align: center; padding: 8px; border: 1px solid #E3E3E8; border-radius: 10px;">
+        <span style="font-size: 20px; font-weight: 700; color: #1D1D1F; display: block;">22</span>
+        <span style="font-size: 11px; color: #AEAEB2; text-transform: uppercase;">Jan</span>
+      </div>
+      <div>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Streaming Server-Sent Events</h3>
+        <p style="font-size: 14px; color: #6D6D72;">Real-time updates without WebSockets.</p>
+      </div>
+    </article>
+    <article style="display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid #E3E3E8;">
+      <div style="min-width: 56px; text-align: center; padding: 8px; border: 1px solid #E3E3E8; border-radius: 10px;">
+        <span style="font-size: 20px; font-weight: 700; color: #1D1D1F; display: block;">18</span>
+        <span style="font-size: 11px; color: #AEAEB2; text-transform: uppercase;">Jan</span>
+      </div>
+      <div>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">CSS color functions in depth</h3>
+        <p style="font-size: 14px; color: #6D6D72;">oklch, lab, and color-mix explained.</p>
+      </div>
+    </article>
+    <article style="display: flex; gap: 20px; padding: 20px 0;">
+      <div style="min-width: 56px; text-align: center; padding: 8px; border: 1px solid #E3E3E8; border-radius: 10px;">
+        <span style="font-size: 20px; font-weight: 700; color: #1D1D1F; display: block;">14</span>
+        <span style="font-size: 11px; color: #AEAEB2; text-transform: uppercase;">Jan</span>
+      </div>
+      <div>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Building a CLI with Bun</h3>
+        <p style="font-size: 14px; color: #6D6D72;">Fast script runner meets CLI framework.</p>
+      </div>
+    </article>
+  </div>
+</div>
+
+<!-- 165: Blog with Testimonial Quote -->
+<div class="section-label">165 — Blog Testimonial Quote</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; text-align: center; max-width: 640px; margin: 0 auto;">
+    <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #2C6ECB, #7C3AED); border-radius: 50%; margin: 0 auto 20px;"></div>
+    <blockquote style="font-size: 22px; font-weight: 500; color: #1D1D1F; line-height: 1.4; font-style: italic; margin-bottom: 16px;">"This blog helped me level up from junior to senior engineer in two years."</blockquote>
+    <cite style="font-size: 15px; color: #6D6D72; font-style: normal;">Alex Kim, Software Engineer at Stripe</cite>
+    <div style="margin-top: 24px;">
+      <a href="#" style="font-size: 14px; font-weight: 600; color: #2C6ECB; text-decoration: none;">Read Alex's favorite articles &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- 166: Blog Grid with Overlay Tags -->
+<div class="section-label">166 — Grid with Overlay Tags</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <article style="border-radius: 12px; overflow: hidden; border: 1px solid #E3E3E8;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE, #D4E4FE); position: relative;">
+          <span style="position: absolute; top: 10px; left: 10px; padding: 4px 10px; background: rgba(255,255,255,0.9); border-radius: 6px; font-size: 11px; font-weight: 600; color: #2C6ECB;">New</span>
+        </div>
+        <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Server actions security</h3></div>
+      </article>
+      <article style="border-radius: 12px; overflow: hidden; border: 1px solid #E3E3E8;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #F3EEFF, #E5D4FF); position: relative;">
+          <span style="position: absolute; top: 10px; left: 10px; padding: 4px 10px; background: rgba(255,255,255,0.9); border-radius: 6px; font-size: 11px; font-weight: 600; color: #7C3AED;">Popular</span>
+        </div>
+        <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">CSS @scope rule guide</h3></div>
+      </article>
+      <article style="border-radius: 12px; overflow: hidden; border: 1px solid #E3E3E8;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E3F5E1, #C8EDCA); position: relative;">
+          <span style="position: absolute; top: 10px; left: 10px; padding: 4px 10px; background: rgba(255,255,255,0.9); border-radius: 6px; font-size: 11px; font-weight: 600; color: #1A8245;">Updated</span>
+        </div>
+        <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Bun runtime overview</h3></div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 167: Blog with Floating CTA -->
+<div class="section-label">167 — Blog Floating CTA</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto; position: relative;">
+    <article>
+      <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">Mastering async JavaScript</h2>
+      <p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-bottom: 16px;">From callbacks to promises to async/await. A progressive guide through JavaScript asynchronous programming.</p>
+      <p style="font-size: 15px; color: #6D6D72; line-height: 1.7;">Understanding the event loop is key to writing non-blocking code that performs well under load.</p>
+    </article>
+    <div style="position: absolute; bottom: 20px; right: 20px; padding: 14px 24px; background: #1D1D1F; border-radius: 9999px; cursor: pointer; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">
+      <span style="font-size: 14px; font-weight: 600; color: #FFFFFF;">Continue Reading &rarr;</span>
+    </div>
+  </div>
+</div>
+
+<!-- 168: Blog with Version Tag -->
+<div class="section-label">168 — Blog with Version Tag</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+          <span style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase;">Tutorial</span>
+          <span style="padding: 2px 8px; background: #F6F6F7; color: #6D6D72; font-size: 11px; border-radius: 4px;">v3.2</span>
+        </div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Next.js app router patterns</h3>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+          <span style="font-size: 12px; font-weight: 600; color: #7C3AED; text-transform: uppercase;">Guide</span>
+          <span style="padding: 2px 8px; background: #F6F6F7; color: #6D6D72; font-size: 11px; border-radius: 4px;">v5.0</span>
+        </div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">TypeScript 5 new features</h3>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+          <span style="font-size: 12px; font-weight: 600; color: #1A8245; text-transform: uppercase;">Migration</span>
+          <span style="padding: 2px 8px; background: #F6F6F7; color: #6D6D72; font-size: 11px; border-radius: 4px;">v4.0</span>
+        </div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Vite 4 migration guide</h3>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 169: Blog with Pinned + Recent -->
+<div class="section-label">169 — Pinned and Recent</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <h3 style="font-size: 14px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;">Pinned</h3>
+    <article style="border: 1px solid #2C6ECB; border-radius: 10px; padding: 24px; margin-bottom: 32px; background: #FAFBFF;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Getting started with our framework</h3>
+      <p style="font-size: 14px; color: #6D6D72;">Everything you need to go from zero to production.</p>
+    </article>
+    <h3 style="font-size: 14px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;">Recent</h3>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 20px;">
+        <h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 6px;">Image optimization techniques</h3>
+        <span style="font-size: 13px; color: #AEAEB2;">4 min</span>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 20px;">
+        <h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 6px;">Bundle analysis workflow</h3>
+        <span style="font-size: 13px; color: #AEAEB2;">6 min</span>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 20px;">
+        <h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 6px;">Playwright testing patterns</h3>
+        <span style="font-size: 13px; color: #AEAEB2;">8 min</span>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 170: Blog with RSS Link -->
+<div class="section-label">170 — Blog with RSS Link</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px;">
+      <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F;">Feed</h2>
+      <a href="#" style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: #6D6D72; text-decoration: none; padding: 6px 12px; border: 1px solid #E3E3E8; border-radius: 8px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B98900" stroke-width="2"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg>
+        RSS Feed
+      </a>
+    </div>
+    <article style="padding: 16px 0; border-bottom: 1px solid #E3E3E8;">
+      <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">WebGPU for compute shaders</h3>
+      <span style="font-size: 13px; color: #AEAEB2;">Jan 22 &middot; 9 min</span>
+    </article>
+    <article style="padding: 16px 0; border-bottom: 1px solid #E3E3E8;">
+      <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Baseline for web features</h3>
+      <span style="font-size: 13px; color: #AEAEB2;">Jan 18 &middot; 5 min</span>
+    </article>
+    <article style="padding: 16px 0;">
+      <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Import maps in the browser</h3>
+      <span style="font-size: 13px; color: #AEAEB2;">Jan 14 &middot; 4 min</span>
+    </article>
+  </div>
+</div>
+
+<!-- 171-175: Quick remaining components -->
+<!-- 171: Blog Full Width Card -->
+<div class="section-label">171 — Full Width Card</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr;">
+      <div style="background: linear-gradient(135deg, #1D1D1F, #2C6ECB); padding: 48px; display: flex; flex-direction: column; justify-content: center;">
+        <span style="font-size: 12px; font-weight: 600; color: #79B8FF; text-transform: uppercase; letter-spacing: 0.5px;">Weekly Roundup</span>
+        <h2 style="font-size: 28px; font-weight: 700; color: #FFFFFF; margin: 10px 0; line-height: 1.2;">This week in web development</h2>
+        <p style="font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.5;">The biggest announcements, releases, and articles from this week.</p>
+      </div>
+      <div style="padding: 32px;">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <a href="#" style="font-size: 14px; color: #1D1D1F; text-decoration: none; padding: 12px; border: 1px solid #E3E3E8; border-radius: 8px; font-weight: 500;">React 19 RC released</a>
+          <a href="#" style="font-size: 14px; color: #1D1D1F; text-decoration: none; padding: 12px; border: 1px solid #E3E3E8; border-radius: 8px; font-weight: 500;">CSS @starting-style lands</a>
+          <a href="#" style="font-size: 14px; color: #1D1D1F; text-decoration: none; padding: 12px; border: 1px solid #E3E3E8; border-radius: 8px; font-weight: 500;">Deno 2.0 announced</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+<!-- 172: Blog with Subtle Borders -->
+<div class="section-label">172 — Subtle Border Cards</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <article>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #F6F6F7, #E3E3E8); border-radius: 10px; margin-bottom: 16px;"></div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Why we switched to Bun</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Our migration story and results.</p>
+      </article>
+      <article>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #F6F6F7, #E3E3E8); border-radius: 10px; margin-bottom: 16px;"></div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">HTML dialog patterns</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Native modals without JavaScript.</p>
+      </article>
+      <article>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #F6F6F7, #E3E3E8); border-radius: 10px; margin-bottom: 16px;"></div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Effective PR descriptions</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Write PRs reviewers love to read.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 173: Blog with Centered Title -->
+<div class="section-label">173 — Centered Title Blog</div>
+<div class="section-container">
+  <div style="padding: 80px 48px; text-align: center; max-width: 600px; margin: 0 auto;">
+    <span style="font-size: 12px; font-weight: 600; color: #7C3AED; text-transform: uppercase; letter-spacing: 1px;">Essay</span>
+    <h2 style="font-size: 40px; font-weight: 700; color: #1D1D1F; margin: 12px 0 16px; line-height: 1.2;">On the value of slow thinking in fast-paced teams</h2>
+    <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 24px;">In a world optimized for speed, the most impactful ideas often come from deliberate, unhurried reflection.</p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #F3EEFF, #E5D4FF); border-radius: 50%;"></div>
+      <span style="font-size: 14px; color: #6D6D72;">Sarah Chen &middot; 14 min read</span>
+    </div>
+  </div>
+</div>
+
+<!-- 174: Blog Minimal Grid No Images -->
+<div class="section-label">174 — Minimal Grid No Images</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <article style="padding: 24px; border: 1px solid #E3E3E8; border-radius: 10px;">
+        <span style="font-size: 12px; color: #AEAEB2;">Jan 22</span>
+        <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin: 8px 0; line-height: 1.3;">Composition over inheritance in React</h3>
+        <a href="#" style="font-size: 13px; font-weight: 600; color: #2C6ECB; text-decoration: none;">Read &rarr;</a>
+      </article>
+      <article style="padding: 24px; border: 1px solid #E3E3E8; border-radius: 10px;">
+        <span style="font-size: 12px; color: #AEAEB2;">Jan 18</span>
+        <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin: 8px 0; line-height: 1.3;">Modern CSS reset techniques</h3>
+        <a href="#" style="font-size: 13px; font-weight: 600; color: #2C6ECB; text-decoration: none;">Read &rarr;</a>
+      </article>
+      <article style="padding: 24px; border: 1px solid #E3E3E8; border-radius: 10px;">
+        <span style="font-size: 12px; color: #AEAEB2;">Jan 14</span>
+        <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin: 8px 0; line-height: 1.3;">Error boundaries best practices</h3>
+        <a href="#" style="font-size: 13px; font-weight: 600; color: #2C6ECB; text-decoration: none;">Read &rarr;</a>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 175: Blog with Subscribe Footer -->
+<div class="section-label">175 — Blog Subscribe Footer</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE, #D4E4FE);"></div>
+        <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">ORM comparison guide</h3></div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #F3EEFF, #E5D4FF);"></div>
+        <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Design system audit guide</h3></div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E3F5E1, #C8EDCA);"></div>
+        <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Logging best practices</h3></div>
+      </article>
+    </div>
+    <div style="border-top: 1px solid #E3E3E8; padding-top: 32px; display: flex; justify-content: space-between; align-items: center;">
+      <p style="font-size: 15px; color: #6D6D72;">Get new articles in your inbox. <span style="font-weight: 600; color: #1D1D1F;">Join 5,200+ developers.</span></p>
+      <div style="display: flex; gap: 8px;">
+        <input type="email" placeholder="you@email.com" style="padding: 10px 14px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 14px; font-family: inherit; width: 220px;">
+        <button style="padding: 10px 20px; background: #1D1D1F; color: #FFFFFF; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

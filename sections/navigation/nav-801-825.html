@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Components 801-825 - Apple HIG Style</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Satoshi',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F6F6F7;color:#1D1D1F;-webkit-font-smoothing:antialiased;padding:20px;}
+.component{background:#FFF;border:1px solid #E3E3E8;border-radius:12px;padding:32px;margin-bottom:24px;box-shadow:0 1px 0 rgba(0,0,0,0.04);}
+.label{font-size:13px;color:#6D6D72;margin-bottom:20px;font-weight:500;}
+nav{display:flex;align-items:center;gap:12px;}
+a{text-decoration:none;color:#1D1D1F;transition:0.2s ease;}
+button{border:none;background:none;cursor:pointer;font-family:inherit;transition:0.2s ease;}
+</style>
+</head>
+<body>
+
+<div class="component">
+<div class="label">801 — Gallery Filter Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:900px;">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+<span style="font-size:14px;font-weight:500;color:#6D6D72;">Filter by:</span>
+<div style="display:flex;gap:8px;flex-wrap:wrap;">
+<button style="padding:8px 16px;background:#1A1A1A;color:#FFF;border-radius:10px;font-size:13px;font-weight:500;">All</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;background:#FFF;color:#6D6D72;border-radius:10px;font-size:13px;">Landscape</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;background:#FFF;color:#6D6D72;border-radius:10px;font-size:13px;">Portrait</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;background:#FFF;color:#6D6D72;border-radius:10px;font-size:13px;">Abstract</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;background:#FFF;color:#6D6D72;border-radius:10px;font-size:13px;">Nature</button>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;">
+<span style="font-size:14px;font-weight:500;color:#6D6D72;">Sort:</span>
+<select style="padding:8px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:13px;background:#FFF;font-family:inherit;">
+<option>Most Recent</option>
+<option>Most Popular</option>
+<option>Highest Rated</option>
+</select>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">802 — Multi-Select Filter Bar</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px 20px;max-width:900px;">
+<div style="display:flex;gap:8px;flex-wrap:wrap;">
+<button style="padding:8px 16px;border:1px solid #2C6ECB;background:#2C6ECB;color:#FFF;border-radius:10px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px;">
+<span>Design</span>
+<span style="font-size:10px;">✕</span>
+</button>
+<button style="padding:8px 16px;border:1px solid #1A8245;background:#1A8245;color:#FFF;border-radius:10px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px;">
+<span>Development</span>
+<span style="font-size:10px;">✕</span>
+</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;background:#FFF;color:#6D6D72;border-radius:10px;font-size:13px;">Marketing</button>
+<button style="padding:8px 16px;border:1px solid #E3E3E8;background:#FFF;color:#6D6D72;border-radius:10px;font-size:13px;">Sales</button>
+<div style="flex:1;"></div>
+<button style="font-size:13px;color:#D72C0D;font-weight:500;">Clear All</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">803 — Folder Tree Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:280px;">
+<div style="margin-bottom:12px;">
+<button style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 10px;border-radius:6px;font-size:14px;color:#1D1D1F;text-align:left;">
+<span>▼</span>
+<span>📁</span>
+<span>Documents</span>
+</button>
+<div style="padding-left:24px;margin-top:6px;">
+<a href="#" style="display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;font-size:13px;color:#6D6D72;margin-bottom:4px;">
+<span>📄</span><span>Work</span>
+</a>
+<button style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 10px;border-radius:6px;font-size:13px;color:#6D6D72;text-align:left;background:#F6F6F7;margin-bottom:4px;">
+<span>▼</span>
+<span>📁</span>
+<span>Projects</span>
+</button>
+<div style="padding-left:24px;margin-top:4px;">
+<a href="#" style="display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;font-size:13px;color:#6D6D72;">
+<span>📄</span><span>2024</span>
+</a>
+</div>
+</div>
+</div>
+<div>
+<button style="display:flex;align-items:center;gap:8px;width:100%;padding:8px 10px;border-radius:6px;font-size:14px;color:#1D1D1F;text-align:left;">
+<span>▶</span>
+<span>📁</span>
+<span>Media</span>
+</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">804 — Card View Selector</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;max-width:800px;">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;">Projects</div>
+<div style="display:flex;gap:4px;padding:4px;background:#F6F6F7;border-radius:8px;">
+<button style="width:36px;height:36px;background:#FFFFFF;border-radius:6px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(0,0,0,0.06);">
+<svg width="16" height="16" viewBox="0 0 16 16"><rect x="1" y="1" width="6" height="6" fill="#1D1D1F"/><rect x="9" y="1" width="6" height="6" fill="#1D1D1F"/><rect x="1" y="9" width="6" height="6" fill="#1D1D1F"/><rect x="9" y="9" width="6" height="6" fill="#1D1D1F"/></svg>
+</button>
+<button style="width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;">
+<svg width="16" height="16" viewBox="0 0 16 16"><rect x="1" y="2" width="14" height="2" fill="#6D6D72"/><rect x="1" y="7" width="14" height="2" fill="#6D6D72"/><rect x="1" y="12" width="14" height="2" fill="#6D6D72"/></svg>
+</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">805 — Bookmark Bar Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8;padding:12px 20px;display:flex;gap:16px;overflow-x:auto;max-width:1000px;">
+<a href="#" style="display:flex;align-items:center;gap:6px;padding:6px 12px;background:#F6F6F7;border-radius:8px;font-size:13px;color:#1D1D1F;white-space:nowrap;">
+<span>⭐</span><span>Dashboard</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:6px;padding:6px 12px;background:#F6F6F7;border-radius:8px;font-size:13px;color:#1D1D1F;white-space:nowrap;">
+<span>📊</span><span>Analytics</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:6px;padding:6px 12px;background:#F6F6F7;border-radius:8px;font-size:13px;color:#1D1D1F;white-space:nowrap;">
+<span>👥</span><span>Team</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:6px;padding:6px 12px;background:#F6F6F7;border-radius:8px;font-size:13px;color:#1D1D1F;white-space:nowrap;">
+<span>⚙️</span><span>Settings</span>
+</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">806 — Compact Menu Strip</div>
+<nav style="background:#1A1A1A;border-radius:12px;padding:8px;display:flex;gap:4px;max-width:500px;">
+<a href="#" style="padding:8px 16px;background:rgba(255,255,255,0.15);border-radius:8px;font-size:13px;font-weight:500;color:#FFF;">Home</a>
+<a href="#" style="padding:8px 16px;border-radius:8px;font-size:13px;color:rgba(255,255,255,0.7);">About</a>
+<a href="#" style="padding:8px 16px;border-radius:8px;font-size:13px;color:rgba(255,255,255,0.7);">Services</a>
+<a href="#" style="padding:8px 16px;border-radius:8px;font-size:13px;color:rgba(255,255,255,0.7);">Contact</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">807 — Avatar Menu Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px;width:260px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<div style="display:flex;align-items:center;gap:12px;padding:12px;border-bottom:1px solid #E3E3E8;margin-bottom:12px;">
+<div style="width:48px;height:48px;background:#2C6ECB;border-radius:50%;"></div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;">John Doe</div>
+<div style="font-size:12px;color:#6D6D72;">john@example.com</div>
+</div>
+</div>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#1D1D1F;margin-bottom:4px;">My Profile</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#1D1D1F;margin-bottom:4px;">Account Settings</a>
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#1D1D1F;margin-bottom:12px;">Preferences</a>
+<div style="border-top:1px solid #E3E3E8;padding-top:12px;">
+<a href="#" style="display:block;padding:10px 12px;border-radius:8px;font-size:14px;color:#D72C0D;">Log Out</a>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">808 — Sliding Panel Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:24px;width:320px;">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+<div style="font-size:18px;font-weight:600;color:#1D1D1F;">Menu</div>
+<button style="width:32px;height:32px;border-radius:8px;border:1px solid #E3E3E8;display:flex;align-items:center;justify-content:center;font-size:18px;color:#6D6D72;">✕</button>
+</div>
+<a href="#" style="display:block;padding:14px 16px;border-radius:10px;font-size:15px;font-weight:500;color:#1D1D1F;margin-bottom:8px;border:1px solid #E3E3E8;">Dashboard</a>
+<a href="#" style="display:block;padding:14px 16px;border-radius:10px;font-size:15px;color:#6D6D72;margin-bottom:8px;">Projects</a>
+<a href="#" style="display:block;padding:14px 16px;border-radius:10px;font-size:15px;color:#6D6D72;margin-bottom:8px;">Team</a>
+<a href="#" style="display:block;padding:14px 16px;border-radius:10px;font-size:15px;color:#6D6D72;margin-bottom:20px;">Reports</a>
+<div style="border-top:1px solid #E3E3E8;padding-top:16px;">
+<a href="#" style="display:block;padding:14px 16px;border-radius:10px;font-size:15px;color:#6D6D72;">Settings</a>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">809 — Nested Accordion Menu</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:280px;">
+<div style="margin-bottom:16px;">
+<button style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px;background:#F6F6F7;border-radius:8px;font-size:14px;font-weight:500;color:#1D1D1F;margin-bottom:8px;">
+<span>Products</span>
+<span style="font-size:12px;">▼</span>
+</button>
+<div style="padding-left:16px;">
+<a href="#" style="display:block;padding:10px;font-size:13px;color:#6D6D72;margin-bottom:6px;">Overview</a>
+<a href="#" style="display:block;padding:10px;font-size:13px;color:#6D6D72;margin-bottom:6px;">Features</a>
+<a href="#" style="display:block;padding:10px;font-size:13px;color:#6D6D72;">Pricing</a>
+</div>
+</div>
+<button style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px;border-radius:8px;font-size:14px;font-weight:500;color:#1D1D1F;margin-bottom:8px;">
+<span>Resources</span>
+<span style="font-size:12px;">▶</span>
+</button>
+<button style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px;border-radius:8px;font-size:14px;font-weight:500;color:#1D1D1F;">
+<span>Company</span>
+<span style="font-size:12px;">▶</span>
+</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">810 — Sticky Header Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;max-width:1200px;position:sticky;top:0;">
+<div style="display:flex;align-items:center;gap:32px;">
+<div style="font-size:18px;font-weight:700;color:#1D1D1F;">Logo</div>
+<div style="display:flex;gap:20px;">
+<a href="#" style="font-size:14px;font-weight:500;color:#1D1D1F;">Home</a>
+<a href="#" style="font-size:14px;color:#6D6D72;">Features</a>
+<a href="#" style="font-size:14px;color:#6D6D72;">Pricing</a>
+<a href="#" style="font-size:14px;color:#6D6D72;">About</a>
+</div>
+</div>
+<button style="padding:8px 20px;background:#1A1A1A;color:#FFF;border-radius:8px;font-size:14px;font-weight:500;">Sign Up</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">811 — Color Palette Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:600px;">
+<div style="font-size:14px;font-weight:500;color:#6D6D72;margin-bottom:12px;">Select Color</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;">
+<button style="width:48px;height:48px;background:#2C6ECB;border:3px solid #1D1D1F;border-radius:10px;"></button>
+<button style="width:48px;height:48px;background:#1A8245;border:2px solid #E3E3E8;border-radius:10px;"></button>
+<button style="width:48px;height:48px;background:#D72C0D;border:2px solid #E3E3E8;border-radius:10px;"></button>
+<button style="width:48px;height:48px;background:#B98900;border:2px solid #E3E3E8;border-radius:10px;"></button>
+<button style="width:48px;height:48px;background:#1D1D1F;border:2px solid #E3E3E8;border-radius:10px;"></button>
+<button style="width:48px;height:48px;background:#6D6D72;border:2px solid #E3E3E8;border-radius:10px;"></button>
+<button style="width:48px;height:48px;background:#AEAEB2;border:2px solid #E3E3E8;border-radius:10px;"></button>
+<button style="width:48px;height:48px;background:#F6F6F7;border:2px solid #E3E3E8;border-radius:10px;"></button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">812 — Date Range Picker Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;display:flex;gap:12px;align-items:center;max-width:700px;">
+<div style="flex:1;">
+<div style="font-size:11px;color:#6D6D72;margin-bottom:6px;font-weight:500;">From</div>
+<input type="date" style="width:100%;padding:10px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:14px;font-family:inherit;background:#FFF;">
+</div>
+<div style="padding-top:20px;color:#AEAEB2;">→</div>
+<div style="flex:1;">
+<div style="font-size:11px;color:#6D6D72;margin-bottom:6px;font-weight:500;">To</div>
+<input type="date" style="width:100%;padding:10px 12px;border:1px solid #E3E3E8;border-radius:8px;font-size:14px;font-family:inherit;background:#FFF;">
+</div>
+<button style="padding:10px 20px;background:#2C6ECB;color:#FFF;border-radius:8px;font-size:14px;font-weight:500;margin-top:20px;">Apply</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">813 — Task Priority Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:600px;">
+<div style="display:flex;gap:8px;">
+<button style="padding:10px 20px;border-radius:10px;background:#D72C0D;color:#FFF;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;">
+<span>🔴</span><span>High</span><span style="padding:2px 6px;background:rgba(255,255,255,0.2);border-radius:6px;font-size:11px;">8</span>
+</button>
+<button style="padding:10px 20px;border-radius:10px;border:1px solid #E3E3E8;background:#FFF;color:#6D6D72;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;">
+<span>🟡</span><span>Medium</span><span style="padding:2px 6px;background:#F6F6F7;border-radius:6px;font-size:11px;">12</span>
+</button>
+<button style="padding:10px 20px;border-radius:10px;border:1px solid #E3E3E8;background:#FFF;color:#6D6D72;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px;">
+<span>🟢</span><span>Low</span><span style="padding:2px 6px;background:#F6F6F7;border-radius:6px;font-size:11px;">5</span>
+</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">814 — FAQ Accordion Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:700px;">
+<button style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:16px;background:#F6F6F7;border-radius:10px;font-size:14px;font-weight:500;color:#1D1D1F;margin-bottom:8px;text-align:left;">
+<span>What is your refund policy?</span>
+<span style="font-size:18px;">▼</span>
+</button>
+<div style="padding:16px;margin-bottom:8px;border-radius:10px;background:#FFFFFF;">
+<p style="font-size:14px;color:#6D6D72;line-height:1.5;">We offer a 30-day money-back guarantee on all our products. Contact support for assistance.</p>
+</div>
+<button style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:16px;border-radius:10px;font-size:14px;font-weight:500;color:#1D1D1F;margin-bottom:8px;text-align:left;">
+<span>How do I contact support?</span>
+<span style="font-size:18px;">▶</span>
+</button>
+<button style="display:flex;align-items:center;justify-content:space-between;width:100%;padding:16px;border-radius:10px;font-size:14px;font-weight:500;color:#1D1D1F;text-align:left;">
+<span>Can I upgrade my plan?</span>
+<span style="font-size:18px;">▶</span>
+</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">815 — Social Sharing Menu</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:280px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Share this page</div>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div style="width:36px;height:36px;background:#2C6ECB;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">f</div>
+<span style="flex:1;font-size:14px;color:#1D1D1F;">Facebook</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div style="width:36px;height:36px;background:#1D1D1F;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#FFF;">𝕏</div>
+<span style="flex:1;font-size:14px;color:#1D1D1F;">Twitter</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div style="width:36px;height:36px;background:#0077B5;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#FFF;">in</div>
+<span style="flex:1;font-size:14px;color:#1D1D1F;">LinkedIn</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;border:1px solid #E3E3E8;">
+<div style="width:36px;height:36px;background:#6D6D72;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">✉️</div>
+<span style="flex:1;font-size:14px;color:#1D1D1F;">Email</span>
+</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">816 — Size Selector Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:500px;">
+<div style="font-size:14px;font-weight:500;color:#6D6D72;margin-bottom:12px;">Select Size</div>
+<div style="display:flex;gap:8px;">
+<button style="width:56px;height:56px;border:1px solid #E3E3E8;border-radius:10px;font-size:14px;font-weight:500;color:#6D6D72;">XS</button>
+<button style="width:56px;height:56px;border:1px solid #E3E3E8;border-radius:10px;font-size:14px;font-weight:500;color:#6D6D72;">S</button>
+<button style="width:56px;height:56px;border:2px solid #1A1A1A;background:#F6F6F7;border-radius:10px;font-size:14px;font-weight:600;color:#1D1D1F;">M</button>
+<button style="width:56px;height:56px;border:1px solid #E3E3E8;border-radius:10px;font-size:14px;font-weight:500;color:#6D6D72;">L</button>
+<button style="width:56px;height:56px;border:1px solid #E3E3E8;border-radius:10px;font-size:14px;font-weight:500;color:#AEAEB2;opacity:0.5;">XL</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">817 — Quantity Stepper Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;max-width:400px;">
+<div style="display:flex;align-items:center;gap:12px;">
+<span style="font-size:14px;font-weight:500;color:#6D6D72;">Quantity:</span>
+<div style="display:flex;align-items:center;gap:4px;border:1px solid #E3E3E8;border-radius:10px;padding:4px;">
+<button style="width:36px;height:36px;border-radius:8px;background:#F6F6F7;font-size:18px;color:#1D1D1F;font-weight:500;">−</button>
+<div style="width:56px;text-align:center;font-size:16px;font-weight:600;color:#1D1D1F;">2</div>
+<button style="width:36px;height:36px;border-radius:8px;background:#F6F6F7;font-size:18px;color:#1D1D1F;font-weight:500;">+</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">818 — Rating Filter Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:240px;">
+<div style="font-size:14px;font-weight:500;color:#6D6D72;margin-bottom:12px;">Filter by Rating</div>
+<a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;background:#F6F6F7;margin-bottom:6px;">
+<span style="font-size:14px;color:#1D1D1F;">⭐⭐⭐⭐⭐</span>
+<span style="font-size:12px;color:#6D6D72;">124</span>
+</a>
+<a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<span style="font-size:14px;color:#6D6D72;">⭐⭐⭐⭐</span>
+<span style="font-size:12px;color:#AEAEB2;">86</span>
+</a>
+<a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<span style="font-size:14px;color:#6D6D72;">⭐⭐⭐</span>
+<span style="font-size:12px;color:#AEAEB2;">42</span>
+</a>
+<a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;">
+<span style="font-size:14px;color:#6D6D72;">⭐⭐ & below</span>
+<span style="font-size:12px;color:#AEAEB2;">18</span>
+</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">819 — Chart Type Selector</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px 20px;display:flex;gap:8px;max-width:500px;">
+<button style="width:48px;height:48px;border:2px solid #2C6ECB;background:#F6F6F7;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">📊</button>
+<button style="width:48px;height:48px;border:1px solid #E3E3E8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">📈</button>
+<button style="width:48px;height:48px;border:1px solid #E3E3E8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">🥧</button>
+<button style="width:48px;height:48px;border:1px solid #E3E3E8;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">📉</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">820 — Export Options Menu</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:16px;width:240px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size:12px;font-weight:600;color:#6D6D72;margin-bottom:12px;">Export as</div>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<span style="font-size:16px;">📄</span>
+<span style="font-size:14px;color:#1D1D1F;">PDF Document</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<span style="font-size:16px;">📊</span>
+<span style="font-size:14px;color:#1D1D1F;">Excel Spreadsheet</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:6px;">
+<span style="font-size:16px;">📝</span>
+<span style="font-size:14px;color:#1D1D1F;">CSV File</span>
+</a>
+<a href="#" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;">
+<span style="font-size:16px;">🖼️</span>
+<span style="font-size:14px;color:#1D1D1F;">PNG Image</span>
+</a>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">821 — Privacy Settings Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:340px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Privacy Options</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">🌐 Public</div>
+<div style="font-size:12px;color:#6D6D72;">Anyone can view</div>
+</div>
+<div style="width:20px;height:20px;border:2px solid #2C6ECB;border-radius:50%;background:#2C6ECB;display:flex;align-items:center;justify-content:center;">
+<div style="width:8px;height:8px;background:#FFF;border-radius:50%;"></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;margin-bottom:8px;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">🔒 Private</div>
+<div style="font-size:12px;color:#6D6D72;">Only you can view</div>
+</div>
+<div style="width:20px;height:20px;border:2px solid #E3E3E8;border-radius:50%;"></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:8px;border:1px solid #E3E3E8;">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">👥 Team</div>
+<div style="font-size:12px;color:#6D6D72;">Team members only</div>
+</div>
+<div style="width:20px;height:20px;border:2px solid #E3E3E8;border-radius:50%;"></div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">822 — Template Selector Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:24px;max-width:800px;">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Choose Template</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+<button style="padding:20px;border:2px solid #2C6ECB;background:#F6F6F7;border-radius:10px;text-align:center;">
+<div style="width:100%;height:100px;background:#2C6ECB;border-radius:8px;margin-bottom:12px;"></div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Modern</div>
+</button>
+<button style="padding:20px;border:1px solid #E3E3E8;border-radius:10px;text-align:center;">
+<div style="width:100%;height:100px;background:#E3E3E8;border-radius:8px;margin-bottom:12px;"></div>
+<div style="font-size:14px;color:#6D6D72;">Classic</div>
+</button>
+<button style="padding:20px;border:1px solid #E3E3E8;border-radius:10px;text-align:center;">
+<div style="width:100%;height:100px;background:#E3E3E8;border-radius:8px;margin-bottom:12px;"></div>
+<div style="font-size:14px;color:#6D6D72;">Minimal</div>
+</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">823 — Payment Method Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:360px;">
+<div style="font-size:14px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Payment Method</div>
+<button style="width:100%;display:flex;align-items:center;gap:12px;padding:16px;border:2px solid #2C6ECB;background:#F6F6F7;border-radius:10px;margin-bottom:8px;text-align:left;">
+<div style="width:40px;height:28px;background:#1D1D1F;border-radius:6px;"></div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">Credit Card</div>
+<div style="font-size:12px;color:#6D6D72;">•••• 4242</div>
+</div>
+<div style="width:20px;height:20px;border:2px solid #2C6ECB;border-radius:50%;background:#2C6ECB;display:flex;align-items:center;justify-content:center;">
+<div style="width:8px;height:8px;background:#FFF;border-radius:50%;"></div>
+</div>
+</button>
+<button style="width:100%;display:flex;align-items:center;gap:12px;padding:16px;border:1px solid #E3E3E8;border-radius:10px;text-align:left;">
+<div style="width:40px;height:28px;background:#2C6ECB;border-radius:6px;"></div>
+<div style="flex:1;">
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;">PayPal</div>
+<div style="font-size:12px;color:#6D6D72;">user@email.com</div>
+</div>
+<div style="width:20px;height:20px;border:2px solid #E3E3E8;border-radius:50%;"></div>
+</button>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">824 — Subscription Tier Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:24px;max-width:900px;">
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+<div style="padding:24px;border:1px solid #E3E3E8;border-radius:12px;text-align:center;">
+<div style="font-size:13px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Starter</div>
+<div style="font-size:32px;font-weight:700;color:#1D1D1F;margin-bottom:4px;">$9</div>
+<div style="font-size:13px;color:#6D6D72;margin-bottom:16px;">per month</div>
+<button style="width:100%;padding:10px;border:1px solid #E3E3E8;border-radius:8px;font-size:14px;font-weight:500;color:#1D1D1F;">Select</button>
+</div>
+<div style="padding:24px;border:2px solid #2C6ECB;border-radius:12px;text-align:center;position:relative;">
+<div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);padding:4px 12px;background:#2C6ECB;color:#FFF;border-radius:6px;font-size:11px;font-weight:600;">POPULAR</div>
+<div style="font-size:13px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Pro</div>
+<div style="font-size:32px;font-weight:700;color:#1D1D1F;margin-bottom:4px;">$29</div>
+<div style="font-size:13px;color:#6D6D72;margin-bottom:16px;">per month</div>
+<button style="width:100%;padding:10px;background:#2C6ECB;color:#FFF;border-radius:8px;font-size:14px;font-weight:500;">Select</button>
+</div>
+<div style="padding:24px;border:1px solid #E3E3E8;border-radius:12px;text-align:center;">
+<div style="font-size:13px;font-weight:600;color:#6D6D72;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Enterprise</div>
+<div style="font-size:32px;font-weight:700;color:#1D1D1F;margin-bottom:4px;">$99</div>
+<div style="font-size:13px;color:#6D6D72;margin-bottom:16px;">per month</div>
+<button style="width:100%;padding:10px;border:1px solid #E3E3E8;border-radius:8px;font-size:14px;font-weight:500;color:#1D1D1F;">Select</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">825 — Keyboard Shortcut Menu</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px;width:340px;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<div style="font-size:16px;font-weight:600;color:#1D1D1F;margin-bottom:16px;">Keyboard Shortcuts</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #E3E3E8;">
+<span style="font-size:14px;color:#1D1D1F;">New Document</span>
+<kbd style="padding:4px 8px;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:6px;font-size:12px;color:#6D6D72;font-family:inherit;">⌘N</kbd>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #E3E3E8;">
+<span style="font-size:14px;color:#1D1D1F;">Save</span>
+<kbd style="padding:4px 8px;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:6px;font-size:12px;color:#6D6D72;font-family:inherit;">⌘S</kbd>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #E3E3E8;">
+<span style="font-size:14px;color:#1D1D1F;">Find</span>
+<kbd style="padding:4px 8px;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:6px;font-size:12px;color:#6D6D72;font-family:inherit;">⌘F</kbd>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;">
+<span style="font-size:14px;color:#1D1D1F;">Settings</span>
+<kbd style="padding:4px 8px;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:6px;font-size:12px;color:#6D6D72;font-family:inherit;">⌘,</kbd>
+</div>
+</nav>
+</div>
+
+</body>
+</html>

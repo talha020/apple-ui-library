@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ Sections 201-225 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<div class="section-label">201 — Integration Setup FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Integration Questions</h2>
+    <div style="max-width: 720px; margin: 0 auto;">
+      <details style="border-bottom: 1px solid #E3E3E8; padding: 18px 0;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">How do I connect third-party services?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Use the Integrations panel to connect via OAuth or API keys to 300+ services.</p></details>
+      <details style="border-bottom: 1px solid #E3E3E8; padding: 18px 0;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Can I customize the login page?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Yes, add your logo, colors, and custom CSS to the hosted login page.</p></details>
+      <details style="padding: 18px 0;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">What analytics tools do you support?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Native support for Google Analytics, Mixpanel, Amplitude, and custom event tracking.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">202 — Mobile SDK Card FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #F6F6F7;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Mobile Development</h2>
+    <div style="max-width: 720px; margin: 0 auto;">
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px; margin-bottom: 10px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Is there a mobile SDK?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">iOS and Android SDKs available via CocoaPods and Maven respectively.</p></details>
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px; margin-bottom: 10px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">How do I manage feature flags?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Create flags in the dashboard, target by user segment, and toggle without deploying.</p></details>
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Can I use custom fonts?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Upload OTF/WOFF2 files or connect to Google Fonts, Adobe Fonts, or any CDN.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">203 — Image Optimization Grid</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Asset Management</h2>
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+      <div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">What's the image optimization pipeline?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Automatic WebP/AVIF conversion, lazy loading, and responsive srcset generation.</p></div>
+      <div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">How do I set up A/B tests?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Create variants in the Experiments panel, set traffic allocation, and track conversions.</p></div>
+      <div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Can I create dynamic routes?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Yes, file-based routing with dynamic segments, catch-all routes, and middleware.</p></div>
+      <div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">What monitoring is built in?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Real-time error tracking, performance metrics, and usage analytics dashboard.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">204 — Form Handling Cards</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #F6F6F7;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Forms & Data</h2>
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+      <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E3E3E8;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">How do I handle form submissions?</h3><p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Built-in form handler or forward to Zapier, webhooks, or email.</p></div>
+      <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E3E3E8;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Can I use a headless CMS?</h3><p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Integrate with Contentful, Sanity, Strapi, or use our built-in content API.</p></div>
+      <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E3E3E8;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">What caching strategies exist?</h3><p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">CDN caching, browser caching, stale-while-revalidate, and manual purge.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">205 — Rate Limiting Split FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">API & Limits</h2>
+    <div style="max-width: 960px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 16px 0; border-bottom: 1px solid #E3E3E8;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F;">How do I configure rate limiting?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Set rate limits per endpoint, user, or IP in the API Gateway settings.</p></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 16px 0; border-bottom: 1px solid #E3E3E8;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Is there a template marketplace?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Browse 500+ community templates with one-click deploy and customization.</p></div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 16px 0;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Can I white-label the dashboard?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Enterprise plans include full white-labeling with custom domains and branding.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">206 — Dark Error Handling FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #1D1D1F;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #FFFFFF; text-align: center; margin-bottom: 48px;">Error Handling</h2>
+    <div style="max-width: 720px; margin: 0 auto;">
+      <details style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;"><summary style="font-size: 16px; font-weight: 600; color: #FFFFFF; cursor: pointer; list-style: none;">How do I handle errors gracefully?</summary><p style="font-size: 15px; color: #AEAEB2; line-height: 1.7; margin-top: 10px;">Custom error pages for 404, 500, and maintenance mode with branded templates.</p></details>
+      <details style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;"><summary style="font-size: 16px; font-weight: 600; color: #FFFFFF; cursor: pointer; list-style: none;">What about accessibility compliance?</summary><p style="font-size: 15px; color: #AEAEB2; line-height: 1.7; margin-top: 10px;">Built-in WCAG 2.1 AA checking with automated reports and fix suggestions.</p></details>
+      <details style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #FFFFFF; cursor: pointer; list-style: none;">Can I connect my CI/CD pipeline?</summary><p style="font-size: 15px; color: #AEAEB2; line-height: 1.7; margin-top: 10px;">GitHub Actions, GitLab CI, CircleCI, and Jenkins integrations available.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">207 — Secrets Management Icon FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Security & Secrets</h2>
+    <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 20px;">
+      <div style="display: flex; gap: 20px; padding: 24px; border: 1px solid #E3E3E8; border-radius: 12px;"><div style="width: 44px; height: 44px; background: #E9F0FE; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#2C6ECB" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="#2C6ECB" stroke-width="2"/></svg></div><div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">How do I manage secrets?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Encrypted secrets vault with per-environment access and rotation support.</p></div></div>
+      <div style="display: flex; gap: 20px; padding: 24px; border: 1px solid #E3E3E8; border-radius: 12px;"><div style="width: 44px; height: 44px; background: #E3F5E1; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#1A8245" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="#1A8245" stroke-width="2"/></svg></div><div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Is there real-time collaboration?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Live editing, presence indicators, and inline comments for all team members.</p></div></div>
+      <div style="display: flex; gap: 20px; padding: 24px; border: 1px solid #E3E3E8; border-radius: 12px;"><div style="width: 44px; height: 44px; background: #F3EEFF; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">What's the data export format?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Export as JSON, CSV, SQL dump, or via our streaming API.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">208 — Dashboard Numbered FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #F6F6F7;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Dashboard & Analytics</h2>
+    <div style="max-width: 760px; margin: 0 auto; display: grid; gap: 24px;">
+      <div style="display: flex; gap: 20px;"><span style="font-size: 24px; font-weight: 700; color: #2C6ECB; min-width: 36px;">01</span><div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Can I create custom dashboards?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Drag-and-drop dashboard builder with 40+ widget types and data sources.</p></div></div>
+      <div style="display: flex; gap: 20px;"><span style="font-size: 24px; font-weight: 700; color: #2C6ECB; min-width: 36px;">02</span><div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">How do I set up alerting?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Configure alerts for errors, performance thresholds via email, Slack, or PagerDuty.</p></div></div>
+      <div style="display: flex; gap: 20px;"><span style="font-size: 24px; font-weight: 700; color: #2C6ECB; min-width: 36px;">03</span><div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">What's your disaster recovery plan?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Multi-region failover, RPO under 1 hour, RTO under 15 minutes for Enterprise.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">209 — Colored Border Integration FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Integrations</h2>
+    <div style="max-width: 760px; margin: 0 auto; display: grid; gap: 16px;">
+      <div style="padding: 20px 24px; border-radius: 0 10px 10px 0; border: 1px solid #E3E3E8; border-left: 3px solid #2C6ECB;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">How do I connect third-party services?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Use the Integrations panel to connect via OAuth or API keys to 300+ services.</p></div>
+      <div style="padding: 20px 24px; border-radius: 0 10px 10px 0; border: 1px solid #E3E3E8; border-left: 3px solid #1A8245;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Can I customize the login page?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Yes, add your logo, colors, and custom CSS to the hosted login page.</p></div>
+      <div style="padding: 20px 24px; border-radius: 0 10px 10px 0; border: 1px solid #E3E3E8; border-left: 3px solid #7C3AED;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">What analytics tools do you support?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Native support for Google Analytics, Mixpanel, Amplitude, and custom events.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">210 — Mobile SDK Boxed Accordion</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #F6F6F7;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Mobile FAQ</h2>
+    <div style="max-width: 760px; margin: 0 auto; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF;">
+      <details style="padding: 18px 24px; border-bottom: 1px solid #E3E3E8;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Is there a mobile SDK?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">iOS and Android SDKs available via CocoaPods and Maven respectively.</p></details>
+      <details style="padding: 18px 24px; border-bottom: 1px solid #E3E3E8;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">How do I manage feature flags?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Create flags in the dashboard, target by user segment, and toggle without deploying.</p></details>
+      <details style="padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Can I use custom fonts?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Upload OTF/WOFF2 files or connect to Google Fonts, Adobe Fonts, or any CDN.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">211 — CTA Footer FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Common Questions</h2>
+    <div style="max-width: 720px; margin: 0 auto;">
+      <details style="border-bottom: 1px solid #E3E3E8; padding: 18px 0;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">What's the image optimization pipeline?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Automatic WebP/AVIF conversion, lazy loading, and responsive srcset generation.</p></details>
+      <details style="padding: 18px 0;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">How do I set up A/B tests?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Create variants in the Experiments panel, set traffic allocation, and track conversions.</p></details>
+    </div>
+    <div style="max-width: 720px; margin: 40px auto 0; background: #F6F6F7; border-radius: 12px; padding: 32px; text-align: center; border: 1px solid #E3E3E8;">
+      <p style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Need more help?</p>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 20px;">Our team responds within minutes.</p>
+      <a href="#" style="display: inline-block; padding: 12px 28px; background: #1D1D1F; color: #FFFFFF; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none;">Contact Support</a>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">212 — Tagged Routing FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #F6F6F7;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Routing & Navigation</h2>
+    <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 16px;">
+      <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E3E3E8;"><span style="display: inline-block; padding: 4px 10px; background: #E9F0FE; color: #2C6ECB; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 10px;">SETUP</span><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Can I create dynamic routes?</h3><p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Yes, file-based routing with dynamic segments, catch-all routes, and middleware.</p></div>
+      <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E3E3E8;"><span style="display: inline-block; padding: 4px 10px; background: #E3F5E1; color: #1A8245; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 10px;">CONFIG</span><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">What monitoring is built in?</h3><p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Real-time error tracking, performance metrics, and usage analytics dashboard.</p></div>
+      <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E3E3E8;"><span style="display: inline-block; padding: 4px 10px; background: #F3EEFF; color: #7C3AED; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 10px;">ADVANCED</span><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">How do I handle form submissions?</h3><p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Built-in form handler or forward to Zapier, webhooks, or email.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">213 — Gradient CMS FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: linear-gradient(135deg, #E9F0FE 0%, #F3EEFF 100%);">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Content Management</h2>
+    <div style="max-width: 720px; margin: 0 auto; display: grid; gap: 12px;">
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Can I use a headless CMS?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Integrate with Contentful, Sanity, Strapi, or use our built-in content API.</p></details>
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">What caching strategies are available?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">CDN caching, browser caching, stale-while-revalidate, and manual purge options.</p></details>
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">How do I configure rate limiting?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Set rate limits per endpoint, user, or IP in the API Gateway settings.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">214 — Side Heading Template FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 60px;">
+      <div><h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Templates</h2><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Everything about templates and marketplace.</p></div>
+      <div>
+        <details style="border-bottom: 1px solid #E3E3E8; padding: 18px 0;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Is there a template marketplace?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Browse 500+ community templates with one-click deploy and customization.</p></details>
+        <details style="border-bottom: 1px solid #E3E3E8; padding: 18px 0;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Can I white-label the dashboard?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Enterprise plans include full white-labeling with custom domains and branding.</p></details>
+        <details style="padding: 18px 0;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">How do I handle errors gracefully?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Custom error pages for 404, 500, and maintenance mode with branded templates.</p></details>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">215 — Minimal Accessibility FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="max-width: 640px; margin: 0 auto;">
+      <h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 40px;">Accessibility</h2>
+      <div style="display: grid; gap: 28px;">
+        <div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">What about accessibility compliance?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Built-in WCAG 2.1 AA checking with automated reports and fix suggestions.</p></div>
+        <div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Can I connect my CI/CD pipeline?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">GitHub Actions, GitLab CI, CircleCI, and Jenkins integrations available.</p></div>
+        <div><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">How do I manage secrets?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Encrypted secrets vault with per-environment access and rotation support.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">216 — Bordered Collaboration FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Collaboration</h2>
+    <div style="max-width: 720px; margin: 0 auto; display: grid; gap: 10px;">
+      <details style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Is there real-time collaboration?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Live editing, presence indicators, and inline comments for all team members.</p></details>
+      <details style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">What's the data export format?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Export as JSON, CSV, SQL dump, or via our streaming API.</p></details>
+      <details style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Can I create custom dashboards?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Drag-and-drop dashboard builder with 40+ widget types and data sources.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">217 — Chevron Alerting FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #F6F6F7;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Monitoring & Alerts</h2>
+    <div style="max-width: 720px; margin: 0 auto;">
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px; margin-bottom: 10px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">How do I set up alerting?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><path d="M6 9l6 6 6-6" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"/></svg></summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px;">Configure alerts for errors, performance, usage thresholds via email, Slack, or PagerDuty.</p></details>
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px; margin-bottom: 10px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">What's your disaster recovery plan?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><path d="M6 9l6 6 6-6" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"/></svg></summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px;">Multi-region failover, RPO under 1 hour, RTO under 15 minutes for Enterprise.</p></details>
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">What monitoring is built in?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><path d="M6 9l6 6 6-6" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"/></svg></summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px;">Real-time error tracking, performance metrics, and usage analytics dashboard.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">218 — Dot-Marked Pipeline FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">CI/CD Pipeline</h2>
+    <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 12px;">
+      <details style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 20px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none; display: flex; gap: 14px; align-items: center;"><span style="width: 8px; height: 8px; background: #2C6ECB; border-radius: 50%; flex-shrink: 0;"></span>Can I connect my CI/CD pipeline?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px; padding-left: 22px;">GitHub Actions, GitLab CI, CircleCI, and Jenkins integrations available.</p></details>
+      <details style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 20px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none; display: flex; gap: 14px; align-items: center;"><span style="width: 8px; height: 8px; background: #1A8245; border-radius: 50%; flex-shrink: 0;"></span>How do I manage secrets?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px; padding-left: 22px;">Encrypted secrets vault with per-environment access and rotation support.</p></details>
+      <details style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 20px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none; display: flex; gap: 14px; align-items: center;"><span style="width: 8px; height: 8px; background: #7C3AED; border-radius: 50%; flex-shrink: 0;"></span>Is there real-time collaboration?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px; padding-left: 22px;">Live editing, presence indicators, and inline comments for all team members.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">219 — Plus/Minus Export FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #F6F6F7;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Data Export</h2>
+    <div style="max-width: 720px; margin: 0 auto; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+      <details style="padding: 20px 24px; border-bottom: 1px solid #E3E3E8;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">What's the data export format?<span style="font-size: 24px; color: #AEAEB2; font-weight: 300;">+</span></summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px;">Export as JSON, CSV, SQL dump, or via our streaming API.</p></details>
+      <details style="padding: 20px 24px; border-bottom: 1px solid #E3E3E8;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">Can I create custom dashboards?<span style="font-size: 24px; color: #AEAEB2; font-weight: 300;">+</span></summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px;">Drag-and-drop dashboard builder with 40+ widget types and data sources.</p></details>
+      <details style="padding: 20px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">How do I set up alerting?<span style="font-size: 24px; color: #AEAEB2; font-weight: 300;">+</span></summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px;">Configure alerts for errors, performance, usage thresholds via email, Slack, or PagerDuty.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">220 — Badge Header Recovery FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <div style="text-align: center; margin-bottom: 48px;">
+      <span style="display: inline-block; padding: 6px 14px; background: #E9F0FE; color: #2C6ECB; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 16px;">FAQ</span>
+      <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F;">Disaster Recovery</h2>
+    </div>
+    <div style="max-width: 720px; margin: 0 auto; display: grid; gap: 10px;">
+      <details style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">What's your disaster recovery plan?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Multi-region failover, RPO under 1 hour, RTO under 15 minutes for Enterprise.</p></details>
+      <details style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">How do I handle errors gracefully?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Custom error pages for 404, 500, and maintenance mode with branded templates.</p></details>
+      <details style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">What about accessibility compliance?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Built-in WCAG 2.1 AA checking with automated reports and fix suggestions.</p></details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">221 — Alternating Analytics FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Analytics Questions</h2>
+    <div style="max-width: 760px; margin: 0 auto;">
+      <div style="padding: 20px 24px; background: #F6F6F7; border-radius: 10px; margin-bottom: 8px;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">What analytics tools do you support?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Native support for Google Analytics, Mixpanel, Amplitude, and custom event tracking.</p></div>
+      <div style="padding: 20px 24px; margin-bottom: 8px;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">Is there a mobile SDK?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">iOS and Android SDKs available via CocoaPods and Maven respectively.</p></div>
+      <div style="padding: 20px 24px; background: #F6F6F7; border-radius: 10px;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 6px;">How do I manage feature flags?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Create flags in the dashboard, target by user segment, and toggle without deploying.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">222 — Helpful Rating Caching FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Caching & Performance</h2>
+    <div style="max-width: 720px; margin: 0 auto;">
+      <details open style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; margin-bottom: 16px;">
+        <summary style="font-size: 17px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">What caching strategies are available?</summary>
+        <p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px;">CDN caching, browser caching, stale-while-revalidate, and manual purge options.</p>
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #E3E3E8; display: flex; align-items: center; gap: 12px;"><span style="font-size: 13px; color: #AEAEB2;">Was this helpful?</span><button style="padding: 6px 14px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 13px; cursor: pointer; font-family: inherit; color: #1D1D1F;">Yes</button><button style="padding: 6px 14px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 13px; cursor: pointer; font-family: inherit; color: #1D1D1F;">No</button></div>
+      </details>
+      <details style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <summary style="font-size: 17px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">How do I configure rate limiting?</summary>
+        <p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 12px;">Set rate limits per endpoint, user, or IP in the API Gateway settings.</p>
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #E3E3E8; display: flex; align-items: center; gap: 12px;"><span style="font-size: 13px; color: #AEAEB2;">Was this helpful?</span><button style="padding: 6px 14px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 13px; cursor: pointer; font-family: inherit; color: #1D1D1F;">Yes</button><button style="padding: 6px 14px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 13px; cursor: pointer; font-family: inherit; color: #1D1D1F;">No</button></div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">223 — Contact Footer Marketplace FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #F6F6F7;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 48px;">Marketplace</h2>
+    <div style="max-width: 720px; margin: 0 auto; display: grid; gap: 10px;">
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Is there a template marketplace?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Browse 500+ community templates with one-click deploy and customization.</p></details>
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Can I white-label the dashboard?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Enterprise plans include full white-labeling with custom domains and branding.</p></details>
+      <details style="background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">How do I handle errors gracefully?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Custom error pages for 404, 500, and maintenance mode with branded templates.</p></details>
+    </div>
+    <div style="text-align: center; margin-top: 32px;"><p style="font-size: 15px; color: #6D6D72;">Need help? <a href="#" style="color: #2C6ECB; text-decoration: none; font-weight: 600;">Talk to our team</a></p></div>
+  </div>
+</div>
+
+<div class="section-label">224 — Two-Tone Feature Flags FAQ</div>
+<div class="section-container">
+  <div style="background: linear-gradient(180deg, #1D1D1F 50%, #F6F6F7 50%); padding: 80px 60px;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #FFFFFF; text-align: center; margin-bottom: 48px;">Feature Flags</h2>
+    <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 16px;">
+      <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E3E3E8; box-shadow: 0 1px 0 rgba(0,0,0,0.04);"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">How do I manage feature flags?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Create flags in the dashboard, target by user segment, and toggle without deploying.</p></div>
+      <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E3E3E8; box-shadow: 0 1px 0 rgba(0,0,0,0.04);"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Can I use custom fonts?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Upload OTF/WOFF2 files or connect to Google Fonts, Adobe Fonts, or any CDN.</p></div>
+      <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; border: 1px solid #E3E3E8; box-shadow: 0 1px 0 rgba(0,0,0,0.04);"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">What's the image optimization pipeline?</h3><p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Automatic WebP/AVIF conversion, lazy loading, and responsive srcset generation.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">225 — Searchable Experiments FAQ</div>
+<div class="section-container">
+  <div style="padding: 80px 60px; background: #FFFFFF;">
+    <h2 style="font-size: 34px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 12px;">Experiments & Testing</h2>
+    <div style="max-width: 500px; margin: 0 auto 40px;"><div style="position: relative;"><svg style="position: absolute; left: 16px; top: 14px;" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="#AEAEB2" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round"/></svg><input type="text" placeholder="Search questions..." style="width: 100%; padding: 12px 16px 12px 44px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; font-family: inherit; outline: none; background: #F6F6F7; color: #1D1D1F;"></div></div>
+    <div style="max-width: 720px; margin: 0 auto; display: grid; gap: 10px;">
+      <details style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">How do I set up A/B tests?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Create variants in the Experiments panel, set traffic allocation, and track conversions.</p></details>
+      <details style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">Can I create dynamic routes?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Yes, file-based routing with dynamic segments, catch-all routes, and middleware.</p></details>
+      <details style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px 24px;"><summary style="font-size: 16px; font-weight: 600; color: #1D1D1F; cursor: pointer; list-style: none;">What monitoring is built in?</summary><p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-top: 10px;">Real-time error tracking, performance metrics, and usage analytics dashboard.</p></details>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

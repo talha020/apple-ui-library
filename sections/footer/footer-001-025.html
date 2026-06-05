@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Footer 001-025 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<!-- Footer 001: Simple One-Line Copyright -->
+<div class="section-label">Footer 001 — Simple One-Line Copyright</div>
+<div class="section-container">
+  <footer style="padding: 20px 40px; text-align: center; font-size: 13px; color: #6D6D72; border-top: 1px solid #E3E3E8;">
+    &copy; 2025 Acme Inc. All rights reserved.
+  </footer>
+</div>
+
+<!-- Footer 002: Copyright with Links -->
+<div class="section-label">Footer 002 — Copyright with Links</div>
+<div class="section-container">
+  <footer style="padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #6D6D72; border-top: 1px solid #E3E3E8;">
+    <span>&copy; 2025 Acme Inc.</span>
+    <div style="display: flex; gap: 24px;">
+      <a href="#" style="color: #6D6D72; text-decoration: none; transition: color 0.2s ease;">Privacy</a>
+      <a href="#" style="color: #6D6D72; text-decoration: none; transition: color 0.2s ease;">Terms</a>
+      <a href="#" style="color: #6D6D72; text-decoration: none; transition: color 0.2s ease;">Cookies</a>
+    </div>
+  </footer>
+</div>
+
+<!-- Footer 003: 4-Column Footer with Links -->
+<div class="section-label">Footer 003 — 4-Column Footer with Links</div>
+<div class="section-container">
+  <footer style="padding: 48px 40px 32px; border-top: 1px solid #E3E3E8;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-bottom: 32px;">
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Product</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none; transition: color 0.2s ease;">Features</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Pricing</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Changelog</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Integrations</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Company</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">About</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Careers</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Blog</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Press</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Resources</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Documentation</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Help Center</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Guides</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">API Reference</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Legal</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Terms of Service</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Cookie Policy</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">GDPR</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #E3E3E8; padding-top: 20px; text-align: center; font-size: 12px; color: #AEAEB2;">&copy; 2025 Acme Inc. All rights reserved.</div>
+  </footer>
+</div>
+
+<!-- Footer 004: 3-Column with Newsletter -->
+<div class="section-label">Footer 004 — 3-Column with Newsletter</div>
+<div class="section-container">
+  <footer style="padding: 48px 40px 32px; border-top: 1px solid #E3E3E8;">
+    <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 32px;">
+      <div>
+        <h4 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Subscribe to our newsletter</h4>
+        <p style="font-size: 13px; color: #6D6D72; margin-bottom: 16px;">Get the latest news and updates delivered to your inbox.</p>
+        <div style="display: flex; gap: 8px;">
+          <input type="email" placeholder="Enter your email" style="flex: 1; padding: 8px 12px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; font-family: inherit; outline: none;">
+          <button style="padding: 8px 16px; background: #1D1D1F; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer; transition: background 0.2s ease; font-family: inherit;">Subscribe</button>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Product</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Features</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Pricing</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Security</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Support</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Help Center</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Contact Us</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Status</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #E3E3E8; padding-top: 20px; font-size: 12px; color: #AEAEB2; text-align: center;">&copy; 2025 Acme Inc.</div>
+  </footer>
+</div>
+
+<!-- Footer 005: Dark Footer -->
+<div class="section-label">Footer 005 — Dark Footer</div>
+<div class="section-container">
+  <footer style="padding: 48px 40px 32px; background: #1D1D1F;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-bottom: 32px;">
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">Product</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Features</a>
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Pricing</a>
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Integrations</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">Company</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">About</a>
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Careers</a>
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Blog</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">Resources</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Docs</a>
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Guides</a>
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">API</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">Legal</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Privacy</a>
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Terms</a>
+          <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; color: #6D6D72;">&copy; 2025 Acme Inc. All rights reserved.</div>
+  </footer>
+</div>
+
+<!-- Footer 006: Footer with Social Icons -->
+<div class="section-label">Footer 006 — Footer with Social Icons</div>
+<div class="section-container">
+  <footer style="padding: 32px 40px; border-top: 1px solid #E3E3E8; display: flex; justify-content: space-between; align-items: center;">
+    <span style="font-size: 13px; color: #6D6D72;">&copy; 2025 Acme Inc.</span>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a href="#" style="width: 32px; height: 32px; border-radius: 8px; border: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #6D6D72; font-size: 14px; transition: all 0.2s ease;">X</a>
+      <a href="#" style="width: 32px; height: 32px; border-radius: 8px; border: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #6D6D72; font-size: 14px; transition: all 0.2s ease;">in</a>
+      <a href="#" style="width: 32px; height: 32px; border-radius: 8px; border: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #6D6D72; font-size: 14px; transition: all 0.2s ease;">GH</a>
+      <a href="#" style="width: 32px; height: 32px; border-radius: 8px; border: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #6D6D72; font-size: 14px; transition: all 0.2s ease;">YT</a>
+    </div>
+  </footer>
+</div>
+
+<!-- Footer 007: Footer with Logo and Tagline -->
+<div class="section-label">Footer 007 — Footer with Logo and Tagline</div>
+<div class="section-container">
+  <footer style="padding: 48px 40px 32px; border-top: 1px solid #E3E3E8; text-align: center;">
+    <div style="font-size: 20px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Acme</div>
+    <p style="font-size: 13px; color: #6D6D72; margin-bottom: 24px;">Build better products, faster.</p>
+    <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 24px;">
+      <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">About</a>
+      <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Blog</a>
+      <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Careers</a>
+      <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Contact</a>
+    </div>
+    <div style="font-size: 12px; color: #AEAEB2;">&copy; 2025 Acme Inc. All rights reserved.</div>
+  </footer>
+</div>
+
+<!-- Footer 008: Footer with Contact Info -->
+<div class="section-label">Footer 008 — Footer with Contact Info</div>
+<div class="section-container">
+  <footer style="padding: 48px 40px 32px; border-top: 1px solid #E3E3E8;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px;">
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">Email</h4>
+        <a href="mailto:hello@acme.com" style="font-size: 13px; color: #2C6ECB; text-decoration: none;">hello@acme.com</a>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">Phone</h4>
+        <a href="tel:+18005551234" style="font-size: 13px; color: #2C6ECB; text-decoration: none;">+1 (800) 555-1234</a>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">Address</h4>
+        <p style="font-size: 13px; color: #6D6D72; line-height: 1.5;">123 Market Street<br>San Francisco, CA 94105</p>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #E3E3E8; padding-top: 20px; font-size: 12px; color: #AEAEB2; text-align: center;">&copy; 2025 Acme Inc.</div>
+  </footer>
+</div>
+
+<!-- Footer 009: Footer with App Download Buttons -->
+<div class="section-label">Footer 009 — Footer with App Download Buttons</div>
+<div class="section-container">
+  <footer style="padding: 40px; border-top: 1px solid #E3E3E8; text-align: center;">
+    <p style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Get the app</p>
+    <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 24px;">
+      <a href="#" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #1D1D1F; color: #FFFFFF; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: 500; transition: background 0.2s ease;">App Store</a>
+      <a href="#" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #1D1D1F; color: #FFFFFF; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: 500; transition: background 0.2s ease;">Google Play</a>
+    </div>
+    <div style="font-size: 12px; color: #AEAEB2;">&copy; 2025 Acme Inc. All rights reserved.</div>
+  </footer>
+</div>
+
+<!-- Footer 010: Mega Footer with Sitemap -->
+<div class="section-label">Footer 010 — Mega Footer with Sitemap</div>
+<div class="section-container">
+  <footer style="padding: 56px 40px 32px; border-top: 1px solid #E3E3E8;">
+    <div style="display: grid; grid-template-columns: 2fr repeat(4, 1fr); gap: 40px; margin-bottom: 40px;">
+      <div>
+        <div style="font-size: 18px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Acme</div>
+        <p style="font-size: 13px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Making the world a better place through innovative technology solutions.</p>
+        <div style="display: flex; gap: 12px;">
+          <a href="#" style="width: 32px; height: 32px; border-radius: 8px; background: #F6F6F7; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #6D6D72; font-size: 12px;">X</a>
+          <a href="#" style="width: 32px; height: 32px; border-radius: 8px; background: #F6F6F7; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #6D6D72; font-size: 12px;">in</a>
+          <a href="#" style="width: 32px; height: 32px; border-radius: 8px; background: #F6F6F7; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #6D6D72; font-size: 12px;">GH</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 12px; font-weight: 600; color: #1D1D1F; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;">Product</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Overview</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Features</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Pricing</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Changelog</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 12px; font-weight: 600; color: #1D1D1F; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;">Company</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">About Us</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Careers</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Partners</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Press Kit</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 12px; font-weight: 600; color: #1D1D1F; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;">Resources</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Documentation</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Tutorials</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Community</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Support</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 12px; font-weight: 600; color: #1D1D1F; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;">Legal</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Privacy</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Terms</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Security</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Compliance</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #E3E3E8; padding-top: 20px; display: flex; justify-content: space-between; font-size: 12px; color: #AEAEB2;">
+      <span>&copy; 2025 Acme Inc. All rights reserved.</span>
+      <div style="display: flex; gap: 16px;">
+        <a href="#" style="color: #AEAEB2; text-decoration: none; font-size: 12px;">Sitemap</a>
+        <a href="#" style="color: #AEAEB2; text-decoration: none; font-size: 12px;">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Footer 011: Minimal Centered Footer -->
+<div class="section-label">Footer 011 — Minimal Centered Footer</div>
+<div class="section-container">
+  <footer style="padding: 40px; text-align: center; border-top: 1px solid #E3E3E8;">
+    <div style="display: flex; justify-content: center; gap: 32px; margin-bottom: 20px;">
+      <a href="#" style="font-size: 13px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Home</a>
+      <a href="#" style="font-size: 13px; color: #1D1D1F; text-decoration: none; font-weight: 500;">About</a>
+      <a href="#" style="font-size: 13px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Services</a>
+      <a href="#" style="font-size: 13px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Contact</a>
+    </div>
+    <div style="font-size: 12px; color: #AEAEB2;">&copy; 2025 Acme Inc.</div>
+  </footer>
+</div>
+
+<!-- Footer 012: Footer with Language Selector -->
+<div class="section-label">Footer 012 — Footer with Language Selector</div>
+<div class="section-container">
+  <footer style="padding: 24px 40px; border-top: 1px solid #E3E3E8; display: flex; justify-content: space-between; align-items: center;">
+    <span style="font-size: 13px; color: #6D6D72;">&copy; 2025 Acme Inc.</span>
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <div style="display: flex; gap: 16px;">
+        <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Privacy</a>
+        <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Terms</a>
+      </div>
+      <select style="padding: 6px 10px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; color: #1D1D1F; background: #FFFFFF; font-family: inherit; cursor: pointer;">
+        <option>English</option>
+        <option>Deutsch</option>
+        <option>Fran&ccedil;ais</option>
+        <option>Espa&ntilde;ol</option>
+      </select>
+    </div>
+  </footer>
+</div>
+
+<!-- Footer 013: Footer with Certification Badges -->
+<div class="section-label">Footer 013 — Footer with Certification Badges</div>
+<div class="section-container">
+  <footer style="padding: 40px; border-top: 1px solid #E3E3E8; text-align: center;">
+    <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 20px;">
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 11px; color: #6D6D72; font-weight: 500;">SOC 2</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 11px; color: #6D6D72; font-weight: 500;">GDPR</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 11px; color: #6D6D72; font-weight: 500;">ISO 27001</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 11px; color: #6D6D72; font-weight: 500;">HIPAA</span>
+    </div>
+    <div style="font-size: 12px; color: #AEAEB2;">&copy; 2025 Acme Inc. All rights reserved.</div>
+  </footer>
+</div>
+
+<!-- Footer 014: Footer with Legal Links Row -->
+<div class="section-label">Footer 014 — Footer with Legal Links Row</div>
+<div class="section-container">
+  <footer style="padding: 20px 40px; border-top: 1px solid #E3E3E8;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-size: 12px; color: #AEAEB2;">&copy; 2025 Acme Inc.</span>
+      <div style="display: flex; gap: 20px;">
+        <a href="#" style="font-size: 12px; color: #AEAEB2; text-decoration: none;">Privacy Policy</a>
+        <a href="#" style="font-size: 12px; color: #AEAEB2; text-decoration: none;">Terms of Service</a>
+        <a href="#" style="font-size: 12px; color: #AEAEB2; text-decoration: none;">Cookie Policy</a>
+        <a href="#" style="font-size: 12px; color: #AEAEB2; text-decoration: none;">Acceptable Use</a>
+        <a href="#" style="font-size: 12px; color: #AEAEB2; text-decoration: none;">SLA</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Footer 015: Footer with Back-to-Top Button -->
+<div class="section-label">Footer 015 — Footer with Back-to-Top Button</div>
+<div class="section-container">
+  <footer style="padding: 32px 40px; border-top: 1px solid #E3E3E8; display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <span style="font-size: 13px; color: #6D6D72;">&copy; 2025 Acme Inc.</span>
+      <span style="font-size: 13px; color: #AEAEB2; margin-left: 16px;">All rights reserved.</span>
+    </div>
+    <a href="#top" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; color: #1D1D1F; text-decoration: none; font-weight: 500; transition: all 0.2s ease;">Back to top &uarr;</a>
+  </footer>
+</div>
+
+<!-- Footer 016: Footer with Recent Posts -->
+<div class="section-label">Footer 016 — Footer with Recent Posts</div>
+<div class="section-container">
+  <footer style="padding: 48px 40px 32px; border-top: 1px solid #E3E3E8;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px;">
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Recent Posts</h4>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="#" style="text-decoration: none;"><span style="font-size: 13px; color: #1D1D1F; font-weight: 500; display: block;">Introducing our new API</span><span style="font-size: 12px; color: #AEAEB2;">Jan 15, 2025</span></a>
+          <a href="#" style="text-decoration: none;"><span style="font-size: 13px; color: #1D1D1F; font-weight: 500; display: block;">Year in review 2024</span><span style="font-size: 12px; color: #AEAEB2;">Dec 28, 2024</span></a>
+          <a href="#" style="text-decoration: none;"><span style="font-size: 13px; color: #1D1D1F; font-weight: 500; display: block;">Security best practices</span><span style="font-size: 12px; color: #AEAEB2;">Dec 10, 2024</span></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Quick Links</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Home</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Products</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">About</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Follow Us</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Twitter / X</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">LinkedIn</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #E3E3E8; padding-top: 20px; font-size: 12px; color: #AEAEB2; text-align: center;">&copy; 2025 Acme Inc.</div>
+  </footer>
+</div>
+
+<!-- Footer 017: Footer with Office Locations -->
+<div class="section-label">Footer 017 — Footer with Office Locations</div>
+<div class="section-container">
+  <footer style="padding: 48px 40px 32px; border-top: 1px solid #E3E3E8;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-bottom: 32px;">
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">San Francisco</h4>
+        <p style="font-size: 12px; color: #6D6D72; line-height: 1.6;">123 Market St<br>Suite 400<br>CA 94105</p>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">New York</h4>
+        <p style="font-size: 12px; color: #6D6D72; line-height: 1.6;">456 Broadway<br>Floor 12<br>NY 10013</p>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">London</h4>
+        <p style="font-size: 12px; color: #6D6D72; line-height: 1.6;">10 Finsbury Sq<br>3rd Floor<br>EC2A 1AF</p>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Tokyo</h4>
+        <p style="font-size: 12px; color: #6D6D72; line-height: 1.6;">1-1-1 Shibuya<br>Shibuya-ku<br>150-0002</p>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #E3E3E8; padding-top: 20px; font-size: 12px; color: #AEAEB2; text-align: center;">&copy; 2025 Acme Inc.</div>
+  </footer>
+</div>
+
+<!-- Footer 018: Footer with Status Indicator -->
+<div class="section-label">Footer 018 — Footer with Status Indicator</div>
+<div class="section-container">
+  <footer style="padding: 24px 40px; border-top: 1px solid #E3E3E8; display: flex; justify-content: space-between; align-items: center;">
+    <span style="font-size: 13px; color: #6D6D72;">&copy; 2025 Acme Inc.</span>
+    <a href="#" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-size: 13px; color: #1A8245; font-weight: 500;">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: #1A8245; display: inline-block;"></span>
+      All systems operational
+    </a>
+  </footer>
+</div>
+
+<!-- Footer 019: Split Footer (Dark Top / Light Bottom) -->
+<div class="section-label">Footer 019 — Split Footer Dark/Light</div>
+<div class="section-container">
+  <footer>
+    <div style="padding: 48px 40px; background: #1D1D1F;">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+        <div>
+          <h4 style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">Product</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Features</a>
+            <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Pricing</a>
+            <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Integrations</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">Support</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Help Center</a>
+            <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Docs</a>
+            <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px;">Company</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">About</a>
+            <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Careers</a>
+            <a href="#" style="font-size: 13px; color: #AEAEB2; text-decoration: none;">Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 16px 40px; background: #F6F6F7; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #AEAEB2;">
+      <span>&copy; 2025 Acme Inc.</span>
+      <div style="display: flex; gap: 16px;">
+        <a href="#" style="color: #AEAEB2; text-decoration: none; font-size: 12px;">Privacy</a>
+        <a href="#" style="color: #AEAEB2; text-decoration: none; font-size: 12px;">Terms</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Footer 020: Footer with Search -->
+<div class="section-label">Footer 020 — Footer with Search</div>
+<div class="section-container">
+  <footer style="padding: 40px; border-top: 1px solid #E3E3E8; text-align: center;">
+    <p style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">Can't find what you're looking for?</p>
+    <div style="max-width: 400px; margin: 0 auto 24px;">
+      <div style="display: flex; gap: 8px;">
+        <input type="text" placeholder="Search our site..." style="flex: 1; padding: 8px 12px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; font-family: inherit; outline: none;">
+        <button style="padding: 8px 16px; background: #1D1D1F; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer; font-family: inherit;">Search</button>
+      </div>
+    </div>
+    <div style="font-size: 12px; color: #AEAEB2;">&copy; 2025 Acme Inc.</div>
+  </footer>
+</div>
+
+<!-- Footer 021: Footer with Breadcrumb -->
+<div class="section-label">Footer 021 — Footer with Breadcrumb</div>
+<div class="section-container">
+  <footer style="padding: 24px 40px; border-top: 1px solid #E3E3E8;">
+    <div style="margin-bottom: 16px;">
+      <nav style="font-size: 12px; color: #AEAEB2;">
+        <a href="#" style="color: #6D6D72; text-decoration: none;">Home</a>
+        <span style="margin: 0 6px;">/</span>
+        <a href="#" style="color: #6D6D72; text-decoration: none;">Products</a>
+        <span style="margin: 0 6px;">/</span>
+        <span style="color: #AEAEB2;">Current Page</span>
+      </nav>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-size: 12px; color: #AEAEB2;">&copy; 2025 Acme Inc.</span>
+      <div style="display: flex; gap: 16px;">
+        <a href="#" style="font-size: 12px; color: #6D6D72; text-decoration: none;">Privacy</a>
+        <a href="#" style="font-size: 12px; color: #6D6D72; text-decoration: none;">Terms</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Footer 022: Footer with Awards -->
+<div class="section-label">Footer 022 — Footer with Awards</div>
+<div class="section-container">
+  <footer style="padding: 40px; border-top: 1px solid #E3E3E8; text-align: center;">
+    <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 24px;">
+      <div style="padding: 12px 20px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 12px; color: #6D6D72; font-weight: 500;">Best SaaS 2025</div>
+      <div style="padding: 12px 20px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 12px; color: #6D6D72; font-weight: 500;">Product Hunt #1</div>
+      <div style="padding: 12px 20px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 12px; color: #6D6D72; font-weight: 500;">G2 Leader</div>
+    </div>
+    <div style="font-size: 12px; color: #AEAEB2;">&copy; 2025 Acme Inc. All rights reserved.</div>
+  </footer>
+</div>
+
+<!-- Footer 023: Footer with Partner Logos -->
+<div class="section-label">Footer 023 — Footer with Partner Logos</div>
+<div class="section-container">
+  <footer style="padding: 40px; border-top: 1px solid #E3E3E8;">
+    <p style="font-size: 12px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 1px; text-align: center; margin-bottom: 20px;">Trusted by</p>
+    <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 24px; align-items: center;">
+      <span style="font-size: 16px; font-weight: 700; color: #AEAEB2;">Stripe</span>
+      <span style="font-size: 16px; font-weight: 700; color: #AEAEB2;">Vercel</span>
+      <span style="font-size: 16px; font-weight: 700; color: #AEAEB2;">Linear</span>
+      <span style="font-size: 16px; font-weight: 700; color: #AEAEB2;">Notion</span>
+      <span style="font-size: 16px; font-weight: 700; color: #AEAEB2;">Figma</span>
+    </div>
+    <div style="border-top: 1px solid #E3E3E8; padding-top: 20px; font-size: 12px; color: #AEAEB2; text-align: center;">&copy; 2025 Acme Inc.</div>
+  </footer>
+</div>
+
+<!-- Footer 024: SaaS Footer -->
+<div class="section-label">Footer 024 — SaaS Footer</div>
+<div class="section-container">
+  <footer style="padding: 48px 40px 32px; border-top: 1px solid #E3E3E8;">
+    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px;">
+      <div>
+        <div style="font-size: 16px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Acme Cloud</div>
+        <p style="font-size: 13px; color: #6D6D72; line-height: 1.5;">The modern platform for building and scaling your business.</p>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Solutions</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Startups</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Enterprise</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Developers</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Developers</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">API Docs</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">SDKs</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Status</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Compare</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">vs Competitor A</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">vs Competitor B</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">vs Competitor C</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #E3E3E8; padding-top: 20px; display: flex; justify-content: space-between; font-size: 12px; color: #AEAEB2;">
+      <span>&copy; 2025 Acme Inc.</span>
+      <a href="#" style="color: #1A8245; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #1A8245; display: inline-block;"></span> All systems operational</a>
+    </div>
+  </footer>
+</div>
+
+<!-- Footer 025: E-Commerce Footer -->
+<div class="section-label">Footer 025 — E-Commerce Footer</div>
+<div class="section-container">
+  <footer style="padding: 48px 40px 32px; border-top: 1px solid #E3E3E8;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-bottom: 32px;">
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Shop</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">New Arrivals</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Best Sellers</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Sale</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Gift Cards</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Customer Service</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Shipping & Returns</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Size Guide</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">FAQ</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">About</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Our Story</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Sustainability</a>
+          <a href="#" style="font-size: 13px; color: #6D6D72; text-decoration: none;">Careers</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">We Accept</h4>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="padding: 4px 10px; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 11px; color: #6D6D72;">Visa</span>
+          <span style="padding: 4px 10px; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 11px; color: #6D6D72;">MC</span>
+          <span style="padding: 4px 10px; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 11px; color: #6D6D72;">Amex</span>
+          <span style="padding: 4px 10px; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 11px; color: #6D6D72;">PayPal</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #E3E3E8; padding-top: 20px; display: flex; justify-content: space-between; font-size: 12px; color: #AEAEB2;">
+      <span>&copy; 2025 Acme Store. All rights reserved.</span>
+      <div style="display: flex; gap: 16px;">
+        <a href="#" style="color: #AEAEB2; text-decoration: none; font-size: 12px;">Privacy</a>
+        <a href="#" style="color: #AEAEB2; text-decoration: none; font-size: 12px;">Terms</a>
+        <a href="#" style="color: #AEAEB2; text-decoration: none; font-size: 12px;">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

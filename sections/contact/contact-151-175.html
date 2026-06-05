@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Sections 151-175 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<!-- 151 — Multi-Step Wizard Contact -->
+<div class="section-label">151 — Multi-Step Wizard Contact</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 600px; margin: 0 auto;">
+<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 32px;">
+<div style="width: 28px; height: 28px; background: #2C6ECB; color: #fff; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;">1</div>
+<div style="flex: 1; height: 2px; background: #2C6ECB;"></div>
+<div style="width: 28px; height: 28px; background: #E3E3E8; color: #6D6D72; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;">2</div>
+<div style="flex: 1; height: 2px; background: #E3E3E8;"></div>
+<div style="width: 28px; height: 28px; background: #E3E3E8; color: #6D6D72; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center;">3</div>
+</div>
+<h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">Your Details</h2>
+<p style="font-size: 14px; color: #6D6D72; margin-bottom: 24px;">Step 1 of 3</p>
+<input type="text" placeholder="Full Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email Address" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="tel" placeholder="Phone Number" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 20px; font-family: inherit;">
+<button style="width: 100%; padding: 14px 28px; background: #2C6ECB; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Continue</button>
+</div>
+</div>
+
+<!-- 152 — Contact with Map and Pins -->
+<div class="section-label">152 — Contact with Map and Pins</div>
+<div class="section-container">
+<div style="display: grid; grid-template-columns: 1fr 1fr;">
+<div style="background: #E8E8ED; display: flex; align-items: center; justify-content: center; min-height: 480px; position: relative;">
+<p style="font-size: 15px; font-weight: 600; color: #6D6D72;">Interactive Map</p>
+<div style="position: absolute; top: 40%; left: 35%; width: 16px; height: 16px; background: #D72C0D; border-radius: 50%; border: 3px solid #fff;"></div>
+<div style="position: absolute; top: 30%; left: 60%; width: 16px; height: 16px; background: #2C6ECB; border-radius: 50%; border: 3px solid #fff;"></div>
+</div>
+<div style="padding: 56px 48px;">
+<h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Find Our Offices</h2>
+<p style="font-size: 15px; color: #6D6D72; margin-bottom: 24px;">Select a location or send us a message</p>
+<div style="display: flex; gap: 12px; margin-bottom: 20px;">
+<div style="flex: 1; padding: 16px; border: 2px solid #2C6ECB; border-radius: 10px; cursor: pointer;"><p style="font-size: 14px; font-weight: 700; color: #2C6ECB;">San Francisco</p><p style="font-size: 13px; color: #6D6D72;">100 Market St</p></div>
+<div style="flex: 1; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer;"><p style="font-size: 14px; font-weight: 700; color: #1D1D1F;">New York</p><p style="font-size: 13px; color: #6D6D72;">350 Fifth Ave</p></div>
+</div>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Message" rows="3" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Send</button>
+</div>
+</div>
+</div>
+
+<!-- 153 — Contact with Support Ticket ID -->
+<div class="section-label">153 — Contact with Support Ticket ID</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 560px; margin: 0 auto;">
+<div style="padding: 12px 16px; background: #EFF6FF; border-radius: 8px; margin-bottom: 24px; display: flex; align-items: center; gap: 8px;">
+<span style="font-size: 13px; color: #2C6ECB; font-weight: 600;">Ticket #TCK-20260216</span>
+<span style="font-size: 12px; color: #6D6D72;">Auto-generated</span>
+</div>
+<h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px;">New Support Ticket</h2>
+<input type="text" placeholder="Your Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<select style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit; color: #6D6D72; background: #fff;"><option>Issue Category</option><option>Bug Report</option><option>Feature Request</option><option>Account Issue</option><option>Billing</option></select>
+<textarea placeholder="Describe your issue in detail" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Create Ticket</button>
+</div>
+</div>
+
+<!-- 154 — Floating Label Contact Form -->
+<div class="section-label">154 — Floating Label Contact Form</div>
+<div class="section-container">
+<div style="padding: 80px 48px; max-width: 520px; margin: 0 auto; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">Say Hello</h2>
+<p style="font-size: 15px; color: #6D6D72; margin-bottom: 36px;">We'd love to hear what you're working on</p>
+<div style="position: relative; margin-bottom: 16px;"><label style="position: absolute; top: -8px; left: 14px; background: #fff; padding: 0 4px; font-size: 12px; font-weight: 600; color: #6D6D72;">Name</label><input type="text" style="width: 100%; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; font-family: inherit;"></div>
+<div style="position: relative; margin-bottom: 16px;"><label style="position: absolute; top: -8px; left: 14px; background: #fff; padding: 0 4px; font-size: 12px; font-weight: 600; color: #6D6D72;">Email</label><input type="email" style="width: 100%; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; font-family: inherit;"></div>
+<div style="position: relative; margin-bottom: 16px;"><label style="position: absolute; top: -8px; left: 14px; background: #fff; padding: 0 4px; font-size: 12px; font-weight: 600; color: #6D6D72;">Message</label><textarea rows="4" style="width: 100%; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; font-family: inherit; resize: vertical;"></textarea></div>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Send Message</button>
+</div>
+</div>
+
+<!-- 155 — Contact with Service Selection -->
+<div class="section-label">155 — Contact with Service Selection</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 640px; margin: 0 auto;">
+<h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Request a Service</h2>
+<p style="font-size: 15px; color: #6D6D72; margin-bottom: 24px;">Select the services you're interested in</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px;">
+<label style="padding: 14px; border: 2px solid #2C6ECB; background: #EFF6FF; border-radius: 10px; cursor: pointer; text-align: center;"><input type="checkbox" style="display: none;"><p style="font-size: 13px; font-weight: 600; color: #2C6ECB;">Web Design</p></label>
+<label style="padding: 14px; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; text-align: center;"><input type="checkbox" style="display: none;"><p style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Branding</p></label>
+<label style="padding: 14px; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; text-align: center;"><input type="checkbox" style="display: none;"><p style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Development</p></label>
+<label style="padding: 14px; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; text-align: center;"><input type="checkbox" style="display: none;"><p style="font-size: 13px; font-weight: 600; color: #1D1D1F;">SEO</p></label>
+<label style="padding: 14px; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; text-align: center;"><input type="checkbox" style="display: none;"><p style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Marketing</p></label>
+<label style="padding: 14px; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; text-align: center;"><input type="checkbox" style="display: none;"><p style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Consulting</p></label>
+</div>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Tell us about your project" rows="3" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Get Started</button>
+</div>
+</div>
+
+<!-- 156 — Dark Split Contact -->
+<div class="section-label">156 — Dark Split Contact</div>
+<div class="section-container">
+<div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 520px;">
+<div style="padding: 60px 48px; background: #1D1D1F;">
+<h2 style="font-size: 32px; font-weight: 700; color: #fff; margin-bottom: 12px;">Let's Create Together</h2>
+<p style="font-size: 15px; color: #AEAEB2; line-height: 1.6; margin-bottom: 32px;">Share your vision and we'll bring it to life.</p>
+<div style="margin-bottom: 20px;"><p style="font-size: 13px; color: #AEAEB2; margin-bottom: 4px;">Email</p><p style="font-size: 15px; color: #fff;">hello@studio.com</p></div>
+<div style="margin-bottom: 20px;"><p style="font-size: 13px; color: #AEAEB2; margin-bottom: 4px;">Phone</p><p style="font-size: 15px; color: #fff;">+1 (555) 000-0000</p></div>
+<div><p style="font-size: 13px; color: #AEAEB2; margin-bottom: 4px;">Based in</p><p style="font-size: 15px; color: #fff;">San Francisco, CA</p></div>
+</div>
+<div style="padding: 60px 48px;">
+<h3 style="font-size: 22px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px;">Send a Message</h3>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Your message" rows="5" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Send</button>
+</div>
+</div>
+</div>
+
+<!-- 157 — Contact with Newsletter Opt-in -->
+<div class="section-label">157 — Contact with Newsletter Opt-in</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 520px; margin: 0 auto;">
+<h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px;">Drop Us a Line</h2>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Message" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit; resize: vertical;"></textarea>
+<label style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px; cursor: pointer;"><input type="checkbox" checked><span style="font-size: 14px; color: #6D6D72;">Also subscribe me to the newsletter</span></label>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Send Message</button>
+</div>
+</div>
+
+<!-- 158 — Contact Grid with Multiple Methods -->
+<div class="section-label">158 — Contact Grid with Multiple Methods</div>
+<div class="section-container">
+<div style="padding: 64px 48px;">
+<h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 36px;">Choose How to Reach Us</h2>
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+<a href="#" style="padding: 28px 16px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center; text-decoration: none; transition: 0.2s ease;">
+<div style="width: 44px; height: 44px; background: #EFF6FF; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 20px;">&#9993;</div>
+<p style="font-size: 15px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">Email</p><p style="font-size: 13px; color: #6D6D72;">hello@co.com</p></a>
+<a href="#" style="padding: 28px 16px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center; text-decoration: none; transition: 0.2s ease;">
+<div style="width: 44px; height: 44px; background: #F0FDF4; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 20px;">&#9742;</div>
+<p style="font-size: 15px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">Phone</p><p style="font-size: 13px; color: #6D6D72;">(555) 123-4567</p></a>
+<a href="#" style="padding: 28px 16px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center; text-decoration: none; transition: 0.2s ease;">
+<div style="width: 44px; height: 44px; background: #FAF5FF; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 20px;">&#128172;</div>
+<p style="font-size: 15px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">Live Chat</p><p style="font-size: 13px; color: #6D6D72;">Online now</p></a>
+<a href="#" style="padding: 28px 16px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center; text-decoration: none; transition: 0.2s ease;">
+<div style="width: 44px; height: 44px; background: #FFFBEB; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 20px;">&#128197;</div>
+<p style="font-size: 15px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">Schedule</p><p style="font-size: 13px; color: #6D6D72;">Book a call</p></a>
+</div>
+</div>
+</div>
+
+<!-- 159 — Tabbed Contact Form -->
+<div class="section-label">159 — Tabbed Contact Form</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 600px; margin: 0 auto;">
+<h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 24px;">Contact Us</h2>
+<div style="display: flex; gap: 4px; margin-bottom: 28px; background: #F6F6F7; border-radius: 10px; padding: 4px;">
+<button style="flex: 1; padding: 10px; background: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; color: #1D1D1F; cursor: pointer; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">General</button>
+<button style="flex: 1; padding: 10px; background: transparent; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; color: #6D6D72; cursor: pointer;">Sales</button>
+<button style="flex: 1; padding: 10px; background: transparent; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; color: #6D6D72; cursor: pointer;">Support</button>
+</div>
+<input type="text" placeholder="Full Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email Address" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Your message" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Send Message</button>
+</div>
+</div>
+
+<!-- 160 — Contact with Estimated Response -->
+<div class="section-label">160 — Contact with Estimated Response</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 560px; margin: 0 auto;">
+<h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">How Can We Help?</h2>
+<p style="font-size: 15px; color: #6D6D72; margin-bottom: 24px;">Choose a topic and we'll route your message to the right team</p>
+<select style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit; color: #6D6D72; background: #fff;"><option>Select Topic</option><option>Technical Support</option><option>Billing</option><option>Account Access</option><option>Partnership</option><option>Other</option></select>
+<div style="padding: 10px 14px; background: #FFFBEB; border-radius: 8px; margin-bottom: 12px;"><p style="font-size: 13px; color: #B98900; font-weight: 600;">Estimated response: ~4 hours for this topic</p></div>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Message" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Submit</button>
+</div>
+</div>
+
+<!-- 161 — Contact with Region Selector -->
+<div class="section-label">161 — Contact with Region Selector</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 560px; margin: 0 auto;">
+<h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Global Support</h2>
+<p style="font-size: 15px; color: #6D6D72; margin-bottom: 24px;">Select your region for localized assistance</p>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px;">
+<button style="padding: 14px; border: 2px solid #2C6ECB; background: #EFF6FF; border-radius: 10px; font-size: 13px; font-weight: 600; color: #2C6ECB; cursor: pointer;">Americas</button>
+<button style="padding: 14px; border: 1px solid #E3E3E8; background: #fff; border-radius: 10px; font-size: 13px; font-weight: 600; color: #1D1D1F; cursor: pointer;">Europe</button>
+<button style="padding: 14px; border: 1px solid #E3E3E8; background: #fff; border-radius: 10px; font-size: 13px; font-weight: 600; color: #1D1D1F; cursor: pointer;">Asia-Pacific</button>
+</div>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="How can we help?" rows="3" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Send</button>
+</div>
+</div>
+
+<!-- 162 — Gradient Header Contact -->
+<div class="section-label">162 — Gradient Header Contact</div>
+<div class="section-container">
+<div style="padding: 56px 48px; background: linear-gradient(135deg, #1D1D1F 0%, #3A3A3C 100%); text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #fff; margin-bottom: 6px;">Ready to Start?</h2>
+<p style="font-size: 16px; color: #AEAEB2;">Tell us about your project</p>
+</div>
+<div style="padding: 40px 48px; max-width: 560px; margin: 0 auto;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+<input type="text" placeholder="First Name" style="padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; font-family: inherit;">
+<input type="text" placeholder="Last Name" style="padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; font-family: inherit;">
+</div>
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Project details" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Submit</button>
+</div>
+</div>
+
+<!-- 163 — Contact with Inline Validation -->
+<div class="section-label">163 — Contact with Inline Validation</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 520px; margin: 0 auto;">
+<h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px;">Get in Touch</h2>
+<div style="margin-bottom: 12px;"><input type="text" placeholder="Full Name" value="Jane Smith" style="width: 100%; padding: 12px 16px; border: 1px solid #1A8245; border-radius: 10px; font-size: 15px; font-family: inherit;"><p style="font-size: 12px; color: #1A8245; margin-top: 4px; padding-left: 4px;">Looks good!</p></div>
+<div style="margin-bottom: 12px;"><input type="email" placeholder="Email" value="jane@" style="width: 100%; padding: 12px 16px; border: 1px solid #D72C0D; border-radius: 10px; font-size: 15px; font-family: inherit;"><p style="font-size: 12px; color: #D72C0D; margin-top: 4px; padding-left: 4px;">Please enter a valid email address</p></div>
+<div style="margin-bottom: 16px;"><textarea placeholder="Message" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; font-family: inherit; resize: vertical;"></textarea></div>
+<button style="width: 100%; padding: 14px 28px; background: #E3E3E8; color: #AEAEB2; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: not-allowed;">Send Message</button>
+</div>
+</div>
+
+<!-- 164 — Contact with Product Interest -->
+<div class="section-label">164 — Contact with Product Interest</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 600px; margin: 0 auto;">
+<h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Interested in Our Products?</h2>
+<p style="font-size: 15px; color: #6D6D72; margin-bottom: 24px;">Let us know which products caught your eye</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+<label style="padding: 8px 16px; border: 2px solid #7C3AED; background: #FAF5FF; border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: 600; color: #7C3AED;">Analytics</label>
+<label style="padding: 8px 16px; border: 1px solid #E3E3E8; border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: 600; color: #1D1D1F;">Automation</label>
+<label style="padding: 8px 16px; border: 1px solid #E3E3E8; border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: 600; color: #1D1D1F;">CRM</label>
+<label style="padding: 8px 16px; border: 1px solid #E3E3E8; border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: 600; color: #1D1D1F;">Email</label>
+<label style="padding: 8px 16px; border: 1px solid #E3E3E8; border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: 600; color: #1D1D1F;">API</label>
+</div>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Work Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Tell us about your needs" rows="3" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #7C3AED; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Request Info</button>
+</div>
+</div>
+
+<!-- 165 — Minimalist Email-Only Contact -->
+<div class="section-label">165 — Minimalist Email-Only Contact</div>
+<div class="section-container">
+<div style="padding: 80px 48px; text-align: center;">
+<h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">Say Hello</h2>
+<p style="font-size: 16px; color: #6D6D72; margin-bottom: 32px;">Just drop your email and we'll reach out</p>
+<div style="max-width: 400px; margin: 0 auto; display: flex; gap: 10px;">
+<input type="email" placeholder="your@email.com" style="flex: 1; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; font-family: inherit;">
+<button style="padding: 14px 24px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Submit</button>
+</div>
+</div>
+</div>
+
+<!-- 166 — Contact with Urgency Indicator -->
+<div class="section-label">166 — Contact with Urgency Indicator</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 560px; margin: 0 auto;">
+<h2 style="font-size: 30px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px;">Report an Issue</h2>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<p style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">How urgent is this?</p>
+<div style="display: flex; gap: 8px; margin-bottom: 12px;">
+<button style="flex: 1; padding: 10px; border: 1px solid #E3E3E8; background: #fff; border-radius: 8px; font-size: 13px; cursor: pointer;"><span style="display: inline-block; width: 8px; height: 8px; background: #1A8245; border-radius: 50%; margin-right: 6px;"></span>Low</button>
+<button style="flex: 1; padding: 10px; border: 1px solid #E3E3E8; background: #fff; border-radius: 8px; font-size: 13px; cursor: pointer;"><span style="display: inline-block; width: 8px; height: 8px; background: #B98900; border-radius: 50%; margin-right: 6px;"></span>Normal</button>
+<button style="flex: 1; padding: 10px; border: 2px solid #D72C0D; background: #FEF2F2; border-radius: 8px; font-size: 13px; font-weight: 600; color: #D72C0D; cursor: pointer;"><span style="display: inline-block; width: 8px; height: 8px; background: #D72C0D; border-radius: 50%; margin-right: 6px;"></span>Critical</button>
+</div>
+<textarea placeholder="Describe the issue" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #D72C0D; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Submit Report</button>
+</div>
+</div>
+
+<!-- 167 — Contact with Sidebar Info Panel -->
+<div class="section-label">167 — Contact with Sidebar Info Panel</div>
+<div class="section-container">
+<div style="display: grid; grid-template-columns: 260px 1fr; min-height: 480px;">
+<div style="padding: 40px 28px; background: #F9F9FB; border-right: 1px solid #E3E3E8;">
+<h3 style="font-size: 16px; font-weight: 700; color: #1D1D1F; margin-bottom: 20px;">Quick Info</h3>
+<div style="margin-bottom: 20px;"><p style="font-size: 12px; font-weight: 600; color: #6D6D72; text-transform: uppercase; margin-bottom: 4px;">Response Time</p><p style="font-size: 14px; color: #1D1D1F;">Under 24 hrs</p></div>
+<div style="margin-bottom: 20px;"><p style="font-size: 12px; font-weight: 600; color: #6D6D72; text-transform: uppercase; margin-bottom: 4px;">Support Hours</p><p style="font-size: 14px; color: #1D1D1F;">Mon-Fri 9-6 EST</p></div>
+<div style="margin-bottom: 20px;"><p style="font-size: 12px; font-weight: 600; color: #6D6D72; text-transform: uppercase; margin-bottom: 4px;">Email</p><p style="font-size: 14px; color: #2C6ECB;">help@company.com</p></div>
+<div><p style="font-size: 12px; font-weight: 600; color: #6D6D72; text-transform: uppercase; margin-bottom: 4px;">Phone</p><p style="font-size: 14px; color: #1D1D1F;">(555) 000-0000</p></div>
+</div>
+<div style="padding: 40px 48px;">
+<h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px;">Send a Message</h2>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<select style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit; color: #6D6D72; background: #fff;"><option>Topic</option><option>General</option><option>Support</option><option>Sales</option></select>
+<textarea placeholder="Your message" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Send</button>
+</div>
+</div>
+</div>
+
+<!-- 168 — Contact with Testimonial -->
+<div class="section-label">168 — Contact with Testimonial</div>
+<div class="section-container">
+<div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 500px;">
+<div style="padding: 56px 48px; display: flex; flex-direction: column; justify-content: center;">
+<blockquote style="font-size: 20px; font-weight: 500; color: #1D1D1F; line-height: 1.6; margin-bottom: 20px; font-style: italic;">"The support team was incredibly responsive. They resolved our issue within an hour."</blockquote>
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="width: 40px; height: 40px; background: #2C6ECB; border-radius: 50%;"></div>
+<div><p style="font-size: 14px; font-weight: 700; color: #1D1D1F;">Alex Morgan</p><p style="font-size: 13px; color: #6D6D72;">CTO, TechCorp</p></div>
+</div>
+</div>
+<div style="padding: 56px 48px; border-left: 1px solid #E3E3E8;">
+<h2 style="font-size: 26px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px;">Contact Us</h2>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Message" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Send Message</button>
+</div>
+</div>
+</div>
+
+<!-- 169 — Contact with Language Selector -->
+<div class="section-label">169 — Contact with Language Selector</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 560px; margin: 0 auto;">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+<h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F;">Contact Us</h2>
+<select style="padding: 8px 12px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; font-family: inherit; background: #fff; color: #6D6D72;"><option>English</option><option>Spanish</option><option>French</option><option>German</option><option>Japanese</option></select>
+</div>
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Your message" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Send</button>
+</div>
+</div>
+
+<!-- 170 — Contact with Account Number -->
+<div class="section-label">170 — Contact with Account Number</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 560px; margin: 0 auto;">
+<h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">Existing Customer Support</h2>
+<p style="font-size: 15px; color: #6D6D72; margin-bottom: 24px;">Please provide your account details for faster resolution</p>
+<input type="text" placeholder="Account ID or Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="text" placeholder="Full Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<select style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit; color: #6D6D72; background: #fff;"><option>Plan</option><option>Starter</option><option>Pro</option><option>Business</option><option>Enterprise</option></select>
+<textarea placeholder="How can we help?" rows="3" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Submit Ticket</button>
+</div>
+</div>
+
+<!-- 171 — Contact with Animated CTA -->
+<div class="section-label">171 — Contact with Animated CTA</div>
+<div class="section-container">
+<div style="padding: 80px 48px; text-align: center; background: linear-gradient(135deg, #F9F9FB 0%, #FFFFFF 100%);">
+<h2 style="font-size: 40px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Let's Build Something Great</h2>
+<p style="font-size: 16px; color: #6D6D72; margin-bottom: 36px;">We're excited to hear about your next project</p>
+<div style="max-width: 480px; margin: 0 auto;">
+<input type="text" placeholder="Name" style="width: 100%; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Tell us about your project" rows="4" style="width: 100%; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 16px 28px; background: #2C6ECB; color: #fff; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.2s ease;">Start the Conversation</button>
+</div>
+</div>
+</div>
+
+<!-- 172 — Contact Accordion Style -->
+<div class="section-label">172 — Contact Accordion Style</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 700px; margin: 0 auto;">
+<h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 32px;">How Would You Like to Reach Us?</h2>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; margin-bottom: 12px;">
+<div style="padding: 20px 24px; background: #F9F9FB; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"><p style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Send an Email</p><span style="font-size: 18px; color: #6D6D72;">+</span></div>
+</div>
+<div style="border: 1px solid #2C6ECB; border-radius: 12px; overflow: hidden; margin-bottom: 12px;">
+<div style="padding: 20px 24px; background: #EFF6FF; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"><p style="font-size: 16px; font-weight: 600; color: #2C6ECB;">Fill Out a Form</p><span style="font-size: 18px; color: #2C6ECB;">-</span></div>
+<div style="padding: 24px;">
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Message" rows="3" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 12px; background: #2C6ECB; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Send</button>
+</div>
+</div>
+<div style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; margin-bottom: 12px;">
+<div style="padding: 20px 24px; background: #F9F9FB; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"><p style="font-size: 16px; font-weight: 600; color: #1D1D1F;">Schedule a Call</p><span style="font-size: 18px; color: #6D6D72;">+</span></div>
+</div>
+</div>
+</div>
+
+<!-- 173 — Contact with Reference Number -->
+<div class="section-label">173 — Contact with Reference Number</div>
+<div class="section-container">
+<div style="padding: 64px 48px; max-width: 560px; margin: 0 auto;">
+<h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Follow Up on a Request</h2>
+<p style="font-size: 15px; color: #6D6D72; margin-bottom: 24px;">Have a reference number? Add it below for faster assistance.</p>
+<input type="text" placeholder="Reference Number (optional)" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="text" placeholder="Name" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<input type="email" placeholder="Email" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 12px; font-family: inherit;">
+<textarea placeholder="Your follow-up message" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #E3E3E8; border-radius: 10px; font-size: 15px; margin-bottom: 16px; font-family: inherit; resize: vertical;"></textarea>
+<button style="width: 100%; padding: 14px 28px; background: #1A1A1A; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;">Submit</button>
+</div>
+</div>
+
+<!-- 174 — Contact Hero Banner -->
+<div class="section-label">174 — Contact Hero Banner</div>
+<div class="section-container">
+<div style="padding: 100px 48px; background: #1D1D1F; text-align: center;">
+<h1 style="font-size: 48px; font-weight: 700; color: #fff; margin-bottom: 12px;">Contact Us</h1>
+<p style="font-size: 18px; color: #AEAEB2; margin-bottom: 40px; max-width: 500px; margin-left: auto; margin-right: auto;">Have a question or want to work together? We'd love to hear from you.</p>
+<div style="display: flex; justify-content: center; gap: 16px;">
+<button style="padding: 16px 32px; background: #fff; color: #1D1D1F; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer;">Send a Message</button>
+<button style="padding: 16px 32px; background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer;">Book a Call</button>
+</div>
+</div>
+</div>
+
+<!-- 175 — Contact with Status Indicators -->
+<div class="section-label">175 — Contact with Status Indicators</div>
+<div class="section-container">
+<div style="padding: 64px 48px;">
+<h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; text-align: center; margin-bottom: 32px;">Support Channels</h2>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 800px; margin: 0 auto;">
+<div style="padding: 28px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center;">
+<div style="display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 12px;"><div style="width: 8px; height: 8px; background: #1A8245; border-radius: 50%;"></div><span style="font-size: 12px; font-weight: 600; color: #1A8245;">Online</span></div>
+<h3 style="font-size: 17px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">Live Chat</h3>
+<p style="font-size: 13px; color: #6D6D72; margin-bottom: 16px;">~2 min response</p>
+<button style="width: 100%; padding: 10px; background: #1A8245; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;">Chat Now</button>
+</div>
+<div style="padding: 28px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center;">
+<div style="display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 12px;"><div style="width: 8px; height: 8px; background: #2C6ECB; border-radius: 50%;"></div><span style="font-size: 12px; font-weight: 600; color: #2C6ECB;">Available</span></div>
+<h3 style="font-size: 17px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">Email</h3>
+<p style="font-size: 13px; color: #6D6D72; margin-bottom: 16px;">~4 hr response</p>
+<button style="width: 100%; padding: 10px; background: #2C6ECB; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;">Send Email</button>
+</div>
+<div style="padding: 28px; border: 1px solid #E3E3E8; border-radius: 12px; text-align: center;">
+<div style="display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 12px;"><div style="width: 8px; height: 8px; background: #AEAEB2; border-radius: 50%;"></div><span style="font-size: 12px; font-weight: 600; color: #AEAEB2;">Offline</span></div>
+<h3 style="font-size: 17px; font-weight: 700; color: #1D1D1F; margin-bottom: 6px;">Phone</h3>
+<p style="font-size: 13px; color: #6D6D72; margin-bottom: 16px;">Mon-Fri 9-6</p>
+<button style="width: 100%; padding: 10px; background: #E3E3E8; color: #6D6D72; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: not-allowed;">Unavailable</button>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Features 351-375 - Apple HIG</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;background:#fff;color:#1d1d1f;line-height:1.4}
+.container{max-width:1200px;margin:0 auto;padding:60px 20px}
+.section{margin-bottom:80px}
+.grid{display:grid;gap:20px}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+h2{font-size:48px;font-weight:700;margin-bottom:30px;letter-spacing:-.02em}
+h3{font-size:32px;font-weight:600;margin-bottom:15px}
+h4{font-size:24px;font-weight:600;margin-bottom:10px}
+p{font-size:17px;color:#6e6e73;margin-bottom:15px}
+.card{background:#f5f5f7;border-radius:18px;padding:30px;transition:.3s}
+.card:hover{transform:translateY(-4px)}
+.icon{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,#007aff,#5856d6);margin-bottom:15px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px}
+.badge{display:inline-block;background:#007aff;color:#fff;padding:4px 12px;border-radius:12px;font-size:13px;font-weight:600;margin-bottom:10px}
+.feature-img{width:100%;height:200px;background:linear-gradient(135deg,#f5f5f7,#e8e8ed);border-radius:12px;margin-bottom:15px}
+.stat{font-size:48px;font-weight:700;color:#007aff;margin-bottom:5px}
+.timeline{position:relative;padding-left:30px}
+.timeline:before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:#007aff}
+.timeline-item{position:relative;padding-bottom:30px}
+.timeline-item:before{content:'';position:absolute;left:-35px;top:5px;width:12px;height:12px;border-radius:50%;background:#007aff}
+.tag{display:inline-block;background:#e8e8ed;color:#1d1d1f;padding:6px 14px;border-radius:8px;font-size:14px;margin:4px}
+.progress{height:8px;background:#e8e8ed;border-radius:4px;overflow:hidden;margin-bottom:10px}
+.progress-bar{height:100%;background:#007aff;border-radius:4px}
+.split{display:flex;gap:30px;align-items:center}
+.split>*{flex:1}
+.highlight{background:linear-gradient(135deg,#007aff,#5856d6);color:#fff;border-radius:18px;padding:40px}
+.btn{display:inline-block;background:#007aff;color:#fff;padding:12px 24px;border-radius:12px;text-decoration:none;font-weight:500;transition:.3s}
+.btn:hover{background:#0051d5}
+@media(max-width:768px){
+h2{font-size:36px}
+h3{font-size:24px}
+.split{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Feature 351: AI Writing Assistant -->
+<section class="section">
+<h2>AI Writing Assistant</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="icon">✍️</div>
+<h4>Smart Composition</h4>
+<p>Real-time suggestions enhance your writing with contextual improvements and style refinements.</p>
+</div>
+<div class="card">
+<div class="icon">🎯</div>
+<h4>Tone Adjustment</h4>
+<p>Adapt your message for any audience with intelligent tone detection and modification.</p>
+</div>
+</div>
+</section>
+
+<!-- Feature 352: Cross-Platform Sync -->
+<section class="section">
+<div class="highlight">
+<h3>Universal Sync</h3>
+<p>Your data seamlessly syncs across all your Apple devices in real-time with end-to-end encryption.</p>
+<div class="stat">99.9%</div>
+<p style="color:#fff">Sync reliability</p>
+</div>
+</section>
+
+<!-- Feature 353: Advanced Analytics -->
+<section class="section">
+<h2>Advanced Analytics</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="badge">NEW</div>
+<h4>Usage Insights</h4>
+<div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+<p>Track patterns and optimize your workflow efficiency.</p>
+</div>
+<div class="card">
+<h4>Performance Metrics</h4>
+<div class="progress"><div class="progress-bar" style="width:92%"></div></div>
+<p>Monitor system performance with detailed breakdowns.</p>
+</div>
+<div class="card">
+<h4>Trend Analysis</h4>
+<div class="progress"><div class="progress-bar" style="width:78%"></div></div>
+<p>Discover emerging patterns in your data.</p>
+</div>
+</div>
+</section>
+
+<!-- Feature 354: Voice Commands -->
+<section class="section">
+<div class="split">
+<div>
+<h2>Voice Commands</h2>
+<p>Control your device naturally with advanced voice recognition supporting 40+ languages.</p>
+<span class="tag">Hands-free</span>
+<span class="tag">Always learning</span>
+<span class="tag">Private</span>
+</div>
+<div class="feature-img"></div>
+</div>
+</section>
+
+<!-- Feature 355: Collaboration Tools -->
+<section class="section">
+<h2>Collaboration Tools</h2>
+<div class="timeline">
+<div class="timeline-item">
+<h4>Real-time Editing</h4>
+<p>Multiple users can edit simultaneously with conflict resolution.</p>
+</div>
+<div class="timeline-item">
+<h4>Version Control</h4>
+<p>Automatic versioning keeps track of all changes.</p>
+</div>
+<div class="timeline-item">
+<h4>Comment System</h4>
+<p>Contextual feedback directly within documents.</p>
+</div>
+</div>
+</section>
+
+<!-- Feature 356: Smart Home Integration -->
+<section class="section">
+<h2>Smart Home Integration</h2>
+<div class="grid grid-4">
+<div class="card">
+<div class="icon">💡</div>
+<h4>Lighting</h4>
+</div>
+<div class="card">
+<div class="icon">🌡️</div>
+<h4>Climate</h4>
+</div>
+<div class="card">
+<div class="icon">🔒</div>
+<h4>Security</h4>
+</div>
+<div class="card">
+<div class="icon">📹</div>
+<h4>Cameras</h4>
+</div>
+</div>
+</section>
+
+<!-- Feature 357: Battery Optimization -->
+<section class="section">
+<div class="card">
+<h3>Intelligent Battery Management</h3>
+<p>Machine learning optimizes charging patterns to extend battery lifespan by up to 50%.</p>
+<div class="stat">2x</div>
+<p>Longer battery life</p>
+</div>
+</section>
+
+<!-- Feature 358: Accessibility Features -->
+<section class="section">
+<h2>Accessibility Features</h2>
+<div class="grid grid-2">
+<div class="card">
+<h4>VoiceOver</h4>
+<p>Industry-leading screen reader with gesture-based navigation.</p>
+</div>
+<div class="card">
+<h4>Display Accommodations</h4>
+<p>Customize colors, contrast, and text size for optimal readability.</p>
+</div>
+<div class="card">
+<h4>Switch Control</h4>
+<p>Navigate using adaptive switches and custom gestures.</p>
+</div>
+<div class="card">
+<h4>Live Captions</h4>
+<p>Real-time transcription for all audio content.</p>
+</div>
+</div>
+</section>
+
+<!-- Feature 359: Privacy Dashboard -->
+<section class="section">
+<div class="split">
+<div class="feature-img"></div>
+<div>
+<h2>Privacy Dashboard</h2>
+<p>Complete transparency into how apps access your data with granular controls.</p>
+<a href="#" class="btn">Review Privacy</a>
+</div>
+</div>
+</section>
+
+<!-- Feature 360: Focus Modes -->
+<section class="section">
+<h2>Focus Modes</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="badge">Work</div>
+<h4>Deep Work</h4>
+<p>Block distractions and notify only priority contacts.</p>
+</div>
+<div class="card">
+<div class="badge">Personal</div>
+<h4>Personal Time</h4>
+<p>Silence work notifications during off-hours.</p>
+</div>
+<div class="card">
+<div class="badge">Sleep</div>
+<h4>Sleep Mode</h4>
+<p>Minimize interruptions for better rest.</p>
+</div>
+</div>
+</section>
+
+<!-- Feature 361: Cloud Storage -->
+<section class="section">
+<div class="highlight">
+<h3>Secure Cloud Storage</h3>
+<p>Store files, photos, and documents with military-grade encryption.</p>
+<div class="stat">5TB</div>
+<p style="color:#fff">Available storage</p>
+</div>
+</section>
+
+<!-- Feature 362: Gesture Controls -->
+<section class="section">
+<h2>Gesture Controls</h2>
+<div class="grid grid-2">
+<div class="card">
+<h4>Multi-touch Gestures</h4>
+<p>Pinch, swipe, and rotate with precise recognition.</p>
+<span class="tag">Intuitive</span>
+</div>
+<div class="card">
+<h4>Custom Gestures</h4>
+<p>Create personalized shortcuts for frequent actions.</p>
+<span class="tag">Customizable</span>
+</div>
+</div>
+</section>
+
+<!-- Feature 363: System Diagnostics -->
+<section class="section">
+<h2>System Diagnostics</h2>
+<div class="card">
+<h4>Health Check</h4>
+<div class="progress"><div class="progress-bar" style="width:95%"></div></div>
+<p>CPU Performance: Excellent</p>
+<div class="progress"><div class="progress-bar" style="width:88%"></div></div>
+<p>Memory Usage: Good</p>
+<div class="progress"><div class="progress-bar" style="width:76%"></div></div>
+<p>Storage Available: 76%</p>
+</div>
+</section>
+
+<!-- Feature 364: AR Experiences -->
+<section class="section">
+<div class="split">
+<div>
+<h2>AR Experiences</h2>
+<p>Immersive augmented reality powered by advanced sensors and neural processing.</p>
+<span class="tag">LiDAR</span>
+<span class="tag">6DOF Tracking</span>
+<span class="tag">Real-time</span>
+</div>
+<div class="feature-img"></div>
+</div>
+</section>
+
+<!-- Feature 365: Password Manager -->
+<section class="section">
+<h2>Password Manager</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="icon">🔐</div>
+<h4>Auto-fill</h4>
+<p>Securely store and auto-fill passwords across all apps.</p>
+</div>
+<div class="card">
+<div class="icon">⚠️</div>
+<h4>Security Alerts</h4>
+<p>Notifications for compromised or weak passwords.</p>
+</div>
+</div>
+</section>
+
+<!-- Feature 366: Widgets -->
+<section class="section">
+<h2>Customizable Widgets</h2>
+<div class="grid grid-4">
+<div class="card">
+<div class="feature-img" style="height:100px"></div>
+<h4>Weather</h4>
+</div>
+<div class="card">
+<div class="feature-img" style="height:100px"></div>
+<h4>Calendar</h4>
+</div>
+<div class="card">
+<div class="feature-img" style="height:100px"></div>
+<h4>Activity</h4>
+</div>
+<div class="card">
+<div class="feature-img" style="height:100px"></div>
+<h4>News</h4>
+</div>
+</div>
+</section>
+
+<!-- Feature 367: Screen Time -->
+<section class="section">
+<div class="card">
+<h3>Screen Time Management</h3>
+<p>Understand and manage your digital habits with detailed insights and controls.</p>
+<div class="stat">4h 32m</div>
+<p>Daily average</p>
+<div class="progress" style="margin-top:15px"><div class="progress-bar" style="width:65%"></div></div>
+</div>
+</section>
+
+<!-- Feature 368: App Clips -->
+<section class="section">
+<h2>App Clips</h2>
+<div class="split">
+<div class="feature-img"></div>
+<div>
+<h4>Instant Access</h4>
+<p>Discover and use apps without installation. Scan QR codes or NFC tags for immediate functionality.</p>
+<a href="#" class="btn">Learn More</a>
+</div>
+</div>
+</section>
+
+<!-- Feature 369: Handoff -->
+<section class="section">
+<h2>Handoff</h2>
+<div class="grid grid-3">
+<div class="card">
+<h4>iPhone to Mac</h4>
+<p>Start on one device, finish on another seamlessly.</p>
+</div>
+<div class="card">
+<h4>Universal Clipboard</h4>
+<p>Copy on one device, paste on another.</p>
+</div>
+<div class="card">
+<h4>Auto Unlock</h4>
+<p>Unlock your Mac with your Apple Watch.</p>
+</div>
+</div>
+</section>
+
+<!-- Feature 370: Find My -->
+<section class="section">
+<div class="highlight">
+<h3>Find My Network</h3>
+<p>Locate your devices and items even when offline using crowd-sourced Bluetooth technology.</p>
+<span class="tag" style="background:#fff;color:#007aff">Encrypted</span>
+<span class="tag" style="background:#fff;color:#007aff">Anonymous</span>
+</div>
+</section>
+
+<!-- Feature 371: Memoji -->
+<section class="section">
+<h2>Memoji & Animoji</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="feature-img"></div>
+<h4>Personal Expression</h4>
+<p>Create custom avatars with extensive customization options.</p>
+</div>
+<div class="card">
+<div class="feature-img"></div>
+<h4>Real-time Animation</h4>
+<p>TrueDepth camera captures facial expressions instantly.</p>
+</div>
+</div>
+</section>
+
+<!-- Feature 372: Shortcuts -->
+<section class="section">
+<h2>Shortcuts Automation</h2>
+<div class="timeline">
+<div class="timeline-item">
+<h4>Pre-built Actions</h4>
+<p>Hundreds of actions from apps you use every day.</p>
+</div>
+<div class="timeline-item">
+<h4>Custom Workflows</h4>
+<p>Chain multiple actions into powerful automations.</p>
+</div>
+<div class="timeline-item">
+<h4>Trigger Events</h4>
+<p>Run shortcuts based on time, location, or NFC tags.</p>
+</div>
+</div>
+</section>
+
+<!-- Feature 373: Live Text -->
+<section class="section">
+<div class="split">
+<div>
+<h2>Live Text</h2>
+<p>Interact with text in any image. Copy, translate, call, email, and more with a simple tap.</p>
+<span class="tag">On-device ML</span>
+<span class="tag">Private</span>
+</div>
+<div class="feature-img"></div>
+</div>
+</section>
+
+<!-- Feature 374: Spatial Audio -->
+<section class="section">
+<h2>Spatial Audio</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="icon">🎧</div>
+<h4>Dynamic Head Tracking</h4>
+<p>Sound stays anchored as you move your head for immersive experiences.</p>
+</div>
+<div class="card">
+<div class="icon">🎵</div>
+<h4>Dolby Atmos</h4>
+<p>Multi-dimensional audio creates cinema-quality surround sound.</p>
+</div>
+</div>
+</section>
+
+<!-- Feature 375: SharePlay -->
+<section class="section">
+<div class="card">
+<h3>SharePlay</h3>
+<p>Watch, listen, and experience content together during FaceTime calls with synchronized playback.</p>
+<div class="grid grid-3" style="margin-top:20px">
+<div>
+<div class="icon">📺</div>
+<h4>Movies & TV</h4>
+</div>
+<div>
+<div class="icon">🎵</div>
+<h4>Music</h4>
+</div>
+<div>
+<div class="icon">📱</div>
+<h4>Apps</h4>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Sections 126-150 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<div class="section-label">126 — Staggered Grid Blog</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; grid-row: span 2;">
+        <div style="aspect-ratio: 3/4; background: linear-gradient(135deg, #E9F0FE 0%, #E3F5E1 100%);"></div>
+        <div style="padding: 24px;">
+          <div style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Development</div>
+          <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Mastering async/await patterns in JavaScript</h3>
+          <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Advanced techniques for handling asynchronous operations elegantly.</p>
+        </div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="font-size: 12px; font-weight: 600; color: #7C3AED; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Design</div>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Creating micro-interactions</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Small details that make big impacts on user experience.</p>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="font-size: 12px; font-weight: 600; color: #1A8245; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Tutorial</div>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Git branching strategies</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Effective workflows for team collaboration.</p>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; grid-row: span 2;">
+        <div style="aspect-ratio: 3/4; background: linear-gradient(135deg, #F3EEFF 0%, #FFE5E5 100%);"></div>
+        <div style="padding: 24px;">
+          <div style="font-size: 12px; font-weight: 600; color: #D72C0D; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Case Study</div>
+          <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Scaling our infrastructure to 1M users</h3>
+          <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Lessons learned from rapid growth and scaling challenges.</p>
+        </div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="font-size: 12px; font-weight: 600; color: #B98900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Guide</div>
+        <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">API security essentials</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Protecting your APIs from common vulnerabilities.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">127 — Blog with Stats</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <article>
+        <h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; line-height: 1.2; margin-bottom: 20px;">How we improved page load time by 70%</h2>
+        <div style="display: flex; gap: 40px; margin-bottom: 32px;">
+          <div>
+            <div style="font-size: 40px; font-weight: 700; color: #2C6ECB; margin-bottom: 4px;">70%</div>
+            <div style="font-size: 14px; color: #6D6D72;">Faster Load Time</div>
+          </div>
+          <div>
+            <div style="font-size: 40px; font-weight: 700; color: #1A8245; margin-bottom: 4px;">3.2s</div>
+            <div style="font-size: 14px; color: #6D6D72;">To 950ms</div>
+          </div>
+          <div>
+            <div style="font-size: 40px; font-weight: 700; color: #7C3AED; margin-bottom: 4px;">45%</div>
+            <div style="font-size: 14px; color: #6D6D72;">Less Bandwidth</div>
+          </div>
+        </div>
+        <p style="font-size: 17px; color: #6D6D72; line-height: 1.7; margin-bottom: 24px;">A comprehensive case study on the techniques and strategies we used to dramatically improve our web application's performance metrics.</p>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 40px; height: 40px; background: #E9F0FE; border-radius: 10px;"></div>
+          <div>
+            <div style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Performance Team</div>
+            <div style="font-size: 13px; color: #6D6D72;">Jan 20, 2024 • 12 min read</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">128 — Minimal Card Blog Grid</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+      <article style="padding: 24px; background: #F6F6F7; border-radius: 12px;">
+        <div style="font-size: 11px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Quick Tip</div>
+        <h4 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Debugging React apps</h4>
+        <div style="font-size: 12px; color: #6D6D72;">2 min</div>
+      </article>
+      <article style="padding: 24px; background: #F6F6F7; border-radius: 12px;">
+        <div style="font-size: 11px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Snippet</div>
+        <h4 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Custom hooks library</h4>
+        <div style="font-size: 12px; color: #6D6D72;">3 min</div>
+      </article>
+      <article style="padding: 24px; background: #F6F6F7; border-radius: 12px;">
+        <div style="font-size: 11px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Tool</div>
+        <h4 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">VS Code extensions</h4>
+        <div style="font-size: 12px; color: #6D6D72;">4 min</div>
+      </article>
+      <article style="padding: 24px; background: #F6F6F7; border-radius: 12px;">
+        <div style="font-size: 11px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Resource</div>
+        <h4 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Learning platforms</h4>
+        <div style="font-size: 12px; color: #6D6D72;">5 min</div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">129 — Blog with Pull Quotes</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <article>
+        <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; line-height: 1.3; margin-bottom: 24px;">The art of code review: Building better software together</h2>
+        <p style="font-size: 17px; color: #6D6D72; line-height: 1.7; margin-bottom: 32px;">Code reviews are one of the most powerful tools we have for maintaining code quality, sharing knowledge, and fostering collaboration within development teams.</p>
+        <div style="padding: 32px; background: linear-gradient(135deg, #E9F0FE 0%, #F3EEFF 100%); border-left: 4px solid #2C6ECB; border-radius: 12px; margin: 40px 0;">
+          <p style="font-size: 22px; font-weight: 600; color: #1D1D1F; line-height: 1.5; font-style: italic;">"The best code reviews are conversations, not critiques. They're opportunities to learn and grow together."</p>
+        </div>
+        <p style="font-size: 17px; color: #6D6D72; line-height: 1.7;">Effective code reviews require empathy, clear communication, and a shared commitment to continuous improvement. When done well, they become a cornerstone of engineering culture.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">130 — Blog Grid with Icons</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
+      <article style="padding: 28px; border: 1px solid #E3E3E8; border-radius: 12px;">
+        <div style="width: 48px; height: 48px; background: #E9F0FE; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#2C6ECB"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#2C6ECB" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3 style="font-size: 19px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Component libraries comparison</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Evaluating popular UI libraries for your next project.</p>
+        <div style="font-size: 13px; color: #AEAEB2;">8 min read</div>
+      </article>
+      <article style="padding: 28px; border: 1px solid #E3E3E8; border-radius: 12px;">
+        <div style="width: 48px; height: 48px; background: #F3EEFF; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#7C3AED" stroke-width="2"/><path d="M12 8v8M8 12h8" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3 style="font-size: 19px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Adding features incrementally</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Strategies for sustainable feature development.</p>
+        <div style="font-size: 13px; color: #AEAEB2;">6 min read</div>
+      </article>
+      <article style="padding: 28px; border: 1px solid #E3E3E8; border-radius: 12px;">
+        <div style="width: 48px; height: 48px; background: #E3F5E1; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1A8245" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#1A8245" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3 style="font-size: 19px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Testing strategies that work</h3>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Practical approaches to comprehensive testing.</p>
+        <div style="font-size: 13px; color: #AEAEB2;">10 min read</div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">131 — Sidebar Navigation Blog</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 48px;">
+      <nav>
+        <div style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Categories</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="#" style="padding: 10px 16px; background: #F6F6F7; color: #1D1D1F; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600; transition: all 0.2s ease;">All Posts</a>
+          <a href="#" style="padding: 10px 16px; color: #6D6D72; text-decoration: none; border-radius: 8px; font-size: 14px; transition: all 0.2s ease;">Development</a>
+          <a href="#" style="padding: 10px 16px; color: #6D6D72; text-decoration: none; border-radius: 8px; font-size: 14px; transition: all 0.2s ease;">Design</a>
+          <a href="#" style="padding: 10px 16px; color: #6D6D72; text-decoration: none; border-radius: 8px; font-size: 14px; transition: all 0.2s ease;">Product</a>
+          <a href="#" style="padding: 10px 16px; color: #6D6D72; text-decoration: none; border-radius: 8px; font-size: 14px; transition: all 0.2s ease;">Engineering</a>
+        </div>
+      </nav>
+      <div>
+        <article style="margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid #E3E3E8;">
+          <div style="aspect-ratio: 2/1; background: linear-gradient(135deg, #E9F0FE 0%, #E3F5E1 100%); border-radius: 12px; margin-bottom: 20px;"></div>
+          <div style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Development</div>
+          <h3 style="font-size: 24px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Building scalable Node.js applications</h3>
+          <p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Architectural patterns and best practices for production-ready Node.js apps.</p>
+        </article>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 20px;">
+            <h4 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Microservices patterns</h4>
+            <div style="font-size: 13px; color: #AEAEB2;">9 min read</div>
+          </article>
+          <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 20px;">
+            <h4 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Database optimization</h4>
+            <div style="font-size: 13px; color: #AEAEB2;">11 min read</div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">132 — Recent Posts Widget</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 400px; margin: 0 auto;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 24px;">Recent Posts</h3>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <article style="display: flex; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid #E3E3E8;">
+          <div style="width: 80px; aspect-ratio: 1/1; background: linear-gradient(135deg, #E9F0FE 0%, #E3F5E1 100%); border-radius: 8px; flex-shrink: 0;"></div>
+          <div style="flex: 1;">
+            <h4 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 6px;">Modern CSS techniques</h4>
+            <div style="font-size: 12px; color: #AEAEB2;">Jan 22 • 6 min</div>
+          </div>
+        </article>
+        <article style="display: flex; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid #E3E3E8;">
+          <div style="width: 80px; aspect-ratio: 1/1; background: linear-gradient(135deg, #F3EEFF 0%, #FFE5E5 100%); border-radius: 8px; flex-shrink: 0;"></div>
+          <div style="flex: 1;">
+            <h4 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 6px;">API design principles</h4>
+            <div style="font-size: 12px; color: #AEAEB2;">Jan 20 • 8 min</div>
+          </div>
+        </article>
+        <article style="display: flex; gap: 16px;">
+          <div style="width: 80px; aspect-ratio: 1/1; background: linear-gradient(135deg, #E3F5E1 0%, #FFFBE6 100%); border-radius: 8px; flex-shrink: 0;"></div>
+          <div style="flex: 1;">
+            <h4 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 6px;">React performance tips</h4>
+            <div style="font-size: 12px; color: #AEAEB2;">Jan 18 • 5 min</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">133 — Blog with Code Preview</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <article>
+        <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; line-height: 1.3; margin-bottom: 16px;">Essential JavaScript array methods</h2>
+        <p style="font-size: 16px; color: #6D6D72; line-height: 1.7; margin-bottom: 32px;">Master these powerful array methods to write more efficient and readable JavaScript code.</p>
+        <div style="padding: 24px; background: #1D1D1F; border-radius: 12px; margin-bottom: 32px; font-family: 'Monaco', 'Courier New', monospace;">
+          <pre style="color: #E9F0FE; font-size: 14px; line-height: 1.6; overflow-x: auto;">const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]</pre>
+        </div>
+        <p style="font-size: 16px; color: #6D6D72; line-height: 1.7;">The map method creates a new array by transforming each element using a provided function, making it perfect for data transformation tasks.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">134 — Tag Cloud Blog</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="margin-bottom: 40px;">
+        <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 20px;">Browse by Topic</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <a href="#" style="padding: 8px 16px; background: #E9F0FE; color: #2C6ECB; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;">JavaScript</a>
+          <a href="#" style="padding: 8px 16px; background: #F3EEFF; color: #7C3AED; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;">CSS</a>
+          <a href="#" style="padding: 8px 16px; background: #E3F5E1; color: #1A8245; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;">React</a>
+          <a href="#" style="padding: 8px 16px; background: #FFFBE6; color: #B98900; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;">Node.js</a>
+          <a href="#" style="padding: 8px 16px; background: #FFE5E5; color: #D72C0D; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;">TypeScript</a>
+          <a href="#" style="padding: 8px 16px; background: #E9F0FE; color: #2C6ECB; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;">API Design</a>
+          <a href="#" style="padding: 8px 16px; background: #F3EEFF; color: #7C3AED; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;">Performance</a>
+          <a href="#" style="padding: 8px 16px; background: #E3F5E1; color: #1A8245; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600;">Testing</a>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+        <article style="padding: 24px; border: 1px solid #E3E3E8; border-radius: 12px;">
+          <h3 style="font-size: 19px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Getting started with TypeScript</h3>
+          <p style="font-size: 14px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">A beginner-friendly introduction to type-safe JavaScript.</p>
+          <div style="font-size: 13px; color: #AEAEB2;">7 min read</div>
+        </article>
+        <article style="padding: 24px; border: 1px solid #E3E3E8; border-radius: 12px;">
+          <h3 style="font-size: 19px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Advanced React patterns</h3>
+          <p style="font-size: 14px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Composition patterns for complex React applications.</p>
+          <div style="font-size: 13px; color: #AEAEB2;">11 min read</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">135 — Image-First Blog Grid</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+      <article>
+        <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, #E9F0FE 0%, #E3F5E1 100%); border-radius: 12px; margin-bottom: 20px;"></div>
+        <div style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Visual Design</div>
+        <h3 style="font-size: 24px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Color theory for digital products</h3>
+        <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Understanding color psychology and creating effective palettes.</p>
+        <div style="font-size: 13px; color: #AEAEB2;">Jan 21 • 9 min read</div>
+      </article>
+      <article>
+        <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, #F3EEFF 0%, #FFE5E5 100%); border-radius: 12px; margin-bottom: 20px;"></div>
+        <div style="font-size: 12px; font-weight: 600; color: #7C3AED; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Photography</div>
+        <h3 style="font-size: 24px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Product photography essentials</h3>
+        <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Professional techniques for stunning product images.</p>
+        <div style="font-size: 13px; color: #AEAEB2;">Jan 19 • 12 min read</div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">136 — Numbered List Blog</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <h2 style="font-size: 36px; font-weight: 700; color: #1D1D1F; line-height: 1.3; margin-bottom: 24px;">10 productivity tips for developers</h2>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; gap: 20px;">
+          <div style="width: 40px; height: 40px; background: #E9F0FE; color: #2C6ECB; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0;">1</div>
+          <div>
+            <h3 style="font-size: 19px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Use keyboard shortcuts everywhere</h3>
+            <p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Master your IDE, browser, and terminal shortcuts to save hours every week.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <div style="width: 40px; height: 40px; background: #F3EEFF; color: #7C3AED; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0;">2</div>
+          <div>
+            <h3 style="font-size: 19px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Automate repetitive tasks</h3>
+            <p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Write scripts and use tools to eliminate manual, repetitive work.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <div style="width: 40px; height: 40px; background: #E3F5E1; color: #1A8245; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0;">3</div>
+          <div>
+            <h3 style="font-size: 19px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Practice focused work blocks</h3>
+            <p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">Use techniques like Pomodoro to maintain deep focus and avoid burnout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">137 — Comparison Blog Layout</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; line-height: 1.3; margin-bottom: 32px; text-align: center;">React vs Vue: Which framework should you choose?</h2>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+        <div style="padding: 32px; border: 2px solid #E9F0FE; border-radius: 12px; background: linear-gradient(135deg, rgba(233,240,254,0.2) 0%, rgba(255,255,255,1) 100%);">
+          <div style="width: 56px; height: 56px; background: #E9F0FE; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#2C6ECB"/></svg>
+          </div>
+          <h3 style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">React</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+            <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #6D6D72; line-height: 1.6;">
+              <span style="color: #1A8245; font-size: 18px;">✓</span>
+              <span>Massive ecosystem and community</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #6D6D72; line-height: 1.6;">
+              <span style="color: #1A8245; font-size: 18px;">✓</span>
+              <span>Flexible and unopinionated</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #6D6D72; line-height: 1.6;">
+              <span style="color: #1A8245; font-size: 18px;">✓</span>
+              <span>Strong industry adoption</span>
+            </li>
+          </ul>
+        </div>
+        <div style="padding: 32px; border: 2px solid #E3F5E1; border-radius: 12px; background: linear-gradient(135deg, rgba(227,245,225,0.2) 0%, rgba(255,255,255,1) 100%);">
+          <div style="width: 56px; height: 56px; background: #E3F5E1; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l10 6v6c0 5.5-3.8 10.7-10 12-6.2-1.3-10-6.5-10-12V8l10-6z" fill="#1A8245"/></svg>
+          </div>
+          <h3 style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">Vue</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+            <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #6D6D72; line-height: 1.6;">
+              <span style="color: #1A8245; font-size: 18px;">✓</span>
+              <span>Gentle learning curve</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #6D6D72; line-height: 1.6;">
+              <span style="color: #1A8245; font-size: 18px;">✓</span>
+              <span>Comprehensive official tooling</span>
+            </li>
+            <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #6D6D72; line-height: 1.6;">
+              <span style="color: #1A8245; font-size: 18px;">✓</span>
+              <span>Excellent documentation</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">138 — Blog with Breadcrumbs</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 32px; font-size: 14px; color: #6D6D72;">
+        <a href="#" style="color: #6D6D72; text-decoration: none;">Home</a>
+        <span>/</span>
+        <a href="#" style="color: #6D6D72; text-decoration: none;">Blog</a>
+        <span>/</span>
+        <a href="#" style="color: #6D6D72; text-decoration: none;">Development</a>
+        <span>/</span>
+        <span style="color: #1D1D1F; font-weight: 600;">Current Article</span>
+      </div>
+      <article>
+        <h1 style="font-size: 40px; font-weight: 700; color: #1D1D1F; line-height: 1.2; margin-bottom: 16px;">Understanding JavaScript closures</h1>
+        <p style="font-size: 18px; color: #6D6D72; line-height: 1.6; margin-bottom: 24px;">A comprehensive guide to one of JavaScript's most powerful and sometimes confusing features.</p>
+        <div style="display: flex; align-items: center; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid #E3E3E8;">
+          <div style="width: 48px; height: 48px; background: #E9F0FE; border-radius: 10px;"></div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Chris Martinez</div>
+            <div style="font-size: 14px; color: #6D6D72;">Jan 22, 2024 • 10 min read</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">139 — Blog Pagination</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="margin-bottom: 40px;">
+        <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">All Articles</h2>
+        <p style="font-size: 15px; color: #6D6D72;">Showing 1-10 of 247 articles</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 48px;">
+        <article style="padding-bottom: 32px; border-bottom: 1px solid #E3E3E8;">
+          <h3 style="font-size: 22px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Building serverless applications with AWS</h3>
+          <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Complete guide to deploying serverless functions on AWS Lambda.</p>
+          <div style="font-size: 13px; color: #AEAEB2;">Jan 22 • 14 min read</div>
+        </article>
+        <article style="padding-bottom: 32px; border-bottom: 1px solid #E3E3E8;">
+          <h3 style="font-size: 22px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Advanced Git workflows for teams</h3>
+          <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Collaborative strategies for managing complex repositories.</p>
+          <div style="font-size: 13px; color: #AEAEB2;">Jan 20 • 9 min read</div>
+        </article>
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+        <button style="padding: 10px 16px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; color: #6D6D72; font-size: 14px; font-weight: 600; cursor: pointer;">Previous</button>
+        <button style="padding: 10px 16px; background: #1A1A1A; border: none; border-radius: 8px; color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer;">1</button>
+        <button style="padding: 10px 16px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; color: #6D6D72; font-size: 14px; font-weight: 600; cursor: pointer;">2</button>
+        <button style="padding: 10px 16px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; color: #6D6D72; font-size: 14px; font-weight: 600; cursor: pointer;">3</button>
+        <span style="color: #AEAEB2; padding: 0 8px;">...</span>
+        <button style="padding: 10px 16px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; color: #6D6D72; font-size: 14px; font-weight: 600; cursor: pointer;">25</button>
+        <button style="padding: 10px 16px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; color: #6D6D72; font-size: 14px; font-weight: 600; cursor: pointer;">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">140 — Editorial Blog Layout</div>
+<div class="section-container">
+  <div style="padding: 80px 100px; background: #FFFFFF;">
+    <div style="max-width: 680px; margin: 0 auto;">
+      <article>
+        <div style="font-size: 13px; font-weight: 600; color: #2C6ECB; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">Long-Form Article</div>
+        <h1 style="font-size: 48px; font-weight: 700; color: #1D1D1F; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.02em;">The evolution of web standards and what it means for developers</h1>
+        <p style="font-size: 20px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">An in-depth exploration of how web standards have evolved over the past decade and their impact on modern development practices.</p>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 24px 0; border-top: 1px solid #E3E3E8; border-bottom: 1px solid #E3E3E8; margin-bottom: 40px;">
+          <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #2C6ECB 0%, #7C3AED 100%); border-radius: 12px;"></div>
+          <div style="flex: 1;">
+            <div style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Dr. Patricia Lopez</div>
+            <div style="font-size: 14px; color: #6D6D72;">Senior Web Platform Engineer</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 14px; color: #6D6D72;">Jan 20, 2024</div>
+            <div style="font-size: 14px; color: #AEAEB2;">25 min read</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">141 — Blog with Progress Bar</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div style="height: 4px; background: #E3E3E8; border-radius: 2px; margin-bottom: 40px; overflow: hidden;">
+        <div style="height: 100%; width: 35%; background: linear-gradient(90deg, #2C6ECB 0%, #1A8245 100%); border-radius: 2px;"></div>
+      </div>
+      <article>
+        <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; line-height: 1.3; margin-bottom: 20px;">A complete guide to web accessibility</h2>
+        <p style="font-size: 17px; color: #6D6D72; line-height: 1.7; margin-bottom: 24px;">Learn how to build inclusive web experiences that work for everyone.</p>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px;">
+          <div style="width: 40px; height: 40px; background: #E9F0FE; border-radius: 10px;"></div>
+          <div>
+            <div style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Accessibility Team</div>
+            <div style="font-size: 13px; color: #6D6D72;">20 min read</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">142 — Blog Series Navigation</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="padding: 24px; background: #F6F6F7; border-radius: 12px; margin-bottom: 32px;">
+        <div style="font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Part 3 of 5 • Series: React Fundamentals</div>
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
+          <a href="#" style="display: flex; align-items: center; gap: 8px; color: #2C6ECB; text-decoration: none; font-size: 14px; font-weight: 600;">
+            <span>←</span>
+            <span>Previous: State Management</span>
+          </a>
+          <a href="#" style="display: flex; align-items: center; gap: 8px; color: #2C6ECB; text-decoration: none; font-size: 14px; font-weight: 600;">
+            <span>Next: Context API</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+      <article>
+        <h1 style="font-size: 36px; font-weight: 700; color: #1D1D1F; line-height: 1.2; margin-bottom: 16px;">Understanding React hooks</h1>
+        <p style="font-size: 17px; color: #6D6D72; line-height: 1.6;">Deep dive into hooks and how they revolutionize React development.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">143 — Guest Author Blog</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <article>
+        <div style="padding: 24px; background: linear-gradient(135deg, #E9F0FE 0%, #F3EEFF 100%); border-radius: 12px; margin-bottom: 32px;">
+          <div style="font-size: 13px; font-weight: 600; color: #2C6ECB; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Guest Post</div>
+          <div style="display: flex; gap: 20px; align-items: center;">
+            <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #2C6ECB 0%, #7C3AED 100%); border-radius: 12px;"></div>
+            <div>
+              <div style="font-size: 18px; font-weight: 700; color: #1D1D1F; margin-bottom: 4px;">Maria Garcia</div>
+              <div style="font-size: 14px; color: #6D6D72; margin-bottom: 8px;">Principal Engineer at TechCorp</div>
+              <div style="font-size: 13px; color: #6D6D72;">Maria is a web performance expert with 15 years of experience optimizing large-scale applications.</div>
+            </div>
+          </div>
+        </div>
+        <h1 style="font-size: 36px; font-weight: 700; color: #1D1D1F; line-height: 1.2; margin-bottom: 16px;">Real-world performance optimization strategies</h1>
+        <p style="font-size: 17px; color: #6D6D72; line-height: 1.6;">Practical lessons from optimizing performance at scale.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">144 — Blog with Table of Contents</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 60px; max-width: 1200px; margin: 0 auto;">
+      <aside style="position: sticky; top: 24px; height: fit-content;">
+        <div style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px;">Table of Contents</div>
+        <nav style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="#" style="font-size: 14px; color: #2C6ECB; text-decoration: none; font-weight: 600;">Introduction</a>
+          <a href="#" style="font-size: 14px; color: #6D6D72; text-decoration: none; padding-left: 12px;">Getting Started</a>
+          <a href="#" style="font-size: 14px; color: #6D6D72; text-decoration: none; padding-left: 12px;">Core Concepts</a>
+          <a href="#" style="font-size: 14px; color: #6D6D72; text-decoration: none; padding-left: 12px;">Advanced Topics</a>
+          <a href="#" style="font-size: 14px; color: #6D6D72; text-decoration: none; padding-left: 12px;">Conclusion</a>
+        </nav>
+      </aside>
+      <article style="max-width: 720px;">
+        <h1 style="font-size: 40px; font-weight: 700; color: #1D1D1F; line-height: 1.2; margin-bottom: 20px;">Comprehensive guide to modern CSS</h1>
+        <p style="font-size: 18px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">Everything you need to know about CSS in 2024, from basics to advanced techniques.</p>
+        <div style="padding: 20px; background: #F6F6F7; border-left: 4px solid #2C6ECB; border-radius: 8px;">
+          <p style="font-size: 15px; color: #6D6D72; line-height: 1.6;">This guide covers all aspects of modern CSS, including Grid, Flexbox, custom properties, and more.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">145 — Blog with Social Share</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <article>
+        <h1 style="font-size: 40px; font-weight: 700; color: #1D1D1F; line-height: 1.2; margin-bottom: 20px;">Building design systems for scale</h1>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 24px; margin-bottom: 32px; border-bottom: 1px solid #E3E3E8;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 40px; height: 40px; background: #E9F0FE; border-radius: 10px;"></div>
+            <div>
+              <div style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Design Systems Team</div>
+              <div style="font-size: 13px; color: #6D6D72;">Jan 20, 2024</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <button style="width: 36px; height: 36px; background: #E9F0FE; border: none; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" fill="#2C6ECB"/></svg>
+            </button>
+            <button style="width: 36px; height: 36px; background: #E9F0FE; border: none; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" fill="#2C6ECB"/></svg>
+            </button>
+            <button style="width: 36px; height: 36px; background: #E9F0FE; border: none; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#2C6ECB" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#2C6ECB" stroke-width="2"/></svg>
+            </button>
+          </div>
+        </div>
+        <p style="font-size: 17px; color: #6D6D72; line-height: 1.7;">Learn how to create and maintain design systems that serve teams of all sizes.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">146 — Highlighted Quote Blog</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <article>
+        <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; line-height: 1.3; margin-bottom: 24px;">The importance of user research in product development</h2>
+        <p style="font-size: 17px; color: #6D6D72; line-height: 1.7; margin-bottom: 32px;">User research is the foundation of great product design. It helps teams understand real user needs rather than assumptions.</p>
+        <div style="padding: 32px; background: linear-gradient(135deg, #FFFBE6 0%, #E9F0FE 100%); border-radius: 12px; margin: 40px 0;">
+          <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.8); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="#B98900"/></svg>
+          </div>
+          <p style="font-size: 20px; font-weight: 600; color: #1D1D1F; line-height: 1.5; margin-bottom: 12px;">Build products for users, not for yourself</p>
+          <p style="font-size: 15px; color: #6D6D72;">The most successful products are built on deep understanding of user behavior and needs.</p>
+        </div>
+        <p style="font-size: 17px; color: #6D6D72; line-height: 1.7;">Investing in research early saves time and resources in the long run by preventing costly pivots later in development.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">147 — Blog with Comments Preview</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <article style="margin-bottom: 48px;">
+        <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; line-height: 1.3; margin-bottom: 16px;">The future of JavaScript frameworks</h2>
+        <p style="font-size: 17px; color: #6D6D72; line-height: 1.7; margin-bottom: 24px;">Exploring emerging trends and innovations in the JavaScript ecosystem.</p>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 40px; height: 40px; background: #E9F0FE; border-radius: 10px;"></div>
+          <div>
+            <div style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Tech Editorial</div>
+            <div style="font-size: 13px; color: #6D6D72;">Jan 18, 2024 • 12 min read</div>
+          </div>
+        </div>
+      </article>
+      <div style="padding: 32px; background: #F6F6F7; border-radius: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F;">Comments (47)</h3>
+          <button style="padding: 10px 20px; background: #1A1A1A; color: #FFFFFF; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;">Add Comment</button>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="display: flex; gap: 12px;">
+            <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #2C6ECB 0%, #7C3AED 100%); border-radius: 8px; flex-shrink: 0;"></div>
+            <div>
+              <div style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Alex Johnson</div>
+              <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Great insights! I especially agree with the section on server components.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #1A8245 0%, #B98900 100%); border-radius: 8px; flex-shrink: 0;"></div>
+            <div>
+              <div style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px;">Sam Taylor</div>
+              <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">This article changed how I think about framework selection. Thank you!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">148 — Blog with Estimated Time</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE 0%, #E3F5E1 100%); position: relative;">
+          <div style="position: absolute; bottom: 12px; right: 12px; padding: 6px 12px; background: rgba(0,0,0,0.75); backdrop-filter: blur(8px); color: #FFFFFF; border-radius: 6px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>7 min</span>
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <div style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Tutorial</div>
+          <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Docker for beginners</h3>
+          <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Getting started with containerization.</p>
+        </div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #F3EEFF 0%, #FFE5E5 100%); position: relative;">
+          <div style="position: absolute; bottom: 12px; right: 12px; padding: 6px 12px; background: rgba(0,0,0,0.75); backdrop-filter: blur(8px); color: #FFFFFF; border-radius: 6px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>12 min</span>
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <div style="font-size: 12px; font-weight: 600; color: #7C3AED; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Deep Dive</div>
+          <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Advanced TypeScript patterns</h3>
+          <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">Type-level programming techniques.</p>
+        </div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E3F5E1 0%, #FFFBE6 100%); position: relative;">
+          <div style="position: absolute; bottom: 12px; right: 12px; padding: 6px 12px; background: rgba(0,0,0,0.75); backdrop-filter: blur(8px); color: #FFFFFF; border-radius: 6px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>5 min</span>
+          </div>
+        </div>
+        <div style="padding: 24px;">
+          <div style="font-size: 12px; font-weight: 600; color: #1A8245; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Quick Read</div>
+          <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">CSS Grid vs Flexbox</h3>
+          <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">When to use each layout system.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">149 — Blog with Featured Badge</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
+      <article style="border: 2px solid #2C6ECB; border-radius: 12px; overflow: hidden; position: relative;">
+        <div style="position: absolute; top: 16px; left: 16px; padding: 6px 12px; background: #2C6ECB; color: #FFFFFF; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; z-index: 1;">Featured</div>
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE 0%, #E3F5E1 100%);"></div>
+        <div style="padding: 28px;">
+          <h3 style="font-size: 24px; font-weight: 700; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Complete guide to web performance optimization</h3>
+          <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Everything you need to know about making your websites blazing fast.</p>
+          <div style="font-size: 13px; color: #AEAEB2;">15 min read • Jan 20, 2024</div>
+        </div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #F3EEFF 0%, #FFE5E5 100%);"></div>
+        <div style="padding: 28px;">
+          <h3 style="font-size: 24px; font-weight: 700; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Introduction to Web Components</h3>
+          <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Building reusable components with native browser APIs.</p>
+          <div style="font-size: 13px; color: #AEAEB2;">10 min read • Jan 17, 2024</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">150 — Blog Feed with Load More</div>
+<div class="section-container">
+  <div style="padding: 60px; background: #FFFFFF;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 48px;">
+        <article style="display: flex; gap: 28px; padding-bottom: 32px; border-bottom: 1px solid #E3E3E8;">
+          <div style="width: 180px; aspect-ratio: 1/1; background: linear-gradient(135deg, #E9F0FE 0%, #E3F5E1 100%); border-radius: 12px; flex-shrink: 0;"></div>
+          <div style="flex: 1;">
+            <div style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Engineering</div>
+            <h3 style="font-size: 24px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Building distributed systems with message queues</h3>
+            <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Learn how to design resilient systems using message queuing patterns.</p>
+            <div style="display: flex; align-items: center; gap: 12px; font-size: 13px; color: #AEAEB2;">
+              <span>11 min read</span>
+              <span>•</span>
+              <span>Jan 21, 2024</span>
+            </div>
+          </div>
+        </article>
+        <article style="display: flex; gap: 28px; padding-bottom: 32px; border-bottom: 1px solid #E3E3E8;">
+          <div style="width: 180px; aspect-ratio: 1/1; background: linear-gradient(135deg, #F3EEFF 0%, #FFE5E5 100%); border-radius: 12px; flex-shrink: 0;"></div>
+          <div style="flex: 1;">
+            <div style="font-size: 12px; font-weight: 600; color: #7C3AED; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Design</div>
+            <h3 style="font-size: 24px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Typography principles for web interfaces</h3>
+            <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 16px;">Creating readable, accessible typographic hierarchies.</p>
+            <div style="display: flex; align-items: center; gap: 12px; font-size: 13px; color: #AEAEB2;">
+              <span>8 min read</span>
+              <span>•</span>
+              <span>Jan 19, 2024</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div style="text-align: center;">
+        <button style="padding: 14px 32px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; color: #1D1D1F; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Load More Articles</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

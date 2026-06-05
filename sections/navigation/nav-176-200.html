@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Sections 176-200 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<!-- NAV 176: With Inline Task Counter -->
+<div class="section-label">Nav 176 — With Task Counter</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 24px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">TaskFlow</span>
+    <div style="display: flex; gap: 4px;">
+      <a style="padding: 6px 12px; font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600; background: #F6F6F7; border-radius: 6px; display: flex; align-items: center; gap: 6px;">
+        My Tasks
+        <span style="padding: 1px 7px; font-size: 11px; font-weight: 600; color: #FFFFFF; background: #D72C0D; border-radius: 9999px;">12</span>
+      </a>
+      <a style="padding: 6px 12px; font-size: 14px; color: #6D6D72; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+        Team
+        <span style="padding: 1px 7px; font-size: 11px; font-weight: 600; color: #6D6D72; background: #F5F5F7; border-radius: 9999px;">48</span>
+      </a>
+      <a style="padding: 6px 12px; font-size: 14px; color: #6D6D72; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+        Done
+        <span style="padding: 1px 7px; font-size: 11px; font-weight: 600; color: #1A8245; background: #E3F5E1; border-radius: 9999px;">156</span>
+      </a>
+    </div>
+  </div>
+  <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px;">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 1v10M1 6h10"/></svg>
+    Add Task
+  </button>
+</nav>
+</div>
+
+<!-- NAV 177: With Floating Action -->
+<div class="section-label">Nav 177 — Minimal with Floating Action</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between; position: relative;">
+  <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Notes</span>
+  <div style="display: flex; gap: 16px; align-items: center;">
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">All Notes</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Favorites</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Trash</a>
+  </div>
+  <div style="position: absolute; right: 24px; bottom: -20px; z-index: 10;">
+    <button style="width: 40px; height: 40px; border-radius: 9999px; background: #1A1A1A; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.16);">
+      <svg width="16" height="16" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M8 2v12M2 8h12"/></svg>
+    </button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 178: With Time Zone Display -->
+<div class="section-label">Nav 178 — With Time Zone Display</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 24px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Scheduler</span>
+    <div style="display: flex; gap: 16px;">
+      <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Calendar</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Availability</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Booking Links</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; background: #F6F6F7; border-radius: 6px;">
+      <svg width="12" height="12" fill="none" stroke="#6D6D72" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M6 3v3l2 1"/></svg>
+      <span style="font-size: 12px; color: #6D6D72; font-weight: 500;">PST (UTC-8)</span>
+    </div>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #2C6ECB; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">New Event</button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 179: With Inline Form/Input -->
+<div class="section-label">Nav 179 — With Inline Quick Add</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Bookmarks</span>
+  <div style="display: flex; align-items: center; gap: 8px; flex: 1; max-width: 480px; margin: 0 40px;">
+    <div style="flex: 1; display: flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF;">
+      <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="1.5"><path d="M7 1v4h4M3 13V3a2 2 0 012-2h4l4 4v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      <input type="text" placeholder="Paste URL to save..." style="border: none; outline: none; font-size: 13px; font-family: inherit; flex: 1; color: #1D1D1F; background: transparent;">
+    </div>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Save</button>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <span style="font-size: 13px; color: #AEAEB2;">342 saved</span>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 180: With Expandable Mega Menu -->
+<div class="section-label">Nav 180 — Expanded Mega Menu</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+  <div style="height: 56px; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">TechCorp</span>
+      <div style="display: flex; gap: 4px;">
+        <a style="padding: 6px 12px; font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600; background: #F6F6F7; border-radius: 6px;">Products ↓</a>
+        <a style="padding: 6px 12px; font-size: 14px; color: #6D6D72; text-decoration: none;">Developers</a>
+        <a style="padding: 6px 12px; font-size: 14px; color: #6D6D72; text-decoration: none;">Enterprise</a>
+        <a style="padding: 6px 12px; font-size: 14px; color: #6D6D72; text-decoration: none;">Pricing</a>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Sign In</a>
+      <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Get Started</button>
+    </div>
+  </div>
+  <!-- Mega Menu Panel -->
+  <div style="border-top: 1px solid #E3E3E8; padding: 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+    <div>
+      <div style="font-size: 11px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Platform</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Cloud Infrastructure</a>
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Compute Engine</a>
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Storage</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size: 11px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Analytics</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Data Pipeline</a>
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Real-time Metrics</a>
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Business Intelligence</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size: 11px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Security</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Identity & Access</a>
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Threat Detection</a>
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Compliance</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size: 11px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">AI & ML</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Model Training</a>
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Inference API</a>
+        <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">AutoML</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 181: With Compact Icon-Only Actions -->
+<div class="section-label">Nav 181 — Icon-Only Action Bar</div>
+<div class="section-container">
+<nav style="height: 48px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 16px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <button style="width: 32px; height: 32px; border: none; border-radius: 6px; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <svg width="16" height="16" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M12 8l-4-4-4 4M8 4v9"/></svg>
+    </button>
+    <button style="width: 32px; height: 32px; border: none; border-radius: 6px; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <svg width="16" height="16" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M4 8l4 4 4-4M8 12V3"/></svg>
+    </button>
+    <div style="width: 1px; height: 20px; background: #E3E3E8; margin: 0 4px;"></div>
+    <button style="width: 32px; height: 32px; border: none; border-radius: 6px; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <svg width="16" height="16" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M1 4h14M1 8h14M1 12h14"/></svg>
+    </button>
+    <button style="width: 32px; height: 32px; border: none; border-radius: 6px; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <svg width="16" height="16" fill="none" stroke="#6D6D72" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+    </button>
+    <div style="width: 1px; height: 20px; background: #E3E3E8; margin: 0 4px;"></div>
+    <button style="width: 32px; height: 32px; border: none; border-radius: 6px; background: #F6F6F7; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <svg width="16" height="16" fill="none" stroke="#1D1D1F" stroke-width="1.5"><path d="M11 2H5a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2zM3 6h10"/></svg>
+    </button>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <button style="width: 32px; height: 32px; border: none; border-radius: 6px; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative;">
+      <svg width="16" height="16" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M12 5a4 4 0 10-8 0c0 4-2 5-2 5h12s-2-1-2-5M9 14a2 2 0 01-4 0"/></svg>
+    </button>
+    <button style="width: 32px; height: 32px; border: none; border-radius: 6px; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <svg width="16" height="16" fill="none" stroke="#6D6D72" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><path d="M13.5 8a5.5 5.5 0 00-11 0M8 2.5v-1M8 14.5v-1"/></svg>
+    </button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 182: With Inline Stats Bar -->
+<div class="section-label">Nav 182 — With Inline Stats</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Dashboard</span>
+  <div style="display: flex; align-items: center; gap: 24px;">
+    <div style="text-align: center;">
+      <div style="font-size: 16px; font-weight: 700; color: #1D1D1F;">2,847</div>
+      <div style="font-size: 11px; color: #AEAEB2;">Visitors</div>
+    </div>
+    <div style="width: 1px; height: 28px; background: #E3E3E8;"></div>
+    <div style="text-align: center;">
+      <div style="font-size: 16px; font-weight: 700; color: #1A8245;">$12.4k</div>
+      <div style="font-size: 11px; color: #AEAEB2;">Revenue</div>
+    </div>
+    <div style="width: 1px; height: 28px; background: #E3E3E8;"></div>
+    <div style="text-align: center;">
+      <div style="font-size: 16px; font-weight: 700; color: #1D1D1F;">94%</div>
+      <div style="font-size: 11px; color: #AEAEB2;">Uptime</div>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer; font-family: inherit;">Export</button>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Settings</button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 183: With Plan/Tier Indicator -->
+<div class="section-label">Nav 183 — With Plan Tier Badge</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">AppSuite</span>
+    <span style="padding: 2px 8px; font-size: 11px; font-weight: 600; color: #7C3AED; background: #F3EEFF; border-radius: 9999px;">Pro Plan</span>
+  </div>
+  <div style="display: flex; gap: 16px;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Home</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Apps</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Marketplace</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Billing</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #7C3AED; background: #F3EEFF; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Upgrade to Enterprise</button>
+    <div style="width: 32px; height: 32px; border-radius: 9999px; background: #F3EEFF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #7C3AED;">T</div>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 184: With Dual Search (Content + Commands) -->
+<div class="section-label">Nav 184 — Dual Search Bar</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Hub</span>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div style="display: flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid #E3E3E8; border-radius: 8px; min-width: 200px;">
+      <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="1.5"><path d="M13 13l-3.5-3.5M11 6a5 5 0 11-10 0 5 5 0 0110 0z"/></svg>
+      <span style="font-size: 13px; color: #AEAEB2;">Search content...</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid #E3E3E8; border-radius: 8px; min-width: 180px;">
+      <span style="font-size: 13px; color: #AEAEB2;">/</span>
+      <span style="font-size: 13px; color: #AEAEB2;">Run command...</span>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <button style="width: 32px; height: 32px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <svg width="16" height="16" fill="none" stroke="#6D6D72" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.5 3.5l1.5 1.5M11 11l1.5 1.5M3.5 12.5l1.5-1.5M11 5l1.5-1.5"/></svg>
+    </button>
+    <div style="width: 32px; height: 32px; border-radius: 9999px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: #FFFFFF;">T</div>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 185: With Content Type Filter -->
+<div class="section-label">Nav 185 — Content Type Filter Nav</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+  <div style="height: 56px; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Media Library</span>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="display: flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid #E3E3E8; border-radius: 8px; min-width: 220px;">
+        <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="1.5"><path d="M13 13l-3.5-3.5M11 6a5 5 0 11-10 0 5 5 0 0110 0z"/></svg>
+        <span style="font-size: 13px; color: #AEAEB2;">Search files...</span>
+      </div>
+      <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Upload</button>
+    </div>
+  </div>
+  <div style="display: flex; padding: 0 24px; gap: 8px; padding-bottom: 12px;">
+    <button style="padding: 4px 12px; font-size: 12px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit;">All</button>
+    <button style="padding: 4px 12px; font-size: 12px; font-weight: 500; color: #6D6D72; background: #F6F6F7; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit;">Images</button>
+    <button style="padding: 4px 12px; font-size: 12px; font-weight: 500; color: #6D6D72; background: #F6F6F7; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit;">Videos</button>
+    <button style="padding: 4px 12px; font-size: 12px; font-weight: 500; color: #6D6D72; background: #F6F6F7; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit;">Documents</button>
+    <button style="padding: 4px 12px; font-size: 12px; font-weight: 500; color: #6D6D72; background: #F6F6F7; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit;">Audio</button>
+    <button style="padding: 4px 12px; font-size: 12px; font-weight: 500; color: #6D6D72; background: #F6F6F7; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit;">Archives</button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 186: With Inline Calendar Week View -->
+<div class="section-label">Nav 186 — Calendar Week Navigator</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Calendar</span>
+    <div style="display: flex; align-items: center; gap: 4px;">
+      <button style="width: 28px; height: 28px; border: 1px solid #E3E3E8; border-radius: 6px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+        <svg width="10" height="10" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M7 2L3.5 5.5 7 9"/></svg>
+      </button>
+      <span style="font-size: 14px; font-weight: 600; color: #1D1D1F; padding: 0 8px;">February 2026</span>
+      <button style="width: 28px; height: 28px; border: 1px solid #E3E3E8; border-radius: 6px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+        <svg width="10" height="10" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M3 2l3.5 3.5L3 9"/></svg>
+      </button>
+    </div>
+    <button style="padding: 4px 10px; font-size: 12px; font-weight: 600; color: #2C6ECB; background: #E9F0FE; border: none; border-radius: 6px; cursor: pointer; font-family: inherit;">Today</button>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px; background: #F6F6F7; border-radius: 8px; padding: 3px;">
+    <button style="padding: 4px 10px; font-size: 12px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 6px; cursor: pointer; font-family: inherit;">Day</button>
+    <button style="padding: 4px 10px; font-size: 12px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 6px; cursor: pointer; font-family: inherit;">Week</button>
+    <button style="padding: 4px 10px; font-size: 12px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 6px; cursor: pointer; font-family: inherit;">Month</button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 187: With Smart Suggestions -->
+<div class="section-label">Nav 187 — With Smart Suggestions Bar</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+  <div style="height: 56px; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Content</span>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">New Post</button>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px; padding: 0 24px 10px; overflow-x: auto;">
+    <span style="font-size: 11px; color: #AEAEB2; white-space: nowrap;">Suggested:</span>
+    <button style="padding: 4px 10px; font-size: 12px; font-weight: 500; color: #2C6ECB; background: #E9F0FE; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit; white-space: nowrap;">Draft posts (3)</button>
+    <button style="padding: 4px 10px; font-size: 12px; font-weight: 500; color: #B98900; background: #FFFBE6; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit; white-space: nowrap;">Needs review (7)</button>
+    <button style="padding: 4px 10px; font-size: 12px; font-weight: 500; color: #D72C0D; background: #FFF4F4; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit; white-space: nowrap;">Expired (2)</button>
+    <button style="padding: 4px 10px; font-size: 12px; font-weight: 500; color: #1A8245; background: #E3F5E1; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit; white-space: nowrap;">Top performing</button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 188: With Centered Logo & Social -->
+<div class="section-label">Nav 188 — Centered Logo with Social Icons</div>
+<div class="section-container">
+<nav style="height: 64px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; gap: 12px;">
+    <a style="width: 32px; height: 32px; border: 1px solid #E3E3E8; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px; color: #6D6D72;">𝕏</a>
+    <a style="width: 32px; height: 32px; border: 1px solid #E3E3E8; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px; color: #6D6D72;">in</a>
+    <a style="width: 32px; height: 32px; border: 1px solid #E3E3E8; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px; color: #6D6D72;">gh</a>
+  </div>
+  <div style="text-align: center;">
+    <div style="font-size: 20px; font-weight: 700; color: #1D1D1F;">Portfolio</div>
+    <div style="font-size: 11px; color: #AEAEB2; letter-spacing: 2px; text-transform: uppercase;">Design & Development</div>
+  </div>
+  <div style="display: flex; gap: 16px;">
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Work</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">About</a>
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Contact</a>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 189: With Build/Deploy Status -->
+<div class="section-label">Nav 189 — Build & Deploy Status</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 20px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">CI/CD</span>
+    <div style="display: flex; gap: 16px;">
+      <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Pipelines</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Deployments</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Environments</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <div style="display: flex; align-items: center; gap: 8px; padding: 4px 12px; background: #FFFBE6; border: 1px solid rgba(185,137,0,0.2); border-radius: 8px;">
+      <div style="width: 8px; height: 8px; border-radius: 50%; background: #B98900; animation: pulse 2s infinite;"></div>
+      <span style="font-size: 12px; color: #B98900; font-weight: 600;">Building...</span>
+      <span style="font-size: 12px; color: #B98900;">2m 34s</span>
+    </div>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #D72C0D; background: #FFF4F4; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Cancel</button>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">New Pipeline</button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 190: With Changelog/What's New -->
+<div class="section-label">Nav 190 — With What's New Indicator</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 24px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">ProductApp</span>
+    <div style="display: flex; gap: 16px;">
+      <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Dashboard</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Reports</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Settings</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <button style="display: flex; align-items: center; gap: 6px; padding: 5px 12px; font-size: 12px; font-weight: 600; color: #7C3AED; background: #F3EEFF; border: none; border-radius: 9999px; cursor: pointer; font-family: inherit;">
+      <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1l1 3h3l-2.5 2 1 3L6 7.5 3.5 9l1-3L2 4h3L6 1z"/></svg>
+      What's New
+      <span style="width: 6px; height: 6px; border-radius: 50%; background: #7C3AED;"></span>
+    </button>
+    <div style="width: 1px; height: 24px; background: #E3E3E8;"></div>
+    <div style="width: 32px; height: 32px; border-radius: 9999px; background: #E9F0FE; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #2C6ECB;">T</div>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 191: With Compact Top Menu Bar -->
+<div class="section-label">Nav 191 — Compact Top Bar (macOS Style)</div>
+<div class="section-container">
+<nav style="height: 32px; background: #F6F6F7; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 12px; justify-content: space-between; font-size: 12px;">
+  <div style="display: flex; align-items: center; gap: 2px;">
+    <span style="font-weight: 700; color: #1D1D1F; padding: 2px 8px;">AppName</span>
+    <a style="padding: 2px 8px; color: #6D6D72; text-decoration: none;">File</a>
+    <a style="padding: 2px 8px; color: #6D6D72; text-decoration: none;">Edit</a>
+    <a style="padding: 2px 8px; color: #6D6D72; text-decoration: none;">View</a>
+    <a style="padding: 2px 8px; color: #6D6D72; text-decoration: none;">Window</a>
+    <a style="padding: 2px 8px; color: #6D6D72; text-decoration: none;">Help</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <span style="color: #AEAEB2; font-size: 11px;">Thu Feb 12, 2:34 PM</span>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 192: With Grouped Navigation Sections -->
+<div class="section-label">Nav 192 — Grouped Section Labels</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 24px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Platform</span>
+    <div style="display: flex; gap: 20px;">
+      <div style="display: flex; align-items: center; gap: 4px;">
+        <span style="font-size: 10px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 0.5px;">Build</span>
+        <div style="width: 1px; height: 16px; background: #E3E3E8; margin: 0 4px;"></div>
+        <a style="font-size: 13px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Editor</a>
+        <a style="font-size: 13px; color: #6D6D72; text-decoration: none;">Components</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 4px;">
+        <span style="font-size: 10px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 0.5px;">Data</span>
+        <div style="width: 1px; height: 16px; background: #E3E3E8; margin: 0 4px;"></div>
+        <a style="font-size: 13px; color: #6D6D72; text-decoration: none;">Models</a>
+        <a style="font-size: 13px; color: #6D6D72; text-decoration: none;">Queries</a>
+      </div>
+    </div>
+  </div>
+  <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #2C6ECB; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Preview</button>
+</nav>
+</div>
+
+<!-- NAV 193: With Inline Onboarding Progress -->
+<div class="section-label">Nav 193 — Onboarding Progress Nav</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Setup</span>
+  <div style="display: flex; align-items: center; gap: 0;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="width: 24px; height: 24px; border-radius: 50%; background: #1A8245; display: flex; align-items: center; justify-content: center;">
+        <svg width="12" height="12" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+      </div>
+      <span style="font-size: 13px; color: #1A8245; font-weight: 600;">Account</span>
+    </div>
+    <div style="width: 40px; height: 2px; background: #1A8245; margin: 0 8px;"></div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="width: 24px; height: 24px; border-radius: 50%; background: #1A8245; display: flex; align-items: center; justify-content: center;">
+        <svg width="12" height="12" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M2 6l3 3 5-5"/></svg>
+      </div>
+      <span style="font-size: 13px; color: #1A8245; font-weight: 600;">Team</span>
+    </div>
+    <div style="width: 40px; height: 2px; background: #2C6ECB; margin: 0 8px;"></div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="width: 24px; height: 24px; border-radius: 50%; background: #2C6ECB; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: #FFFFFF;">3</div>
+      <span style="font-size: 13px; color: #2C6ECB; font-weight: 600;">Integrations</span>
+    </div>
+    <div style="width: 40px; height: 2px; background: #E3E3E8; margin: 0 8px;"></div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="width: 24px; height: 24px; border-radius: 50%; background: #F6F6F7; border: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; color: #AEAEB2;">4</div>
+      <span style="font-size: 13px; color: #AEAEB2;">Launch</span>
+    </div>
+  </div>
+  <button style="padding: 7px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer; font-family: inherit;">Skip Setup</button>
+</nav>
+</div>
+
+<!-- NAV 194: With Inline Color/Theme Picker -->
+<div class="section-label">Nav 194 — With Theme Color Picker</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 20px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Theme Editor</span>
+    <div style="display: flex; gap: 16px;">
+      <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Colors</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Typography</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Spacing</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 6px; padding: 4px 12px; border: 1px solid #E3E3E8; border-radius: 8px;">
+      <span style="font-size: 12px; color: #6D6D72;">Brand:</span>
+      <div style="display: flex; gap: 4px;">
+        <div style="width: 20px; height: 20px; border-radius: 50%; background: #2C6ECB; border: 2px solid #1A1A1A; cursor: pointer;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background: #1A8245; cursor: pointer;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background: #7C3AED; cursor: pointer;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background: #D72C0D; cursor: pointer;"></div>
+        <div style="width: 20px; height: 20px; border-radius: 50%; background: #E07800; cursor: pointer;"></div>
+      </div>
+    </div>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Apply Theme</button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 195: With Responsive Preview Toggles -->
+<div class="section-label">Nav 195 — Device Preview Toggles</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Preview</span>
+    <span style="font-size: 13px; color: #AEAEB2;">/about-us</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px; background: #F6F6F7; border-radius: 8px; padding: 3px;">
+    <button style="width: 32px; height: 28px; border: none; background: #FFFFFF; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">
+      <svg width="16" height="14" fill="none" stroke="#1D1D1F" stroke-width="1.3"><rect x="1" y="1" width="14" height="10" rx="1.5"/><path d="M5 13h6"/></svg>
+    </button>
+    <button style="width: 32px; height: 28px; border: none; background: transparent; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.3"><rect x="1" y="0.5" width="12" height="13" rx="1.5"/><path d="M5 12h4"/></svg>
+    </button>
+    <button style="width: 32px; height: 28px; border: none; background: transparent; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+      <svg width="10" height="16" fill="none" stroke="#6D6D72" stroke-width="1.3"><rect x="1" y="1" width="8" height="14" rx="1.5"/><path d="M3.5 13h3"/></svg>
+    </button>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer; font-family: inherit;">Back to Editor</button>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A8245; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Publish</button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 196: With Billing/Credits Info -->
+<div class="section-label">Nav 196 — With Credits Balance</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 24px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">AI Studio</span>
+    <div style="display: flex; gap: 16px;">
+      <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Playground</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Models</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Fine-tuning</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Usage</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 6px; padding: 4px 12px; background: #E9F0FE; border-radius: 9999px;">
+      <svg width="12" height="12" fill="none" stroke="#2C6ECB" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><path d="M4 6h4M6 4v4"/></svg>
+      <span style="font-size: 12px; font-weight: 600; color: #2C6ECB;">$24.50 credits</span>
+    </div>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #2C6ECB; background: #FFFFFF; border: 1px solid #2C6ECB; border-radius: 8px; cursor: pointer; font-family: inherit;">Add Credits</button>
+    <div style="width: 32px; height: 32px; border-radius: 9999px; background: #E9F0FE; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #2C6ECB;">T</div>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 197: With Multi-Store Selector -->
+<div class="section-label">Nav 197 — Multi-Store Selector</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer;">
+      <div style="width: 28px; height: 28px; border-radius: 6px; background: #1A8245; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #FFFFFF;">US</div>
+      <div>
+        <div style="font-size: 12px; font-weight: 600; color: #1D1D1F; line-height: 1.2;">US Store</div>
+        <div style="font-size: 10px; color: #AEAEB2; line-height: 1.2;">myshop-us.com</div>
+      </div>
+      <svg width="10" height="10" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M2.5 4l2.5 2.5 2.5-2.5"/></svg>
+    </div>
+    <div style="display: flex; gap: 16px;">
+      <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Orders</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Products</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Inventory</a>
+    </div>
+  </div>
+  <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Sync Stores</button>
+</nav>
+</div>
+
+<!-- NAV 198: With Quick Settings Popover -->
+<div class="section-label">Nav 198 — With Quick Settings</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 24px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Editor</span>
+    <div style="display: flex; gap: 16px;">
+      <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Canvas</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Layers</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Assets</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <button style="width: 32px; height: 32px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;" title="Zoom">
+      <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><circle cx="6" cy="6" r="4.5"/><path d="M9.5 9.5L13 13"/></svg>
+    </button>
+    <button style="width: 32px; height: 32px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;" title="Grid">
+      <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M0 5h14M0 9h14M5 0v14M9 0v14"/></svg>
+    </button>
+    <button style="width: 32px; height: 32px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;" title="Rulers">
+      <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M1 1h3v12H1V1zM4 1h9v3H4V1z"/></svg>
+    </button>
+    <div style="width: 1px; height: 24px; background: #E3E3E8; margin: 0 4px;"></div>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Export</button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 199: With Inline Undo/Redo History -->
+<div class="section-label">Nav 199 — Undo/Redo with History Count</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Designer</span>
+    <div style="display: flex; align-items: center; gap: 4px;">
+      <button style="width: 32px; height: 32px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+        <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M3 8l-2-2 2-2M1 6h8a4 4 0 010 8H5"/></svg>
+      </button>
+      <button style="width: 32px; height: 32px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+        <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="1.5"><path d="M11 8l2-2-2-2M13 6H5a4 4 0 000 8h4"/></svg>
+      </button>
+      <span style="font-size: 11px; color: #AEAEB2; margin-left: 4px;">14 changes</span>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <span style="font-size: 12px; color: #1A8245; font-weight: 500;">All changes saved</span>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #2C6ECB; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Share</button>
+  </div>
+</nav>
+</div>
+
+<!-- NAV 200: With Integrated Error/Issue Count -->
+<div class="section-label">Nav 200 — With Error/Issue Counter</div>
+<div class="section-container">
+<nav style="height: 56px; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+  <div style="display: flex; align-items: center; gap: 24px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">CodeBase</span>
+    <div style="display: flex; gap: 16px;">
+      <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 600;">Editor</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Terminal</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Debug</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Extensions</a>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="display: flex; align-items: center; gap: 4px;">
+        <svg width="12" height="12" fill="#D72C0D" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5"/><path d="M4 4l4 4M8 4l-4 4" stroke="#FFF" stroke-width="1.2"/></svg>
+        <span style="font-size: 12px; font-weight: 600; color: #D72C0D;">3</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 4px;">
+        <svg width="12" height="12" fill="#B98900" viewBox="0 0 12 12"><path d="M6 1l5 10H1L6 1z"/><path d="M6 5v3M6 9.5h.01" stroke="#FFF" stroke-width="0.8"/></svg>
+        <span style="font-size: 12px; font-weight: 600; color: #B98900;">12</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 4px;">
+        <svg width="12" height="12" fill="#2C6ECB" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5"/><path d="M6 4v3M6 8.5h.01" stroke="#FFF" stroke-width="0.8"/></svg>
+        <span style="font-size: 12px; font-weight: 600; color: #2C6ECB;">5</span>
+      </div>
+    </div>
+    <div style="width: 1px; height: 24px; background: #E3E3E8;"></div>
+    <button style="padding: 7px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A8245; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Run</button>
+  </div>
+</nav>
+</div>
+
+</body>
+</html>

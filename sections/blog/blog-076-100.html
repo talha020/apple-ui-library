@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog 076-100 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<!-- 076: Blog with Sidebar TOC and Content -->
+<div class="section-label">076 — Sidebar TOC Blog</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: 200px 1fr 200px; gap: 40px;">
+      <nav style="height: fit-content;">
+        <h4 style="font-size: 12px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Contents</h4>
+        <a href="#" style="display: block; font-size: 13px; color: #2C6ECB; font-weight: 600; padding: 6px 0; text-decoration: none;">Overview</a>
+        <a href="#" style="display: block; font-size: 13px; color: #6D6D72; padding: 6px 0; text-decoration: none;">Setup</a>
+        <a href="#" style="display: block; font-size: 13px; color: #6D6D72; padding: 6px 0; text-decoration: none;">Usage</a>
+        <a href="#" style="display: block; font-size: 13px; color: #6D6D72; padding: 6px 0; text-decoration: none;">API Reference</a>
+      </nav>
+      <article>
+        <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">Building a notification system</h2>
+        <p style="font-size: 15px; color: #6D6D72; line-height: 1.7;">A comprehensive guide to designing and implementing real-time notifications that users appreciate rather than dismiss.</p>
+      </article>
+      <aside style="height: fit-content;">
+        <h4 style="font-size: 12px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Related</h4>
+        <a href="#" style="display: block; font-size: 13px; color: #6D6D72; padding: 6px 0; text-decoration: none; border-bottom: 1px solid #E3E3E8;">WebSocket basics</a>
+        <a href="#" style="display: block; font-size: 13px; color: #6D6D72; padding: 6px 0; text-decoration: none;">Push API guide</a>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- 077: Blog Photo Essay -->
+<div class="section-label">077 — Photo Essay Blog</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 800px; margin: 0 auto;">
+    <h2 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">A day at our design studio</h2>
+    <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px;">A photo essay capturing the creative energy of our team.</p>
+    <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE, #F3EEFF); border-radius: 12px; margin-bottom: 16px;"></div>
+    <p style="font-size: 14px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">Our open studio space encourages collaboration and spontaneous design conversations.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+      <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, #E3F5E1, #C8EDCA); border-radius: 10px;"></div>
+      <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, #FFFBE6, #FFE5CC); border-radius: 10px;"></div>
+    </div>
+    <p style="font-size: 14px; color: #6D6D72; line-height: 1.6;">From whiteboard sketches to pixel-perfect prototypes, every idea gets explored.</p>
+  </div>
+</div>
+
+<!-- 078: Blog with Compact Cards -->
+<div class="section-label">078 — Compact Card Grid</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px;">
+        <span style="font-size: 11px; font-weight: 600; color: #2C6ECB; text-transform: uppercase;">React</span>
+        <h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">useCallback deep dive</h3>
+        <span style="font-size: 12px; color: #AEAEB2;">3 min</span>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px;">
+        <span style="font-size: 11px; font-weight: 600; color: #7C3AED; text-transform: uppercase;">CSS</span>
+        <h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">Subgrid explained</h3>
+        <span style="font-size: 12px; color: #AEAEB2;">4 min</span>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px;">
+        <span style="font-size: 11px; font-weight: 600; color: #1A8245; text-transform: uppercase;">Node</span>
+        <h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">Streams in Node.js</h3>
+        <span style="font-size: 12px; color: #AEAEB2;">6 min</span>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px;">
+        <span style="font-size: 11px; font-weight: 600; color: #B98900; text-transform: uppercase;">Testing</span>
+        <h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">Snapshot testing tips</h3>
+        <span style="font-size: 12px; color: #AEAEB2;">5 min</span>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px;">
+        <span style="font-size: 11px; font-weight: 600; color: #D72C0D; text-transform: uppercase;">Security</span>
+        <h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">CSP headers guide</h3>
+        <span style="font-size: 12px; color: #AEAEB2;">7 min</span>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px;">
+        <span style="font-size: 11px; font-weight: 600; color: #2C6ECB; text-transform: uppercase;">API</span>
+        <h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">REST vs GraphQL</h3>
+        <span style="font-size: 12px; color: #AEAEB2;">8 min</span>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px;">
+        <span style="font-size: 11px; font-weight: 600; color: #7C3AED; text-transform: uppercase;">Design</span>
+        <h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">Spacing systems</h3>
+        <span style="font-size: 12px; color: #AEAEB2;">4 min</span>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; padding: 18px;">
+        <span style="font-size: 11px; font-weight: 600; color: #1A8245; text-transform: uppercase;">DevOps</span>
+        <h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin: 6px 0; line-height: 1.3;">Docker best practices</h3>
+        <span style="font-size: 12px; color: #AEAEB2;">9 min</span>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 079: Blog with Highlighted Keywords -->
+<div class="section-label">079 — Blog with Highlighted Keywords</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <article style="margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid #E3E3E8;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Understanding <mark style="background: #E9F0FE; color: #2C6ECB; padding: 1px 4px; border-radius: 3px;">React Suspense</mark> boundaries</h3>
+      <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">How Suspense changes the way we think about loading states in component trees.</p>
+    </article>
+    <article style="margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid #E3E3E8;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Deep dive into <mark style="background: #F3EEFF; color: #7C3AED; padding: 1px 4px; border-radius: 3px;">CSS Layers</mark> and specificity</h3>
+      <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Take control of the cascade with the new @layer rule.</p>
+    </article>
+    <article>
+      <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Building with <mark style="background: #E3F5E1; color: #1A8245; padding: 1px 4px; border-radius: 3px;">Edge Functions</mark> on Vercel</h3>
+      <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Deploying serverless compute at the edge for lightning-fast responses.</p>
+    </article>
+  </div>
+</div>
+
+<!-- 080: Blog Hero with Overlay Text -->
+<div class="section-label">080 — Hero Overlay Blog</div>
+<div class="section-container">
+  <div style="position: relative; aspect-ratio: 3/1; background: linear-gradient(135deg, #1D1D1F, #2C6ECB); display: flex; align-items: center; justify-content: center;">
+    <div style="text-align: center; max-width: 600px; padding: 40px;">
+      <span style="font-size: 12px; font-weight: 600; color: #79B8FF; text-transform: uppercase; letter-spacing: 1px;">Annual Report</span>
+      <h2 style="font-size: 40px; font-weight: 700; color: #FFFFFF; margin: 12px 0; line-height: 1.2;">State of Frontend 2024</h2>
+      <p style="font-size: 16px; color: rgba(255,255,255,0.7); line-height: 1.5;">Survey results from 15,000 developers on tools, frameworks, and practices.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 081: Blog with Reading Queue -->
+<div class="section-label">081 — Blog Reading Queue</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <h2 style="font-size: 24px; font-weight: 700; color: #1D1D1F;">Your Queue</h2>
+      <span style="font-size: 13px; color: #AEAEB2;">4 articles &middot; ~28 min total</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <article style="display: flex; gap: 16px; align-items: center; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px;">
+        <span style="font-size: 14px; font-weight: 700; color: #AEAEB2; min-width: 24px;">1</span>
+        <div style="flex: 1;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Rust for JavaScript developers</h3></div>
+        <span style="padding: 2px 8px; background: #F6F6F7; border-radius: 6px; font-size: 12px; color: #6D6D72;">12 min</span>
+      </article>
+      <article style="display: flex; gap: 16px; align-items: center; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px;">
+        <span style="font-size: 14px; font-weight: 700; color: #AEAEB2; min-width: 24px;">2</span>
+        <div style="flex: 1;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Practical CSS has() selectors</h3></div>
+        <span style="padding: 2px 8px; background: #F6F6F7; border-radius: 6px; font-size: 12px; color: #6D6D72;">5 min</span>
+      </article>
+      <article style="display: flex; gap: 16px; align-items: center; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px;">
+        <span style="font-size: 14px; font-weight: 700; color: #AEAEB2; min-width: 24px;">3</span>
+        <div style="flex: 1;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Building CLI tools with Node</h3></div>
+        <span style="padding: 2px 8px; background: #F6F6F7; border-radius: 6px; font-size: 12px; color: #6D6D72;">7 min</span>
+      </article>
+      <article style="display: flex; gap: 16px; align-items: center; padding: 16px; border: 1px solid #E3E3E8; border-radius: 10px;">
+        <span style="font-size: 14px; font-weight: 700; color: #AEAEB2; min-width: 24px;">4</span>
+        <div style="flex: 1;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F;">Web Workers for heavy lifting</h3></div>
+        <span style="padding: 2px 8px; background: #F6F6F7; border-radius: 6px; font-size: 12px; color: #6D6D72;">4 min</span>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 082: Blog with Annotation -->
+<div class="section-label">082 — Blog with Annotation</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <article>
+      <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">Optimizing Core Web Vitals</h2>
+      <p style="font-size: 15px; color: #6D6D72; line-height: 1.7; margin-bottom: 20px;">Core Web Vitals measure real user experience. Improving them directly impacts your search ranking and user satisfaction.</p>
+      <div style="border-left: 3px solid #B98900; padding: 16px 20px; background: #FFFBE6; border-radius: 0 8px 8px 0; margin-bottom: 20px;">
+        <span style="font-size: 12px; font-weight: 600; color: #B98900; text-transform: uppercase;">Note</span>
+        <p style="font-size: 14px; color: #6D6D72; line-height: 1.5; margin-top: 4px;">As of March 2024, INP (Interaction to Next Paint) has officially replaced FID as a Core Web Vital metric.</p>
+      </div>
+      <p style="font-size: 15px; color: #6D6D72; line-height: 1.7;">Focus on LCP, CLS, and INP to ensure your site meets Google's performance thresholds.</p>
+    </article>
+  </div>
+</div>
+
+<!-- 083: Blog with Social Proof -->
+<div class="section-label">083 — Blog with Social Proof</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;">
+      <div>
+        <span style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase; letter-spacing: 0.5px;">Most Shared</span>
+        <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin: 10px 0 12px; line-height: 1.2;">The developer experience matters more than you think</h2>
+        <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 20px;">DX is not just about developer happiness. It directly impacts product quality, shipping speed, and team retention.</p>
+        <div style="display: flex; gap: 20px;">
+          <div><span style="font-size: 18px; font-weight: 700; color: #1D1D1F;">2.4k</span><span style="font-size: 13px; color: #AEAEB2; margin-left: 4px;">shares</span></div>
+          <div><span style="font-size: 18px; font-weight: 700; color: #1D1D1F;">856</span><span style="font-size: 13px; color: #AEAEB2; margin-left: 4px;">bookmarks</span></div>
+          <div><span style="font-size: 18px; font-weight: 700; color: #1D1D1F;">142</span><span style="font-size: 13px; color: #AEAEB2; margin-left: 4px;">comments</span></div>
+        </div>
+      </div>
+      <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, #E9F0FE, #F3EEFF); border-radius: 12px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 084: Blog Minimal Dark -->
+<div class="section-label">084 — Minimal Dark Blog</div>
+<div class="section-container">
+  <div style="background: #1D1D1F; padding: 64px 48px;">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <h2 style="font-size: 28px; font-weight: 700; color: #FFFFFF; margin-bottom: 32px;">Night Reads</h2>
+      <article style="padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <h3 style="font-size: 18px; font-weight: 600; color: #FFFFFF; margin-bottom: 6px;">The philosophy of clean code</h3>
+        <span style="font-size: 13px; color: rgba(255,255,255,0.4);">7 min read &middot; Jan 22, 2024</span>
+      </article>
+      <article style="padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <h3 style="font-size: 18px; font-weight: 600; color: #FFFFFF; margin-bottom: 6px;">Why we write documentation first</h3>
+        <span style="font-size: 13px; color: rgba(255,255,255,0.4);">5 min read &middot; Jan 18, 2024</span>
+      </article>
+      <article style="padding: 20px 0;">
+        <h3 style="font-size: 18px; font-weight: 600; color: #FFFFFF; margin-bottom: 6px;">Lessons from 10 years of shipping software</h3>
+        <span style="font-size: 13px; color: rgba(255,255,255,0.4);">12 min read &middot; Jan 14, 2024</span>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 085: Blog with Contributor Grid -->
+<div class="section-label">085 — Contributor Grid Blog</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Community Voices</h2>
+    <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px;">Perspectives from our open-source contributors.</p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+          <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #2C6ECB, #7C3AED); border-radius: 50%;"></div>
+          <div><span style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Lisa Huang</span><span style="font-size: 12px; color: #AEAEB2; display: block;">Contributor since 2022</span></div>
+        </div>
+        <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 6px;">Making open source sustainable</h3>
+        <p style="font-size: 13px; color: #6D6D72; line-height: 1.5;">Lessons from maintaining a popular library.</p>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+          <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #1A8245, #2C6ECB); border-radius: 50%;"></div>
+          <div><span style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Raj Patel</span><span style="font-size: 12px; color: #AEAEB2; display: block;">Contributor since 2023</span></div>
+        </div>
+        <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 6px;">My first contribution story</h3>
+        <p style="font-size: 13px; color: #6D6D72; line-height: 1.5;">How a typo fix led to a core maintainer role.</p>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+          <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #B98900, #D72C0D); border-radius: 50%;"></div>
+          <div><span style="font-size: 14px; font-weight: 600; color: #1D1D1F;">Aria Chen</span><span style="font-size: 12px; color: #AEAEB2; display: block;">Contributor since 2021</span></div>
+        </div>
+        <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 6px;">Accessibility in open source</h3>
+        <p style="font-size: 13px; color: #6D6D72; line-height: 1.5;">Why every PR should include a11y checks.</p>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 086: Blog with Banner CTA -->
+<div class="section-label">086 — Blog with Banner CTA</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 32px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE, #D4E4FE);"></div>
+        <div style="padding: 20px;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Deploying at the edge with Deno</h3><span style="font-size: 13px; color: #AEAEB2;">6 min</span></div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #F3EEFF, #E5D4FF);"></div>
+        <div style="padding: 20px;"><h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Motion design with Framer Motion</h3><span style="font-size: 13px; color: #AEAEB2;">8 min</span></div>
+      </article>
+    </div>
+    <div style="background: linear-gradient(135deg, #2C6ECB, #7C3AED); border-radius: 12px; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <h3 style="font-size: 20px; font-weight: 700; color: #FFFFFF;">Want to write for us?</h3>
+        <p style="font-size: 14px; color: rgba(255,255,255,0.7); margin-top: 4px;">We pay $500+ per published article.</p>
+      </div>
+      <button style="padding: 12px 28px; background: #FFFFFF; color: #1D1D1F; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Apply Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- 087: Blog with Grid/List Toggle -->
+<div class="section-label">087 — Blog Grid/List Toggle</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px;">
+      <h2 style="font-size: 24px; font-weight: 700; color: #1D1D1F;">All Posts</h2>
+      <div style="display: flex; gap: 4px; background: #F6F6F7; border-radius: 8px; padding: 3px;">
+        <button style="padding: 6px 10px; background: #FFFFFF; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </button>
+        <button style="padding: 6px 10px; background: transparent; border: none; border-radius: 6px; cursor: pointer;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#AEAEB2" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #E9F0FE, #F3EEFF);"></div>
+        <div style="padding: 16px;"><h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Container queries cookbook</h3></div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #E3F5E1, #FFFBE6);"></div>
+        <div style="padding: 16px;"><h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Testing accessibility</h3></div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #FFE5E5, #FFFBE6);"></div>
+        <div style="padding: 16px;"><h3 style="font-size: 14px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Handling API errors</h3></div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 088: Blog with Inline Code Snippet -->
+<div class="section-label">088 — Blog Inline Code Snippet</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <article style="padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid #E3E3E8;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">Quick tip: CSS <code style="background: #F6F6F7; padding: 2px 6px; border-radius: 4px; font-size: 16px; color: #7C3AED;">:has()</code> selector</h3>
+      <div style="background: #1D1D1F; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px;">
+        <code style="font-size: 13px; color: #79B8FF; line-height: 1.6;">.card:has(img) { padding: 0; }</code>
+      </div>
+      <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Style parent elements based on their children. Finally, a parent selector in CSS.</p>
+    </article>
+    <article>
+      <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">Quick tip: <code style="background: #F6F6F7; padding: 2px 6px; border-radius: 4px; font-size: 16px; color: #7C3AED;">structuredClone()</code></h3>
+      <div style="background: #1D1D1F; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px;">
+        <code style="font-size: 13px; color: #79B8FF; line-height: 1.6;">const copy = structuredClone(obj);</code>
+      </div>
+      <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Deep clone objects natively. No more JSON.parse(JSON.stringify()) hacks.</p>
+    </article>
+  </div>
+</div>
+
+<!-- 089: Blog Featured Three -->
+<div class="section-label">089 — Featured Three Layout</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 32px;">Editor's Picks</h2>
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px;">
+      <article style="position: relative; border-radius: 12px; overflow: hidden;">
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #1D1D1F, #7C3AED);"></div>
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 32px; background: linear-gradient(transparent, rgba(0,0,0,0.85));">
+          <span style="font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase;">#1 Pick</span>
+          <h3 style="font-size: 24px; font-weight: 700; color: #FFFFFF; margin: 8px 0; line-height: 1.2;">The complete guide to accessibility testing</h3>
+          <span style="font-size: 13px; color: rgba(255,255,255,0.6);">15 min read</span>
+        </div>
+      </article>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <article style="flex: 1; border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; justify-content: center;">
+          <span style="font-size: 12px; font-weight: 600; color: #2C6ECB; text-transform: uppercase;">#2 Pick</span>
+          <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin: 8px 0; line-height: 1.3;">Type-safe API routes in Next.js</h3>
+          <span style="font-size: 13px; color: #AEAEB2;">8 min read</span>
+        </article>
+        <article style="flex: 1; border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; justify-content: center;">
+          <span style="font-size: 12px; font-weight: 600; color: #1A8245; text-transform: uppercase;">#3 Pick</span>
+          <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin: 8px 0; line-height: 1.3;">Database indexing strategies</h3>
+          <span style="font-size: 13px; color: #AEAEB2;">10 min read</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 090: Blog with Minimal Author Row -->
+<div class="section-label">090 — Minimal Author Row</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
+      <article>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #E9F0FE, #D4E4FE); border-radius: 10px; margin-bottom: 16px;"></div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Understanding the JavaScript runtime</h3>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div style="width: 24px; height: 24px; background: linear-gradient(135deg, #E9F0FE, #F3EEFF); border-radius: 50%;"></div>
+          <span style="font-size: 13px; color: #6D6D72;">Alex &middot; 6 min</span>
+        </div>
+      </article>
+      <article>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #F3EEFF, #E5D4FF); border-radius: 10px; margin-bottom: 16px;"></div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Color systems that scale across products</h3>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div style="width: 24px; height: 24px; background: linear-gradient(135deg, #F3EEFF, #FFE5E5); border-radius: 50%;"></div>
+          <span style="font-size: 13px; color: #6D6D72;">Maya &middot; 8 min</span>
+        </div>
+      </article>
+      <article>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #E3F5E1, #C8EDCA); border-radius: 10px; margin-bottom: 16px;"></div>
+        <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 12px;">Event sourcing for real-time features</h3>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div style="width: 24px; height: 24px; background: linear-gradient(135deg, #E3F5E1, #FFFBE6); border-radius: 50%;"></div>
+          <span style="font-size: 13px; color: #6D6D72;">Jordan &middot; 11 min</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 091: Blog with Sidebar Subscribe -->
+<div class="section-label">091 — Blog Sidebar Subscribe</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: 1fr 320px; gap: 40px;">
+      <div>
+        <article style="padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid #E3E3E8;">
+          <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Functional programming in everyday JS</h3>
+          <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">You do not need a functional language to write functional code.</p>
+        </article>
+        <article style="padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid #E3E3E8;">
+          <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">The art of writing useful comments</h3>
+          <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Comments should explain why, not what.</p>
+        </article>
+        <article>
+          <h3 style="font-size: 20px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Refactoring without fear</h3>
+          <p style="font-size: 14px; color: #6D6D72; line-height: 1.5;">Confident refactoring needs solid tests and incremental changes.</p>
+        </article>
+      </div>
+      <aside style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px; height: fit-content;">
+        <h3 style="font-size: 18px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Never miss a post</h3>
+        <p style="font-size: 14px; color: #6D6D72; margin-bottom: 20px; line-height: 1.5;">Get notified when we publish something new. No spam, unsubscribe anytime.</p>
+        <input type="email" placeholder="Email address" style="width: 100%; padding: 12px 14px; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 14px; font-family: inherit; margin-bottom: 10px; outline: none;">
+        <button style="width: 100%; padding: 12px; background: #1D1D1F; color: #FFFFFF; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Subscribe</button>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- 092: Blog with Tabs and Content -->
+<div class="section-label">092 — Blog with Content Tabs</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: flex; gap: 0; border-bottom: 1px solid #E3E3E8; margin-bottom: 32px;">
+      <button style="padding: 12px 20px; border: none; background: transparent; font-size: 14px; font-weight: 600; color: #1D1D1F; font-family: inherit; cursor: pointer; border-bottom: 2px solid #1D1D1F; margin-bottom: -1px;">Articles</button>
+      <button style="padding: 12px 20px; border: none; background: transparent; font-size: 14px; color: #6D6D72; font-family: inherit; cursor: pointer;">Tutorials</button>
+      <button style="padding: 12px 20px; border: none; background: transparent; font-size: 14px; color: #6D6D72; font-family: inherit; cursor: pointer;">Case Studies</button>
+      <button style="padding: 12px 20px; border: none; background: transparent; font-size: 14px; color: #6D6D72; font-family: inherit; cursor: pointer;">Podcasts</button>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE, #F3EEFF);"></div>
+        <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Async iteration patterns</h3><span style="font-size: 13px; color: #AEAEB2;">5 min</span></div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #FFFBE6, #FFE5CC);"></div>
+        <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Designing for voice UI</h3><span style="font-size: 13px; color: #AEAEB2;">7 min</span></div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 10px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E3F5E1, #C8EDCA);"></div>
+        <div style="padding: 18px;"><h3 style="font-size: 15px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Deployment rollback strategies</h3><span style="font-size: 13px; color: #AEAEB2;">6 min</span></div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 093: Blog with Save for Later -->
+<div class="section-label">093 — Blog Save for Later</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 720px; margin: 0 auto;">
+    <article style="display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid #E3E3E8; align-items: center;">
+      <div style="min-width: 80px; height: 80px; background: linear-gradient(135deg, #E9F0FE, #D4E4FE); border-radius: 10px;"></div>
+      <div style="flex: 1;">
+        <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Building composable UI libraries</h3>
+        <span style="font-size: 13px; color: #AEAEB2;">8 min read</span>
+      </div>
+      <button style="padding: 8px 14px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; font-size: 13px; color: #6D6D72; font-family: inherit; cursor: pointer; white-space: nowrap;">Save</button>
+    </article>
+    <article style="display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid #E3E3E8; align-items: center;">
+      <div style="min-width: 80px; height: 80px; background: linear-gradient(135deg, #F3EEFF, #E5D4FF); border-radius: 10px;"></div>
+      <div style="flex: 1;">
+        <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Animation performance tips</h3>
+        <span style="font-size: 13px; color: #AEAEB2;">5 min read</span>
+      </div>
+      <button style="padding: 8px 14px; border: 1px solid #2C6ECB; border-radius: 8px; background: #E9F0FE; font-size: 13px; color: #2C6ECB; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;">Saved</button>
+    </article>
+    <article style="display: flex; gap: 20px; padding: 20px 0; align-items: center;">
+      <div style="min-width: 80px; height: 80px; background: linear-gradient(135deg, #E3F5E1, #C8EDCA); border-radius: 10px;"></div>
+      <div style="flex: 1;">
+        <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3;">Serverless at scale</h3>
+        <span style="font-size: 13px; color: #AEAEB2;">10 min read</span>
+      </div>
+      <button style="padding: 8px 14px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; font-size: 13px; color: #6D6D72; font-family: inherit; cursor: pointer; white-space: nowrap;">Save</button>
+    </article>
+  </div>
+</div>
+
+<!-- 094: Blog with Team Pick Badge -->
+<div class="section-label">094 — Blog with Team Pick Badge</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; position: relative;">
+        <div style="position: absolute; top: 12px; right: 12px; padding: 4px 10px; background: #1D1D1F; color: #FFFFFF; font-size: 11px; font-weight: 600; border-radius: 6px; z-index: 1;">Team Pick</div>
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E9F0FE, #F3EEFF);"></div>
+        <div style="padding: 20px;">
+          <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Practical TypeScript generics</h3>
+          <span style="font-size: 13px; color: #AEAEB2;">10 min read</span>
+        </div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #FFFBE6, #FFE5CC);"></div>
+        <div style="padding: 20px;">
+          <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">Designing empty states</h3>
+          <span style="font-size: 13px; color: #AEAEB2;">4 min read</span>
+        </div>
+      </article>
+      <article style="border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+        <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #E3F5E1, #D4F4D0);"></div>
+        <div style="padding: 20px;">
+          <h3 style="font-size: 16px; font-weight: 600; color: #1D1D1F; line-height: 1.3; margin-bottom: 8px;">API versioning strategies</h3>
+          <span style="font-size: 13px; color: #AEAEB2;">7 min read</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- 095: Blog with Quick Links -->
+<div class="section-label">095 — Blog Quick Links</div>
+<div class="section-container">
+  <div style="padding: 48px;">
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+      <a href="#" style="padding: 12px 20px; border: 1px solid #E3E3E8; border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 600; color: #1D1D1F; transition: border-color 0.2s ease;">Getting Started Guide &rarr;</a>
+      <a href="#" style="padding: 12px 20px; border: 1px solid #E3E3E8; border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 600; color: #1D1D1F;">API Documentation &rarr;</a>
+      <a href="#" style="padding: 12px 20px; border: 1px solid #E3E3E8; border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 600; color: #1D1D1F;">Migration Guide &rarr;</a>
+      <a href="#" style="padding: 12px 20px; border: 1px solid #E3E3E8; border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 600; color: #1D1D1F;">Changelog &rarr;</a>
+      <a href="#" style="padding: 12px 20px; border: 1px solid #E3E3E8; border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 600; color: #1D1D1F;">FAQ &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- 096: Blog with Comparison Post -->
+<div class="section-label">096 — Comparison Post Blog</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 800px; margin: 0 auto;">
+    <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px; text-align: center;">Vite vs Webpack: A practical comparison</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden;">
+      <div style="padding: 28px; border-right: 1px solid #E3E3E8;">
+        <h3 style="font-size: 18px; font-weight: 700; color: #2C6ECB; margin-bottom: 16px;">Vite</h3>
+        <div style="font-size: 14px; color: #6D6D72; line-height: 1.8;">
+          <div>&#10003; Lightning-fast dev server</div>
+          <div>&#10003; Native ESM support</div>
+          <div>&#10003; Minimal configuration</div>
+          <div style="color: #AEAEB2;">&#10007; Smaller plugin ecosystem</div>
+        </div>
+      </div>
+      <div style="padding: 28px;">
+        <h3 style="font-size: 18px; font-weight: 700; color: #7C3AED; margin-bottom: 16px;">Webpack</h3>
+        <div style="font-size: 14px; color: #6D6D72; line-height: 1.8;">
+          <div>&#10003; Massive plugin ecosystem</div>
+          <div>&#10003; Battle-tested at scale</div>
+          <div>&#10003; Extensive customization</div>
+          <div style="color: #AEAEB2;">&#10007; Complex configuration</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 24px;">
+      <a href="#" style="font-size: 14px; font-weight: 600; color: #2C6ECB; text-decoration: none;">Read the full comparison &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- 097: Blog with Mini Calendar -->
+<div class="section-label">097 — Blog with Mini Calendar</div>
+<div class="section-container">
+  <div style="padding: 64px 48px;">
+    <div style="display: grid; grid-template-columns: 1fr 260px; gap: 40px;">
+      <div>
+        <h2 style="font-size: 24px; font-weight: 700; color: #1D1D1F; margin-bottom: 24px;">This Week</h2>
+        <article style="padding: 16px 0; border-bottom: 1px solid #E3E3E8;">
+          <span style="font-size: 12px; font-weight: 600; color: #2C6ECB;">Monday</span>
+          <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin: 4px 0;">Understanding TypeScript discriminated unions</h3>
+        </article>
+        <article style="padding: 16px 0; border-bottom: 1px solid #E3E3E8;">
+          <span style="font-size: 12px; font-weight: 600; color: #7C3AED;">Wednesday</span>
+          <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin: 4px 0;">CSS color-mix() in production</h3>
+        </article>
+        <article style="padding: 16px 0;">
+          <span style="font-size: 12px; font-weight: 600; color: #1A8245;">Friday</span>
+          <h3 style="font-size: 17px; font-weight: 600; color: #1D1D1F; margin: 4px 0;">Weekly roundup: best of the web</h3>
+        </article>
+      </div>
+      <aside style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 24px; height: fit-content;">
+        <h4 style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 16px; text-align: center;">January 2024</h4>
+        <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; font-size: 12px; color: #AEAEB2;">
+          <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+          <span></span><span style="color: #6D6D72; padding: 4px;">1</span><span style="color: #6D6D72; padding: 4px;">2</span><span style="color: #6D6D72; padding: 4px;">3</span><span style="color: #6D6D72; padding: 4px;">4</span><span style="color: #6D6D72; padding: 4px;">5</span><span style="color: #6D6D72; padding: 4px;">6</span>
+          <span style="color: #6D6D72; padding: 4px;">7</span><span style="background: #E9F0FE; color: #2C6ECB; font-weight: 600; padding: 4px; border-radius: 4px;">8</span><span style="color: #6D6D72; padding: 4px;">9</span><span style="color: #6D6D72; padding: 4px;">10</span><span style="color: #6D6D72; padding: 4px;">11</span><span style="background: #E9F0FE; color: #2C6ECB; font-weight: 600; padding: 4px; border-radius: 4px;">12</span><span style="color: #6D6D72; padding: 4px;">13</span>
+        </div>
+        <p style="font-size: 12px; color: #AEAEB2; margin-top: 12px; text-align: center;">Highlighted = new posts</p>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- 098: Blog with Inline Poll -->
+<div class="section-label">098 — Blog with Inline Poll</div>
+<div class="section-container">
+  <div style="padding: 64px 48px; max-width: 600px; margin: 0 auto;">
+    <div style="border: 1px solid #E3E3E8; border-radius: 12px; padding: 28px;">
+      <h3 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 20px;">What should we write about next?</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <button style="text-align: left; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; font-size: 14px; color: #1D1D1F; font-family: inherit; cursor: pointer; transition: border-color 0.2s ease; display: flex; justify-content: space-between;">Advanced TypeScript patterns <span style="color: #AEAEB2;">42%</span></button>
+        <button style="text-align: left; padding: 14px 16px; border: 1px solid #2C6ECB; border-radius: 8px; background: #E9F0FE; font-size: 14px; color: #2C6ECB; font-weight: 600; font-family: inherit; cursor: pointer; display: flex; justify-content: space-between;">CSS architecture strategies <span>31%</span></button>
+        <button style="text-align: left; padding: 14px 16px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; font-size: 14px; color: #1D1D1F; font-family: inherit; cursor: pointer; display: flex; justify-content: space-between;">Testing best practices <span style="color: #AEAEB2;">27%</span></button>
+      </div>
+      <p style="font-size: 12px; color: #AEAEB2; margin-top: 14px;">348 votes &middot; 2 days remaining</p>
+    </div>
+  </div>
+</div>
+
+<!-- 099: Blog with Sticky Bottom Bar -->
+<div class="section-label">099 — Blog with Bottom Bar</div>
+<div class="section-container">
+  <div style="position: relative;">
+    <div style="padding: 64px 48px 100px; max-width: 720px; margin: 0 auto;">
+      <h2 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">The art of writing technical blog posts</h2>
+      <p style="font-size: 15px; color: #6D6D72; line-height: 1.7;">Great technical writing combines clear explanations with practical examples. Here is how to write posts that developers actually bookmark and share.</p>
+    </div>
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 48px; background: #FFFFFF; border-top: 1px solid #E3E3E8; display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button style="display: flex; align-items: center; gap: 6px; padding: 8px 14px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; font-size: 13px; color: #6D6D72; font-family: inherit; cursor: pointer;">&#128079; 256</button>
+        <button style="display: flex; align-items: center; gap: 6px; padding: 8px 14px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; font-size: 13px; color: #6D6D72; font-family: inherit; cursor: pointer;">&#128172; 42</button>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button style="padding: 8px 14px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; font-size: 13px; color: #6D6D72; font-family: inherit; cursor: pointer;">Share</button>
+        <button style="padding: 8px 14px; border: 1px solid #E3E3E8; border-radius: 8px; background: #FFFFFF; font-size: 13px; color: #6D6D72; font-family: inherit; cursor: pointer;">Bookmark</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 100: Blog with Full Bleed Image -->
+<div class="section-label">100 — Full Bleed Image Blog</div>
+<div class="section-container">
+  <div style="aspect-ratio: 3/1; background: linear-gradient(135deg, #1D1D1F, #7C3AED); position: relative;">
+    <div style="position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 48px; background: linear-gradient(transparent 40%, rgba(0,0,0,0.8));">
+      <div style="max-width: 600px;">
+        <span style="font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px;">Deep Dive</span>
+        <h2 style="font-size: 36px; font-weight: 700; color: #FFFFFF; margin: 8px 0; line-height: 1.2;">The future of web development</h2>
+        <p style="font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.5; margin-bottom: 16px;">Predictions and trends shaping the next decade of building for the web.</p>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 32px; height: 32px; background: rgba(255,255,255,0.2); border-radius: 50%;"></div>
+          <span style="font-size: 14px; color: rgba(255,255,255,0.7);">Sarah Chen &middot; 20 min read</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

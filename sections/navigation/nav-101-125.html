@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Sections 101-125 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  * { box-sizing: border-box; }
+  .section-label { background: #1A1A1A; color: #FFFFFF; padding: 10px 20px; font-family: 'SF Mono', monospace; font-size: 13px; }
+  .section-divider { height: 40px; background: #F6F6F7; border-top: 1px solid #E3E3E8; border-bottom: 1px solid #E3E3E8; }
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- NAV-101: Changelog/Updates Navigation -->
+<!-- ============================================ -->
+<div class="section-label">NAV-101: Changelog/Updates Navigation</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; padding: 16px 24px 0;">
+  <div style="display: flex; align-items: center; margin-bottom: 16px;">
+    <h1 style="font-size: 24px; font-weight: 700; color: #1A1A1A; margin: 0; flex: 1;">Changelog</h1>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <button style="height: 36px; padding: 0 14px; font-size: 13px; color: #6D6D72; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; font-family: inherit; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+        <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M3 8l4-4 4 4"/></svg>
+        Subscribe
+      </button>
+      <div style="display: flex; border: 1px solid #E3E3E8; border-radius: 8px; overflow: hidden;">
+        <button style="padding: 6px 12px; font-size: 12px; font-weight: 500; color: #FFFFFF; background: #1A1A1A; border: none; font-family: inherit; cursor: pointer;">All</button>
+        <button style="padding: 6px 12px; font-size: 12px; font-weight: 500; color: #6D6D72; background: #FFFFFF; border: none; border-left: 1px solid #E3E3E8; font-family: inherit; cursor: pointer;">Features</button>
+        <button style="padding: 6px 12px; font-size: 12px; font-weight: 500; color: #6D6D72; background: #FFFFFF; border: none; border-left: 1px solid #E3E3E8; font-family: inherit; cursor: pointer;">Fixes</button>
+      </div>
+    </div>
+  </div>
+  <div style="display: flex; gap: 0;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500; padding: 10px 16px; border-bottom: 2px solid #1A1A1A;">Latest</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none; padding: 10px 16px; border-bottom: 2px solid transparent;">2025</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none; padding: 10px 16px; border-bottom: 2px solid transparent;">2024</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none; padding: 10px 16px; border-bottom: 2px solid transparent;">Archive</a>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-102: With API Endpoint Path -->
+<!-- ============================================ -->
+<div class="section-label">NAV-102: With API Endpoint Path</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #1A1A1A; margin-right: 16px;">API Explorer</div>
+  <div style="display: flex; align-items: center; gap: 8px; flex: 1; max-width: 500px;">
+    <span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #1A8245; padding: 3px 8px; border-radius: 4px;">GET</span>
+    <code style="font-family: 'SF Mono', monospace; font-size: 13px; color: #1D1D1F; background: #F5F5F7; padding: 4px 10px; border-radius: 6px; border: 1px solid #E3E3E8; flex: 1;">/api/v2/users/{id}/orders</code>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px; margin-left: auto;">
+    <button style="height: 32px; padding: 0 12px; font-size: 13px; color: #6D6D72; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; font-family: inherit; cursor: pointer;">Try it</button>
+    <button style="height: 32px; padding: 0 12px; font-size: 13px; color: #6D6D72; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; font-family: inherit; cursor: pointer;">Copy cURL</button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-103: With Split Actions Bar -->
+<!-- ============================================ -->
+<div class="section-label">NAV-103: With Split Actions Bar</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <input type="checkbox" style="width: 16px; height: 16px; accent-color: #1A1A1A; cursor: pointer;">
+    <span style="font-size: 13px; color: #6D6D72;">12 selected</span>
+  </div>
+  <div style="width: 1px; height: 24px; background: #E3E3E8; margin: 0 16px;"></div>
+  <div style="display: flex; gap: 6px; flex: 1;">
+    <button style="height: 32px; padding: 0 12px; font-size: 13px; color: #1D1D1F; background: #F5F5F7; border: 1px solid #E3E3E8; border-radius: 6px; font-family: inherit; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">Move to</button>
+    <button style="height: 32px; padding: 0 12px; font-size: 13px; color: #1D1D1F; background: #F5F5F7; border: 1px solid #E3E3E8; border-radius: 6px; font-family: inherit; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">Label</button>
+    <button style="height: 32px; padding: 0 12px; font-size: 13px; color: #1D1D1F; background: #F5F5F7; border: 1px solid #E3E3E8; border-radius: 6px; font-family: inherit; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">Archive</button>
+    <button style="height: 32px; padding: 0 12px; font-size: 13px; color: #D72C0D; background: #FFF4F4; border: 1px solid rgba(215,44,13,0.2); border-radius: 6px; font-family: inherit; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.background='#FFE5E5'" onmouseout="this.style.background='#FFF4F4'">Delete</button>
+  </div>
+  <button style="font-size: 13px; color: #6D6D72; background: none; border: none; cursor: pointer; font-family: inherit;">Cancel</button>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-104: With Nested Dropdown Trail -->
+<!-- ============================================ -->
+<div class="section-label">NAV-104: With Nested Dropdown Trail</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="display: flex; align-items: center; gap: 4px; flex: 1;">
+    <div style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 6px; cursor: pointer; transition: background 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'">
+      <div style="width: 20px; height: 20px; border-radius: 4px; background: #2C6ECB; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #FFFFFF;">M</div>
+      <span style="font-size: 14px; font-weight: 600; color: #1A1A1A;">Marketing</span>
+      <svg width="12" height="12" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg>
+    </div>
+    <svg width="12" height="12" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M4 2l4 4-4 4"/></svg>
+    <div style="display: flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 6px; cursor: pointer; transition: background 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'">
+      <span style="font-size: 14px; font-weight: 500; color: #1A1A1A;">Campaigns</span>
+      <svg width="12" height="12" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg>
+    </div>
+    <svg width="12" height="12" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M4 2l4 4-4 4"/></svg>
+    <span style="font-size: 14px; color: #6D6D72;">Email Blast Q1</span>
+  </div>
+  <div style="display: flex; gap: 6px;">
+    <button style="height: 32px; padding: 0 10px; font-size: 13px; color: #6D6D72; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; font-family: inherit; cursor: pointer;">Edit</button>
+    <button style="height: 32px; padding: 0 10px; font-size: 13px; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 6px; font-family: inherit; cursor: pointer;">Send</button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-105: With Minimized Sidebar (Hover to Expand) -->
+<!-- ============================================ -->
+<div class="section-label">NAV-105: With Minimized Sidebar (Hover to Expand)</div>
+<div style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; display: flex; height: 300px;">
+  <aside style="width: 56px; background: #FFFFFF; border-right: 1px solid #E3E3E8; padding: 12px 8px; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: width 0.2s ease;">
+    <div style="width: 36px; height: 36px; border-radius: 8px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px;">A</div>
+    <div style="width: 36px; height: 36px; border-radius: 8px; background: #F5F5F7; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s ease;" onmouseover="this.style.background='#E8E8ED'" onmouseout="this.style.background='#F5F5F7'" title="Home">
+      <svg width="18" height="18" fill="none" stroke="#1D1D1F" stroke-width="1.5"><path d="M3 9l6-6 6 6M5 7v8h8V7"/></svg>
+    </div>
+    <div style="width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'" title="Projects">
+      <svg width="18" height="18" fill="none" stroke="#6D6D72" stroke-width="1.5"><rect x="2" y="3" width="14" height="12" rx="2"/><path d="M2 7h14"/></svg>
+    </div>
+    <div style="width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'" title="Analytics">
+      <svg width="18" height="18" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M3 15V9M7 15V5M11 15V8M15 15V3"/></svg>
+    </div>
+    <div style="width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative; transition: background 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'" title="Messages">
+      <svg width="18" height="18" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M2 4h14v9H6l-4 3V4z"/></svg>
+      <div style="position: absolute; top: 6px; right: 6px; width: 6px; height: 6px; background: #D72C0D; border-radius: 9999px;"></div>
+    </div>
+    <div style="flex: 1;"></div>
+    <div style="width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'" title="Settings">
+      <svg width="18" height="18" fill="none" stroke="#6D6D72" stroke-width="1.5"><circle cx="9" cy="9" r="3"/><path d="M9 1v2m0 12v2M1 9h2m12 0h2M3.5 3.5l1.4 1.4m8.2 8.2l1.4 1.4M3.5 14.5l1.4-1.4m8.2-8.2l1.4-1.4"/></svg>
+    </div>
+  </aside>
+  <div style="flex: 1; background: #F6F6F7; padding: 24px;">
+    <div style="color: #AEAEB2; font-size: 14px;">Main content area</div>
+  </div>
+</div>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-106: With Time/Clock Display -->
+<!-- ============================================ -->
+<div class="section-label">NAV-106: With Time/Clock Display</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #1A1A1A; margin-right: 32px;">Operations</div>
+  <div style="display: flex; gap: 24px; flex: 1;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Monitoring</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Alerts</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Incidents</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">On-Call</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; background: #F5F5F7; border-radius: 6px;">
+      <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><circle cx="7" cy="7" r="6"/><path d="M7 4v3l2 2"/></svg>
+      <span style="font-size: 13px; color: #1D1D1F; font-weight: 500; font-family: 'SF Mono', monospace;">14:32 UTC</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 4px; padding: 4px 8px; background: #E3F5E1; border-radius: 6px;">
+      <div style="width: 6px; height: 6px; border-radius: 9999px; background: #1A8245;"></div>
+      <span style="font-size: 12px; color: #1A8245; font-weight: 500;">Operational</span>
+    </div>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-107: With Branch/Git Selector -->
+<!-- ============================================ -->
+<div class="section-label">NAV-107: With Branch/Git Selector</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #1A1A1A; margin-right: 16px;">Repository</div>
+  <div style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid #E3E3E8; border-radius: 6px; cursor: pointer; margin-right: 24px; transition: border-color 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">
+    <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M5 3v8M9 3v4M5 7h4M5 3a2 2 0 1 0 0-0M9 3a2 2 0 1 0 0-0M5 11a2 2 0 1 0 0 0"/></svg>
+    <span style="font-size: 13px; color: #1D1D1F; font-weight: 500;">main</span>
+    <svg width="10" height="10" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg>
+  </div>
+  <div style="display: flex; gap: 0; flex: 1;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500; padding: 6px 12px; background: #F5F5F7; border-radius: 6px;">Code</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s ease;" onmouseover="this.style.background='#F5F5F7';this.style.color='#1D1D1F'" onmouseout="this.style.background='transparent';this.style.color='#6D6D72'">Issues <span style="font-size: 12px; background: #F5F5F7; padding: 1px 6px; border-radius: 9999px;">23</span></a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s ease;" onmouseover="this.style.background='#F5F5F7';this.style.color='#1D1D1F'" onmouseout="this.style.background='transparent';this.style.color='#6D6D72'">Pull Requests <span style="font-size: 12px; background: #F5F5F7; padding: 1px 6px; border-radius: 9999px;">5</span></a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s ease;" onmouseover="this.style.background='#F5F5F7';this.style.color='#1D1D1F'" onmouseout="this.style.background='transparent';this.style.color='#6D6D72'">Actions</a>
+  </div>
+  <button style="background: #1A1A1A; color: #FFFFFF; border: none; padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 500; font-family: inherit; cursor: pointer;">Clone</button>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-108: With Project Switcher Chip -->
+<!-- ============================================ -->
+<div class="section-label">NAV-108: With Project Switcher Chip</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="display: flex; align-items: center; gap: 8px; margin-right: 24px;">
+    <div style="width: 24px; height: 24px; border-radius: 6px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #FFFFFF;">P</div>
+    <div style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; background: #F5F5F7; border-radius: 6px; cursor: pointer; transition: background 0.2s ease;" onmouseover="this.style.background='#E8E8ED'" onmouseout="this.style.background='#F5F5F7'">
+      <span style="font-size: 13px; font-weight: 500; color: #1A1A1A;">E-commerce Redesign</span>
+      <svg width="10" height="10" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg>
+    </div>
+  </div>
+  <div style="display: flex; gap: 24px; flex: 1;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Board</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Backlog</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Sprints</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Roadmap</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div style="display: flex;">
+      <div style="width: 24px; height: 24px; border-radius: 9999px; background: #E9F0FE; border: 2px solid #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: #2C6ECB;">A</div>
+      <div style="width: 24px; height: 24px; border-radius: 9999px; background: #F3EEFF; border: 2px solid #FFFFFF; margin-left: -6px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: #7C3AED;">B</div>
+      <div style="width: 24px; height: 24px; border-radius: 9999px; background: #F5F5F7; border: 2px solid #FFFFFF; margin-left: -6px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: #6D6D72;">+2</div>
+    </div>
+    <button style="background: #1A1A1A; color: #FFFFFF; border: none; padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 500; font-family: inherit; cursor: pointer;">Invite</button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-109: With Compact Breadcrumb Dropdown -->
+<!-- ============================================ -->
+<div class="section-label">NAV-109: With Compact Breadcrumb Dropdown</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 48px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="display: flex; align-items: center; gap: 6px; flex: 1;">
+    <svg width="16" height="16" fill="none" stroke="#6D6D72" stroke-width="1.5" style="cursor: pointer;"><path d="M3 9l6-6 6 6M5 7v8h8V7"/></svg>
+    <svg width="10" height="10" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M3 2l4 4-4 4"/></svg>
+    <div style="display: flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 4px; cursor: pointer; transition: background 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'">
+      <span style="font-size: 13px; color: #6D6D72;">...</span>
+    </div>
+    <svg width="10" height="10" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M3 2l4 4-4 4"/></svg>
+    <span style="font-size: 13px; color: #6D6D72;">Components</span>
+    <svg width="10" height="10" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M3 2l4 4-4 4"/></svg>
+    <span style="font-size: 13px; font-weight: 500; color: #1A1A1A;">Button.tsx</span>
+  </div>
+  <div style="display: flex; gap: 4px;">
+    <button style="height: 28px; padding: 0 8px; font-size: 12px; color: #6D6D72; background: transparent; border: 1px solid #E3E3E8; border-radius: 4px; font-family: inherit; cursor: pointer;">Raw</button>
+    <button style="height: 28px; padding: 0 8px; font-size: 12px; color: #6D6D72; background: transparent; border: 1px solid #E3E3E8; border-radius: 4px; font-family: inherit; cursor: pointer;">Blame</button>
+    <button style="height: 28px; padding: 0 8px; font-size: 12px; color: #6D6D72; background: transparent; border: 1px solid #E3E3E8; border-radius: 4px; font-family: inherit; cursor: pointer;">History</button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-110: With Inline Tag/Badge Filters -->
+<!-- ============================================ -->
+<div class="section-label">NAV-110: With Inline Tag/Badge Filters</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; padding: 12px 24px;">
+  <div style="display: flex; align-items: center; margin-bottom: 12px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1A1A1A; flex: 1;">Explore</span>
+    <div style="position: relative; width: 240px;">
+      <input type="text" placeholder="Search..." style="width: 100%; height: 32px; border: 1px solid #E3E3E8; border-radius: 6px; padding: 0 12px 0 32px; font-size: 13px; font-family: inherit; color: #1D1D1F; outline: none; transition: border-color 0.2s ease;" onfocus="this.style.borderColor='#2C6ECB'" onblur="this.style.borderColor='#E3E3E8'">
+      <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="2" style="position: absolute; left: 10px; top: 9px;"><circle cx="6" cy="6" r="4"/><path d="M9 9l3 3"/></svg>
+    </div>
+  </div>
+  <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+    <span style="font-size: 13px; color: #FFFFFF; background: #1A1A1A; padding: 5px 14px; border-radius: 9999px; cursor: pointer; font-weight: 500;">All</span>
+    <span style="font-size: 13px; color: #1D1D1F; background: #F5F5F7; padding: 5px 14px; border-radius: 9999px; cursor: pointer; border: 1px solid #E3E3E8; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">Design</span>
+    <span style="font-size: 13px; color: #1D1D1F; background: #F5F5F7; padding: 5px 14px; border-radius: 9999px; cursor: pointer; border: 1px solid #E3E3E8; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">Development</span>
+    <span style="font-size: 13px; color: #1D1D1F; background: #F5F5F7; padding: 5px 14px; border-radius: 9999px; cursor: pointer; border: 1px solid #E3E3E8; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">Marketing</span>
+    <span style="font-size: 13px; color: #1D1D1F; background: #F5F5F7; padding: 5px 14px; border-radius: 9999px; cursor: pointer; border: 1px solid #E3E3E8; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">Product</span>
+    <span style="font-size: 13px; color: #1D1D1F; background: #F5F5F7; padding: 5px 14px; border-radius: 9999px; cursor: pointer; border: 1px solid #E3E3E8; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">Data Science</span>
+    <span style="font-size: 13px; color: #1D1D1F; background: #F5F5F7; padding: 5px 14px; border-radius: 9999px; cursor: pointer; border: 1px solid #E3E3E8; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">Operations</span>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-111: Dark with Blue Accent -->
+<!-- ============================================ -->
+<div class="section-label">NAV-111: Dark with Blue Accent</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1A1A1A; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #FFFFFF; margin-right: 32px;">DevPortal</div>
+  <div style="display: flex; gap: 4px; flex: 1;">
+    <a style="font-size: 14px; color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 6px 12px; background: #2C6ECB; border-radius: 6px;">Docs</a>
+    <a style="font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='#FFFFFF'" onmouseout="this.style.background='transparent';this.style.color='rgba(255,255,255,0.6)'">API Ref</a>
+    <a style="font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='#FFFFFF'" onmouseout="this.style.background='transparent';this.style.color='rgba(255,255,255,0.6)'">Tutorials</a>
+    <a style="font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='#FFFFFF'" onmouseout="this.style.background='transparent';this.style.color='rgba(255,255,255,0.6)'">SDKs</a>
+    <a style="font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)';this.style.color='#FFFFFF'" onmouseout="this.style.background='transparent';this.style.color='rgba(255,255,255,0.6)'">Community</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div style="display: flex; align-items: center; gap: 6px; padding: 5px 10px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; cursor: pointer;">
+      <svg width="14" height="14" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"><circle cx="6" cy="6" r="4"/><path d="M9 9l3 3"/></svg>
+      <span style="font-size: 13px; color: rgba(255,255,255,0.4);">Search...</span>
+      <span style="font-size: 11px; color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.08); padding: 1px 5px; border-radius: 3px;">⌘K</span>
+    </div>
+    <button style="background: #2C6ECB; color: #FFFFFF; border: none; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 500; font-family: inherit; cursor: pointer;">Dashboard</button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-112: With Pinned Quick Actions -->
+<!-- ============================================ -->
+<div class="section-label">NAV-112: With Pinned Quick Actions</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #1A1A1A; margin-right: 32px;">Helpdesk</div>
+  <div style="display: flex; gap: 24px; flex: 1;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Tickets</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Knowledge Base</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Reports</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 4px; padding: 3px; background: #F5F5F7; border-radius: 8px;">
+    <button style="height: 30px; padding: 0 10px; font-size: 12px; color: #1D1D1F; background: #FFFFFF; border: none; border-radius: 6px; font-family: inherit; cursor: pointer; display: flex; align-items: center; gap: 4px; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">
+      <svg width="12" height="12" fill="none" stroke="#1D1D1F" stroke-width="2"><path d="M6 1v10M1 6h10"/></svg>
+      New Ticket
+    </button>
+    <button style="height: 30px; padding: 0 10px; font-size: 12px; color: #6D6D72; background: transparent; border: none; border-radius: 6px; font-family: inherit; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: all 0.2s ease;" onmouseover="this.style.color='#1D1D1F'" onmouseout="this.style.color='#6D6D72'">
+      <svg width="12" height="12" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M3 6h6M3 3h6M3 9h4"/></svg>
+      Quick Reply
+    </button>
+    <button style="height: 30px; padding: 0 10px; font-size: 12px; color: #6D6D72; background: transparent; border: none; border-radius: 6px; font-family: inherit; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: all 0.2s ease;" onmouseover="this.style.color='#1D1D1F'" onmouseout="this.style.color='#6D6D72'">
+      <svg width="12" height="12" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M2 6a4 4 0 0 1 8 0M6 6v4"/></svg>
+      Escalate
+    </button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-113: With Connection Status -->
+<!-- ============================================ -->
+<div class="section-label">NAV-113: With Connection Status</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #1A1A1A; margin-right: 32px;">LiveChat</div>
+  <div style="display: flex; gap: 24px; flex: 1;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Conversations</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Visitors</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Canned Responses</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 6px;">
+      <div style="width: 8px; height: 8px; border-radius: 9999px; background: #1A8245; animation: pulse 2s ease infinite;"></div>
+      <span style="font-size: 13px; color: #1A8245; font-weight: 500;">Connected</span>
+    </div>
+    <style>@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }</style>
+    <div style="width: 1px; height: 24px; background: #E3E3E8;"></div>
+    <div style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; background: #F5F5F7; border-radius: 6px;">
+      <span style="font-size: 12px; color: #6D6D72;">Queue:</span>
+      <span style="font-size: 13px; font-weight: 600; color: #B98900;">8</span>
+    </div>
+    <div style="width: 32px; height: 32px; border-radius: 9999px; background: #E3F5E1; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #1A8245; cursor: pointer;">K</div>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-114: With AI Chat Interface Toggle -->
+<!-- ============================================ -->
+<div class="section-label">NAV-114: With AI Chat Interface Toggle</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #1A1A1A; margin-right: 32px;">Research</div>
+  <div style="display: flex; gap: 24px; flex: 1;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Library</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Notes</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Collections</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <button style="display: flex; align-items: center; gap: 6px; height: 36px; padding: 0 14px; background: #F5F5F7; color: #1D1D1F; border: 1px solid #E3E3E8; border-radius: 9999px; font-size: 13px; font-weight: 500; font-family: inherit; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">
+      <svg width="16" height="16" fill="none" stroke="#7C3AED" stroke-width="1.5"><path d="M8 1l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z"/></svg>
+      Ask AI
+    </button>
+    <div style="width: 32px; height: 32px; border-radius: 9999px; background: #F5F5F7; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #48484A; cursor: pointer;">R</div>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-115: With Locale-Aware Price Display -->
+<!-- ============================================ -->
+<div class="section-label">NAV-115: With Locale-Aware Price Display</div>
+<div style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <div style="background: #1A1A1A; height: 32px; display: flex; align-items: center; padding: 0 24px; justify-content: space-between;">
+    <div style="display: flex; gap: 16px;">
+      <a style="font-size: 12px; color: rgba(255,255,255,0.6); text-decoration: none;">Help</a>
+      <a style="font-size: 12px; color: rgba(255,255,255,0.6); text-decoration: none;">Track Order</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 4px; cursor: pointer;">
+        <span style="font-size: 12px; color: rgba(255,255,255,0.8);">🇺🇸 USD</span>
+        <svg width="8" height="8" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"><path d="M1 3l3 3 3-3"/></svg>
+      </div>
+      <div style="width: 1px; height: 14px; background: rgba(255,255,255,0.15);"></div>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.6);">Free shipping on orders $50+</span>
+    </div>
+  </div>
+  <nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+    <div style="font-size: 18px; font-weight: 700; color: #1A1A1A; margin-right: 32px;">LUXE</div>
+    <div style="display: flex; gap: 24px; flex: 1;">
+      <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">New In</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Women</a>
+      <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Men</a>
+      <a style="font-size: 14px; color: #D72C0D; text-decoration: none; font-weight: 500;">Sale</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <svg width="18" height="18" fill="none" stroke="#6D6D72" stroke-width="1.5" style="cursor: pointer;"><circle cx="8" cy="8" r="5"/><path d="M12 12l4 4"/></svg>
+      <svg width="18" height="18" fill="none" stroke="#6D6D72" stroke-width="1.5" style="cursor: pointer;"><path d="M9 3a5 5 0 0 1 4 8M5 3a5 5 0 0 0-4 8M3 15l3-4M15 15l-3-4"/></svg>
+      <div style="position: relative; cursor: pointer;">
+        <svg width="18" height="18" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M6 6h8l-1 7H7L6 6zM6 6L5 2H2"/><circle cx="8" cy="16" r="1"/><circle cx="13" cy="16" r="1"/></svg>
+        <div style="position: absolute; top: -4px; right: -6px; width: 14px; height: 14px; background: #1A1A1A; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 600; color: #FFFFFF;">2</div>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-116: With Sidebar Bookmarks -->
+<!-- ============================================ -->
+<div class="section-label">NAV-116: With Sidebar Bookmarks</div>
+<div style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; display: flex; height: 300px;">
+  <aside style="width: 240px; background: #FFFFFF; border-right: 1px solid #E3E3E8; padding: 12px 8px; display: flex; flex-direction: column;">
+    <div style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; margin-bottom: 8px;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: #1A1A1A; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #FFFFFF;">R</div>
+      <span style="font-size: 14px; font-weight: 600; color: #1A1A1A; flex: 1;">Reader</span>
+      <svg width="16" height="16" fill="none" stroke="#AEAEB2" stroke-width="1.5" style="cursor: pointer;"><circle cx="8" cy="8" r="7"/><path d="M8 5v6M5 8h6"/></svg>
+    </div>
+    <a style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 6px; font-size: 14px; color: #FFFFFF; background: #1A1A1A; text-decoration: none; font-weight: 500; margin-bottom: 2px;">
+      <svg width="14" height="14" fill="none" stroke="#FFFFFF" stroke-width="1.5"><path d="M2 2h4v12H2zM8 2h4v12H8z"/></svg>
+      All Items
+    </a>
+    <a style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 6px; font-size: 14px; color: #6D6D72; text-decoration: none; margin-bottom: 2px; transition: all 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'">
+      <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M3 2l4 5 4-5v12l-4-3-4 3V2z"/></svg>
+      Bookmarks
+      <span style="margin-left: auto; font-size: 12px; color: #AEAEB2;">47</span>
+    </a>
+    <a style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 6px; font-size: 14px; color: #6D6D72; text-decoration: none; margin-bottom: 2px; transition: all 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'">
+      <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M12 2H4l-2 2v8l2 2h8l2-2V4l-2-2z"/></svg>
+      Archive
+    </a>
+    <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid #E3E3E8;">
+      <div style="font-size: 11px; font-weight: 600; color: #AEAEB2; text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 12px; display: flex; align-items: center; justify-content: space-between;">
+        Folders
+        <svg width="12" height="12" fill="none" stroke="#AEAEB2" stroke-width="1.5" style="cursor: pointer;"><path d="M6 2v8M2 6h8"/></svg>
+      </div>
+      <a style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 6px; font-size: 13px; color: #6D6D72; text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'">
+        <span style="font-size: 14px;">📁</span> Work
+      </a>
+      <a style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 6px; font-size: 13px; color: #6D6D72; text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'">
+        <span style="font-size: 14px;">📁</span> Research
+      </a>
+    </div>
+  </aside>
+  <div style="flex: 1; background: #F6F6F7; padding: 24px;">
+    <div style="color: #AEAEB2; font-size: 14px;">Content area</div>
+  </div>
+</div>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-117: With Pricing/Plan Indicator -->
+<!-- ============================================ -->
+<div class="section-label">NAV-117: With Pricing/Plan Indicator</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="display: flex; align-items: center; gap: 8px; margin-right: 24px;">
+    <span style="font-size: 16px; font-weight: 700; color: #1A1A1A;">AppName</span>
+    <span style="font-size: 11px; font-weight: 600; color: #7C3AED; background: #F3EEFF; padding: 2px 8px; border-radius: 4px;">PRO</span>
+  </div>
+  <div style="display: flex; gap: 24px; flex: 1;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Dashboard</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Projects</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Analytics</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+      AI Tools
+      <span style="font-size: 10px; font-weight: 600; color: #B98900; background: #FFFBE6; padding: 1px 5px; border-radius: 3px;">NEW</span>
+    </a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div style="font-size: 12px; color: #6D6D72;">
+      <span style="font-weight: 500; color: #1D1D1F;">847</span> / 1000 credits
+    </div>
+    <div style="width: 60px; height: 4px; background: #E3E3E8; border-radius: 9999px; overflow: hidden;">
+      <div style="height: 100%; width: 85%; background: #B98900; border-radius: 9999px;"></div>
+    </div>
+    <button style="font-size: 12px; color: #7C3AED; background: none; border: 1px solid #7C3AED; padding: 4px 10px; border-radius: 6px; font-family: inherit; cursor: pointer;">Upgrade</button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-118: With Dual Search (Content + Commands) -->
+<!-- ============================================ -->
+<div class="section-label">NAV-118: With Dual Search (Content + Commands)</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #1A1A1A; margin-right: 24px;">Workbench</div>
+  <div style="flex: 1; max-width: 500px; display: flex; gap: 4px; background: #F5F5F7; border-radius: 8px; padding: 3px;">
+    <button style="flex: 1; display: flex; align-items: center; gap: 6px; padding: 5px 10px; background: #FFFFFF; border: none; border-radius: 6px; font-size: 13px; color: #1D1D1F; font-family: inherit; cursor: pointer; box-shadow: 0 1px 0 rgba(0,0,0,0.04);">
+      <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="2"><circle cx="6" cy="6" r="4"/><path d="M9 9l3 3"/></svg>
+      Search content...
+    </button>
+    <button style="display: flex; align-items: center; gap: 6px; padding: 5px 10px; background: transparent; border: none; border-radius: 6px; font-size: 13px; color: #6D6D72; font-family: inherit; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(0,0,0,0.04)'" onmouseout="this.style.background='transparent'">
+      <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="1.5"><path d="M4 5l3 3 3-3M4 9l3 3 3-3"/></svg>
+      Commands
+      <span style="font-size: 10px; color: #AEAEB2; background: #FFFFFF; border: 1px solid #E3E3E8; padding: 0px 4px; border-radius: 3px;">⌘K</span>
+    </button>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px; margin-left: auto; padding-left: 24px;">
+    <button style="width: 32px; height: 32px; border-radius: 8px; background: transparent; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; transition: background 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'">
+      <svg width="18" height="18" fill="none" stroke="#6D6D72" stroke-width="1.5"><path d="M9 16c.9 0 1.6-.7 1.6-1.6H7.4c0 .9.7 1.6 1.6 1.6zm4.8-4V8c0-2.5-1.3-4.5-3.6-5V2.4c0-.7-.5-1.2-1.2-1.2S7.8 1.7 7.8 2.4V3c-2.3.5-3.6 2.5-3.6 5v4L3.4 13v.8h11.2V13l-.8-1z"/></svg>
+    </button>
+    <div style="width: 32px; height: 32px; border-radius: 9999px; background: #E9F0FE; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #2C6ECB; cursor: pointer;">PL</div>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-119: With Workflow Status Trail -->
+<!-- ============================================ -->
+<div class="section-label">NAV-119: With Workflow Status Trail</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; padding: 12px 24px;">
+  <div style="display: flex; align-items: center; margin-bottom: 12px;">
+    <a style="font-size: 13px; color: #2C6ECB; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+      <svg width="14" height="14" fill="none" stroke="#2C6ECB" stroke-width="2"><path d="M9 12L5 8l4-4"/></svg>
+      Back to Invoices
+    </a>
+    <div style="flex: 1;"></div>
+    <div style="display: flex; gap: 6px;">
+      <button style="height: 32px; padding: 0 12px; font-size: 13px; color: #6D6D72; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 6px; font-family: inherit; cursor: pointer;">Preview</button>
+      <button style="height: 32px; padding: 0 12px; font-size: 13px; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 6px; font-family: inherit; cursor: pointer;">Send Invoice</button>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <span style="font-size: 13px; color: #1D1D1F; font-weight: 500;">INV-2026-0042</span>
+    <span style="font-size: 12px; color: #B98900; background: #FFFBE6; padding: 2px 8px; border-radius: 9999px; font-weight: 500;">Draft</span>
+    <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M4 7h6"/><path d="M7 4l3 3-3 3"/></svg>
+    <span style="font-size: 12px; color: #AEAEB2; background: #F5F5F7; padding: 2px 8px; border-radius: 9999px;">Sent</span>
+    <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M4 7h6"/><path d="M7 4l3 3-3 3"/></svg>
+    <span style="font-size: 12px; color: #AEAEB2; background: #F5F5F7; padding: 2px 8px; border-radius: 9999px;">Viewed</span>
+    <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M4 7h6"/><path d="M7 4l3 3-3 3"/></svg>
+    <span style="font-size: 12px; color: #AEAEB2; background: #F5F5F7; padding: 2px 8px; border-radius: 9999px;">Paid</span>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-120: With Pagination Controls -->
+<!-- ============================================ -->
+<div class="section-label">NAV-120: With Pagination Controls</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 48px; display: flex; align-items: center; padding: 0 24px;">
+  <span style="font-size: 13px; color: #6D6D72;">Showing 1-25 of 342 results</span>
+  <div style="flex: 1;"></div>
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <button style="width: 32px; height: 32px; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; cursor: not-allowed; display: flex; align-items: center; justify-content: center; opacity: 0.4;">
+      <svg width="14" height="14" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M9 3L5 7l4 4"/></svg>
+    </button>
+    <button style="width: 32px; height: 32px; background: #1A1A1A; color: #FFFFFF; border: none; border-radius: 6px; font-size: 13px; font-weight: 500; font-family: inherit; cursor: pointer;">1</button>
+    <button style="width: 32px; height: 32px; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 13px; color: #1D1D1F; font-family: inherit; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">2</button>
+    <button style="width: 32px; height: 32px; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 13px; color: #1D1D1F; font-family: inherit; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">3</button>
+    <span style="font-size: 13px; color: #AEAEB2; padding: 0 4px;">...</span>
+    <button style="width: 32px; height: 32px; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; font-size: 13px; color: #1D1D1F; font-family: inherit; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">14</button>
+    <button style="width: 32px; height: 32px; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;" onmouseover="this.style.borderColor='#D1D1D6'" onmouseout="this.style.borderColor='#E3E3E8'">
+      <svg width="14" height="14" fill="none" stroke="#1D1D1F" stroke-width="2"><path d="M5 3l4 4-4 4"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-121: With Multi-level Account Menu -->
+<!-- ============================================ -->
+<div class="section-label">NAV-121: With Multi-level Account Menu</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #1A1A1A; margin-right: 32px;">Platform</div>
+  <div style="display: flex; gap: 24px; flex: 1;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Home</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Products</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Resources</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 4px 10px; border-radius: 8px; cursor: pointer; transition: background 0.2s ease;" onmouseover="this.style.background='#F5F5F7'" onmouseout="this.style.background='transparent'">
+      <div style="width: 32px; height: 32px; border-radius: 9999px; background: linear-gradient(135deg, #2C6ECB, #7C3AED); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #FFFFFF;">JD</div>
+      <div>
+        <div style="font-size: 13px; font-weight: 500; color: #1A1A1A; line-height: 1.2;">John Doe</div>
+        <div style="font-size: 11px; color: #6D6D72; line-height: 1.2;">john@company.com</div>
+      </div>
+      <svg width="12" height="12" fill="none" stroke="#AEAEB2" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg>
+    </div>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-122: E-learning/Course Navigation -->
+<!-- ============================================ -->
+<div class="section-label">NAV-122: E-learning/Course Navigation</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; padding: 12px 24px;">
+  <div style="display: flex; align-items: center; margin-bottom: 8px;">
+    <a style="font-size: 13px; color: #2C6ECB; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+      <svg width="14" height="14" fill="none" stroke="#2C6ECB" stroke-width="2"><path d="M9 12L5 8l4-4"/></svg>
+      All Courses
+    </a>
+    <div style="flex: 1;"></div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="font-size: 12px; color: #6D6D72;">Progress:</div>
+      <div style="width: 100px; height: 6px; background: #E3E3E8; border-radius: 9999px; overflow: hidden;">
+        <div style="height: 100%; width: 65%; background: #1A8245; border-radius: 9999px;"></div>
+      </div>
+      <span style="font-size: 12px; font-weight: 500; color: #1A8245;">65%</span>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center;">
+    <h2 style="font-size: 18px; font-weight: 700; color: #1A1A1A; margin: 0; flex: 1;">Advanced React Patterns</h2>
+    <div style="display: flex; gap: 6px;">
+      <button style="height: 32px; padding: 0 12px; font-size: 13px; color: #6D6D72; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 6px; font-family: inherit; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+        <svg width="12" height="12" fill="none" stroke="#6D6D72" stroke-width="2"><path d="M9 3L5 7l4 4"/></svg>
+        Previous
+      </button>
+      <button style="height: 32px; padding: 0 12px; font-size: 13px; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 6px; font-family: inherit; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+        Next Lesson
+        <svg width="12" height="12" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M5 3l4 4-4 4"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-123: With Token/Balance Display -->
+<!-- ============================================ -->
+<div class="section-label">NAV-123: With Token/Balance Display</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #1A1A1A; margin-right: 32px;">PayNet</div>
+  <div style="display: flex; gap: 24px; flex: 1;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Dashboard</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Transactions</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Payouts</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Disputes</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 6px; padding: 6px 12px; background: #F5F5F7; border-radius: 8px;">
+      <span style="font-size: 12px; color: #6D6D72;">Balance:</span>
+      <span style="font-size: 14px; font-weight: 600; color: #1A8245;">$12,450.00</span>
+    </div>
+    <button style="background: #1A1A1A; color: #FFFFFF; border: none; padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 500; font-family: inherit; cursor: pointer;">Payout</button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-124: With Preview/Edit Mode Toggle -->
+<!-- ============================================ -->
+<div class="section-label">NAV-124: With Preview/Edit Mode Toggle</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <a style="font-size: 14px; color: #6D6D72; text-decoration: none; display: flex; align-items: center; gap: 4px; margin-right: 16px;">
+    <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="2"><path d="M9 12L5 8l4-4"/></svg>
+    Pages
+  </a>
+  <span style="font-size: 14px; font-weight: 600; color: #1A1A1A; flex: 1;">Landing Page - Summer Campaign</span>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div style="display: flex; background: #F5F5F7; border-radius: 8px; padding: 3px;">
+      <button style="padding: 5px 12px; font-size: 12px; font-weight: 500; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 6px; font-family: inherit; cursor: pointer;">Edit</button>
+      <button style="padding: 5px 12px; font-size: 12px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 6px; font-family: inherit; cursor: pointer;">Preview</button>
+    </div>
+    <div style="width: 1px; height: 24px; background: #E3E3E8;"></div>
+    <div style="display: flex; gap: 2px;">
+      <button style="width: 32px; height: 32px; background: #F5F5F7; border: 1px solid #E3E3E8; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center;" title="Desktop">
+        <svg width="14" height="14" fill="none" stroke="#1D1D1F" stroke-width="1.5"><rect x="1" y="2" width="12" height="8" rx="1"/><path d="M5 12h4"/></svg>
+      </button>
+      <button style="width: 32px; height: 32px; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center;" title="Tablet">
+        <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><rect x="2" y="1" width="10" height="12" rx="1"/></svg>
+      </button>
+      <button style="width: 32px; height: 32px; background: transparent; border: 1px solid #E3E3E8; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center;" title="Mobile">
+        <svg width="14" height="14" fill="none" stroke="#6D6D72" stroke-width="1.5"><rect x="4" y="1" width="6" height="12" rx="1"/></svg>
+      </button>
+    </div>
+    <div style="width: 1px; height: 24px; background: #E3E3E8;"></div>
+    <button style="background: #1A8245; color: #FFFFFF; border: none; padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 500; font-family: inherit; cursor: pointer;">Publish</button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- NAV-125: With Comparison Mode Selector -->
+<!-- ============================================ -->
+<div class="section-label">NAV-125: With Comparison Mode Selector</div>
+<nav style="font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FFFFFF; border-bottom: 1px solid #E3E3E8; height: 56px; display: flex; align-items: center; padding: 0 24px;">
+  <div style="font-size: 16px; font-weight: 700; color: #1A1A1A; margin-right: 24px;">Benchmarks</div>
+  <div style="display: flex; gap: 24px; flex: 1;">
+    <a style="font-size: 14px; color: #1D1D1F; text-decoration: none; font-weight: 500;">Compare</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Trends</a>
+    <a style="font-size: 14px; color: #6D6D72; text-decoration: none;">Forecasts</a>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div style="display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid #2C6ECB; background: #E9F0FE; border-radius: 6px;">
+      <div style="width: 8px; height: 8px; border-radius: 2px; background: #2C6ECB;"></div>
+      <span style="font-size: 12px; color: #2C6ECB; font-weight: 500;">Dataset A</span>
+    </div>
+    <span style="font-size: 13px; color: #AEAEB2;">vs</span>
+    <div style="display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid #7C3AED; background: #F3EEFF; border-radius: 6px;">
+      <div style="width: 8px; height: 8px; border-radius: 2px; background: #7C3AED;"></div>
+      <span style="font-size: 12px; color: #7C3AED; font-weight: 500;">Dataset B</span>
+    </div>
+    <button style="height: 32px; padding: 0 10px; font-size: 12px; color: #6D6D72; background: transparent; border: 1px dashed #D1D1D6; border-radius: 6px; font-family: inherit; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+      <svg width="10" height="10" fill="none" stroke="#6D6D72" stroke-width="2"><path d="M5 1v8M1 5h8"/></svg>
+      Add
+    </button>
+  </div>
+</nav>
+<div class="section-divider"></div>
+
+</body>
+</html>

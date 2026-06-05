@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Features 276-300 - Apple HIG</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;background:#f5f5f7;color:#1d1d1f;line-height:1.5}
+.container{max-width:1200px;margin:0 auto;padding:60px 20px}
+section{margin:80px 0;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;padding:60px}
+.content{padding:60px}
+h2{font-size:48px;font-weight:700;letter-spacing:-.02em;margin-bottom:16px;background:linear-gradient(135deg,#0071e3,#00c1e3);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+h3{font-size:28px;font-weight:600;margin-bottom:12px}
+p{font-size:17px;color:#6e6e73;line-height:1.6}
+.feature-card{padding:32px;border-radius:12px;background:#f9f9f9;transition:.3s}
+.feature-card:hover{transform:translateY(-4px);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.icon{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#0071e3,#00c1e3);margin-bottom:20px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:60px;background:linear-gradient(135deg,#0071e3,#00c1e3);color:#fff}
+.metric h4{font-size:48px;font-weight:700;margin-bottom:8px}
+.metric p{color:rgba(255,255,255,.8)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.split-content{padding:60px}
+.split-visual{background:linear-gradient(135deg,#f5f5f7,#e8e8ed);display:flex;align-items:center;justify-content:center;font-size:120px;color:#d2d2d7}
+.timeline{padding:60px;background:#fafafa}
+.timeline-item{display:flex;gap:24px;margin:32px 0;position:relative}
+.timeline-item::before{content:'';position:absolute;left:19px;top:48px;width:2px;height:calc(100% + 32px);background:#d2d2d7}
+.timeline-item:last-child::before{display:none}
+.timeline-dot{min-width:40px;height:40px;border-radius:50%;background:#0071e3;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;z-index:1}
+.list-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding:60px}
+.list-item{display:flex;align-items:start;gap:16px}
+.check{color:#0071e3;font-size:24px;font-weight:700}
+.cta{background:linear-gradient(135deg,#0071e3,#00c1e3);color:#fff;padding:80px 60px;text-align:center}
+.cta h2{-webkit-text-fill-color:#fff;margin-bottom:24px}
+.btn{display:inline-block;background:#fff;color:#0071e3;padding:14px 32px;border-radius:980px;font-weight:600;text-decoration:none;margin-top:24px;transition:.3s}
+.btn:hover{transform:scale(1.05);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+@media(max-width:768px){
+h2{font-size:32px}
+.grid,.split,.list-grid{grid-template-columns:1fr}
+.metrics{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<section>
+<div class="content">
+<h2>Feature 276: Smart Automation</h2>
+<p>Automate repetitive tasks with intelligent workflows that learn from your behavior and adapt to your preferences.</p>
+</div>
+<div class="grid">
+<div class="feature-card">
+<div class="icon">⚡</div>
+<h3>Quick Actions</h3>
+<p>Create custom shortcuts for frequent tasks with one-tap execution.</p>
+</div>
+<div class="feature-card">
+<div class="icon">🔄</div>
+<h3>Auto Sync</h3>
+<p>Keep data synchronized across all devices in real-time.</p>
+</div>
+<div class="feature-card">
+<div class="icon">🎯</div>
+<h3>Smart Triggers</h3>
+<p>Set conditions that automatically execute actions when met.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="metrics">
+<div class="metric">
+<h4>99.9%</h4>
+<p>Uptime reliability</p>
+</div>
+<div class="metric">
+<h4>5M+</h4>
+<p>Active users</p>
+</div>
+<div class="metric">
+<h4>24/7</h4>
+<p>Support available</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="split">
+<div class="split-content">
+<h2>Feature 278: Advanced Analytics</h2>
+<p>Gain deep insights into your data with comprehensive analytics tools that visualize trends and patterns.</p>
+<p style="margin-top:20px">Real-time dashboards update instantly as new data flows in, providing actionable intelligence.</p>
+</div>
+<div class="split-visual">📊</div>
+</div>
+</section>
+
+<section>
+<div class="content">
+<h2>Feature 279: Collaboration Hub</h2>
+<p>Work seamlessly with your team through integrated communication and file sharing.</p>
+</div>
+<div class="list-grid">
+<div class="list-item">
+<span class="check">✓</span>
+<div>
+<h3>Real-time editing</h3>
+<p>Collaborate simultaneously on documents</p>
+</div>
+</div>
+<div class="list-item">
+<span class="check">✓</span>
+<div>
+<h3>Version history</h3>
+<p>Track all changes with full restore capability</p>
+</div>
+</div>
+<div class="list-item">
+<span class="check">✓</span>
+<div>
+<h3>Team chat</h3>
+<p>Communicate without leaving the workspace</p>
+</div>
+</div>
+<div class="list-item">
+<span class="check">✓</span>
+<div>
+<h3>File sharing</h3>
+<p>Share documents with granular permissions</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="timeline">
+<h2 style="margin-bottom:40px;text-align:center">Feature 280: Project Timeline</h2>
+<div class="timeline-item">
+<div class="timeline-dot">1</div>
+<div>
+<h3>Planning Phase</h3>
+<p>Define objectives, scope, and deliverables for your project with collaborative planning tools.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot">2</div>
+<div>
+<h3>Execution Phase</h3>
+<p>Implement tasks with team coordination and progress tracking across all milestones.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot">3</div>
+<div>
+<h3>Review Phase</h3>
+<p>Analyze results, gather feedback, and optimize processes for continuous improvement.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="grid">
+<div class="feature-card">
+<div class="icon">🔒</div>
+<h3>Feature 281: Enterprise Security</h3>
+<p>Bank-level encryption protects your data with advanced threat detection and automatic backups.</p>
+</div>
+<div class="feature-card">
+<div class="icon">🌐</div>
+<h3>Feature 282: Global CDN</h3>
+<p>Lightning-fast content delivery from servers located worldwide for optimal performance.</p>
+</div>
+<div class="feature-card">
+<div class="icon">🎨</div>
+<h3>Feature 283: Custom Themes</h3>
+<p>Personalize your workspace with unlimited color schemes and layout configurations.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="split">
+<div class="split-visual">🚀</div>
+<div class="split-content">
+<h2>Feature 284: Performance Boost</h2>
+<p>Experience unprecedented speed with optimized algorithms that reduce load times by up to 80%.</p>
+<p style="margin-top:20px">Our advanced caching system ensures instant access to frequently used resources.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="content">
+<h2>Feature 285: AI Assistant</h2>
+<p>Intelligent suggestions powered by machine learning help you work faster and smarter.</p>
+</div>
+<div class="grid">
+<div class="feature-card">
+<div class="icon">💡</div>
+<h3>Smart Recommendations</h3>
+<p>Get contextual suggestions based on your work patterns.</p>
+</div>
+<div class="feature-card">
+<div class="icon">🗣️</div>
+<h3>Voice Commands</h3>
+<p>Control features hands-free with natural language.</p>
+</div>
+<div class="feature-card">
+<div class="icon">📝</div>
+<h3>Auto-complete</h3>
+<p>Finish sentences and tasks with predictive text.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="cta">
+<h2>Feature 286: Premium Access</h2>
+<p style="color:rgba(255,255,255,.9);font-size:21px">Unlock all features with our premium subscription. No commitments, cancel anytime.</p>
+<a href="#" class="btn">Get Started</a>
+</div>
+</section>
+
+<section>
+<div class="split">
+<div class="split-content">
+<h2>Feature 287: Mobile First</h2>
+<p>Optimized for mobile devices with responsive design that adapts to any screen size.</p>
+<p style="margin-top:20px">Touch-friendly interfaces ensure smooth interactions on smartphones and tablets.</p>
+</div>
+<div class="split-visual">📱</div>
+</div>
+</section>
+
+<section>
+<div class="grid">
+<div class="feature-card">
+<div class="icon">📈</div>
+<h3>Feature 288: Growth Tracking</h3>
+<p>Monitor progress with detailed metrics and visualizations that show your improvement over time.</p>
+</div>
+<div class="feature-card">
+<div class="icon">🔔</div>
+<h3>Feature 289: Smart Notifications</h3>
+<p>Stay informed with intelligent alerts that prioritize important updates and reduce noise.</p>
+</div>
+<div class="feature-card">
+<div class="icon">⚙️</div>
+<h3>Feature 290: Customization</h3>
+<p>Configure every aspect to match your workflow with extensive settings and preferences.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="timeline">
+<h2 style="margin-bottom:40px;text-align:center">Feature 291: Onboarding Flow</h2>
+<div class="timeline-item">
+<div class="timeline-dot">1</div>
+<div>
+<h3>Welcome</h3>
+<p>Start with a personalized introduction to key features and capabilities.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot">2</div>
+<div>
+<h3>Setup</h3>
+<p>Configure your preferences with guided wizards that make setup effortless.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-dot">3</div>
+<div>
+<h3>Launch</h3>
+<p>Begin working immediately with pre-configured templates and examples.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="metrics">
+<div class="metric">
+<h4>10x</h4>
+<p>Faster processing</p>
+</div>
+<div class="metric">
+<h4>500K</h4>
+<p>Documents created</p>
+</div>
+<div class="metric">
+<h4>150+</h4>
+<p>Countries served</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="split">
+<div class="split-visual">🔍</div>
+<div class="split-content">
+<h2>Feature 293: Advanced Search</h2>
+<p>Find anything instantly with powerful search that understands natural language queries.</p>
+<p style="margin-top:20px">Filter results by date, type, author, and dozens of other criteria for precise discovery.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="content">
+<h2>Feature 294: Integration Ecosystem</h2>
+<p>Connect with thousands of popular apps and services to create a unified workflow.</p>
+</div>
+<div class="list-grid">
+<div class="list-item">
+<span class="check">✓</span>
+<div>
+<h3>Cloud storage</h3>
+<p>Sync with Dropbox, Google Drive, OneDrive</p>
+</div>
+</div>
+<div class="list-item">
+<span class="check">✓</span>
+<div>
+<h3>Communication</h3>
+<p>Integrate Slack, Teams, Discord</p>
+</div>
+</div>
+<div class="list-item">
+<span class="check">✓</span>
+<div>
+<h3>Project management</h3>
+<p>Connect Asana, Trello, Monday</p>
+</div>
+</div>
+<div class="list-item">
+<span class="check">✓</span>
+<div>
+<h3>Developer tools</h3>
+<p>Link GitHub, GitLab, Bitbucket</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="grid">
+<div class="feature-card">
+<div class="icon">🎓</div>
+<h3>Feature 295: Learning Center</h3>
+<p>Master the platform with video tutorials, documentation, and interactive guides available 24/7.</p>
+</div>
+<div class="feature-card">
+<div class="icon">💬</div>
+<h3>Feature 296: Community Forum</h3>
+<p>Connect with other users to share tips, ask questions, and discover best practices.</p>
+</div>
+<div class="feature-card">
+<div class="icon">🏆</div>
+<h3>Feature 297: Achievements</h3>
+<p>Earn badges and rewards as you complete tasks and reach productivity milestones.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="split">
+<div class="split-content">
+<h2>Feature 298: Offline Mode</h2>
+<p>Work without interruption even when disconnected from the internet with full offline capabilities.</p>
+<p style="margin-top:20px">Changes sync automatically when you reconnect, ensuring no data is ever lost.</p>
+</div>
+<div class="split-visual">📶</div>
+</div>
+</section>
+
+<section>
+<div class="content">
+<h2>Feature 299: Accessibility First</h2>
+<p>Designed for everyone with comprehensive accessibility features including screen reader support, keyboard navigation, and high contrast modes.</p>
+</div>
+<div class="grid">
+<div class="feature-card">
+<div class="icon">♿</div>
+<h3>WCAG Compliant</h3>
+<p>Meets international accessibility standards for inclusive design.</p>
+</div>
+<div class="feature-card">
+<div class="icon">🎤</div>
+<h3>Voice Control</h3>
+<p>Navigate entirely using voice commands for hands-free operation.</p>
+</div>
+<div class="feature-card">
+<div class="icon">👁️</div>
+<h3>Visual Options</h3>
+<p>Adjust text size, spacing, and colors for optimal readability.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="cta">
+<h2>Feature 300: Transform Your Workflow</h2>
+<p style="color:rgba(255,255,255,.9);font-size:21px">Join millions who have revolutionized their productivity. Start your free trial today.</p>
+<a href="#" class="btn">Start Free Trial</a>
+</div>
+</section>
+
+</div>
+</body>
+</html>

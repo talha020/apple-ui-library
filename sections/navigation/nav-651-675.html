@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Sections 651-675 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<!-- Nav 651: Nested Dropdown Navigation -->
+<div class="section-label">651 — Nested Dropdown Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Enterprise</span>
+<div style="display: flex; align-items: center; gap: 24px; margin-left: 40px;">
+<div style="position: relative; cursor: pointer;">
+<a style="font-size: 14px; font-weight: 600; color: #2C6ECB; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+Products
+<svg width="14" height="14" fill="#2C6ECB" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+</a>
+</div>
+<div style="position: relative; cursor: pointer;">
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+Solutions
+<svg width="14" height="14" fill="#6D6D72" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+</a>
+</div>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Pricing</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Resources</a>
+</div>
+<button style="margin-left: auto; padding: 8px 18px; background: #1A1A1A; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;">Get Started</button>
+</div>
+</nav>
+</div>
+
+<!-- Nav 652: Progress Indicator Navigation -->
+<div class="section-label">652 — Progress Indicator Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="padding: 20px 24px;">
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+<span style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Setup Progress</span>
+<span style="font-size: 13px; font-weight: 600; color: #2C6ECB;">60% Complete</span>
+</div>
+<div style="width: 100%; height: 6px; background: #F6F6F7; border-radius: 9999px; overflow: hidden;">
+<div style="width: 60%; height: 100%; background: linear-gradient(90deg, #2C6ECB, #1A8245); border-radius: 9999px; transition: width 0.3s ease;"></div>
+</div>
+<div style="display: flex; align-items: center; gap: 16px; margin-top: 16px;">
+<a style="font-size: 13px; font-weight: 600; color: #1A8245; text-decoration: none; display: flex; align-items: center; gap: 4px; cursor: pointer;">
+<svg width="14" height="14" fill="#1A8245" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+Profile
+</a>
+<a style="font-size: 13px; font-weight: 600; color: #1A8245; text-decoration: none; display: flex; align-items: center; gap: 4px; cursor: pointer;">
+<svg width="14" height="14" fill="#1A8245" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+Preferences
+</a>
+<a style="font-size: 13px; font-weight: 600; color: #2C6ECB; text-decoration: none; display: flex; align-items: center; gap: 4px; cursor: pointer;">
+<div style="width: 14px; height: 14px; border-radius: 9999px; background: #2C6ECB;"></div>
+Integrations
+</a>
+<a style="font-size: 13px; font-weight: 500; color: #AEAEB2; text-decoration: none; cursor: pointer;">Billing</a>
+<a style="font-size: 13px; font-weight: 500; color: #AEAEB2; text-decoration: none; cursor: pointer;">Complete</a>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 653: Command Bar Navigation -->
+<div class="section-label">653 — Command Bar Navigation</div>
+<div class="section-container">
+<nav style="background: #1A1A1A; border-bottom: 1px solid rgba(255,255,255,0.1);">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<div style="width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, #2C6ECB, #1A8245); display: flex; align-items: center; justify-content: center;">
+<svg width="16" height="16" fill="#FFF" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+</div>
+<div style="display: flex; flex-direction: column;">
+<span style="font-size: 13px; font-weight: 700; color: #FFFFFF;">Command Center</span>
+<span style="font-size: 11px; color: rgba(255,255,255,0.5);">Press ⌘K to search</span>
+</div>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<div style="padding: 6px 12px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="rgba(255,255,255,0.6)" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+<span style="font-size: 12px; color: rgba(255,255,255,0.6);">⌘K</span>
+</div>
+<button style="width: 32px; height: 32px; border-radius: 8px; background: rgba(255,255,255,0.1); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<svg width="16" height="16" fill="rgba(255,255,255,0.8)" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+</button>
+<div style="width: 32px; height: 32px; border-radius: 9999px; background: linear-gradient(135deg, #FF6B6B, #D72C0D); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<span style="font-size: 12px; font-weight: 600; color: #FFFFFF;">TS</span>
+</div>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 654: Mega Menu Navigation -->
+<div class="section-label">654 — Mega Menu Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Marketplace</span>
+<div style="display: flex; align-items: center; gap: 28px; margin-left: 40px;">
+<a style="font-size: 14px; font-weight: 600; color: #2C6ECB; text-decoration: none; cursor: pointer; padding: 16px 0; border-bottom: 2px solid #2C6ECB;">Categories</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Featured</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">New</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Deals</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<div style="position: relative;">
+<input type="text" placeholder="Search products..." style="width: 260px; padding: 8px 12px 8px 36px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; color: #1D1D1F; font-family: inherit; outline: none;" />
+<svg width="16" height="16" fill="#6D6D72" viewBox="0 0 24 24" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%);"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+</div>
+<button style="width: 36px; height: 36px; border-radius: 8px; background: #F6F6F7; border: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<svg width="18" height="18" fill="#6D6D72" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 655: Filter Bar Navigation -->
+<div class="section-label">655 — Filter Bar Navigation</div>
+<div class="section-container">
+<nav style="background: #F6F6F7; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 12px 24px; gap: 12px;">
+<span style="font-size: 13px; font-weight: 600; color: #6D6D72;">Filters:</span>
+<button style="padding: 6px 12px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; font-weight: 500; color: #6D6D72; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px; transition: all 0.2s ease;">
+Category
+<svg width="12" height="12" fill="#6D6D72" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+</button>
+<button style="padding: 6px 12px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; font-weight: 500; color: #6D6D72; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px; transition: all 0.2s ease;">
+Price
+<svg width="12" height="12" fill="#6D6D72" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+</button>
+<button style="padding: 6px 12px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; font-weight: 500; color: #6D6D72; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px; transition: all 0.2s ease;">
+Rating
+<svg width="12" height="12" fill="#6D6D72" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+</button>
+<div style="flex: 1;"></div>
+<div style="padding: 6px 12px; background: #2C6ECB; border-radius: 8px; display: flex; align-items: center; gap: 6px;">
+<span style="font-size: 13px; font-weight: 600; color: #FFFFFF;">In Stock</span>
+<button style="width: 16px; height: 16px; border-radius: 9999px; background: rgba(255,255,255,0.3); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<svg width="10" height="10" stroke="#FFF" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+</button>
+</div>
+<button style="padding: 6px 12px; background: transparent; border: none; font-size: 13px; font-weight: 600; color: #D72C0D; cursor: pointer; font-family: inherit;">Clear All</button>
+</div>
+</nav>
+</div>
+
+<!-- Nav 656: Notification Center Navigation -->
+<div class="section-label">656 — Notification Center Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<span style="font-size: 15px; font-weight: 700; color: #1D1D1F;">Notifications</span>
+<div style="display: flex; align-items: center; gap: 8px; margin-left: 32px;">
+<button style="padding: 6px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #2C6ECB; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px;">
+All
+<span style="font-size: 11px; font-weight: 700; color: #2C6ECB; background: #FFFFFF; padding: 2px 6px; border-radius: 4px;">18</span>
+</button>
+<button style="padding: 6px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Unread</button>
+<button style="padding: 6px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Mentions</button>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+<button style="padding: 8px 14px; background: transparent; border: none; font-size: 13px; font-weight: 600; color: #2C6ECB; cursor: pointer; font-family: inherit;">Mark all read</button>
+<button style="width: 32px; height: 32px; border-radius: 8px; background: #F6F6F7; border: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<svg width="16" height="16" fill="#6D6D72" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 657: Workspace Switcher Navigation -->
+<div class="section-label">657 — Workspace Switcher Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer; min-width: 200px;">
+<div style="width: 28px; height: 28px; border-radius: 6px; background: linear-gradient(135deg, #2C6ECB, #1A8245); display: flex; align-items: center; justify-content: center;">
+<span style="font-size: 12px; font-weight: 700; color: #FFFFFF;">AC</span>
+</div>
+<div style="flex: 1;">
+<div style="font-size: 13px; font-weight: 600; color: #1D1D1F;">Acme Corp</div>
+<div style="font-size: 11px; color: #6D6D72;">Pro Plan</div>
+</div>
+<svg width="14" height="14" fill="#6D6D72" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+</div>
+<div style="display: flex; align-items: center; gap: 4px; margin-left: 24px;">
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A1A1A; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Dashboard</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Projects</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Team</button>
+</div>
+<div style="margin-left: auto;">
+<button style="padding: 8px 16px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;">Invite Team</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 658: Multi-Action Toolbar -->
+<div class="section-label">658 — Multi-Action Toolbar</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px; gap: 12px;">
+<div style="display: flex; align-items: center; gap: 6px; padding: 4px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px;">
+<button style="width: 32px; height: 32px; border-radius: 6px; background: #FFFFFF; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;">
+<svg width="16" height="16" fill="#1D1D1F" viewBox="0 0 24 24"><path d="M17 3a2.83 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+</button>
+<button style="width: 32px; height: 32px; border-radius: 6px; background: transparent; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;">
+<svg width="16" height="16" fill="#6D6D72" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+</button>
+<button style="width: 32px; height: 32px; border-radius: 6px; background: transparent; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;">
+<svg width="16" height="16" fill="#6D6D72" viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+</button>
+</div>
+<div style="width: 1px; height: 24px; background: #E3E3E8;"></div>
+<div style="display: flex; align-items: center; gap: 6px; padding: 4px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px;">
+<button style="width: 32px; height: 32px; border-radius: 6px; background: transparent; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;">
+<svg width="16" height="16" fill="#6D6D72" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+</button>
+<button style="width: 32px; height: 32px; border-radius: 6px; background: transparent; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;">
+<svg width="16" height="16" fill="#6D6D72" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+</button>
+<button style="width: 32px; height: 32px; border-radius: 6px; background: transparent; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;">
+<svg width="16" height="16" fill="#6D6D72" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+</button>
+</div>
+<div style="flex: 1;"></div>
+<span style="font-size: 13px; color: #6D6D72;">3 items selected</span>
+<button style="padding: 8px 16px; background: #D72C0D; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;">Delete</button>
+</div>
+</nav>
+</div>
+
+<!-- Nav 659: Status Bar Navigation -->
+<div class="section-label">659 — Status Bar Navigation</div>
+<div class="section-container">
+<nav style="background: #F6F6F7; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 24px;">
+<div style="display: flex; align-items: center; gap: 16px;">
+<div style="display: flex; align-items: center; gap: 6px;">
+<div style="width: 8px; height: 8px; border-radius: 9999px; background: #1A8245;"></div>
+<span style="font-size: 12px; font-weight: 600; color: #1D1D1F;">Online</span>
+</div>
+<div style="width: 1px; height: 16px; background: #E3E3E8;"></div>
+<span style="font-size: 12px; color: #6D6D72;">Last sync: 2 min ago</span>
+</div>
+<div style="display: flex; align-items: center; gap: 16px;">
+<div style="display: flex; align-items: center; gap: 6px;">
+<svg width="12" height="12" fill="#2C6ECB" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+<span style="font-size: 12px; color: #6D6D72;">128 projects</span>
+</div>
+<div style="width: 1px; height: 16px; background: #E3E3E8;"></div>
+<div style="display: flex; align-items: center; gap: 6px;">
+<svg width="12" height="12" fill="#B98900" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+<span style="font-size: 12px; color: #6D6D72;">24 pending tasks</span>
+</div>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 660: Compact Top Bar -->
+<div class="section-label">660 — Compact Top Bar</div>
+<div class="section-container">
+<nav style="background: #1A1A1A;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 40px;">
+<div style="display: flex; align-items: center; gap: 20px;">
+<span style="font-size: 13px; font-weight: 700; color: #FFFFFF;">App</span>
+<a style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Home</a>
+<a style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); text-decoration: none; cursor: pointer; transition: color 0.2s ease;">About</a>
+<a style="font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Contact</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<button style="padding: 4px 12px; background: rgba(255,255,255,0.15); color: #FFFFFF; border: none; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; font-family: inherit;">Sign In</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 661: Breadcrumb Trail Navigation -->
+<div class="section-label">661 — Breadcrumb Trail Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<button style="width: 32px; height: 32px; border-radius: 8px; background: #F6F6F7; border: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<svg width="16" height="16" fill="#6D6D72" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+</button>
+<svg width="12" height="12" fill="#AEAEB2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+<a style="font-size: 13px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Projects</a>
+<svg width="12" height="12" fill="#AEAEB2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+<a style="font-size: 13px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Design System</a>
+<svg width="12" height="12" fill="#AEAEB2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+<span style="font-size: 13px; font-weight: 700; color: #1D1D1F;">Components</span>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+<button style="padding: 8px 14px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; font-weight: 500; color: #6D6D72; cursor: pointer; font-family: inherit;">Close</button>
+<button style="padding: 8px 14px; background: #1A8245; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;">Save</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 662: Social Media Navigation -->
+<div class="section-label">662 — Social Media Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<div style="width: 36px; height: 36px; border-radius: 9999px; background: linear-gradient(135deg, #2C6ECB, #1A8245); display: flex; align-items: center; justify-content: center;">
+<svg width="18" height="18" fill="#FFF" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+</div>
+<span style="font-size: 15px; font-weight: 700; color: #1D1D1F;">Social</span>
+</div>
+<div style="display: flex; align-items: center; gap: 4px; margin-left: 32px;">
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #2C6ECB; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Feed</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Explore</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Messages</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Profile</button>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<button style="width: 36px; height: 36px; border-radius: 8px; background: #F6F6F7; border: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative;">
+<svg width="18" height="18" fill="#6D6D72" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+<span style="position: absolute; top: -4px; right: -4px; width: 16px; height: 16px; border-radius: 9999px; background: #D72C0D; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center;">5</span>
+</button>
+<div style="width: 36px; height: 36px; border-radius: 9999px; background: linear-gradient(135deg, #FF6B6B, #D72C0D); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<span style="font-size: 13px; font-weight: 600; color: #FFFFFF;">TS</span>
+</div>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 663: Video Platform Navigation -->
+<div class="section-label">663 — Video Platform Navigation</div>
+<div class="section-container">
+<nav style="background: #1A1A1A;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2" stroke="#D72C0D" stroke-width="2"/><polygon points="10 8.5 10 15.5 16 12" fill="#D72C0D"/></svg>
+<span style="font-size: 16px; font-weight: 700; color: #FFFFFF;">VideoHub</span>
+</div>
+<div style="margin-left: 32px; flex: 1; max-width: 600px;">
+<div style="position: relative;">
+<input type="text" placeholder="Search videos..." style="width: 100%; padding: 10px 14px 10px 40px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 9999px; font-size: 14px; color: #FFFFFF; font-family: inherit; outline: none;" />
+<svg width="18" height="18" fill="rgba(255,255,255,0.5)" viewBox="0 0 24 24" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%);"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+</div>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 16px;">
+<button style="width: 40px; height: 40px; border-radius: 8px; background: rgba(255,255,255,0.1); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;">
+<svg width="20" height="20" fill="rgba(255,255,255,0.8)" viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+</button>
+<button style="width: 40px; height: 40px; border-radius: 8px; background: rgba(255,255,255,0.1); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;">
+<svg width="20" height="20" fill="rgba(255,255,255,0.8)" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+</button>
+<div style="width: 40px; height: 40px; border-radius: 9999px; background: linear-gradient(135deg, #D72C0D, #B98900); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<span style="font-size: 14px; font-weight: 600; color: #FFFFFF;">TS</span>
+</div>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 664: Music Player Navigation -->
+<div class="section-label">664 — Music Player Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<svg width="24" height="24" fill="#2C6ECB" viewBox="0 0 24 24"><circle cx="5.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="15.5" r="2.5"/><path d="M8 17V5l12-2v12"/><path d="M20 13V3"/></svg>
+<span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">MusicApp</span>
+</div>
+<div style="display: flex; align-items: center; gap: 28px; margin-left: 40px;">
+<a style="font-size: 14px; font-weight: 600; color: #2C6ECB; text-decoration: none; cursor: pointer;">Listen Now</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Browse</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Radio</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Library</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<div style="padding: 6px 12px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#1A8245" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+<span style="font-size: 12px; font-weight: 600; color: #1D1D1F;">Now Playing</span>
+</div>
+<button style="width: 36px; height: 36px; border-radius: 8px; background: #F6F6F7; border: 1px solid #E3E3E8; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<svg width="18" height="18" fill="#6D6D72" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 665: Forum Navigation -->
+<div class="section-label">665 — Forum Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">Community</span>
+<div style="display: flex; align-items: center; gap: 24px; margin-left: 40px;">
+<a style="font-size: 14px; font-weight: 600; color: #2C6ECB; text-decoration: none; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+<svg width="16" height="16" fill="#2C6ECB" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+Discussions
+</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Trending</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Categories</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Members</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<div style="position: relative;">
+<input type="text" placeholder="Search discussions..." style="width: 240px; padding: 8px 12px 8px 36px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; color: #1D1D1F; font-family: inherit; outline: none;" />
+<svg width="16" height="16" fill="#6D6D72" viewBox="0 0 24 24" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%);"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+</div>
+<button style="padding: 8px 16px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#FFF" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+New Topic
+</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 666: Gaming Platform Navigation -->
+<div class="section-label">666 — Gaming Platform Navigation</div>
+<div class="section-container">
+<nav style="background: linear-gradient(135deg, #1A1A1A, #2C2C2C);">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="3" stroke="#B98900" stroke-width="2"/><circle cx="8" cy="12" r="1.5" fill="#B98900"/><circle cx="16" cy="10" r="1.5" fill="#B98900"/><circle cx="16" cy="14" r="1.5" fill="#B98900"/></svg>
+<span style="font-size: 16px; font-weight: 700; color: #FFFFFF;">GameHub</span>
+</div>
+<div style="display: flex; align-items: center; gap: 4px; margin-left: 32px;">
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: rgba(255,255,255,0.15); border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Store</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Library</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Community</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Friends</button>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<div style="padding: 6px 12px; background: rgba(185,137,0,0.2); border: 1px solid rgba(185,137,0,0.4); border-radius: 8px; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#B98900" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+<span style="font-size: 12px; font-weight: 600; color: #B98900;">1,250 XP</span>
+</div>
+<div style="width: 36px; height: 36px; border-radius: 9999px; background: linear-gradient(135deg, #B98900, #D72C0D); display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative;">
+<span style="font-size: 13px; font-weight: 600; color: #FFFFFF;">TS</span>
+<span style="position: absolute; bottom: -2px; right: -2px; width: 12px; height: 12px; border-radius: 9999px; background: #1A8245; border: 2px solid #1A1A1A;"></span>
+</div>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 667: Analytics Dashboard Navigation -->
+<div class="section-label">667 — Analytics Dashboard Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<svg width="22" height="22" fill="none" stroke="#2C6ECB" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
+<span style="font-size: 15px; font-weight: 700; color: #1D1D1F;">Analytics</span>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; margin-left: 32px;">
+<div style="padding: 6px 12px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+<svg width="14" height="14" fill="#6D6D72" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span style="font-size: 13px; font-weight: 500; color: #6D6D72;">Last 7 days</span>
+<svg width="12" height="12" fill="#6D6D72" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+</div>
+<div style="padding: 6px 12px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+<svg width="14" height="14" fill="#6D6D72" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<span style="font-size: 13px; font-weight: 500; color: #6D6D72;">All Regions</span>
+<svg width="12" height="12" fill="#6D6D72" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+</div>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+<button style="padding: 8px 14px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; font-weight: 500; color: #6D6D72; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#6D6D72" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+Export
+</button>
+<button style="padding: 8px 14px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;">Create Report</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 668: Learning Platform Navigation -->
+<div class="section-label">668 — Learning Platform Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<svg width="24" height="24" fill="none" stroke="#2C6ECB" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+<span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">LearnHub</span>
+</div>
+<div style="display: flex; align-items: center; gap: 24px; margin-left: 40px;">
+<a style="font-size: 14px; font-weight: 600; color: #2C6ECB; text-decoration: none; cursor: pointer;">My Courses</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Browse</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Instructors</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Certificates</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<div style="padding: 6px 12px; background: #FFF4E6; border: 1px solid #FFE5C2; border-radius: 8px; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#B98900" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+<span style="font-size: 12px; font-weight: 600; color: #B98900;">72% Complete</span>
+</div>
+<div style="width: 36px; height: 36px; border-radius: 9999px; background: linear-gradient(135deg, #2C6ECB, #1A8245); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<span style="font-size: 13px; font-weight: 600; color: #FFFFFF;">TS</span>
+</div>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 669: CRM Navigation -->
+<div class="section-label">669 — CRM Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">CRM</span>
+<div style="display: flex; align-items: center; gap: 4px; margin-left: 32px;">
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #2C6ECB; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Contacts</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Deals</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Tasks</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Reports</button>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<div style="display: flex; align-items: center; gap: 8px; padding: 6px 12px; background: #F0FFF4; border: 1px solid #C6F6D5; border-radius: 8px;">
+<div style="width: 8px; height: 8px; border-radius: 9999px; background: #1A8245; animation: pulse 2s ease-in-out infinite;"></div>
+<span style="font-size: 12px; font-weight: 600; color: #1A8245;">24 Active Deals</span>
+</div>
+<button style="padding: 8px 16px; background: #1A8245; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#FFF" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+Add Contact
+</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 670: Cloud Storage Navigation -->
+<div class="section-label">670 — Cloud Storage Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<svg width="22" height="22" fill="none" stroke="#2C6ECB" stroke-width="2" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+<span style="font-size: 15px; font-weight: 700; color: #1D1D1F;">CloudDrive</span>
+</div>
+<div style="display: flex; align-items: center; gap: 20px; margin-left: 40px;">
+<a style="font-size: 14px; font-weight: 600; color: #2C6ECB; text-decoration: none; cursor: pointer;">My Files</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Shared</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Recent</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Starred</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<div style="width: 100px; height: 6px; background: #F6F6F7; border-radius: 9999px; overflow: hidden;">
+<div style="width: 68%; height: 100%; background: linear-gradient(90deg, #2C6ECB, #1A8245); border-radius: 9999px;"></div>
+</div>
+<span style="font-size: 12px; color: #6D6D72;">6.8 GB of 10 GB</span>
+</div>
+<button style="padding: 8px 16px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#FFF" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+Upload
+</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 671: Event Management Navigation -->
+<div class="section-label">671 — Event Management Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<svg width="22" height="22" fill="none" stroke="#B98900" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">EventFlow</span>
+</div>
+<div style="display: flex; align-items: center; gap: 24px; margin-left: 40px;">
+<a style="font-size: 14px; font-weight: 600; color: #B98900; text-decoration: none; cursor: pointer;">Upcoming</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Past Events</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Attendees</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Analytics</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<div style="padding: 6px 12px; background: #FFF4E6; border: 1px solid #FFE5C2; border-radius: 8px; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#B98900" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+<span style="font-size: 12px; font-weight: 600; color: #B98900;">348 Registered</span>
+</div>
+<button style="padding: 8px 16px; background: #B98900; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;">Create Event</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 672: Restaurant Menu Navigation -->
+<div class="section-label">672 — Restaurant Menu Navigation</div>
+<div class="section-container">
+<nav style="background: #1A1A1A;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#D72C0D" stroke-width="2"/></svg>
+<span style="font-size: 16px; font-weight: 700; color: #FFFFFF;">Bistro</span>
+</div>
+<div style="display: flex; align-items: center; gap: 4px; margin-left: 32px;">
+<button style="padding: 8px 16px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: rgba(255,255,255,0.15); border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Menu</button>
+<button style="padding: 8px 16px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">About</button>
+<button style="padding: 8px 16px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Location</button>
+<button style="padding: 8px 16px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Contact</button>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<button style="width: 40px; height: 40px; border-radius: 8px; background: rgba(255,255,255,0.1); border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative;">
+<svg width="20" height="20" fill="rgba(255,255,255,0.8)" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+<span style="position: absolute; top: -4px; right: -4px; width: 18px; height: 18px; border-radius: 9999px; background: #D72C0D; color: #FFFFFF; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center;">2</span>
+</button>
+<button style="padding: 8px 18px; background: #D72C0D; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;">Reserve Table</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 673: Fitness App Navigation -->
+<div class="section-label">673 — Fitness App Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M14.4 14.4L9.6 9.6" stroke="#1A8245" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="6" r="4" stroke="#1A8245" stroke-width="2"/><circle cx="18" cy="18" r="4" stroke="#1A8245" stroke-width="2"/></svg>
+<span style="font-size: 16px; font-weight: 700; color: #1D1D1F;">FitTrack</span>
+</div>
+<div style="display: flex; align-items: center; gap: 4px; margin-left: 32px;">
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #1A8245; border: none; border-radius: 8px; cursor: pointer; font-family: inherit;">Dashboard</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Workouts</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Nutrition</button>
+<button style="padding: 8px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: transparent; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; transition: background 0.2s ease;">Progress</button>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 16px;">
+<div style="display: flex; align-items: center; gap: 12px;">
+<div style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; background: #FFF4F4; border: 1px solid #FDD; border-radius: 8px;">
+<svg width="14" height="14" fill="#D72C0D" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+<span style="font-size: 12px; font-weight: 600; color: #D72C0D;">142 bpm</span>
+</div>
+<div style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; background: #F0FFF4; border: 1px solid #C6F6D5; border-radius: 8px;">
+<svg width="14" height="14" fill="#1A8245" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+<span style="font-size: 12px; font-weight: 600; color: #1A8245;">482 cal</span>
+</div>
+</div>
+<div style="width: 36px; height: 36px; border-radius: 9999px; background: linear-gradient(135deg, #1A8245, #2C6ECB); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<span style="font-size: 13px; font-weight: 600; color: #FFFFFF;">TS</span>
+</div>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 674: Invoice Management Navigation -->
+<div class="section-label">674 — Invoice Management Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<span style="font-size: 15px; font-weight: 700; color: #1D1D1F;">Invoices</span>
+<div style="display: flex; align-items: center; gap: 8px; margin-left: 32px;">
+<button style="padding: 6px 14px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #2C6ECB; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px;">
+All
+<span style="font-size: 11px; font-weight: 700; color: #2C6ECB; background: #FFFFFF; padding: 2px 6px; border-radius: 4px;">142</span>
+</button>
+<button style="padding: 6px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Paid</button>
+<button style="padding: 6px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Pending</button>
+<button style="padding: 6px 14px; font-size: 13px; font-weight: 500; color: #6D6D72; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; cursor: pointer; font-family: inherit; transition: all 0.2s ease;">Overdue</button>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+<button style="padding: 8px 14px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; font-weight: 500; color: #6D6D72; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#6D6D72" viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+Filter
+</button>
+<button style="padding: 8px 14px; background: #F6F6F7; border: 1px solid #E3E3E8; border-radius: 8px; font-size: 13px; font-weight: 500; color: #6D6D72; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#6D6D72" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+Export
+</button>
+<button style="padding: 8px 16px; background: #1A8245; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px;">
+<svg width="14" height="14" fill="#FFF" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+New Invoice
+</button>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- Nav 675: Newsletter Platform Navigation -->
+<div class="section-label">675 — Newsletter Platform Navigation</div>
+<div class="section-container">
+<nav style="background: #FFFFFF; border-bottom: 1px solid #E3E3E8;">
+<div style="display: flex; align-items: center; padding: 0 24px; height: 56px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<svg width="22" height="22" fill="none" stroke="#2C6ECB" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+<span style="font-size: 15px; font-weight: 700; color: #1D1D1F;">Newsletter</span>
+</div>
+<div style="display: flex; align-items: center; gap: 24px; margin-left: 40px;">
+<a style="font-size: 14px; font-weight: 600; color: #2C6ECB; text-decoration: none; cursor: pointer;">Campaigns</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Subscribers</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Templates</a>
+<a style="font-size: 14px; font-weight: 500; color: #6D6D72; text-decoration: none; cursor: pointer; transition: color 0.2s ease;">Analytics</a>
+</div>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+<div style="display: flex; align-items: center; gap: 12px; padding-right: 12px; border-right: 1px solid #E3E3E8;">
+<div style="text-align: right;">
+<div style="font-size: 11px; color: #6D6D72;">Open Rate</div>
+<div style="font-size: 14px; font-weight: 700; color: #1A8245;">68.4%</div>
+</div>
+<div style="text-align: right;">
+<div style="font-size: 11px; color: #6D6D72;">Subscribers</div>
+<div style="font-size: 14px; font-weight: 700; color: #2C6ECB;">12,438</div>
+</div>
+</div>
+<button style="padding: 8px 16px; background: #2C6ECB; color: #FFFFFF; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;">Create Campaign</button>
+</div>
+</div>
+</nav>
+</div>
+
+</body>
+</html>

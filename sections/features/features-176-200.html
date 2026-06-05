@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Features 176-200 - Apple HIG</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;-webkit-font-smoothing:antialiased;background:#fff;color:#1d1d1f;line-height:1.4}
+.section{padding:80px 20px;max-width:1200px;margin:0 auto}
+.section:nth-child(even){background:#f5f5f7}
+h2{font-size:48px;font-weight:600;margin-bottom:16px;letter-spacing:-.003em}
+h3{font-size:32px;font-weight:600;margin-bottom:12px}
+p{font-size:21px;color:#6e6e73;margin-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px}
+.card{background:#fff;border-radius:18px;padding:32px;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.card h4{font-size:24px;font-weight:600;margin-bottom:8px}
+.card p{font-size:17px;color:#86868b}
+.icon{width:48px;height:48px;background:linear-gradient(135deg,#0071e3,#00aaff);border-radius:12px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;font-size:24px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.feature-list{list-style:none;margin-top:24px}
+.feature-list li{padding:12px 0;border-bottom:1px solid #d2d2d7;font-size:19px}
+.feature-list li:last-child{border:0}
+.badge{display:inline-block;background:#0071e3;color:#fff;padding:6px 12px;border-radius:12px;font-size:14px;font-weight:600;margin-bottom:16px}
+.btn{display:inline-block;background:#0071e3;color:#fff;padding:14px 28px;border-radius:24px;text-decoration:none;font-size:17px;font-weight:500;transition:.3s}
+.btn:hover{background:#0077ed}
+.stats{display:flex;gap:40px;margin-top:32px}
+.stat{text-align:center}
+.stat-num{font-size:56px;font-weight:700;color:#0071e3}
+.stat-label{font-size:17px;color:#86868b;margin-top:8px}
+.timeline{position:relative;padding-left:40px;margin-top:40px}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:#d2d2d7}
+.timeline-item{position:relative;margin-bottom:32px}
+.timeline-item::before{content:'';position:absolute;left:-46px;top:8px;width:14px;height:14px;background:#0071e3;border-radius:50%}
+.timeline-item h4{font-size:21px;font-weight:600;margin-bottom:8px}
+.comparison{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#d2d2d7;border-radius:18px;overflow:hidden;margin-top:40px}
+.comparison-col{background:#fff;padding:32px}
+.comparison-col h4{font-size:24px;margin-bottom:20px;text-align:center}
+.comparison-col ul{list-style:none}
+.comparison-col li{padding:12px 0;font-size:17px}
+.highlight{background:linear-gradient(135deg,#0071e3,#00aaff);color:#fff;border-radius:18px;padding:60px;text-align:center;margin-top:40px}
+.highlight h3,.highlight p{color:#fff}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+.metric{text-align:center;padding:24px;background:#f5f5f7;border-radius:12px}
+.metric-value{font-size:40px;font-weight:700;color:#0071e3}
+.metric-label{font-size:15px;color:#86868b;margin-top:8px}
+@media(max-width:768px){
+h2{font-size:32px}
+.split,.comparison{grid-template-columns:1fr}
+.stats{flex-direction:column;gap:24px}
+.metrics{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<section class="section">
+<span class="badge">Feature 176</span>
+<h2>Spatial Audio Mixing</h2>
+<p>Create immersive 3D soundscapes with advanced spatial audio processing.</p>
+<div class="grid">
+<div class="card">
+<div class="icon">🎧</div>
+<h4>Head Tracking</h4>
+<p>Dynamic sound positioning that follows head movement for realistic audio.</p>
+</div>
+<div class="card">
+<div class="icon">🌐</div>
+<h4>360° Sound Field</h4>
+<p>Position audio sources anywhere in three-dimensional space.</p>
+</div>
+<div class="card">
+<div class="icon">🎵</div>
+<h4>Dolby Atmos</h4>
+<p>Industry-standard object-based audio rendering and playback.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 177</span>
+<h2>Privacy Nutrition Labels</h2>
+<p>Transparent data collection summaries at a glance.</p>
+<div class="split">
+<div>
+<ul class="feature-list">
+<li>Data Collection Overview</li>
+<li>Third-Party Tracking Status</li>
+<li>Data Retention Policies</li>
+<li>User Rights Summary</li>
+<li>Privacy Impact Score</li>
+</ul>
+</div>
+<div>
+<div class="stats">
+<div class="stat">
+<div class="stat-num">100%</div>
+<div class="stat-label">Transparency</div>
+</div>
+<div class="stat">
+<div class="stat-num">0</div>
+<div class="stat-label">Hidden Data</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 178</span>
+<h2>Collaborative Whiteboards</h2>
+<p>Real-time visual collaboration with infinite canvas.</p>
+<div class="metrics">
+<div class="metric">
+<div class="metric-value">∞</div>
+<div class="metric-label">Canvas Size</div>
+</div>
+<div class="metric">
+<div class="metric-value">50</div>
+<div class="metric-label">Users Live</div>
+</div>
+<div class="metric">
+<div class="metric-value">120fps</div>
+<div class="metric-label">Smooth Drawing</div>
+</div>
+<div class="metric">
+<div class="metric-value">256</div>
+<div class="metric-label">Pressure Levels</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 179</span>
+<h2>Haptic Design Studio</h2>
+<p>Create custom haptic feedback patterns for rich tactile experiences.</p>
+<div class="timeline">
+<div class="timeline-item">
+<h4>Pattern Designer</h4>
+<p>Visual waveform editor for precise haptic timing and intensity.</p>
+</div>
+<div class="timeline-item">
+<h4>Live Preview</h4>
+<p>Test patterns instantly on connected devices in real-time.</p>
+</div>
+<div class="timeline-item">
+<h4>Library Templates</h4>
+<p>Pre-built patterns for common interactions and gestures.</p>
+</div>
+<div class="timeline-item">
+<h4>Export & Share</h4>
+<p>Package haptics for integration into any application.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 180</span>
+<h2>AI Code Completion</h2>
+<p>Intelligent suggestions that understand context and patterns.</p>
+<div class="grid">
+<div class="card">
+<div class="icon">💡</div>
+<h4>Context Aware</h4>
+<p>Analyzes entire project structure for relevant suggestions.</p>
+</div>
+<div class="card">
+<div class="icon">⚡</div>
+<h4>Instant Response</h4>
+<p>Sub-50ms completion suggestions as you type.</p>
+</div>
+<div class="card">
+<div class="icon">🔒</div>
+<h4>Private Processing</h4>
+<p>All analysis happens locally, code never leaves your device.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 181</span>
+<h2>Dynamic Island Widgets</h2>
+<p>Contextual information in an adaptive interface element.</p>
+<div class="highlight">
+<h3>Live Activities Integration</h3>
+<p>Music playback, timers, sports scores, and delivery tracking seamlessly integrated into your display.</p>
+<a href="#" class="btn">Learn More</a>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 182</span>
+<h2>Voice Cloning Protection</h2>
+<p>Detect and verify authentic voice communications.</p>
+<div class="comparison">
+<div class="comparison-col">
+<h4>Without Protection</h4>
+<ul>
+<li>✗ No verification</li>
+<li>✗ Vulnerable to deepfakes</li>
+<li>✗ No authentication</li>
+<li>✗ Manual checking</li>
+</ul>
+</div>
+<div class="comparison-col">
+<h4>With Protection</h4>
+<ul>
+<li>✓ Real-time analysis</li>
+<li>✓ AI deepfake detection</li>
+<li>✓ Biometric matching</li>
+<li>✓ Instant verification</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 183</span>
+<h2>Smart Home Automation</h2>
+<p>Intelligent routines that adapt to your lifestyle.</p>
+<div class="grid">
+<div class="card">
+<div class="icon">🏠</div>
+<h4>Presence Detection</h4>
+<p>Automatically adjust settings when you arrive or leave home.</p>
+</div>
+<div class="card">
+<div class="icon">🌅</div>
+<h4>Circadian Lighting</h4>
+<p>Lights that follow natural daylight patterns for better sleep.</p>
+</div>
+<div class="card">
+<div class="icon">🌡️</div>
+<h4>Climate Control</h4>
+<p>Learn preferences and optimize energy usage automatically.</p>
+</div>
+<div class="card">
+<div class="icon">🔐</div>
+<h4>Security Integration</h4>
+<p>Unified control for locks, cameras, and alarm systems.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 184</span>
+<h2>Live Text Translation</h2>
+<p>Point your camera at text in any language and see instant translations.</p>
+<div class="stats">
+<div class="stat">
+<div class="stat-num">100+</div>
+<div class="stat-label">Languages</div>
+</div>
+<div class="stat">
+<div class="stat-num">Real-time</div>
+<div class="stat-label">Processing</div>
+</div>
+<div class="stat">
+<div class="stat-num">Offline</div>
+<div class="stat-label">Capable</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 185</span>
+<h2>Predictive App Loading</h2>
+<p>Apps launch before you even tap them using intelligent prediction.</p>
+<div class="split">
+<div>
+<h3>Smart Preloading</h3>
+<p>Machine learning analyzes usage patterns to preload apps you're likely to use next.</p>
+<ul class="feature-list">
+<li>Time-based predictions</li>
+<li>Location awareness</li>
+<li>Activity context</li>
+<li>Calendar integration</li>
+</ul>
+</div>
+<div>
+<div class="metrics">
+<div class="metric">
+<div class="metric-value">90%</div>
+<div class="metric-label">Accuracy</div>
+</div>
+<div class="metric">
+<div class="metric-value">3x</div>
+<div class="metric-label">Faster Launch</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 186</span>
+<h2>Biometric Payment Security</h2>
+<p>Multi-layer authentication for secure transactions.</p>
+<div class="grid">
+<div class="card">
+<div class="icon">👤</div>
+<h4>Face ID</h4>
+<p>Secure facial recognition for instant payment authorization.</p>
+</div>
+<div class="card">
+<div class="icon">👆</div>
+<h4>Touch ID</h4>
+<p>Fingerprint authentication for quick and secure approval.</p>
+</div>
+<div class="card">
+<div class="icon">🔐</div>
+<h4>Secure Enclave</h4>
+<p>Hardware-isolated processing keeps biometric data safe.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 187</span>
+<h2>Generative UI Themes</h2>
+<p>AI-powered interface themes that adapt to your content.</p>
+<div class="highlight">
+<h3>Dynamic Color Extraction</h3>
+<p>Automatically generates harmonious color schemes from your photos, wallpapers, and content for a personalized experience.</p>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 188</span>
+<h2>Focus Mode Automation</h2>
+<p>Intelligent distraction management that learns your work patterns.</p>
+<div class="timeline">
+<div class="timeline-item">
+<h4>Smart Scheduling</h4>
+<p>Automatically activates focus modes based on calendar and location.</p>
+</div>
+<div class="timeline-item">
+<h4>App Filtering</h4>
+<p>Show only relevant apps and notifications for current activity.</p>
+</div>
+<div class="timeline-item">
+<h4>Contact Prioritization</h4>
+<p>Let important people through while silencing others.</p>
+</div>
+<div class="timeline-item">
+<h4>Lock Screen Sync</h4>
+<p>Coordinated experience across all your devices.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 189</span>
+<h2>AR Object Scanning</h2>
+<p>Create precise 3D models using just your camera.</p>
+<div class="metrics">
+<div class="metric">
+<div class="metric-value">5min</div>
+<div class="metric-label">Scan Time</div>
+</div>
+<div class="metric">
+<div class="metric-value">1mm</div>
+<div class="metric-label">Precision</div>
+</div>
+<div class="metric">
+<div class="metric-value">Full</div>
+<div class="metric-label">Color Texture</div>
+</div>
+<div class="metric">
+<div class="metric-value">USD</div>
+<div class="metric-label">Export Format</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 190</span>
+<h2>Neural Engine Optimization</h2>
+<p>Dedicated AI processing for blazing-fast machine learning.</p>
+<div class="grid">
+<div class="card">
+<div class="icon">🧠</div>
+<h4>16-Core Neural Engine</h4>
+<p>Specialized hardware for efficient AI computations.</p>
+</div>
+<div class="card">
+<div class="icon">⚡</div>
+<h4>15.8 Trillion Ops/Sec</h4>
+<p>Massive computational power for complex models.</p>
+</div>
+<div class="card">
+<div class="icon">🔋</div>
+<h4>Low Power</h4>
+<p>Advanced ML without draining your battery.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 191</span>
+<h2>Shared iCloud Albums</h2>
+<p>Collaborative photo libraries with intelligent organization.</p>
+<div class="split">
+<div>
+<h3>Family Memories</h3>
+<p>Everyone contributes, everyone enjoys. Photos automatically organize by date, location, and people.</p>
+<ul class="feature-list">
+<li>Unlimited contributors</li>
+<li>Activity notifications</li>
+<li>Collaborative editing</li>
+<li>Privacy controls</li>
+</ul>
+</div>
+<div>
+<div class="card">
+<div class="icon">📸</div>
+<h4>Smart Suggestions</h4>
+<p>AI recommends photos to share based on who appears in them.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 192</span>
+<h2>Live Voicemail Transcription</h2>
+<p>See voicemails transcribed in real-time as they're being left.</p>
+<div class="stats">
+<div class="stat">
+<div class="stat-num">Real-time</div>
+<div class="stat-label">Transcription</div>
+</div>
+<div class="stat">
+<div class="stat-num">95%</div>
+<div class="stat-label">Accuracy</div>
+</div>
+<div class="stat">
+<div class="stat-num">On-device</div>
+<div class="stat-label">Processing</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 193</span>
+<h2>Workout Intelligence</h2>
+<p>Personalized fitness coaching powered by advanced metrics.</p>
+<div class="grid">
+<div class="card">
+<div class="icon">💪</div>
+<h4>Form Analysis</h4>
+<p>Computer vision tracks movement quality and posture.</p>
+</div>
+<div class="card">
+<div class="icon">📊</div>
+<h4>Recovery Tracking</h4>
+<p>HRV, sleep, and readiness scores guide training intensity.</p>
+</div>
+<div class="card">
+<div class="icon">🎯</div>
+<h4>Adaptive Plans</h4>
+<p>Workouts adjust based on performance and recovery.</p>
+</div>
+<div class="card">
+<div class="icon">🏆</div>
+<h4>Achievement System</h4>
+<p>Milestones and badges keep you motivated.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 194</span>
+<h2>Password Manager Sync</h2>
+<p>Secure credential storage across all devices with zero-knowledge encryption.</p>
+<div class="comparison">
+<div class="comparison-col">
+<h4>Traditional Storage</h4>
+<ul>
+<li>✗ Single device</li>
+<li>✗ Manual entry</li>
+<li>✗ Weak passwords</li>
+<li>✗ No breach alerts</li>
+</ul>
+</div>
+<div class="comparison-col">
+<h4>iCloud Keychain</h4>
+<ul>
+<li>✓ Universal sync</li>
+<li>✓ AutoFill everywhere</li>
+<li>✓ Strong generation</li>
+<li>✓ Security monitoring</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 195</span>
+<h2>Cinematic Video Mode</h2>
+<p>Professional rack focus effects with automatic subject tracking.</p>
+<div class="highlight">
+<h3>Depth-Based Focus Transitions</h3>
+<p>AI predicts where to focus next, creating smooth focus pulls between subjects like a Hollywood cinematographer.</p>
+<a href="#" class="btn">See Examples</a>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 196</span>
+<h2>Screen Time Insights</h2>
+<p>Detailed analytics help build healthier device habits.</p>
+<div class="metrics">
+<div class="metric">
+<div class="metric-value">24/7</div>
+<div class="metric-label">Tracking</div>
+</div>
+<div class="metric">
+<div class="metric-value">Weekly</div>
+<div class="metric-label">Reports</div>
+</div>
+<div class="metric">
+<div class="metric-value">App</div>
+<div class="metric-label">Limits</div>
+</div>
+<div class="metric">
+<div class="metric-value">Family</div>
+<div class="metric-label">Sharing</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 197</span>
+<h2>Live Captions Everywhere</h2>
+<p>System-wide speech-to-text for accessibility and convenience.</p>
+<div class="grid">
+<div class="card">
+<div class="icon">💬</div>
+<h4>Video Calls</h4>
+<p>Real-time captions for FaceTime and third-party apps.</p>
+</div>
+<div class="card">
+<div class="icon">🎬</div>
+<h4>Media Playback</h4>
+<p>Automatic captions for any video or audio content.</p>
+</div>
+<div class="card">
+<div class="icon">🌍</div>
+<h4>Multi-Language</h4>
+<p>Supports dozens of languages with accurate transcription.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 198</span>
+<h2>MagSafe Ecosystem</h2>
+<p>Magnetic attachment system for accessories and charging.</p>
+<div class="timeline">
+<div class="timeline-item">
+<h4>Perfect Alignment</h4>
+<p>Magnets ensure optimal positioning for maximum charging efficiency.</p>
+</div>
+<div class="timeline-item">
+<h4>15W Fast Charging</h4>
+<p>Double the wireless charging speed of standard Qi chargers.</p>
+</div>
+<div class="timeline-item">
+<h4>Accessory Platform</h4>
+<p>Wallets, stands, mounts, and more attach securely.</p>
+</div>
+<div class="timeline-item">
+<h4>Case Compatible</h4>
+<p>Works seamlessly through MagSafe-compatible cases.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 199</span>
+<h2>Emergency SOS Satellite</h2>
+<p>Connect to emergency services even without cellular or Wi-Fi.</p>
+<div class="split">
+<div>
+<h3>Off-Grid Safety</h3>
+<p>Direct satellite communication keeps you connected in remote areas when you need help most.</p>
+<ul class="feature-list">
+<li>Text emergency services</li>
+<li>Share location via satellite</li>
+<li>Guided questionnaire</li>
+<li>Find My integration</li>
+</ul>
+</div>
+<div>
+<div class="stats">
+<div class="stat">
+<div class="stat-num">&lt;15s</div>
+<div class="stat-label">Connection Time</div>
+</div>
+<div class="stat">
+<div class="stat-num">Global</div>
+<div class="stat-label">Coverage</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="badge">Feature 200</span>
+<h2>ProRAW Photography</h2>
+<p>Computational photography meets professional RAW workflow.</p>
+<div class="grid">
+<div class="card">
+<div class="icon">📷</div>
+<h4>12-bit Color Depth</h4>
+<p>Capture 68 billion colors for maximum editing flexibility.</p>
+</div>
+<div class="card">
+<div class="icon">🎨</div>
+<h4>Smart HDR Data</h4>
+<p>Computational processing preserved in editable RAW format.</p>
+</div>
+<div class="card">
+<div class="icon">✨</div>
+<h4>Deep Fusion</h4>
+<p>Pixel-level processing combined with RAW versatility.</p>
+</div>
+<div class="card">
+<div class="icon">💾</div>
+<h4>DNG Compatible</h4>
+<p>Industry-standard format works with professional tools.</p>
+</div>
+</div>
+</section>
+
+</body>
+</html>

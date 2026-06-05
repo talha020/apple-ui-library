@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTA Components 051-075 - Apple HIG Design</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif; line-height: 1.6; color: #1d1d1f; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        section { margin: 60px 0; }
+        h2 { font-size: 14px; color: #86868b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; text-align: center; }
+
+        /* CTA 051 - Gradient Hero */
+        .cta-051 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 40px; text-align: center; border-radius: 18px; }
+        .cta-051 h3 { font-size: 56px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.5px; }
+        .cta-051 p { font-size: 21px; opacity: 0.9; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-051 .btn-primary { background: white; color: #667eea; padding: 14px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; font-size: 17px; transition: transform 0.2s; }
+        .cta-051 .btn-primary:hover { transform: scale(1.05); }
+
+        /* CTA 052 - Split Layout */
+        .cta-052 { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 18px; overflow: hidden; }
+        .cta-052 .left { background: #000; color: white; padding: 80px 60px; }
+        .cta-052 .right { background: #f5f5f7; padding: 80px 60px; display: flex; align-items: center; justify-content: center; }
+        .cta-052 h3 { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+        .cta-052 p { font-size: 19px; margin-bottom: 32px; opacity: 0.8; }
+        .cta-052 .btn { background: #0071e3; color: white; padding: 12px 28px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 500; }
+
+        /* CTA 053 - Centered Minimal */
+        .cta-053 { text-align: center; padding: 80px 40px; background: #fbfbfd; border-radius: 18px; }
+        .cta-053 h3 { font-size: 40px; font-weight: 700; margin-bottom: 12px; }
+        .cta-053 p { font-size: 17px; color: #86868b; margin-bottom: 24px; }
+        .cta-053 .btn-group { display: flex; gap: 16px; justify-content: center; }
+        .cta-053 .btn-outline { border: 2px solid #0071e3; color: #0071e3; padding: 10px 24px; border-radius: 980px; text-decoration: none; font-weight: 500; transition: all 0.2s; }
+        .cta-053 .btn-outline:hover { background: #0071e3; color: white; }
+
+        /* CTA 054 - Sticky Banner */
+        .cta-054 { position: sticky; top: 0; background: #000; color: white; padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+        .cta-054 p { font-size: 15px; margin: 0; }
+        .cta-054 .btn-small { background: #0071e3; color: white; padding: 8px 20px; border-radius: 980px; text-decoration: none; font-size: 14px; font-weight: 500; }
+
+        /* CTA 055 - Gradient Border */
+        .cta-055 { position: relative; padding: 60px 40px; text-align: center; border-radius: 18px; background: white; }
+        .cta-055::before { content: ''; position: absolute; inset: 0; border-radius: 18px; padding: 3px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+        .cta-055 h3 { font-size: 36px; font-weight: 700; margin-bottom: 12px; position: relative; }
+        .cta-055 p { font-size: 17px; color: #86868b; margin-bottom: 24px; position: relative; }
+        .cta-055 .btn { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 12px 28px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 500; position: relative; }
+
+        /* CTA 056 - Dark Card */
+        .cta-056 { background: #1d1d1f; color: white; padding: 60px 40px; border-radius: 18px; text-align: center; }
+        .cta-056 h3 { font-size: 40px; font-weight: 700; margin-bottom: 16px; }
+        .cta-056 p { font-size: 19px; opacity: 0.8; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-056 .btn-white { background: white; color: #1d1d1f; padding: 14px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; margin: 0 8px; }
+        .cta-056 .btn-transparent { border: 2px solid white; color: white; padding: 12px 30px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 500; margin: 0 8px; }
+
+        /* CTA 057 - Feature Grid */
+        .cta-057 { background: #f5f5f7; padding: 60px 40px; border-radius: 18px; }
+        .cta-057 .header { text-align: center; margin-bottom: 40px; }
+        .cta-057 h3 { font-size: 40px; font-weight: 700; margin-bottom: 12px; }
+        .cta-057 .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 32px; }
+        .cta-057 .feature { background: white; padding: 24px; border-radius: 12px; text-align: center; }
+        .cta-057 .feature h4 { font-size: 19px; font-weight: 600; margin-bottom: 8px; }
+        .cta-057 .feature p { font-size: 15px; color: #86868b; }
+        .cta-057 .btn-center { text-align: center; }
+
+        /* CTA 058 - Image Background */
+        .cta-058 { position: relative; padding: 120px 40px; text-align: center; border-radius: 18px; overflow: hidden; color: white; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400"><rect fill="%234a90e2" width="1200" height="400"/></svg>'); background-size: cover; }
+        .cta-058 h3 { font-size: 48px; font-weight: 700; margin-bottom: 16px; position: relative; z-index: 1; }
+        .cta-058 p { font-size: 21px; margin-bottom: 32px; position: relative; z-index: 1; opacity: 0.95; }
+        .cta-058 .btn { background: white; color: #000; padding: 14px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; position: relative; z-index: 1; }
+
+        /* CTA 059 - Compact Banner */
+        .cta-059 { background: #0071e3; color: white; padding: 24px 40px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; }
+        .cta-059 .content h4 { font-size: 21px; font-weight: 600; margin-bottom: 4px; }
+        .cta-059 .content p { font-size: 15px; opacity: 0.9; }
+        .cta-059 .btn { background: white; color: #0071e3; padding: 10px 24px; border-radius: 980px; text-decoration: none; font-weight: 600; white-space: nowrap; }
+
+        /* CTA 060 - Exit Intent Modal */
+        .cta-060 { background: white; padding: 48px; border-radius: 18px; max-width: 500px; margin: 0 auto; box-shadow: 0 20px 60px rgba(0,0,0,0.3); text-align: center; }
+        .cta-060 h3 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+        .cta-060 p { font-size: 17px; color: #86868b; margin-bottom: 32px; }
+        .cta-060 .btn-primary { background: #0071e3; color: white; padding: 12px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; margin-bottom: 12px; width: 100%; }
+        .cta-060 .btn-secondary { color: #0071e3; font-size: 15px; text-decoration: none; display: block; }
+
+        /* CTA 061 - Pill Stack */
+        .cta-061 { background: #fbfbfd; padding: 60px 40px; border-radius: 18px; text-align: center; }
+        .cta-061 h3 { font-size: 36px; font-weight: 700; margin-bottom: 16px; }
+        .cta-061 p { font-size: 17px; color: #86868b; margin-bottom: 32px; }
+        .cta-061 .pill-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .cta-061 .pill { background: white; border: 1px solid #d2d2d7; padding: 10px 20px; border-radius: 980px; text-decoration: none; color: #1d1d1f; font-weight: 500; transition: all 0.2s; }
+        .cta-061 .pill:hover { border-color: #0071e3; color: #0071e3; }
+
+        /* CTA 062 - Side by Side */
+        .cta-062 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .cta-062 .card { background: #f5f5f7; padding: 48px; border-radius: 18px; text-align: center; }
+        .cta-062 .card.primary { background: #000; color: white; }
+        .cta-062 h4 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+        .cta-062 p { font-size: 15px; margin-bottom: 24px; opacity: 0.8; }
+        .cta-062 .btn { padding: 12px 28px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; }
+        .cta-062 .primary .btn { background: white; color: #000; }
+        .cta-062 .card:not(.primary) .btn { background: #0071e3; color: white; }
+
+        /* CTA 063 - Gradient Text */
+        .cta-063 { padding: 80px 40px; text-align: center; }
+        .cta-063 h3 { font-size: 56px; font-weight: 700; margin-bottom: 16px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .cta-063 p { font-size: 19px; color: #86868b; margin-bottom: 32px; }
+        .cta-063 .btn { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; }
+
+        /* CTA 064 - Timeline */
+        .cta-064 { background: #f5f5f7; padding: 60px 40px; border-radius: 18px; }
+        .cta-064 h3 { font-size: 36px; font-weight: 700; margin-bottom: 40px; text-align: center; }
+        .cta-064 .timeline { display: flex; justify-content: space-between; margin-bottom: 32px; }
+        .cta-064 .step { flex: 1; text-align: center; position: relative; }
+        .cta-064 .step::after { content: ''; position: absolute; top: 24px; left: 50%; width: 100%; height: 2px; background: #d2d2d7; z-index: 0; }
+        .cta-064 .step:last-child::after { display: none; }
+        .cta-064 .circle { width: 48px; height: 48px; background: #0071e3; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 16px; position: relative; z-index: 1; }
+        .cta-064 .step h4 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+        .cta-064 .step p { font-size: 14px; color: #86868b; }
+        .cta-064 .btn-center { text-align: center; }
+
+        /* CTA 065 - Floating Card */
+        .cta-065 { background: white; padding: 48px; border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); text-align: center; max-width: 600px; margin: 0 auto; }
+        .cta-065 .badge { background: #0071e3; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 16px; }
+        .cta-065 h3 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+        .cta-065 p { font-size: 17px; color: #86868b; margin-bottom: 24px; }
+        .cta-065 .btn { background: #000; color: white; padding: 12px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; }
+
+        /* CTA 066 - Bottom Bar */
+        .cta-066 { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(29, 29, 31, 0.95); backdrop-filter: blur(20px); color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        .cta-066 .content { flex: 1; }
+        .cta-066 h4 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+        .cta-066 p { font-size: 14px; opacity: 0.8; }
+        .cta-066 .btn { background: #0071e3; color: white; padding: 10px 24px; border-radius: 980px; text-decoration: none; font-weight: 600; }
+
+        /* CTA 067 - Newsletter */
+        .cta-067 { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 60px 40px; border-radius: 18px; text-align: center; }
+        .cta-067 h3 { font-size: 36px; font-weight: 700; margin-bottom: 12px; }
+        .cta-067 p { font-size: 17px; color: #515154; margin-bottom: 32px; }
+        .cta-067 .input-group { display: flex; gap: 12px; max-width: 500px; margin: 0 auto; }
+        .cta-067 input { flex: 1; padding: 14px 20px; border-radius: 12px; border: 1px solid #d2d2d7; font-size: 15px; }
+        .cta-067 button { background: #0071e3; color: white; padding: 14px 32px; border-radius: 12px; border: none; font-weight: 600; cursor: pointer; }
+
+        /* CTA 068 - Icon Grid */
+        .cta-068 { padding: 60px 40px; background: #fbfbfd; border-radius: 18px; }
+        .cta-068 h3 { font-size: 36px; font-weight: 700; margin-bottom: 40px; text-align: center; }
+        .cta-068 .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 32px; }
+        .cta-068 .item { text-align: center; padding: 24px; background: white; border-radius: 12px; }
+        .cta-068 .icon { width: 48px; height: 48px; background: #0071e3; border-radius: 12px; margin: 0 auto 16px; }
+        .cta-068 h4 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+        .cta-068 p { font-size: 14px; color: #86868b; }
+        .cta-068 .btn-center { text-align: center; }
+
+        /* CTA 069 - Testimonial */
+        .cta-069 { background: #000; color: white; padding: 60px 40px; border-radius: 18px; text-align: center; }
+        .cta-069 .quote { font-size: 24px; font-style: italic; margin-bottom: 24px; line-height: 1.5; max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .cta-069 .author { font-size: 15px; margin-bottom: 32px; opacity: 0.7; }
+        .cta-069 .btn { background: white; color: #000; padding: 12px 28px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; }
+
+        /* CTA 070 - Countdown */
+        .cta-070 { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); color: white; padding: 60px 40px; border-radius: 18px; text-align: center; }
+        .cta-070 h3 { font-size: 36px; font-weight: 700; margin-bottom: 16px; }
+        .cta-070 p { font-size: 17px; margin-bottom: 32px; opacity: 0.95; }
+        .cta-070 .countdown { display: flex; gap: 24px; justify-content: center; margin-bottom: 32px; }
+        .cta-070 .time { background: rgba(255,255,255,0.2); padding: 16px 24px; border-radius: 12px; backdrop-filter: blur(10px); }
+        .cta-070 .time span { display: block; font-size: 32px; font-weight: 700; }
+        .cta-070 .time small { font-size: 12px; opacity: 0.8; text-transform: uppercase; }
+        .cta-070 .btn { background: white; color: #ff6b6b; padding: 14px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; }
+
+        /* CTA 071 - Social Proof */
+        .cta-071 { background: #f5f5f7; padding: 60px 40px; border-radius: 18px; text-align: center; }
+        .cta-071 .stats { display: flex; gap: 48px; justify-content: center; margin-bottom: 32px; }
+        .cta-071 .stat h4 { font-size: 48px; font-weight: 700; color: #0071e3; margin-bottom: 8px; }
+        .cta-071 .stat p { font-size: 15px; color: #86868b; }
+        .cta-071 h3 { font-size: 32px; font-weight: 700; margin-bottom: 16px; }
+        .cta-071 .btn { background: #000; color: white; padding: 12px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; }
+
+        /* CTA 072 - App Download */
+        .cta-072 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 40px; border-radius: 18px; }
+        .cta-072 .content { max-width: 600px; }
+        .cta-072 h3 { font-size: 40px; font-weight: 700; margin-bottom: 16px; }
+        .cta-072 p { font-size: 19px; margin-bottom: 32px; opacity: 0.95; }
+        .cta-072 .badges { display: flex; gap: 16px; }
+        .cta-072 .badge { background: #000; padding: 12px 24px; border-radius: 8px; text-decoration: none; color: white; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+
+        /* CTA 073 - Layered Cards */
+        .cta-073 { position: relative; padding: 80px 40px; text-align: center; }
+        .cta-073 .cards { position: relative; max-width: 500px; margin: 0 auto; }
+        .cta-073 .card { background: white; padding: 48px; border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .cta-073 .card::before { content: ''; position: absolute; top: -8px; left: 20px; right: 20px; height: 100%; background: #f5f5f7; border-radius: 18px; z-index: -1; }
+        .cta-073 h3 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+        .cta-073 p { font-size: 17px; color: #86868b; margin-bottom: 24px; }
+        .cta-073 .btn { background: #0071e3; color: white; padding: 12px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; }
+
+        /* CTA 074 - Video Background */
+        .cta-074 { position: relative; padding: 100px 40px; text-align: center; border-radius: 18px; overflow: hidden; color: white; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), #1d1d1f; }
+        .cta-074 h3 { font-size: 48px; font-weight: 700; margin-bottom: 16px; position: relative; z-index: 1; }
+        .cta-074 p { font-size: 21px; margin-bottom: 32px; position: relative; z-index: 1; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-074 .btn-group { display: flex; gap: 16px; justify-content: center; position: relative; z-index: 1; }
+        .cta-074 .btn { padding: 14px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; }
+        .cta-074 .btn-primary { background: white; color: #000; }
+        .cta-074 .btn-outline { border: 2px solid white; color: white; }
+
+        /* CTA 075 - Pricing Toggle */
+        .cta-075 { background: #fbfbfd; padding: 60px 40px; border-radius: 18px; }
+        .cta-075 h3 { font-size: 36px; font-weight: 700; margin-bottom: 32px; text-align: center; }
+        .cta-075 .toggle { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; }
+        .cta-075 .toggle-btn { padding: 10px 24px; border-radius: 980px; border: 1px solid #d2d2d7; background: white; cursor: pointer; font-weight: 500; transition: all 0.2s; }
+        .cta-075 .toggle-btn.active { background: #0071e3; color: white; border-color: #0071e3; }
+        .cta-075 .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .cta-075 .plan { background: white; padding: 32px; border-radius: 12px; text-align: center; border: 2px solid transparent; }
+        .cta-075 .plan.featured { border-color: #0071e3; }
+        .cta-075 .plan h4 { font-size: 21px; font-weight: 600; margin-bottom: 8px; }
+        .cta-075 .price { font-size: 40px; font-weight: 700; margin-bottom: 24px; }
+        .cta-075 .btn { background: #0071e3; color: white; padding: 10px 24px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600; width: 100%; }
+
+        @media (max-width: 768px) {
+            .cta-052, .cta-062, .cta-075 .plans { grid-template-columns: 1fr; }
+            .cta-057 .features, .cta-068 .grid { grid-template-columns: 1fr; }
+            .cta-066 { flex-direction: column; gap: 16px; }
+            .cta-067 .input-group { flex-direction: column; }
+            .cta-070 .countdown { gap: 12px; }
+            h3 { font-size: 32px !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <h2>CTA 051 - Gradient Hero</h2>
+            <div class="cta-051">
+                <h3>Experience Innovation</h3>
+                <p>Discover the future of technology with our cutting-edge solutions designed for modern creators.</p>
+                <a href="#" class="btn-primary">Get Started</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 052 - Split Layout</h2>
+            <div class="cta-052">
+                <div class="left">
+                    <h3>Transform Your Workflow</h3>
+                    <p>Join thousands of professionals who trust our platform every day.</p>
+                    <a href="#" class="btn">Start Free Trial</a>
+                </div>
+                <div class="right">
+                    <div style="width: 200px; height: 200px; background: white; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);"></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 053 - Centered Minimal</h2>
+            <div class="cta-053">
+                <h3>Ready to Begin?</h3>
+                <p>Start your journey with us today. No credit card required.</p>
+                <div class="btn-group">
+                    <a href="#" class="btn-outline">Learn More</a>
+                    <a href="#" class="btn-outline">Try for Free</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 054 - Sticky Banner</h2>
+            <div class="cta-054">
+                <p>Limited Time Offer: Get 50% off your first year</p>
+                <a href="#" class="btn-small">Claim Offer</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 055 - Gradient Border</h2>
+            <div class="cta-055">
+                <h3>Stand Out From the Crowd</h3>
+                <p>Premium features for ambitious teams</p>
+                <a href="#" class="btn">Explore Features</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 056 - Dark Card</h2>
+            <div class="cta-056">
+                <h3>Power Meets Simplicity</h3>
+                <p>Everything you need to build amazing products, all in one place.</p>
+                <div>
+                    <a href="#" class="btn-white">Get Started</a>
+                    <a href="#" class="btn-transparent">Watch Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 057 - Feature Grid</h2>
+            <div class="cta-057">
+                <div class="header">
+                    <h3>Why Choose Us</h3>
+                </div>
+                <div class="features">
+                    <div class="feature">
+                        <h4>Fast</h4>
+                        <p>Lightning-fast performance</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Secure</h4>
+                        <p>Bank-level encryption</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Reliable</h4>
+                        <p>99.9% uptime guarantee</p>
+                    </div>
+                </div>
+                <div class="btn-center">
+                    <a href="#" class="btn-white" style="background: #0071e3; color: white; padding: 12px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600;">Start Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 058 - Image Background</h2>
+            <div class="cta-058">
+                <h3>Build Something Amazing</h3>
+                <p>Create experiences that your users will love</p>
+                <a href="#" class="btn">Start Building</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 059 - Compact Banner</h2>
+            <div class="cta-059">
+                <div class="content">
+                    <h4>New Update Available</h4>
+                    <p>Discover the latest features and improvements</p>
+                </div>
+                <a href="#" class="btn">Update Now</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 060 - Exit Intent Modal</h2>
+            <div class="cta-060">
+                <h3>Wait! Don't Go Yet</h3>
+                <p>Get 20% off your first purchase when you subscribe to our newsletter.</p>
+                <a href="#" class="btn-primary">Claim Your Discount</a>
+                <a href="#" class="btn-secondary">No thanks, I'll pay full price</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 061 - Pill Stack</h2>
+            <div class="cta-061">
+                <h3>Choose Your Path</h3>
+                <p>Select the option that works best for you</p>
+                <div class="pill-group">
+                    <a href="#" class="pill">For Individuals</a>
+                    <a href="#" class="pill">For Teams</a>
+                    <a href="#" class="pill">For Enterprise</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 062 - Side by Side</h2>
+            <div class="cta-062">
+                <div class="card primary">
+                    <h4>Premium</h4>
+                    <p>Full access to all features</p>
+                    <a href="#" class="btn">Upgrade Now</a>
+                </div>
+                <div class="card">
+                    <h4>Basic</h4>
+                    <p>Perfect for getting started</p>
+                    <a href="#" class="btn">Start Free</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 063 - Gradient Text</h2>
+            <div class="cta-063">
+                <h3>Make It Happen</h3>
+                <p>Turn your vision into reality with our tools</p>
+                <a href="#" class="btn">Begin Your Journey</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 064 - Timeline</h2>
+            <div class="cta-064">
+                <h3>Get Started in 3 Steps</h3>
+                <div class="timeline">
+                    <div class="step">
+                        <div class="circle">1</div>
+                        <h4>Sign Up</h4>
+                        <p>Create your account</p>
+                    </div>
+                    <div class="step">
+                        <div class="circle">2</div>
+                        <h4>Customize</h4>
+                        <p>Set up your profile</p>
+                    </div>
+                    <div class="step">
+                        <div class="circle">3</div>
+                        <h4>Launch</h4>
+                        <p>Go live instantly</p>
+                    </div>
+                </div>
+                <div class="btn-center">
+                    <a href="#" class="btn-white" style="background: #0071e3; color: white; padding: 12px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600;">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 065 - Floating Card</h2>
+            <div class="cta-065">
+                <span class="badge">New Launch</span>
+                <h3>Introducing Pro Features</h3>
+                <p>Advanced tools for power users and teams</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </section>
+
+        <section style="height: 400px;">
+            <h2>CTA 066 - Bottom Bar (Fixed)</h2>
+            <div class="cta-066">
+                <div class="content">
+                    <h4>Special Offer Active</h4>
+                    <p>Save 30% on annual plans this week only</p>
+                </div>
+                <a href="#" class="btn">View Pricing</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 067 - Newsletter</h2>
+            <div class="cta-067">
+                <h3>Stay Updated</h3>
+                <p>Get the latest news and updates delivered to your inbox</p>
+                <div class="input-group">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 068 - Icon Grid</h2>
+            <div class="cta-068">
+                <h3>Everything You Need</h3>
+                <div class="grid">
+                    <div class="item">
+                        <div class="icon"></div>
+                        <h4>Analytics</h4>
+                        <p>Deep insights</p>
+                    </div>
+                    <div class="item">
+                        <div class="icon"></div>
+                        <h4>Security</h4>
+                        <p>Protected data</p>
+                    </div>
+                    <div class="item">
+                        <div class="icon"></div>
+                        <h4>Support</h4>
+                        <p>24/7 assistance</p>
+                    </div>
+                    <div class="item">
+                        <div class="icon"></div>
+                        <h4>Integrations</h4>
+                        <p>Connect tools</p>
+                    </div>
+                </div>
+                <div class="btn-center">
+                    <a href="#" class="btn-white" style="background: #0071e3; color: white; padding: 12px 32px; border-radius: 980px; text-decoration: none; display: inline-block; font-weight: 600;">Explore All Features</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 069 - Testimonial</h2>
+            <div class="cta-069">
+                <p class="quote">"This platform has completely transformed how we work. The best investment we've made this year."</p>
+                <p class="author">— Sarah Johnson, CEO at TechCorp</p>
+                <a href="#" class="btn">Join Them Today</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 070 - Countdown</h2>
+            <div class="cta-070">
+                <h3>Limited Time Offer</h3>
+                <p>Special pricing ends soon</p>
+                <div class="countdown">
+                    <div class="time">
+                        <span>12</span>
+                        <small>Hours</small>
+                    </div>
+                    <div class="time">
+                        <span>34</span>
+                        <small>Minutes</small>
+                    </div>
+                    <div class="time">
+                        <span>56</span>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+                <a href="#" class="btn">Claim Offer</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 071 - Social Proof</h2>
+            <div class="cta-071">
+                <div class="stats">
+                    <div class="stat">
+                        <h4>10k+</h4>
+                        <p>Active Users</p>
+                    </div>
+                    <div class="stat">
+                        <h4>50k+</h4>
+                        <p>Projects Created</p>
+                    </div>
+                    <div class="stat">
+                        <h4>98%</h4>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                </div>
+                <h3>Join Our Community</h3>
+                <a href="#" class="btn">Sign Up Free</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 072 - App Download</h2>
+            <div class="cta-072">
+                <div class="content">
+                    <h3>Get the App</h3>
+                    <p>Download now and take your productivity on the go</p>
+                    <div class="badges">
+                        <a href="#" class="badge">App Store</a>
+                        <a href="#" class="badge">Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 073 - Layered Cards</h2>
+            <div class="cta-073">
+                <div class="cards">
+                    <div class="card">
+                        <h3>Premium Access</h3>
+                        <p>Unlock all features and get priority support</p>
+                        <a href="#" class="btn">Upgrade Today</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 074 - Video Background</h2>
+            <div class="cta-074">
+                <h3>Create Without Limits</h3>
+                <p>Professional tools for creative professionals</p>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Start Free</a>
+                    <a href="#" class="btn btn-outline">See Pricing</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CTA 075 - Pricing Toggle</h2>
+            <div class="cta-075">
+                <h3>Choose Your Plan</h3>
+                <div class="toggle">
+                    <button class="toggle-btn active">Monthly</button>
+                    <button class="toggle-btn">Annual</button>
+                </div>
+                <div class="plans">
+                    <div class="plan">
+                        <h4>Basic</h4>
+                        <div class="price">$9</div>
+                        <a href="#" class="btn">Select Plan</a>
+                    </div>
+                    <div class="plan featured">
+                        <h4>Pro</h4>
+                        <div class="price">$29</div>
+                        <a href="#" class="btn">Select Plan</a>
+                    </div>
+                    <div class="plan">
+                        <h4>Enterprise</h4>
+                        <div class="price">$99</div>
+                        <a href="#" class="btn">Select Plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Sections 101-125 | Apple HIG Style Library</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #F6F6F7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.section-label { text-align: center; padding: 40px 20px 20px; font-size: 13px; font-weight: 600; color: #6D6D72; text-transform: uppercase; letter-spacing: 1px; }
+.section-container { max-width: 1440px; margin: 0 auto 40px; border: 1px solid #E3E3E8; border-radius: 12px; overflow: hidden; background: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- 101 — Gradient Card Login -->
+<!-- ============================================ -->
+<div class="section-label">101 — Gradient Card Login</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);">
+    <div style="width: 100%; max-width: 420px; background: #FFFFFF; padding: 48px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; text-align: center;">Sign in</h1>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px; text-align: center;">Welcome back to your account</p>
+      <input type="email" placeholder="Email address" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 12px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <input type="password" placeholder="Password" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 20px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <button style="width: 100%; padding: 14px; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Sign In</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 102 — Phone Number Login -->
+<!-- ============================================ -->
+<div class="section-label">102 — Phone Number Login</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 400px;">
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; text-align: center;">Sign in with phone</h1>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px; text-align: center;">We'll send you a verification code</p>
+      <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+        <select style="padding: 14px 12px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none; background: #FFFFFF; cursor: pointer;">
+          <option>+1</option>
+          <option>+44</option>
+          <option>+91</option>
+        </select>
+        <input type="tel" placeholder="Phone number" style="flex: 1; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      </div>
+      <button style="width: 100%; padding: 14px; background: #1A1A1A; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 16px;">Send Code</button>
+      <p style="font-size: 14px; color: #6D6D72; text-align: center;">Prefer email? <a href="#" style="color: #2C6ECB; text-decoration: none; font-weight: 500;">Sign in with email</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 103 — SMS Verification Code -->
+<!-- ============================================ -->
+<div class="section-label">103 — SMS Verification Code</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 400px;">
+      <div style="width: 64px; height: 64px; background: #E9F0FE; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2C6ECB" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+      </div>
+      <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; text-align: center;">Enter verification code</h1>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px; text-align: center;">Sent to +1 (555) 123-4567</p>
+      <div style="display: flex; gap: 10px; margin-bottom: 24px;">
+        <input type="text" maxlength="1" style="flex: 1; padding: 18px; font-size: 28px; font-weight: 600; text-align: center; border: 1px solid #E3E3E8; border-radius: 10px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+        <input type="text" maxlength="1" style="flex: 1; padding: 18px; font-size: 28px; font-weight: 600; text-align: center; border: 1px solid #E3E3E8; border-radius: 10px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+        <input type="text" maxlength="1" style="flex: 1; padding: 18px; font-size: 28px; font-weight: 600; text-align: center; border: 1px solid #E3E3E8; border-radius: 10px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+        <input type="text" maxlength="1" style="flex: 1; padding: 18px; font-size: 28px; font-weight: 600; text-align: center; border: 1px solid #E3E3E8; border-radius: 10px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      </div>
+      <button style="width: 100%; padding: 14px; background: #1A1A1A; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 16px;">Verify</button>
+      <p style="font-size: 14px; color: #6D6D72; text-align: center;">Didn't receive it? <a href="#" style="color: #2C6ECB; text-decoration: none; font-weight: 500;">Resend code</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 104 — Team Invite Signup -->
+<!-- ============================================ -->
+<div class="section-label">104 — Team Invite Signup</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 460px;">
+      <div style="padding: 20px; background: #E9F0FE; border-radius: 10px; margin-bottom: 32px; text-align: center;">
+        <p style="font-size: 14px; font-weight: 600; color: #2C6ECB; margin-bottom: 6px;">Team Invitation</p>
+        <p style="font-size: 15px; color: #1D1D1F;">You've been invited to join <strong>Acme Corp</strong></p>
+      </div>
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; text-align: center;">Complete your profile</h1>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px; text-align: center;">Set up your account to join the team</p>
+      <input type="text" placeholder="Full name" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 12px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <input type="email" placeholder="Email address" value="user@acme.com" disabled style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 12px; font-family: 'Satoshi', sans-serif; color: #6D6D72; background: #F6F6F7; outline: none;">
+      <input type="password" placeholder="Create password" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 24px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <button style="width: 100%; padding: 14px; background: #2C6ECB; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Join Team</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 105 — Passwordless Email Link Sent -->
+<!-- ============================================ -->
+<div class="section-label">105 — Passwordless Email Link Sent</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 440px; text-align: center;">
+      <div style="width: 72px; height: 72px; background: linear-gradient(135deg, #7C3AED 0%, #2C6ECB 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Check your inbox</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.5; margin-bottom: 8px;">We sent a magic link to</p>
+      <p style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 32px;">user@example.com</p>
+      <p style="font-size: 15px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">Click the link to sign in instantly. The link expires in 15 minutes.</p>
+      <button style="padding: 14px 32px; background: #FFFFFF; color: #1D1D1F; font-size: 15px; font-weight: 600; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Resend Link</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 106 — Account Locked Warning -->
+<!-- ============================================ -->
+<div class="section-label">106 — Account Locked Warning</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 440px; text-align: center;">
+      <div style="width: 72px; height: 72px; background: #FFF3E6; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9500" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      </div>
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Account temporarily locked</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">Too many failed login attempts. For security, your account has been locked for 30 minutes.</p>
+      <div style="padding: 20px; background: #FFF3E6; border-radius: 10px; margin-bottom: 32px;">
+        <p style="font-size: 14px; color: #B98900; line-height: 1.6;">You can try again at <strong>3:45 PM</strong> or reset your password now.</p>
+      </div>
+      <button style="width: 100%; padding: 14px; background: #FF9500; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 12px;">Reset Password</button>
+      <a href="#" style="font-size: 14px; color: #6D6D72; text-decoration: none; display: block;">Contact support</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 107 — Social Login Grid -->
+<!-- ============================================ -->
+<div class="section-label">107 — Social Login Grid</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 440px;">
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; text-align: center;">Sign in</h1>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px; text-align: center;">Choose your preferred sign in method</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px;">
+        <button style="padding: 16px; background: #FFFFFF; color: #1D1D1F; font-size: 14px; font-weight: 500; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M18.17 8.36h-8.45v3.28h4.88c-.44 2.23-2.31 3.28-4.88 3.28-2.98 0-5.4-2.42-5.4-5.4s2.42-5.4 5.4-5.4c1.36 0 2.59.5 3.55 1.32l2.45-2.45C14.46 1.63 12.35.72 10 .72 4.93.72.72 4.93.72 10s4.21 9.28 9.28 9.28c4.77 0 8.73-3.44 8.73-9.28 0-.62-.07-1.22-.19-1.8z" fill="#1A1A1A"/></svg>
+          Google
+        </button>
+        <button style="padding: 16px; background: #1A1A1A; color: #FFFFFF; font-size: 14px; font-weight: 500; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.138 18.163 20 14.417 20 10c0-5.523-4.477-10-10-10z" fill="currentColor"/></svg>
+          GitHub
+        </button>
+        <button style="padding: 16px; background: #FFFFFF; color: #1D1D1F; font-size: 14px; font-weight: 500; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </button>
+        <button style="padding: 16px; background: #FFFFFF; color: #1D1D1F; font-size: 14px; font-weight: 500; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#1DA1F2"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+          Twitter
+        </button>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px; margin: 28px 0;"><div style="flex: 1; height: 1px; background: #E3E3E8;"></div><span style="font-size: 13px; color: #6D6D72; font-weight: 500;">OR</span><div style="flex: 1; height: 1px; background: #E3E3E8;"></div></div>
+      <input type="email" placeholder="Email address" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 12px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <input type="password" placeholder="Password" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 20px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <button style="width: 100%; padding: 14px; background: #2C6ECB; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Sign In</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 108 — Workspace Switcher Login -->
+<!-- ============================================ -->
+<div class="section-label">108 — Workspace Switcher Login</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 460px;">
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 32px; text-align: center;">Choose workspace</h1>
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px;">
+        <button style="width: 100%; padding: 20px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; display: flex; align-items: center; gap: 16px; text-align: left;">
+          <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); border-radius: 10px;"></div>
+          <div style="flex: 1;">
+            <p style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px; font-family: 'Satoshi', sans-serif;">Acme Corporation</p>
+            <p style="font-size: 13px; color: #6D6D72; font-family: 'Satoshi', sans-serif;">15 members</p>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6D6D72" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button style="width: 100%; padding: 20px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; display: flex; align-items: center; gap: 16px; text-align: left;">
+          <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); border-radius: 10px;"></div>
+          <div style="flex: 1;">
+            <p style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px; font-family: 'Satoshi', sans-serif;">Design Studio</p>
+            <p style="font-size: 13px; color: #6D6D72; font-family: 'Satoshi', sans-serif;">8 members</p>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6D6D72" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button style="width: 100%; padding: 20px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; display: flex; align-items: center; gap: 16px; text-align: left;">
+          <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%); border-radius: 10px;"></div>
+          <div style="flex: 1;">
+            <p style="font-size: 16px; font-weight: 600; color: #1D1D1F; margin-bottom: 4px; font-family: 'Satoshi', sans-serif;">Personal Workspace</p>
+            <p style="font-size: 13px; color: #6D6D72; font-family: 'Satoshi', sans-serif;">Just you</p>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6D6D72" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <a href="#" style="font-size: 15px; color: #2C6ECB; text-decoration: none; font-weight: 500; display: block; text-align: center;">Create new workspace</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 109 — Fingerprint Authentication -->
+<!-- ============================================ -->
+<div class="section-label">109 — Fingerprint Authentication</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: linear-gradient(135deg, #E3F5E1 0%, #E9F0FE 100%);">
+    <div style="width: 100%; max-width: 400px; background: #FFFFFF; padding: 48px; border-radius: 12px; text-align: center; border: 1px solid #E3E3E8;">
+      <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #1A8245 0%, #34C759 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M12 11c0-2.21-1.79-4-4-4s-4 1.79-4 4v3h8v-3zM8 7c1.66 0 3 1.34 3 3v1H5v-1c0-1.66 1.34-3 3-3z"/></svg>
+      </div>
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Verify your identity</h1>
+      <p style="font-size: 16px; color: #6D6D72; margin-bottom: 40px; line-height: 1.5;">Place your finger on the sensor</p>
+      <div style="width: 60px; height: 60px; margin: 0 auto 32px; border: 3px solid #1A8245; border-radius: 50%; border-top-color: transparent; animation: spin 1s linear infinite;"></div>
+      <style>@keyframes spin { to { transform: rotate(360deg); }}</style>
+      <a href="#" style="font-size: 15px; color: #2C6ECB; text-decoration: none; font-weight: 500;">Use password instead</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 110 — Face ID Login -->
+<!-- ============================================ -->
+<div class="section-label">110 — Face ID Login</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 400px; text-align: center;">
+      <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #2C6ECB 0%, #7C3AED 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+      </div>
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Sign in with Face ID</h1>
+      <p style="font-size: 16px; color: #6D6D72; margin-bottom: 48px; line-height: 1.5;">Look at your device to authenticate</p>
+      <button style="padding: 16px 48px; background: linear-gradient(135deg, #2C6ECB 0%, #7C3AED 100%); color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 24px;">Authenticate</button>
+      <div style="display: flex; align-items: center; gap: 16px; margin: 32px 0;"><div style="flex: 1; height: 1px; background: #E3E3E8;"></div><span style="font-size: 13px; color: #6D6D72;">OR</span><div style="flex: 1; height: 1px; background: #E3E3E8;"></div></div>
+      <a href="#" style="font-size: 15px; color: #2C6ECB; text-decoration: none; font-weight: 500;">Enter password manually</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 111 — Password Strength Indicator -->
+<!-- ============================================ -->
+<div class="section-label">111 — Password Strength Indicator</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 420px;">
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; text-align: center;">Create new password</h1>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px; text-align: center;">Choose a strong, unique password</p>
+      <input type="password" placeholder="New password" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 8px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <div style="display: flex; gap: 6px; margin-bottom: 16px;">
+        <div style="flex: 1; height: 4px; background: #D72C0D; border-radius: 10px;"></div>
+        <div style="flex: 1; height: 4px; background: #FF9500; border-radius: 10px;"></div>
+        <div style="flex: 1; height: 4px; background: #E3E3E8; border-radius: 10px;"></div>
+        <div style="flex: 1; height: 4px; background: #E3E3E8; border-radius: 10px;"></div>
+      </div>
+      <p style="font-size: 13px; color: #FF9500; font-weight: 500; margin-bottom: 20px;">Password strength: Medium</p>
+      <input type="password" placeholder="Confirm password" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 24px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <button style="width: 100%; padding: 14px; background: #1A1A1A; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Update Password</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 112 — Email OTP Login -->
+<!-- ============================================ -->
+<div class="section-label">112 — Email OTP Login</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 400px;">
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; text-align: center;">Sign in with code</h1>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px; text-align: center;">Enter your email to receive a one-time code</p>
+      <input type="email" placeholder="Email address" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 20px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <button style="width: 100%; padding: 14px; background: #2C6ECB; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 24px;">Send Code</button>
+      <div style="padding: 16px; background: #E9F0FE; border-radius: 10px;">
+        <p style="font-size: 13px; color: #2C6ECB; line-height: 1.6;">We'll email you a 6-digit code that's valid for 10 minutes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 113 — Multi-Device Login Approval -->
+<!-- ============================================ -->
+<div class="section-label">113 — Multi-Device Login Approval</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 440px; text-align: center;">
+      <div style="width: 72px; height: 72px; background: #FFF3E6; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9500" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+      </div>
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Approve this login</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.5; margin-bottom: 32px;">A login attempt was made from a new device</p>
+      <div style="padding: 20px; background: #F6F6F7; border-radius: 10px; margin-bottom: 32px; text-align: left;">
+        <p style="font-size: 14px; color: #6D6D72; margin-bottom: 8px;"><strong style="color: #1D1D1F;">Device:</strong> MacBook Pro</p>
+        <p style="font-size: 14px; color: #6D6D72; margin-bottom: 8px;"><strong style="color: #1D1D1F;">Location:</strong> San Francisco, CA</p>
+        <p style="font-size: 14px; color: #6D6D72;"><strong style="color: #1D1D1F;">Time:</strong> 2:45 PM PST</p>
+      </div>
+      <button style="width: 100%; padding: 14px; background: #1A8245; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 12px;">Approve Login</button>
+      <button style="width: 100%; padding: 14px; background: #FFFFFF; color: #D72C0D; font-size: 16px; font-weight: 600; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Deny</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 114 — Backup Code Login -->
+<!-- ============================================ -->
+<div class="section-label">114 — Backup Code Login</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 400px;">
+      <div style="width: 64px; height: 64px; background: #F6F6F7; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="2"><path d="M12 2a5 5 0 015 5v3H7V7a5 5 0 015-5z"/><rect x="4" y="10" width="16" height="12" rx="2"/></svg>
+      </div>
+      <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; text-align: center;">Use backup code</h1>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px; text-align: center;">Enter one of your backup codes</p>
+      <input type="text" placeholder="8-digit backup code" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 8px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none; text-align: center; letter-spacing: 2px;">
+      <p style="font-size: 13px; color: #6D6D72; margin-bottom: 24px; text-align: center;">Each code can only be used once</p>
+      <button style="width: 100%; padding: 14px; background: #1A1A1A; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 16px;">Verify</button>
+      <a href="#" style="font-size: 14px; color: #2C6ECB; text-decoration: none; display: block; text-align: center;">Try another method</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 115 — Security Key Login -->
+<!-- ============================================ -->
+<div class="section-label">115 — Security Key Login</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: linear-gradient(135deg, #F6F6F7 0%, #FAFAFA 100%);">
+    <div style="width: 100%; max-width: 420px; background: #FFFFFF; padding: 48px; border-radius: 12px; text-align: center; border: 1px solid #E3E3E8;">
+      <div style="width: 72px; height: 72px; background: linear-gradient(135deg, #2C6ECB 0%, #7C3AED 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      </div>
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Insert security key</h1>
+      <p style="font-size: 16px; color: #6D6D72; margin-bottom: 40px; line-height: 1.5;">Connect your FIDO2 security key and follow the prompts</p>
+      <div style="padding: 20px; background: #E9F0FE; border-radius: 10px; margin-bottom: 32px;">
+        <p style="font-size: 14px; color: #2C6ECB; line-height: 1.6;">Waiting for security key...</p>
+      </div>
+      <a href="#" style="font-size: 15px; color: #6D6D72; text-decoration: none; display: block;">Use a different method</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 116 — Session Expired -->
+<!-- ============================================ -->
+<div class="section-label">116 — Session Expired</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 420px; text-align: center;">
+      <div style="width: 72px; height: 72px; background: #FFF3E6; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF9500" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Session expired</h1>
+      <p style="font-size: 16px; color: #6D6D72; line-height: 1.6; margin-bottom: 40px;">For your security, you've been logged out due to inactivity. Please sign in again.</p>
+      <button style="width: 100%; padding: 14px; background: #FF9500; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Sign In Again</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 117 — Student/Teacher Login -->
+<!-- ============================================ -->
+<div class="section-label">117 — Student/Teacher Login</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 460px;">
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 32px; text-align: center;">Sign in to your account</h1>
+      <div style="display: flex; gap: 12px; margin-bottom: 32px;">
+        <button style="flex: 1; padding: 20px; background: #2C6ECB; color: #FFFFFF; font-size: 15px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Student</button>
+        <button style="flex: 1; padding: 20px; background: #FFFFFF; color: #1D1D1F; font-size: 15px; font-weight: 600; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Teacher</button>
+      </div>
+      <input type="text" placeholder="Student ID" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 12px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <input type="password" placeholder="Password" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 20px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <button style="width: 100%; padding: 14px; background: #1A1A1A; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Sign In</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 118 — Guest Checkout -->
+<!-- ============================================ -->
+<div class="section-label">118 — Guest Checkout</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 520px;">
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 32px; text-align: center;">Welcome back</h1>
+      <div style="display: flex; gap: 16px; margin-bottom: 32px;">
+        <div style="flex: 1; padding: 32px 24px; background: #FFFFFF; border: 2px solid #2C6ECB; border-radius: 10px; cursor: pointer; text-align: center;">
+          <h2 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Sign In</h2>
+          <p style="font-size: 14px; color: #6D6D72;">Access your account</p>
+        </div>
+        <div style="flex: 1; padding: 32px 24px; background: #FFFFFF; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; text-align: center;">
+          <h2 style="font-size: 18px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Guest</h2>
+          <p style="font-size: 14px; color: #6D6D72;">Continue without account</p>
+        </div>
+      </div>
+      <input type="email" placeholder="Email address" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 12px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <input type="password" placeholder="Password" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 20px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <button style="width: 100%; padding: 14px; background: #2C6ECB; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Continue</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 119 — Domain-Based SSO -->
+<!-- ============================================ -->
+<div class="section-label">119 — Domain-Based SSO</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 400px;">
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 32px; text-align: center;">Enterprise sign in</h1>
+      <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+        <input type="text" placeholder="yourcompany" style="flex: 1; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+        <div style="display: flex; align-items: center; padding: 14px 16px; font-size: 15px; color: #6D6D72; background: #F6F6F7; border-radius: 10px;">.company.com</div>
+      </div>
+      <button style="width: 100%; padding: 14px; background: #2C6ECB; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 24px;">Continue with SSO</button>
+      <div style="padding: 16px; background: #F6F6F7; border-radius: 10px;">
+        <p style="font-size: 13px; color: #6D6D72; line-height: 1.6;">You'll be redirected to your company's login page.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 120 — Age Verification -->
+<!-- ============================================ -->
+<div class="section-label">120 — Age Verification</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 440px;">
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; text-align: center;">Verify your age</h1>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px; text-align: center;">You must be 18 or older to continue</p>
+      <label style="display: block; font-size: 13px; font-weight: 600; color: #1D1D1F; margin-bottom: 8px;">Date of birth</label>
+      <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+        <select style="flex: 1; padding: 14px 12px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none; background: #FFFFFF;">
+          <option>Month</option>
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+        </select>
+        <select style="flex: 1; padding: 14px 12px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none; background: #FFFFFF;">
+          <option>Day</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <select style="flex: 1; padding: 14px 12px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none; background: #FFFFFF;">
+          <option>Year</option>
+          <option>2006</option>
+          <option>2005</option>
+          <option>2004</option>
+        </select>
+      </div>
+      <button style="width: 100%; padding: 14px; background: #1A1A1A; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 16px;">Continue</button>
+      <p style="font-size: 13px; color: #6D6D72; text-align: center; line-height: 1.5;">We use your date of birth to verify your age and provide age-appropriate content.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 121 — OAuth Consent Screen -->
+<!-- ============================================ -->
+<div class="section-label">121 — OAuth Consent Screen</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 460px;">
+      <div style="text-align: center; margin-bottom: 32px;">
+        <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); border-radius: 10px; margin: 0 auto 16px;"></div>
+        <h1 style="font-size: 28px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">TaskFlow wants to access your account</h1>
+        <p style="font-size: 15px; color: #6D6D72;">user@example.com</p>
+      </div>
+      <div style="padding: 20px; background: #F6F6F7; border-radius: 10px; margin-bottom: 24px;">
+        <p style="font-size: 14px; font-weight: 600; color: #1D1D1F; margin-bottom: 12px;">This will allow TaskFlow to:</p>
+        <p style="font-size: 14px; color: #6D6D72; margin-bottom: 8px;">• View your profile information</p>
+        <p style="font-size: 14px; color: #6D6D72; margin-bottom: 8px;">• Access your email address</p>
+        <p style="font-size: 14px; color: #6D6D72;">• Manage your tasks and projects</p>
+      </div>
+      <button style="width: 100%; padding: 14px; background: #2C6ECB; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 12px;">Allow Access</button>
+      <button style="width: 100%; padding: 14px; background: #FFFFFF; color: #1D1D1F; font-size: 16px; font-weight: 600; border: 1px solid #E3E3E8; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Deny</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 122 — Login with Passkey -->
+<!-- ============================================ -->
+<div class="section-label">122 — Login with Passkey</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: linear-gradient(135deg, #E9F0FE 0%, #F3EEFF 100%);">
+    <div style="width: 100%; max-width: 420px; background: #FFFFFF; padding: 48px; border-radius: 12px; text-align: center; border: 1px solid #E3E3E8;">
+      <div style="width: 72px; height: 72px; background: linear-gradient(135deg, #2C6ECB 0%, #7C3AED 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+      </div>
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 12px;">Sign in with passkey</h1>
+      <p style="font-size: 16px; color: #6D6D72; margin-bottom: 40px; line-height: 1.5;">Use your device's biometric authentication</p>
+      <button style="width: 100%; padding: 14px; background: linear-gradient(135deg, #2C6ECB 0%, #7C3AED 100%); color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 24px;">Sign In with Passkey</button>
+      <a href="#" style="font-size: 15px; color: #2C6ECB; text-decoration: none; font-weight: 500;">Use password instead</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 123 — Maintenance Mode -->
+<!-- ============================================ -->
+<div class="section-label">123 — Maintenance Mode</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 480px; text-align: center;">
+      <div style="width: 80px; height: 80px; background: #F6F6F7; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <h1 style="font-size: 36px; font-weight: 700; color: #1D1D1F; margin-bottom: 16px;">We'll be right back</h1>
+      <p style="font-size: 17px; color: #6D6D72; line-height: 1.6; margin-bottom: 32px;">We're currently performing scheduled maintenance to improve your experience. We'll be back online shortly.</p>
+      <div style="padding: 20px; background: #F6F6F7; border-radius: 10px; margin-bottom: 32px;">
+        <p style="font-size: 14px; color: #1D1D1F; margin-bottom: 4px;"><strong>Estimated completion:</strong></p>
+        <p style="font-size: 18px; font-weight: 600; color: #2C6ECB;">4:00 PM PST</p>
+      </div>
+      <a href="#" style="font-size: 15px; color: #2C6ECB; text-decoration: none; font-weight: 500;">Check status page</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 124 — Beta Access Code -->
+<!-- ============================================ -->
+<div class="section-label">124 — Beta Access Code</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);">
+    <div style="width: 100%; max-width: 420px; background: #FFFFFF; padding: 48px; border-radius: 12px;">
+      <div style="text-align: center; margin-bottom: 32px;">
+        <div style="display: inline-block; padding: 8px 16px; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); border-radius: 6px; margin-bottom: 20px;">
+          <span style="font-size: 12px; font-weight: 700; color: #FFFFFF; letter-spacing: 1px;">BETA</span>
+        </div>
+        <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px;">Enter beta access code</h1>
+        <p style="font-size: 15px; color: #6D6D72;">This feature is currently in private beta</p>
+      </div>
+      <input type="text" placeholder="XXXX-XXXX-XXXX" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 20px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none; text-align: center; letter-spacing: 2px; text-transform: uppercase;">
+      <button style="width: 100%; padding: 14px; background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif; margin-bottom: 16px;">Verify Access</button>
+      <p style="font-size: 14px; color: #6D6D72; text-align: center;">Don't have a code? <a href="#" style="color: #667EEA; text-decoration: none; font-weight: 500;">Request access</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 125 — Referral Signup -->
+<!-- ============================================ -->
+<div class="section-label">125 — Referral Signup</div>
+<div class="section-container">
+  <div style="padding: 80px 40px; display: flex; align-items: center; justify-content: center; min-height: 600px; background: #FFFFFF;">
+    <div style="width: 100%; max-width: 460px;">
+      <div style="padding: 20px; background: linear-gradient(135deg, #E3F5E1 0%, #FFFBE6 100%); border-radius: 10px; margin-bottom: 32px; text-align: center;">
+        <p style="font-size: 14px; font-weight: 600; color: #1A8245; margin-bottom: 6px;">🎉 Special Offer</p>
+        <p style="font-size: 15px; color: #1D1D1F;">You've been referred by <strong>Sarah Chen</strong></p>
+      </div>
+      <h1 style="font-size: 32px; font-weight: 700; color: #1D1D1F; margin-bottom: 8px; text-align: center;">Get 2 months free</h1>
+      <p style="font-size: 15px; color: #6D6D72; margin-bottom: 32px; text-align: center;">Sign up now to claim your exclusive offer</p>
+      <input type="text" placeholder="Full name" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 12px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <input type="email" placeholder="Email address" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 12px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <input type="password" placeholder="Create password" style="width: 100%; padding: 14px 16px; font-size: 15px; border: 1px solid #E3E3E8; border-radius: 10px; margin-bottom: 24px; font-family: 'Satoshi', sans-serif; color: #1D1D1F; outline: none;">
+      <button style="width: 100%; padding: 14px; background: #1A8245; color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; font-family: 'Satoshi', sans-serif;">Claim Offer</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

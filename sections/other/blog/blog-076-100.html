@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Components 076-100 - Apple HIG Design</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text',sans-serif;background:#f5f5f7;padding:40px 20px;line-height:1.6;color:#1d1d1f}
+.container{max-width:1200px;margin:0 auto}
+.component{background:#fff;border-radius:18px;padding:60px;margin-bottom:40px;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+h2{font-size:14px;color:#6e6e73;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:40px;font-weight:600}
+
+/* 076 - Interactive Timeline Grid */
+.timeline-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.timeline-card{padding:32px;background:linear-gradient(135deg,#f5f5f7 0%,#fff 100%);border-radius:16px;border:1px solid #e5e5e7;position:relative;transition:.3s ease}
+.timeline-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+.timeline-year{font-size:48px;font-weight:700;background:linear-gradient(135deg,#007aff,#5856d6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px}
+.timeline-title{font-size:20px;font-weight:600;margin-bottom:8px}
+.timeline-desc{color:#6e6e73;font-size:15px;line-height:1.5}
+.timeline-badge{position:absolute;top:16px;right:16px;width:12px;height:12px;border-radius:50%;background:#34c759}
+
+/* 077 - Animated Tag Cloud */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:12px;padding:20px}
+.tag-item{padding:10px 20px;background:#f5f5f7;border-radius:20px;font-size:15px;font-weight:500;transition:.3s ease;cursor:pointer;border:1px solid transparent}
+.tag-item:hover{background:#007aff;color:#fff;transform:scale(1.05);border-color:#007aff}
+.tag-count{font-size:13px;color:#6e6e73;margin-left:6px}
+.tag-item:hover .tag-count{color:rgba(255,255,255,.7)}
+
+/* 078 - Feature Comparison */
+.comparison-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#e5e5e7;border-radius:16px;overflow:hidden}
+.comparison-item{background:#fff;padding:24px;text-align:center}
+.comparison-item.header{background:#f5f5f7;font-weight:600;font-size:17px}
+.comparison-check{color:#34c759;font-size:24px}
+.comparison-cross{color:#ff3b30;font-size:20px}
+.comparison-label{font-size:15px;color:#1d1d1f;text-align:left;padding:24px}
+
+/* 079 - Podcast Player */
+.podcast-player{background:linear-gradient(135deg,#667eea,#764ba2);border-radius:20px;padding:40px;color:#fff}
+.podcast-artwork{width:160px;height:160px;border-radius:12px;background:#fff;margin-bottom:24px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.podcast-title{font-size:24px;font-weight:700;margin-bottom:8px}
+.podcast-host{font-size:15px;opacity:.8;margin-bottom:24px}
+.podcast-progress{height:4px;background:rgba(255,255,255,.3);border-radius:2px;margin-bottom:16px;position:relative}
+.podcast-progress-fill{height:100%;background:#fff;border-radius:2px;width:45%}
+.podcast-controls{display:flex;align-items:center;justify-content:center;gap:32px}
+.podcast-btn{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);border:none;color:#fff;font-size:24px;cursor:pointer;transition:.2s}
+.podcast-btn:hover{background:rgba(255,255,255,.3);transform:scale(1.1)}
+.podcast-btn.play{background:#fff;color:#667eea;width:64px;height:64px}
+
+/* 080 - Newsletter Signup */
+.newsletter{background:linear-gradient(135deg,#1d1d1f 0%,#2d2d2f 100%);border-radius:20px;padding:48px;text-align:center;color:#fff}
+.newsletter-icon{font-size:48px;margin-bottom:20px}
+.newsletter-title{font-size:32px;font-weight:700;margin-bottom:12px}
+.newsletter-desc{font-size:17px;opacity:.8;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+.newsletter-form{display:flex;gap:12px;max-width:500px;margin:0 auto}
+.newsletter-input{flex:1;padding:16px 20px;border-radius:12px;border:none;font-size:17px;background:rgba(255,255,255,.1);color:#fff;backdrop-filter:blur(10px)}
+.newsletter-input::placeholder{color:rgba(255,255,255,.5)}
+.newsletter-btn{padding:16px 32px;background:#007aff;color:#fff;border:none;border-radius:12px;font-size:17px;font-weight:600;cursor:pointer;transition:.2s}
+.newsletter-btn:hover{background:#0051d5}
+
+/* 081 - Stats Dashboard */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.stat-card{padding:28px;background:#f5f5f7;border-radius:16px;text-align:center;transition:.3s}
+.stat-card:hover{background:#007aff;color:#fff;transform:translateY(-4px)}
+.stat-number{font-size:48px;font-weight:700;margin-bottom:8px;background:linear-gradient(135deg,#007aff,#5856d6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-card:hover .stat-number{background:#fff;-webkit-background-clip:text}
+.stat-label{font-size:15px;color:#6e6e73;font-weight:500}
+.stat-card:hover .stat-label{color:rgba(255,255,255,.8)}
+.stat-trend{font-size:13px;color:#34c759;margin-top:8px;font-weight:600}
+.stat-card:hover .stat-trend{color:#fff}
+
+/* 082 - Video Grid */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.video-card{border-radius:16px;overflow:hidden;cursor:pointer;transition:.3s}
+.video-thumbnail{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#667eea,#764ba2);position:relative}
+.video-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(255,255,255,.95);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;transition:.3s}
+.video-card:hover .video-play{transform:translate(-50%,-50%) scale(1.1);background:#fff}
+.video-info{padding:20px;background:#f5f5f7}
+.video-title{font-size:17px;font-weight:600;margin-bottom:8px}
+.video-meta{font-size:14px;color:#6e6e73}
+.video-duration{position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,.8);color:#fff;padding:4px 8px;border-radius:6px;font-size:13px;font-weight:600}
+
+/* 083 - Author Bio */
+.author-bio{display:flex;gap:32px;align-items:center;padding:40px;background:linear-gradient(135deg,#f5f5f7,#fff);border-radius:20px}
+.author-avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#007aff,#5856d6);flex-shrink:0}
+.author-details{flex:1}
+.author-name{font-size:28px;font-weight:700;margin-bottom:8px}
+.author-role{font-size:15px;color:#6e6e73;margin-bottom:16px}
+.author-desc{font-size:17px;line-height:1.5;color:#1d1d1f;margin-bottom:20px}
+.author-social{display:flex;gap:12px}
+.social-link{width:40px;height:40px;border-radius:50%;background:#007aff;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:.2s}
+.social-link:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,122,255,.3)}
+
+/* 084 - Content Cards Masonry */
+.masonry-grid{column-count:3;column-gap:24px}
+.masonry-item{break-inside:avoid;margin-bottom:24px;background:#f5f5f7;border-radius:16px;padding:24px;transition:.3s}
+.masonry-item:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+.masonry-img{width:100%;border-radius:12px;margin-bottom:16px;aspect-ratio:16/9;background:linear-gradient(135deg,#007aff,#5856d6)}
+.masonry-title{font-size:19px;font-weight:600;margin-bottom:8px}
+.masonry-text{font-size:15px;color:#6e6e73;line-height:1.5}
+
+/* 085 - Loading States */
+.loading-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.skeleton{background:linear-gradient(90deg,#f5f5f7 25%,#e5e5e7 50%,#f5f5f7 75%);background-size:200% 100%;animation:loading 1.5s infinite;border-radius:12px}
+.skeleton-text{height:20px;margin-bottom:12px}
+.skeleton-title{height:28px;width:70%;margin-bottom:16px}
+.skeleton-img{height:200px;margin-bottom:16px}
+@keyframes loading{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* 086 - Pricing Toggle */
+.pricing-toggle{text-align:center;margin-bottom:40px}
+.toggle-wrapper{display:inline-flex;background:#f5f5f7;padding:4px;border-radius:12px;gap:4px}
+.toggle-option{padding:12px 32px;border-radius:8px;border:none;background:transparent;font-size:17px;font-weight:500;cursor:pointer;transition:.2s;color:#6e6e73}
+.toggle-option.active{background:#fff;color:#1d1d1f;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.pricing-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pricing-card{padding:40px;border-radius:20px;border:2px solid #e5e5e7;text-align:center;transition:.3s}
+.pricing-card.featured{border-color:#007aff;background:linear-gradient(135deg,#007aff,#5856d6);color:#fff;transform:scale(1.05)}
+.pricing-name{font-size:24px;font-weight:700;margin-bottom:16px}
+.pricing-amount{font-size:56px;font-weight:700;margin-bottom:8px}
+.pricing-period{font-size:15px;opacity:.7;margin-bottom:32px}
+.pricing-features{list-style:none;margin-bottom:32px;text-align:left}
+.pricing-features li{padding:12px 0;border-bottom:1px solid rgba(0,0,0,.1);font-size:15px}
+.pricing-card.featured .pricing-features li{border-color:rgba(255,255,255,.2)}
+.pricing-btn{width:100%;padding:16px;background:#007aff;color:#fff;border:none;border-radius:12px;font-size:17px;font-weight:600;cursor:pointer;transition:.2s}
+.pricing-card.featured .pricing-btn{background:#fff;color:#007aff}
+.pricing-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+
+/* 087 - Tab Navigation */
+.tab-nav{display:flex;gap:4px;background:#f5f5f7;padding:4px;border-radius:12px;margin-bottom:32px}
+.tab-btn{flex:1;padding:12px 24px;background:transparent;border:none;font-size:17px;font-weight:500;border-radius:8px;cursor:pointer;transition:.2s;color:#6e6e73}
+.tab-btn.active{background:#fff;color:#1d1d1f;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.tab-content{display:none;padding:32px;background:#f5f5f7;border-radius:16px}
+.tab-content.active{display:block}
+
+/* 088 - Image Gallery Grid */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.gallery-item{aspect-ratio:1;border-radius:16px;background:linear-gradient(135deg,#667eea,#764ba2);cursor:pointer;overflow:hidden;position:relative;transition:.3s}
+.gallery-item:hover{transform:scale(1.05);box-shadow:0 16px 48px rgba(0,0,0,.2)}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);opacity:0;transition:.3s;display:flex;align-items:flex-end;padding:20px;color:#fff}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-caption{font-size:15px;font-weight:600}
+
+/* 089 - Comment Thread */
+.comment-thread{space-y:20px}
+.comment{padding:24px;background:#f5f5f7;border-radius:16px;margin-bottom:16px}
+.comment-header{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.comment-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#007aff,#5856d6)}
+.comment-author{font-weight:600;font-size:17px}
+.comment-time{color:#6e6e73;font-size:14px;margin-left:auto}
+.comment-text{font-size:15px;line-height:1.6;margin-bottom:12px}
+.comment-actions{display:flex;gap:16px}
+.comment-action{background:none;border:none;color:#007aff;font-size:14px;cursor:pointer;font-weight:500}
+.comment-reply{margin-left:48px;margin-top:16px;padding-left:20px;border-left:3px solid #e5e5e7}
+
+/* 090 - Alert Banners */
+.alert{padding:20px 24px;border-radius:12px;margin-bottom:16px;display:flex;align-items:center;gap:16px;font-size:15px}
+.alert-info{background:#e5f3ff;color:#007aff;border:1px solid #b3d9ff}
+.alert-success{background:#e8f8ed;color:#34c759;border:1px solid #b8e6c5}
+.alert-warning{background:#fff8e6;color:#ff9500;border:1px solid #ffe5b3}
+.alert-error{background:#ffe5e5;color:#ff3b30;border:1px solid #ffb3b3}
+.alert-icon{font-size:24px}
+.alert-close{margin-left:auto;background:none;border:none;font-size:20px;cursor:pointer;opacity:.5;transition:.2s}
+.alert-close:hover{opacity:1}
+
+/* 091 - Progress Steps */
+.progress-steps{display:flex;justify-content:space-between;margin-bottom:40px;position:relative}
+.progress-steps::before{content:'';position:absolute;top:20px;left:40px;right:40px;height:2px;background:#e5e5e7;z-index:0}
+.progress-line{position:absolute;top:20px;left:40px;height:2px;background:#007aff;z-index:1;width:33%;transition:.5s}
+.progress-step{display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;z-index:2}
+.progress-circle{width:40px;height:40px;border-radius:50%;background:#f5f5f7;border:2px solid #e5e5e7;display:flex;align-items:center;justify-content:center;font-weight:600;transition:.3s}
+.progress-step.active .progress-circle,.progress-step.completed .progress-circle{background:#007aff;color:#fff;border-color:#007aff}
+.progress-label{font-size:14px;color:#6e6e73;font-weight:500}
+.progress-step.active .progress-label{color:#1d1d1f}
+
+/* 092 - Feature Highlight */
+.feature-highlight{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.feature-visual{aspect-ratio:16/10;border-radius:20px;background:linear-gradient(135deg,#667eea,#764ba2)}
+.feature-content h3{font-size:40px;font-weight:700;margin-bottom:16px;line-height:1.1}
+.feature-content p{font-size:19px;color:#6e6e73;line-height:1.5;margin-bottom:24px}
+.feature-list{list-style:none}
+.feature-list li{padding:12px 0;font-size:17px;display:flex;align-items:center;gap:12px}
+.feature-list li::before{content:'✓';color:#34c759;font-weight:700;font-size:20px}
+
+/* 093 - Testimonial Carousel */
+.testimonial{text-align:center;max-width:800px;margin:0 auto;padding:48px}
+.testimonial-text{font-size:28px;font-weight:500;line-height:1.4;margin-bottom:32px;color:#1d1d1f}
+.testimonial-author{display:flex;align-items:center;justify-content:center;gap:16px}
+.testimonial-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#007aff,#5856d6)}
+.testimonial-info h4{font-size:17px;font-weight:600;margin-bottom:4px}
+.testimonial-info p{font-size:14px;color:#6e6e73}
+.testimonial-dots{display:flex;gap:8px;justify-content:center;margin-top:32px}
+.testimonial-dot{width:8px;height:8px;border-radius:50%;background:#e5e5e7;cursor:pointer;transition:.2s}
+.testimonial-dot.active{background:#007aff;width:24px;border-radius:4px}
+
+/* 094 - Search Bar */
+.search-wrapper{max-width:600px;margin:0 auto}
+.search-container{position:relative}
+.search-input{width:100%;padding:16px 56px;border-radius:12px;border:2px solid #e5e5e7;font-size:17px;transition:.2s}
+.search-input:focus{outline:none;border-color:#007aff;box-shadow:0 0 0 4px rgba(0,122,255,.1)}
+.search-icon{position:absolute;left:20px;top:50%;transform:translateY(-50%);color:#6e6e73;font-size:20px}
+.search-suggestions{margin-top:8px;background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.08);overflow:hidden}
+.search-suggestion{padding:16px 20px;cursor:pointer;transition:.2s;font-size:15px;border-bottom:1px solid #f5f5f7}
+.search-suggestion:hover{background:#f5f5f7}
+.search-suggestion:last-child{border-bottom:none}
+
+/* 095 - FAQ Accordion */
+.faq-item{border-bottom:1px solid #e5e5e7;padding:24px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-question{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:19px;font-weight:600;padding-right:20px}
+.faq-icon{font-size:24px;color:#6e6e73;transition:.3s}
+.faq-item.active .faq-icon{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:.3s;font-size:17px;color:#6e6e73;line-height:1.6}
+.faq-item.active .faq-answer{max-height:500px;margin-top:16px}
+
+/* 096 - Category Pills */
+.category-nav{display:flex;gap:12px;overflow-x:auto;padding:8px 0;scrollbar-width:none}
+.category-nav::-webkit-scrollbar{display:none}
+.category-pill{padding:12px 24px;background:#f5f5f7;border-radius:24px;font-size:15px;font-weight:500;white-space:nowrap;cursor:pointer;transition:.2s;border:2px solid transparent}
+.category-pill:hover{background:#e5e5e7}
+.category-pill.active{background:#007aff;color:#fff;border-color:#007aff}
+
+/* 097 - Share Buttons */
+.share-container{display:flex;align-items:center;gap:16px;padding:24px;background:#f5f5f7;border-radius:16px}
+.share-label{font-weight:600;font-size:17px}
+.share-buttons{display:flex;gap:12px}
+.share-btn{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;transition:.2s;border:none;font-size:18px}
+.share-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.share-btn.twitter{background:#1da1f2}
+.share-btn.facebook{background:#1877f2}
+.share-btn.linkedin{background:#0a66c2}
+.share-btn.email{background:#6e6e73}
+.share-btn.copy{background:#34c759}
+
+/* 098 - Reading Progress */
+.reading-progress{position:fixed;top:0;left:0;right:0;height:3px;background:#e5e5e7;z-index:1000}
+.reading-progress-fill{height:100%;background:linear-gradient(90deg,#007aff,#5856d6);width:35%;transition:.2s}
+
+/* 099 - Breadcrumb Nav */
+.breadcrumb{display:flex;align-items:center;gap:12px;padding:16px 0;font-size:15px}
+.breadcrumb-item{color:#6e6e73;text-decoration:none;transition:.2s}
+.breadcrumb-item:hover{color:#007aff}
+.breadcrumb-item.active{color:#1d1d1f;font-weight:600}
+.breadcrumb-separator{color:#c7c7cc;font-size:14px}
+
+/* 100 - Footer CTA */
+.footer-cta{background:linear-gradient(135deg,#1d1d1f,#2d2d2f);border-radius:24px;padding:64px 48px;text-align:center;color:#fff}
+.footer-cta h3{font-size:48px;font-weight:700;margin-bottom:16px;line-height:1.1}
+.footer-cta p{font-size:21px;opacity:.8;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
+.footer-cta-btn{padding:18px 48px;background:#007aff;color:#fff;border:none;border-radius:12px;font-size:19px;font-weight:600;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:12px}
+.footer-cta-btn:hover{background:#0051d5;transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,122,255,.4)}
+
+@media(max-width:768px){
+.component{padding:32px 24px}
+.timeline-grid,.stats-grid,.video-grid,.pricing-cards,.gallery-grid{grid-template-columns:1fr}
+.masonry-grid{column-count:1}
+.author-bio{flex-direction:column;text-align:center}
+.feature-highlight{grid-template-columns:1fr}
+.pricing-card.featured{transform:scale(1)}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Component 076 -->
+<div class="component">
+<h2>Component 076 - Interactive Timeline Grid</h2>
+<div class="timeline-grid">
+<div class="timeline-card">
+<div class="timeline-badge"></div>
+<div class="timeline-year">2020</div>
+<div class="timeline-title">Foundation</div>
+<div class="timeline-desc">Started with a vision to transform digital experiences through design excellence.</div>
+</div>
+<div class="timeline-card">
+<div class="timeline-badge"></div>
+<div class="timeline-year">2021</div>
+<div class="timeline-title">Growth</div>
+<div class="timeline-desc">Expanded team and launched innovative products that changed the industry.</div>
+</div>
+<div class="timeline-card">
+<div class="timeline-badge"></div>
+<div class="timeline-year">2022</div>
+<div class="timeline-title">Innovation</div>
+<div class="timeline-desc">Introduced AI-powered features and reached 1 million active users worldwide.</div>
+</div>
+<div class="timeline-card">
+<div class="timeline-badge"></div>
+<div class="timeline-year">2023</div>
+<div class="timeline-title">Scale</div>
+<div class="timeline-desc">Global expansion with offices in 15 countries and 500+ team members.</div>
+</div>
+</div>
+</div>
+
+<!-- Component 077 -->
+<div class="component">
+<h2>Component 077 - Animated Tag Cloud</h2>
+<div class="tag-cloud">
+<div class="tag-item">Design<span class="tag-count">42</span></div>
+<div class="tag-item">Development<span class="tag-count">38</span></div>
+<div class="tag-item">iOS<span class="tag-count">29</span></div>
+<div class="tag-item">Swift<span class="tag-count">24</span></div>
+<div class="tag-item">SwiftUI<span class="tag-count">31</span></div>
+<div class="tag-item">UIKit<span class="tag-count">18</span></div>
+<div class="tag-item">HIG<span class="tag-count">15</span></div>
+<div class="tag-item">App Store<span class="tag-count">22</span></div>
+<div class="tag-item">Xcode<span class="tag-count">19</span></div>
+<div class="tag-item">TestFlight<span class="tag-count">12</span></div>
+<div class="tag-item">Accessibility<span class="tag-count">27</span></div>
+<div class="tag-item">Performance<span class="tag-count">33</span></div>
+</div>
+</div>
+
+<!-- Component 078 -->
+<div class="component">
+<h2>Component 078 - Feature Comparison Table</h2>
+<div class="comparison-grid">
+<div class="comparison-item comparison-label"></div>
+<div class="comparison-item header">Basic</div>
+<div class="comparison-item header">Pro</div>
+<div class="comparison-item comparison-label">Unlimited Projects</div>
+<div class="comparison-item"><span class="comparison-cross">✕</span></div>
+<div class="comparison-item"><span class="comparison-check">✓</span></div>
+<div class="comparison-item comparison-label">Cloud Sync</div>
+<div class="comparison-item"><span class="comparison-check">✓</span></div>
+<div class="comparison-item"><span class="comparison-check">✓</span></div>
+<div class="comparison-item comparison-label">Priority Support</div>
+<div class="comparison-item"><span class="comparison-cross">✕</span></div>
+<div class="comparison-item"><span class="comparison-check">✓</span></div>
+<div class="comparison-item comparison-label">Advanced Analytics</div>
+<div class="comparison-item"><span class="comparison-cross">✕</span></div>
+<div class="comparison-item"><span class="comparison-check">✓</span></div>
+<div class="comparison-item comparison-label">Team Collaboration</div>
+<div class="comparison-item"><span class="comparison-cross">✕</span></div>
+<div class="comparison-item"><span class="comparison-check">✓</span></div>
+</div>
+</div>
+
+<!-- Component 079 -->
+<div class="component">
+<h2>Component 079 - Podcast Player</h2>
+<div class="podcast-player">
+<div class="podcast-artwork"></div>
+<div class="podcast-title">Design Decoded</div>
+<div class="podcast-host">Hosted by Sarah Chen</div>
+<div class="podcast-progress">
+<div class="podcast-progress-fill"></div>
+</div>
+<div style="display:flex;justify-content:space-between;color:#fff;font-size:13px;margin-bottom:24px">
+<span>12:34</span>
+<span>28:00</span>
+</div>
+<div class="podcast-controls">
+<button class="podcast-btn">⏮</button>
+<button class="podcast-btn play">▶</button>
+<button class="podcast-btn">⏭</button>
+</div>
+</div>
+</div>
+
+<!-- Component 080 -->
+<div class="component">
+<h2>Component 080 - Newsletter Signup</h2>
+<div class="newsletter">
+<div class="newsletter-icon">✉️</div>
+<div class="newsletter-title">Stay Updated</div>
+<div class="newsletter-desc">Get the latest design insights, iOS development tips, and exclusive content delivered to your inbox every week.</div>
+<div class="newsletter-form">
+<input type="email" class="newsletter-input" placeholder="Enter your email">
+<button class="newsletter-btn">Subscribe</button>
+</div>
+</div>
+</div>
+
+<!-- Component 081 -->
+<div class="component">
+<h2>Component 081 - Stats Dashboard</h2>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-number">2.5M</div>
+<div class="stat-label">Downloads</div>
+<div class="stat-trend">↑ 23%</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">450K</div>
+<div class="stat-label">Active Users</div>
+<div class="stat-trend">↑ 18%</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">4.8</div>
+<div class="stat-label">App Rating</div>
+<div class="stat-trend">↑ 0.3</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">98%</div>
+<div class="stat-label">Satisfaction</div>
+<div class="stat-trend">↑ 5%</div>
+</div>
+</div>
+</div>
+
+<!-- Component 082 -->
+<div class="component">
+<h2>Component 082 - Video Grid</h2>
+<div class="video-grid">
+<div class="video-card">
+<div class="video-thumbnail">
+<div class="video-play">▶</div>
+<div class="video-duration">12:34</div>
+</div>
+<div class="video-info">
+<div class="video-title">SwiftUI Masterclass</div>
+<div class="video-meta">125K views • 3 days ago</div>
+</div>
+</div>
+<div class="video-card">
+<div class="video-thumbnail">
+<div class="video-play">▶</div>
+<div class="video-duration">8:45</div>
+</div>
+<div class="video-info">
+<div class="video-title">UIKit to SwiftUI Migration</div>
+<div class="video-meta">89K views • 1 week ago</div>
+</div>
+</div>
+<div class="video-card">
+<div class="video-thumbnail">
+<div class="video-play">▶</div>
+<div class="video-duration">15:22</div>
+</div>
+<div class="video-info">
+<div class="video-title">iOS Design Patterns</div>
+<div class="video-meta">203K views • 2 weeks ago</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Component 083 -->
+<div class="component">
+<h2>Component 083 - Author Bio</h2>
+<div class="author-bio">
+<div class="author-avatar"></div>
+<div class="author-details">
+<div class="author-name">Alex Morgan</div>
+<div class="author-role">Senior iOS Developer & UX Designer</div>
+<div class="author-desc">Award-winning designer and developer with 10+ years of experience crafting beautiful iOS applications. Passionate about SwiftUI and Apple's Human Interface Guidelines.</div>
+<div class="author-social">
+<a href="#" class="social-link">𝕏</a>
+<a href="#" class="social-link">in</a>
+<a href="#" class="social-link">@</a>
+<a href="#" class="social-link">🌐</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Component 084 -->
+<div class="component">
+<h2>Component 084 - Content Cards Masonry</h2>
+<div class="masonry-grid">
+<div class="masonry-item">
+<div class="masonry-img"></div>
+<div class="masonry-title">Building Adaptive Layouts</div>
+<div class="masonry-text">Learn how to create responsive interfaces that work beautifully across all Apple devices.</div>
+</div>
+<div class="masonry-item">
+<div class="masonry-title">Quick Tip: SF Symbols</div>
+<div class="masonry-text">Discover the power of SF Symbols for consistent iconography in your apps.</div>
+</div>
+<div class="masonry-item">
+<div class="masonry-img"></div>
+<div class="masonry-title">Dark Mode Best Practices</div>
+<div class="masonry-text">Essential guidelines for implementing beautiful dark mode in iOS applications with proper color semantics.</div>
+</div>
+<div class="masonry-item">
+<div class="masonry-title">SwiftUI Animation</div>
+<div class="masonry-text">Master the art of creating fluid, delightful animations.</div>
+</div>
+<div class="masonry-item">
+<div class="masonry-img"></div>
+<div class="masonry-title">App Store Optimization</div>
+<div class="masonry-text">Proven strategies to improve your app's visibility and conversion rate on the App Store.</div>
+</div>
+</div>
+</div>
+
+<!-- Component 085 -->
+<div class="component">
+<h2>Component 085 - Loading States</h2>
+<div class="loading-grid">
+<div>
+<div class="skeleton skeleton-img"></div>
+<div class="skeleton skeleton-title"></div>
+<div class="skeleton skeleton-text"></div>
+<div class="skeleton skeleton-text" style="width:80%"></div>
+</div>
+<div>
+<div class="skeleton skeleton-img"></div>
+<div class="skeleton skeleton-title"></div>
+<div class="skeleton skeleton-text"></div>
+<div class="skeleton skeleton-text" style="width:60%"></div>
+</div>
+<div>
+<div class="skeleton skeleton-img"></div>
+<div class="skeleton skeleton-title"></div>
+<div class="skeleton skeleton-text"></div>
+<div class="skeleton skeleton-text" style="width:90%"></div>
+</div>
+</div>
+</div>
+
+<!-- Component 086 -->
+<div class="component">
+<h2>Component 086 - Pricing Toggle</h2>
+<div class="pricing-toggle">
+<div class="toggle-wrapper">
+<button class="toggle-option active">Monthly</button>
+<button class="toggle-option">Yearly</button>
+</div>
+</div>
+<div class="pricing-cards">
+<div class="pricing-card">
+<div class="pricing-name">Starter</div>
+<div class="pricing-amount">$9</div>
+<div class="pricing-period">per month</div>
+<ul class="pricing-features">
+<li>5 Projects</li>
+<li>Basic Support</li>
+<li>1GB Storage</li>
+</ul>
+<button class="pricing-btn">Get Started</button>
+</div>
+<div class="pricing-card featured">
+<div class="pricing-name">Pro</div>
+<div class="pricing-amount">$29</div>
+<div class="pricing-period">per month</div>
+<ul class="pricing-features">
+<li>Unlimited Projects</li>
+<li>Priority Support</li>
+<li>50GB Storage</li>
+<li>Advanced Analytics</li>
+</ul>
+<button class="pricing-btn">Get Started</button>
+</div>
+<div class="pricing-card">
+<div class="pricing-name">Enterprise</div>
+<div class="pricing-amount">$99</div>
+<div class="pricing-period">per month</div>
+<ul class="pricing-features">
+<li>Everything in Pro</li>
+<li>Dedicated Support</li>
+<li>500GB Storage</li>
+<li>Custom Integration</li>
+</ul>
+<button class="pricing-btn">Get Started</button>
+</div>
+</div>
+</div>
+
+<!-- Component 087 -->
+<div class="component">
+<h2>Component 087 - Tab Navigation</h2>
+<div class="tab-nav">
+<button class="tab-btn active">Overview</button>
+<button class="tab-btn">Features</button>
+<button class="tab-btn">Pricing</button>
+<button class="tab-btn">Support</button>
+</div>
+<div class="tab-content active">
+<h3 style="font-size:28px;margin-bottom:16px">Overview</h3>
+<p style="font-size:17px;color:#6e6e73;line-height:1.6">Get a comprehensive look at everything our platform offers. From powerful features to flexible pricing, we've built everything you need to succeed.</p>
+</div>
+</div>
+
+<!-- Component 088 -->
+<div class="component">
+<h2>Component 088 - Image Gallery Grid</h2>
+<div class="gallery-grid">
+<div class="gallery-item">
+<div class="gallery-overlay">
+<div class="gallery-caption">Mountain Landscape</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="gallery-overlay">
+<div class="gallery-caption">City Skyline</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="gallery-overlay">
+<div class="gallery-caption">Forest Trail</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="gallery-overlay">
+<div class="gallery-caption">Ocean Waves</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="gallery-overlay">
+<div class="gallery-caption">Desert Sunset</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="gallery-overlay">
+<div class="gallery-caption">Northern Lights</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Component 089 -->
+<div class="component">
+<h2>Component 089 - Comment Thread</h2>
+<div class="comment-thread">
+<div class="comment">
+<div class="comment-header">
+<div class="comment-avatar"></div>
+<div class="comment-author">Sarah Johnson</div>
+<div class="comment-time">2 hours ago</div>
+</div>
+<div class="comment-text">This is exactly what I was looking for! The implementation is clean and follows all the HIG principles perfectly.</div>
+<div class="comment-actions">
+<button class="comment-action">Reply</button>
+<button class="comment-action">Like</button>
+</div>
+<div class="comment-reply">
+<div class="comment">
+<div class="comment-header">
+<div class="comment-avatar"></div>
+<div class="comment-author">Mike Chen</div>
+<div class="comment-time">1 hour ago</div>
+</div>
+<div class="comment-text">Totally agree! The attention to detail is impressive.</div>
+</div>
+</div>
+</div>
+<div class="comment">
+<div class="comment-header">
+<div class="comment-avatar"></div>
+<div class="comment-author">Emma Wilson</div>
+<div class="comment-time">4 hours ago</div>
+</div>
+<div class="comment-text">Great work on the responsive design. Works flawlessly on all devices.</div>
+<div class="comment-actions">
+<button class="comment-action">Reply</button>
+<button class="comment-action">Like</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Component 090 -->
+<div class="component">
+<h2>Component 090 - Alert Banners</h2>
+<div class="alert alert-info">
+<div class="alert-icon">ℹ️</div>
+<div>New features are now available in the latest update.</div>
+<button class="alert-close">✕</button>
+</div>
+<div class="alert alert-success">
+<div class="alert-icon">✓</div>
+<div>Your changes have been saved successfully.</div>
+<button class="alert-close">✕</button>
+</div>
+<div class="alert alert-warning">
+<div class="alert-icon">⚠️</div>
+<div>Your trial period will expire in 3 days.</div>
+<button class="alert-close">✕</button>
+</div>
+<div class="alert alert-error">
+<div class="alert-icon">✕</div>
+<div>An error occurred while processing your request.</div>
+<button class="alert-close">✕</button>
+</div>
+</div>
+
+<!-- Component 091 -->
+<div class="component">
+<h2>Component 091 - Progress Steps</h2>
+<div class="progress-steps">
+<div class="progress-line"></div>
+<div class="progress-step completed">
+<div class="progress-circle">✓</div>
+<div class="progress-label">Account</div>
+</div>
+<div class="progress-step active">
+<div class="progress-circle">2</div>
+<div class="progress-label">Profile</div>
+</div>
+<div class="progress-step">
+<div class="progress-circle">3</div>
+<div class="progress-label">Preferences</div>
+</div>
+<div class="progress-step">
+<div class="progress-circle">4</div>
+<div class="progress-label">Complete</div>
+</div>
+</div>
+</div>
+
+<!-- Component 092 -->
+<div class="component">
+<h2>Component 092 - Feature Highlight</h2>
+<div class="feature-highlight">
+<div class="feature-visual"></div>
+<div class="feature-content">
+<h3>Powerful Analytics</h3>
+<p>Get deep insights into your app's performance with real-time analytics and beautiful visualizations.</p>
+<ul class="feature-list">
+<li>Real-time data tracking</li>
+<li>Custom dashboard views</li>
+<li>Export capabilities</li>
+<li>Advanced filtering</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Component 093 -->
+<div class="component">
+<h2>Component 093 - Testimonial Carousel</h2>
+<div class="testimonial">
+<div class="testimonial-text">"This platform transformed how we build iOS apps. The design system is exceptional and saved us months of development time."</div>
+<div class="testimonial-author">
+<div class="testimonial-avatar"></div>
+<div class="testimonial-info">
+<h4>David Park</h4>
+<p>Lead Developer at TechCorp</p>
+</div>
+</div>
+<div class="testimonial-dots">
+<div class="testimonial-dot active"></div>
+<div class="testimonial-dot"></div>
+<div class="testimonial-dot"></div>
+</div>
+</div>
+</div>
+
+<!-- Component 094 -->
+<div class="component">
+<h2>Component 094 - Search Bar</h2>
+<div class="search-wrapper">
+<div class="search-container">
+<div class="search-icon">🔍</div>
+<input type="text" class="search-input" placeholder="Search articles, tutorials, and more...">
+</div>
+<div class="search-suggestions">
+<div class="search-suggestion">SwiftUI Animation Techniques</div>
+<div class="search-suggestion">iOS Design Patterns</div>
+<div class="search-suggestion">Building Adaptive Layouts</div>
+<div class="search-suggestion">Dark Mode Implementation</div>
+</div>
+</div>
+</div>
+
+<!-- Component 095 -->
+<div class="component">
+<h2>Component 095 - FAQ Accordion</h2>
+<div class="faq-item active">
+<div class="faq-question">
+What platforms do you support?
+<div class="faq-icon">+</div>
+</div>
+<div class="faq-answer">We support iOS, iPadOS, macOS, watchOS, and tvOS. Our design system follows Apple's Human Interface Guidelines for all platforms.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+How often do you update?
+<div class="faq-icon">+</div>
+</div>
+<div class="faq-answer">We release updates monthly with new components, features, and improvements based on user feedback.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+Do you offer support?
+<div class="faq-icon">+</div>
+</div>
+<div class="faq-answer">Yes, we provide email support for all users and priority support for Pro subscribers.</div>
+</div>
+</div>
+
+<!-- Component 096 -->
+<div class="component">
+<h2>Component 096 - Category Pills</h2>
+<div class="category-nav">
+<div class="category-pill active">All</div>
+<div class="category-pill">SwiftUI</div>
+<div class="category-pill">UIKit</div>
+<div class="category-pill">Design</div>
+<div class="category-pill">Performance</div>
+<div class="category-pill">Accessibility</div>
+<div class="category-pill">Testing</div>
+<div class="category-pill">App Store</div>
+</div>
+</div>
+
+<!-- Component 097 -->
+<div class="component">
+<h2>Component 097 - Share Buttons</h2>
+<div class="share-container">
+<div class="share-label">Share this article</div>
+<div class="share-buttons">
+<button class="share-btn twitter">𝕏</button>
+<button class="share-btn facebook">f</button>
+<button class="share-btn linkedin">in</button>
+<button class="share-btn email">✉</button>
+<button class="share-btn copy">📋</button>
+</div>
+</div>
+</div>
+
+<!-- Component 098 -->
+<div class="component">
+<h2>Component 098 - Reading Progress</h2>
+<div class="reading-progress">
+<div class="reading-progress-fill"></div>
+</div>
+<p style="margin-top:40px;font-size:17px;color:#6e6e73">The progress bar above shows reading progress through the page.</p>
+</div>
+
+<!-- Component 099 -->
+<div class="component">
+<h2>Component 099 - Breadcrumb Navigation</h2>
+<div class="breadcrumb">
+<a href="#" class="breadcrumb-item">Home</a>
+<span class="breadcrumb-separator">›</span>
+<a href="#" class="breadcrumb-item">Blog</a>
+<span class="breadcrumb-separator">›</span>
+<a href="#" class="breadcrumb-item">Design</a>
+<span class="breadcrumb-separator">›</span>
+<span class="breadcrumb-item active">SwiftUI Components</span>
+</div>
+</div>
+
+<!-- Component 100 -->
+<div class="component">
+<h2>Component 100 - Footer CTA</h2>
+<div class="footer-cta">
+<h3>Ready to Get Started?</h3>
+<p>Join thousands of developers building beautiful iOS apps with our comprehensive design system and component library.</p>
+<button class="footer-cta-btn">
+Start Building Today
+<span>→</span>
+</button>
+</div>
+</div>
+
+</div>
+</body>
+</html>

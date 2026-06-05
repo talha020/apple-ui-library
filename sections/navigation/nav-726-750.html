@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Components 726-750 | Apple HIG Library</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Satoshi',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;background:#F6F6F7;padding:40px 20px}
+.component{background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;margin-bottom:32px;overflow:hidden}
+.label{padding:12px 20px;background:#F6F6F7;border-bottom:1px solid #E3E3E8;font-size:13px;font-weight:600;color:#1D1D1F}
+</style>
+</head>
+<body>
+
+<div class="component">
+<div class="label">726 — Flashcard Study Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8;padding:16px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto">
+<div style="display:flex;align-items:center;gap:20px">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="2" stroke="#1D1D1F" stroke-width="1.5"/></svg>
+<span style="font-size:15px;font-weight:600;color:#1D1D1F">Flashcard Deck</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px">
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72">Card 12 / 50</div>
+<button style="background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer;transition:0.2s ease">Study Mode</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">727 — Voice Assistant Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="width:40px;height:40px;background:#2C6ECB;border-radius:50%;display:flex;align-items:center;justify-content:center">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2v16M6 10h8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/></svg>
+</div>
+<span style="font-size:15px;font-weight:600;color:#1D1D1F">Voice Assistant</span>
+</div>
+<div style="background:#1A8245;color:#FFFFFF;border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600">Listening</div>
+</div>
+<div style="display:flex;gap:10px">
+<button style="flex:1;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px;font-size:13px;font-weight:500;color:#1D1D1F;cursor:pointer;transition:0.2s ease">Suggestions</button>
+<button style="flex:1;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px;font-size:13px;font-weight:500;color:#1D1D1F;cursor:pointer;transition:0.2s ease">History</button>
+<button style="flex:1;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px;font-size:13px;font-weight:500;color:#1D1D1F;cursor:pointer;transition:0.2s ease">Settings</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">728 — Bookmark Manager Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8">
+<div style="display:flex;align-items:center;height:56px;padding:0 24px;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:24px">
+<span style="font-size:15px;font-weight:600;color:#1D1D1F">Bookmarks</span>
+<div style="display:flex;gap:4px">
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:500;color:#1D1D1F;cursor:pointer">All</button>
+<button style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Unread</button>
+<button style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Favorites</button>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px">
+<input type="text" placeholder="Search bookmarks..." style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:14px;width:240px;outline:none">
+<button style="background:#2C6ECB;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer">Add Bookmark</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">729 — Cryptocurrency Tracker Navigation</div>
+<nav style="background:#1A1A1A;color:#FFFFFF;padding:16px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;max-width:1400px;margin:0 auto">
+<div style="display:flex;align-items:center;gap:32px">
+<span style="font-size:16px;font-weight:700">CryptoTrack</span>
+<div style="display:flex;gap:20px">
+<a href="#" style="color:#FFFFFF;text-decoration:none;font-size:14px;font-weight:500;transition:0.2s ease;opacity:1">Markets</a>
+<a href="#" style="color:#FFFFFF;text-decoration:none;font-size:14px;transition:0.2s ease;opacity:0.7">Portfolio</a>
+<a href="#" style="color:#FFFFFF;text-decoration:none;font-size:14px;transition:0.2s ease;opacity:0.7">Watchlist</a>
+<a href="#" style="color:#FFFFFF;text-decoration:none;font-size:14px;transition:0.2s ease;opacity:0.7">News</a>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px">
+<div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:8px 16px;font-size:13px">BTC: $42,350</div>
+<button style="background:#1A8245;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer">Trade Now</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">730 — Code Snippet Manager Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8">
+<div style="display:flex;align-items:center;height:56px;padding:0 24px;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:20px">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 7l-3 3 3 3M14 7l3 3-3 3M11 4l-2 12" stroke="#1D1D1F" stroke-width="1.5" stroke-linecap="round"/></svg>
+<span style="font-size:15px;font-weight:600;color:#1D1D1F">Code Snippets</span>
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:6px 12px;font-size:12px;color:#6D6D72">142 snippets</div>
+</div>
+<div style="display:flex;align-items:center;gap:8px">
+<select style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:14px;color:#1D1D1F;outline:none">
+<option>All Languages</option>
+<option>JavaScript</option>
+<option>Python</option>
+<option>React</option>
+</select>
+<button style="background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer">New Snippet</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">731 — Workout Planner Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+<h3 style="font-size:16px;font-weight:600;color:#1D1D1F">My Workout Plan</h3>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#1D1D1F;cursor:pointer">Edit Plan</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px">
+<div style="background:#2C6ECB;color:#FFFFFF;border-radius:8px;padding:12px 8px;text-align:center;font-size:12px;font-weight:600">Mon</div>
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px 8px;text-align:center;font-size:12px;color:#6D6D72">Tue</div>
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px 8px;text-align:center;font-size:12px;color:#6D6D72">Wed</div>
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px 8px;text-align:center;font-size:12px;color:#6D6D72">Thu</div>
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px 8px;text-align:center;font-size:12px;color:#6D6D72">Fri</div>
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px 8px;text-align:center;font-size:12px;color:#6D6D72">Sat</div>
+<div style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px 8px;text-align:center;font-size:12px;color:#6D6D72">Sun</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">732 — Recipe Collection Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8;padding:16px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto">
+<div style="display:flex;align-items:center;gap:24px">
+<span style="font-size:18px;font-weight:700;color:#1D1D1F">My Recipes</span>
+<div style="display:flex;gap:8px">
+<button style="background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:500">All</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Breakfast</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Lunch</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Dinner</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Desserts</button>
+</div>
+</div>
+<button style="background:#1A8245;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer">Add Recipe</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">733 — Travel Itinerary Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;overflow:hidden">
+<div style="background:#2C6ECB;color:#FFFFFF;padding:16px 20px">
+<div style="font-size:14px;font-weight:600;margin-bottom:4px">Trip to Tokyo</div>
+<div style="font-size:12px;opacity:0.9">March 15-22, 2024</div>
+</div>
+<div style="display:flex;border-top:1px solid #E3E3E8">
+<button style="flex:1;background:#F6F6F7;border:none;border-right:1px solid #E3E3E8;padding:14px;font-size:13px;font-weight:500;color:#1D1D1F;cursor:pointer">Overview</button>
+<button style="flex:1;background:#FFFFFF;border:none;border-right:1px solid #E3E3E8;padding:14px;font-size:13px;color:#6D6D72;cursor:pointer">Hotels</button>
+<button style="flex:1;background:#FFFFFF;border:none;border-right:1px solid #E3E3E8;padding:14px;font-size:13px;color:#6D6D72;cursor:pointer">Activities</button>
+<button style="flex:1;background:#FFFFFF;border:none;padding:14px;font-size:13px;color:#6D6D72;cursor:pointer">Budget</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">734 — Password Manager Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8">
+<div style="display:flex;align-items:center;height:56px;padding:0 24px;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:20px">
+<div style="display:flex;align-items:center;gap:12px">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="4" y="8" width="12" height="8" rx="2" stroke="#1D1D1F" stroke-width="1.5"/><path d="M7 8V6a3 3 0 016 0v2" stroke="#1D1D1F" stroke-width="1.5"/></svg>
+<span style="font-size:15px;font-weight:600;color:#1D1D1F">Passwords</span>
+</div>
+<div style="background:#1A8245;color:#FFFFFF;border-radius:8px;padding:4px 10px;font-size:11px;font-weight:600">Secure</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px">
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:10px 20px;font-size:14px;color:#1D1D1F;cursor:pointer">Generate Password</button>
+<button style="background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer">Add Login</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">735 — Smart Home Control Navigation</div>
+<nav style="background:#1A1A1A;color:#FFFFFF;border-radius:12px;padding:20px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+<div>
+<div style="font-size:16px;font-weight:600;margin-bottom:4px">Home Control</div>
+<div style="font-size:13px;opacity:0.7">Living Room</div>
+</div>
+<div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:8px 16px;font-size:13px">6 devices active</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+<button style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:16px;text-align:center;color:#FFFFFF;cursor:pointer">Lights</button>
+<button style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:16px;text-align:center;color:#FFFFFF;cursor:pointer">Climate</button>
+<button style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:16px;text-align:center;color:#FFFFFF;cursor:pointer">Security</button>
+<button style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:16px;text-align:center;color:#FFFFFF;cursor:pointer">Media</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">736 — File Versioning Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8;padding:12px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:16px">
+<span style="font-size:14px;font-weight:600;color:#1D1D1F">Document.pdf</span>
+<div style="display:flex;align-items:center;gap:8px">
+<span style="font-size:13px;color:#6D6D72">Version:</span>
+<select style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:6px;padding:6px 12px;font-size:13px;outline:none">
+<option>v1.3 (Current)</option>
+<option>v1.2</option>
+<option>v1.1</option>
+<option>v1.0</option>
+</select>
+</div>
+</div>
+<div style="display:flex;gap:8px">
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#1D1D1F;cursor:pointer">Compare</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#1D1D1F;cursor:pointer">Restore</button>
+<button style="background:#2C6ECB;color:#FFFFFF;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer">Save New Version</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">737 — Meditation Timer Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:24px;text-align:center">
+<div style="font-size:18px;font-weight:600;color:#1D1D1F;margin-bottom:20px">Meditation Session</div>
+<div style="display:flex;justify-content:center;gap:12px;margin-bottom:20px">
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:10px 20px;font-size:14px;color:#1D1D1F;cursor:pointer">5 min</button>
+<button style="background:#2C6ECB;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500">10 min</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:10px 20px;font-size:14px;color:#1D1D1F;cursor:pointer">15 min</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:10px 20px;font-size:14px;color:#1D1D1F;cursor:pointer">20 min</button>
+</div>
+<div style="display:flex;gap:12px;justify-content:center">
+<button style="background:#1A8245;color:#FFFFFF;border:none;border-radius:8px;padding:12px 32px;font-size:15px;font-weight:600;cursor:pointer">Start Session</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px 24px;font-size:14px;color:#1D1D1F;cursor:pointer">Settings</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">738 — Screen Time Tracker Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8">
+<div style="display:flex;align-items:center;height:56px;padding:0 24px;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:20px">
+<span style="font-size:15px;font-weight:600;color:#1D1D1F">Screen Time</span>
+<div style="display:flex;gap:6px">
+<button style="background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:500">Today</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Week</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Month</button>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:16px">
+<div style="font-size:14px;color:#6D6D72">Today: <span style="font-weight:600;color:#1D1D1F">4h 23m</span></div>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:10px 20px;font-size:14px;color:#1D1D1F;cursor:pointer">Set Limits</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">739 — Meal Planning Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+<h3 style="font-size:16px;font-weight:600;color:#1D1D1F">Weekly Meal Plan</h3>
+<div style="display:flex;gap:8px">
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#1D1D1F;cursor:pointer">Shopping List</button>
+<button style="background:#1A8245;color:#FFFFFF;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer">Add Meal</button>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px;text-align:left;cursor:pointer">
+<div style="font-size:12px;color:#6D6D72;margin-bottom:4px">Monday</div>
+<div style="font-size:13px;font-weight:500;color:#1D1D1F">Grilled Chicken</div>
+</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px;text-align:left;cursor:pointer">
+<div style="font-size:12px;color:#6D6D72;margin-bottom:4px">Tuesday</div>
+<div style="font-size:13px;font-weight:500;color:#1D1D1F">Pasta Primavera</div>
+</button>
+<button style="background:#2C6ECB;color:#FFFFFF;border:none;border-radius:8px;padding:12px;text-align:left;cursor:pointer">
+<div style="font-size:12px;opacity:0.8;margin-bottom:4px">Wednesday</div>
+<div style="font-size:13px;font-weight:600">Taco Night</div>
+</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">740 — Water Intake Tracker Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8;padding:16px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto">
+<div style="display:flex;align-items:center;gap:16px">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" fill="#2C6ECB" opacity="0.2"/><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" stroke="#2C6ECB" stroke-width="2"/></svg>
+<div>
+<div style="font-size:15px;font-weight:600;color:#1D1D1F">Daily Water Goal</div>
+<div style="font-size:13px;color:#6D6D72">6 / 8 glasses</div>
+</div>
+</div>
+<div style="display:flex;gap:8px">
+<button style="background:#2C6ECB;color:#FFFFFF;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:500;cursor:pointer">+ Add Glass</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:10px 20px;font-size:14px;color:#1D1D1F;cursor:pointer">History</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">741 — Reading Progress Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;overflow:hidden">
+<div style="background:#F6F6F7;padding:16px 20px;border-bottom:1px solid #E3E3E8">
+<div style="font-size:15px;font-weight:600;color:#1D1D1F;margin-bottom:8px">The Great Gatsby</div>
+<div style="background:#E3E3E8;height:6px;border-radius:3px;overflow:hidden">
+<div style="background:#1A8245;height:100%;width:65%"></div>
+</div>
+<div style="font-size:12px;color:#6D6D72;margin-top:6px">Chapter 6 of 9 • 65% complete</div>
+</div>
+<div style="display:flex">
+<button style="flex:1;background:#FFFFFF;border:none;border-right:1px solid #E3E3E8;padding:14px;font-size:13px;color:#6D6D72;cursor:pointer">Notes</button>
+<button style="flex:1;background:#FFFFFF;border:none;border-right:1px solid #E3E3E8;padding:14px;font-size:13px;color:#6D6D72;cursor:pointer">Highlights</button>
+<button style="flex:1;background:#FFFFFF;border:none;padding:14px;font-size:13px;color:#6D6D72;cursor:pointer">Bookmarks</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">742 — Language Selector Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8">
+<div style="display:flex;align-items:center;height:56px;padding:0 24px;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:20px">
+<span style="font-size:15px;font-weight:600;color:#1D1D1F">Language Learning</span>
+<div style="background:#2C6ECB;color:#FFFFFF;border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600">Level: Intermediate</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px">
+<select style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:10px 16px;font-size:14px;color:#1D1D1F;outline:none">
+<option>🇪🇸 Spanish</option>
+<option>🇫🇷 French</option>
+<option>🇩🇪 German</option>
+<option>🇯🇵 Japanese</option>
+<option>🇨🇳 Chinese</option>
+</select>
+<button style="background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer">Practice Now</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">743 — Subscription Tracker Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8;padding:16px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto">
+<div style="display:flex;align-items:center;gap:24px">
+<div>
+<div style="font-size:15px;font-weight:600;color:#1D1D1F">My Subscriptions</div>
+<div style="font-size:13px;color:#6D6D72">12 active • $89.94/month</div>
+</div>
+<div style="display:flex;gap:6px">
+<button style="background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:500">Active</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Canceled</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Expiring Soon</button>
+</div>
+</div>
+<button style="background:#1A8245;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer">Add Subscription</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">744 — Pet Care Tracker Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:20px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="width:48px;height:48px;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px">🐕</div>
+<div>
+<div style="font-size:15px;font-weight:600;color:#1D1D1F">Max</div>
+<div style="font-size:12px;color:#6D6D72">Golden Retriever • 3 years</div>
+</div>
+</div>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#1D1D1F;cursor:pointer">Switch Pet</button>
+</div>
+<div style="display:flex;gap:8px">
+<button style="flex:1;background:#2C6ECB;color:#FFFFFF;border:none;border-radius:8px;padding:12px;font-size:13px;font-weight:500;cursor:pointer">Feeding</button>
+<button style="flex:1;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px;font-size:13px;color:#6D6D72;cursor:pointer">Walks</button>
+<button style="flex:1;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px;font-size:13px;color:#6D6D72;cursor:pointer">Vet Visits</button>
+<button style="flex:1;background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px;font-size:13px;color:#6D6D72;cursor:pointer">Grooming</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">745 — Mood Journal Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8">
+<div style="display:flex;align-items:center;height:56px;padding:0 24px;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:20px">
+<span style="font-size:15px;font-weight:600;color:#1D1D1F">Mood Journal</span>
+<div style="display:flex;gap:8px;align-items:center">
+<span style="font-size:24px">😊</span>
+<span style="font-size:13px;color:#6D6D72">Today's mood</span>
+</div>
+</div>
+<div style="display:flex;gap:8px">
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:10px 20px;font-size:14px;color:#1D1D1F;cursor:pointer">View Calendar</button>
+<button style="background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer">Log Mood</button>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">746 — Podcast Queue Navigation</div>
+<nav style="background:#1A1A1A;color:#FFFFFF;border-radius:12px;padding:20px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+<div>
+<div style="font-size:16px;font-weight:600;margin-bottom:4px">Up Next</div>
+<div style="font-size:13px;opacity:0.7">5 episodes • 3h 45m</div>
+</div>
+<button style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:8px 16px;font-size:13px;color:#FFFFFF;cursor:pointer">Edit Queue</button>
+</div>
+<div style="display:flex;gap:10px">
+<button style="flex:1;background:#1A8245;border:none;border-radius:8px;padding:12px;font-size:14px;font-weight:500;color:#FFFFFF;cursor:pointer">Play All</button>
+<button style="flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:12px;font-size:14px;color:#FFFFFF;cursor:pointer">Shuffle</button>
+<button style="flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:12px;font-size:14px;color:#FFFFFF;cursor:pointer">Clear</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">747 — Appointment Reminder Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;overflow:hidden">
+<div style="background:#B98900;color:#FFFFFF;padding:12px 20px;display:flex;align-items:center;gap:12px">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 6v4l3 3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="10" r="7" stroke="#FFFFFF" stroke-width="2"/></svg>
+<div>
+<div style="font-size:14px;font-weight:600">Upcoming Appointment</div>
+<div style="font-size:12px;opacity:0.9">In 2 hours</div>
+</div>
+</div>
+<div style="padding:16px 20px;border-top:1px solid #E3E3E8">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div>
+<div style="font-size:14px;font-weight:500;color:#1D1D1F;margin-bottom:4px">Dentist Checkup</div>
+<div style="font-size:13px;color:#6D6D72">Dr. Smith • 3:00 PM</div>
+</div>
+<div style="display:flex;gap:8px">
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#1D1D1F;cursor:pointer">Reschedule</button>
+<button style="background:#2C6ECB;color:#FFFFFF;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer">Directions</button>
+</div>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">748 — Social Media Scheduler Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8;padding:16px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto">
+<div style="display:flex;align-items:center;gap:24px">
+<span style="font-size:15px;font-weight:600;color:#1D1D1F">Scheduled Posts</span>
+<div style="display:flex;gap:8px">
+<button style="background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:500">All Platforms</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Twitter</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Instagram</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">LinkedIn</button>
+</div>
+</div>
+<button style="background:#1A8245;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer">Create Post</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">749 — Study Timer Navigation</div>
+<nav style="background:#FFFFFF;border:1px solid #E3E3E8;border-radius:12px;padding:24px;text-align:center">
+<div style="font-size:48px;font-weight:700;color:#1D1D1F;margin-bottom:8px">25:00</div>
+<div style="font-size:14px;color:#6D6D72;margin-bottom:20px">Focus Session • Pomodoro</div>
+<div style="display:flex;justify-content:center;gap:12px;margin-bottom:16px">
+<button style="background:#1A8245;color:#FFFFFF;border:none;border-radius:8px;padding:12px 32px;font-size:15px;font-weight:600;cursor:pointer">Start</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:12px 24px;font-size:14px;color:#1D1D1F;cursor:pointer">Reset</button>
+</div>
+<div style="display:flex;gap:8px;justify-content:center">
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72">25 min</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72">50 min</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72">90 min</button>
+</div>
+</nav>
+</div>
+
+<div class="component">
+<div class="label">750 — Goal Achievement Dashboard Navigation</div>
+<nav style="background:#FFFFFF;border-bottom:1px solid #E3E3E8">
+<div style="display:flex;align-items:center;height:64px;padding:0 24px;justify-content:space-between">
+<div style="display:flex;align-items:center;gap:24px">
+<div>
+<div style="font-size:16px;font-weight:700;color:#1D1D1F">2024 Goals</div>
+<div style="font-size:13px;color:#6D6D72">8 of 12 completed</div>
+</div>
+<div style="display:flex;gap:6px">
+<button style="background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:500">All Goals</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Personal</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Career</button>
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:8px 16px;font-size:13px;color:#6D6D72;cursor:pointer">Health</button>
+</div>
+</div>
+<div style="display:flex;gap:8px">
+<button style="background:#F6F6F7;border:1px solid #E3E3E8;border-radius:8px;padding:10px 20px;font-size:14px;color:#1D1D1F;cursor:pointer">View Progress</button>
+<button style="background:#1A8245;color:#FFFFFF;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer">New Goal</button>
+</div>
+</div>
+</nav>
+</div>
+
+</body>
+</html>

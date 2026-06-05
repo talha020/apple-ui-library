@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pricing Components 076-100</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;background:#f5f5f7;padding:40px 20px;line-height:1.4}
+.container{max-width:1200px;margin:0 auto}
+.component{background:#fff;border-radius:18px;padding:48px;margin-bottom:24px;box-shadow:0 4px 24px rgba(0,0,0,.06)}
+h2{font-size:14px;color:#86868b;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:32px;font-weight:600}
+.grid{display:grid;gap:24px}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:#f5f5f7;border-radius:12px;padding:32px;transition:all .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.price{font-size:56px;font-weight:700;color:#1d1d1f;line-height:1}
+.currency{font-size:32px;vertical-align:top}
+.period{font-size:21px;color:#86868b;font-weight:400;margin-left:4px}
+.title{font-size:24px;font-weight:600;color:#1d1d1f;margin-bottom:8px}
+.subtitle{font-size:17px;color:#86868b;margin-bottom:24px}
+.feature{font-size:15px;color:#1d1d1f;padding:12px 0;border-bottom:1px solid #d2d2d7;display:flex;align-items:center}
+.feature:last-child{border:none}
+.feature::before{content:'✓';color:#06c;font-weight:700;margin-right:12px;font-size:18px}
+.btn{display:inline-block;background:#06c;color:#fff;padding:14px 32px;border-radius:980px;text-decoration:none;font-size:17px;font-weight:500;transition:all .3s;border:none;cursor:pointer;width:100%;text-align:center}
+.btn:hover{background:#0077ed}
+.btn-secondary{background:transparent;color:#06c;border:2px solid #06c}
+.btn-secondary:hover{background:#06c;color:#fff}
+.popular{position:relative;border:2px solid #06c}
+.badge{position:absolute;top:-12px;right:24px;background:#06c;color:#fff;padding:6px 16px;border-radius:12px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.compare-table{width:100%;border-collapse:collapse}
+.compare-table th,.compare-table td{padding:20px;text-align:left;border-bottom:1px solid #d2d2d7}
+.compare-table th{font-size:15px;color:#86868b;font-weight:600}
+.compare-table td{font-size:17px;color:#1d1d1f}
+.check{color:#06c;font-weight:700}
+.toggle{display:flex;gap:8px;justify-content:center;margin-bottom:32px;background:#f5f5f7;padding:4px;border-radius:12px;width:fit-content;margin:0 auto 32px}
+.toggle-btn{padding:12px 24px;border-radius:8px;background:transparent;border:none;cursor:pointer;font-size:15px;font-weight:500;color:#1d1d1f;transition:all .3s}
+.toggle-btn.active{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.slider{-webkit-appearance:none;width:100%;height:4px;border-radius:2px;background:#d2d2d7;outline:none;margin:24px 0}
+.slider::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#06c;cursor:pointer}
+.value-display{text-align:center;font-size:48px;font-weight:700;color:#1d1d1f;margin:16px 0}
+.chip{display:inline-block;padding:8px 16px;background:#e8f4fd;color:#06c;border-radius:8px;font-size:13px;font-weight:600;margin:4px}
+.savings{color:#34c759;font-weight:600;font-size:15px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Component 076: Enterprise Tier Pricing -->
+<div class="component">
+<h2>Component 076: Enterprise Tier</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Starter</div>
+<div class="subtitle">For small teams</div>
+<div class="price"><span class="currency">$</span>49<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Get Started</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Popular</span>
+<div class="title">Professional</div>
+<div class="subtitle">For growing teams</div>
+<div class="price"><span class="currency">$</span>149<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn">Get Started</a></div>
+</div>
+<div class="card">
+<div class="title">Enterprise</div>
+<div class="subtitle">For large organizations</div>
+<div class="price">Custom</div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Contact Sales</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 077: Feature Comparison -->
+<div class="component">
+<h2>Component 077: Feature Matrix</h2>
+<table class="compare-table">
+<thead><tr><th>Feature</th><th>Basic</th><th>Pro</th><th>Enterprise</th></tr></thead>
+<tbody>
+<tr><td>Users</td><td>5</td><td>25</td><td>Unlimited</td></tr>
+<tr><td>Storage</td><td>10 GB</td><td>100 GB</td><td>1 TB</td></tr>
+<tr><td>Support</td><td>Email</td><td>Priority</td><td>24/7 Phone</td></tr>
+<tr><td>API Access</td><td>—</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+<tr><td>Custom Domain</td><td>—</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- Component 078: Annual Toggle -->
+<div class="component">
+<h2>Component 078: Billing Toggle</h2>
+<div class="toggle">
+<button class="toggle-btn active">Monthly</button>
+<button class="toggle-btn">Annual <span class="savings">(Save 20%)</span></button>
+</div>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Premium</div>
+<div class="price"><span class="currency">$</span>29<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn">Subscribe</a></div>
+</div>
+<div class="card">
+<div class="title">Business</div>
+<div class="price"><span class="currency">$</span>79<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn">Subscribe</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 079: Usage Based -->
+<div class="component">
+<h2>Component 079: Usage Based</h2>
+<div class="card">
+<div class="title">Pay As You Go</div>
+<div class="subtitle">Only pay for what you use</div>
+<input type="range" min="0" max="10000" value="1000" class="slider">
+<div class="value-display">1,000 <span style="font-size:21px;color:#86868b">requests</span></div>
+<div style="text-align:center;margin-top:24px">
+<div class="price"><span class="currency">$</span>12<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn">Get Started</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 080: Feature List Detailed -->
+<div class="component">
+<h2>Component 080: Detailed Features</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Business Plan</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>99<span class="period">/mo</span></div>
+<div class="feature">Unlimited projects</div>
+<div class="feature">Advanced analytics</div>
+<div class="feature">Priority support</div>
+<div class="feature">Custom integrations</div>
+<div class="feature">Team collaboration</div>
+<div style="margin-top:24px"><a href="#" class="btn">Choose Plan</a></div>
+</div>
+<div class="card">
+<div class="title">Enterprise Plan</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>299<span class="period">/mo</span></div>
+<div class="feature">Everything in Business</div>
+<div class="feature">Dedicated account manager</div>
+<div class="feature">SLA guarantee</div>
+<div class="feature">Custom contracts</div>
+<div class="feature">Advanced security</div>
+<div style="margin-top:24px"><a href="#" class="btn">Contact Sales</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 081: Minimalist Card -->
+<div class="component">
+<h2>Component 081: Minimalist</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="subtitle">Individual</div>
+<div class="price"><span class="currency">$</span>9<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Start Free Trial</a></div>
+</div>
+<div class="card">
+<div class="subtitle">Team</div>
+<div class="price"><span class="currency">$</span>29<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn">Start Free Trial</a></div>
+</div>
+<div class="card">
+<div class="subtitle">Organization</div>
+<div class="price"><span class="currency">$</span>99<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Start Free Trial</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 082: Feature Tags -->
+<div class="component">
+<h2>Component 082: Feature Tags</h2>
+<div class="card">
+<div class="title">Developer Plan</div>
+<div class="subtitle">Perfect for developers and hobbyists</div>
+<div style="margin:24px 0">
+<span class="chip">API Access</span>
+<span class="chip">10GB Storage</span>
+<span class="chip">Email Support</span>
+<span class="chip">SSL Certificate</span>
+<span class="chip">99.9% Uptime</span>
+</div>
+<div class="price"><span class="currency">$</span>19<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn">Get Started</a></div>
+</div>
+</div>
+
+<!-- Component 083: Tiered Volume -->
+<div class="component">
+<h2>Component 083: Volume Tiers</h2>
+<div class="grid grid-4">
+<div class="card">
+<div class="subtitle">0-1K users</div>
+<div class="price"><span class="currency">$</span>0.10<span class="period">/user</span></div>
+</div>
+<div class="card">
+<div class="subtitle">1K-10K users</div>
+<div class="price"><span class="currency">$</span>0.08<span class="period">/user</span></div>
+</div>
+<div class="card">
+<div class="subtitle">10K-50K users</div>
+<div class="price"><span class="currency">$</span>0.06<span class="period">/user</span></div>
+</div>
+<div class="card">
+<div class="subtitle">50K+ users</div>
+<div class="price">Custom</div>
+</div>
+</div>
+</div>
+
+<!-- Component 084: Stacked Info -->
+<div class="component">
+<h2>Component 084: Stacked Layout</h2>
+<div class="card" style="max-width:600px;margin:0 auto">
+<div class="title">Complete Package</div>
+<div class="subtitle">Everything you need to succeed</div>
+<div class="price" style="margin:24px 0"><span class="currency">$</span>199<span class="period">/mo</span></div>
+<div class="feature">Unlimited team members</div>
+<div class="feature">Unlimited projects</div>
+<div class="feature">Advanced reporting</div>
+<div class="feature">Premium support</div>
+<div class="feature">Custom branding</div>
+<div style="margin-top:24px;display:grid;gap:12px">
+<a href="#" class="btn">Start 14-Day Trial</a>
+<a href="#" class="btn-secondary btn">View Demo</a>
+</div>
+</div>
+</div>
+
+<!-- Component 085: Side by Side Compact -->
+<div class="component">
+<h2>Component 085: Compact Comparison</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Standard</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>39<span class="period">/mo</span></div>
+<div class="subtitle">5 team members<br>50 GB storage<br>Email support</div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Choose Plan</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Best Value</span>
+<div class="title">Premium</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>89<span class="period">/mo</span></div>
+<div class="subtitle">Unlimited members<br>500 GB storage<br>Priority support</div>
+<div style="margin-top:24px"><a href="#" class="btn">Choose Plan</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 086: Percentage Savings -->
+<div class="component">
+<h2>Component 086: Savings Highlight</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Monthly</div>
+<div class="price"><span class="currency">$</span>15<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Select</a></div>
+</div>
+<div class="card">
+<div class="title">Quarterly</div>
+<div class="price"><span class="currency">$</span>13<span class="period">/mo</span></div>
+<div class="savings" style="margin-top:8px">Save 13%</div>
+<div style="margin-top:16px"><a href="#" class="btn-secondary btn">Select</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Save Most</span>
+<div class="title">Annual</div>
+<div class="price"><span class="currency">$</span>10<span class="period">/mo</span></div>
+<div class="savings" style="margin-top:8px">Save 33%</div>
+<div style="margin-top:16px"><a href="#" class="btn">Select</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 087: Per Seat -->
+<div class="component">
+<h2>Component 087: Per Seat Pricing</h2>
+<div class="card" style="max-width:500px;margin:0 auto">
+<div class="title">Team Collaboration</div>
+<div class="subtitle">Add as many team members as you need</div>
+<div class="price" style="margin:24px 0"><span class="currency">$</span>12<span class="period">/seat/mo</span></div>
+<div class="subtitle">Minimum 3 seats</div>
+<div style="margin-top:24px"><a href="#" class="btn">Get Started</a></div>
+</div>
+</div>
+
+<!-- Component 088: Free Plus Paid -->
+<div class="component">
+<h2>Component 088: Free & Paid</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Free</div>
+<div class="subtitle">For individuals and small projects</div>
+<div class="price" style="margin:24px 0"><span class="currency">$</span>0<span class="period">/mo</span></div>
+<div class="feature">1 project</div>
+<div class="feature">Basic features</div>
+<div class="feature">Community support</div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Sign Up Free</a></div>
+</div>
+<div class="card">
+<div class="title">Pro</div>
+<div class="subtitle">For professionals and teams</div>
+<div class="price" style="margin:24px 0"><span class="currency">$</span>49<span class="period">/mo</span></div>
+<div class="feature">Unlimited projects</div>
+<div class="feature">All features</div>
+<div class="feature">Priority support</div>
+<div style="margin-top:24px"><a href="#" class="btn">Upgrade to Pro</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 089: Credit Based -->
+<div class="component">
+<h2>Component 089: Credit System</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Starter Pack</div>
+<div class="price"><span class="currency">$</span>25</div>
+<div class="subtitle" style="margin-top:8px">100 credits</div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Purchase</a></div>
+</div>
+<div class="card">
+<div class="title">Pro Pack</div>
+<div class="price"><span class="currency">$</span>100</div>
+<div class="subtitle" style="margin-top:8px">500 credits</div>
+<div class="savings">+50 bonus credits</div>
+<div style="margin-top:16px"><a href="#" class="btn-secondary btn">Purchase</a></div>
+</div>
+<div class="card">
+<div class="title">Business Pack</div>
+<div class="price"><span class="currency">$</span>450</div>
+<div class="subtitle" style="margin-top:8px">2,500 credits</div>
+<div class="savings">+250 bonus credits</div>
+<div style="margin-top:16px"><a href="#" class="btn">Purchase</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 090: Simple List -->
+<div class="component">
+<h2>Component 090: Simple List</h2>
+<div style="max-width:400px;margin:0 auto">
+<div class="card" style="margin-bottom:16px">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div class="title">Hobby</div>
+<div class="price"><span class="currency">$</span>0</div>
+</div>
+</div>
+<div class="card" style="margin-bottom:16px">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div class="title">Freelancer</div>
+<div class="price"><span class="currency">$</span>19</div>
+</div>
+</div>
+<div class="card" style="margin-bottom:16px">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div class="title">Studio</div>
+<div class="price"><span class="currency">$</span>59</div>
+</div>
+</div>
+<div class="card">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div class="title">Agency</div>
+<div class="price"><span class="currency">$</span>199</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Component 091: Multi-Product -->
+<div class="component">
+<h2>Component 091: Product Bundle</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Individual Products</div>
+<div class="subtitle" style="margin-bottom:16px">Choose what you need</div>
+<div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #d2d2d7">
+<span>Product A</span><span style="font-weight:600">$29/mo</span>
+</div>
+<div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #d2d2d7">
+<span>Product B</span><span style="font-weight:600">$39/mo</span>
+</div>
+<div style="display:flex;justify-content:space-between;padding:12px 0">
+<span>Product C</span><span style="font-weight:600">$49/mo</span>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Customize</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Save 30%</span>
+<div class="title">Complete Bundle</div>
+<div class="subtitle" style="margin-bottom:16px">All products included</div>
+<div class="price" style="margin:24px 0"><span class="currency">$</span>79<span class="period">/mo</span></div>
+<div class="savings">Save $38/mo vs individual</div>
+<div style="margin-top:24px"><a href="#" class="btn">Get Bundle</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 092: Add-ons -->
+<div class="component">
+<h2>Component 092: Base + Add-ons</h2>
+<div class="card" style="max-width:600px;margin:0 auto">
+<div class="title">Base Plan</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>49<span class="period">/mo</span></div>
+<div class="subtitle" style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #d2d2d7">Includes core features</div>
+<div class="title" style="font-size:17px;margin-bottom:16px">Add-ons</div>
+<div style="display:flex;justify-content:space-between;padding:12px 0">
+<span>Advanced Analytics</span><span style="font-weight:600">+$15/mo</span>
+</div>
+<div style="display:flex;justify-content:space-between;padding:12px 0">
+<span>Priority Support</span><span style="font-weight:600">+$25/mo</span>
+</div>
+<div style="display:flex;justify-content:space-between;padding:12px 0">
+<span>Custom Domain</span><span style="font-weight:600">+$10/mo</span>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Configure Plan</a></div>
+</div>
+</div>
+
+<!-- Component 093: Education Tier -->
+<div class="component">
+<h2>Component 093: Special Pricing</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Standard</div>
+<div class="subtitle">For businesses</div>
+<div class="price" style="margin:24px 0"><span class="currency">$</span>99<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn">Get Started</a></div>
+</div>
+<div class="card">
+<div class="title">Education</div>
+<div class="subtitle">For students and teachers</div>
+<div class="price" style="margin:24px 0"><span class="currency">$</span>49<span class="period">/mo</span></div>
+<div class="savings">50% education discount</div>
+<div style="margin-top:16px"><a href="#" class="btn">Verify Eligibility</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 094: Lifetime Deal -->
+<div class="component">
+<h2>Component 094: Lifetime Access</h2>
+<div class="card" style="max-width:500px;margin:0 auto">
+<span class="badge" style="top:24px;right:24px;background:#34c759">Limited Offer</span>
+<div class="title">Lifetime Access</div>
+<div class="subtitle">Pay once, use forever</div>
+<div class="price" style="margin:24px 0"><span class="currency">$</span>499</div>
+<div class="subtitle" style="text-decoration:line-through">Regular price: $1,188</div>
+<div class="savings" style="margin-bottom:24px">Save $689 vs 2 years subscription</div>
+<div class="feature">All current features</div>
+<div class="feature">All future updates</div>
+<div class="feature">Lifetime support</div>
+<div style="margin-top:24px"><a href="#" class="btn">Claim Lifetime Deal</a></div>
+</div>
+</div>
+
+<!-- Component 095: Trial Emphasis -->
+<div class="component">
+<h2>Component 095: Trial Focus</h2>
+<div class="card" style="max-width:500px;margin:0 auto;text-align:center">
+<div class="title">Try Before You Buy</div>
+<div class="subtitle">14-day free trial, no credit card required</div>
+<div class="price" style="margin:32px 0"><span class="currency">$</span>29<span class="period">/mo</span></div>
+<div class="subtitle">After trial ends</div>
+<div style="margin-top:32px;display:grid;gap:12px">
+<a href="#" class="btn">Start Free Trial</a>
+<div style="font-size:13px;color:#86868b;margin-top:8px">Cancel anytime during trial</div>
+</div>
+</div>
+</div>
+
+<!-- Component 096: Non-Profit -->
+<div class="component">
+<h2>Component 096: Non-Profit Tier</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Commercial</div>
+<div class="price"><span class="currency">$</span>99<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Select</a></div>
+</div>
+<div class="card">
+<div class="title">Non-Profit</div>
+<div class="price"><span class="currency">$</span>29<span class="period">/mo</span></div>
+<div class="savings" style="margin-top:8px">70% discount</div>
+<div style="margin-top:16px"><a href="#" class="btn-secondary btn">Apply</a></div>
+</div>
+<div class="card">
+<div class="title">Open Source</div>
+<div class="price"><span class="currency">$</span>0<span class="period">/mo</span></div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Apply</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 097: API Tiers -->
+<div class="component">
+<h2>Component 097: API Usage Tiers</h2>
+<div class="grid grid-4">
+<div class="card">
+<div class="subtitle">Hobby</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>0</div>
+<div style="font-size:13px;color:#86868b">1K requests/mo</div>
+</div>
+<div class="card">
+<div class="subtitle">Startup</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>29</div>
+<div style="font-size:13px;color:#86868b">100K requests/mo</div>
+</div>
+<div class="card">
+<div class="subtitle">Growth</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>99</div>
+<div style="font-size:13px;color:#86868b">1M requests/mo</div>
+</div>
+<div class="card">
+<div class="subtitle">Scale</div>
+<div class="price" style="margin:16px 0">Custom</div>
+<div style="font-size:13px;color:#86868b">Unlimited requests</div>
+</div>
+</div>
+</div>
+
+<!-- Component 098: Family Plan -->
+<div class="component">
+<h2>Component 098: Family Sharing</h2>
+<div class="grid grid-2">
+<div class="card">
+<div class="title">Individual</div>
+<div class="subtitle">Just for you</div>
+<div class="price" style="margin:24px 0"><span class="currency">$</span>9.99<span class="period">/mo</span></div>
+<div class="subtitle">1 account</div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Subscribe</a></div>
+</div>
+<div class="card popular">
+<span class="badge">Best Value</span>
+<div class="title">Family</div>
+<div class="subtitle">Share with family</div>
+<div class="price" style="margin:24px 0"><span class="currency">$</span>14.99<span class="period">/mo</span></div>
+<div class="subtitle">Up to 6 accounts</div>
+<div style="margin-top:24px"><a href="#" class="btn">Subscribe</a></div>
+</div>
+</div>
+</div>
+
+<!-- Component 099: Regional Pricing -->
+<div class="component">
+<h2>Component 099: Regional Tiers</h2>
+<div class="card" style="max-width:600px;margin:0 auto">
+<div class="title">Pro Plan</div>
+<div class="subtitle" style="margin-bottom:24px">Pricing adjusted for your region</div>
+<div style="display:grid;gap:16px">
+<div style="display:flex;justify-content:space-between;padding:16px;background:#f5f5f7;border-radius:8px">
+<span style="font-weight:600">United States</span><span style="font-weight:700">$99/mo</span>
+</div>
+<div style="display:flex;justify-content:space-between;padding:16px;background:#f5f5f7;border-radius:8px">
+<span style="font-weight:600">European Union</span><span style="font-weight:700">€89/mo</span>
+</div>
+<div style="display:flex;justify-content:space-between;padding:16px;background:#f5f5f7;border-radius:8px">
+<span style="font-weight:600">United Kingdom</span><span style="font-weight:700">£79/mo</span>
+</div>
+</div>
+<div style="margin-top:24px"><a href="#" class="btn">Select Region</a></div>
+</div>
+</div>
+
+<!-- Component 100: Support Tiers -->
+<div class="component">
+<h2>Component 100: Support Levels</h2>
+<div class="grid grid-3">
+<div class="card">
+<div class="title">Community</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>0<span class="period">/mo</span></div>
+<div class="subtitle" style="margin-bottom:16px">Forum support</div>
+<div style="font-size:13px;color:#86868b">Response: 48-72h</div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Join</a></div>
+</div>
+<div class="card">
+<div class="title">Standard</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>49<span class="period">/mo</span></div>
+<div class="subtitle" style="margin-bottom:16px">Email support</div>
+<div style="font-size:13px;color:#86868b">Response: 24h</div>
+<div style="margin-top:24px"><a href="#" class="btn-secondary btn">Upgrade</a></div>
+</div>
+<div class="card">
+<div class="title">Premium</div>
+<div class="price" style="margin:16px 0"><span class="currency">$</span>199<span class="period">/mo</span></div>
+<div class="subtitle" style="margin-bottom:16px">24/7 Phone & Chat</div>
+<div style="font-size:13px;color:#86868b">Response: 1h</div>
+<div style="margin-top:24px"><a href="#" class="btn">Upgrade</a></div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>
