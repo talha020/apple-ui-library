@@ -2,6 +2,8 @@
 
 A comprehensive UI component library based on **Apple's Human Interface Guidelines**, with a clean Shopify-admin aesthetic. Every component is built as self-contained, copy-paste-ready HTML.
 
+**🔗 Live demo:** https://talha020.github.io/apple-ui-library/
+
 ## What's inside
 
 Hundreds of production-ready section components across 19 categories:

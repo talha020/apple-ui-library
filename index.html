@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple UI Library</title>
+  <meta name="description" content="A UI component library based on Apple's Human Interface Guidelines — 350+ self-contained HTML section components." />
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --ink: #1d1d1f;
+      --muted: #6e6e73;
+      --line: #d2d2d7;
+      --accent: #0071e3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 22px; }
+    header { text-align: center; padding: 96px 0 56px; }
+    .badge {
+      display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .02em;
+      color: var(--accent); background: rgba(0,113,227,.1);
+      padding: 6px 14px; border-radius: 980px; margin-bottom: 22px;
+    }
+    h1 { font-size: 56px; line-height: 1.05; letter-spacing: -.015em; font-weight: 700; }
+    header p { font-size: 21px; color: var(--muted); margin: 18px auto 0; max-width: 600px; }
+    .actions { margin-top: 34px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      font-size: 17px; font-weight: 500; text-decoration: none; padding: 12px 24px;
+      border-radius: 980px; transition: opacity .2s, background .2s;
+    }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.primary:hover { opacity: .85; }
+    .btn.ghost { color: var(--accent); }
+    .btn.ghost:hover { background: rgba(0,113,227,.08); }
+
+    section { padding: 28px 0 80px; }
+    .section-title { font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .demo {
+      display: block; text-decoration: none; color: inherit; background: var(--card);
+      border: 1px solid var(--line); border-radius: 18px; padding: 26px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .demo:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.08); }
+    .demo h3 { font-size: 21px; font-weight: 600; margin-bottom: 6px; }
+    .demo p { font-size: 15px; color: var(--muted); }
+    .demo .arrow { color: var(--accent); font-size: 15px; font-weight: 500; margin-top: 14px; display: inline-block; }
+
+    .cats { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      font-size: 14px; color: var(--ink); background: var(--card);
+      border: 1px solid var(--line); border-radius: 980px; padding: 8px 16px;
+    }
+    footer { border-top: 1px solid var(--line); padding: 30px 0 60px; text-align: center; color: var(--muted); font-size: 14px; }
+    footer a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 600px) { h1 { font-size: 40px; } header { padding: 64px 0 40px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">Apple Human Interface Guidelines</span>
+      <h1>Apple UI Library</h1>
+      <p>350+ self-contained HTML section components across 19 categories. No build step, copy and paste.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/talha020/apple-ui-library">View on GitHub</a>
+        <a class="btn ghost" href="LandingPage.html">See the landing page →</a>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Live Demos</div>
+      <div class="grid">
+        <a class="demo" href="LandingPage.html">
+          <h3>Landing Page</h3>
+          <p>A full marketing page assembled from library sections.</p>
+          <span class="arrow">Open demo →</span>
+        </a>
+        <a class="demo" href="AppleHIGDashboard.html">
+          <h3>HIG Dashboard</h3>
+          <p>An admin dashboard layout in the Apple HIG style.</p>
+          <span class="arrow">Open demo →</span>
+        </a>
+        <a class="demo" href="BentoGrid.html">
+          <h3>Bento Grid</h3>
+          <p>A modern bento-style feature grid layout.</p>
+          <span class="arrow">Open demo →</span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">19 Component Categories</div>
+      <div class="cats">
+        <span class="chip">Navigation</span><span class="chip">Hero</span><span class="chip">Features</span>
+        <span class="chip">Testimonials</span><span class="chip">Pricing</span><span class="chip">CTA</span>
+        <span class="chip">Blog</span><span class="chip">Contact</span><span class="chip">FAQ</span>
+        <span class="chip">Footer</span><span class="chip">Gallery</span><span class="chip">Login</span>
+        <span class="chip">Logos</span><span class="chip">Newsletter</span><span class="chip">Stats</span>
+        <span class="chip">Team</span><span class="chip">404</span><span class="chip">Other</span>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      MIT Licensed · Built by <a href="https://github.com/talha020">Talha Shahzad</a> ·
+      <a href="https://github.com/talha020/apple-ui-library">Source on GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
